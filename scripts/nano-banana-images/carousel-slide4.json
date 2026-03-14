@@ -1,0 +1,9 @@
+{
+  "prompt": "Professional Meta Ads static image, graphic design style, high resolution. White background (#FFFFFF). LEFT SIDE (50% width): Very large bold black uppercase text (Bebas Neue / Impact style), left-aligned: '¿PARA' line 1, 'QUÉ' line 2, 'SIRVE EL' line 3, 'IMMUNOCAL' line 4, 'AZUL?' line 5. Text is massive, dominant, fills left side from top to bottom. RIGHT SIDE (50% width): A blue and white Immunocal supplement sachet placed vertically, large, clean product photo with no background, centered on right side. BOTTOM FOOTER: Thin black bar with small white text 'IMMUNOCAL AZUL' on left and brand name on right. Bold modern sans-serif typography. White background, black and blue only. No gradients, no decorations.",
+  "negative_prompt": "photorealistic scene, lifestyle photography, people, models, colored background, gradients, blurry, low quality, watermark, extra text",
+  "api_parameters": {
+    "aspect_ratio": "1:1",
+    "resolution": "1K",
+    "output_format": "jpg"
+  }
+}

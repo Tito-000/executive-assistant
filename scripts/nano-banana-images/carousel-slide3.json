@@ -1,0 +1,9 @@
+{
+  "prompt": "Professional Meta Ads static image, graphic design style, high resolution. White background (#FFFFFF). TOP: Very large bold black uppercase text (Bebas Neue / Impact style) centered: '¿QUIÉNES' line 1, 'PUEDEN' line 2, 'TOMARLO?' line 3. BELOW THE TITLE: 5 lines of bold uppercase black text, left-aligned with moderate margin, each line is a bullet point description. The lines read exactly: 'PERSONAS QUE SIENTEN CANSANCIO CONSTANTE.' | 'PERSONAS CON EL SISTEMA INMUNE BAJO.' | 'PERSONAS QUE QUIEREN RECUPERAR ENERGÍA.' | 'PERSONAS QUE CUIDAN A UN FAMILIAR ENFERMO.' | 'PERSONAS QUE BUSCAN BIENESTAR NATURAL.' Each bullet point line has a small blue square or dash before it. BOTTOM FOOTER: Thin black bar with small white text 'IMMUNOCAL AZUL' on left, small logo/brand text on right. Bold sans-serif typography. Clean white background. No product image on this slide.",
+  "negative_prompt": "photorealistic scene, lifestyle photography, people, models, colored background, gradients, product photo, blurry, low quality, watermark",
+  "api_parameters": {
+    "aspect_ratio": "1:1",
+    "resolution": "1K",
+    "output_format": "jpg"
+  }
+}

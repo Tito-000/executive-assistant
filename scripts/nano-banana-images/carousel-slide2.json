@@ -1,0 +1,9 @@
+{
+  "prompt": "Professional Meta Ads static image, graphic design style, high resolution. White background (#FFFFFF). TOP: Large bold black uppercase text (Bebas Neue / Impact style) centered at top: 'APOYA TU' line 1, 'BIENESTAR' line 2. LEFT SIDE (55% width): A blue and white Immunocal supplement sachet (flat rectangular single-serve packet, blue color scheme) placed tall and prominent, almost full height, clean product photo no background, slight white glow around product. RIGHT SIDE (45% width): 4 circular badge icons stacked in a 2x2 grid. Each badge is a white circle with a thin blue (#1877F2) border, a simple line icon inside (shield icon, lightning bolt, leaf, sun), and a bold dark text label below each circle. Labels: 'SISTEMA INMUNE', 'MAS ENERGIA', 'EQUILIBRIO', 'BIENESTAR'. BOTTOM FOOTER: Thin black bar with small white text 'IMMUNOCAL AZUL'. Bold modern sans-serif typography throughout. Clean, minimal, no gradients.",
+  "negative_prompt": "photorealistic scene, lifestyle photography, people, models, colored background, gradients, blurry, low quality, watermark, extra text",
+  "api_parameters": {
+    "aspect_ratio": "1:1",
+    "resolution": "1K",
+    "output_format": "jpg"
+  }
+}

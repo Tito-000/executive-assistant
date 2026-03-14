@@ -1,0 +1,9 @@
+{
+  "prompt": "Professional Meta Ads static image, graphic design style, high resolution. White background (#FFFFFF). TOP CENTER: Large bold black uppercase text (Bebas Neue / Impact style): '¿PARA QUÉ SIRVE?' BELOW TITLE: 5 rows of text, each row has a large bold green checkmark (✓) on the left in a green circle (#28A745) followed by bold uppercase dark text. The 5 rows read exactly: '✓ APOYA EL SISTEMA DE DEFENSA NATURAL.' | '✓ AYUDA A RECUPERAR ENERGÍA Y VITALIDAD.' | '✓ CONTRIBUYE AL EQUILIBRIO DEL ORGANISMO.' | '✓ FUENTE DE PROTEÍNA DE SUERO DE LECHE PURA.' | '✓ RESULTADOS NOTABLES EN 10 A 30 DÍAS.' Each row is clearly separated with generous spacing. BOTTOM FOOTER: Thin black bar with small white text 'IMMUNOCAL AZUL' on left and brand name on right. Bold sans-serif typography. White background. Green and black only. No product photo on this slide.",
+  "negative_prompt": "photorealistic scene, lifestyle photography, people, models, colored background, gradients, product photo, blurry, low quality, watermark",
+  "api_parameters": {
+    "aspect_ratio": "1:1",
+    "resolution": "1K",
+    "output_format": "jpg"
+  }
+}

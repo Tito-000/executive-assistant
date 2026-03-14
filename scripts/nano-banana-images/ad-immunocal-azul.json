@@ -1,0 +1,16 @@
+{
+  "prompt": "Documentary-style candid vertical photograph, portrait orientation (4:5 ratio), full upper-body composition. A Dominican woman approximately 55 years old, centered in frame from waist to top of head, standing in a bright modest kitchen in Santo Domingo, Dominican Republic. She has warm brown skin with visible laugh lines, natural uneven skin texture with subtle age spots, slightly graying hair pulled back casually. She is smiling genuinely and naturally at the camera. In one hand she holds a clear glass of water, in the other she holds a single small blue Immunocal supplement sachet (a flat rectangular single-serving powder packet, blue and white, about the size of her palm) between two fingers, slightly raised and visible. Her expression radiates energy, relief, and quiet confidence. She wears a simple floral blouse. The kitchen behind her is real and lived-in: wooden table, small window with warm afternoon light, fruit on counter, slightly soft-focused background. Lighting is warm natural daylight from the side window, slightly uneven, non-studio. Shot on smartphone, 35mm equivalent lens, f/2.0, ISO 200. Shallow depth of field — subject sharp, background softly blurred. The image feels like a WhatsApp photo from a friend — candid, unretouched, trustworthy. Visible pores, natural skin tone variation, no smoothing. Text overlay at bottom in bold white sans-serif with subtle dark shadow: 'Muchas personas notan cambios en 10 a 30 días' — centered, clean, legible. Do not beautify or alter facial features. No makeup. No studio lighting. No retouching. Subject must be fully in frame, not cropped.",
+  "negative_prompt": "plastic skin, airbrushed texture, skin smoothing, beauty filters, CGI, 3D render, studio lighting, professional retouching, anatomy normalization, stock photo look, overly perfect skin, editorial fashion, model pose, fake smile, white background, gradient background, logo watermark, product-only shot, floating product",
+  "api_parameters": {
+    "aspect_ratio": "4:5",
+    "resolution": "1K",
+    "output_format": "jpg"
+  },
+  "settings": {
+    "style": "documentary realism, UGC ad",
+    "lighting": "warm natural window light, slightly uneven",
+    "camera_angle": "eye level, slight handheld feel",
+    "depth_of_field": "moderate, background slightly soft",
+    "quality": "high detail, unretouched, candid"
+  }
+}

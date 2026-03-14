@@ -1,0 +1,9 @@
+{
+  "prompt": "Professional Meta Ads static image, graphic design style, high resolution. White background (#FFFFFF). TOP LEFT: Large bold black uppercase text (Bebas Neue / Impact style): '¿CÓMO' line 1, 'TOMARLO?' line 2. TOP RIGHT: A blue and white Immunocal supplement sachet, small-medium size, clean product photo. BELOW TITLE: Two bold text paragraph blocks left-aligned, uppercase black text, moderate font size: First block — 'MEZCLA 1 SOBRE EN UN VASO DE AGUA O JUGO. TOMALO EN AYUNAS O CON LAS COMIDAS.' Second block — 'USA IMMUNOCAL AZUL TODOS LOS DÍAS. MUCHAS PERSONAS NOTAN CAMBIOS ENTRE 10 Y 30 DÍAS DE USO CONSTANTE.' BOTTOM FOOTER: Thin black bar with small white text 'IMMUNOCAL AZUL' on left and brand text on right. Bold modern sans-serif. White background. No gradients.",
+  "negative_prompt": "photorealistic scene, lifestyle photography, people, models, colored background, gradients, blurry, low quality, watermark",
+  "api_parameters": {
+    "aspect_ratio": "1:1",
+    "resolution": "1K",
+    "output_format": "jpg"
+  }
+}

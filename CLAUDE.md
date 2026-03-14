@@ -30,10 +30,21 @@ Eres el asistente ejecutivo de Martin Mercedes. Tu trabajo es ayudarle a ganar m
 
 Los proyectos viven en `projects/`. Cada uno tiene su propio `README.md` con estado y deadlines.
 
-- `projects/proyecto-bordados/` — cliente activo, deadline 23 mar 2026
-- `projects/dra-aurys-mercedes/` — página web + embudos, en progreso
-- `projects/immunotec-diamante/` — cierre Diamante, deadline 2 may 2026
-- `projects/immunotec-embudo-negocios/` — embudo atracción, deadline 10 abr 2026
+**Mis objetivos personales:**
+- `projects/mis-objetivos/` — frentes personales (facturar $8k, Rolex, alimentación, bienestar, etc.)
+
+**Clientes:**
+- `projects/clientes/proyecto-bordados/` — cliente activo, deadline 23 mar 2026
+- `projects/clientes/dra-aurys-mercedes/` — página web + embudos, en progreso
+
+**Immunotec:**
+- `projects/immunotec/fase-4-cierre-diamante/` — cierre Diamante, deadline 2 may 2026
+- `projects/immunotec/fase-3-embudo-prospectos-negocio/` — embudo atracción, deadline 10 abr 2026
+- `projects/immunotec/fase-1-embudos-por-producto/` — embudos por producto (Immunocal, Platinum, Magistral, Multi-Resveratrol)
+
+**Outputs generados (imágenes, diagramas):**
+- `outputs/excalidraw-visuals/` — PNGs generados con excalidraw-visuals skill
+- `outputs/nano-banana-images/` — imágenes generadas con nano-banana-images skill
 
 ---
 

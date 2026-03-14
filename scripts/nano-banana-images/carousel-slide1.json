@@ -1,0 +1,9 @@
+{
+  "prompt": "Professional social media graphic design, high resolution, 1:1 square format. Pure white background. TOP HALF: Extremely large, ultra-bold uppercase black text centered, Impact or Bebas Neue font style: first line 'TE SIENTES', second line 'CANSADO', third line 'TODO EL', fourth line 'TIEMPO?' The question mark is large. Text fills the top 55% of the image. BOTTOM HALF: Center-placed image of a blue supplement sachet packet labeled IMMUNOCAL, clean product photo on white, no background. Below the sachet a small subtitle text in regular bold black: 'Tu cuerpo puede necesitar apoyo.' FOOTER: Black horizontal bar at bottom with white text 'IMMUNOCAL AZUL' left side. Clean, minimal, white background, only black and blue colors.",
+  "negative_prompt": "people, models, lifestyle photo, colored background, gradients, shadows, decorations, blurry, watermark, low quality",
+  "api_parameters": {
+    "aspect_ratio": "1:1",
+    "resolution": "1K",
+    "output_format": "jpg"
+  }
+}

@@ -1,0 +1,654 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Alianza Estratégica</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;700;800&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --bg: #0a0a0a;
+    --surface: #111111;
+    --accent: #e8ff47;
+    --accent2: #ff6b35;
+    --text: #f0ede8;
+    --muted: #555;
+    --border: #1e1e1e;
+  }
+
+  html, body {
+    width: 100%; height: 100%;
+    background: var(--bg);
+    color: var(--text);
+    font-family: 'DM Sans', sans-serif;
+    overflow: hidden;
+    cursor: none;
+  }
+
+  /* Custom cursor */
+  .cursor {
+    position: fixed;
+    width: 10px; height: 10px;
+    background: var(--accent);
+    border-radius: 50%;
+    pointer-events: none;
+    z-index: 9999;
+    transform: translate(-50%, -50%);
+    transition: transform 0.1s, width 0.2s, height 0.2s;
+    mix-blend-mode: difference;
+  }
+  .cursor.big { width: 40px; height: 40px; }
+
+  /* Grain overlay */
+  body::after {
+    content: '';
+    position: fixed; inset: 0;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.04'/%3E%3C/svg%3E");
+    pointer-events: none;
+    z-index: 100;
+    opacity: 0.4;
+  }
+
+  /* Slides container */
+  .deck {
+    width: 100%; height: 100%;
+    position: relative;
+  }
+
+  .slide {
+    position: absolute; inset: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 7vw 9vw;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.5s cubic-bezier(0.4, 0, 0.2, 1),
+                transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+    transform: translateY(24px);
+  }
+
+  .slide.active {
+    opacity: 1;
+    pointer-events: all;
+    transform: translateY(0);
+  }
+
+  .slide.out {
+    opacity: 0;
+    transform: translateY(-24px);
+  }
+
+  /* Slide label */
+  .slide-label {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 0.65rem;
+    font-weight: 500;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--muted);
+    margin-bottom: 2rem;
+  }
+
+  /* ─── SLIDE 1: PORTADA ─── */
+  .slide-1 .bg-line {
+    position: absolute;
+    right: 9vw; top: 50%;
+    transform: translateY(-50%);
+    font-family: 'Syne', sans-serif;
+    font-size: 28vw;
+    font-weight: 800;
+    color: transparent;
+    -webkit-text-stroke: 1px #1a1a1a;
+    line-height: 1;
+    pointer-events: none;
+    user-select: none;
+  }
+
+  .slide-1 .eyebrow {
+    font-size: 0.7rem;
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+    color: var(--accent);
+    font-weight: 500;
+    margin-bottom: 1.5rem;
+  }
+
+  .slide-1 h1 {
+    font-family: 'Syne', sans-serif;
+    font-size: clamp(4rem, 9vw, 9rem);
+    font-weight: 800;
+    line-height: 0.92;
+    letter-spacing: -0.03em;
+    max-width: 14ch;
+  }
+
+  .slide-1 h1 span {
+    color: var(--accent);
+    display: block;
+  }
+
+  .slide-1 .sub {
+    margin-top: 2.5rem;
+    font-size: 0.9rem;
+    color: var(--muted);
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+  }
+
+  .slide-1 .dot {
+    position: absolute;
+    bottom: 7vw; right: 9vw;
+    width: 120px; height: 120px;
+    border-radius: 50%;
+    background: var(--accent);
+    display: flex; align-items: center; justify-content: center;
+    font-family: 'Syne', sans-serif;
+    font-size: 0.65rem;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: #000;
+    text-align: center;
+  }
+
+  /* ─── SLIDE 2: LO QUE TRAEMOS ─── */
+  .slide-2 h2 {
+    font-family: 'Syne', sans-serif;
+    font-size: clamp(2rem, 4.5vw, 5rem);
+    font-weight: 800;
+    line-height: 1;
+    letter-spacing: -0.025em;
+    margin-bottom: 4rem;
+  }
+
+  .columns {
+    display: grid;
+    grid-template-columns: 1fr 1px 1fr;
+    gap: 0 4vw;
+    align-items: start;
+  }
+
+  .col-divider {
+    background: var(--border);
+    height: 100%;
+    min-height: 180px;
+  }
+
+  .col-label {
+    font-size: 0.65rem;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--muted);
+    margin-bottom: 1.5rem;
+  }
+
+  .col-name {
+    font-family: 'Syne', sans-serif;
+    font-size: clamp(1.4rem, 2.5vw, 2.8rem);
+    font-weight: 700;
+    margin-bottom: 2rem;
+    line-height: 1;
+  }
+
+  .col-name.accent { color: var(--accent); }
+
+  .tag-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.6rem;
+  }
+
+  .tag {
+    padding: 0.5rem 1rem;
+    border: 1px solid var(--border);
+    border-radius: 2px;
+    font-size: 0.8rem;
+    letter-spacing: 0.05em;
+    color: #aaa;
+    background: var(--surface);
+    transition: border-color 0.2s, color 0.2s;
+  }
+
+  .tag.hi {
+    border-color: var(--accent);
+    color: var(--accent);
+    background: rgba(232, 255, 71, 0.05);
+  }
+
+  /* ─── SLIDE 3: PROBLEMA ─── */
+  .slide-3 .big-text {
+    font-family: 'Syne', sans-serif;
+    font-size: clamp(2.2rem, 4.5vw, 5.5rem);
+    font-weight: 800;
+    line-height: 1.05;
+    letter-spacing: -0.03em;
+    max-width: 22ch;
+  }
+
+  .slide-3 .big-text em {
+    font-style: normal;
+    color: var(--accent);
+    position: relative;
+  }
+
+  .slide-3 .big-text em::after {
+    content: '';
+    position: absolute;
+    bottom: 0.1em; left: 0; right: 0;
+    height: 3px;
+    background: var(--accent);
+    opacity: 0.3;
+  }
+
+  .slide-3 .aside {
+    position: absolute;
+    bottom: 7vw; right: 9vw;
+    font-size: 0.75rem;
+    color: var(--muted);
+    text-align: right;
+    line-height: 1.7;
+    max-width: 220px;
+  }
+
+  /* ─── SLIDE 4: CÓMO FUNCIONA ─── */
+  .slide-4 h2 {
+    font-family: 'Syne', sans-serif;
+    font-size: clamp(2rem, 4vw, 4.5rem);
+    font-weight: 800;
+    letter-spacing: -0.025em;
+    margin-bottom: 3.5rem;
+    line-height: 1;
+  }
+
+  .models {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+  }
+
+  .model-card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    padding: 2rem 2.2rem;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .model-card::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0;
+    width: 3px; height: 100%;
+    background: var(--accent);
+    opacity: 0;
+    transition: opacity 0.2s;
+  }
+
+  .model-card:hover::before { opacity: 1; }
+
+  .model-num {
+    font-family: 'Syne', sans-serif;
+    font-size: 3rem;
+    font-weight: 800;
+    color: var(--border);
+    line-height: 1;
+    margin-bottom: 1rem;
+  }
+
+  .model-title {
+    font-family: 'Syne', sans-serif;
+    font-size: 1.1rem;
+    font-weight: 700;
+    margin-bottom: 0.8rem;
+    color: var(--accent);
+  }
+
+  .model-desc {
+    font-size: 0.82rem;
+    color: #888;
+    line-height: 1.7;
+  }
+
+  .model-desc strong {
+    color: var(--text);
+    font-weight: 500;
+  }
+
+  /* ─── SLIDE 5: ARRANQUE ─── */
+  .slide-5 .big-text {
+    font-family: 'Syne', sans-serif;
+    font-size: clamp(2rem, 4.5vw, 5.5rem);
+    font-weight: 800;
+    line-height: 1.05;
+    letter-spacing: -0.03em;
+    max-width: 20ch;
+    margin-bottom: 3rem;
+  }
+
+  .slide-5 .steps {
+    display: flex;
+    gap: 2rem;
+    flex-wrap: wrap;
+    margin-bottom: 3rem;
+  }
+
+  .step {
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+    font-size: 0.85rem;
+    color: #888;
+  }
+
+  .step-dot {
+    width: 8px; height: 8px;
+    background: var(--accent);
+    border-radius: 50%;
+    flex-shrink: 0;
+  }
+
+  .slide-5 .cta-line {
+    font-family: 'Syne', sans-serif;
+    font-size: clamp(1rem, 2vw, 1.8rem);
+    font-weight: 700;
+    padding: 1.2rem 2rem;
+    border: 1px solid var(--accent);
+    display: inline-block;
+    color: var(--accent);
+    letter-spacing: -0.01em;
+    background: rgba(232, 255, 71, 0.04);
+  }
+
+  /* ─── PROGRESS BAR ─── */
+  .progress {
+    position: fixed;
+    bottom: 0; left: 0;
+    height: 2px;
+    background: var(--accent);
+    transition: width 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+    z-index: 50;
+  }
+
+  /* ─── SLIDE COUNTER ─── */
+  .counter {
+    position: fixed;
+    bottom: 2.5rem; left: 9vw;
+    font-size: 0.65rem;
+    letter-spacing: 0.15em;
+    color: var(--muted);
+    z-index: 50;
+    font-family: 'DM Sans', sans-serif;
+  }
+
+  /* ─── NAV ARROWS ─── */
+  .nav {
+    position: fixed;
+    bottom: 2rem; right: 9vw;
+    display: flex; gap: 0.8rem;
+    z-index: 50;
+  }
+
+  .nav-btn {
+    width: 44px; height: 44px;
+    border: 1px solid var(--border);
+    background: var(--surface);
+    color: var(--text);
+    cursor: none;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 1rem;
+    transition: border-color 0.2s, background 0.2s;
+  }
+
+  .nav-btn:hover {
+    border-color: var(--accent);
+    color: var(--accent);
+    background: rgba(232, 255, 71, 0.05);
+  }
+
+  .nav-btn:disabled {
+    opacity: 0.2;
+    cursor: not-allowed;
+  }
+
+  /* ─── SLIDE DOTS ─── */
+  .dots {
+    position: fixed;
+    right: 2.5rem; top: 50%;
+    transform: translateY(-50%);
+    display: flex; flex-direction: column; gap: 0.6rem;
+    z-index: 50;
+  }
+
+  .dot-item {
+    width: 5px; height: 5px;
+    border-radius: 50%;
+    background: var(--muted);
+    transition: background 0.3s, transform 0.3s;
+    cursor: none;
+  }
+
+  .dot-item.active {
+    background: var(--accent);
+    transform: scale(1.6);
+  }
+
+  /* Hint */
+  .hint {
+    position: fixed;
+    bottom: 2.5rem; left: 50%; transform: translateX(-50%);
+    font-size: 0.6rem;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--muted);
+    z-index: 50;
+    opacity: 1;
+    transition: opacity 0.5s;
+  }
+  .hint.hidden { opacity: 0; }
+</style>
+</head>
+<body>
+
+<div class="cursor" id="cursor"></div>
+
+<div class="deck" id="deck">
+
+  <!-- SLIDE 1 -->
+  <div class="slide slide-1 active" data-index="0">
+    <div class="bg-line">M</div>
+    <div class="eyebrow">Marketing Digital · 2026</div>
+    <h1>
+      Alianza
+      <span>Estratégica</span>
+    </h1>
+    <p class="sub">Presencia + Conversión</p>
+    <div class="dot">Juntos<br>ganamos<br>más</div>
+  </div>
+
+  <!-- SLIDE 2 -->
+  <div class="slide slide-2" data-index="1">
+    <div class="slide-label">01 / Lo que cada uno trae</div>
+    <h2>Cubrimos<br>todo el ciclo.</h2>
+    <div class="columns">
+      <div class="col">
+        <div class="col-label">Tu lado</div>
+        <div class="col-name">Contenido</div>
+        <div class="tag-list">
+          <span class="tag">Videos</span>
+          <span class="tag">Fotos</span>
+          <span class="tag">Copy</span>
+          <span class="tag">Redes Sociales</span>
+        </div>
+      </div>
+      <div class="col-divider"></div>
+      <div class="col">
+        <div class="col-label">Mi lado</div>
+        <div class="col-name accent">Performance</div>
+        <div class="tag-list">
+          <span class="tag hi">Meta Ads</span>
+          <span class="tag hi">Google Ads</span>
+          <span class="tag hi">Funnels</span>
+          <span class="tag hi">CRM</span>
+          <span class="tag hi">Webs</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- SLIDE 3 -->
+  <div class="slide slide-3" data-index="2">
+    <div class="slide-label">02 / El problema que resolvemos</div>
+    <p class="big-text">
+      Los clientes necesitan
+      <em>presencia</em> y
+      <em>conversión</em>.
+      Hoy los tienen separados.
+      Nosotros los unimos.
+    </p>
+    <div class="aside">
+      Antes: 2 proveedores,<br>
+      2 presupuestos,<br>
+      0 coordinación.<br><br>
+      Con nosotros: 1 alianza,<br>
+      todo conectado.
+    </div>
+  </div>
+
+  <!-- SLIDE 4 -->
+  <div class="slide slide-4" data-index="3">
+    <div class="slide-label">03 / Cómo funcionaría</div>
+    <h2>Dos modelos,<br>cero complicaciones.</h2>
+    <div class="models">
+      <div class="model-card">
+        <div class="model-num">01</div>
+        <div class="model-title">Referidos mutuos</div>
+        <div class="model-desc">
+          Me mandas quien necesite ads o funnel.<br>
+          Yo te mando quien necesite contenido.<br><br>
+          <strong>Comisión: 10%</strong> para quien trae al cliente.
+        </div>
+      </div>
+      <div class="model-card">
+        <div class="model-num">02</div>
+        <div class="model-title">Proyectos conjuntos</div>
+        <div class="model-desc">
+          Cliente necesita todo → lo trabajamos juntos.<br><br>
+          <strong>Cada quien factura su parte</strong> directamente.
+          Sin deudas entre nosotros.
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- SLIDE 5 -->
+  <div class="slide slide-5" data-index="4">
+    <div class="slide-label">04 / Para arrancar</div>
+    <p class="big-text">Sin contratos.<br>Un cliente<br>de prueba.</p>
+    <div class="steps">
+      <div class="step"><div class="step-dot"></div>Vemos cómo fluye el trabajo</div>
+      <div class="step"><div class="step-dot"></div>Si funciona, lo formalizamos</div>
+      <div class="step"><div class="step-dot"></div>Sin ataduras desde el inicio</div>
+    </div>
+    <div class="cta-line">El objetivo: los dos ganamos más sin trabajar el doble.</div>
+  </div>
+
+</div>
+
+<!-- UI -->
+<div class="progress" id="progress"></div>
+<div class="counter" id="counter">01 / 05</div>
+<div class="hint" id="hint">Click o → para avanzar</div>
+
+<div class="dots" id="dots"></div>
+
+<div class="nav">
+  <button class="nav-btn" id="prevBtn" disabled>←</button>
+  <button class="nav-btn" id="nextBtn">→</button>
+</div>
+
+<script>
+  const slides = document.querySelectorAll('.slide');
+  const progress = document.getElementById('progress');
+  const counter = document.getElementById('counter');
+  const hint = document.getElementById('hint');
+  const dotsEl = document.getElementById('dots');
+  const prevBtn = document.getElementById('prevBtn');
+  const nextBtn = document.getElementById('nextBtn');
+  const cursor = document.getElementById('cursor');
+
+  let current = 0;
+  const total = slides.length;
+
+  // Build dots
+  slides.forEach((_, i) => {
+    const d = document.createElement('div');
+    d.className = 'dot-item' + (i === 0 ? ' active' : '');
+    d.addEventListener('click', () => goTo(i));
+    dotsEl.appendChild(d);
+  });
+
+  function goTo(n) {
+    slides[current].classList.remove('active');
+    slides[current].classList.add('out');
+    setTimeout(() => slides[current].classList.remove('out'), 500);
+
+    current = Math.max(0, Math.min(n, total - 1));
+
+    slides[current].classList.add('active');
+
+    // Update UI
+    const pct = ((current + 1) / total) * 100;
+    progress.style.width = pct + '%';
+    counter.textContent = String(current + 1).padStart(2, '0') + ' / ' + String(total).padStart(2, '0');
+
+    document.querySelectorAll('.dot-item').forEach((d, i) => {
+      d.classList.toggle('active', i === current);
+    });
+
+    prevBtn.disabled = current === 0;
+    nextBtn.disabled = current === total - 1;
+
+    if (current > 0) hint.classList.add('hidden');
+  }
+
+  prevBtn.addEventListener('click', () => { if (current > 0) goTo(current - 1); });
+  nextBtn.addEventListener('click', () => { if (current < total - 1) goTo(current + 1); });
+
+  document.addEventListener('keydown', e => {
+    if (e.key === 'ArrowRight' || e.key === 'ArrowDown' || e.key === ' ') {
+      e.preventDefault();
+      if (current < total - 1) goTo(current + 1);
+    }
+    if (e.key === 'ArrowLeft' || e.key === 'ArrowUp') {
+      e.preventDefault();
+      if (current > 0) goTo(current - 1);
+    }
+  });
+
+  document.addEventListener('click', e => {
+    if (!e.target.closest('.nav') && !e.target.closest('.dots')) {
+      if (current < total - 1) goTo(current + 1);
+    }
+  });
+
+  // Cursor
+  document.addEventListener('mousemove', e => {
+    cursor.style.left = e.clientX + 'px';
+    cursor.style.top = e.clientY + 'px';
+  });
+
+  document.querySelectorAll('.nav-btn, .dot-item').forEach(el => {
+    el.addEventListener('mouseenter', () => cursor.classList.add('big'));
+    el.addEventListener('mouseleave', () => cursor.classList.remove('big'));
+  });
+
+  // Init progress
+  progress.style.width = (1 / total * 100) + '%';
+</script>
+</body>
+</html>
