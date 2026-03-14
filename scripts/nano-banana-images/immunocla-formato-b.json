@@ -1,0 +1,15 @@
+{
+  "prompt": "Professional Meta Ads square image, 1080x1080px. Premium health supplement advertisement for Dominican Republic market. DESIGN LAYOUT: Background is a rich medium green (#2D7A3A), clean flat color. TOP CENTER: small rounded yellow label/badge (#FFD700) with bold dark text: '1 MES DE IMMUNOCAL'. Below yellow label, centered bold white italic text headline: 'Mi sistema inmune por fin funciona como debería'. CENTER AREA (large zone from 20% to 80% of canvas height, 40% of canvas width centered): THIS AREA MUST BE COMPLETELY EMPTY — solid green background only, absolutely no objects, no bottles, no product images here. This center column will receive a product image in post-production. SURROUNDING the empty center column, place 4 circular white badge icons arranged symmetrically at top-left, top-right, bottom-left, bottom-right positions — each circle has a small icon and short text: top-left circle: checkmark icon + 'Sistema Inmune'; top-right circle: lightning bolt icon + 'Más Energía'; bottom-left circle: leaf icon + 'Regeneración Celular'; bottom-right circle: shield icon + 'Antioxidante #1'. BOTTOM: wide rounded rectangle banner in dark navy (#0A1628) spanning 80% width with white text: 'Hoy RD$5,840 — Pago contra entrega'. STYLE: Premium health transformation aesthetic, clean, vibrant. No human models. Graphic design render. Ultra sharp typography. Zero lens distortion. Flat graphic illustration style for badges.",
+  "negative_prompt": "product bottle in center, supplement image in center zone, any object in the central column, human figures, cluttered layout, stock photos, watermarks, low resolution, blurry text, plastic AI look, beauty filters, gradients except where specified",
+  "api_parameters": {
+    "resolution": "2K",
+    "output_format": "png",
+    "aspect_ratio": "1:1"
+  },
+  "settings": {
+    "resolution": "2K",
+    "style": "professional graphic design, transformation ad, health brand",
+    "lighting": "flat studio",
+    "quality": "ultra sharp, vibrant colors"
+  }
+}

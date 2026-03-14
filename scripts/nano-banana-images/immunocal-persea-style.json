@@ -1,0 +1,15 @@
+{
+  "prompt": "Professional Meta Ads square image 1080x1080px. This is a health supplement advertisement styled like a high-converting Latin American product ad (Persea Colágeno Hidrolizado style), adapted for Immunocal Azul by Immunotec. OVERALL BACKGROUND: Very light sky-blue gradient (#E8F4FD to #C5E3F5), smooth and clean, no noise. TOP-LEFT CORNER: Two lines of massive ultra-bold dark navy blue uppercase sans-serif text, flush left with 48px margin — Line 1 'IMMUNOCAL', Line 2 'AZUL'. Font size approximately 90-100pt. Dark navy color (#0A2A5C). TOP-RIGHT CORNER: Small brand logo text 'IMMUNOTEC' in dark navy, and directly below it a small rounded-corner badge with white background and dark border containing the text 'BENEFICIOS' in bold uppercase dark navy. BELOW THE MAIN TITLE (left side): Two pill/oval shaped badges side by side — Badge 1: white fill, dark blue border, text 'SIN AZÚCAR' in dark bold navy — Badge 2: white fill, dark blue border, text 'CONT. 30 SOBRES' in dark bold navy. LEFT SIDE (spanning from 30% down to 85% height, occupying left 48% of canvas): Large rounded rectangle with soft white semi-transparent fill (#FFFFFF with slight blue tint), containing a vertical list of 6 benefit items in dark navy bold uppercase sans-serif text: Item 1 'APOYA EL SISTEMA INMUNE', Item 2 'AUMENTA EL GLUTATIÓN NATURAL', Item 3 'REDUCE EL CANSANCIO CRÓNICO', Item 4 'PROTEGE LAS CÉLULAS', Item 5 'VITAMINA D', Item 6 'WHEY PROTEIN CON CISTEÍNA'. Each item preceded by a small filled blue circle bullet point. RIGHT SIDE (52% to 100% width): THIS ZONE MUST BE COMPLETELY EMPTY — only the light blue gradient background, no objects, no product illustration, no box, no 3D renders. This empty zone will receive the product photo in post-production. A subtle white/blue radial glow at center-right is acceptable as a visual anchor. BOTTOM BAR: A thin horizontal strip spanning full width with slightly darker blue (#B0D4EE), containing two marketplace logo placeholders side by side centered — left: yellow Mercado Libre wordmark style logo area, right: orange Amazon wordmark style logo area. STYLE: Clean, professional, flat graphic design. High contrast legibility. Photorealistic graphic render. No human models. No stock photography. Sharp text, perfectly legible. Flat studio lighting. Zero noise. Print-ready quality.",
+  "negative_prompt": "product box, product image, supplement product, 3D box render, any object on right half, illustration, cartoon, blurry text, low contrast, watermark, human figures, hands, faces, plastic look, AI glow effects, heavy shadows, dark background, gradients that are too dark, pink colors, wrong brand colors, clutter, busy layout",
+  "api_parameters": {
+    "resolution": "2K",
+    "output_format": "png",
+    "aspect_ratio": "1:1"
+  },
+  "settings": {
+    "resolution": "2K",
+    "style": "professional graphic design, Meta Ads, health supplement brand, Latin American market",
+    "lighting": "flat studio, even illumination",
+    "quality": "ultra sharp, print-ready, high contrast"
+  }
+}

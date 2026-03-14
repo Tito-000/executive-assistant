@@ -1,0 +1,15 @@
+{
+  "prompt": "Professional Meta Ads square image, 1080x1080px. Clean health supplement advertisement for Dominican Republic market. DESIGN LAYOUT: Warm cream/off-white background (#F5F0E8), completely flat. TOP CENTER: Medium-sized bold green headline text (#2D7A3A), centered: 'El suplemento que le da a tu cuerpo lo que necesita para recuperarse'. LEFT SIDE (45% of canvas width, full height from top to bottom): THIS AREA MUST BE COMPLETELY EMPTY — plain cream background (#F5F0E8) only, no objects, no illustrations, no product. This entire left column will receive a product image in post-production. RIGHT SIDE (50% of canvas, from 25% to 90% canvas height): vertical stack of 5 rounded rectangle badges, each badge is teal (#008080) with white text and a small white icon on the left — Badge 1: '✓ Apoya el Sistema Inmune'; Badge 2: '✓ Reduce el Cansancio Crónico'; Badge 3: '✓ Protege las Células'; Badge 4: '✓ Regeneración Celular'; Badge 5: '✓ Mejora la Energía'. FOOTER (bottom 10% of canvas): thin dark navy strip with small centered text: 'IMMUNOTEC • Glutatión • Caseína de Whey • 30+ años de investigación'. STYLE: Clean, minimal, clinical health brand, trust-building aesthetic. No human models. No clutter. Print-quality graphic design. Ultra-sharp typography. Zero lens distortion.",
+  "negative_prompt": "product bottle on left side, any object in left column, human figures, cluttered layout, dark backgrounds, low resolution, blurry text, plastic AI look, watermarks, stock photos, busy design",
+  "api_parameters": {
+    "resolution": "2K",
+    "output_format": "png",
+    "aspect_ratio": "1:1"
+  },
+  "settings": {
+    "resolution": "2K",
+    "style": "clean professional graphic design, health supplement brand",
+    "lighting": "flat, bright, clinical",
+    "quality": "ultra sharp, minimal, trustworthy"
+  }
+}

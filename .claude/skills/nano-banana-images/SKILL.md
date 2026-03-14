@@ -173,3 +173,52 @@ python3 scripts/nano-banana-images/generate_kie.py scripts/nano-banana-images/yo
 
 ## How to use this skill
 When a user asks you to generate a highly detailed, realistic, or complex image, you must construct the prompt string formatted EXACTLY like the JSON schema above. Pass that entire JSON string as the `Prompt` argument to the `generate_image` tool.
+
+---
+
+## Lecciones aprendidas (retroalimentación de sesiones reales)
+
+### Replicar el estilo gráfico de un ad de referencia
+**Sesión:** 2026-03-14 — Immunocal Persea-style ad
+
+**❌ Error v1 — "inspirado en" no funciona:**
+Usar lenguaje como *"inspired by"*, *"similar to"*, *"styled like"* produce resultados vagos. El modelo interpreta libremente y pierde la línea gráfica. El v1 quedó genérico — texto azul sobre fondo azul claro, sin fidelidad al layout del referente.
+
+**✅ Lo que funcionó en v2 — descripción zona a zona con porcentajes:**
+- Describir cada zona del canvas con posición y tamaño exacto: `TOP-LEFT (large bold title zone)`, `LEFT PANEL (occupying the left 50% of canvas, from 38% down to 84% height)`, `BOTTOM FOOTER (bottom 13% of canvas)`
+- Usar `"Replicate this EXACT layout:"` al inicio del prompt, no "inspired by"
+- Especificar hex colors exactos para cada elemento: `(#D6EAF8)`, `(#8FB8D4)`, `(#0D2B6B)`
+
+**✅ Estrategia zona vacía para compositing:**
+Cuando el ad lleva producto real, **NUNCA pedir al modelo que genere el producto**. El modelo hallucina productos incorrectos. En cambio:
+1. Pedir explícitamente `"RIGHT SIDE: COMPLETELY EMPTY — only background, no objects whatsoever"`
+2. Agregar al `negative_prompt`: `"product images, 3D renders, any object on right side, product box, product bottle"`
+3. Compositar la foto real del producto encima usando el script Python `composite_product.py` (o equivalente PIL)
+
+**✅ Workflow correcto para product ads:**
+```
+1. Generar base (fondo + layout + texto) con zona de producto vacía → Kie.ai
+2. Ver resultado → confirmar que el layout es correcto
+3. Compositar producto real con PIL → agregar sombra suave add_soft_shadow()
+4. Guardar final
+```
+
+**✅ Negative prompt esencial para ads planos:**
+```
+gradients, textures, noise, photography, human models, product images, 3D renders,
+any object on right side, blurry text, watermarks, decorative flourishes,
+complex backgrounds, shadows too dramatic, soft focus
+```
+
+---
+
+### Copywriting para ads de producto (ingredientes-style)
+**Técnica:** Reason Why (David Ogilvy) aplicada a lista de ingredientes
+
+El formato "ingredientes" funciona porque convierte las características del producto en prueba visual. El lector ve lo que tiene el producto y concluye solo que es superior.
+
+**Regla:** Mostrar ingredientes **específicos y propietarios** primero. Lo genérico va al final.
+- ✅ `CISTEÍNA ENLAZADA®` (propietario, crea curiosidad)
+- ✅ `PRECURSOR DE GLUTATIÓN` (mecanismo único)
+- ✅ `WHEY PROTEIN ISOLATE` (credibilidad técnica)
+- ❌ `SIN AZÚCAR` primero (genérico, no diferencia)

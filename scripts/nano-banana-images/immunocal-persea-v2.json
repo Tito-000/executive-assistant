@@ -1,0 +1,15 @@
+{
+  "prompt": "Professional Latin American health supplement product advertisement. 1080x1080px square. Replicate this EXACT layout: BACKGROUND: Solid flat light baby blue (#D6EAF8), no gradients, no texture, completely flat matte finish. TOP-LEFT (large bold title zone): Three lines of ultra-heavy black/dark navy bold condensed sans-serif uppercase text flush to left edge with 40px margin — Line 1: 'IMMUNOCAL', Line 2: 'AZUL' — font size massive approximately 110pt, dark navy (#0D2B6B), same heavy weight as Colageno Hidrolizado style in reference. TOP-RIGHT (brand zone): Small uppercase text 'IMMUNOTEC' in dark navy, and directly below it a solid dark navy rounded rectangle badge with white text 'INGREDIENTES' in bold uppercase. MIDDLE-LEFT PILL BADGES (directly below main title, 2 oval badges side by side): Both badges are oval/circular outlined badges with white fill, thin dark navy border, dark navy bold text inside — Badge 1: 'SIN AZÚCAR' — Badge 2: 'CONT. 30 SOBRES'. LEFT PANEL (occupying the left 50% of canvas, from 38% down to 84% height): A large rounded rectangle with SOLID flat dusty steel-blue fill (#8FB8D4), containing a left-aligned list of 6 bold uppercase sans-serif items in dark navy (#0D2B6B), each item preceded by a filled dark navy bullet dot — Item 1: 'WHEY PROTEIN ISOLATE', Item 2: 'CISTEÍNA ENLAZADA®', Item 3: 'PRECURSOR DE GLUTATIÓN', Item 4: 'VITAMINA D', Item 5: 'SIN LACTOSA', Item 6: 'SIN AZÚCAR AÑADIDA'. RIGHT SIDE (right 50% of canvas from top to 84% height): COMPLETELY EMPTY — only the flat #D6EAF8 background, no objects, no illustrations whatsoever. This zone is reserved. BOTTOM FOOTER (bottom 13% of canvas): A full-width horizontal band in slightly darker blue (#B0CCE0) containing centered side-by-side logos — left: Mercado Libre yellow-green logo with handshake icon and 'mercado libre' text — right: Amazon orange smile logo with 'amazon' text. STYLE: Clean, flat, graphic design, zero photography, zero gradients, zero shadows except minimal drop shadow on the pill badges. Bold geometric shapes. Exact proportions matching the Persea Colágeno Hidrolizado advertisement format. Sharp text, perfectly legible, print-ready.",
+  "negative_prompt": "gradients, textures, noise, photography, human models, product images, 3D renders, dark backgrounds, pink colors, product bottle, product box, any object on right side, blurry text, watermarks, decorative flourishes, flowers, scrollwork, complex backgrounds, shadows that are too dramatic, soft focus",
+  "api_parameters": {
+    "resolution": "2K",
+    "output_format": "png",
+    "aspect_ratio": "1:1"
+  },
+  "settings": {
+    "resolution": "2K",
+    "style": "flat graphic design, Latin American health supplement ad",
+    "lighting": "flat, even",
+    "quality": "ultra sharp, print-ready"
+  }
+}

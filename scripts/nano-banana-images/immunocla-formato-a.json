@@ -1,0 +1,15 @@
+{
+  "prompt": "Professional Meta Ads square image, 1080x1080px. This is a premium health supplement advertisement for the Dominican Republic market. DESIGN LAYOUT: Solid black background (#000000), completely flat, no gradients. LEFT SIDE (55% of canvas): Large ultra-bold white sans-serif text, uppercase, flush left, massive font size — Line 1: '¿POR QUÉ', Line 2: 'TE CANSAS', Line 3: 'TAN RÁPIDO?'. Below the headline, smaller white subtitle text: 'Tu cuerpo necesita glutatión para funcionar. Immunocal lo ayuda a producirlo.'. Below subtitle: a solid blue pill-shaped CTA button (#0057A8) with white text 'VER MÁS'. At the very bottom: a horizontal blue banner strip (#0057A8) spanning full width with small white text 'Suplemento Clínico • Fabricado en USA'. RIGHT SIDE (45% of canvas): THIS AREA MUST BE COMPLETELY EMPTY — solid black background (#000000) only, absolutely no objects, no illustrations, no shapes, no product bottles, no images. The right side must be 100% pure black empty space. A very subtle cyan radial glow effect fading from the center-right of the canvas toward the edges is acceptable as a light visual cue. STYLE: Clean, minimal, high-contrast, professional health brand. No stock photos. No human models. No clutter. Photorealistic graphic design render. Sharp edges, legible typography. 85mm equivalent lens, flat studio lighting, zero lens distortion.",
+  "negative_prompt": "product bottle on right side, product image, supplement image, pill bottle, any object on right half, illustration, cartoon, 3D render, plastic look, AI beauty filters, watermark, logo overlays, gradients on main background, blurry text, low resolution, cluttered layout, stock photo elements, human figures, hands, faces",
+  "api_parameters": {
+    "resolution": "2K",
+    "output_format": "png",
+    "aspect_ratio": "1:1"
+  },
+  "settings": {
+    "resolution": "2K",
+    "style": "professional graphic design, Meta Ads, health brand",
+    "lighting": "flat studio, high contrast",
+    "quality": "ultra sharp, print-ready"
+  }
+}
