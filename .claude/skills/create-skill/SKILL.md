@@ -128,3 +128,4 @@ Pregunta: "¿Quieres ajustar algo antes de probarlo?"
 **Si el skill ya existe** — no sobreescribas. Pregunta si quiere actualizar el existente o crear una variante.
 
 **Si el skill necesita credenciales o API keys** — documenta claramente en el `SKILL.md` cómo configurarlas. Nunca hardcodear credenciales en el skill.
+
