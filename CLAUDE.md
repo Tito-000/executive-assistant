@@ -36,15 +36,19 @@ Los proyectos viven en `projects/`. Cada uno tiene su propio `README.md` con est
 **Clientes:**
 - `projects/clientes/proyecto-bordados/` — cliente activo, deadline 23 mar 2026
 - `projects/clientes/dra-aurys-mercedes/` — página web + embudos, en progreso
+- `projects/clientes/beatriz-5k-funnel/` — funnel $5k para Beatriz
 
 **Immunotec:**
 - `projects/immunotec/fase-4-cierre-diamante/` — cierre Diamante, deadline 2 may 2026
 - `projects/immunotec/fase-3-embudo-prospectos-negocio/` — embudo atracción, deadline 10 abr 2026
+- `projects/immunotec/fase-2-sistema-duplicacion/` — sistema de duplicación
 - `projects/immunotec/fase-1-embudos-por-producto/` — embudos por producto (Immunocal, Platinum, Magistral, Multi-Resveratrol)
+- `projects/immunotec/immuno-consultor/` — materiales y research del consultor
 
 **Outputs generados (imágenes, diagramas):**
 - `outputs/excalidraw-visuals/` — PNGs generados con excalidraw-visuals skill
 - `outputs/nano-banana-images/` — imágenes generadas con nano-banana-images skill
+- `outputs/alianza-agencia/` — materiales de alianza estratégica agencia
 
 ---
 
@@ -89,11 +93,29 @@ Claude Code mantiene memoria persistente entre conversaciones. Guarda patrones, 
 ## Templates
 
 `templates/session-summary.md` — para cerrar sesiones de trabajo.
+`templates/nano-banana/` — templates JSON para imágenes con nano-banana-images skill.
 
 ## Referencias
 
 `references/sops/` — procedimientos estándar
 `references/examples/` — ejemplos de outputs y guías de estilo
+`references/gastos-api.csv` — tracking de costos de APIs de IA
+
+## Scripts
+
+`scripts/` — scripts de generación de imágenes y automatizaciones.
+- `scripts/excalidraw-visuals/` — genera PNGs con estilo excalidraw
+- `scripts/nano-banana-images/` — genera imágenes con Gemini
+- `scripts/immunotec/` — scripts específicos de Immunotec
+
+## Sesiones
+
+`sessions/` — resúmenes de sesiones de trabajo. Formato: `YYYY-MM-DD.md`.
+
+## Brand Assets
+
+`brand-assets/` — recursos de marca reutilizables.
+- `excalidraw-style-reference.png` — referencia visual para el skill excalidraw-visuals
 
 ## Archivos viejos
 
