@@ -1,0 +1,9 @@
+{
+  "prompt": "World-class graphic designer Meta Ads carousel slide. 1:1 square format, 1080x1080px, premium health supplement advertising. BACKGROUND: Deep rich navy blue (#071830), solid, uniform. LAYOUT: Full-width design. TOP ZONE (top 22%): Massive bold uppercase white headline in heavy display font, full-width, single line — '¿PARA QUÉ SIRVE?' — very large, centered or left-aligned. Below headline: full-width horizontal 2px sky-blue (#87CEEB) line divider. BODY ZONE (remaining 78%): 5 rows, evenly spaced, each row contains: LEFT: a white outline icon (minimalist line-art style, ~55px): row 1 = water drop icon, row 2 = crescent moon icon, row 3 = lightning bolt icon, row 4 = shield outline icon, row 5 = leaf outline icon. CENTER-RIGHT of each icon: bold uppercase white text (large, Bebas Neue style) as title + smaller white regular text below as subtitle. Row 1: 'REDUCE LA URGENCIA URINARIA' / 'Fluye sin interrupciones'. Row 2: 'DEVUELVE EL SUEÑO COMPLETO' / 'Duerme de corrido'. Row 3: 'AUMENTA TU ENERGÍA Y VITALIDAD' / 'Activo desde la mañana'. Row 4: 'APOYA LA SALUD PROSTÁTICA' / 'Saw Palmetto clínicamente probado'. Row 5: 'NATURAL — SIN EFECTOS SECUNDARIOS' / 'Sin receta, sin pastillas'. Thin sky-blue horizontal divider lines between each row. FOOTER: thin dark full-width bar at bottom, 'MAGISTRAL' small bold white text left, 'IMMUNOTEC' small bold white text right. No product image in this slide.",
+  "negative_prompt": "product images, bottles, product photography, people, models, lifestyle photography, gradient background, light background, white background, blurry, watermark, extra text, cluttered layout, colored icons",
+  "api_parameters": {
+    "aspect_ratio": "1:1",
+    "resolution": "1K",
+    "output_format": "jpg"
+  }
+}

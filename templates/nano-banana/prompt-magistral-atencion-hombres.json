@@ -1,0 +1,9 @@
+{
+  "prompt": "World-class graphic designer Meta Ads static image. 1:1 square format, 1080x1080px, premium health supplement advertising. OVERALL STYLE: Clean, minimal, white background with a thin 6px rectangular border frame in sky blue (#87CEEB) inset ~18px from all edges. BACKGROUND: Pure white (#FFFFFF), solid, no gradients, no textures. LAYOUT: Scattered editorial text layout — text elements float around a central empty product zone. TOP ZONE (top 38%): Massive bold uppercase dark navy blue (#0D2B6B) headline in heavy display font (Bebas Neue / Anton), stacked 2 lines left-aligned, each line fills ~85% of canvas width — 'ATENCIÓN' / 'HOMBRES' — very large, dominating the top half, approximately 160px per line. CENTER ZONE (middle 40%): COMPLETELY EMPTY — white background only, no objects, no product, subtle very light sky blue soft oval glow (#E8F4FD) in center to suggest product placement area. LEFT-CENTER TEXT: Bold dark navy blue sans-serif text (~32px, left-aligned, x=55px, y=58%): 'Plan premium' (large bold) / 'para el cuidado' / 'de la próstata' — stacked 3 lines. RIGHT-CENTER TEXT: Smaller dark navy blue text (~26px, right-aligned, x=75%, y=55%): 'Invierte' / 'en' / 'Tratamientos' / 'que' / 'Funcionen' — right-aligned, elegant weight. BOTTOM ZONE (bottom 15%): Right-aligned dark navy blue text (~28px bold): 'Escríbenos ahora »' as CTA. Small bottom-center text (~18px, gray #888888): 'MAGISTRAL — IMMUNOTEC'. Ultra clean, premium editorial design, high white space, typography-driven layout.",
+  "negative_prompt": "product images, bottles, people, models, person, hands, lifestyle photography, dark background, navy background, gradients, textures, noise, blurry, watermark, extra decorative elements, cluttered, colored background, shadows too dramatic",
+  "api_parameters": {
+    "aspect_ratio": "1:1",
+    "resolution": "1K",
+    "output_format": "jpg"
+  }
+}

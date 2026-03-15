@@ -1,0 +1,9 @@
+{
+  "prompt": "Candid documentary-style product photo. A real Latin American man, approximately 55 years old, slightly overweight with a warm friendly smile, short gray-salt-and-pepper hair, natural skin with visible wrinkles and pores. Wearing a casual medium-blue t-shirt. He is standing slightly turned, right arm extended forward with open flat palm facing upward — as if presenting or offering something on his palm. His palm is completely empty and flat, fingers spread naturally. His left arm relaxed at his side. No objects in either hand. The open empty palm is clearly visible in the center-lower area of the frame. BACKGROUND: Pure clean white (#FFFFFF), completely uniform, no shadows on background, no gradient — ideal for cutout. The man is centered horizontally, slightly left of center, cut off at knee level. Natural overhead indoor lighting, even illumination, no harsh shadows. 85mm lens equivalent, f/4.0, ISO 200. Photojournalistic style, unretouched. Do not beautify or smooth skin.",
+  "negative_prompt": "bottle, product, object in hand, anything in hand, closed fist, studio lighting, dramatic shadows, beauty filter, skin smoothing, plastic skin, airbrushed, CGI, illustration, cartoon, painting, colored background, gray background, outdoor background, people in background, logo on shirt, glasses, hat, beard, extra people, fancy clothing, suit, tie",
+  "api_parameters": {
+    "aspect_ratio": "1:1",
+    "resolution": "1K",
+    "output_format": "jpg"
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "prompt": "World-class graphic designer Meta Ads carousel slide. 1:1 square format, 1080x1080px, professional advertising composition. BACKGROUND: Solid flat black (#0f0f0f), perfectly uniform, no gradients, no textures. LAYOUT STRUCTURE: Three distinct zones. TOP-LEFT ZONE (top 40%, left 60%): Bold uppercase white headline in 3 stacked lines — '¿QUIÉNES' / 'PUEDEN' / 'TOMARLO?' — heavy display font (Bebas Neue / Anton), very large, fills this zone, left-aligned with 40px left margin. TOP-RIGHT ZONE (top 40%, right 40%): The Immunocal Azul product box — COMPLETELY VISIBLE, fully contained inside this zone with generous padding. ALL FOUR CORNERS of the product are inside the image. Product has minimum 50px clearance from top border, 50px from right border, 20px from dividing lines. Product is centered in this zone. Photorealistic 3D product box with soft royal blue radial glow (#3B82F6) emanating from behind it. Product is NOT cropped, NOT touching any edge. DIVIDER: A 1px horizontal white rule separating top zone from bottom zone. BOTTOM ZONE (bottom 60%, full width): 5 bullet point items in a clean vertical list, left-aligned, white clean sans-serif text, good spacing between items — '→  Personas con cansancio constante' / '→  Personas con enfermedades crónicas' / '→  Quienes quieren fortalecer sus defensas' / '→  Adultos mayores que quieren vitalidad' / '→  Cuidadores que se olvidan de sí mismos'. FOOTER: Thin dark bar at very bottom, 'IMMUNOCAL AZUL' small white left, 'IMMUNOTEC' small white right. Premium professional ad design, high contrast.",
+  "negative_prompt": "product cropped, product cut off, product outside image boundary, product bleeding past edge, product partially hidden, photorealistic background, people, models, lifestyle, gradient background, light background, blurry, watermark, extra text",
+  "api_parameters": {
+    "aspect_ratio": "1:1",
+    "resolution": "1K",
+    "output_format": "jpg"
+  }
+}

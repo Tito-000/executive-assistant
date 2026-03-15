@@ -1,0 +1,9 @@
+{
+  "prompt": "World-class graphic designer Meta Ads carousel slide. 1:1 square format, 1080x1080px, professional advertising composition. BACKGROUND: Solid flat black (#0f0f0f), completely uniform, no gradients, no textures. LAYOUT: Two-zone composition. TOP ZONE (top 35% of canvas): Bold uppercase white headline '¿QUÉ ES IMMUNOCAL?' in a heavy display font (Bebas Neue / Anton style), left-aligned with left margin of ~40px. Font is very large. Below headline: a thin 1px horizontal white divider line spanning the full width. LEFT ZONE (bottom 65%, left 55%): Vertical list of 5 items, each on its own line, left-aligned, clean white sans-serif text, medium size, good line spacing — '→ Suplemento nutricional clínico' / '→ Apoya la producción natural de glutatión' / '→ Protege y regenera tus células' / '→ Fabricado en USA — estándares clínicos' / '→ Más de 30 años de investigación'. RIGHT ZONE (bottom 65%, right 45%): The Immunocal Azul product box — FULLY CONTAINED within this zone. The complete product is visible: every edge of the box is inside the image. Product has minimum 50px clearance from the right image border, 50px clearance from the bottom footer, 20px clearance from the divider line at top. Product is vertically centered in the right zone. Product has a soft royal blue radial glow behind it (#3B82F6). Photorealistic 3D product box rendering. FOOTER: Thin dark bar at very bottom, 'IMMUNOCAL AZUL' small white text left, 'IMMUNOTEC' small white text right. Professional premium ad design.",
+  "negative_prompt": "product cropped, product cut off, product outside canvas border, product bleeding into edge, product partially hidden by frame, photorealistic background scenes, people, models, lifestyle, gradient background, light background, white background, blurry, watermark, extra text, typos",
+  "api_parameters": {
+    "aspect_ratio": "1:1",
+    "resolution": "1K",
+    "output_format": "jpg"
+  }
+}

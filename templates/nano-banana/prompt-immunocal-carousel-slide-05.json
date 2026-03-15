@@ -1,0 +1,9 @@
+{
+  "prompt": "Professional Meta Ads carousel slide. Graphic design style, 1:1 square format, high resolution. EXACT LAYOUT: Solid near-black background (#0f0f0f), completely flat. TOP: Bold uppercase white headline in 4 lines, left-aligned — '¿CUÁNDO' / 'EMPIEZO A' / 'SENTIR LA' / 'DIFERENCIA?' in heavy display font (Bebas Neue style), large. Below: thin white divider line. BODY TEXT (white, clean sans-serif, centered or left-aligned): 'Entre 10 y 30 días de uso constante, muchas personas reportan:' — below that, 3 rows each with a white arrow icon and bold label — '→  Más energía en el día a día' / '→  Mejor recuperación' / '→  Mayor bienestar y estabilidad'. Below those: smaller italic white text — 'Cada cuerpo es diferente. El proceso empieza desde adentro.' BOTTOM FOOTER: Thin dark bar with 'IMMUNOCAL AZUL' left and 'IMMUNOTEC' right. Professional carousel ad, pure graphic design.",
+  "negative_prompt": "photorealistic background, people, models, lifestyle, gradients on background, light background, blurry, low quality, text errors, watermark, product",
+  "api_parameters": {
+    "aspect_ratio": "1:1",
+    "resolution": "1K",
+    "output_format": "jpg"
+  }
+}

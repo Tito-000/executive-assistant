@@ -1,0 +1,9 @@
+{
+  "prompt": "Candid documentary-style photo. A real Latin American man, approximately 45-50 years old, short dark hair with slight beard stubble, wide excited open-mouth smile, energetic surprised expression. Wearing a casual light blue button-up shirt, untucked. He is positioned slightly right of center, body turned slightly left. His RIGHT arm is raised UP pointing with index finger toward the upper-right corner of the frame. His LEFT arm is also raised pointing up-right, both hands pointing enthusiastically toward the top-right corner. His whole expression is amazed and excited — like he just discovered something great. BACKGROUND: Pure clean white (#FFFFFF), completely uniform — ideal for background removal cutout. The man is visible from head to waist/hip level. Natural even indoor lighting, no harsh shadows. 85mm lens equivalent, f/4.0, ISO 200. Photojournalistic style, unretouched.",
+  "negative_prompt": "bottle, product, object in hand, studio dramatic lighting, beauty filter, skin smoothing, plastic skin, CGI, illustration, cartoon, colored background, gray background, outdoor background, people in background, suit, tie, sad expression, calm expression, arms down, pointing left",
+  "api_parameters": {
+    "aspect_ratio": "1:1",
+    "resolution": "1K",
+    "output_format": "jpg"
+  }
+}

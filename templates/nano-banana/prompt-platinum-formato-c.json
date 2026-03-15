@@ -1,0 +1,9 @@
+{
+  "prompt": "Professional Meta Ads static image. Graphic design style, high resolution, clean minimal layout. EXACT LAYOUT: Cream or off-white background (#F5F0E8), completely flat. TOP CENTER: Bold green headline text (#1A5C3A) in two lines — 'LO QUE TUS ARTICULACIONES NECESITABAN'. LEFT SIDE (55% of width): Completely empty cream space — NO product, NO object, NO illustration, just pure empty background where a product photo will be placed later. RIGHT SIDE (45% of width): 5 teal rounded rectangle badges (#20B2AA) stacked vertically with small white icons and short white text labels — the labels are: 'Reduce inflamación', 'Recupera movilidad', 'Eleva glutatión', 'Sin efectos adversos', 'Respaldo 40 años'. BOTTOM FOOTER: A thin footer bar with the brand name 'Immunocal Platinum' on the left and 'Clínicamente estudiado · Fabricado en EE.UU.' on the right, in small dark gray text. Typography: clean modern sans-serif. This is a polished Facebook/Instagram ad background template. No product, no people, no background scenes. Do not add any text other than what is specified.",
+  "negative_prompt": "product, bottle, box, package, supplement container, sachet, object on left side, people, models, lifestyle, nature, dark background, blurry, low quality, text errors, extra elements, watermark",
+  "api_parameters": {
+    "aspect_ratio": "4:5",
+    "resolution": "1K",
+    "output_format": "jpg"
+  }
+}

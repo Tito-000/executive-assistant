@@ -1,0 +1,9 @@
+{
+  "prompt": "World-class graphic designer Meta Ads carousel slide. 1:1 square format, 1080x1080px, premium health supplement offer slide. BACKGROUND: Deep rich navy blue (#071830), solid, uniform. LAYOUT: Two-column. LEFT COLUMN (left 52%): TOP: Very large bold uppercase white text 'MAGISTRAL' in heavy display font (Bebas Neue), left-aligned, ~100px tall. BELOW: A pill-shaped badge with warm golden-yellow background (#F0B429) containing bold black uppercase text 'SAW PALMETTO + ZINC'. BELOW BADGE: Price section — first line: strikethrough gray text 'RD$7,000' (~36px, color #888888, with visible horizontal strikethrough line through the middle). Second line: very large bold white text 'RD$3,500' (~72px, heavy weight, eye-catching). BELOW PRICES: Three lines of white bold text with white checkmark '✓' prefix each: '✓ Pago contra entrega' / '✓ Entrega 24-72 horas' / '✓ Asesor real por WhatsApp'. RIGHT COLUMN (right 48%): COMPLETELY EMPTY — deep navy blue (#071830) with a vivid royal blue radial glow / spotlight (#1A56DB / #3B82F6) indicating product placement area. NO objects, NO product images whatsoever. ABOVE FOOTER: small centered gray text 'MAGISTRAL — IMMUNOTEC'. BOTTOM FOOTER BAR: Full-width solid royal blue bar (#1A50D0), ~78px tall, containing centered large bold uppercase white text 'ESCRÍBENOS AHORA' in heavy display font. This blue bar is the final element at the very bottom of the canvas. Premium sales design, high energy.",
+  "negative_prompt": "product images, bottles, any object in right column, white background, gradient background, people, models, lifestyle photography, blurry, watermark, extra text, cluttered layout",
+  "api_parameters": {
+    "aspect_ratio": "1:1",
+    "resolution": "1K",
+    "output_format": "jpg"
+  }
+}

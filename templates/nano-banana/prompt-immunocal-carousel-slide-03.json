@@ -1,0 +1,9 @@
+{
+  "prompt": "Professional Meta Ads carousel slide. Graphic design style, 1:1 square format, high resolution. EXACT LAYOUT: Solid near-black background (#0f0f0f), completely flat. TOP: Bold uppercase white headline centered or left-aligned — '¿PARA QUÉ SIRVE?' in heavy display font (Bebas Neue style), very large. Below headline: thin white divider line. BODY: A vertical list of 5 items, each item on its own row with TWO elements — LEFT: a simple white outline icon (shield icon for immune, lightning bolt for energy, leaf for natural, cell/atom icon for cellular protection, sun/star for wellness), RIGHT: bold white uppercase text label next to the icon — 'SISTEMA INMUNE' / 'REDUCE EL CANSANCIO' / 'PROTECCIÓN CELULAR' / 'REGENERACIÓN CELULAR' / 'BIENESTAR Y ENERGÍA'. Items are evenly spaced, clean and minimal. Small white descriptive subtext below each label optional. BOTTOM FOOTER: Thin dark bar, 'IMMUNOCAL AZUL' left, 'IMMUNOTEC' right in small white text. This is a polished Instagram/Facebook carousel ad — pure graphic design, no photos of people.",
+  "negative_prompt": "photorealistic background, people, models, lifestyle, gradients on background, light background, blurry, low quality, text errors, watermark, product bottle",
+  "api_parameters": {
+    "aspect_ratio": "1:1",
+    "resolution": "1K",
+    "output_format": "jpg"
+  }
+}

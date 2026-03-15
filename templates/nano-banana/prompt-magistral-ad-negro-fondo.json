@@ -1,0 +1,9 @@
+{
+  "prompt": "World-class graphic designer Meta Ads static image. 1:1 square format, 1080x1080px. BACKGROUND: Pure solid black (#000000), completely uniform, no gradients, no textures. LAYOUT: LEFT ZONE (left 58%): TOP-LEFT: Massive bold uppercase white headline in ultra-heavy display font (Impact/Bebas Neue), stacked 2 lines left-aligned — 'ATENCIÓN' / 'HOMBRES' — each line approximately 130px tall, fills the left column. BELOW HEADLINE: Two lines of smaller white bold sans-serif text (~32px uppercase): 'INVIERTE EN TRATAMIENTOS' (lighter weight) and 'QUE FUNCIONEN' (bold). BELOW TEXT: A light sky-blue (#87CEEB) rounded pill-shaped button (~280x65px), left-aligned, containing bold white uppercase text 'CONÓCELO'. RIGHT ZONE (right 42%): COMPLETELY EMPTY — pure black, no objects, no text whatsoever. TOP-RIGHT ZONE (top-right 30%, above center): COMPLETELY EMPTY — black background with a very subtle light circular halo to indicate product float area. BOTTOM ZONE (bottom 14%): Full-width solid sky-blue bar (#87CEEB), ~150px tall, containing centered bold uppercase white text 'PLAN PARA EL CUIDADO DE LA PRÓSTATA' in heavy sans-serif font (~40px). Clean, high-energy advertising design.",
+  "negative_prompt": "product images, person, people, models, gradient background, gray background, white background, colored background, textures, patterns, extra text, watermarks, blurry, decorative elements",
+  "api_parameters": {
+    "aspect_ratio": "1:1",
+    "resolution": "1K",
+    "output_format": "jpg"
+  }
+}

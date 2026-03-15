@@ -1,6 +1,6 @@
 # Skill: campaign-image-gen
 
-Genera anuncios estáticos de suplementos/productos para Meta Ads usando los 3 formatos ganadores. Antes de generar, investiga los documentos del producto para aplicar las mejores técnicas de copy, ángulos de mensaje y ganchos emocionales.
+Genera anuncios para Meta Ads de productos Immunotec. El formato, número de piezas y estructura los define Martin en el momento. La generación de imágenes usa **exclusivamente Nano Banana Pro via Kie.ai** — nunca Gemini, Imagen 4, ni Pillow puro.
 
 ## Cuándo usar este skill
 
@@ -13,15 +13,12 @@ Cuando Martin diga:
 
 ---
 
-## Paso 1 — Preguntar el producto
+## Paso 1 — Entender qué se va a generar
 
-Cuando se active el skill, preguntar:
+Martin especificará qué quiere: un carrusel de N slides, una imagen estática, un formato específico. Si no lo especifica, preguntar:
 
-> "¿Para cuál producto genero los anuncios?"
-> - Immunocal
-> - Magistral
-> - Platinum
-> - Multy-Resveratrol
+> "¿Qué quieres generar?"
+> Ejemplos: carrusel de 5 slides, imagen estática de oferta, slide de hook, etc.
 
 La carpeta raíz del producto es:
 `projects/immunotec/fase-1-embudos-por-producto/productos/[nombre-producto]/`
@@ -34,164 +31,146 @@ Antes de generar nada, leer TODOS los archivos disponibles en estas carpetas del
 
 1. `WWP/` — Winning Writing Process: estructura del mensaje, gancho, historia, oferta, CTA
 2. `Market Reaserch/` — investigación de mercado: dolores, deseos, objeciones, lenguaje del avatar
-3. `Top player analisis/` — análisis de top players: qué están haciendo los mejores, formatos ganadores, ángulos de ataque
+3. `Top player analisis/` — análisis de top players: formatos ganadores, ángulos de ataque
 
 **Si alguna carpeta está vacía, continuar con las que tengan contenido.**
 
 ### Síntesis obligatoria antes de generar
 
-Después de leer los documentos, hacer un análisis interno y extraer:
+Extraer de los documentos:
 
-- **Gancho principal** — la idea más poderosa para captar atención en 1-2 segundos
-- **Ángulo de mensaje** — el eje emocional o racional que más resuena con el avatar
+- **Gancho principal** — idea más poderosa para captar atención en 1-2 segundos
+- **Ángulo de mensaje** — eje emocional o racional que más resuena con el avatar
 - **Beneficios top 3-5** — los que aparecen con más fuerza en los documentos
-- **Headline 1 y Headline 2** — derivados del WWP y del lenguaje del mercado
+- **Headline principal** — derivado del WWP y del lenguaje del mercado
 - **CTA** — el llamado a la acción más alineado con la etapa del funnel
 - **Oferta / promesa** — si hay una oferta activa o promesa de transformación clara
 
-Todo el copy de la imagen debe salir de esta síntesis — no inventar nada que no esté respaldado por los documentos.
+Todo el copy de la imagen debe salir de esta síntesis.
 
 ---
 
 ## Paso 3 — Obtener la imagen del producto
 
-Buscar automáticamente la foto del producto en:
+Buscar la foto del producto en:
 `projects/immunotec/fase-1-embudos-por-producto/productos/[nombre-producto]/recursos/Imagenes de producto/`
 
-Si hay varias imágenes, usar la de mayor resolución o preguntar a Martin cuál prefiere.
+Usar la imagen de mayor resolución disponible. Si hay varias, preguntar a Martin cuál prefiere.
 
 ---
 
-## Paso 4 — Generar los 3 formatos ganadores
+## Paso 4 — Construir los prompts Nano Banana
 
-### Formato A — "Atención Directa" (fondo negro)
-- Fondo negro sólido
-- Titular grande izquierda (2 líneas mayúsculas) — derivado del gancho principal
-- Subtítulo + botón CTA azul
-- Producto real derecha con glow azul
-- Banner inferior azul claro con plan/categoría
+Para cada pieza a generar, crear un archivo JSON en:
+`scripts/nano-banana-images/prompt-[producto]-[nombre-slide].json`
 
-### Formato B — "Resultado Transformación" (fondo verde)
-- Fondo verde medio
-- Etiqueta amarilla arriba: "1 [período] de [producto]"
-- Subtítulo: "[beneficio principal logrado]" — del Market Research
-- Producto real al centro con glow blanco
-- 4 badges circulares alrededor (beneficios top del análisis)
-- Banner inferior redondeado con oferta o promesa
+Usar el **Dense Narrative Format** del skill nano-banana-images:
 
-### Formato C — "Limpio Beneficios" (fondo crema)
-- Fondo crema/blanco roto
-- Headline verde centrado arriba — del ángulo de mensaje
-- Producto real izquierda full height
-- 5 badges teal apilados a la derecha (beneficios del producto)
-- Footer con marca + ingredientes clave
-
----
-
-## Paso 5 — Generar el copy completo para Meta Ads
-
-Para cada formato de imagen generado, crear el copy completo del anuncio aplicando técnicas de los mejores copywriters del mundo (David Ogilvy, Gary Halbert, Eugene Schwartz, Alex Hormozi, entre otros).
-
-### Estructura del copy por anuncio
-
-**Primaria (texto principal del ad):**
-- Hook de apertura — primera línea que detiene el scroll (máx. 1-2 líneas, basado en el dolor o deseo más fuerte del avatar)
-- Desarrollo — agitar el problema o amplificar el deseo, usar el lenguaje exacto del Market Research
-- Credibilidad / prueba — ingrediente, mecanismo único, o resultado específico del producto
-- CTA — llamado a la acción claro y directo
-
-**Titular (headline del ad):**
-- Versión corta y poderosa del gancho principal
-- Máx. 40 caracteres si es posible
-- Derivado del análisis de top players y el WWP
-
-**Descripción (link description):**
-- 1 línea que refuerza el beneficio principal o la oferta
-
-### Técnicas a aplicar (según lo que dicten los documentos)
-
-- **Interrupción de patrón** — abrir con algo inesperado o contraintuitivo
-- **Especificidad** — números concretos son más creíbles que generalidades ("en 21 días" > "en poco tiempo")
-- **Lenguaje del avatar** — usar las palabras exactas que el mercado usa para describir su problema
-- **Future pacing** — llevar al lector a imaginar su vida con el resultado
-- **Mecanismo único** — explicar POR QUÉ este producto funciona diferente
-- **Urgencia / escasez** — si aplica y es verdad
-
-### Output del copy
-
-Guardar un archivo `copy-ads-[producto]-[fecha].md` en `Creativos nuevos para test/` con el copy de los 3 formatos. Formato del archivo:
-
-```
-# Copy Meta Ads — [Producto] — [Fecha]
-
-## Formato A — Atención Directa
-**Titular:** ...
-**Texto principal:**
-...
-**Descripción:**
-...
-
-## Formato B — Resultado Transformación
-**Titular:** ...
-**Texto principal:**
-...
-**Descripción:**
-...
-
-## Formato C — Limpio Beneficios
-**Titular:** ...
-**Texto principal:**
-...
-**Descripción:**
-...
+```json
+{
+  "prompt": "descripción ultra-detallada zona a zona con hex colors, posiciones, tipografía, layout exacto",
+  "negative_prompt": "elementos a evitar separados por coma",
+  "api_parameters": {
+    "aspect_ratio": "1:1",
+    "resolution": "1K",
+    "output_format": "jpg"
+  }
+}
 ```
 
+### Reglas de construcción de prompts
+
+- Describir cada zona del canvas con posición y porcentaje exacto (ej: `LEFT COLUMN (left 54%)`)
+- Especificar hex colors para cada elemento
+- Para slides con producto: dejar zona vacía con glow — `"COMPLETELY EMPTY — deep navy background with soft blue radial glow"`
+- Agregar al negative_prompt: `"product images, bottles, any object in product zone"`
+- El producto NUNCA lo genera la IA — siempre se composita después con PIL
+
 ---
 
-## Paso 6 — Guardar todo en la carpeta del producto
+## Paso 5 — Ejecutar generación via Kie.ai
 
-Imágenes + archivo de copy se guardan juntos en:
-`projects/immunotec/fase-1-embudos-por-producto/productos/[nombre-producto]/Creativos nuevos para test/`
+Para cada prompt JSON:
 
-Crear la carpeta si no existe.
+```bash
+source ~/.zshenv && python3 scripts/nano-banana-images/generate_kie.py \
+  scripts/nano-banana-images/prompt-[producto]-[slide].json \
+  "[ruta-output]/[slide]-base.jpg" \
+  "1:1"
+```
+
+Si son múltiples slides, lanzar en paralelo con `&` y esperar con `wait`.
+
+Guardar bases en:
+`projects/immunotec/fase-1-embudos-por-producto/productos/[nombre-producto]/Creativos nuevos para test/[nombre-carpeta]/`
 
 ---
 
-## Proceso de ejecución técnica
+## Paso 6 — Compositar el producto real
 
-1. Preguntar producto (Paso 1)
-2. Leer documentos del producto (Paso 2) — obligatorio antes de continuar
-3. Presentar síntesis a Martin para validación (opcional si hay prisa, preguntar)
-4. Obtener imagen del producto (Paso 3)
-5. Ejecutar el generador de imágenes con Gemini:
-   ```bash
-   source ~/.zshenv && python3 "/Users/martinmercedes/Desktop/Executive assistant 2/.claude/skills/campaign-image-gen/generar_imagenes_gemini.py" \
-     --producto [nombre-producto] \
-     --output "[ruta/Creativos nuevos para test]" \
-     --datos '{"nombre":"[Nombre]","beneficios":["ben1","ben2","ben3","ben4","ben5"],"mecanismo":"[mecanismo único]","oferta":"[oferta activa]"}'
-   ```
-6. Generar el copy completo para los 3 formatos (Paso 5)
-7. Guardar imágenes + archivo `copy-ads-[producto]-[fecha].md` en `Creativos nuevos para test/` (Paso 6)
-8. Mostrar todas las imágenes generadas a Martin una por una
-9. Preguntar: "¿Cuáles te quedas y cuáles descartamos?" — esperar respuesta
-10. Eliminar las descartadas de la carpeta
-11. Subir las aprobadas a Canva usando el MCP de Canva (`mcp__claude_ai_Canva__upload-asset-from-url` o importar desde path local) para edición final
-12. Registrar gasto en `gastos_ia.xlsx` si se usó Imagen 4
+Usar PIL para colocar la foto real del producto sobre cada base generada:
+
+```python
+from PIL import Image, ImageFilter
+
+def remove_white_bg(img, threshold=220): ...
+def add_glow(img, color_rgb, radius=35, opacity=160): ...
+def place_product(base, product, x_pct, y_pct, w_pct, h_pct, glow_color): ...
+```
+
+**Posicionamiento por tipo de slide:**
+- Slide con zona derecha vacía: `x=0.52, y=0.08, w=0.44, h=0.80`
+- Slide con zona top-right vacía: `x=0.57, y=0.02, w=0.40, h=0.44`
+- Slide full-width (beneficios/iconos): producto pequeño top-right `x=0.68, y=0.00, w=0.30, h=0.22`
+
+**Colores de glow por producto:**
+- Magistral: `(100, 180, 240)` — sky blue
+- Immunocal: `(0, 180, 220)` — cyan
+- Platinum: `(212, 175, 55)` — gold
+- Multi-Resveratrol: `(180, 50, 50)` — rojo
+
+Guardar finales como `-final.jpg` junto a los `-base.jpg`.
+
+---
+
+## Paso 7 — Generar el copy completo para Meta Ads
+
+Para cada pieza generada, crear el copy del anuncio:
+
+**Primaria (texto principal):**
+- Hook de apertura — primera línea que detiene el scroll
+- Desarrollo — agitar el problema o amplificar el deseo
+- Credibilidad — ingrediente, mecanismo único, o resultado específico
+- CTA — claro y directo
+
+**Titular:** versión corta del gancho (máx. 40 caracteres)
+
+**Descripción:** 1 línea que refuerza el beneficio o la oferta
+
+Guardar en `copy-ads-[producto]-[fecha].md` dentro de `Creativos nuevos para test/`.
+
+---
+
+## Paso 8 — Mostrar resultados y validar
+
+1. Mostrar cada imagen final a Martin una por una
+2. Preguntar: "¿Cuáles te quedas y cuáles descartamos?"
+3. Eliminar las descartadas
+4. Subir las aprobadas a Canva via MCP si Martin lo pide
 
 ---
 
 ## Costo estimado
 
-- Solo Pillow (sin IA): $0.00
-- Con Imagen 4 Ultra fondos: ~$0.18 USD (3 imágenes)
-- Todo con Imagen 4 Ultra: ~$0.72 USD (12 variantes)
+- Nano Banana via Kie.ai: ~$0.04–0.06 USD por imagen
+- Carrusel de 5 slides: ~$0.20–0.30 USD
 
 ---
 
-## Notas
+## Reglas inamovibles
 
+- **Solo Nano Banana Pro via Kie.ai** — nunca Gemini, Imagen 4, ni Pillow puro para fondos
 - Siempre usar la foto real del producto — nunca dejar que la IA la genere
-- El glow del producto se ajusta según el fondo: cyan para teal/negro, blanco para verde/crema
-- Si la foto tiene fondo blanco, usar threshold=205 para remoción
+- Todo el copy sale de los documentos de investigación — no inventar nada
 - Textos siempre en español dominicano (tú, no usted)
-- Si los documentos de investigación están vacíos o incompletos, notificar a Martin antes de continuar
+- Si los documentos están vacíos o incompletos, notificar a Martin antes de continuar

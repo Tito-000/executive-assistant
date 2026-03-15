@@ -1,0 +1,9 @@
+{
+  "prompt": "Professional Meta Ads static image. Graphic design style, high resolution. EXACT LAYOUT: Solid deep green background (#1A5C3A), completely flat. TOP: A yellow rounded label/badge (#FFD700) near the top center with bold dark text — '1 MES CON IMMUNOCAL PLATINUM'. Below it, white subtitle text — 'Así se ven los resultados'. CENTER: Completely empty green space in the center of the composition — NO product, NO object, NO illustration, just pure empty green background where a product photo will be placed later. A soft white circular glow (very faint, subtle) in the center area to indicate placement zone. AROUND THE CENTER (4 circular white badge icons evenly spaced — top-left, top-right, bottom-left, bottom-right): each a white circle with a small icon and short text label underneath — the labels are: 'Menos dolor', 'Más movilidad', 'Sin pastillas', 'Más energía'. BOTTOM: A dark green rounded pill/banner with white text — 'Pago al recibir — Sin riesgo'. Typography: bold modern sans-serif. This is a polished Facebook/Instagram ad background template. No product, no people, no background scenes. Do not add any text other than what is specified.",
+  "negative_prompt": "product, bottle, box, package, supplement container, sachet, object in center, people, models, lifestyle, nature, gradients on background, white background, blurry, low quality, text errors, extra elements, watermark",
+  "api_parameters": {
+    "aspect_ratio": "4:5",
+    "resolution": "1K",
+    "output_format": "jpg"
+  }
+}

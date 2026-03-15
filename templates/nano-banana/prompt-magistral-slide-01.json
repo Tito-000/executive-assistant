@@ -1,0 +1,9 @@
+{
+  "prompt": "World-class graphic designer Meta Ads carousel slide. 1:1 square format, 1080x1080px, premium supplement advertising. BACKGROUND: Deep rich navy blue (#071830), solid, slightly darker in corners, NO gradients visible. TWO COLUMN LAYOUT. LEFT COLUMN (left 54% of canvas): Top-left aligned. Massive bold uppercase white headline in heavy display font (Bebas Neue / Anton style), stacked in 4 lines — '¿POR QUÉ' / 'TE LEVANTAS' / '3 VECES' / 'AL BAÑO?' — each line fills most of the column width. Below headline: a 2px horizontal line in light sky blue (#87CEEB), spanning left column width. Below line: small clean white regular-weight sans-serif text (2 lines) — 'Esto no es la edad.' / 'Tu próstata necesita apoyo.' RIGHT COLUMN (right 46% of canvas): COMPLETELY AND TOTALLY EMPTY — only deep navy blue background (#071830) with a soft diffuse circular sky-blue glow in the center of the right column, like a spotlight glowing upward from below, to indicate where product will be placed. Absolutely NO objects, no bottles, no boxes, no products of any kind in the right column. FOOTER: Very thin full-width dark bar at the very bottom (~55px), small bold white text 'MAGISTRAL' left-aligned at ~45px from left, small bold white text 'IMMUNOTEC' right-aligned at ~45px from right. QUALITY: Ultra clean, high contrast, professional Meta Ads quality. Minimal. Bold typography dominates left side.",
+  "negative_prompt": "product images, bottles, boxes, any object in right column, white background, light background, gradients on background, people, models, lifestyle photography, blurry, watermark, extra text, typos, busy background, textures, clutter, photorealistic scene",
+  "api_parameters": {
+    "aspect_ratio": "1:1",
+    "resolution": "1K",
+    "output_format": "jpg"
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "prompt": "Professional Meta Ads static image. Graphic design style, high resolution, clean and bold layout. EXACT LAYOUT: Solid black background (#000000), completely flat, no gradients. LEFT SIDE (55% of width): Large bold uppercase white headline text in 2 lines — '¿TU CUERPO TE ROBÓ LA VIDA?'. Below headline: smaller subtitle in light gray — 'El glutatión es el antioxidante que te falta'. Below subtitle: a bold blue CTA button (#1877F2) with white text — 'QUIERO RECUPERAR MI MOVILIDAD'. RIGHT SIDE (45% of width): Completely empty dark space — NO product, NO object, NO illustration, NO placeholder box, just pure black empty space where a product photo will be placed later. A very subtle cyan glow/halo (#00CFFF, very faint) in the center-right area to suggest where the product will go. BOTTOM: A horizontal blue banner (#1877F2) spanning the full width with small white text — 'Pago al recibir · Fabricado en EE.UU. · 40 años de respaldo clínico'. Typography is modern, bold sans-serif (similar to Bebas Neue or Impact for headline, clean sans-serif for body). This is a polished, high-conversion Facebook/Instagram ad background template. No people, no product images, no background scenes. Do not add any text other than what is specified.",
+  "negative_prompt": "product, bottle, box, package, supplement container, sachet, object, illustration, placeholder, rectangle outline, people, models, lifestyle, nature, gradients on background, white background, light background, blurry, low quality, text errors, extra elements, watermark",
+  "api_parameters": {
+    "aspect_ratio": "4:5",
+    "resolution": "1K",
+    "output_format": "jpg"
+  }
+}

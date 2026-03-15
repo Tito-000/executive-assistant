@@ -1,0 +1,9 @@
+{
+  "prompt": "World-class graphic designer Meta Ads carousel slide. 1:1 square format, 1080x1080px, premium health supplement advertising. BACKGROUND: Deep rich navy blue (#071830), solid, uniform. LAYOUT: Three zones. TOP ZONE (top 32% of canvas): Large bold uppercase white headline in heavy display font (Bebas Neue style), left-aligned, 2 stacked lines — '¿QUÉ ES' / 'MAGISTRAL?' — taking up most of the top zone width. Below the headline: a full-width horizontal line in sky blue (#87CEEB), 2px thick. LEFT ZONE (bottom 68%, left 58%): Vertical list of 5 items, each on its own line, left-aligned, clean white bold sans-serif text, medium-large size, generous line spacing. Each item has a small white right-pointing arrow '→' prefix — '→ Suplemento nutricional clínico' / '→ Fórmula líquida de alta absorción' / '→ Con Saw Palmetto (Serenoa repens)' / '→ Fabricado en USA' / '→ 30+ años de respaldo clínico'. RIGHT ZONE (bottom 68%, right 42%): COMPLETELY EMPTY — deep navy blue only (#071830), with a soft diffuse sky-blue circular glow in the center of the right zone to indicate product placement area. Absolutely NO product images, no bottles, no objects in this zone. FOOTER: Thin full-width dark bar at bottom (~55px), 'MAGISTRAL' bold white small text left side, 'IMMUNOTEC' bold white small text right side. Clean premium design.",
+  "negative_prompt": "product images, bottles, any object in right zone, white background, light background, people, models, lifestyle photography, gradient background, blurry, watermark, extra text, cluttered layout, icons",
+  "api_parameters": {
+    "aspect_ratio": "1:1",
+    "resolution": "1K",
+    "output_format": "jpg"
+  }
+}

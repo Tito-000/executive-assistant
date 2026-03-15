@@ -1,0 +1,9 @@
+{
+  "prompt": "Photorealistic advertising campaign image. OVERALL CANVAS: deep navy background (#1A2A44), 4:5 portrait format. LEFT COLUMN (left 48% of frame): a real Latin American man approximately 58 years old, salt-and-pepper short hair, warm confident smile showing teeth, natural skin with visible wrinkles — NOT retouched or smoothed. Wearing a fitted medium-blue athletic t-shirt. White earbuds/headphones. Standing slightly turned toward center, relaxed posture, arms at sides. Body visible from head to just below waist. The man occupies the full height of the left column, positioned slightly left of center-left. Natural soft indoor lighting from above-left. Photojournalistic style — unretouched, authentic, documentary feel. RIGHT COLUMN (right 52% of frame, from x=48% to x=100%): COMPLETELY EMPTY — deep navy background (#1A2A44) with very subtle soft blue-white radial glow at center-right area (approximately x=75%, y=62%), glow radius about 220px, opacity 18%, color (#6090D0). No objects, no people, no text, no decorations in the right column — only the clean dark navy background with the faint glow. BACKGROUND: uniform deep navy (#1A2A44) across entire canvas. The man casts no visible shadow on the background. No vignette. No background elements.",
+  "negative_prompt": "product, bottle, supplement, object in right column, text, logo, watermark, caption, graphic, overlay, beauty filter, airbrushed skin, plastic skin, smooth skin, CGI face, illustration, cartoon, painting, studio backdrop, gradient background, colorful background, outdoor scene, nature, extra people, sunglasses, hat, beard, suit, tie, jewelry, white background, gray background, people on right side, anything on right side of image",
+  "api_parameters": {
+    "aspect_ratio": "4:5",
+    "resolution": "1K",
+    "output_format": "jpg"
+  }
+}

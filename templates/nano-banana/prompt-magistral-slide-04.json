@@ -1,0 +1,9 @@
+{
+  "prompt": "World-class graphic designer Meta Ads carousel slide. 1:1 square format, 1080x1080px, premium health supplement advertising. BACKGROUND: Deep rich navy blue (#071830), solid, uniform. LAYOUT: Mixed layout. TOP HALF: Two columns. TOP-LEFT (left 58%, top 48%): Very large bold uppercase white headline in heavy display font (Bebas Neue), 3 stacked lines — '¿QUIÉNES' / 'PUEDEN' / 'TOMARLO?' — left-aligned, fills most of the top-left zone. TOP-RIGHT (right 42%, top 48%): COMPLETELY EMPTY — deep navy blue only (#071830) with a soft diffuse sky-blue circular glow in the center to indicate product placement. Absolutely NO product images or objects here. DIVIDER: Full-width horizontal 2px sky-blue (#87CEEB) line at 48% height. BOTTOM HALF (bottom 52%): Vertical list of 5 items, left-aligned starting at ~45px from left, clean white bold sans-serif text, medium-large size — each with white arrow prefix '→': '→ Hombres mayores de 40 años' / '→ Con urgencia urinaria frecuente' / '→ Que se levantan al baño de noche' / '→ Con baja energía y cansancio' / '→ Que buscan solución natural'. FOOTER: Thin dark bar at very bottom, 'MAGISTRAL' bold white small left, 'IMMUNOTEC' bold white small right. Premium clean design.",
+  "negative_prompt": "product images, bottles, any object in top-right zone, white background, light background, people, models, lifestyle photography, gradient background, blurry, watermark, extra text, cluttered",
+  "api_parameters": {
+    "aspect_ratio": "1:1",
+    "resolution": "1K",
+    "output_format": "jpg"
+  }
+}
