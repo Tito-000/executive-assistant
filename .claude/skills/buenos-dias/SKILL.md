@@ -1,12 +1,12 @@
 ---
 name: buenos-dias
-description: Briefing matutino de Martin. Lee el historial del día anterior, muestra tasks del día ordenados por prioridad, y presenta objetivos a largo plazo. Invocar cada mañana a las 6 AM.
+description: Briefing matutino de Martin. Lee el historial del día anterior, muestra tasks del día ordenados por prioridad, presenta objetivos y actualiza patrones de comportamiento en learning/patrones-martin.md.
 disable-model-invocation: true
 ---
 
 # Skill: /buenos-dias
 
-Briefing completo para comenzar el día. Ejecutar cada mañana a las 6 AM.
+Briefing completo para comenzar el día. Ejecutar cada mañana.
 
 ---
 
@@ -37,7 +37,7 @@ Lee el archivo `daily-feedback/[YESTERDAY].md`.
 ## PASO 3 — Obtener tasks del día desde Motion
 
 ```bash
-MOTION_KEY="ZqTdrhNz66tfCcZVFYUkhj3fFEP92L0V6aai2ZtX5k4="
+MOTION_KEY="augilx5IOiuSy0LqZfDZ+xf9+HgSAk5UFsa9R2c2Jd4="
 TODAY=$(python3 -c "from datetime import date; print(date.today())")
 TOMORROW=$(python3 -c "from datetime import date, timedelta; print(date.today() + timedelta(days=1))")
 
@@ -89,13 +89,39 @@ for r in results:
 
 ---
 
-## PASO 4 — Leer objetivos
+## PASO 4 — Leer patrones y objetivos
 
-Lee `context/goals.md` y `context/current-priorities.md`.
+Lee estos archivos:
+- `learning/patrones-martin.md` — patrones de comportamiento acumulados
+- `context/goals.md` — metas del trimestre
+- `context/current-priorities.md` — foco actual
 
 ---
 
-## PASO 5 — Presentar el briefing completo
+## PASO 5 — Actualizar patrones de comportamiento
+
+Después de obtener las tareas del día, actualiza `learning/patrones-martin.md`:
+
+**A. Blockers crónicos:**
+- Para cada tarea vencida: si ya está en la tabla, incrementa "Veces aparecida". Si es nueva, agrégala.
+- Si una tarea lleva 14+ días en la tabla, agrégala también a "Observaciones del comportamiento" como patrón confirmado.
+
+**B. Tasa de completación:**
+- Si existen datos del día anterior (del cierre o de Motion), agrega una fila a la tabla de tasas.
+- Calcula: (completadas / total pendientes de ayer) * 100
+
+**C. Logros recientes:**
+- Si ayer se completó alguna tarea que llevaba 3+ días vencida, regístrala como logro con fecha.
+
+**D. Racha de productividad:**
+- Actualiza el contador de días consecutivos con >50% completación.
+
+**E. Log de actualizaciones:**
+- Agrega una línea al log con fecha y resumen de 1 línea (ej: "8 tareas vencidas, 1 nueva: X. Completadas ayer: 2/5").
+
+---
+
+## PASO 6 — Presentar el briefing completo
 
 Presenta con este formato:
 
@@ -140,6 +166,11 @@ Si no hay tasks: "Motion no tiene nada agendado para hoy."
 
 ---
 
+**🧠 Patrón del día**
+[1 observación concreta basada en `learning/patrones-martin.md`. Solo si hay algo relevante: un blocker crónico que se repite, una racha positiva, o un patrón que vale mencionar. Si no hay nada nuevo, omitir esta sección. Máximo 2 líneas. Sin moralizar.]
+
+---
+
 **💬 Para arrancar**
 [1-2 líneas directas. Si ayer quedó algo pendiente importante, mencionarlo. Conecta la tarea más urgente de hoy con la meta más importante. Tono de socio, no de coach.]
 
@@ -152,3 +183,4 @@ Si no hay tasks: "Motion no tiene nada agendado para hoy."
 - Si hay más de 7 tasks, agrupar los menos urgentes bajo "Resto del día"
 - El contexto de ayer debe ser breve — no más de 3 líneas
 - Si la tasa de completación de ayer fue baja (<50%), mencionarlo directamente sin suavizarlo
+- La sección "Patrón del día" solo aparece si hay algo que valga la pena decir — no inventar observaciones

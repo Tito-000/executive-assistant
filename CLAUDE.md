@@ -34,7 +34,7 @@ Los proyectos viven en `projects/`. Cada uno tiene su propio `README.md` con est
 - `projects/mis-objetivos/` — frentes personales (facturar $8k, Rolex, alimentación, bienestar, etc.)
 
 **Clientes:**
-- `projects/clientes/proyecto-bordados/` — cliente activo, deadline 23 mar 2026
+- `projects/clientes/memorama/` — cliente activo, deadline 23 mar 2026
 - `projects/clientes/dra-aurys-mercedes/` — página web + embudos, en progreso
 - `projects/clientes/beatriz-5k-funnel/` — funnel $5k para Beatriz
 

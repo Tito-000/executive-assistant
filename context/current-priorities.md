@@ -6,7 +6,7 @@ _Última actualización: 2026-03-13_
 
 1. **Terminar la página web de la Dra. Aurys Mercedes** — cliente activo, entrega pendiente
 2. **Terminar los embudos de Immunotec** — crítico para el avance hacia rango Diamante
-3. **Resolver tasks vencidos del Proyecto bordados** — 8 tasks PAST_DUE, principalmente tracking (GTM, GA4, Meta Pixel)
+3. **Resolver tasks vencidos del Memorama** — 8 tasks PAST_DUE, principalmente tracking (GTM, GA4, Meta Pixel)
 
 ## Urgente (PAST_DUE)
 - Instalar Google Tag Manager

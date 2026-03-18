@@ -29,7 +29,7 @@ print(days[date.today().weekday()])
 Consulta qué se completó y qué quedó pendiente hoy.
 
 ```bash
-MOTION_KEY="ZqTdrhNz66tfCcZVFYUkhj3fFEP92L0V6aai2ZtX5k4="
+MOTION_KEY="augilx5IOiuSy0LqZfDZ+xf9+HgSAk5UFsa9R2c2Jd4="
 TODAY=$(python3 -c "from datetime import date; print(date.today())")
 TOMORROW=$(python3 -c "from datetime import date, timedelta; print(date.today() + timedelta(days=1))")
 
@@ -116,7 +116,7 @@ Workspace: `ws_qDBVZf3CLkJfmE3UDZeHxt`
 Para cada task extraer nombre, hora/deadline, prioridad (default: MEDIUM), duración (default: 30 min).
 
 ```bash
-MOTION_KEY="ZqTdrhNz66tfCcZVFYUkhj3fFEP92L0V6aai2ZtX5k4="
+MOTION_KEY="augilx5IOiuSy0LqZfDZ+xf9+HgSAk5UFsa9R2c2Jd4="
 TOMORROW=$(python3 -c "from datetime import date, timedelta; print(date.today() + timedelta(days=1))")
 
 curl -s -X POST "https://api.usemotion.com/v1/tasks" \
@@ -135,9 +135,36 @@ Pregunta "¿Algo más?" hasta que Martin confirme.
 
 ---
 
-## PASO 6 — Guardar historial del día
+## PASO 6 — Actualizar patrones de comportamiento
+
+Con los datos de completados y pendientes de hoy, actualiza `learning/patrones-martin.md`:
+
+**A. Tabla de tasas de completación:**
+- Agrega una fila: fecha, día de la semana, total tareas, completadas, tasa %.
+- Si la tasa es <50%, agrégala con nota "bajo".
+
+**B. Blockers crónicos:**
+- Para cada tarea pendiente que ya estaba en la tabla: incrementa "Veces aparecida".
+- Para tareas nuevas vencidas: agrégalas con fecha de hoy como "Primera vez vista".
+- Si una tarea fue completada y estaba en la tabla de blockers: **elimínala de la tabla** y agrégala a "Logros recientes" con la fecha.
+
+**C. Patrones de postergación:**
+- Si alguna categoría acumula 3+ tareas pendientes seguidas (ej: analytics, automatizaciones), actualiza la sección con la observación.
+
+**D. Racha de productividad:**
+- Si la tasa de hoy fue >50%: incrementa el contador de días consecutivos.
+- Si fue ≤50%: resetea el contador a 0.
+- Actualiza "Mejor racha registrada" si se superó.
+
+**E. Log de actualizaciones:**
+- Agrega una línea: `[TODAY]: Cierre — X completadas, Y pendientes (Z%). [Nota breve si hay algo destacado]`
+
+---
+
+## PASO 7 — Guardar historial del día
 
 Genera el resumen del día y guárdalo en `daily-feedback/[TODAY].md`.
+Ruta completa: `/Users/martinmercedes/Desktop/Executive assistant 2/daily-feedback/[TODAY].md`
 
 El archivo debe tener este formato exacto:
 
@@ -170,7 +197,7 @@ Ejecuta:
 
 ---
 
-## PASO 7 — Mensaje motivacional
+## PASO 8 — Mensaje motivacional
 
 Lee `context/goals.md`.
 

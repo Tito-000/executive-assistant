@@ -3,7 +3,7 @@
 Martin opera solo — no hay equipo por ahora.
 
 ## Clientes actuales
-- **Proyecto bordados** — cliente activo, setup completo de marketing digital
+- **Memorama** — cliente activo, setup completo de marketing digital
 - **Dra. Aurys Mercedes** — cliente activo, página web + funnels
 
 ## Dolor principal
