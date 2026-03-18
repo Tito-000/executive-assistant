@@ -5,5 +5,13 @@
 **Deadline:** Por definir
 
 ## Tareas pendientes
-- [ ] Terminar página web
+
+Ver checklist completo en [correcciones-5-mar-2026.md](correcciones-5-mar-2026.md)
+
+- [ ] Aplicar correcciones página web (17 ítems pendientes)
 - [ ] Terminar embudos
+- [ ] Conectar pipeline de leads en GHL
+- [ ] Configurar gestión de calendario
+- [ ] Gestionar Google My Business
+
+**21 horas estimadas pendientes | 2/19 ítems completados (11%)**
