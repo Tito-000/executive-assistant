@@ -1,0 +1,14 @@
+{
+  "prompt": "Flat graphic design image, 1:1 square format. Dark navy blue background (#0a1628). Around all four edges: white line-art tech icons as border decoration — includes cloud icons, microphone icons, gear/cog icons, wifi symbols, circuit board traces, padlock icons, robot head icons, all in thin white outline style evenly spaced around the perimeter. Center-right area: a large white semi-transparent rectangular card panel with rounded corners containing bold white text centered inside. Title text at top: 'Transferencia Bancaria' in large bold sans-serif white font. Below title, three lines of bold white uppercase text: 'MARTIN MERCEDES', '35922950018', 'BHD AHORROS US$'. Below those lines: a white rectangular button with dark navy text reading 'INSTALAR YA' in bold uppercase. Left side of image: a white and silver humanoid robot figure, smooth helmet head with no face, blue glowing accent lines on joints and body, robot is pointing its right hand toward the white card panel. Bottom-right corner: a white circular logo with bold letter 'R' inside. Overall: clean, modern, professional tech/AI company aesthetic. Flat design, no gradients, no photography, no 3D render style.",
+  "negative_prompt": "photography, realistic photo, 3D render, human face, human skin, gradients, textures, noise, film grain, blurry text, watermarks, decorative flourishes, complex backgrounds, soft focus, shadows too dramatic, product images, bottles, boxes, any real objects, multiple robots, busy layout, orange colors, red colors, green colors",
+  "api_parameters": {
+    "resolution": "1K",
+    "output_format": "jpg",
+    "aspect_ratio": "1:1"
+  },
+  "settings": {
+    "resolution": "1K",
+    "style": "flat graphic design, professional tech branding",
+    "quality": "clean, sharp, high contrast"
+  }
+}
