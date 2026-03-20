@@ -1,0 +1,1164 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>El Club de la Libertad — Brand Kit</title>
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;500;600;700&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --orange: #F47920;
+    --orange-dark: #E8600A;
+    --orange-light: #FFAB00;
+    --black: #0A0A0A;
+    --white: #FFFFFF;
+    --gray: #333333;
+    --gray-mid: #888888;
+    --gray-light: #F5F5F5;
+    --section-dark: #111111;
+    --section-mid: #1A1A1A;
+    --border: rgba(255,255,255,0.08);
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    background: var(--black);
+    color: var(--white);
+    font-family: 'DM Sans', sans-serif;
+    font-size: 15px;
+    line-height: 1.6;
+  }
+
+  /* ─── HEADER ─── */
+  .hero {
+    background: var(--black);
+    padding: 100px 80px 80px;
+    border-bottom: 1px solid var(--border);
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    gap: 40px;
+    flex-wrap: wrap;
+  }
+
+  .hero-left h1 {
+    font-family: 'Oswald', sans-serif;
+    font-weight: 700;
+    font-size: 72px;
+    line-height: 0.9;
+    letter-spacing: -1px;
+    margin-bottom: 16px;
+  }
+
+  .hero-left h1 span {
+    color: var(--orange);
+  }
+
+  .hero-left .subtitle {
+    font-size: 13px;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--gray-mid);
+    font-family: 'DM Sans', sans-serif;
+  }
+
+  .hero-right {
+    text-align: right;
+  }
+
+  .hero-right .version {
+    font-size: 11px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--gray-mid);
+  }
+
+  .hero-right .date {
+    font-size: 11px;
+    color: var(--gray-mid);
+    margin-top: 4px;
+  }
+
+  .orange-line {
+    height: 3px;
+    background: linear-gradient(90deg, var(--orange-light), var(--orange), var(--orange-dark));
+    width: 100%;
+  }
+
+  /* ─── SECTION LABELS ─── */
+  .section {
+    padding: 80px;
+    border-bottom: 1px solid var(--border);
+  }
+
+  .section.light {
+    background: #141414;
+  }
+
+  .section-label {
+    font-size: 10px;
+    letter-spacing: 0.3em;
+    text-transform: uppercase;
+    color: var(--orange);
+    margin-bottom: 12px;
+    font-family: 'DM Sans', sans-serif;
+  }
+
+  .section-title {
+    font-family: 'Oswald', sans-serif;
+    font-size: 42px;
+    font-weight: 700;
+    line-height: 1;
+    margin-bottom: 48px;
+    letter-spacing: -0.5px;
+  }
+
+  /* ─── SVG LOGO ─── */
+  .logo-svg-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 4px;
+  }
+
+  /* ─── LOGO SHOWCASE ─── */
+  .logo-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2px;
+  }
+
+  .logo-card {
+    padding: 60px 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 24px;
+    position: relative;
+    transition: transform 0.3s ease;
+  }
+
+  .logo-card:hover {
+    transform: scale(1.01);
+    z-index: 2;
+  }
+
+  .logo-card .card-label {
+    font-size: 10px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    position: absolute;
+    bottom: 20px;
+    left: 0; right: 0;
+    text-align: center;
+    opacity: 0.5;
+    font-family: 'DM Sans', sans-serif;
+  }
+
+  .logo-card.on-white { background: #FFFFFF; color: #0A0A0A; }
+  .logo-card.on-white .card-label { color: #0A0A0A; }
+  .logo-card.on-black { background: #0A0A0A; }
+  .logo-card.on-black .card-label { color: #FFFFFF; }
+  .logo-card.on-orange {
+    background: linear-gradient(135deg, #F47920, #E8600A);
+  }
+  .logo-card.on-photo {
+    background: linear-gradient(135deg, #8B3A0A 0%, #C25A1A 50%, #E8600A 100%);
+    position: relative;
+    overflow: hidden;
+  }
+  .logo-card.on-photo::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.15'/%3E%3C/svg%3E");
+    opacity: 0.4;
+  }
+  .logo-card.icon-only-color { background: #1A1A1A; }
+  .logo-card.icon-only-white { background: #0A0A0A; }
+
+  /* ─── COLORS ─── */
+  .color-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 16px;
+  }
+
+  .color-card {
+    border-radius: 4px;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+  }
+
+  .color-card:hover {
+    transform: translateY(-4px);
+  }
+
+  .color-swatch {
+    height: 160px;
+    position: relative;
+  }
+
+  .color-swatch.gradient {
+    background: linear-gradient(135deg, #FFAB00, #E8600A);
+  }
+
+  .color-info {
+    background: #1A1A1A;
+    padding: 16px;
+    border: 1px solid var(--border);
+    border-top: none;
+  }
+
+  .color-name {
+    font-family: 'Oswald', sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: 0.05em;
+    margin-bottom: 4px;
+  }
+
+  .color-hex {
+    font-family: 'DM Mono', monospace;
+    font-size: 12px;
+    color: var(--gray-mid);
+    letter-spacing: 0.1em;
+    margin-bottom: 8px;
+  }
+
+  .color-use {
+    font-size: 11px;
+    color: var(--gray-mid);
+    line-height: 1.5;
+  }
+
+  /* ─── TIPOGRAFÍA ─── */
+  .type-showcase {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2px;
+  }
+
+  .type-block {
+    background: #141414;
+    border: 1px solid var(--border);
+    padding: 48px;
+  }
+
+  .type-block .type-label {
+    font-size: 10px;
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+    color: var(--orange);
+    margin-bottom: 20px;
+    font-family: 'DM Sans', sans-serif;
+  }
+
+  .type-display {
+    font-family: 'Oswald', sans-serif;
+    font-weight: 700;
+    font-size: 64px;
+    line-height: 0.9;
+    letter-spacing: -1px;
+    color: var(--white);
+    margin-bottom: 16px;
+  }
+
+  .type-display.small {
+    font-size: 36px;
+    font-weight: 400;
+  }
+
+  .type-display.body {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 1.7;
+    letter-spacing: 0;
+  }
+
+  .type-meta {
+    font-size: 11px;
+    color: var(--gray-mid);
+    line-height: 1.8;
+    border-top: 1px solid var(--border);
+    padding-top: 16px;
+    margin-top: 16px;
+    font-family: 'DM Sans', sans-serif;
+  }
+
+  .type-weights {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-top: 24px;
+  }
+
+  .weight-row {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    border-bottom: 1px solid var(--border);
+    padding-bottom: 12px;
+  }
+
+  .weight-sample {
+    font-family: 'Oswald', sans-serif;
+    font-size: 28px;
+  }
+
+  .weight-label {
+    font-size: 11px;
+    color: var(--gray-mid);
+    letter-spacing: 0.1em;
+  }
+
+  /* ─── DOS / DON'TS ─── */
+  .rules-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+  }
+
+  .rules-col h3 {
+    font-family: 'Oswald', sans-serif;
+    font-size: 20px;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .rules-col.do h3 { color: #4CAF50; }
+  .rules-col.dont h3 { color: #F44336; }
+
+  .rule-item {
+    display: flex;
+    gap: 12px;
+    align-items: flex-start;
+    padding: 16px;
+    background: #141414;
+    border: 1px solid var(--border);
+    border-radius: 4px;
+    margin-bottom: 12px;
+    font-size: 14px;
+    color: #BBBBBB;
+    line-height: 1.5;
+  }
+
+  .rule-icon {
+    font-size: 16px;
+    flex-shrink: 0;
+    margin-top: 1px;
+  }
+
+  /* ─── ESPACIO MÍNIMO ─── */
+  .spacing-demo {
+    background: #141414;
+    border: 1px solid var(--border);
+    padding: 60px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 48px;
+  }
+
+  .spacing-visual {
+    position: relative;
+    display: inline-block;
+  }
+
+  .spacing-guide {
+    position: absolute;
+    border: 1px dashed rgba(244, 121, 32, 0.5);
+    pointer-events: none;
+  }
+
+  .spacing-note {
+    font-size: 12px;
+    color: var(--orange);
+    margin-top: 16px;
+    letter-spacing: 0.05em;
+  }
+
+  /* ─── APLICACIONES ─── */
+  .mockup-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 24px;
+  }
+
+  .mockup-card {
+    background: #141414;
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    overflow: hidden;
+  }
+
+  .mockup-preview {
+    padding: 0;
+    aspect-ratio: 16/10;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+  }
+
+  .mockup-label {
+    padding: 16px 20px;
+    font-size: 11px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--gray-mid);
+    border-top: 1px solid var(--border);
+    font-family: 'DM Sans', sans-serif;
+  }
+
+  /* Business card mockup */
+  .biz-card {
+    width: 80%;
+    aspect-ratio: 1.75/1;
+    background: var(--black);
+    border-radius: 6px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 20px;
+    box-shadow: 0 20px 60px rgba(0,0,0,0.8);
+    border: 1px solid rgba(255,255,255,0.1);
+    position: relative;
+    overflow: hidden;
+  }
+
+  .biz-card::before {
+    content: '';
+    position: absolute;
+    left: 0; top: 0; bottom: 0;
+    width: 4px;
+    background: linear-gradient(180deg, var(--orange-light), var(--orange-dark));
+  }
+
+  /* Instagram post mockup */
+  .ig-post {
+    width: 80%;
+    aspect-ratio: 1/1;
+    background: linear-gradient(135deg, #1a0a00, #3d1a00);
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 20px 60px rgba(0,0,0,0.6);
+  }
+
+  .ig-post::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(circle at 30% 70%, rgba(244,121,32,0.3) 0%, transparent 60%);
+  }
+
+  /* Website header mockup */
+  .web-header {
+    width: 92%;
+    background: #0A0A0A;
+    border-radius: 6px;
+    overflow: hidden;
+    box-shadow: 0 20px 60px rgba(0,0,0,0.8);
+    border: 1px solid rgba(255,255,255,0.1);
+  }
+
+  .web-header-bar {
+    background: #1A1A1A;
+    padding: 6px 12px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    border-bottom: 1px solid rgba(255,255,255,0.05);
+  }
+
+  .dot { width: 8px; height: 8px; border-radius: 50%; }
+  .dot.red { background: #FF5F57; }
+  .dot.yellow { background: #FEBC2E; }
+  .dot.green { background: #28C840; }
+
+  .web-header-content {
+    padding: 16px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .web-nav-items {
+    display: flex;
+    gap: 16px;
+  }
+
+  .web-nav-item {
+    font-size: 8px;
+    color: rgba(255,255,255,0.5);
+    font-family: 'DM Sans', sans-serif;
+  }
+
+  .web-cta {
+    background: var(--orange);
+    color: white;
+    font-size: 8px;
+    padding: 5px 10px;
+    border-radius: 2px;
+    font-family: 'Oswald', sans-serif;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+  }
+
+  .web-hero-area {
+    padding: 24px 20px 20px;
+    border-top: 3px solid var(--orange);
+  }
+
+  .web-hero-headline {
+    font-family: 'Oswald', sans-serif;
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 1;
+    margin-bottom: 6px;
+  }
+
+  .web-hero-sub {
+    font-size: 8px;
+    color: rgba(255,255,255,0.5);
+    font-family: 'DM Sans', sans-serif;
+  }
+
+  /* ─── VOZ Y TONO ─── */
+  .tone-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+    margin-bottom: 48px;
+  }
+
+  .tone-card {
+    background: #141414;
+    border: 1px solid var(--border);
+    border-top: 3px solid var(--orange);
+    padding: 32px 24px;
+    transition: border-top-color 0.3s ease, transform 0.3s ease;
+  }
+
+  .tone-card:hover {
+    border-top-color: var(--orange-light);
+    transform: translateY(-4px);
+  }
+
+  .tone-word {
+    font-family: 'Oswald', sans-serif;
+    font-size: 28px;
+    font-weight: 700;
+    margin-bottom: 10px;
+  }
+
+  .tone-desc {
+    font-size: 13px;
+    color: #AAAAAA;
+    line-height: 1.6;
+  }
+
+  .tone-examples {
+    margin-top: 48px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+  }
+
+  .tone-example {
+    background: #141414;
+    border: 1px solid var(--border);
+    padding: 24px;
+    border-radius: 2px;
+  }
+
+  .tone-example .ex-label {
+    font-size: 10px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    margin-bottom: 12px;
+    font-family: 'DM Sans', sans-serif;
+  }
+
+  .tone-example.yes .ex-label { color: #4CAF50; }
+  .tone-example.no .ex-label { color: #F44336; }
+
+  .tone-example p {
+    font-size: 15px;
+    line-height: 1.6;
+    color: #CCCCCC;
+    font-style: italic;
+  }
+
+  /* ─── FOOTER ─── */
+  .footer {
+    padding: 48px 80px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #0A0A0A;
+  }
+
+  .footer-note {
+    font-size: 11px;
+    color: var(--gray-mid);
+    letter-spacing: 0.05em;
+  }
+
+  /* ─── DIVIDER ─── */
+  .divider {
+    height: 1px;
+    background: var(--border);
+    margin: 48px 0;
+  }
+
+  /* Scrollbar */
+  ::-webkit-scrollbar { width: 6px; }
+  ::-webkit-scrollbar-track { background: var(--black); }
+  ::-webkit-scrollbar-thumb { background: var(--gray); border-radius: 3px; }
+
+</style>
+</head>
+<body>
+
+<!-- ─── HERO ─── -->
+<div class="orange-line"></div>
+<div class="hero">
+  <div class="hero-left">
+    <div class="subtitle">Brand Identity System</div>
+    <h1>EL CLUB<br><span>DE LA</span><br>LIBERTAD</h1>
+  </div>
+  <div class="hero-right">
+    <div class="version">Versión 1.0</div>
+    <div class="date">Marzo 2026</div>
+  </div>
+</div>
+
+<!-- ─── 01. LOGO SHOWCASE ─── -->
+<div class="section">
+  <div class="section-label">01 — Identidad Visual</div>
+  <div class="section-title">El Logo</div>
+
+  <div class="logo-grid">
+
+    <!-- Versión color sobre blanco -->
+    <div class="logo-card on-white">
+      <svg width="200" height="90" viewBox="0 0 200 90" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <!-- Ícono -->
+        <g transform="translate(0, 5)">
+          <!-- Círculo con corte (la C del logo) -->
+          <path d="M40,40 m-32,0 a32,32 0 1,1 22.6,-22.6" stroke="url(#grad1)" stroke-width="11" fill="none" stroke-linecap="round"/>
+          <!-- Ala -->
+          <path d="M32,10 C36,2 44,0 48,4 C44,6 40,10 38,16 C42,8 50,4 56,8 C50,10 44,16 42,24 C38,16 34,12 32,10Z" fill="url(#grad1)"/>
+          <defs>
+            <linearGradient id="grad1" x1="0" y1="0" x2="60" y2="60" gradientUnits="userSpaceOnUse">
+              <stop offset="0%" stop-color="#FFAB00"/>
+              <stop offset="100%" stop-color="#E8600A"/>
+            </linearGradient>
+          </defs>
+        </g>
+        <!-- Texto -->
+        <text x="72" y="34" font-family="Oswald, sans-serif" font-size="11" font-weight="400" fill="#0A0A0A" letter-spacing="1">el</text>
+        <text x="68" y="58" font-family="Oswald, sans-serif" font-size="32" font-weight="700" fill="#0A0A0A" letter-spacing="-0.5">CLUB</text>
+        <text x="68" y="70" font-family="Oswald, sans-serif" font-size="11" font-weight="400" fill="#0A0A0A" letter-spacing="1">DE LA</text>
+        <text x="68" y="88" font-family="Oswald, sans-serif" font-size="25" font-weight="700" fill="#0A0A0A" letter-spacing="-0.5">LIBERTAD</text>
+      </svg>
+      <span class="card-label">Versión Color — Fondo Claro</span>
+    </div>
+
+    <!-- Versión color sobre negro -->
+    <div class="logo-card on-black">
+      <svg width="200" height="90" viewBox="0 0 200 90" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <g transform="translate(0, 5)">
+          <path d="M40,40 m-32,0 a32,32 0 1,1 22.6,-22.6" stroke="url(#grad2)" stroke-width="11" fill="none" stroke-linecap="round"/>
+          <path d="M32,10 C36,2 44,0 48,4 C44,6 40,10 38,16 C42,8 50,4 56,8 C50,10 44,16 42,24 C38,16 34,12 32,10Z" fill="url(#grad2)"/>
+          <defs>
+            <linearGradient id="grad2" x1="0" y1="0" x2="60" y2="60" gradientUnits="userSpaceOnUse">
+              <stop offset="0%" stop-color="#FFAB00"/>
+              <stop offset="100%" stop-color="#E8600A"/>
+            </linearGradient>
+          </defs>
+        </g>
+        <text x="72" y="34" font-family="Oswald, sans-serif" font-size="11" font-weight="400" fill="#FFFFFF" letter-spacing="1">el</text>
+        <text x="68" y="58" font-family="Oswald, sans-serif" font-size="32" font-weight="700" fill="#FFFFFF" letter-spacing="-0.5">CLUB</text>
+        <text x="68" y="70" font-family="Oswald, sans-serif" font-size="11" font-weight="400" fill="#FFFFFF" letter-spacing="1">DE LA</text>
+        <text x="68" y="88" font-family="Oswald, sans-serif" font-size="25" font-weight="700" fill="#FFFFFF" letter-spacing="-0.5">LIBERTAD</text>
+      </svg>
+      <span class="card-label" style="color:#888">Versión Color — Fondo Oscuro</span>
+    </div>
+
+    <!-- Versión blanca sobre naranja -->
+    <div class="logo-card on-orange">
+      <svg width="200" height="90" viewBox="0 0 200 90" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <g transform="translate(0, 5)">
+          <path d="M40,40 m-32,0 a32,32 0 1,1 22.6,-22.6" stroke="white" stroke-width="11" fill="none" stroke-linecap="round"/>
+          <path d="M32,10 C36,2 44,0 48,4 C44,6 40,10 38,16 C42,8 50,4 56,8 C50,10 44,16 42,24 C38,16 34,12 32,10Z" fill="white"/>
+        </g>
+        <text x="72" y="34" font-family="Oswald, sans-serif" font-size="11" font-weight="400" fill="white" letter-spacing="1">el</text>
+        <text x="68" y="58" font-family="Oswald, sans-serif" font-size="32" font-weight="700" fill="white" letter-spacing="-0.5">CLUB</text>
+        <text x="68" y="70" font-family="Oswald, sans-serif" font-size="11" font-weight="400" fill="white" letter-spacing="1">DE LA</text>
+        <text x="68" y="88" font-family="Oswald, sans-serif" font-size="25" font-weight="700" fill="white" letter-spacing="-0.5">LIBERTAD</text>
+      </svg>
+      <span class="card-label" style="color:rgba(255,255,255,0.6)">Versión Blanca — Fondo Naranja</span>
+    </div>
+
+    <!-- Ícono solo color -->
+    <div class="logo-card icon-only-color">
+      <svg width="80" height="80" viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M40,40 m-32,0 a32,32 0 1,1 22.6,-22.6" stroke="url(#grad3)" stroke-width="11" fill="none" stroke-linecap="round"/>
+        <path d="M32,10 C36,2 44,0 48,4 C44,6 40,10 38,16 C42,8 50,4 56,8 C50,10 44,16 42,24 C38,16 34,12 32,10Z" fill="url(#grad3)"/>
+        <defs>
+          <linearGradient id="grad3" x1="0" y1="0" x2="80" y2="80" gradientUnits="userSpaceOnUse">
+            <stop offset="0%" stop-color="#FFAB00"/>
+            <stop offset="100%" stop-color="#E8600A"/>
+          </linearGradient>
+        </defs>
+      </svg>
+      <span class="card-label">Ícono Solo — Color</span>
+    </div>
+
+    <!-- Versión blanca sobre foto simulada -->
+    <div class="logo-card on-photo">
+      <svg width="200" height="90" viewBox="0 0 200 90" fill="none" xmlns="http://www.w3.org/2000/svg" style="position:relative;z-index:1">
+        <g transform="translate(0, 5)">
+          <path d="M40,40 m-32,0 a32,32 0 1,1 22.6,-22.6" stroke="white" stroke-width="11" fill="none" stroke-linecap="round"/>
+          <path d="M32,10 C36,2 44,0 48,4 C44,6 40,10 38,16 C42,8 50,4 56,8 C50,10 44,16 42,24 C38,16 34,12 32,10Z" fill="white"/>
+        </g>
+        <text x="72" y="34" font-family="Oswald, sans-serif" font-size="11" font-weight="400" fill="white" letter-spacing="1">el</text>
+        <text x="68" y="58" font-family="Oswald, sans-serif" font-size="32" font-weight="700" fill="white" letter-spacing="-0.5">CLUB</text>
+        <text x="68" y="70" font-family="Oswald, sans-serif" font-size="11" font-weight="400" fill="white" letter-spacing="1">DE LA</text>
+        <text x="68" y="88" font-family="Oswald, sans-serif" font-size="25" font-weight="700" fill="white" letter-spacing="-0.5">LIBERTAD</text>
+      </svg>
+      <span class="card-label" style="color:rgba(255,255,255,0.6);position:relative;z-index:1">Versión Blanca — Sobre Foto</span>
+    </div>
+
+    <!-- Ícono solo blanco -->
+    <div class="logo-card icon-only-white">
+      <svg width="80" height="80" viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M40,40 m-32,0 a32,32 0 1,1 22.6,-22.6" stroke="white" stroke-width="11" fill="none" stroke-linecap="round"/>
+        <path d="M32,10 C36,2 44,0 48,4 C44,6 40,10 38,16 C42,8 50,4 56,8 C50,10 44,16 42,24 C38,16 34,12 32,10Z" fill="white"/>
+      </svg>
+      <span class="card-label">Ícono Solo — Blanco</span>
+    </div>
+
+  </div>
+</div>
+
+<!-- ─── 02. PALETA ─── -->
+<div class="section light">
+  <div class="section-label">02 — Identidad Cromática</div>
+  <div class="section-title">Paleta de Colores</div>
+
+  <div class="color-grid">
+    <div class="color-card">
+      <div class="color-swatch" style="background:#F47920;"></div>
+      <div class="color-info">
+        <div class="color-name">Naranja Principal</div>
+        <div class="color-hex">#F47920</div>
+        <div class="color-use">Color primario. CTAs, highlights, elementos de acción.</div>
+      </div>
+    </div>
+    <div class="color-card">
+      <div class="color-swatch gradient"></div>
+      <div class="color-info">
+        <div class="color-name">Degradado Ícono</div>
+        <div class="color-hex">#FFAB00 → #E8600A</div>
+        <div class="color-use">Exclusivo para el ícono del logo. No usar en texto.</div>
+      </div>
+    </div>
+    <div class="color-card">
+      <div class="color-swatch" style="background:#FFAB00;"></div>
+      <div class="color-info">
+        <div class="color-name">Ámbar</div>
+        <div class="color-hex">#FFAB00</div>
+        <div class="color-use">Acentos brillantes, highlights en fondos oscuros.</div>
+      </div>
+    </div>
+    <div class="color-card">
+      <div class="color-swatch" style="background:#E8600A;"></div>
+      <div class="color-info">
+        <div class="color-name">Naranja Oscuro</div>
+        <div class="color-hex">#E8600A</div>
+        <div class="color-use">Hover states, fondos cálidos, énfasis secundario.</div>
+      </div>
+    </div>
+    <div class="color-card">
+      <div class="color-swatch" style="background:#0A0A0A; border: 1px solid #333;"></div>
+      <div class="color-info">
+        <div class="color-name">Negro Base</div>
+        <div class="color-hex">#0A0A0A</div>
+        <div class="color-use">Fondo principal. Transmite poder y exclusividad.</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ─── 03. TIPOGRAFÍA ─── -->
+<div class="section">
+  <div class="section-label">03 — Sistema Tipográfico</div>
+  <div class="section-title">Tipografía</div>
+
+  <div class="type-showcase">
+    <div class="type-block">
+      <div class="type-label">Display — Oswald Bold 700</div>
+      <div class="type-display">CLUB<br>LIBERTAD</div>
+      <div class="type-meta">
+        Familia: Oswald<br>
+        Peso: 700 (Bold)<br>
+        Uso: Títulos, nombre de marca, headlines de impacto<br>
+        Tracking: -1px a 0
+      </div>
+      <div class="type-weights">
+        <div class="weight-row">
+          <span class="weight-sample" style="font-weight:700">LIBERTAD</span>
+          <span class="weight-label">700 — Bold</span>
+        </div>
+        <div class="weight-row">
+          <span class="weight-sample" style="font-weight:500">LIBERTAD</span>
+          <span class="weight-label">500 — Medium</span>
+        </div>
+        <div class="weight-row">
+          <span class="weight-sample" style="font-weight:400">LIBERTAD</span>
+          <span class="weight-label">400 — Regular</span>
+        </div>
+        <div class="weight-row">
+          <span class="weight-sample" style="font-weight:300">LIBERTAD</span>
+          <span class="weight-label">300 — Light</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="type-block">
+      <div class="type-label">Cuerpo — DM Sans 400</div>
+      <div class="type-display body">
+        La libertad no es un destino. Es una forma de vivir, de elegir, de moverse por el mundo con propósito e intención.
+      </div>
+      <div class="type-meta">
+        Familia: DM Sans<br>
+        Peso: 300, 400, 500, 600<br>
+        Uso: Párrafos, descripciones, UI, captions<br>
+        Line-height: 1.6–1.8
+      </div>
+      <div style="margin-top: 24px;">
+        <div style="font-family:'DM Sans',sans-serif; font-size:24px; font-weight:600; margin-bottom:8px; color:white;">Subtítulo — 600</div>
+        <div style="font-family:'DM Sans',sans-serif; font-size:16px; font-weight:400; color:#AAAAAA; margin-bottom:8px;">Texto normal — 400</div>
+        <div style="font-family:'DM Sans',sans-serif; font-size:12px; font-weight:300; color:#888; letter-spacing:0.15em; text-transform:uppercase;">CAPTION — 300 UPPERCASE</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ─── 04. DOS Y DON'TS ─── -->
+<div class="section light">
+  <div class="section-label">04 — Uso del Logo</div>
+  <div class="section-title">Correcto vs. Incorrecto</div>
+
+  <div class="rules-grid">
+    <div class="rules-col do">
+      <h3><span>✓</span> Hacer</h3>
+      <div class="rule-item">
+        <span class="rule-icon" style="color:#4CAF50">✓</span>
+        Usar el logo en fondos sólidos: negro, blanco o naranja.
+      </div>
+      <div class="rule-item">
+        <span class="rule-icon" style="color:#4CAF50">✓</span>
+        Mantener proporciones originales. No escalar solo el ícono o solo el texto.
+      </div>
+      <div class="rule-item">
+        <span class="rule-icon" style="color:#4CAF50">✓</span>
+        Usar versión blanca sobre fotos oscuras o de alto contraste.
+      </div>
+      <div class="rule-item">
+        <span class="rule-icon" style="color:#4CAF50">✓</span>
+        Respetar el espacio mínimo alrededor del logo (ver sección 05).
+      </div>
+      <div class="rule-item">
+        <span class="rule-icon" style="color:#4CAF50">✓</span>
+        Usar el ícono solo cuando el espacio es reducido (favicon, insignia, marca de agua).
+      </div>
+    </div>
+
+    <div class="rules-col dont">
+      <h3><span>✗</span> No Hacer</h3>
+      <div class="rule-item">
+        <span class="rule-icon" style="color:#F44336">✗</span>
+        No cambiar los colores del logo. Sin azul, verde, morado ni otros.
+      </div>
+      <div class="rule-item">
+        <span class="rule-icon" style="color:#F44336">✗</span>
+        No deformar, estirar ni rotar el logo.
+      </div>
+      <div class="rule-item">
+        <span class="rule-icon" style="color:#F44336">✗</span>
+        No usar el logo sobre fondos con patrones complejos sin overlay.
+      </div>
+      <div class="rule-item">
+        <span class="rule-icon" style="color:#F44336">✗</span>
+        No agregar sombras, resplandores ni efectos al logo.
+      </div>
+      <div class="rule-item">
+        <span class="rule-icon" style="color:#F44336">✗</span>
+        No usar el logo en tamaños menores a 120px de ancho en digital.
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ─── 05. ESPACIO MÍNIMO ─── -->
+<div class="section">
+  <div class="section-label">05 — Área Protegida</div>
+  <div class="section-title">Espacio Mínimo</div>
+
+  <div class="spacing-demo">
+    <div>
+      <p style="color:#888; font-size:14px; margin-bottom:32px;">El logo siempre debe tener una zona de exclusión equivalente a la altura de la letra "L" de "LIBERTAD" en cada lado. Esto garantiza que ningún otro elemento visual interfiera con su legibilidad.</p>
+
+      <!-- Spacing visual simulado -->
+      <div style="position:relative; display:inline-block; padding: 40px; border: 1px dashed rgba(244,121,32,0.4);">
+        <!-- Arrows indicando espacio -->
+        <div style="position:absolute; top:0; left:50%; transform:translateX(-50%); font-size:10px; color:var(--orange); letter-spacing:0.1em; padding-top:4px;">x</div>
+        <div style="position:absolute; bottom:0; left:50%; transform:translateX(-50%); font-size:10px; color:var(--orange); padding-bottom:4px;">x</div>
+        <div style="position:absolute; left:0; top:50%; transform:translateY(-50%); font-size:10px; color:var(--orange); padding-left:4px;">x</div>
+        <div style="position:absolute; right:0; top:50%; transform:translateY(-50%); font-size:10px; color:var(--orange); padding-right:4px;">x</div>
+
+        <svg width="180" height="80" viewBox="0 0 200 90" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <g transform="translate(0, 5)">
+            <path d="M40,40 m-32,0 a32,32 0 1,1 22.6,-22.6" stroke="url(#grad4)" stroke-width="11" fill="none" stroke-linecap="round"/>
+            <path d="M32,10 C36,2 44,0 48,4 C44,6 40,10 38,16 C42,8 50,4 56,8 C50,10 44,16 42,24 C38,16 34,12 32,10Z" fill="url(#grad4)"/>
+            <defs>
+              <linearGradient id="grad4" x1="0" y1="0" x2="60" y2="60" gradientUnits="userSpaceOnUse">
+                <stop offset="0%" stop-color="#FFAB00"/>
+                <stop offset="100%" stop-color="#E8600A"/>
+              </linearGradient>
+            </defs>
+          </g>
+          <text x="72" y="34" font-family="Oswald, sans-serif" font-size="11" font-weight="400" fill="#FFFFFF" letter-spacing="1">el</text>
+          <text x="68" y="58" font-family="Oswald, sans-serif" font-size="32" font-weight="700" fill="#FFFFFF" letter-spacing="-0.5">CLUB</text>
+          <text x="68" y="70" font-family="Oswald, sans-serif" font-size="11" font-weight="400" fill="#FFFFFF" letter-spacing="1">DE LA</text>
+          <text x="68" y="88" font-family="Oswald, sans-serif" font-size="25" font-weight="700" fill="#FFFFFF" letter-spacing="-0.5">LIBERTAD</text>
+        </svg>
+      </div>
+
+      <p class="spacing-note" style="margin-top:24px;">x = altura de la "L" en "LIBERTAD" · zona naranja punteada = área protegida</p>
+    </div>
+
+    <div style="display:grid; grid-template-columns:1fr 1fr 1fr; gap:16px; margin-top:16px;">
+      <div style="background:#141414; border:1px solid var(--border); padding:24px; border-radius:4px;">
+        <div style="font-family:'Oswald',sans-serif; font-size:32px; font-weight:700; color:var(--orange);">120px</div>
+        <div style="font-size:12px; color:#888; margin-top:4px;">Tamaño mínimo digital</div>
+      </div>
+      <div style="background:#141414; border:1px solid var(--border); padding:24px; border-radius:4px;">
+        <div style="font-family:'Oswald',sans-serif; font-size:32px; font-weight:700; color:var(--orange);">30mm</div>
+        <div style="font-size:12px; color:#888; margin-top:4px;">Tamaño mínimo impreso</div>
+      </div>
+      <div style="background:#141414; border:1px solid var(--border); padding:24px; border-radius:4px;">
+        <div style="font-family:'Oswald',sans-serif; font-size:32px; font-weight:700; color:var(--orange);">32px</div>
+        <div style="font-size:12px; color:#888; margin-top:4px;">Ícono solo mínimo</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ─── 06. APLICACIONES ─── -->
+<div class="section light">
+  <div class="section-label">06 — Aplicaciones</div>
+  <div class="section-title">Mockups</div>
+
+  <div class="mockup-grid">
+
+    <!-- Tarjeta de presentación -->
+    <div class="mockup-card">
+      <div class="mockup-preview" style="background:#111;">
+        <div class="biz-card">
+          <div>
+            <svg width="90" height="40" viewBox="0 0 200 90" fill="none">
+              <g transform="translate(0, 5)">
+                <path d="M40,40 m-32,0 a32,32 0 1,1 22.6,-22.6" stroke="url(#gb1)" stroke-width="11" fill="none" stroke-linecap="round"/>
+                <path d="M32,10 C36,2 44,0 48,4 C44,6 40,10 38,16 C42,8 50,4 56,8 C50,10 44,16 42,24 C38,16 34,12 32,10Z" fill="url(#gb1)"/>
+                <defs>
+                  <linearGradient id="gb1" x1="0" y1="0" x2="60" y2="60" gradientUnits="userSpaceOnUse">
+                    <stop offset="0%" stop-color="#FFAB00"/>
+                    <stop offset="100%" stop-color="#E8600A"/>
+                  </linearGradient>
+                </defs>
+              </g>
+              <text x="72" y="34" font-family="Oswald" font-size="11" font-weight="400" fill="white" letter-spacing="1">el</text>
+              <text x="68" y="58" font-family="Oswald" font-size="32" font-weight="700" fill="white" letter-spacing="-0.5">CLUB</text>
+              <text x="68" y="70" font-family="Oswald" font-size="11" font-weight="400" fill="white" letter-spacing="1">DE LA</text>
+              <text x="68" y="88" font-family="Oswald" font-size="25" font-weight="700" fill="white" letter-spacing="-0.5">LIBERTAD</text>
+            </svg>
+          </div>
+          <div>
+            <div style="font-family:'Oswald',sans-serif;font-size:13px;font-weight:600;color:white;">Nombre Apellido</div>
+            <div style="font-size:9px;color:var(--orange);letter-spacing:0.1em;text-transform:uppercase;margin-top:2px;">Miembro Fundador</div>
+            <div style="font-size:8px;color:#888;margin-top:6px;">@clubdelibertad · clubdelibertad.com</div>
+          </div>
+        </div>
+      </div>
+      <div class="mockup-label">Tarjeta de Presentación</div>
+    </div>
+
+    <!-- Post de Instagram -->
+    <div class="mockup-card">
+      <div class="mockup-preview" style="background:#0D0D0D;">
+        <div class="ig-post">
+          <svg width="60" height="60" viewBox="0 0 80 80" fill="none" style="position:relative;z-index:1;">
+            <path d="M40,40 m-32,0 a32,32 0 1,1 22.6,-22.6" stroke="url(#gb2)" stroke-width="9" fill="none" stroke-linecap="round"/>
+            <path d="M32,10 C36,2 44,0 48,4 C44,6 40,10 38,16 C42,8 50,4 56,8 C50,10 44,16 42,24 C38,16 34,12 32,10Z" fill="url(#gb2)"/>
+            <defs>
+              <linearGradient id="gb2" x1="0" y1="0" x2="80" y2="80" gradientUnits="userSpaceOnUse">
+                <stop offset="0%" stop-color="#FFAB00"/>
+                <stop offset="100%" stop-color="#E8600A"/>
+              </linearGradient>
+            </defs>
+          </svg>
+          <div style="position:relative;z-index:1;margin-top:12px;text-align:center;">
+            <div style="font-family:'Oswald',sans-serif;font-size:22px;font-weight:700;color:white;line-height:1.1;">VIVE<br>LIBRE</div>
+            <div style="font-size:9px;color:rgba(255,255,255,0.6);letter-spacing:0.15em;text-transform:uppercase;margin-top:8px;">El Club de la Libertad</div>
+          </div>
+        </div>
+      </div>
+      <div class="mockup-label">Post de Instagram 1:1</div>
+    </div>
+
+    <!-- Header de website -->
+    <div class="mockup-card">
+      <div class="mockup-preview" style="background:#111; padding:0; align-items:flex-start;">
+        <div class="web-header" style="width:92%; margin-top:20px;">
+          <div class="web-header-bar">
+            <div class="dot red"></div>
+            <div class="dot yellow"></div>
+            <div class="dot green"></div>
+          </div>
+          <div class="web-header-content">
+            <svg width="70" height="28" viewBox="0 0 200 90" fill="none">
+              <g transform="translate(0,5)">
+                <path d="M40,40 m-32,0 a32,32 0 1,1 22.6,-22.6" stroke="url(#gb3)" stroke-width="11" fill="none" stroke-linecap="round"/>
+                <path d="M32,10 C36,2 44,0 48,4 C44,6 40,10 38,16 C42,8 50,4 56,8 C50,10 44,16 42,24 C38,16 34,12 32,10Z" fill="url(#gb3)"/>
+                <defs>
+                  <linearGradient id="gb3" x1="0" y1="0" x2="60" y2="60" gradientUnits="userSpaceOnUse">
+                    <stop offset="0%" stop-color="#FFAB00"/>
+                    <stop offset="100%" stop-color="#E8600A"/>
+                  </linearGradient>
+                </defs>
+              </g>
+              <text x="72" y="34" font-family="Oswald" font-size="11" font-weight="400" fill="white">el</text>
+              <text x="68" y="58" font-family="Oswald" font-size="32" font-weight="700" fill="white">CLUB</text>
+              <text x="68" y="70" font-family="Oswald" font-size="11" font-weight="400" fill="white">DE LA</text>
+              <text x="68" y="88" font-family="Oswald" font-size="25" font-weight="700" fill="white">LIBERTAD</text>
+            </svg>
+            <div class="web-nav-items">
+              <span class="web-nav-item">Inicio</span>
+              <span class="web-nav-item">Comunidad</span>
+              <span class="web-nav-item">Recursos</span>
+            </div>
+            <div class="web-cta">UNIRME</div>
+          </div>
+          <div class="web-hero-area">
+            <div style="height:3px;background:linear-gradient(90deg,var(--orange-light),var(--orange-dark));margin-bottom:14px;"></div>
+            <div class="web-hero-headline">VIVE<br><span style="color:var(--orange)">LIBRE.</span></div>
+            <div class="web-hero-sub">Únete a la comunidad que te empuja a ser más.</div>
+          </div>
+        </div>
+      </div>
+      <div class="mockup-label">Header de Website</div>
+    </div>
+
+  </div>
+</div>
+
+<!-- ─── 07. VOZ Y TONO ─── -->
+<div class="section">
+  <div class="section-label">07 — Identidad Verbal</div>
+  <div class="section-title">Voz y Tono</div>
+
+  <div class="tone-grid">
+    <div class="tone-card">
+      <div class="tone-word">LIBRE</div>
+      <div class="tone-desc">Sin restricciones artificiales. El lenguaje es directo, sin relleno corporativo. Habla como una persona, no como una institución.</div>
+    </div>
+    <div class="tone-card">
+      <div class="tone-word">ACTIVO</div>
+      <div class="tone-desc">Verbos de acción. Frases cortas. Energía hacia adelante. No describimos — invitamos, retamos, movemos.</div>
+    </div>
+    <div class="tone-card">
+      <div class="tone-word">CERCANO</div>
+      <div class="tone-desc">Hablamos de tú. Somos comunidad, no marca. El tono es el de un amigo que ya llegó adonde tú quieres ir.</div>
+    </div>
+    <div class="tone-card">
+      <div class="tone-word">AMBICIOSO</div>
+      <div class="tone-desc">No prometemos poco. La libertad es grande. El lenguaje refleja eso — apunta alto, sin miedo al ideal.</div>
+    </div>
+    <div class="tone-card">
+      <div class="tone-word">REAL</div>
+      <div class="tone-desc">Sin humo. Sin promesas vacías. Hablamos de resultados tangibles, de pasos concretos, de gente real que lo logró.</div>
+    </div>
+    <div class="tone-card">
+      <div class="tone-word">MOVIMIENTO</div>
+      <div class="tone-desc">No somos un producto. Somos un movimiento. El lenguaje construye identidad colectiva — pertenecer aquí significa algo.</div>
+    </div>
+  </div>
+
+  <div class="tone-examples">
+    <div class="tone-example yes">
+      <div class="ex-label">✓ Sí decimos</div>
+      <p>"Esto no es para todos. Es para los que ya decidieron que quieren más."</p>
+    </div>
+    <div class="tone-example no">
+      <div class="ex-label">✗ No decimos</div>
+      <p>"Bienvenido a nuestra plataforma de desarrollo personal y bienestar integral."</p>
+    </div>
+    <div class="tone-example yes">
+      <div class="ex-label">✓ Sí decimos</div>
+      <p>"La libertad no se espera. Se construye."</p>
+    </div>
+    <div class="tone-example no">
+      <div class="ex-label">✗ No decimos</div>
+      <p>"Ofrecemos soluciones innovadoras para el crecimiento personal sostenible."</p>
+    </div>
+  </div>
+</div>
+
+<!-- ─── FOOTER ─── -->
+<div class="orange-line"></div>
+<div class="footer">
+  <div>
+    <svg width="120" height="50" viewBox="0 0 200 90" fill="none">
+      <g transform="translate(0,5)">
+        <path d="M40,40 m-32,0 a32,32 0 1,1 22.6,-22.6" stroke="url(#gbf)" stroke-width="11" fill="none" stroke-linecap="round"/>
+        <path d="M32,10 C36,2 44,0 48,4 C44,6 40,10 38,16 C42,8 50,4 56,8 C50,10 44,16 42,24 C38,16 34,12 32,10Z" fill="url(#gbf)"/>
+        <defs>
+          <linearGradient id="gbf" x1="0" y1="0" x2="60" y2="60" gradientUnits="userSpaceOnUse">
+            <stop offset="0%" stop-color="#FFAB00"/>
+            <stop offset="100%" stop-color="#E8600A"/>
+          </linearGradient>
+        </defs>
+      </g>
+      <text x="72" y="34" font-family="Oswald" font-size="11" font-weight="400" fill="white">el</text>
+      <text x="68" y="58" font-family="Oswald" font-size="32" font-weight="700" fill="white">CLUB</text>
+      <text x="68" y="70" font-family="Oswald" font-size="11" font-weight="400" fill="white">DE LA</text>
+      <text x="68" y="88" font-family="Oswald" font-size="25" font-weight="700" fill="white">LIBERTAD</text>
+    </svg>
+  </div>
+  <div class="footer-note" style="text-align:right;">
+    Brand Identity System v1.0<br>
+    Uso interno — Confidencial<br>
+    Marzo 2026
+  </div>
+</div>
+
+</body>
+</html>

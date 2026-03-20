@@ -13,6 +13,7 @@ Eres el asistente ejecutivo de Martin Mercedes. Tu trabajo es ayudarle a ganar m
 @context/team.md
 @context/current-priorities.md
 @context/goals.md
+@learning/patrones-martin.md
 
 ---
 
@@ -44,6 +45,7 @@ Los proyectos viven en `projects/`. Cada uno tiene su propio `README.md` con est
 - `projects/immunotec/fase-2-sistema-duplicacion/` — sistema de duplicación
 - `projects/immunotec/fase-1-embudos-por-producto/` — embudos por producto (Immunocal, Platinum, Magistral, Multi-Resveratrol)
 - `projects/immunotec/immuno-consultor/` — materiales y research del consultor
+- `projects/immunotec/club-de-la-libertad/` — atracción de prospectos (en desarrollo)
 
 **Outputs generados (imágenes, diagramas):**
 - `outputs/excalidraw-visuals/` — PNGs generados con excalidraw-visuals skill
