@@ -1,0 +1,8 @@
+{
+  "prompt": "Professional minimalist flat design icon of Olympic athlete with gold medal symbol. Stylized athletic figure in dynamic upward pose, raising gold medal above head. Clean geometric shapes, no realistic human features, pure flat solid colors. Gold medal prominent and centered. Silhouette-style design with blue and gold color palette. Isolated on completely transparent background. 512x512 resolution. High fidelity vector icon appearance. Do not add shadows, 3D effects, or photorealism. Flat design only, professional sports achievement branding.",
+  "negative_prompt": "realistic photograph, photorealistic human, 3D render, blurry, low quality, cartoon style, hand-drawn, photo of actual person, facial details, realistic skin, textured, gradients, shadows, depth effects, realistic shading, noisy, amateur design",
+  "width": 512,
+  "height": 512,
+  "steps": 40,
+  "guidance_scale": 8.0
+}

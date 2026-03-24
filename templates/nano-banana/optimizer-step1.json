@@ -1,0 +1,8 @@
+{
+  "prompt": "Product photograph of a hand pouring an orange sachet packet into a clear glass of cold water. The sachet is bright orange colored with clean modern packaging design. Orange powder dissolving in water. Clean white background. Shot from 3/4 angle, studio lighting, product photography style. Minimal composition, no text, no labels. High resolution, sharp details.",
+  "negative_prompt": "blue sachet, blue packet, blue powder, blurry, low quality, cartoon, illustration, text, watermark, cluttered background, multiple products",
+  "width": 512,
+  "height": 512,
+  "steps": 40,
+  "guidance_scale": 8.0
+}

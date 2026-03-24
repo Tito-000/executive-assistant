@@ -1,0 +1,9 @@
+{
+  "prompt": "Extreme macro product photography of fresh tart cherries (sour cherries / Montmorency cherries). A loose pile of deep red-burgundy tart cherries, some with stems attached, a few slightly split open revealing the juicy interior. Small water droplets on the cherry skin catching light. On a dark matte black stone surface. 100mm macro lens, f/4.0, ISO 200. Diffused side lighting creating depth in the cherry cluster. Deep ruby red, dark burgundy tones. Photorealistic unretouched documentary botanical photography. No text, no labels, no packaging.",
+  "negative_prompt": "text, labels, packaging, sweet cherries, maraschino cherries, artificial colors, CGI, illustration, cartoon, white background, studio plastic look, low quality, blurry, watermark, logo",
+  "api_parameters": {
+    "resolution": "2K",
+    "output_format": "png",
+    "aspect_ratio": "1:1"
+  }
+}

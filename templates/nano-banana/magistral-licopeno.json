@@ -1,0 +1,9 @@
+{
+  "prompt": "Extreme macro product photography of lycopene source ingredients — ripe red tomatoes sliced open showing vibrant red interior with seeds, some whole tomatoes beside them, placed on dark marble surface. 100mm macro lens, f/4.0, ISO 200. Natural daylight from window creating soft shadows, tomato flesh glistening with moisture, visible seeds and pulp structure. One tomato cut in half showing cross-section. Dark moody background. Botanical scientific photography, no text, no labels. Deep saturated reds, realistic juice droplets on surface. Photo realistic, unretouched documentary style.",
+  "negative_prompt": "text, labels, packaging, bottles, pills, capsules, white background, studio lighting, plastic look, CGI, illustration, cartoon, painting, low quality, blurry, watermark, logo, artificial colors, pink",
+  "api_parameters": {
+    "resolution": "2K",
+    "output_format": "png",
+    "aspect_ratio": "1:1"
+  }
+}

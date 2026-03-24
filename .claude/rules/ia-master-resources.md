@@ -9,5 +9,19 @@ Cuando Martin comparta un prompt o conocimiento de IA:
 2. **Rutas:**
    - Prompts → `IA Master Resources/prompts/`
    - Conocimiento → `IA Master Resources/conocimiento/`
+   - API Keys → `IA Master Resources/api-keys/`
 
 3. **Formato:** Archivos `.md` con nombre descriptivo en español y kebab-case.
+
+## API Keys — regla automática
+
+Cuando Martin comparta cualquier API key, token, o credencial de acceso:
+
+1. **Guardar de inmediato** en `IA Master Resources/api-keys/<nombre-del-servicio>.md` — sin preguntar
+2. **Formato del archivo:**
+   - Nombre del servicio y propósito
+   - La key/token
+   - Cómo usarla (header, endpoint base, etc.)
+   - Fecha en que fue guardada
+3. **También guardar** en memoria persistente (`~/.claude/projects/.../memory/`) con referencia al archivo
+4. **No preguntar** — detectar la key automáticamente y guardarla en ambos lugares

@@ -1,0 +1,993 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+<title>Immunocal Azul — Tu aliado para recuperar tu salud</title>
+
+<!-- Meta Pixel -->
+<script>
+!function(f,b,e,v,n,t,s)
+{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)}(window, document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', '2263653077494527');
+fbq('track', 'PageView');
+</script>
+<noscript>
+<img height="1" width="1" style="display:none"
+src="https://www.facebook.com/tr?id=2263653077494527&ev=PageView&noscript=1"/>
+</noscript>
+
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  :root {
+    --blue: #063f81;
+    --blue-dark: #042d5c;
+    --red: #e32402;
+    --orange: #ff6600;
+    --green-wa: #25d366;
+    --green-wa-dark: #1da851;
+    --text: #1a1a1a;
+    --text-light: #555;
+    --bg-gray: #f7f8fa;
+    --border: #e0e0e0;
+  }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    color: var(--text);
+    background: white;
+    max-width: 480px;
+    margin: 0 auto;
+    overflow-x: hidden;
+  }
+
+  /* ── TOP BAR ── */
+  .top-bar {
+    background: var(--blue);
+    color: white;
+    text-align: center;
+    padding: 8px 12px;
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.3px;
+    line-height: 1.6;
+  }
+
+  .top-bar span { margin: 0 6px; opacity: 0.7; }
+
+  /* ── HERO ── */
+  .hero {
+    background: white;
+    padding: 20px 16px 0;
+    text-align: center;
+  }
+
+  .hero-img-wrap {
+    position: relative;
+    margin-bottom: 16px;
+  }
+
+  .hero-img-wrap img {
+    width: 220px;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+  }
+
+  .badge-salud {
+    position: absolute;
+    top: 0;
+    right: 0;
+    background: #e8f5e9;
+    border: 1.5px solid #4caf50;
+    color: #2e7d32;
+    font-size: 10px;
+    font-weight: 700;
+    padding: 4px 8px;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+  }
+
+  .hero h1 {
+    font-size: 22px;
+    font-weight: 800;
+    color: var(--text);
+    line-height: 1.3;
+    margin-bottom: 14px;
+  }
+
+  .hero h1 em {
+    color: var(--blue);
+    font-style: normal;
+  }
+
+  /* BULLETS */
+  .bullets {
+    list-style: none;
+    text-align: left;
+    margin-bottom: 20px;
+  }
+
+  .bullets li {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 9px 0;
+    border-bottom: 1px solid #f0f0f0;
+    font-size: 14px;
+    color: var(--text);
+    font-weight: 500;
+  }
+
+  .bullets li:last-child { border-bottom: none; }
+
+  .bullet-icon {
+    width: 36px;
+    height: 36px;
+    flex-shrink: 0;
+    object-fit: contain;
+  }
+
+  /* PRICE BOX */
+  .price-box {
+    background: var(--blue);
+    border-radius: 14px;
+    padding: 16px;
+    margin-bottom: 16px;
+    text-align: center;
+  }
+
+  .price-label {
+    color: rgba(255,255,255,0.75);
+    font-size: 12px;
+    margin-bottom: 4px;
+  }
+
+  .price-old {
+    color: rgba(255,255,255,0.5);
+    text-decoration: line-through;
+    font-size: 14px;
+  }
+
+  .price-new {
+    color: white;
+    font-size: 32px;
+    font-weight: 900;
+    display: block;
+    line-height: 1.1;
+  }
+
+  .price-badge {
+    background: var(--red);
+    color: white;
+    font-size: 12px;
+    font-weight: 700;
+    padding: 3px 10px;
+    border-radius: 20px;
+    display: inline-block;
+    margin-top: 6px;
+  }
+
+  .price-sub {
+    color: rgba(255,255,255,0.8);
+    font-size: 12px;
+    margin-top: 8px;
+  }
+
+  /* CTA BUTTON */
+  .btn-wa {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    background: var(--green-wa);
+    color: white;
+    font-size: 16px;
+    font-weight: 800;
+    padding: 16px 20px;
+    border-radius: 12px;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    text-decoration: none;
+    transition: background 0.2s, transform 0.1s;
+    margin-bottom: 10px;
+    box-shadow: 0 4px 14px rgba(37,211,102,0.35);
+  }
+
+  .btn-wa:active {
+    background: var(--green-wa-dark);
+    transform: scale(0.98);
+  }
+
+  .btn-wa svg { flex-shrink: 0; }
+
+  .trust-row {
+    display: flex;
+    justify-content: space-around;
+    padding: 10px 0 20px;
+    border-top: 1px solid #f0f0f0;
+    margin-top: 4px;
+  }
+
+  .trust-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4px;
+    font-size: 10px;
+    color: var(--text-light);
+    font-weight: 600;
+  }
+
+  .trust-item span:first-child { font-size: 18px; }
+
+  /* ── SOCIAL PROOF BAR ── */
+  .social-bar {
+    background: #fff8e1;
+    border-top: 2px solid #ffc107;
+    border-bottom: 2px solid #ffc107;
+    padding: 14px 16px;
+    text-align: center;
+  }
+
+  .social-bar .stars { font-size: 20px; margin-bottom: 4px; }
+
+  .social-bar p {
+    font-size: 13px;
+    font-weight: 700;
+    color: var(--text);
+  }
+
+  .social-bar small {
+    font-size: 11px;
+    color: var(--text-light);
+  }
+
+  /* ── SECTIONS ── */
+  section {
+    padding: 24px 16px;
+    border-bottom: 6px solid var(--bg-gray);
+  }
+
+  .section-tag {
+    display: inline-block;
+    background: var(--blue);
+    color: white;
+    font-size: 10px;
+    font-weight: 700;
+    padding: 3px 10px;
+    border-radius: 20px;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+  }
+
+  section h2 {
+    font-size: 20px;
+    font-weight: 800;
+    line-height: 1.3;
+    margin-bottom: 16px;
+    color: var(--text);
+  }
+
+  /* ── PROBLEMA ── */
+  .problema { background: var(--bg-gray); }
+
+  .pain-list { list-style: none; }
+
+  .pain-list li {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    background: white;
+    border-radius: 10px;
+    padding: 12px;
+    margin-bottom: 8px;
+    border-left: 4px solid var(--red);
+    font-size: 14px;
+    color: var(--text);
+    line-height: 1.4;
+  }
+
+  .pain-list li .emoji { font-size: 20px; flex-shrink: 0; }
+
+  /* ── MECANISMO ── */
+  .flow {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4px;
+    margin: 16px 0;
+  }
+
+  .flow-box {
+    background: #e8f4fd;
+    border: 2px solid var(--blue);
+    border-radius: 10px;
+    padding: 10px 20px;
+    font-size: 13px;
+    font-weight: 700;
+    color: var(--blue);
+    text-align: center;
+    width: 100%;
+    max-width: 260px;
+  }
+
+  .flow-box.result {
+    background: #e8f5e9;
+    border-color: #4caf50;
+    color: #2e7d32;
+  }
+
+  .flow-arrow {
+    font-size: 20px;
+    color: var(--blue);
+    opacity: 0.5;
+  }
+
+  .mec-note {
+    background: #f0f7ff;
+    border-radius: 10px;
+    padding: 12px;
+    font-size: 12px;
+    color: var(--text-light);
+    line-height: 1.6;
+    text-align: center;
+    margin-top: 12px;
+  }
+
+  /* ── BENEFICIOS ── */
+  .beneficios-section {
+    background: var(--blue);
+    padding: 24px 16px;
+    border-bottom: 6px solid var(--bg-gray);
+  }
+
+  .beneficios-section .section-tag {
+    background: rgba(255,255,255,0.2);
+  }
+
+  .beneficios-section h2 { color: white; }
+
+  .benefit-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+  }
+
+  .benefit-card {
+    background: rgba(255,255,255,0.1);
+    border: 1px solid rgba(255,255,255,0.2);
+    border-radius: 12px;
+    padding: 14px 10px;
+    text-align: center;
+  }
+
+  .benefit-card img {
+    width: 40px;
+    height: 40px;
+    object-fit: contain;
+    margin-bottom: 8px;
+    filter: brightness(10);
+  }
+
+  .benefit-card p {
+    font-size: 12px;
+    color: white;
+    font-weight: 600;
+    line-height: 1.3;
+  }
+
+  /* ── CÓMO USAR ── */
+  .step {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    margin-bottom: 16px;
+    background: var(--bg-gray);
+    border-radius: 12px;
+    padding: 12px;
+  }
+
+  .step img {
+    width: 56px;
+    height: 56px;
+    object-fit: contain;
+    flex-shrink: 0;
+  }
+
+  .step-num {
+    width: 28px;
+    height: 28px;
+    background: var(--blue);
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 13px;
+    font-weight: 800;
+    flex-shrink: 0;
+  }
+
+  .step-content strong {
+    display: block;
+    font-size: 14px;
+    margin-bottom: 2px;
+  }
+
+  .step-content span {
+    font-size: 12px;
+    color: var(--text-light);
+  }
+
+  /* ── INGREDIENTES ── */
+  .ing-section { background: var(--bg-gray); }
+
+  .ing-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+  }
+
+  .ing-card {
+    background: white;
+    border: 1.5px solid var(--border);
+    border-radius: 12px;
+    padding: 14px 10px;
+    text-align: center;
+  }
+
+  .ing-icon { font-size: 24px; margin-bottom: 6px; }
+
+  .ing-card strong {
+    display: block;
+    font-size: 12px;
+    color: var(--text);
+    margin-bottom: 4px;
+  }
+
+  .ing-card span {
+    font-size: 10px;
+    color: var(--text-light);
+    line-height: 1.4;
+  }
+
+  /* ── TESTIMONIOS ── */
+  .testi-card {
+    background: var(--bg-gray);
+    border-radius: 14px;
+    padding: 16px;
+    margin-bottom: 12px;
+    border-left: 4px solid var(--blue);
+  }
+
+  .testi-header {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 10px;
+  }
+
+  .testi-avatar {
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    background: #ddd;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+    flex-shrink: 0;
+    overflow: hidden;
+    border: 2px solid var(--blue);
+  }
+
+  .testi-info strong {
+    display: block;
+    font-size: 13px;
+    color: var(--text);
+  }
+
+  .testi-info small {
+    font-size: 11px;
+    color: var(--text-light);
+  }
+
+  .testi-stars { color: #ffc107; font-size: 13px; }
+
+  .testi-text {
+    font-size: 13px;
+    color: var(--text-light);
+    line-height: 1.6;
+    font-style: italic;
+  }
+
+  /* ── FAQ ── */
+  .faq-section { background: var(--bg-gray); }
+
+  .faq-item {
+    background: white;
+    border-radius: 12px;
+    padding: 14px;
+    margin-bottom: 10px;
+    border-left: 4px solid var(--blue);
+  }
+
+  .faq-q {
+    font-size: 14px;
+    font-weight: 700;
+    color: var(--blue);
+    margin-bottom: 8px;
+    display: flex;
+    align-items: flex-start;
+    gap: 6px;
+  }
+
+  .faq-a {
+    font-size: 13px;
+    color: var(--text-light);
+    line-height: 1.6;
+  }
+
+  /* ── CTA FINAL ── */
+  .cta-final {
+    background: var(--bg-gray);
+    padding: 28px 16px;
+    text-align: center;
+    border-bottom: none;
+  }
+
+  .urgency {
+    background: #fff3cd;
+    border: 1.5px solid #ffc107;
+    border-radius: 10px;
+    padding: 10px 14px;
+    font-size: 13px;
+    font-weight: 700;
+    color: #856404;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+  }
+
+  .cta-final .price-new {
+    color: var(--text);
+    font-size: 36px;
+  }
+
+  .cta-final .price-old {
+    color: var(--text-light);
+  }
+
+  .cta-footer {
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+    margin-top: 14px;
+  }
+
+  .cta-footer-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 11px;
+    color: var(--text-light);
+    font-weight: 600;
+    gap: 3px;
+  }
+
+  .cta-footer-item span:first-child { font-size: 18px; }
+
+  /* ── STICKY BAR ── */
+  .sticky {
+    position: fixed;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    max-width: 480px;
+    background: white;
+    border-top: 2px solid var(--border);
+    padding: 10px 16px 14px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    z-index: 100;
+    box-shadow: 0 -4px 20px rgba(0,0,0,0.1);
+  }
+
+  .sticky-prices { flex-shrink: 0; }
+
+  .sticky-old {
+    font-size: 11px;
+    color: #999;
+    text-decoration: line-through;
+  }
+
+  .sticky-new {
+    font-size: 18px;
+    font-weight: 900;
+    color: var(--text);
+    line-height: 1;
+  }
+
+  .sticky .btn-wa {
+    margin-bottom: 0;
+    font-size: 13px;
+    padding: 12px 14px;
+    flex: 1;
+  }
+
+  /* SPACER for sticky */
+  .sticky-spacer { height: 70px; }
+
+  /* ── UTILITIES ── */
+  .text-center { text-align: center; }
+  .mt-8 { margin-top: 8px; }
+  .mb-0 { margin-bottom: 0; }
+</style>
+</head>
+<body>
+
+<!-- TOP BAR -->
+<div class="top-bar">
+  📦 Envío GRATIS hoy &nbsp;<span>|</span>&nbsp; 💳 Pago al recibir &nbsp;<span>|</span>&nbsp; ✅ Registro Salud Pública
+</div>
+
+<!-- HERO -->
+<div class="hero">
+
+  <div class="hero-img-wrap">
+    <img src="https://immunoconsulotr.com/cdn/shop/files/jgv.gif?v=1765280352"
+         alt="Immunocal Azul"
+         loading="eager">
+    <div class="badge-salud">✅ Salud Pública</div>
+  </div>
+
+  <h1>¿Cansado, con dolor<br>o sin energía?<br><em>Tu cuerpo necesita esto.</em></h1>
+
+  <ul class="bullets">
+    <li>
+      <img class="bullet-icon" src="https://immunoconsulotr.com/cdn/shop/files/70.png?v=1771340101" alt="">
+      Refuerza tus defensas
+    </li>
+    <li>
+      <img class="bullet-icon" src="https://immunoconsulotr.com/cdn/shop/files/71.png?v=1771340100" alt="">
+      Reduce dolor y molestias persistentes
+    </li>
+    <li>
+      <img class="bullet-icon" src="https://immunoconsulotr.com/cdn/shop/files/72.png?v=1771340100" alt="">
+      Mejora tu energía diaria
+    </li>
+    <li>
+      <img class="bullet-icon" src="https://immunoconsulotr.com/cdn/shop/files/73.png?v=1771340101" alt="">
+      Regenera tus células
+    </li>
+    <li>
+      <img class="bullet-icon" src="https://immunoconsulotr.com/cdn/shop/files/kb.png?v=1771340241" alt="">
+      Sin químicos. Sin efectos secundarios.
+    </li>
+  </ul>
+
+  <div class="price-box">
+    <div class="price-label">Cómpralo hoy con 20% de descuento</div>
+    <span class="price-old">RD$7,300</span>
+    <span class="price-new">RD$5,840</span>
+    <div><span class="price-badge">Ahorras RD$1,460 🔥</span></div>
+    <div class="price-sub">📦 Envío gratis · Paga cuando lo recibas</div>
+  </div>
+
+  <a class="btn-wa" href="https://wa.me/18299632978?text=Hola%2C%20me%20interesa%20el%20Immunocal%20Azul.%20%C2%BFPueden%20darme%20m%C3%A1s%20informaci%C3%B3n%3F"
+     onclick="fbq('track', 'Lead', {content_name: 'Immunocal - Hero CTA'});"
+     target="_blank">
+    <svg width="22" height="22" viewBox="0 0 24 24" fill="white">
+      <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+    </svg>
+    LO QUIERO — PAGO AL RECIBIR
+  </a>
+
+  <div class="trust-row">
+    <div class="trust-item"><span>🔒</span><span>Compra segura</span></div>
+    <div class="trust-item"><span>💳</span><span>Pago fácil</span></div>
+    <div class="trust-item"><span>🚚</span><span>Envío rápido</span></div>
+  </div>
+
+</div>
+
+<!-- SOCIAL PROOF BAR -->
+<div class="social-bar">
+  <div class="stars">⭐⭐⭐⭐⭐</div>
+  <p>+500 dominicanos ya recuperaron su salud</p>
+  <small>6 reseñas verificadas · 5.0 promedio</small>
+</div>
+
+<!-- PROBLEMA -->
+<section class="problema">
+  <div class="section-tag">¿Te suena familiar?</div>
+  <h2>¿Te identificas con alguno de estos síntomas?</h2>
+
+  <ul class="pain-list">
+    <li><span class="emoji">😩</span> Te despiertas cansado aunque dormiste bien</li>
+    <li><span class="emoji">😣</span> Tienes un dolor que no desaparece con nada</li>
+    <li><span class="emoji">🏥</span> Los médicos no encuentran una solución real</li>
+    <li><span class="emoji">💊</span> Los medicamentos solo calman, no curan</li>
+    <li><span class="emoji">📉</span> Tu energía ya no es la misma de antes</li>
+  </ul>
+</section>
+
+<!-- DESCRIPCIÓN -->
+<section>
+  <div class="section-tag">La solución</div>
+  <h2>Immunocal: una alternativa natural con respaldo científico</h2>
+
+  <img src="https://immunoconsulotr.com/cdn/shop/files/3000.gif?v=1765413978"
+       alt="Immunocal beneficios"
+       style="width:100%; border-radius:12px; margin-bottom:16px;">
+
+  <p style="font-size:14px; color:var(--text-light); line-height:1.7;">
+    Con el paso del tiempo, muchas personas reciben diagnósticos que las dejan sin respuestas claras: enfermedades crónicas, dolores que no desaparecen, y tratamientos que solo calman pero no solucionan.<br><br>
+    <strong>Immunocal es una proteína natural rica en precursores de glutatión</strong> que ayuda a que tu propio cuerpo se sane desde adentro.
+  </p>
+</section>
+
+<!-- MECANISMO -->
+<section style="background:var(--bg-gray);">
+  <div class="section-tag">¿Cómo funciona?</div>
+  <h2>Actúa desde adentro — no solo calma síntomas</h2>
+
+  <div class="flow">
+    <div class="flow-box">Immunocal</div>
+    <div class="flow-arrow">↓</div>
+    <div class="flow-box">Cisteína Bioactiva</div>
+    <div class="flow-arrow">↓</div>
+    <div class="flow-box">Eleva el Glutatión</div>
+    <div class="flow-arrow">↓</div>
+    <div class="flow-box result">✓ Tu cuerpo se recupera</div>
+  </div>
+
+  <div class="mec-note">
+    El <strong>glutatión</strong> es el antioxidante más poderoso que produce tu cuerpo.<br>
+    Immunocal es la única manera probada de elevarlo naturalmente.<br>
+    <em>Respaldado por más de 40 estudios científicos.</em>
+  </div>
+</section>
+
+<!-- BENEFICIOS -->
+<div class="beneficios-section">
+  <div class="section-tag">Beneficios</div>
+  <h2 style="color:white; font-size:20px; font-weight:800; margin-bottom:16px;">Recupera tu salud SIN medicamentos agresivos</h2>
+
+  <div class="benefit-grid">
+    <div class="benefit-card">
+      <img src="https://immunoconsulotr.com/cdn/shop/files/70.png?v=1771340101" alt="Defensas">
+      <p>Refuerza el sistema inmune debilitado</p>
+    </div>
+    <div class="benefit-card">
+      <img src="https://immunoconsulotr.com/cdn/shop/files/71.png?v=1771340100" alt="Dolor">
+      <p>Disminuye la inflamación y el dolor crónico</p>
+    </div>
+    <div class="benefit-card">
+      <img src="https://immunoconsulotr.com/cdn/shop/files/72.png?v=1771340100" alt="Energía">
+      <p>Disminuye fatiga extrema y mejora energía</p>
+    </div>
+    <div class="benefit-card">
+      <img src="https://immunoconsulotr.com/cdn/shop/files/73.png?v=1771340101" alt="Células">
+      <p>Apoya la recuperación celular</p>
+    </div>
+    <div class="benefit-card">
+      <img src="https://immunoconsulotr.com/cdn/shop/files/kb.png?v=1771340241" alt="Sin químicos">
+      <p>Sin químicos ni efectos secundarios</p>
+    </div>
+    <div class="benefit-card">
+      <div style="font-size:28px; margin-bottom:8px;">🛡️</div>
+      <p>Protege órganos vitales: hígado, pulmones y cerebro</p>
+    </div>
+  </div>
+</div>
+
+<!-- CÓMO USAR -->
+<section>
+  <div class="section-tag">Instrucciones</div>
+  <h2>¿Cómo usar Immunocal Azul?<br><small style="font-size:15px; font-weight:500; color:var(--text-light);">Tan fácil como 1, 2, 3</small></h2>
+
+  <div class="step">
+    <div class="step-num">01</div>
+    <img src="https://immunoconsulotr.com/cdn/shop/files/52_22b465a4-f342-480d-9da5-4bcab0e44a1c.png" alt="Disuelve">
+    <div class="step-content">
+      <strong>Disuelve el sobre</strong>
+      <span>Vierte 1 sobre en agua, jugo natural o yogurt</span>
+    </div>
+  </div>
+
+  <div class="step">
+    <div class="step-num">02</div>
+    <img src="https://immunoconsulotr.com/cdn/shop/files/51_775bb289-756f-43d7-b9a5-c460a1d5077d.png" alt="Tómalo">
+    <div class="step-content">
+      <strong>Tómalo en ayunas</strong>
+      <span>Consume 1 sobre cada mañana con el estómago vacío</span>
+    </div>
+  </div>
+
+  <div class="step">
+    <div class="step-num">03</div>
+    <img src="https://immunoconsulotr.com/cdn/shop/files/53_7a3e98e7-a08c-441c-84d9-2437babea0f7.png" alt="Constancia">
+    <div class="step-content">
+      <strong>Sé constante</strong>
+      <span>Los resultados se sienten más rápido al tomarlo todos los días</span>
+    </div>
+  </div>
+</section>
+
+<!-- INGREDIENTES -->
+<section class="ing-section">
+  <div class="section-tag">Ingredientes</div>
+  <h2>100% Naturales y Clínicamente Respaldados</h2>
+
+  <div class="ing-grid">
+    <div class="ing-card">
+      <div class="ing-icon">🔬</div>
+      <strong>Cisteína Bioactiva</strong>
+      <span>Aminoácido clave para producir glutatión, el antioxidante más poderoso del cuerpo</span>
+    </div>
+    <div class="ing-card">
+      <div class="ing-icon">🥛</div>
+      <strong>Suero de Leche</strong>
+      <span>Alta biodisponibilidad. Favorece la regeneración celular y protege tejidos</span>
+    </div>
+    <div class="ing-card">
+      <div class="ing-icon">🛡️</div>
+      <strong>Inmunomoduladores Naturales</strong>
+      <span>Estimulan el sistema inmune de forma balanceada</span>
+    </div>
+    <div class="ing-card">
+      <div class="ing-icon">✅</div>
+      <strong>Sin Azúcares ni Colorantes</strong>
+      <span>100% puro. Apto para diabéticos y adultos mayores</span>
+    </div>
+  </div>
+</section>
+
+<!-- TESTIMONIOS -->
+<section>
+  <div class="section-tag">Reseñas verificadas</div>
+  <h2>Lo que dicen nuestros clientes</h2>
+
+  <div class="testi-card">
+    <div class="testi-header">
+      <div class="testi-avatar">👩</div>
+      <div class="testi-info">
+        <strong>Julia R.</strong>
+        <small>Santo Domingo</small>
+        <div class="testi-stars">⭐⭐⭐⭐⭐</div>
+      </div>
+    </div>
+    <p class="testi-text">"Pensé que iba a tardar mucho en llegar pero me llegó al día siguiente. Y en 3 semanas ya me sentía completamente diferente, con mucha más energía."</p>
+  </div>
+
+  <div class="testi-card">
+    <div class="testi-header">
+      <div class="testi-avatar">👩</div>
+      <div class="testi-info">
+        <strong>María S.</strong>
+        <small>Santiago</small>
+        <div class="testi-stars">⭐⭐⭐⭐⭐</div>
+      </div>
+    </div>
+    <p class="testi-text">"Llevo 10 años con dolor crónico y nada me había funcionado. Con Immunocal en el primer mes ya veía los cambios. Lo recomiendo a todo el mundo."</p>
+  </div>
+
+  <div class="testi-card">
+    <div class="testi-header">
+      <div class="testi-avatar">👨</div>
+      <div class="testi-info">
+        <strong>Carlos M.</strong>
+        <small>La Romana</small>
+        <div class="testi-stars">⭐⭐⭐⭐⭐</div>
+      </div>
+    </div>
+    <p class="testi-text">"Pago cuando me llega, sin riesgo. Eso me convenció de probarlo. Ya voy por el segundo mes y la diferencia en energía es impresionante."</p>
+  </div>
+
+  <img src="https://immunoconsulotr.com/cdn/shop/files/mbnak.gif?v=1765278373"
+       alt="Resultados Immunocal"
+       style="width:100%; border-radius:12px; margin-top:8px;">
+</section>
+
+<!-- FAQ -->
+<section class="faq-section">
+  <div class="section-tag">Preguntas frecuentes</div>
+  <h2>Resolvemos tus dudas</h2>
+
+  <div class="faq-item">
+    <div class="faq-q">❓ ¿Qué hace único a Immunocal?</div>
+    <div class="faq-a">Es la única proteína natural clínicamente probada para elevar el glutatión en el cuerpo. No es un suplemento genérico — tiene más de 40 estudios científicos que lo respaldan y está registrado en Salud Pública.</div>
+  </div>
+
+  <div class="faq-item">
+    <div class="faq-q">❓ ¿Tiene efectos secundarios?</div>
+    <div class="faq-a">No. Immunocal es una proteína natural sin químicos, saborizantes ni colorantes. Es seguro para uso prolongado, incluso en personas con condiciones de salud delicadas, diabéticos y adultos mayores.</div>
+  </div>
+
+  <div class="faq-item">
+    <div class="faq-q">❓ ¿Cuánto tiempo tarda en hacer efecto?</div>
+    <div class="faq-a">La mayoría de clientes siente mejoría en las primeras 2-4 semanas. Los mejores resultados se ven al completar el primer mes de uso constante.</div>
+  </div>
+
+  <div class="faq-item">
+    <div class="faq-q">❓ ¿Cómo funciona la entrega?</div>
+    <div class="faq-a">Te lo enviamos directamente a tu casa. Pagas solo cuando lo recibes en la puerta — en efectivo o transferencia. Sin riesgo, sin pago por adelantado.</div>
+  </div>
+
+  <div class="faq-item">
+    <div class="faq-q">❓ ¿Es adecuado para mí?</div>
+    <div class="faq-a">Immunocal está diseñado para personas que sufren cansancio crónico, dolor persistente, sistema inmune débil, o condiciones que los medicamentos convencionales no han resuelto. Si tienes dudas, escríbenos por WhatsApp y te orientamos.</div>
+  </div>
+</section>
+
+<!-- CTA FINAL -->
+<section class="cta-final">
+  <div class="urgency">
+    ⚠️ Descuento del 20% por tiempo limitado
+  </div>
+
+  <div style="margin-bottom:16px;">
+    <span class="price-old" style="color:var(--text-light);">RD$7,300</span>
+    <span class="price-badge">20% OFF</span>
+    <div class="price-new" style="color:var(--text); font-size:36px;">RD$5,840</div>
+    <div style="font-size:12px; color:var(--text-light); margin-top:4px;">📦 Envío gratis · Paga cuando llegue a tu casa</div>
+  </div>
+
+  <a class="btn-wa"
+     href="https://wa.me/18299632978?text=Hola%2C%20quiero%20ordenar%20mi%20Immunocal%20Azul.%20%C2%BFMe%20pueden%20ayudar%3F"
+     onclick="fbq('track', 'Lead', {content_name: 'Immunocal - CTA Final'});"
+     target="_blank">
+    <svg width="22" height="22" viewBox="0 0 24 24" fill="white">
+      <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+    </svg>
+    HABLAR CON UN ASESOR — WHATSAPP
+  </a>
+
+  <div class="cta-footer">
+    <div class="cta-footer-item"><span>📦</span><span>Envío gratis</span></div>
+    <div class="cta-footer-item"><span>💳</span><span>Pago al recibir</span></div>
+    <div class="cta-footer-item"><span>✅</span><span>Salud Pública</span></div>
+    <div class="cta-footer-item"><span>🔒</span><span>100% seguro</span></div>
+  </div>
+</section>
+
+<div class="sticky-spacer"></div>
+
+<!-- STICKY BAR -->
+<div class="sticky">
+  <div class="sticky-prices">
+    <div class="sticky-old">RD$7,300</div>
+    <div class="sticky-new">RD$5,840</div>
+  </div>
+  <a class="btn-wa"
+     href="https://wa.me/18299632978?text=Hola%2C%20quiero%20ordenar%20mi%20Immunocal%20Azul.%20%C2%BFMe%20pueden%20ayudar%3F"
+     onclick="fbq('track', 'Lead', {content_name: 'Immunocal - Sticky Bar'});"
+     target="_blank">
+    <svg width="18" height="18" viewBox="0 0 24 24" fill="white">
+      <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+    </svg>
+    LO QUIERO — WhatsApp
+  </a>
+</div>
+
+</body>
+</html>

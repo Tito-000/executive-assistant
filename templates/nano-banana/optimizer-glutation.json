@@ -1,0 +1,8 @@
+{
+  "prompt": "Professional minimalist flat design icon of glutathione antioxidant protection. Shield shape at center with a cell or circular structure inside representing cellular protection. Geometric clean lines, no realistic details, pure flat solid colors in orange (#d74f1d) and white palette. Symmetrical health defense design. Isolated on completely transparent background. 512x512 resolution. High fidelity vector icon appearance. Do not add shadows, 3D effects, or photorealism. Flat design only, antioxidant protection symbol.",
+  "negative_prompt": "realistic photograph, 3D render, photorealistic, blurry, low quality, cartoon style, hand-drawn, painted, watercolor, textured, gradients, shadows, depth effects, realistic shading, noisy, amateur design, cluttered, complex details",
+  "width": 512,
+  "height": 512,
+  "steps": 40,
+  "guidance_scale": 8.0
+}

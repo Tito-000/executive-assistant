@@ -5,3 +5,9 @@ node_modules/
 .DS_Store
 **/.DS_Store
 *.mov
+
+# Netlify build artifacts
+.netlify/
+
+# API keys (seguridad)
+IA Master Resources/api-keys/

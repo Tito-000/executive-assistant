@@ -1,0 +1,9 @@
+{
+  "prompt": "Extreme macro product photography of stinging nettle plant (Urtica dioica) and beta-sitosterol source plants — fresh green nettle leaves with visible fine white hair-like stinging trichomes, serrated leaf edges, deep forest green color, placed on dark stone with small yellow nettle flowers. Some avocado slices beside showing the beta-sitosterol source. 100mm macro lens, f/4.0, ISO 200. Diffused natural light showing leaf venation and surface trichomes in sharp detail. Botanical scientific photography, no text, no labels. Lush deep greens, photorealistic unretouched documentary style.",
+  "negative_prompt": "text, labels, packaging, bottles, pills, capsules, white background, studio lighting, plastic look, CGI, illustration, cartoon, painting, low quality, blurry, watermark, logo, artificial colors",
+  "api_parameters": {
+    "resolution": "2K",
+    "output_format": "png",
+    "aspect_ratio": "1:1"
+  }
+}

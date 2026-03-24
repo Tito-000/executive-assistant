@@ -1,0 +1,950 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Wireframe — Landing Immunocal (Mobile)</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    background: #e8e8e8;
+    font-family: 'Courier New', monospace;
+    display: flex;
+    justify-content: center;
+    padding: 40px 20px 100px;
+    gap: 40px;
+    flex-wrap: wrap;
+  }
+
+  .page-title {
+    width: 100%;
+    text-align: center;
+    font-size: 22px;
+    font-weight: bold;
+    color: #222;
+    margin-bottom: 10px;
+    font-family: sans-serif;
+  }
+
+  .page-subtitle {
+    width: 100%;
+    text-align: center;
+    font-size: 14px;
+    color: #666;
+    margin-bottom: 30px;
+    font-family: sans-serif;
+  }
+
+  /* PHONE FRAME */
+  .phone {
+    width: 390px;
+    background: white;
+    border-radius: 40px;
+    border: 3px solid #333;
+    overflow: hidden;
+    box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+    position: relative;
+  }
+
+  .phone-notch {
+    background: #333;
+    height: 28px;
+    border-radius: 0 0 16px 16px;
+    width: 120px;
+    margin: 0 auto;
+  }
+
+  .phone-screen {
+    overflow-y: auto;
+    max-height: 800px;
+    padding-bottom: 60px;
+  }
+
+  /* ANNOTATIONS PANEL */
+  .annotations {
+    width: 280px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    padding-top: 28px;
+  }
+
+  .annotation {
+    background: #fffbcc;
+    border: 1.5px solid #e6c800;
+    border-radius: 8px;
+    padding: 10px 12px;
+    font-size: 12px;
+    font-family: sans-serif;
+    color: #333;
+    position: relative;
+  }
+
+  .annotation .label {
+    font-weight: bold;
+    font-size: 11px;
+    color: #b8860b;
+    text-transform: uppercase;
+    margin-bottom: 4px;
+  }
+
+  /* WIREFRAME SECTIONS */
+
+  /* 1. TOP BAR */
+  .top-bar {
+    background: #f5f5f5;
+    border-bottom: 1.5px dashed #bbb;
+    padding: 8px 12px;
+    text-align: center;
+    font-size: 10px;
+    color: #555;
+  }
+
+  /* 2. HERO */
+  .hero {
+    background: white;
+    padding: 16px;
+    border-bottom: 2px dashed #ccc;
+  }
+
+  .wf-image {
+    background: #d4d4d4;
+    border: 2px dashed #999;
+    border-radius: 8px;
+    height: 160px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 11px;
+    color: #888;
+    margin-bottom: 14px;
+  }
+
+  .wf-headline {
+    background: #333;
+    color: white;
+    padding: 10px 12px;
+    font-size: 14px;
+    font-weight: bold;
+    border-radius: 4px;
+    text-align: center;
+    margin-bottom: 12px;
+    line-height: 1.4;
+  }
+
+  .wf-bullets {
+    list-style: none;
+    margin-bottom: 14px;
+  }
+
+  .wf-bullets li {
+    font-size: 12px;
+    padding: 4px 0;
+    color: #444;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    border-bottom: 1px dotted #ddd;
+  }
+
+  .check {
+    background: #4caf50;
+    color: white;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 9px;
+    flex-shrink: 0;
+  }
+
+  .wf-price {
+    text-align: center;
+    margin-bottom: 12px;
+  }
+
+  .price-old {
+    font-size: 12px;
+    color: #999;
+    text-decoration: line-through;
+  }
+
+  .price-new {
+    font-size: 22px;
+    font-weight: bold;
+    color: #222;
+  }
+
+  .price-badge {
+    background: #ff4444;
+    color: white;
+    font-size: 10px;
+    padding: 2px 8px;
+    border-radius: 20px;
+    display: inline-block;
+    margin-left: 6px;
+  }
+
+  .wf-btn {
+    background: #333;
+    color: white;
+    text-align: center;
+    padding: 14px;
+    border-radius: 8px;
+    font-size: 13px;
+    font-weight: bold;
+    margin-bottom: 8px;
+    border: 2px solid #222;
+    cursor: pointer;
+  }
+
+  .wf-btn.primary {
+    background: linear-gradient(135deg, #e33, #ff6600);
+    border: none;
+    font-size: 14px;
+  }
+
+  .wf-btn.whatsapp {
+    background: #25d366;
+    border: none;
+    font-size: 14px;
+  }
+
+  .trust-row {
+    display: flex;
+    justify-content: space-around;
+    font-size: 10px;
+    color: #666;
+    margin-top: 8px;
+  }
+
+  .trust-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2px;
+  }
+
+  .trust-icon {
+    width: 24px;
+    height: 24px;
+    background: #ddd;
+    border-radius: 50%;
+    border: 1px dashed #999;
+  }
+
+  /* SECTION LABEL */
+  .section-label {
+    background: #333;
+    color: white;
+    font-size: 10px;
+    padding: 3px 8px;
+    display: inline-block;
+    border-radius: 0 4px 4px 0;
+    margin-bottom: 10px;
+    font-family: sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+  }
+
+  /* 3. SOCIAL PROOF */
+  .social-proof {
+    background: #f9f9f9;
+    padding: 12px 16px;
+    text-align: center;
+    border-bottom: 2px dashed #ccc;
+  }
+
+  .stars {
+    font-size: 18px;
+    color: #ffc107;
+    margin-bottom: 4px;
+  }
+
+  .proof-text {
+    font-size: 12px;
+    color: #555;
+  }
+
+  .proof-number {
+    font-size: 20px;
+    font-weight: bold;
+    color: #222;
+  }
+
+  /* 4. PROBLEMA */
+  .problema {
+    background: #f5f5f5;
+    padding: 16px;
+    border-bottom: 2px dashed #ccc;
+  }
+
+  .wf-subtitle {
+    font-size: 14px;
+    font-weight: bold;
+    color: #222;
+    margin-bottom: 12px;
+    text-align: center;
+  }
+
+  .pain-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 8px;
+    padding: 8px;
+    background: white;
+    border-radius: 6px;
+    margin-bottom: 6px;
+    border-left: 3px solid #ff4444;
+    font-size: 12px;
+    color: #444;
+  }
+
+  /* 5. MECANISMO */
+  .mecanismo {
+    background: white;
+    padding: 16px;
+    border-bottom: 2px dashed #ccc;
+  }
+
+  .flow-diagram {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 6px;
+    margin: 12px 0;
+  }
+
+  .flow-box {
+    background: #e8f4fd;
+    border: 1.5px dashed #2196f3;
+    border-radius: 8px;
+    padding: 8px 16px;
+    font-size: 12px;
+    font-weight: bold;
+    color: #1565c0;
+    text-align: center;
+    width: 180px;
+  }
+
+  .flow-arrow {
+    font-size: 16px;
+    color: #666;
+  }
+
+  .flow-box.output {
+    background: #e8f5e9;
+    border-color: #4caf50;
+    color: #2e7d32;
+  }
+
+  /* 6. BENEFICIOS */
+  .beneficios {
+    background: #1a237e;
+    padding: 16px;
+    border-bottom: 2px dashed #ccc;
+  }
+
+  .beneficios .wf-subtitle {
+    color: white;
+  }
+
+  .benefit-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 8px;
+  }
+
+  .benefit-item {
+    background: rgba(255,255,255,0.1);
+    border: 1px dashed rgba(255,255,255,0.4);
+    border-radius: 8px;
+    padding: 10px 8px;
+    text-align: center;
+  }
+
+  .benefit-icon {
+    width: 28px;
+    height: 28px;
+    background: rgba(255,255,255,0.2);
+    border-radius: 50%;
+    border: 1px dashed white;
+    margin: 0 auto 6px;
+  }
+
+  .benefit-text {
+    font-size: 10px;
+    color: white;
+  }
+
+  /* 7. CÓMO USAR */
+  .como-usar {
+    background: white;
+    padding: 16px;
+    border-bottom: 2px dashed #ccc;
+  }
+
+  .step-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    margin-bottom: 12px;
+  }
+
+  .step-num {
+    background: #333;
+    color: white;
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 12px;
+    font-weight: bold;
+    flex-shrink: 0;
+  }
+
+  .step-text {
+    font-size: 12px;
+    color: #444;
+    padding-top: 4px;
+  }
+
+  /* 8. INGREDIENTES */
+  .ingredientes {
+    background: #f5f5f5;
+    padding: 16px;
+    border-bottom: 2px dashed #ccc;
+  }
+
+  .ing-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 8px;
+  }
+
+  .ing-item {
+    background: white;
+    border: 1.5px dashed #bbb;
+    border-radius: 8px;
+    padding: 10px 8px;
+    text-align: center;
+    font-size: 10px;
+    color: #444;
+    font-weight: bold;
+  }
+
+  /* 9. TESTIMONIOS */
+  .testimonios {
+    background: white;
+    padding: 16px;
+    border-bottom: 2px dashed #ccc;
+  }
+
+  .testimonio-card {
+    background: #f9f9f9;
+    border: 1.5px dashed #ccc;
+    border-radius: 10px;
+    padding: 12px;
+    margin-bottom: 10px;
+  }
+
+  .testi-header {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 8px;
+  }
+
+  .testi-avatar {
+    width: 40px;
+    height: 40px;
+    background: #ddd;
+    border-radius: 50%;
+    border: 1.5px dashed #999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 10px;
+    color: #888;
+    flex-shrink: 0;
+  }
+
+  .testi-name {
+    font-size: 12px;
+    font-weight: bold;
+    color: #222;
+  }
+
+  .testi-location {
+    font-size: 10px;
+    color: #888;
+  }
+
+  .testi-stars {
+    font-size: 12px;
+    color: #ffc107;
+  }
+
+  .testi-text {
+    font-size: 11px;
+    color: #555;
+    line-height: 1.5;
+    font-style: italic;
+  }
+
+  /* 10. FAQ */
+  .faq {
+    background: #f5f5f5;
+    padding: 16px;
+    border-bottom: 2px dashed #ccc;
+  }
+
+  .faq-item {
+    background: white;
+    border-radius: 8px;
+    padding: 12px;
+    margin-bottom: 8px;
+    border-left: 3px solid #2196f3;
+  }
+
+  .faq-q {
+    font-size: 12px;
+    font-weight: bold;
+    color: #222;
+    margin-bottom: 6px;
+  }
+
+  .faq-a {
+    font-size: 11px;
+    color: #666;
+    line-height: 1.5;
+  }
+
+  /* 11. CTA FINAL */
+  .cta-final {
+    background: #f9f9f9;
+    padding: 20px 16px;
+    text-align: center;
+    border-bottom: 2px dashed #ccc;
+  }
+
+  .urgency-badge {
+    background: #ff4444;
+    color: white;
+    font-size: 11px;
+    padding: 4px 12px;
+    border-radius: 20px;
+    display: inline-block;
+    margin-bottom: 12px;
+  }
+
+  /* STICKY BAR */
+  .sticky-bar {
+    position: sticky;
+    bottom: 0;
+    background: white;
+    border-top: 2px solid #ddd;
+    padding: 10px 16px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+    z-index: 10;
+    box-shadow: 0 -4px 12px rgba(0,0,0,0.1);
+  }
+
+  .sticky-price {
+    font-size: 16px;
+    font-weight: bold;
+    color: #222;
+  }
+
+  .sticky-btn {
+    background: #25d366;
+    color: white;
+    padding: 10px 16px;
+    border-radius: 8px;
+    font-size: 12px;
+    font-weight: bold;
+    flex: 1;
+    text-align: center;
+  }
+
+  /* DIVIDER */
+  .section-divider {
+    height: 6px;
+    background: repeating-linear-gradient(
+      90deg,
+      #ccc 0px,
+      #ccc 8px,
+      transparent 8px,
+      transparent 16px
+    );
+  }
+</style>
+</head>
+<body>
+
+<div class="page-title">Wireframe — Landing Page Immunocal</div>
+<div class="page-subtitle">Vista Mobile (390px) · Solo WhatsApp · Sin formulario largo</div>
+
+<!-- PHONE FRAME -->
+<div class="phone">
+  <div class="phone-notch"></div>
+  <div class="phone-screen">
+
+    <!-- 1. TOP BAR -->
+    <div class="top-bar">
+      📦 Envío GRATIS hoy &nbsp;|&nbsp; 💳 Pago al recibir &nbsp;|&nbsp; ✅ Registro Salud Pública
+    </div>
+
+    <!-- 2. HERO -->
+    <div class="hero">
+      <div class="section-label">① HERO</div>
+
+      <div class="wf-image">
+        [ IMAGEN PRODUCTO — Caja Immunocal Azul ]<br>
+        <small>foto real del producto</small>
+      </div>
+
+      <div class="wf-headline">
+        ¿Cansado, con dolor o sin energía?<br>Tu cuerpo necesita esto.
+      </div>
+
+      <ul class="wf-bullets">
+        <li><span class="check">✓</span> Refuerza defensas</li>
+        <li><span class="check">✓</span> Reduce dolor y molestias persistentes</li>
+        <li><span class="check">✓</span> Mejora energía diaria</li>
+        <li><span class="check">✓</span> Regenera tus células</li>
+        <li><span class="check">✓</span> Sin químicos ni efectos secundarios</li>
+      </ul>
+
+      <div class="wf-price">
+        <span class="price-old">RD$7,300</span>
+        <span class="price-badge">20% OFF</span><br>
+        <span class="price-new">RD$5,840</span>
+      </div>
+
+      <div class="wf-btn whatsapp">
+        💬 LO QUIERO — PAGO AL RECIBIR
+      </div>
+
+      <div class="trust-row">
+        <div class="trust-item">
+          <div class="trust-icon"></div>
+          <span>Compra segura</span>
+        </div>
+        <div class="trust-item">
+          <div class="trust-icon"></div>
+          <span>Pago fácil</span>
+        </div>
+        <div class="trust-item">
+          <div class="trust-icon"></div>
+          <span>Envío rápido</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="section-divider"></div>
+
+    <!-- 3. PRUEBA SOCIAL -->
+    <div class="social-proof">
+      <div class="section-label">② PRUEBA SOCIAL</div>
+      <div class="proof-number">+500</div>
+      <div class="proof-text">dominicanos ya recuperaron su salud con Immunocal</div>
+      <div class="stars">⭐⭐⭐⭐⭐</div>
+      <div style="font-size:11px; color:#888;">6 reseñas verificadas · 5.0 promedio</div>
+    </div>
+
+    <div class="section-divider"></div>
+
+    <!-- 4. PROBLEMA -->
+    <div class="problema">
+      <div class="section-label">③ PROBLEMA</div>
+      <div class="wf-subtitle">¿Te identificas con esto?</div>
+
+      <div class="pain-item">😩 Te despiertas cansado aunque dormiste bien</div>
+      <div class="pain-item">😣 Tienes un dolor que no desaparece</div>
+      <div class="pain-item">🏥 Los médicos no encuentran solución real</div>
+      <div class="pain-item">💊 Los medicamentos solo calman, no curan</div>
+      <div class="pain-item">📉 Tu energía no es la misma de antes</div>
+    </div>
+
+    <div class="section-divider"></div>
+
+    <!-- 5. MECANISMO -->
+    <div class="mecanismo">
+      <div class="section-label">④ MECANISMO</div>
+      <div class="wf-subtitle">Immunocal actúa desde adentro</div>
+
+      <div class="flow-diagram">
+        <div class="flow-box">Immunocal</div>
+        <div class="flow-arrow">↓</div>
+        <div class="flow-box">Cisteína Bioactiva</div>
+        <div class="flow-arrow">↓</div>
+        <div class="flow-box">Eleva el Glutatión</div>
+        <div class="flow-arrow">↓</div>
+        <div class="flow-box output">Tu cuerpo se recupera ✓</div>
+      </div>
+
+      <p style="font-size:11px; color:#666; text-align:center; line-height:1.5;">
+        El glutatión es el antioxidante más poderoso que produce tu cuerpo.<br>
+        Immunocal es la única manera probada de elevarlo naturalmente.
+      </p>
+    </div>
+
+    <div class="section-divider"></div>
+
+    <!-- 6. BENEFICIOS -->
+    <div class="beneficios">
+      <div class="section-label" style="background:white; color:#1a237e;">⑤ BENEFICIOS</div>
+      <div class="wf-subtitle">Lo que vas a sentir</div>
+
+      <div class="benefit-grid">
+        <div class="benefit-item">
+          <div class="benefit-icon"></div>
+          <div class="benefit-text">Sistema inmune reforzado</div>
+        </div>
+        <div class="benefit-item">
+          <div class="benefit-icon"></div>
+          <div class="benefit-text">Menos dolor e inflamación</div>
+        </div>
+        <div class="benefit-item">
+          <div class="benefit-icon"></div>
+          <div class="benefit-text">Más energía cada día</div>
+        </div>
+        <div class="benefit-item">
+          <div class="benefit-icon"></div>
+          <div class="benefit-text">Recuperación celular</div>
+        </div>
+        <div class="benefit-item">
+          <div class="benefit-icon"></div>
+          <div class="benefit-text">Órganos protegidos</div>
+        </div>
+        <div class="benefit-item">
+          <div class="benefit-icon"></div>
+          <div class="benefit-text">Sin efectos secundarios</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="section-divider"></div>
+
+    <!-- 7. CÓMO USAR -->
+    <div class="como-usar">
+      <div class="section-label">⑥ CÓMO USAR</div>
+      <div class="wf-subtitle">Tan fácil como 1, 2, 3</div>
+
+      <div class="step-item">
+        <div class="step-num">01</div>
+        <div class="step-text">Disuelve 1 sobre en agua, jugo natural o yogurt</div>
+      </div>
+      <div class="step-item">
+        <div class="step-num">02</div>
+        <div class="step-text">Tómalo en ayunas cada mañana</div>
+      </div>
+      <div class="step-item">
+        <div class="step-num">03</div>
+        <div class="step-text">Sé constante — los resultados llegan más rápido</div>
+      </div>
+    </div>
+
+    <div class="section-divider"></div>
+
+    <!-- 8. INGREDIENTES -->
+    <div class="ingredientes">
+      <div class="section-label">⑦ INGREDIENTES</div>
+      <div class="wf-subtitle">100% Naturales y Clínicamente Respaldados</div>
+
+      <div class="ing-grid">
+        <div class="ing-item">🔬 Cisteína<br>Bioactiva<br><span style="font-weight:normal; font-size:9px;">Produce glutatión</span></div>
+        <div class="ing-item">🥛 Suero de<br>Leche<br><span style="font-weight:normal; font-size:9px;">Regenera células</span></div>
+        <div class="ing-item">🛡️ Inmuno-<br>moduladores<br><span style="font-weight:normal; font-size:9px;">Refuerza defensas</span></div>
+        <div class="ing-item">✅ Sin azúcares<br>ni colorantes<br><span style="font-weight:normal; font-size:9px;">Apto diabéticos</span></div>
+      </div>
+    </div>
+
+    <div class="section-divider"></div>
+
+    <!-- 9. TESTIMONIOS -->
+    <div class="testimonios">
+      <div class="section-label">⑧ TESTIMONIOS</div>
+      <div class="wf-subtitle">Lo que dicen nuestros clientes</div>
+
+      <div class="testimonio-card">
+        <div class="testi-header">
+          <div class="testi-avatar">Foto</div>
+          <div>
+            <div class="testi-name">Julia R.</div>
+            <div class="testi-location">Santo Domingo</div>
+            <div class="testi-stars">⭐⭐⭐⭐⭐</div>
+          </div>
+        </div>
+        <div class="testi-text">"Pensé que iba a tardar mucho en llegar pero me llegó al día siguiente. Y en 3 semanas ya me sentía diferente, con más energía."</div>
+      </div>
+
+      <div class="testimonio-card">
+        <div class="testi-header">
+          <div class="testi-avatar">Foto</div>
+          <div>
+            <div class="testi-name">María S.</div>
+            <div class="testi-location">Santiago</div>
+            <div class="testi-stars">⭐⭐⭐⭐⭐</div>
+          </div>
+        </div>
+        <div class="testi-text">"Llevo 10 años con dolor crónico y nada me había funcionado. Con Immunocal en el primer mes ya veía los cambios. No lo puedo creer."</div>
+      </div>
+
+      <div class="testimonio-card">
+        <div class="testi-header">
+          <div class="testi-avatar">Foto</div>
+          <div>
+            <div class="testi-name">Carlos M.</div>
+            <div class="testi-location">La Romana</div>
+            <div class="testi-stars">⭐⭐⭐⭐⭐</div>
+          </div>
+        </div>
+        <div class="testi-text">"Mi médico me lo recomendó y ya voy por el segundo mes. La diferencia en energía es brutal. Lo pago cuando me llega, sin riesgo."</div>
+      </div>
+    </div>
+
+    <div class="section-divider"></div>
+
+    <!-- 10. FAQ -->
+    <div class="faq">
+      <div class="section-label">⑨ PREGUNTAS FRECUENTES</div>
+      <div class="wf-subtitle">Resolvemos tus dudas</div>
+
+      <div class="faq-item">
+        <div class="faq-q">¿Tiene efectos secundarios?</div>
+        <div class="faq-a">No. Immunocal es una proteína natural 100% segura, sin químicos ni conservantes artificiales. Es apto incluso para diabéticos y adultos mayores.</div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-q">¿Cuánto tarda en hacer efecto?</div>
+        <div class="faq-a">La mayoría siente mejoría en las primeras 2-4 semanas. Los mejores resultados se ven al completar el primer mes de uso constante.</div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-q">¿Cómo llega a mi casa?</div>
+        <div class="faq-a">Te lo enviamos por mensajería. Pagas solo cuando lo recibes en la puerta de tu casa. Sin riesgo, sin pago por adelantado.</div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-q">¿Es para mí si tengo una condición de salud?</div>
+        <div class="faq-a">Sí. Immunocal está diseñado para personas con condiciones crónicas, enfermedades y fatiga persistente. Es seguro para uso prolongado.</div>
+      </div>
+    </div>
+
+    <div class="section-divider"></div>
+
+    <!-- 11. CTA FINAL -->
+    <div class="cta-final">
+      <div class="section-label">⑩ CTA FINAL</div>
+      <div class="urgency-badge">⚠️ Descuento por tiempo limitado</div>
+
+      <div class="wf-price" style="margin-bottom: 16px;">
+        <span class="price-old">RD$7,300</span>
+        <span class="price-badge">20% OFF</span><br>
+        <span class="price-new">RD$5,840</span>
+      </div>
+
+      <div class="wf-btn whatsapp" style="margin-bottom: 8px;">
+        💬 HABLAR CON UN ASESOR POR WHATSAPP
+      </div>
+
+      <div style="font-size: 10px; color: #888; margin-top: 8px;">
+        📦 Envío gratis · 💳 Pago al recibir · ✅ Salud Pública verificado
+      </div>
+    </div>
+
+  </div><!-- end phone-screen -->
+
+  <!-- STICKY BAR -->
+  <div class="sticky-bar">
+    <div>
+      <div style="font-size:10px; color:#999; text-decoration:line-through;">RD$7,300</div>
+      <div class="sticky-price">RD$5,840</div>
+    </div>
+    <div class="sticky-btn">💬 LO QUIERO — WhatsApp</div>
+  </div>
+
+</div><!-- end phone -->
+
+
+<!-- ANNOTATIONS PANEL -->
+<div class="annotations">
+
+  <div style="font-size:14px; font-weight:bold; font-family:sans-serif; color:#333; margin-bottom:8px;">
+    📋 Notas del Wireframe
+  </div>
+
+  <div class="annotation">
+    <div class="label">① Hero</div>
+    Headline específico al dolor, no genérico. Reemplaza "TU ALIADO PARA RECUPERAR". Headline triplicado eliminado.
+  </div>
+
+  <div class="annotation">
+    <div class="label">② Prueba Social</div>
+    Número concreto (+500) antes de ver el producto. Genera confianza inmediata antes de que el cliente scrollee.
+  </div>
+
+  <div class="annotation">
+    <div class="label">③ Problema</div>
+    El cliente se identifica con su dolor antes de ver la solución. Aumenta la conversión porque siente que le hablan a él.
+  </div>
+
+  <div class="annotation">
+    <div class="label">④ Mecanismo</div>
+    El diagrama visual explica el "por qué funciona" de forma simple. Elimina la objeción "no creo en suplementos".
+  </div>
+
+  <div class="annotation">
+    <div class="label">⑤ Beneficios</div>
+    Fondo azul oscuro = sección de alto impacto visual. Los iconos placeholder se reemplazan por emojis o SVGs reales.
+  </div>
+
+  <div class="annotation">
+    <div class="label">⑥ Cómo usar</div>
+    Igual a la página actual — está bien. Solo se mantiene.
+  </div>
+
+  <div class="annotation">
+    <div class="label">⑦ Ingredientes</div>
+    Grid 2x2 funciona mejor en móvil que lista larga. Cada ingrediente con su beneficio concreto.
+  </div>
+
+  <div class="annotation">
+    <div class="label">⑧ Testimonios</div>
+    CRÍTICO: fotos reales (placeholder aquí). Testimonios completos, no cortados. Nombre + ciudad + estrellas.
+  </div>
+
+  <div class="annotation">
+    <div class="label">⑨ FAQ Abierto</div>
+    Las 4 preguntas más importantes ABIERTAS — no colapsadas. En móvil nadie abre los acordeones.
+  </div>
+
+  <div class="annotation">
+    <div class="label">⑩ CTA Final</div>
+    El botón de WhatsApp reemplaza el formulario de 9 campos. Clic → WhatsApp con mensaje pre-llenado.
+  </div>
+
+  <div class="annotation" style="background:#d4edda; border-color:#28a745;">
+    <div class="label" style="color:#155724;">🔑 Cambio Principal</div>
+    CERO formularios. Todo fluye al WhatsApp. El pixel de Meta trackea el clic como conversión "Lead". El algoritmo optimiza para personas que mandan mensajes, no solo que hacen clic.
+  </div>
+
+  <div class="annotation" style="background:#f8d7da; border-color:#dc3545;">
+    <div class="label" style="color:#721c24;">⚠️ Bug a arreglar HOY</div>
+    El headline "EN 30 DÍAS! EN 30 DÍAS! EN 30 DÍAS!" triplicado en móvil destruye credibilidad. Arréglalo antes de cualquier otra cosa.
+  </div>
+
+</div><!-- end annotations -->
+
+</body>
+</html>

@@ -1,0 +1,9 @@
+{
+  "prompt": "Extreme macro product photography of zinc-rich foods — raw pumpkin seeds (pepitas) scattered on dark slate, some whole oysters on half shell with ice, and a few Brazil nuts. 100mm macro lens, f/4.0, ISO 200. Cool natural sidelight revealing the pearlescent sheen of pumpkin seeds, oyster moisture and brine shimmer, nut texture. Dark matte background. Scientific food photography, no labels, no text, no packaging. Green-gray tones of seeds contrasting with dark slate. Photorealistic unretouched documentary botanical style.",
+  "negative_prompt": "text, labels, packaging, bottles, pills, capsules, white background, studio lighting, plastic look, CGI, illustration, cartoon, painting, low quality, blurry, watermark, logo, artificial colors",
+  "api_parameters": {
+    "resolution": "2K",
+    "output_format": "png",
+    "aspect_ratio": "1:1"
+  }
+}

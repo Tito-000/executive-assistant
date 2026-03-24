@@ -1,0 +1,9 @@
+{
+  "prompt": "Extreme macro product photography of Saw Palmetto berries and palm fronds. Dark purple-black ripe saw palmetto berries clustered together, some cut open revealing pale interior flesh, placed on a dark slate surface with a few green serrated palm leaves. 100mm macro lens, f/4.0, ISO 200. Natural side lighting from left creating depth and showing berry texture — waxy, slightly glossy skin with subtle surface imperfections. Background is dark blurred stone. Botanical scientific photography style, no labels, no text, no packaging. Rich jewel-toned colors, deep purples and dark greens. Photo realistic, unretouched, documentary botanical style.",
+  "negative_prompt": "text, labels, packaging, bottles, pills, capsules, white background, studio lighting, plastic look, CGI, illustration, cartoon, painting, low quality, blurry, watermark, logo, brand name, artificial colors",
+  "api_parameters": {
+    "resolution": "2K",
+    "output_format": "png",
+    "aspect_ratio": "1:1"
+  }
+}

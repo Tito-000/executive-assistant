@@ -1,0 +1,9 @@
+{
+  "prompt": "Extreme macro product photography of raw whey protein powder. A dense, clean mound of fine white/cream protein powder spilling from a small stainless scoop onto a dark matte black stone surface. A few wet droplets and a half-filled clear glass of milky white protein shake beside it. 100mm macro lens, f/4.0, ISO 200. Diffused studio light from left, creating gentle shadows in the powder texture revealing fine granules. Dark charcoal background with dramatic contrast. No artificial colors. Photorealistic unretouched documentary style. Clean composition, no text, no labels, no packaging.",
+  "negative_prompt": "text, labels, packaging, protein containers, tubs, colored powder, food coloring, cartoon, illustration, CGI, low quality, blurry, watermark, logo, white background, bright colors, multiple objects cluttering",
+  "api_parameters": {
+    "resolution": "2K",
+    "output_format": "png",
+    "aspect_ratio": "1:1"
+  }
+}

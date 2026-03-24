@@ -1,0 +1,9 @@
+{
+  "prompt": "Minimal flat icon illustration. A glass of water with a small sachet/envelope being poured into it, showing powder dissolving into water with subtle ripple effect. Clean white background. Simple geometric shapes, bold outlines, warm brown color palette (#92400e amber brown). Icon design style, no text, no labels, no gradients, flat 2D design. Centered composition, lots of white space around icon.",
+  "negative_prompt": "photography, realistic, 3D, shadows, gradients, text, labels, human hands, complex background, multiple objects, clutter, colorful rainbow palette",
+  "api_parameters": {
+    "resolution": "1K",
+    "output_format": "png",
+    "aspect_ratio": "1:1"
+  }
+}

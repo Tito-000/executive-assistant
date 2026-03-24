@@ -1,0 +1,17 @@
+{
+  "prompt": "A hyper-realistic cinematic portrait of 'Claudio', an elite AI executive assistant manifested as a sophisticated holographic male figure. He stands confidently in a three-quarter pose, wearing an immaculate deep charcoal-black tailored suit with subtle metallic sheen, white shirt with no tie — clean and executive. His body is semi-translucent in areas, revealing flowing streams of luminous blue and purple data particles beneath the surface, like circuitry under skin. His face is sharp, angular, calm and intelligent — not robotic, but refined. Think: a human-digital hybrid executive. Shot on 85mm lens, f/1.8, ISO 200. Cinematic lighting: key light from upper left casting sharp precise shadows, rim light in deep violet (#7B2FBE) outlining the figure from the right, ambient cool blue (#1A3A6B) fill from below suggesting a digital command center. Floating around him: semi-transparent holographic UI panels, data streams, and geometric glyphs in blue (#2196F3) and purple (#9C27B0) — subtle, not cluttered. Background: deep near-black (#0A0A14) with soft particle bokeh — micro-dots of electric blue and violet floating in shallow depth of field. The overall mood is: sophisticated, powerful, trustworthy, futuristic. Do not add plastic skin, robotic face, or overly sci-fi costume. Keep him grounded and executive. No visible cables, no exposed circuitry panels. No text overlays. Photorealistic render quality, ultra-sharp, no motion blur.",
+  "negative_prompt": "plastic skin, robotic face, cyborg implants, exposed circuitry panels, cables, mechanical parts, cartoon style, anime, illustration, painting, sketch, low quality, blurry, watermark, text overlay, logo, cluttered background, neon signs, over-saturated colors, lens flare abuse, cheesy sci-fi costume, helmet, mask, comic book style, CGI uncanny valley, beauty filter, airbrushed, skin smoothing, over-processed, wide-angle distortion, fisheye, dramatic DOF flattening, multiple figures",
+  "api_parameters": {
+    "resolution": "2K",
+    "output_format": "jpg",
+    "aspect_ratio": "4:5"
+  },
+  "settings": {
+    "resolution": "2K",
+    "style": "cinematic hyper-realistic digital art",
+    "lighting": "three-point cinematic: key upper-left, violet rim right, blue ambient fill below",
+    "camera_angle": "slight low angle, three-quarter view",
+    "depth_of_field": "shallow — subject sharp, background bokeh",
+    "quality": "ultra-sharp, unretouched, photorealistic"
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "prompt": "Minimal flat icon illustration. A calendar with checkmarks on multiple days showing a streak/habit, or a circular arrow showing daily repetition/consistency. Simple loop/cycle icon with a small checkmark. Clean white background. Simple geometric shapes, bold outlines, warm amber brown color (#92400e). Icon design style, no text, no labels, flat 2D design. Centered composition with lots of white space.",
+  "negative_prompt": "photography, realistic, 3D, shadows, complex gradients, text, labels, human figure, complex background, clutter, colorful rainbow palette, dark background",
+  "api_parameters": {
+    "resolution": "1K",
+    "output_format": "png",
+    "aspect_ratio": "1:1"
+  }
+}

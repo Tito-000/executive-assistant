@@ -1,0 +1,1315 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Immuconsult — Distribuidor Oficial Immunotec · República Dominicana</title>
+  <meta name="description" content="Distribuidor oficial de Immunotec en República Dominicana. Productos con respaldo científico. Envío gratis, pago al recibir.">
+
+  <!-- OG Tags -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Immuconsult — Distribuidor Oficial Immunotec RD">
+  <meta property="og:description" content="Productos Immunotec con respaldo científico. Envío gratis · Pago al recibir · República Dominicana.">
+  <meta property="og:image" content="https://immunoconsulotr.com/cdn/shop/files/jgv.gif?v=1765280352">
+  <meta property="og:url" content="https://immunoconsult.com">
+  <meta property="og:site_name" content="Immuconsult">
+  <meta property="og:locale" content="es_DO">
+
+  <!-- Meta Pixel -->
+  <script>
+  !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,document,'script','https://connect.facebook.net/en_US/fbevents.js');
+  fbq('init', '2263653077494527');
+  fbq('track', 'PageView');
+  </script>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,600;0,9..40,700;0,9..40,800;1,9..40,400&display=swap" rel="stylesheet">
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: 'DM Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+      color: #1d1d1f;
+      background: #ffffff;
+      -webkit-font-smoothing: antialiased;
+      overflow-x: hidden;
+    }
+    img { max-width: 100%; display: block; }
+    .container { max-width: 1200px; margin: 0 auto; padding: 0 24px; }
+
+    /* ── Fade animations ── */
+    .fade-up {
+      opacity: 0;
+      transform: translateY(36px);
+      transition: opacity 0.7s cubic-bezier(0.25,0.46,0.45,0.94), transform 0.7s cubic-bezier(0.25,0.46,0.45,0.94);
+    }
+    .fade-up.visible { opacity: 1; transform: translateY(0); }
+
+    /* ══════════════════════════════════════
+       STICKY HEADER
+    ══════════════════════════════════════ */
+    #sticky-header { position: sticky; top: 0; z-index: 900; }
+
+    #announcement-bar {
+      background: #063f81;
+      color: #fff;
+      font-size: 11px;
+      font-weight: 500;
+      text-align: center;
+      padding: 9px 16px;
+      letter-spacing: 0.02em;
+    }
+
+    #main-nav {
+      background: rgba(255,255,255,0.96);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border-bottom: 1px solid rgba(0,0,0,0.08);
+      padding: 0 24px;
+    }
+    .nav-inner {
+      max-width: 1200px;
+      margin: 0 auto;
+      height: 60px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .nav-logo { text-decoration: none; display: flex; align-items: center; }
+    .nav-logo img { height: 34px; width: auto; }
+    .nav-links { display: flex; align-items: center; gap: 28px; list-style: none; }
+    .nav-links a {
+      font-size: 13px; font-weight: 600; color: #1d1d1f;
+      text-decoration: none; transition: color 0.2s;
+    }
+    .nav-links a:hover { color: #063f81; }
+    .nav-links .nav-cta {
+      background: #063f81; color: white !important;
+      padding: 9px 20px; border-radius: 100px;
+      font-size: 13px; font-weight: 700;
+      transition: background 0.2s, transform 0.2s !important;
+    }
+    .nav-links .nav-cta:hover { background: #052e5e !important; transform: scale(1.03); }
+    .nav-hamburger {
+      display: none; flex-direction: column; gap: 5px;
+      cursor: pointer; padding: 4px; background: none; border: none;
+    }
+    .nav-hamburger span { display: block; width: 22px; height: 2px; background: #1d1d1f; border-radius: 2px; }
+    .nav-mobile-menu { display: none; flex-direction: column; background: white; border-top: 1px solid rgba(0,0,0,0.06); padding: 16px 24px 20px; gap: 4px; }
+    .nav-mobile-menu.open { display: flex; }
+    .nav-mobile-menu a { font-size: 15px; font-weight: 600; color: #1d1d1f; text-decoration: none; padding: 10px 0; border-bottom: 1px solid rgba(0,0,0,0.05); }
+    .nav-mobile-menu a:last-child { border-bottom: none; }
+    .nav-cta-mobile { margin-top: 12px; background: #063f81 !important; color: white !important; text-align: center; padding: 14px; border-radius: 12px; font-weight: 700 !important; }
+    @media (max-width: 768px) {
+      .nav-links { display: none; }
+      .nav-hamburger { display: flex; }
+    }
+
+    /* ══════════════════════════════════════
+       SCROLLING TEXT BAR
+    ══════════════════════════════════════ */
+    #marquee-bar {
+      background: #f5f5f7;
+      border-bottom: 1px solid rgba(0,0,0,0.06);
+      padding: 12px 0;
+      overflow: hidden;
+      white-space: nowrap;
+    }
+    .marquee-track {
+      display: inline-flex;
+      animation: marquee 28s linear infinite;
+    }
+    .marquee-track:hover { animation-play-state: paused; }
+    @keyframes marquee {
+      0% { transform: translateX(0); }
+      100% { transform: translateX(-50%); }
+    }
+    .marquee-item {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 12px;
+      font-weight: 600;
+      color: #063f81;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      padding: 0 32px;
+    }
+    .marquee-dot { width: 4px; height: 4px; background: #063f81; border-radius: 50%; opacity: 0.4; }
+
+    /* ══════════════════════════════════════
+       HERO
+    ══════════════════════════════════════ */
+    #hero {
+      background: #063f81;
+      min-height: 580px;
+      display: flex;
+      align-items: center;
+      position: relative;
+      overflow: hidden;
+      padding: 80px 24px;
+    }
+    #hero::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(ellipse at 70% 50%, rgba(255,255,255,0.06) 0%, transparent 70%);
+      pointer-events: none;
+    }
+    .hero-content {
+      max-width: 1200px;
+      margin: 0 auto;
+      width: 100%;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 64px;
+      align-items: center;
+    }
+    .hero-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(255,255,255,0.12);
+      border: 1px solid rgba(255,255,255,0.25);
+      color: white;
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      padding: 6px 14px;
+      border-radius: 100px;
+      margin-bottom: 24px;
+    }
+    .hero-badge-dot { width: 6px; height: 6px; background: #4ade80; border-radius: 50%; }
+    .hero-h1 {
+      font-size: clamp(2.4rem, 4vw, 3.6rem);
+      font-weight: 800;
+      color: white;
+      line-height: 1.08;
+      letter-spacing: -0.03em;
+      margin-bottom: 20px;
+    }
+    .hero-h1 span { color: #93c5fd; }
+    .hero-sub {
+      font-size: 17px;
+      font-weight: 400;
+      color: rgba(255,255,255,0.75);
+      line-height: 1.6;
+      margin-bottom: 36px;
+      max-width: 480px;
+    }
+    .hero-pills {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-bottom: 36px;
+    }
+    .hero-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: rgba(255,255,255,0.1);
+      border: 1px solid rgba(255,255,255,0.2);
+      color: rgba(255,255,255,0.9);
+      font-size: 12px;
+      font-weight: 600;
+      padding: 6px 14px;
+      border-radius: 100px;
+    }
+    .hero-cta {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      background: white;
+      color: #063f81;
+      font-size: 15px;
+      font-weight: 800;
+      padding: 16px 32px;
+      border-radius: 100px;
+      text-decoration: none;
+      transition: transform 0.2s, box-shadow 0.2s;
+      box-shadow: 0 4px 24px rgba(0,0,0,0.2);
+    }
+    .hero-cta:hover { transform: translateY(-2px); box-shadow: 0 8px 32px rgba(0,0,0,0.25); }
+    .hero-cta-arrow { font-size: 18px; }
+    .hero-image-col {
+      position: relative;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .hero-product-gif {
+      width: 100%;
+      max-width: 520px;
+      border-radius: 32px;
+      background: rgba(255,255,255,0.08);
+      border: 1px solid rgba(255,255,255,0.15);
+      padding: 24px;
+      box-shadow: 0 32px 80px rgba(0,0,0,0.25);
+    }
+    .hero-floating-badge {
+      position: absolute;
+      bottom: 24px;
+      left: 0px;
+      background: white;
+      border-radius: 14px;
+      padding: 10px 16px;
+      box-shadow: 0 8px 32px rgba(0,0,0,0.18);
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .hero-floating-badge .badge-icon { font-size: 20px; }
+    .hero-floating-badge .badge-text { font-size: 12px; font-weight: 700; color: #1d1d1f; line-height: 1.3; }
+    .hero-floating-badge .badge-text span { display: block; font-weight: 400; color: #6e6e73; font-size: 11px; }
+
+    @media (max-width: 768px) {
+      .hero-content { grid-template-columns: 1fr; gap: 40px; text-align: center; }
+      .hero-pills { justify-content: center; }
+      .hero-cta { width: 100%; justify-content: center; }
+      .hero-image-col { order: -1; }
+      .hero-floating-badge { left: 50%; transform: translateX(-50%); bottom: -20px; white-space: nowrap; }
+    }
+
+    /* ══════════════════════════════════════
+       PRODUCTS SECTION
+    ══════════════════════════════════════ */
+    #productos {
+      padding: 96px 24px;
+      background: #ffffff;
+    }
+    .section-eyebrow {
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: #063f81;
+      margin-bottom: 12px;
+    }
+    .section-h2 {
+      font-size: clamp(2rem, 3.5vw, 2.8rem);
+      font-weight: 800;
+      color: #1d1d1f;
+      letter-spacing: -0.03em;
+      line-height: 1.1;
+      margin-bottom: 16px;
+    }
+    .section-sub {
+      font-size: 16px;
+      color: #6e6e73;
+      line-height: 1.6;
+      max-width: 520px;
+    }
+    .section-header { margin-bottom: 56px; }
+    /* Products — grid desktop, carrusel mobile */
+    .products-carousel-wrap { position: relative; }
+    .products-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 28px;
+    }
+    @media (min-width: 1024px) { .products-grid { grid-template-columns: repeat(4, 1fr); gap: 20px; } }
+    @media (max-width: 640px) {
+      .products-carousel-wrap { overflow: hidden; }
+      .products-grid {
+        display: flex;
+        overflow-x: auto;
+        scroll-snap-type: x mandatory;
+        -webkit-overflow-scrolling: touch;
+        gap: 16px;
+        padding-bottom: 12px;
+        scrollbar-width: none;
+      }
+      .products-grid::-webkit-scrollbar { display: none; }
+      .products-grid .product-card {
+        flex: 0 0 78vw;
+        max-width: 300px;
+        scroll-snap-align: start;
+      }
+      .products-grid .product-card:first-child { margin-left: 4px; }
+      .products-grid .product-card:last-child { margin-right: 24px; }
+      /* Dots */
+      .prod-dots {
+        display: flex;
+        justify-content: center;
+        gap: 6px;
+        margin-top: 16px;
+      }
+      .prod-dot {
+        width: 6px; height: 6px;
+        border-radius: 50%;
+        background: #d1d1d6;
+        transition: background 0.2s, width 0.2s;
+      }
+      .prod-dot.active { background: #063f81; width: 18px; border-radius: 3px; }
+    }
+    @media (min-width: 641px) { .prod-dots { display: none; } }
+
+    .product-card {
+      background: #ffffff;
+      border: 1.5px solid rgba(0,0,0,0.07);
+      border-radius: 24px;
+      overflow: hidden;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      display: flex;
+      flex-direction: column;
+      position: relative;
+      box-shadow: 0 2px 12px rgba(0,0,0,0.05);
+    }
+    .product-card:hover { transform: translateY(-6px); box-shadow: 0 24px 56px rgba(6,63,129,0.12); border-color: rgba(6,63,129,0.15); }
+    .product-card.coming-soon { opacity: 0.65; }
+    .product-card.coming-soon:hover { transform: none; box-shadow: 0 2px 12px rgba(0,0,0,0.05); border-color: rgba(0,0,0,0.07); cursor: default; }
+    .product-card.coming-soon .product-img-wrap img { filter: blur(12px); }
+    .product-card.coming-soon .product-info { filter: blur(6px); pointer-events: none; }
+    .product-card.coming-soon .product-badge { filter: none; }
+    .product-card.coming-soon .product-coming-overlay { filter: none; }
+
+    .product-badge {
+      position: absolute;
+      top: 14px;
+      left: 14px;
+      font-size: 10px;
+      font-weight: 800;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      padding: 5px 12px;
+      border-radius: 100px;
+      z-index: 2;
+    }
+    .badge-bestseller { background: #063f81; color: white; }
+    .badge-soon { background: rgba(0,0,0,0.06); color: #6e6e73; }
+
+    .product-img-wrap {
+      background: #f0f4f8;
+      aspect-ratio: 3/2;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+      position: relative;
+    }
+    .product-img-wrap img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.4s ease;
+    }
+    .product-card:hover .product-img-wrap img { transform: scale(1.04); }
+    .product-img-wrap.gif-wrap img { mix-blend-mode: multiply; object-fit: contain; padding: 16px; }
+
+    .product-coming-overlay {
+      position: absolute;
+      inset: 0;
+      background: rgba(245,245,247,0.6);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 13px;
+      font-weight: 700;
+      color: #6e6e73;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+    }
+
+    .product-info {
+      padding: 20px 20px 22px;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      flex: 1;
+    }
+    .product-category {
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: #063f81;
+    }
+    .product-name {
+      font-size: 16px;
+      font-weight: 800;
+      color: #1d1d1f;
+      letter-spacing: -0.01em;
+      line-height: 1.25;
+    }
+    .product-desc {
+      font-size: 13px;
+      color: #6e6e73;
+      line-height: 1.5;
+      flex: 1;
+    }
+    .product-price-row {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      margin-top: 4px;
+    }
+    .product-price-new {
+      font-size: 18px;
+      font-weight: 800;
+      color: #1d1d1f;
+    }
+    .product-price-old {
+      font-size: 13px;
+      color: #b0b0b5;
+      text-decoration: line-through;
+    }
+    .product-price-badge {
+      font-size: 10px;
+      font-weight: 700;
+      background: #e32402;
+      color: white;
+      padding: 2px 8px;
+      border-radius: 100px;
+    }
+    .product-cta {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      background: #063f81;
+      color: white;
+      font-size: 13px;
+      font-weight: 700;
+      padding: 13px 20px;
+      border-radius: 12px;
+      text-decoration: none;
+      margin-top: 12px;
+      transition: background 0.2s;
+    }
+    .product-cta:hover { background: #052e5e; }
+    .product-cta-soon {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: #f5f5f7;
+      color: #b0b0b5;
+      font-size: 13px;
+      font-weight: 700;
+      padding: 13px 20px;
+      border-radius: 12px;
+      margin-top: 12px;
+      cursor: default;
+    }
+
+    /* ══════════════════════════════════════
+       ABOUT / QUIÉNES SOMOS
+    ══════════════════════════════════════ */
+    #about {
+      background: #063f81;
+      padding: 96px 24px;
+      position: relative;
+      overflow: hidden;
+    }
+    #about::before {
+      content: '';
+      position: absolute;
+      top: -100px; right: -100px;
+      width: 500px; height: 500px;
+      background: radial-gradient(circle, rgba(255,255,255,0.05) 0%, transparent 70%);
+      pointer-events: none;
+    }
+    .about-grid {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 80px;
+      align-items: center;
+    }
+    .about-text .section-eyebrow { color: #93c5fd; }
+    .about-text .section-h2 { color: white; }
+    .about-text .section-sub { color: rgba(255,255,255,0.72); max-width: 100%; margin-bottom: 36px; }
+    .about-oficial-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+      background: rgba(255,255,255,0.1);
+      border: 1px solid rgba(255,255,255,0.2);
+      border-radius: 16px;
+      padding: 16px 24px;
+      margin-bottom: 32px;
+    }
+    .about-oficial-badge svg { flex-shrink: 0; }
+    .about-oficial-badge-text { font-size: 14px; font-weight: 700; color: white; line-height: 1.3; }
+    .about-oficial-badge-text span { display: block; font-size: 12px; font-weight: 400; color: rgba(255,255,255,0.65); }
+    .about-stats {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+    }
+    .about-stat { text-align: center; }
+    .about-stat-num {
+      font-size: 2.4rem;
+      font-weight: 800;
+      color: white;
+      letter-spacing: -0.03em;
+      line-height: 1;
+    }
+    .about-stat-label {
+      font-size: 11px;
+      font-weight: 600;
+      color: rgba(255,255,255,0.55);
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      margin-top: 6px;
+      line-height: 1.4;
+    }
+    .about-visual {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+    .about-card {
+      background: rgba(255,255,255,0.08);
+      border: 1px solid rgba(255,255,255,0.14);
+      border-radius: 16px;
+      padding: 22px 24px;
+      display: flex;
+      align-items: flex-start;
+      gap: 16px;
+    }
+    .about-card-icon {
+      width: 44px;
+      height: 44px;
+      background: rgba(255,255,255,0.12);
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      font-size: 20px;
+    }
+    .about-card-title { font-size: 14px; font-weight: 700; color: white; margin-bottom: 4px; }
+    .about-card-desc { font-size: 13px; color: rgba(255,255,255,0.6); line-height: 1.5; }
+
+    @media (max-width: 768px) {
+      .about-grid { grid-template-columns: 1fr; gap: 48px; }
+      .about-stats { grid-template-columns: repeat(3, 1fr); }
+    }
+
+    /* ══════════════════════════════════════
+       TESTIMONIALS — carrusel con fotos
+    ══════════════════════════════════════ */
+    #testimonials {
+      padding: 96px 0;
+      background: #f5f5f7;
+      overflow: hidden;
+    }
+    .testimonials-header { text-align: center; margin-bottom: 56px; padding: 0 24px; }
+    .testimonials-header .section-sub { margin: 0 auto; }
+
+    /* Carrusel wrapper */
+    .testi-carousel-outer { position: relative; }
+    .testi-track-wrap { overflow: hidden; }
+    .testi-track {
+      display: flex;
+      gap: 24px;
+      padding: 8px 24px 8px;
+      transition: transform 0.45s cubic-bezier(0.25,0.46,0.45,0.94);
+    }
+    .testi-card {
+      background: white;
+      border-radius: 20px;
+      overflow: hidden;
+      box-shadow: 0 2px 16px rgba(0,0,0,0.07);
+      flex: 0 0 320px;
+      display: flex;
+      flex-direction: column;
+    }
+    @media (max-width: 640px) { .testi-card { flex: 0 0 80vw; } }
+
+    /* Foto del testimonio */
+    .testi-photo {
+      width: 100%;
+      aspect-ratio: 4/3;
+      object-fit: cover;
+      display: block;
+    }
+    .testi-body {
+      padding: 20px 22px 22px;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      flex: 1;
+    }
+    .testi-stars { color: #f5a623; font-size: 14px; letter-spacing: 2px; }
+    .testi-quote { font-size: 14px; line-height: 1.65; color: #1d1d1f; font-style: italic; flex: 1; }
+    .testi-author { display: flex; align-items: center; gap: 12px; }
+    .testi-avatar {
+      width: 40px; height: 40px; border-radius: 50%;
+      background: #063f81;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 16px; font-weight: 800; color: white; flex-shrink: 0;
+    }
+    .testi-name { font-size: 13px; font-weight: 700; color: #1d1d1f; }
+    .testi-location { font-size: 11px; color: #6e6e73; }
+    .testi-product {
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: #063f81;
+      background: rgba(6,63,129,0.07);
+      padding: 4px 10px;
+      border-radius: 100px;
+      align-self: flex-start;
+    }
+
+    /* ══════════════════════════════════════
+       FINAL CTA STRIP
+    ══════════════════════════════════════ */
+    #cta-strip {
+      background: #ffffff;
+      padding: 80px 24px;
+      text-align: center;
+    }
+    .cta-strip-inner { max-width: 600px; margin: 0 auto; }
+    .cta-strip-inner .section-h2 { margin-bottom: 12px; }
+    .cta-strip-inner .section-sub { margin: 0 auto 36px; }
+    .cta-strip-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      background: #25d366;
+      color: white;
+      font-size: 16px;
+      font-weight: 800;
+      padding: 18px 40px;
+      border-radius: 100px;
+      text-decoration: none;
+      box-shadow: 0 4px 24px rgba(37,211,102,0.35);
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+    .cta-strip-btn:hover { transform: translateY(-2px); box-shadow: 0 8px 32px rgba(37,211,102,0.4); }
+
+    /* ══════════════════════════════════════
+       FOOTER
+    ══════════════════════════════════════ */
+    #site-footer {
+      background: #f5f5f7;
+      border-top: 1px solid rgba(0,0,0,0.07);
+      padding: 36px 24px 28px;
+    }
+    .footer-inner {
+      max-width: 1200px; margin: 0 auto;
+      display: flex; align-items: center; justify-content: space-between;
+      flex-wrap: wrap; gap: 20px;
+    }
+    .footer-logo img { height: 26px; width: auto; opacity: 0.65; }
+    .footer-links { display: flex; gap: 20px; flex-wrap: wrap; }
+    .footer-links a { font-size: 11px; color: #9d9d9f; text-decoration: none; font-weight: 500; transition: color 0.2s; }
+    .footer-links a:hover { color: #6e6e73; }
+    .footer-copy { width: 100%; font-size: 11px; color: #b0b0b5; text-align: center; margin-top: 8px; border-top: 1px solid rgba(0,0,0,0.05); padding-top: 16px; }
+    @media (max-width: 768px) {
+      .footer-inner { justify-content: center; text-align: center; }
+      .footer-links { justify-content: center; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ══ STICKY HEADER ══ -->
+  <div id="sticky-header">
+    <div id="announcement-bar">
+      <span>📦 Envío GRATIS hoy</span>
+      &nbsp;&nbsp;·&nbsp;&nbsp;
+      <span>💳 Pago al recibir</span>
+      &nbsp;&nbsp;·&nbsp;&nbsp;
+      <span>✅ Registro Salud Pública</span>
+    </div>
+    <nav id="main-nav">
+      <div class="nav-inner">
+        <a href="index.html" class="nav-logo">
+          <img src="immuconsult-logo.png" alt="Immuconsult">
+        </a>
+        <ul class="nav-links">
+          <li><a href="index.html">Inicio</a></li>
+          <li><a href="#productos">Productos</a></li>
+          <li><a href="#about">Nosotros</a></li>
+          <li><a href="#testimonials">Testimonios</a></li>
+          <li>
+            <a href="https://wa.me/18299632978?text=Hola%2C%20me%20interesa%20conocer%20los%20productos%20Immunotec." target="_blank" class="nav-cta" onclick="fbq('track','Lead',{content_name:'nav_home'})">
+              Pedir ahora
+            </a>
+          </li>
+        </ul>
+        <button class="nav-hamburger" id="nav-toggle" aria-label="Menú">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+      <div class="nav-mobile-menu" id="nav-mobile-menu">
+        <a href="index.html">Inicio</a>
+        <a href="#productos">Productos</a>
+        <a href="#about">Nosotros</a>
+        <a href="#testimonials">Testimonios</a>
+        <a href="https://wa.me/18299632978?text=Hola%2C%20me%20interesa%20conocer%20los%20productos%20Immunotec." target="_blank" class="nav-cta-mobile" onclick="fbq('track','Lead',{content_name:'nav_mobile_home'})">
+          📲 Contactar por WhatsApp
+        </a>
+      </div>
+    </nav>
+  </div>
+
+  <!-- ══ MARQUEE BAR ══ -->
+  <div id="marquee-bar">
+    <div class="marquee-track">
+      <!-- Duplicado para loop infinito -->
+      <span class="marquee-item">✓ Distribuidor Oficial Immunotec <span class="marquee-dot"></span></span>
+      <span class="marquee-item">🚚 Envío en 24–72 horas en RD <span class="marquee-dot"></span></span>
+      <span class="marquee-item">💳 Pago al recibir en tu casa <span class="marquee-dot"></span></span>
+      <span class="marquee-item">🔬 +85 estudios científicos publicados <span class="marquee-dot"></span></span>
+      <span class="marquee-item">✅ Registro Salud Pública · DIGEMAPS <span class="marquee-dot"></span></span>
+      <span class="marquee-item">📦 Sin riesgo — pagas cuando llega <span class="marquee-dot"></span></span>
+      <span class="marquee-item">✓ Distribuidor Oficial Immunotec <span class="marquee-dot"></span></span>
+      <span class="marquee-item">🚚 Envío en 24–72 horas en RD <span class="marquee-dot"></span></span>
+      <span class="marquee-item">💳 Pago al recibir en tu casa <span class="marquee-dot"></span></span>
+      <span class="marquee-item">🔬 +85 estudios científicos publicados <span class="marquee-dot"></span></span>
+      <span class="marquee-item">✅ Registro Salud Pública · DIGEMAPS <span class="marquee-dot"></span></span>
+      <span class="marquee-item">📦 Sin riesgo — pagas cuando llega <span class="marquee-dot"></span></span>
+    </div>
+  </div>
+
+  <!-- ══ HERO ══ -->
+  <section id="hero">
+    <div class="hero-content">
+      <div class="hero-text fade-up">
+        <div class="hero-badge">
+          <span class="hero-badge-dot"></span>
+          Distribuidor Oficial · Rep. Dominicana
+        </div>
+        <h1 class="hero-h1">Tu salud,<br>respaldada<br>por <span>la ciencia.</span></h1>
+        <p class="hero-sub">Productos Immunotec con más de 85 estudios científicos publicados. Enviamos a tu casa — pagas cuando llega.</p>
+        <div class="hero-pills">
+          <span class="hero-pill">✓ Pago al recibir</span>
+          <span class="hero-pill">✓ Envío gratis</span>
+          <span class="hero-pill">✓ 40+ años de investigación</span>
+        </div>
+        <a href="#productos" class="hero-cta">
+          Ver todos los productos <span class="hero-cta-arrow">↓</span>
+        </a>
+      </div>
+      <div class="hero-image-col fade-up" style="transition-delay:0.15s">
+        <img
+          src="productos-hero.png"
+          alt="Productos Immunotec"
+          class="hero-product-gif"
+          style="mix-blend-mode:multiply; max-width:500px; border-radius:0;"
+        >
+        <div class="hero-floating-badge">
+          <span class="badge-icon">✅</span>
+          <div class="badge-text">
+            Distribuidor Oficial
+            <span>Immunotec · Rep. Dominicana</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══ PRODUCTOS ══ -->
+  <section id="productos" style="padding: 56px 24px; background: #fff;">
+    <div class="container">
+      <div class="section-header fade-up">
+        <p class="section-eyebrow">Nuestros productos</p>
+        <h2 class="section-h2">Ciencia que se siente.</h2>
+        <p class="section-sub">Cada producto está respaldado por investigación clínica y fabricado bajo estándares internacionales.</p>
+      </div>
+      <div class="products-carousel-wrap fade-up" style="transition-delay:0.1s">
+      <div class="products-grid" id="prod-grid">
+
+        <!-- IMMUNOCAL AZUL — activo -->
+        <div class="product-card">
+          <span class="product-badge badge-bestseller">⭐ Más vendido</span>
+          <div class="product-img-wrap gif-wrap">
+            <img src="https://immunoconsulotr.com/cdn/shop/files/jgv.gif?v=1765280352" alt="Immunocal Azul" loading="lazy">
+          </div>
+          <div class="product-info">
+            <span class="product-category">Sistema inmune · Energía</span>
+            <h3 class="product-name">Immunocal Azul</h3>
+            <p class="product-desc">Proteína natural que eleva el glutatión. Refuerza defensas, reduce el cansancio y regenera tus células.</p>
+            <div class="product-price-row">
+              <span class="product-price-new">RD$5,840</span>
+              <span class="product-price-old">RD$7,300</span>
+              <span class="product-price-badge">20% OFF</span>
+            </div>
+            <a href="immunocal-azul.html" class="product-cta">
+              Ver producto →
+            </a>
+          </div>
+        </div>
+
+        <!-- PLATINUM — activo -->
+        <div class="product-card">
+          <span class="product-badge badge-bestseller">🏆 Premium</span>
+          <div class="product-img-wrap gif-wrap">
+            <img src="https://immunoconsulotr.com/cdn/shop/files/Immunocal_platium_oferta.gif?v=1766419233" alt="Immunocal Platinum" loading="lazy">
+          </div>
+          <div class="product-info">
+            <span class="product-category">Dolor crónico · Inflamación</span>
+            <h3 class="product-name">Immunocal Platinum</h3>
+            <p class="product-desc">Alivia el dolor crónico desde la raíz. Reduce inflamación articular y muscular con CMP™ y RMF exclusivos.</p>
+            <div class="product-price-row">
+              <span class="product-price-new">RD$8,000</span>
+              <span class="product-price-old">RD$10,000</span>
+              <span class="product-price-badge">20% OFF</span>
+            </div>
+            <a href="platinum.html" class="product-cta">
+              Ver producto →
+            </a>
+          </div>
+        </div>
+
+        <!-- BOOSTER — próximamente -->
+        <div class="product-card coming-soon">
+          <span class="product-badge badge-soon">Próximamente</span>
+          <div class="product-img-wrap gif-wrap">
+            <img src="https://immunoconsulotr.com/cdn/shop/files/DAAD.gif?v=1771025406" alt="Immunocal Booster" loading="lazy">
+            <div class="product-coming-overlay">Próximamente</div>
+          </div>
+          <div class="product-info">
+            <span class="product-category">Energía · Inmunidad · Nutrición</span>
+            <h3 class="product-name">Immunocal Booster</h3>
+            <p class="product-desc">50+ frutas y verduras en 30 segundos. Más energía, defensas y menos inflamación.</p>
+            <div class="product-price-row">
+              <span class="product-price-new" style="color:#b0b0b5">Precio próximo</span>
+            </div>
+            <div class="product-cta-soon">Disponible pronto</div>
+          </div>
+        </div>
+
+        <!-- MAGISTRAL — próximamente -->
+        <div class="product-card coming-soon">
+          <span class="product-badge badge-soon">Próximamente</span>
+          <div class="product-img-wrap">
+            <img src="magistral-producto.png" alt="Magistral" loading="lazy">
+            <div class="product-coming-overlay">Próximamente</div>
+          </div>
+          <div class="product-info">
+            <span class="product-category">Próstata · Vitalidad masculina</span>
+            <h3 class="product-name">Magistral</h3>
+            <div class="product-price-row">
+              <span class="product-price-new" style="color:#b0b0b5">Precio próximo</span>
+            </div>
+            <div class="product-cta-soon">Disponible pronto</div>
+          </div>
+        </div>
+
+        <!-- IMMUNOCAL SPORT — próximamente -->
+        <div class="product-card coming-soon">
+          <span class="product-badge badge-soon">Próximamente</span>
+          <div class="product-img-wrap">
+            <img src="https://immunocalplatinum.uk/wp-content/uploads/2025/03/Immunoca-Sport.webp" alt="Immunocal Sport" loading="lazy" style="mix-blend-mode:multiply;">
+            <div class="product-coming-overlay">Próximamente</div>
+          </div>
+          <div class="product-info">
+            <span class="product-category">Rendimiento · Recuperación deportiva</span>
+            <h3 class="product-name">Immunocal Sport</h3>
+            <div class="product-price-row">
+              <span class="product-price-new" style="color:#b0b0b5">Precio próximo</span>
+            </div>
+            <div class="product-cta-soon">Disponible pronto</div>
+          </div>
+        </div>
+
+        <!-- MULTI-RESVERATROL — próximamente -->
+        <div class="product-card coming-soon">
+          <span class="product-badge badge-soon">Próximamente</span>
+          <div class="product-img-wrap" style="background:#fdf0f8">
+            <div style="width:100%;height:100%;display:flex;align-items:center;justify-content:center;flex-direction:column;gap:8px;padding:32px">
+              <svg width="48" height="48" viewBox="0 0 48 48" fill="none"><circle cx="24" cy="24" r="22" fill="rgba(6,63,129,0.07)"/><path d="M24 12 Q32 18 32 26 Q32 34 24 36 Q16 34 16 26 Q16 18 24 12Z" fill="#063f81" opacity="0.2"/><circle cx="24" cy="24" r="6" fill="#063f81" opacity="0.5"/></svg>
+              <span style="font-size:11px;font-weight:600;color:#b0b0b5;text-transform:uppercase;letter-spacing:0.08em">Imagen próxima</span>
+            </div>
+            <div class="product-coming-overlay">Próximamente</div>
+          </div>
+          <div class="product-info">
+            <span class="product-category">Mujeres · Antienvejecimiento</span>
+            <h3 class="product-name">Multi+ Resveratrol</h3>
+            <p class="product-desc">Antioxidante premium para mujeres. Combate el envejecimiento celular, mejora la piel y la energía.</p>
+            <div class="product-price-row">
+              <span class="product-price-new" style="color:#b0b0b5">Precio próximo</span>
+            </div>
+            <div class="product-cta-soon">Disponible pronto</div>
+          </div>
+        </div>
+
+      </div>
+      <div class="prod-dots" id="prod-dots"></div>
+      </div><!-- /products-carousel-wrap -->
+    </div>
+  </section>
+
+  <!-- ══ ABOUT / QUIÉNES SOMOS ══ -->
+  <section id="about">
+    <div class="about-grid fade-up">
+      <div class="about-text">
+        <p class="section-eyebrow">Quiénes somos</p>
+        <h2 class="section-h2">Distribuidores oficiales de Immunotec en República Dominicana.</h2>
+        <p class="section-sub">No somos una tienda cualquiera. Somos distribuidores certificados directamente por Immunotec — la compañía detrás de más de 85 estudios científicos publicados en las revistas médicas más prestigiosas del mundo.</p>
+
+        <div class="about-oficial-badge">
+          <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
+            <path d="M16 2 L28 7 L28 18 Q28 27 16 30 Q4 27 4 18 L4 7 Z" fill="rgba(255,255,255,0.15)" stroke="white" stroke-width="2" stroke-linejoin="round"/>
+            <path d="M10 16 L14 20 L22 11" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+          </svg>
+          <div class="about-oficial-badge-text">
+            Distribuidor Oficial Immunotec
+            <span>Certificado · República Dominicana</span>
+          </div>
+        </div>
+
+        <div class="about-stats">
+          <div class="about-stat">
+            <div class="about-stat-num">85+</div>
+            <div class="about-stat-label">Estudios científicos publicados</div>
+          </div>
+          <div class="about-stat">
+            <div class="about-stat-num">40+</div>
+            <div class="about-stat-label">Años de investigación</div>
+          </div>
+          <div class="about-stat">
+            <div class="about-stat-num">500+</div>
+            <div class="about-stat-label">Clientes en RD</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="about-visual">
+        <div class="about-card">
+          <div class="about-card-icon">🔬</div>
+          <div>
+            <div class="about-card-title">Respaldo científico real</div>
+            <div class="about-card-desc">Immunotec es la única compañía con una proteína patentada clínicamente probada para elevar el glutatión — el antioxidante más poderoso del cuerpo.</div>
+          </div>
+        </div>
+        <div class="about-card">
+          <div class="about-card-icon">🇩🇴</div>
+          <div>
+            <div class="about-card-title">100% local y confiable</div>
+            <div class="about-card-desc">Enviamos desde República Dominicana. Pagas solo cuando el producto llega a tu puerta. Sin riesgo, sin complicaciones.</div>
+          </div>
+        </div>
+        <div class="about-card">
+          <div class="about-card-icon">✅</div>
+          <div>
+            <div class="about-card-title">Registro Salud Pública</div>
+            <div class="about-card-desc">Todos nuestros productos están registrados en el Ministerio de Salud Pública de RD (DIGEMAPS). Seguros, legales y de calidad internacional.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══ TESTIMONIALS — carrusel con fotos reales ══ -->
+  <section id="testimonials">
+    <div class="testimonials-header fade-up">
+      <p class="section-eyebrow">Lo que dicen nuestros clientes</p>
+      <h2 class="section-h2">Resultados reales.</h2>
+      <p class="section-sub">+500 dominicanos ya recuperaron su salud con nuestros productos.</p>
+    </div>
+    <div class="testi-carousel-outer fade-up" style="transition-delay:0.1s">
+      <div class="testi-track-wrap">
+        <div class="testi-track" id="testi-track">
+
+          <!-- 1: Multi Resveratrol -->
+          <div class="testi-card">
+            <img class="testi-photo" src="https://img.trustoo.io/pro/74008461452/2026/3/6/tSWn26K3rG.jpeg" alt="Claritza" loading="lazy">
+            <div class="testi-body">
+              <span class="testi-product">Multi+ Resveratrol</span>
+              <div class="testi-stars">★★★★★</div>
+              <p class="testi-quote">"Lo recomiendo al 100%"</p>
+              <div class="testi-author">
+                <div class="testi-avatar">C</div>
+                <div><div class="testi-name">Claritza S.</div><div class="testi-location">Rep. Dominicana</div></div>
+              </div>
+            </div>
+          </div>
+
+          <!-- 2: Platinum -->
+          <div class="testi-card">
+            <img class="testi-photo" src="https://img.trustoo.io/pro/74008461452/2026/2/18/BfxNyfGRZN.png" alt="Julia" loading="lazy">
+            <div class="testi-body">
+              <span class="testi-product">Immunocal Platinum</span>
+              <div class="testi-stars">★★★★★</div>
+              <p class="testi-quote">"En dos semanas ya sentía menos rigidez. El dolor bajó bastante y eso me motivó a seguir."</p>
+              <div class="testi-author">
+                <div class="testi-avatar">J</div>
+                <div><div class="testi-name">Julia B.</div><div class="testi-location">Rep. Dominicana</div></div>
+              </div>
+            </div>
+          </div>
+
+          <!-- 3: Magistral -->
+          <div class="testi-card">
+            <img class="testi-photo" src="https://img.trustoo.io/pro/74008461452/2025/12/4/KmSzr36N5k.png" alt="Joel" loading="lazy">
+            <div class="testi-body">
+              <span class="testi-product">Magistral</span>
+              <div class="testi-stars">★★★★★</div>
+              <p class="testi-quote">"Me llegó rapidísimo y en perfecto estado."</p>
+              <div class="testi-author">
+                <div class="testi-avatar">J</div>
+                <div><div class="testi-name">Joel R.</div><div class="testi-location">Rep. Dominicana</div></div>
+              </div>
+            </div>
+          </div>
+
+          <!-- 4: Immunocal -->
+          <div class="testi-card">
+            <img class="testi-photo" src="https://img.trustoo.io/pro/74008461452/2025/12/12/xb8PhCE4Nt.png" alt="Luz" loading="lazy">
+            <div class="testi-body">
+              <span class="testi-product">Immunocal Azul</span>
+              <div class="testi-stars">★★★★★</div>
+              <p class="testi-quote">"Desde que empecé a tomar Immunocal, volví a sentir esa chispa en mi cuerpo."</p>
+              <div class="testi-author">
+                <div class="testi-avatar">L</div>
+                <div><div class="testi-name">Luz del Alba</div><div class="testi-location">Rep. Dominicana</div></div>
+              </div>
+            </div>
+          </div>
+
+          <!-- 5: Multi Resveratrol -->
+          <div class="testi-card">
+            <img class="testi-photo" src="https://img.trustoo.io/pro/74008461452/2026/3/6/YBwaD3cWGa.jpeg" alt="Carmen" loading="lazy">
+            <div class="testi-body">
+              <span class="testi-product">Multi+ Resveratrol</span>
+              <div class="testi-stars">★★★★★</div>
+              <p class="testi-quote">"Era escéptica. Le di una oportunidad por la garantía. Fue la mejor decisión de salud que tomé en años."</p>
+              <div class="testi-author">
+                <div class="testi-avatar">C</div>
+                <div><div class="testi-name">Carmen D.</div><div class="testi-location">Rep. Dominicana</div></div>
+              </div>
+            </div>
+          </div>
+
+          <!-- 6: Platinum -->
+          <div class="testi-card">
+            <img class="testi-photo" src="https://img.trustoo.io/pro/74008461452/2026/2/18/5GKRTktcTR.png" alt="Marcial" loading="lazy">
+            <div class="testi-body">
+              <span class="testi-product">Immunocal Platinum</span>
+              <div class="testi-stars">★★★★★</div>
+              <p class="testi-quote">"Llevo 2 meses con artritis y la verdad he sentido mejoría, sobre todo en la rigidez de las mañanas."</p>
+              <div class="testi-author">
+                <div class="testi-avatar">M</div>
+                <div><div class="testi-name">Marcial E.</div><div class="testi-location">Rep. Dominicana</div></div>
+              </div>
+            </div>
+          </div>
+
+          <!-- 7: Immunotec general -->
+          <div class="testi-card">
+            <img class="testi-photo" src="https://img.trustoo.io/pro/74008461452/2026/2/18/8EwYSPRHRQ.jpeg" alt="Julio" loading="lazy">
+            <div class="testi-body">
+              <span class="testi-product">Immunotec</span>
+              <div class="testi-stars">★★★★★</div>
+              <p class="testi-quote">"Pedí el combo de 3 porque me sale más barato y me recupero más rápido."</p>
+              <div class="testi-author">
+                <div class="testi-avatar">J</div>
+                <div><div class="testi-name">Julio A.</div><div class="testi-location">Rep. Dominicana</div></div>
+              </div>
+            </div>
+          </div>
+
+          <!-- 8: Multi Resveratrol -->
+          <div class="testi-card">
+            <img class="testi-photo" src="https://img.trustoo.io/pro/74008461452/2026/3/6/bAdb7Tz8Mc.jpeg" alt="Carla" loading="lazy">
+            <div class="testi-body">
+              <span class="testi-product">Multi+ Resveratrol</span>
+              <div class="testi-stars">★★★★★</div>
+              <p class="testi-quote">"Antes pagaba por cinco suplementos distintos. Ahora tomo dos cápsulas al día y noto más que con todo eso junto."</p>
+              <div class="testi-author">
+                <div class="testi-avatar">C</div>
+                <div><div class="testi-name">Carla L.</div><div class="testi-location">Rep. Dominicana</div></div>
+              </div>
+            </div>
+          </div>
+
+          <!-- 9: Immunotec -->
+          <div class="testi-card">
+            <img class="testi-photo" src="https://img.trustoo.io/pro/74008461452/2026/2/18/BtshGzXZiN.jpeg" alt="Laura" loading="lazy">
+            <div class="testi-body">
+              <span class="testi-product">Immunotec</span>
+              <div class="testi-stars">★★★★★</div>
+              <p class="testi-quote">"Llevo más de 10 años conociéndolos y encontré a Immunoconsultor que los vende al mejor precio."</p>
+              <div class="testi-author">
+                <div class="testi-avatar">L</div>
+                <div><div class="testi-name">Laura A.</div><div class="testi-location">Rep. Dominicana</div></div>
+              </div>
+            </div>
+          </div>
+
+        </div><!-- /testi-track -->
+      </div><!-- /testi-track-wrap -->
+
+      <!-- Controles -->
+      <div style="display:flex; align-items:center; justify-content:center; gap:16px; margin-top:32px; padding:0 24px;">
+        <button id="testi-prev" style="width:40px;height:40px;border-radius:50%;border:1.5px solid #d1d1d6;background:white;cursor:pointer;font-size:18px;display:flex;align-items:center;justify-content:center;transition:all 0.2s;" onmouseover="this.style.borderColor='#063f81'" onmouseout="this.style.borderColor='#d1d1d6'">‹</button>
+        <div id="testi-dots" style="display:flex;gap:6px;"></div>
+        <button id="testi-next" style="width:40px;height:40px;border-radius:50%;border:1.5px solid #d1d1d6;background:white;cursor:pointer;font-size:18px;display:flex;align-items:center;justify-content:center;transition:all 0.2s;" onmouseover="this.style.borderColor='#063f81'" onmouseout="this.style.borderColor='#d1d1d6'">›</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══ CTA STRIP ══ -->
+  <section id="cta-strip" class="fade-up">
+    <div class="cta-strip-inner">
+      <p class="section-eyebrow" style="text-align:center">¿Listo para empezar?</p>
+      <h2 class="section-h2">Encuentra tu producto.</h2>
+      <p class="section-sub">Productos con respaldo científico, envío gratis y pago al recibir en toda la República Dominicana.</p>
+      <a href="#productos" class="cta-strip-btn" style="background:#063f81; box-shadow: 0 4px 24px rgba(6,63,129,0.3);">
+        Ver todos los productos ↓
+      </a>
+    </div>
+  </section>
+
+  <!-- ══ FOOTER ══ -->
+  <footer id="site-footer">
+    <div class="footer-inner">
+      <div class="footer-logo">
+        <a href="index.html"><img src="immuconsult-logo.png" alt="Immuconsult"></a>
+      </div>
+      <nav class="footer-links">
+        <a href="index.html">Inicio</a>
+        <a href="#productos">Productos</a>
+        <a href="politica-privacidad.html">Política de privacidad</a>
+        <a href="terminos.html">Términos de uso</a>
+        <a href="https://wa.me/18299632978" target="_blank">Contacto</a>
+      </nav>
+      <p class="footer-copy">© 2026 Immuconsult · Distribuidor independiente Immunotec · República Dominicana · Todos los derechos reservados.</p>
+    </div>
+  </footer>
+
+  <!-- JS: Nav hamburger -->
+  <script>
+    (function() {
+      var toggle = document.getElementById('nav-toggle');
+      var menu = document.getElementById('nav-mobile-menu');
+      if (!toggle || !menu) return;
+      toggle.addEventListener('click', function() { menu.classList.toggle('open'); });
+      menu.querySelectorAll('a').forEach(function(a) {
+        a.addEventListener('click', function() { menu.classList.remove('open'); });
+      });
+    })();
+  </script>
+
+  <!-- JS: Testimonials carousel -->
+  <script>
+    (function() {
+      var track = document.getElementById('testi-track');
+      var dotsWrap = document.getElementById('testi-dots');
+      if (!track) return;
+      var cards = track.querySelectorAll('.testi-card');
+      var current = 0;
+
+      function getVisible() {
+        if (window.innerWidth <= 640) return 1;
+        if (window.innerWidth <= 900) return 2;
+        return 3;
+      }
+
+      function cardWidth() {
+        return cards[0].offsetWidth + 24;
+      }
+
+      function buildDots() {
+        dotsWrap.innerHTML = '';
+        var pages = Math.ceil(cards.length / getVisible());
+        for (var i = 0; i < pages; i++) {
+          var d = document.createElement('div');
+          d.style.cssText = 'width:6px;height:6px;border-radius:50%;background:#d1d1d6;transition:all 0.2s;cursor:pointer;';
+          (function(idx) { d.addEventListener('click', function() { goTo(idx); }); })(i);
+          dotsWrap.appendChild(d);
+        }
+        updateDots();
+      }
+
+      function updateDots() {
+        var dots = dotsWrap.children;
+        var page = Math.round(current / getVisible());
+        for (var i = 0; i < dots.length; i++) {
+          dots[i].style.background = i === page ? '#063f81' : '#d1d1d6';
+          dots[i].style.width = i === page ? '18px' : '6px';
+          dots[i].style.borderRadius = i === page ? '3px' : '50%';
+        }
+      }
+
+      function goTo(idx) {
+        var max = cards.length - getVisible();
+        current = Math.max(0, Math.min(idx * getVisible(), max));
+        track.style.transform = 'translateX(-' + (current * cardWidth()) + 'px)';
+        updateDots();
+      }
+
+      document.getElementById('testi-prev').addEventListener('click', function() {
+        goTo(Math.max(0, Math.round(current / getVisible()) - 1));
+      });
+      document.getElementById('testi-next').addEventListener('click', function() {
+        goTo(Math.round(current / getVisible()) + 1);
+      });
+
+      // Touch swipe
+      var startX = 0;
+      track.addEventListener('touchstart', function(e) { startX = e.touches[0].clientX; });
+      track.addEventListener('touchend', function(e) {
+        var diff = startX - e.changedTouches[0].clientX;
+        if (Math.abs(diff) > 40) {
+          if (diff > 0) goTo(Math.round(current / getVisible()) + 1);
+          else goTo(Math.max(0, Math.round(current / getVisible()) - 1));
+        }
+      });
+
+      buildDots();
+      window.addEventListener('resize', function() { buildDots(); goTo(0); });
+    })();
+  </script>
+
+  <!-- JS: Products dots (mobile) -->
+  <script>
+    (function() {
+      var grid = document.getElementById('prod-grid');
+      var dotsWrap = document.getElementById('prod-dots');
+      if (!grid || !dotsWrap) return;
+      var cards = grid.querySelectorAll('.product-card');
+
+      function isMobile() { return window.innerWidth <= 640; }
+
+      function buildDots() {
+        dotsWrap.innerHTML = '';
+        if (!isMobile()) return;
+        cards.forEach(function(_, i) {
+          var d = document.createElement('div');
+          d.className = 'prod-dot' + (i === 0 ? ' active' : '');
+          dotsWrap.appendChild(d);
+        });
+      }
+
+      grid.addEventListener('scroll', function() {
+        if (!isMobile()) return;
+        var idx = Math.round(grid.scrollLeft / (cards[0].offsetWidth + 16));
+        dotsWrap.querySelectorAll('.prod-dot').forEach(function(d, i) {
+          d.classList.toggle('active', i === idx);
+        });
+      });
+
+      buildDots();
+      window.addEventListener('resize', buildDots);
+    })();
+  </script>
+
+  <!-- JS: Scroll animations -->
+  <script>
+    (function() {
+      var els = document.querySelectorAll('.fade-up');
+      if (!els.length) return;
+      var obs = new IntersectionObserver(function(entries) {
+        entries.forEach(function(e) {
+          if (e.isIntersecting) { e.target.classList.add('visible'); obs.unobserve(e.target); }
+        });
+      }, { threshold: 0.1 });
+      els.forEach(function(el) { obs.observe(el); });
+    })();
+  </script>
+
+</body>
+</html>

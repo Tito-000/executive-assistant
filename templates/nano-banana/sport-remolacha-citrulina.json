@@ -1,0 +1,9 @@
+{
+  "prompt": "Extreme macro product photography of fresh raw beetroot (beet). Two beets freshly cut in half showing the deep burgundy-red interior with concentric ring patterns, glistening with natural moisture. A few beet slices fanned out beside them on a dark wet slate surface. Deep crimson and magenta tones, earthy rich color. 100mm macro lens, f/3.5, ISO 200. Diffused natural light from overhead showing the wet glossy cut surface in sharp detail. Dark charcoal/black background with dramatic contrast. Photorealistic unretouched documentary botanical style. No text, no labels.",
+  "negative_prompt": "text, labels, packaging, bottles, pills, capsules, white background, studio artificial lighting, plastic look, CGI, illustration, cartoon, painting, low quality, blurry, watermark, logo, artificial colors, supplements",
+  "api_parameters": {
+    "resolution": "2K",
+    "output_format": "png",
+    "aspect_ratio": "1:1"
+  }
+}

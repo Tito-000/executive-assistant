@@ -1,0 +1,9 @@
+{
+  "prompt": "Extreme macro product photography of pumpkin seeds and almonds together as natural magnesium sources. A generous pile of raw green pumpkin seeds mixed with whole raw almonds, scattered naturally on a dark textured slate surface. The pumpkin seeds show their characteristic flat oval shape with pale greenish hue and subtle striations. Almonds show their natural brown papery skin with visible texture. Some seeds and almonds spilling naturally. 100mm macro lens, f/4.0, ISO 200. Diffused natural light creating soft shadows. Dark charcoal background. Photorealistic unretouched food documentary style. No text, no labels.",
+  "negative_prompt": "text, labels, packaging, capsules, pills, supplements, white background, CGI, illustration, cartoon, artificial colors, low quality, blurry, watermark, logo",
+  "api_parameters": {
+    "resolution": "2K",
+    "output_format": "png",
+    "aspect_ratio": "1:1"
+  }
+}

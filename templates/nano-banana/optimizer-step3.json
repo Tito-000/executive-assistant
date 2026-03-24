@@ -1,0 +1,8 @@
+{
+  "prompt": "Professional minimalist flat design icon of a clock or timer showing 6 hours of sustained energy. Clock face with energy wave or lightning bolt indicating long-lasting performance. Geometric clean lines, pure flat solid colors in orange (#d74f1d) and white palette. Isolated on completely transparent background. 512x512 resolution. High fidelity vector icon appearance. No shadows, no 3D effects. Flat design only.",
+  "negative_prompt": "realistic photograph, 3D render, photorealistic, blurry, low quality, cartoon style, hand-drawn, painted, watercolor, textured, gradients, shadows, depth effects, complex details",
+  "width": 512,
+  "height": 512,
+  "steps": 40,
+  "guidance_scale": 8.0
+}

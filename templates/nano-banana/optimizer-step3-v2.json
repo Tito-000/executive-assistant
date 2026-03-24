@@ -1,0 +1,4 @@
+{
+  "prompt": "Simple minimal clock icon, round circle with two hands pointing to 6 o'clock position. Orange color #d74f1d. Only the clock outline and two hands, nothing else. Clean white background. Ultra minimal, no numbers, no decorations, no extra details. Flat design icon style.",
+  "negative_prompt": "realistic, 3D, detailed, complex, numbers on clock, decorative, gradients, shadows, texture, checkered background"
+}

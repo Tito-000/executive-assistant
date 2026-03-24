@@ -38,6 +38,49 @@ Do NOT include: realistic photos, gradients, drop shadows, 3D effects, corporate
 
 ---
 
+## Step 0: Choose a Brand Template
+
+**Before anything else**, ask Martin which brand template to use:
+
+---
+
+**¿Qué plantilla de marca quieres usar?**
+
+| # | Plantilla | Colores | Cuándo usarla |
+|---|-----------|---------|---------------|
+| 1 | **Estándar** (default) | Pasteles: azul, amarillo, verde, coral, púrpura | Diagramas internos, procesos, explicaciones generales |
+| 2 | **Flexo Media** ⭐ | Verde oscuro (#2d4a3e) + dorado (#b5943a) + crema (#f8f6f1) | Propuestas y materiales para clientes de Flexo Media |
+| 3 | **Brand personalizado** | Los del cliente | Cuando el cliente tiene su propio brand |
+
+Si Martin no especifica, usar la **Estándar** por defecto.
+
+---
+
+### Ajustes de color por plantilla
+
+#### Plantilla Estándar
+Usar el color system del style-guide sin cambios.
+
+#### Plantilla Flexo Media ⭐
+Reemplazar la paleta estándar con:
+| Rol | Color | Hex |
+|-----|-------|-----|
+| Primary (cajas principales) | Verde oscuro | #2d4a3e |
+| Secondary (cajas de apoyo) | Dorado | #b5943a |
+| Background cajas | Crema/verde pálido | #f0f4f2 |
+| Fondo | Crema | #f8f6f1 |
+| Texto | Verde profundo | #1e3329 |
+| Líneas/flechas | Verde oscuro | #2d4a3e |
+| Éxito/output | Dorado claro | #cca94f |
+| Problema/before | Coral suave | #ffa8a8 |
+
+En el style prefix agregar: *"Color palette uses deep forest green (#2d4a3e) and warm gold (#b5943a) as primary colors. Boxes have green or gold fills with cream backgrounds. All text is dark green (#1e3329). Arrows and borders are dark green. The overall feel is premium, executive, and professional — like a high-end consulting firm's visuals."*
+
+#### Plantilla Brand personalizado
+Martin indica: nombre del cliente, colores primario y secundario, y fondo. Aplicar en lugar de la paleta estándar.
+
+---
+
 ## Step 1: Gather Input
 
 Get from the user:

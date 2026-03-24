@@ -1,0 +1,8 @@
+{
+  "prompt": "Professional minimalist flat design icon of mental focus and concentration. Brain silhouette with a target or bullseye in the center, or brain with radiating focus lines. Geometric clean lines, pure flat solid colors in orange (#d74f1d) and white. Isolated on completely transparent background. 512x512. High fidelity vector icon. No shadows, no 3D. Flat design only, cognitive performance symbol.",
+  "negative_prompt": "realistic photograph, 3D render, photorealistic, blurry, low quality, cartoon, hand-drawn, painted, watercolor, textured, gradients, shadows, depth effects, complex details",
+  "width": 512,
+  "height": 512,
+  "steps": 40,
+  "guidance_scale": 8.0
+}
