@@ -319,34 +319,35 @@
         overflow-x: auto;
         scroll-snap-type: x mandatory;
         -webkit-overflow-scrolling: touch;
-        gap: 16px;
-        padding-bottom: 12px;
+        gap: 14px;
+        padding: 0 20px 12px;
         scrollbar-width: none;
       }
       .products-grid::-webkit-scrollbar { display: none; }
       .products-grid .product-card {
-        flex: 0 0 78vw;
+        flex: 0 0 72vw;
         max-width: 300px;
         scroll-snap-align: start;
       }
-      .products-grid .product-card:first-child { margin-left: 4px; }
-      .products-grid .product-card:last-child { margin-right: 24px; }
       /* Dots */
-      .prod-dots {
+      .carousel-dots {
         display: flex;
         justify-content: center;
         gap: 6px;
         margin-top: 16px;
       }
-      .prod-dot {
+      .carousel-dot {
         width: 6px; height: 6px;
         border-radius: 50%;
         background: #d1d1d6;
         transition: background 0.2s, width 0.2s;
+        border: none;
+        padding: 0;
+        cursor: pointer;
       }
-      .prod-dot.active { background: #063f81; width: 18px; border-radius: 3px; }
+      .carousel-dot.active { background: #063f81; width: 18px; border-radius: 3px; }
     }
-    @media (min-width: 641px) { .prod-dots { display: none; } }
+    @media (min-width: 641px) { .carousel-dots { display: none; } }
 
     /* ── Product Category Sections ── */
     .product-category-section {
@@ -636,8 +637,24 @@
     @media (max-width: 1024px) {
       #paquetes > div:last-child { grid-template-columns: repeat(2, 1fr) !important; }
     }
-    @media (max-width: 768px) {
-      #paquetes > div:last-child { grid-template-columns: 1fr !important; max-width: 400px; margin: 0 auto !important; }
+    @media (max-width: 640px) {
+      #paquetes .paquetes-grid {
+        display: flex !important;
+        grid-template-columns: none !important;
+        overflow-x: auto;
+        scroll-snap-type: x mandatory;
+        -webkit-overflow-scrolling: touch;
+        gap: 14px !important;
+        padding: 0 20px 12px !important;
+        max-width: none !important;
+        scrollbar-width: none;
+      }
+      #paquetes .paquetes-grid::-webkit-scrollbar { display: none; }
+      #paquetes .paquetes-grid .product-card {
+        flex: 0 0 72vw;
+        max-width: 300px;
+        scroll-snap-align: start;
+      }
     }
 
     /* ══════════════════════════════════════
@@ -925,7 +942,7 @@
         <h3 class="cat-title">La base de todo</h3>
         <p class="cat-desc">El glutatión es el antioxidante más importante que produce tu cuerpo. Immunocal es la única proteína patentada que lo eleva de forma natural. Elige tu nivel de protección.</p>
       </div>
-      <div class="products-grid">
+      <div class="products-grid" data-carousel>
 
         <!-- IMMUNOCAL AZUL -->
         <div class="product-card">
@@ -988,6 +1005,7 @@
         </div>
 
       </div>
+      <div class="carousel-dots"></div>
     </div>
   </section>
 
@@ -999,7 +1017,7 @@
         <h3 class="cat-title">Potencia tu Immunocal</h3>
         <p class="cat-desc">Diseñados para tomarse junto con Immunocal. Multiplican su absorción, aceleran los resultados y llenan los vacíos nutricionales que tu dieta no cubre.</p>
       </div>
-      <div class="products-grid">
+      <div class="products-grid" data-carousel>
 
         <!-- IMMUNOCAL BOOSTER -->
         <div class="product-card">
@@ -1042,6 +1060,7 @@
         </div>
 
       </div>
+      <div class="carousel-dots"></div>
     </div>
   </section>
 
@@ -1053,7 +1072,7 @@
         <h3 class="cat-title">Salud especializada</h3>
         <p class="cat-desc">Fórmulas diseñadas para necesidades específicas: salud masculina, manejo del estrés, antienvejecimiento y protección cardiovascular. Funcionan solos o junto con Immunocal.</p>
       </div>
-      <div class="products-grid">
+      <div class="products-grid" data-carousel>
 
         <!-- MAGISTRAL -->
         <div class="product-card">
@@ -1136,6 +1155,7 @@
         </div>
 
       </div>
+      <div class="carousel-dots"></div>
     </div>
   </section>
 
@@ -1207,7 +1227,7 @@
       <h2 class="section-h2">Ahorra más con nuestros combos.</h2>
       <p class="section-sub">Obtén hasta un 40% de descuento en estos combos especiales.</p>
     </div>
-    <div class="fade-up" style="display:grid;grid-template-columns:repeat(4,1fr);gap:24px;max-width:1200px;margin:0 auto;transition-delay:0.1s">
+    <div class="fade-up paquetes-grid" data-carousel style="display:grid;grid-template-columns:repeat(4,1fr);gap:24px;max-width:1200px;margin:0 auto;transition-delay:0.1s">
 
       <!-- Paquete Alto Rendimiento -->
       <div class="product-card">
@@ -1290,6 +1310,7 @@
       </div>
 
     </div>
+    <div class="carousel-dots"></div>
   </section>
 
   <!-- ══ TESTIMONIALS — carrusel con fotos reales ══ -->
@@ -1635,36 +1656,38 @@
     })();
   </script>
 
-  <!-- JS: Products dots (mobile) -->
+  <!-- JS: Products carousel dots (all sections) -->
   <script>
     (function() {
-      var grid = document.getElementById('prod-grid');
-      var dotsWrap = document.getElementById('prod-dots');
-      if (!grid || !dotsWrap) return;
-      var cards = grid.querySelectorAll('.product-card');
-
+      var carousels = document.querySelectorAll('[data-carousel]');
       function isMobile() { return window.innerWidth <= 640; }
 
-      function buildDots() {
-        dotsWrap.innerHTML = '';
-        if (!isMobile()) return;
-        cards.forEach(function(_, i) {
-          var d = document.createElement('div');
-          d.className = 'prod-dot' + (i === 0 ? ' active' : '');
-          dotsWrap.appendChild(d);
-        });
-      }
+      carousels.forEach(function(grid) {
+        var dotsWrap = grid.parentElement.querySelector('.carousel-dots');
+        if (!dotsWrap) return;
+        var cards = grid.querySelectorAll('.product-card');
 
-      grid.addEventListener('scroll', function() {
-        if (!isMobile()) return;
-        var idx = Math.round(grid.scrollLeft / (cards[0].offsetWidth + 16));
-        dotsWrap.querySelectorAll('.prod-dot').forEach(function(d, i) {
-          d.classList.toggle('active', i === idx);
+        function buildDots() {
+          dotsWrap.innerHTML = '';
+          if (!isMobile()) return;
+          cards.forEach(function(_, i) {
+            var d = document.createElement('div');
+            d.className = 'carousel-dot' + (i === 0 ? ' active' : '');
+            dotsWrap.appendChild(d);
+          });
+        }
+
+        grid.addEventListener('scroll', function() {
+          if (!isMobile()) return;
+          var idx = Math.round(grid.scrollLeft / (cards[0].offsetWidth + 14));
+          dotsWrap.querySelectorAll('.carousel-dot').forEach(function(d, i) {
+            d.classList.toggle('active', i === idx);
+          });
         });
+
+        buildDots();
+        window.addEventListener('resize', buildDots);
       });
-
-      buildDots();
-      window.addEventListener('resize', buildDots);
     })();
   </script>
 
