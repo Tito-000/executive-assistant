@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contrato de Servicios — Dra. Aurys Mercedes</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --green-deep: #1e3329;
+      --green: #2d4a3e;
+      --gold: #b5943a;
+      --gold-light: #d4af6a;
+      --cream: #f8f6f1;
+      --cream-dark: #ede8df;
+      --white: #ffffff;
+      --text-dark: #1a2318;
+      --text-mid: #3d5248;
+      --text-light: #7a9188;
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body { font-family: 'DM Sans', sans-serif; background: var(--white); color: var(--text-dark); line-height: 1.7; }
+    h1,h2,h3,h4 { font-family: 'Cormorant Garamond', serif; font-weight: 500; }
+
+    .contract { max-width: 800px; margin: 0 auto; padding: 60px 50px; }
+
+    /* Header */
+    .header { text-align: center; padding-bottom: 40px; border-bottom: 2px solid var(--green-deep); margin-bottom: 40px; }
+    .header h1 { font-size: 32px; color: var(--green-deep); margin-bottom: 8px; }
+    .header .subtitle { font-size: 14px; color: var(--text-light); letter-spacing: 2px; text-transform: uppercase; }
+    .header .date { font-size: 13px; color: var(--text-mid); margin-top: 12px; }
+
+    /* Sections */
+    .clause { margin-bottom: 32px; }
+    .clause-title { font-size: 13px; font-weight: 600; letter-spacing: 3px; text-transform: uppercase; color: var(--gold); margin-bottom: 12px; font-family: 'DM Sans'; }
+    .clause h3 { font-size: 22px; color: var(--green-deep); margin-bottom: 12px; }
+    .clause p { font-size: 14px; color: var(--text-dark); margin-bottom: 8px; font-weight: 300; }
+    .clause ul { padding-left: 20px; margin: 8px 0 16px; }
+    .clause li { font-size: 14px; color: var(--text-dark); font-weight: 300; margin-bottom: 6px; }
+    .clause li strong { font-weight: 500; }
+
+    .highlight { background: rgba(181,148,58,0.06); border-left: 3px solid var(--gold); padding: 16px 20px; border-radius: 0 8px 8px 0; margin: 16px 0; }
+    .highlight p { margin: 0; }
+
+    /* Table */
+    .services-table { width: 100%; border-collapse: collapse; margin: 16px 0; font-size: 14px; }
+    .services-table th { background: var(--green-deep); color: var(--white); padding: 12px 16px; text-align: left; font-size: 11px; letter-spacing: 2px; text-transform: uppercase; font-weight: 500; }
+    .services-table td { padding: 10px 16px; border-bottom: 1px solid var(--cream-dark); font-weight: 300; }
+    .services-table tr:last-child td { border-bottom: none; }
+    .services-table .check { color: var(--gold); font-weight: 600; text-align: center; font-size: 16px; }
+
+    /* Signatures */
+    .signatures { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; margin-top: 60px; padding-top: 40px; border-top: 2px solid var(--green-deep); }
+    .sig-block { text-align: center; }
+    .sig-line { width: 100%; height: 1px; background: var(--text-dark); margin-bottom: 10px; margin-top: 80px; }
+    .sig-name { font-size: 15px; font-weight: 500; color: var(--text-dark); }
+    .sig-role { font-size: 12px; color: var(--text-light); margin-top: 2px; }
+    .sig-id { font-size: 11px; color: var(--text-light); margin-top: 4px; }
+
+    /* Footer */
+    .footer { text-align: center; margin-top: 50px; padding-top: 24px; border-top: 1px solid var(--cream-dark); }
+    .footer p { font-size: 11px; color: var(--text-light); }
+
+    .download-bar { text-align: center; padding: 20px; background: var(--green-deep); position: sticky; top: 0; z-index: 100; }
+    .download-btn { display: inline-block; background: linear-gradient(135deg, var(--gold), var(--gold-light)); color: var(--green-deep); padding: 14px 40px; border-radius: 100px; font-size: 13px; font-weight: 600; letter-spacing: 2px; text-transform: uppercase; text-decoration: none; cursor: pointer; border: none; font-family: 'DM Sans', sans-serif; transition: transform 0.3s ease, box-shadow 0.3s ease; }
+    .download-btn:hover { transform: translateY(-2px); box-shadow: 0 8px 30px rgba(181,148,58,0.3); }
+
+    @media print {
+      body { background: white; }
+      .contract { padding: 40px 30px; }
+      .signatures { page-break-inside: avoid; }
+      .download-bar { display: none; }
+    }
+
+    @media (max-width: 600px) {
+      .contract { padding: 30px 24px; }
+      .signatures { grid-template-columns: 1fr; gap: 40px; }
+    }
+  </style>
+</head>
+<body>
+
+<div class="download-bar">
+  <button class="download-btn" onclick="window.print()">Descargar contrato en PDF</button>
+</div>
+
+<div class="contract">
+
+  <!-- HEADER -->
+  <div class="header">
+    <h1>Contrato de Servicios de Marketing Digital</h1>
+    <p class="subtitle">Acuerdo de prestación de servicios</p>
+    <p class="date">Santo Domingo, República Dominicana — 26 de marzo de 2026</p>
+  </div>
+
+  <!-- PARTES -->
+  <div class="clause">
+    <p class="clause-title">Cláusula 1</p>
+    <h3>Las Partes</h3>
+    <p>El presente contrato se celebra entre:</p>
+    <p><strong>EL PRESTADOR:</strong> Martin Mercedes, con cédula de identidad No. ___________________, actuando a nombre propio como profesional independiente de marketing digital, en adelante "El Prestador".</p>
+    <p><strong>EL CLIENTE:</strong> Dra. Aurys Mercedes, con cédula de identidad No. ___________________, en adelante "El Cliente".</p>
+  </div>
+
+  <!-- OBJETO -->
+  <div class="clause">
+    <p class="clause-title">Cláusula 2</p>
+    <h3>Objeto del Contrato</h3>
+    <p>El Prestador se compromete a brindar al Cliente servicios de marketing digital bajo el <strong>Paquete Completo</strong>, según los términos detallados en la propuesta presentada y aceptada por ambas partes.</p>
+  </div>
+
+  <!-- SERVICIOS -->
+  <div class="clause">
+    <p class="clause-title">Cláusula 3</p>
+    <h3>Servicios Incluidos</h3>
+
+    <table class="services-table">
+      <thead>
+        <tr><th>Servicio</th><th>Detalle</th><th style="text-align:center;">Incluido</th></tr>
+      </thead>
+      <tbody>
+        <tr><td><strong>Página web profesional</strong></td><td>Diseño, desarrollo y publicación de sitio web optimizado para conversiones y citas médicas</td><td class="check">&check;</td></tr>
+        <tr><td><strong>Meta Ads</strong></td><td>Creación y gestión de 4-6 anuncios mensuales en Facebook e Instagram (copy + diseño incluido)</td><td class="check">&check;</td></tr>
+        <tr><td><strong>Google Ads</strong></td><td>Campañas de búsqueda + extensiones para captar pacientes con intención alta</td><td class="check">&check;</td></tr>
+        <tr><td><strong>CRM + Automatizaciones</strong></td><td>Configuración de CRM para seguimiento de leads, respuestas automáticas y pipeline de ventas</td><td class="check">&check;</td></tr>
+        <tr><td><strong>Contenido y redes sociales</strong></td><td>Calendario editorial mensual, posts y engagement en Instagram y Facebook</td><td class="check">&check;</td></tr>
+        <tr><td><strong>Reportes mensuales</strong></td><td>Informe con métricas clave: leads, costo por lead, conversiones y recomendaciones</td><td class="check">&check;</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- INVERSIÓN -->
+  <div class="clause">
+    <p class="clause-title">Cláusula 4</p>
+    <h3>Inversión</h3>
+
+    <div class="highlight">
+      <p><strong>Fee mensual de gestión:</strong> USD $500.00/mes</p>
+    </div>
+
+    <p>El fee mensual incluye la gestión de Meta Ads, Google Ads, CRM, automatizaciones, contenido de redes sociales, reportes y optimización continua.</p>
+    <p>La <strong>pauta publicitaria</strong> (presupuesto de anuncios en Meta y Google) es un costo aparte y va directo a las plataformas. El monto de pauta recomendado es de USD $300–$500/mes para comenzar, y se acordará mensualmente entre las partes según objetivos.</p>
+    <p>El fee mensual se pagará dentro de los primeros <strong>5 días hábiles</strong> de cada mes.</p>
+  </div>
+
+  <!-- DURACIÓN -->
+  <div class="clause">
+    <p class="clause-title">Cláusula 5</p>
+    <h3>Duración</h3>
+    <p>El presente contrato tiene una duración mínima de <strong>tres (3) a seis (6) meses</strong>, contados a partir de la fecha de firma. Transcurrido el periodo mínimo, el contrato se renovará automáticamente de forma mensual.</p>
+    <p>Cualquiera de las partes podrá dar por terminado el contrato con un aviso por escrito de al menos <strong>treinta (30) días</strong> de anticipación antes del inicio del siguiente periodo mensual.</p>
+    <p>En caso de cancelación antes de cumplir el periodo mínimo de vigencia, el Cliente deberá pagar los meses restantes del periodo mínimo como penalidad.</p>
+  </div>
+
+  <!-- OBLIGACIONES DEL PRESTADOR -->
+  <div class="clause">
+    <p class="clause-title">Cláusula 6</p>
+    <h3>Obligaciones del Prestador</h3>
+    <ul>
+      <li>Diseñar, desarrollar y publicar la página web dentro de los primeros <strong>15 días hábiles</strong> tras el inicio del contrato.</li>
+      <li>Crear y gestionar las campañas de publicidad digital en las plataformas acordadas.</li>
+      <li>Configurar y mantener el CRM con automatizaciones de seguimiento.</li>
+      <li>Crear y publicar contenido en redes sociales según calendario editorial.</li>
+      <li>Entregar un reporte mensual con métricas de rendimiento y recomendaciones.</li>
+      <li>Realizar optimizaciones continuas basadas en datos y resultados.</li>
+      <li>Mantener comunicación oportuna sobre el estado de las campañas.</li>
+    </ul>
+  </div>
+
+  <!-- OBLIGACIONES DEL CLIENTE -->
+  <div class="clause">
+    <p class="clause-title">Cláusula 7</p>
+    <h3>Obligaciones del Cliente</h3>
+    <ul>
+      <li>Proveer el contenido, imágenes y material necesario para la creación de la página web y anuncios en tiempo oportuno.</li>
+      <li>Realizar los pagos en las fechas acordadas.</li>
+      <li>Otorgar acceso a las cuentas de redes sociales y plataformas publicitarias necesarias.</li>
+      <li>Dar seguimiento a los leads generados por las campañas de forma oportuna.</li>
+      <li>Aprobar contenidos y creatividades dentro de un plazo de <strong>48 horas</strong> tras su envío.</li>
+    </ul>
+  </div>
+
+  <!-- CONFIDENCIALIDAD -->
+  <div class="clause">
+    <p class="clause-title">Cláusula 8</p>
+    <h3>Confidencialidad</h3>
+    <p>Ambas partes se comprometen a mantener la confidencialidad de toda información sensible compartida durante la vigencia de este contrato, incluyendo datos de pacientes, estrategias de marketing, métricas de rendimiento y datos financieros.</p>
+  </div>
+
+  <!-- PROPIEDAD INTELECTUAL -->
+  <div class="clause">
+    <p class="clause-title">Cláusula 9</p>
+    <h3>Propiedad Intelectual</h3>
+    <p>Una vez completado el pago total, el diseño y contenido de la página web serán propiedad del Cliente.</p>
+    <p>Las campañas publicitarias, estrategias, templates y sistemas de automatización desarrollados por el Prestador son propiedad intelectual del Prestador y no podrán ser replicados ni compartidos con terceros.</p>
+  </div>
+
+  <!-- RESOLUCIÓN DE CONFLICTOS -->
+  <div class="clause">
+    <p class="clause-title">Cláusula 10</p>
+    <h3>Resolución de Conflictos</h3>
+    <p>En caso de conflicto o desacuerdo, ambas partes se comprometen a buscar una solución mediante negociación directa. Si no se llega a un acuerdo, el caso será resuelto por los tribunales competentes de Santo Domingo, República Dominicana.</p>
+  </div>
+
+  <!-- ACEPTACIÓN -->
+  <div class="clause">
+    <p class="clause-title">Cláusula 11</p>
+    <h3>Aceptación del Contrato</h3>
+    <p>Al firmar este contrato, ambas partes aceptan explícitamente los términos y condiciones aquí estipulados. Este acuerdo entra en vigor en la fecha de firma y prevalece sobre cualquier comunicación previa.</p>
+  </div>
+
+  <!-- FIRMAS -->
+  <div class="signatures">
+    <div class="sig-block">
+      <p style="text-align: left; margin-bottom: 4px; font-weight: 600;">PRESTADOR</p>
+      <div class="sig-line"></div>
+      <div class="sig-name">Martin Mercedes</div>
+      <div class="sig-role">Profesional Independiente de Marketing Digital</div>
+      <div class="sig-id">Fecha: _______________</div>
+    </div>
+    <div class="sig-block">
+      <p style="text-align: left; margin-bottom: 4px; font-weight: 600;">CLIENTE</p>
+      <div class="sig-line"></div>
+      <div class="sig-name">Dra. Aurys Mercedes</div>
+      <div class="sig-role">Profesional de la Salud</div>
+      <div class="sig-id">Fecha: _______________</div>
+    </div>
+  </div>
+
+  <div class="footer">
+    <p>Este contrato fue generado el 26 de Marzo de 2026.<br>Martin Mercedes — Marketing Digital · República Dominicana</p>
+  </div>
+
+</div>
+
+</body>
+</html>

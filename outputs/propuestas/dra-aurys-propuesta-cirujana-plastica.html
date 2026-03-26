@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Propuesta de Marketing Digital — Dra. Aurys Mercedes</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --green-deep: #1e3329;
+      --green: #2d4a3e;
+      --green-light: #3a6152;
+      --gold: #b5943a;
+      --gold-light: #d4af6a;
+      --cream: #f8f6f1;
+      --cream-dark: #ede8df;
+      --white: #ffffff;
+      --text-dark: #1a2318;
+      --text-mid: #3d5248;
+      --text-light: #7a9188;
+      --red-soft: #c0392b;
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body { font-family: 'DM Sans', sans-serif; background: var(--cream); color: var(--text-dark); line-height: 1.6; overflow-x: hidden; }
+    h1,h2,h3,h4 { font-family: 'Cormorant Garamond', serif; font-weight: 500; letter-spacing: 0.02em; }
+
+    /* COVER */
+    .cover { min-height: 100vh; background: var(--green-deep); display: grid; grid-template-columns: 1fr 1fr; position: relative; overflow: hidden; }
+    .cover::before { content: ''; position: absolute; top: -50%; left: -50%; width: 200%; height: 200%; background: radial-gradient(ellipse at 30% 20%, rgba(181,148,58,0.08) 0%, transparent 50%), radial-gradient(ellipse at 70% 80%, rgba(181,148,58,0.05) 0%, transparent 50%); animation: shimmer 20s ease-in-out infinite alternate; pointer-events: none; }
+    @keyframes shimmer { 0% { transform: translate(0,0); } 100% { transform: translate(-5%,5%); } }
+
+    .cover-left { display: flex; flex-direction: column; justify-content: center; padding: 80px 70px; position: relative; z-index: 2; }
+    .cover-right { position: relative; display: flex; align-items: center; justify-content: center; overflow: hidden; }
+    .cover-right::before { content: ''; position: absolute; inset: 0; background: radial-gradient(ellipse at center, transparent 30%, var(--green-deep) 100%); z-index: 1; pointer-events: none; }
+    .cover-photo { width: 280px; height: 280px; border-radius: 50%; object-fit: cover; border: 4px solid rgba(181,148,58,0.3); box-shadow: 0 40px 80px rgba(0,0,0,0.5); position: relative; z-index: 2; }
+    .cover-dr-name-badge { position: relative; z-index: 2; text-align: center; margin-top: 24px; }
+    .cover-dr-name-badge p { font-size: 11px; color: rgba(255,255,255,0.35); letter-spacing: 2px; text-transform: uppercase; }
+
+    .cover-logo { width: 160px; margin-bottom: 40px; mix-blend-mode: screen; }
+    .cover-tag { font-size: 11px; letter-spacing: 6px; text-transform: uppercase; color: var(--gold); margin-bottom: 24px; }
+    .cover-title { font-size: clamp(40px, 5vw, 64px); color: var(--white); line-height: 1.1; margin-bottom: 16px; }
+    .cover-title em { font-style: italic; color: var(--gold-light); }
+    .cover-divider { width: 60px; height: 1px; background: var(--gold); margin: 28px 0; }
+    .cover-sub { font-size: 13px; color: rgba(255,255,255,0.4); font-weight: 300; line-height: 1.6; }
+    .cover-sub strong { color: rgba(255,255,255,0.6); font-weight: 500; }
+    .cover-date { font-size: 12px; color: rgba(255,255,255,0.2); margin-top: 24px; }
+
+    /* SECTIONS */
+    .section { padding: 100px 60px; max-width: 1200px; margin: 0 auto; }
+    .section-dark { background: var(--green-deep); color: var(--white); max-width: 100%; padding: 100px 60px; }
+    .section-green { background: var(--green); color: var(--white); max-width: 100%; padding: 100px 60px; }
+    .section-cream { background: var(--cream-dark); max-width: 100%; padding: 100px 60px; }
+    .section-inner { max-width: 1200px; margin: 0 auto; }
+    .section-tag { font-family: 'DM Sans'; font-size: 11px; letter-spacing: 5px; text-transform: uppercase; color: var(--gold); margin-bottom: 16px; font-weight: 500; }
+    .section-title { font-size: clamp(34px, 4vw, 50px); line-height: 1.15; margin-bottom: 24px; }
+    .section-desc { font-size: 15px; line-height: 1.8; color: var(--text-mid); max-width: 700px; font-weight: 300; }
+    .section-dark .section-desc, .section-green .section-desc { color: rgba(255,255,255,0.55); }
+
+    .problem-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 24px; margin-top: 48px; }
+    .problem-card { background: rgba(192,57,43,0.05); border: 1px solid rgba(192,57,43,0.1); border-radius: 14px; padding: 32px; }
+    .problem-card .num { font-family: 'Cormorant Garamond'; font-size: 44px; color: rgba(192,57,43,0.2); font-weight: 300; line-height: 1; margin-bottom: 12px; }
+    .problem-card h4 { font-size: 18px; color: var(--text-dark); margin-bottom: 8px; }
+    .problem-card p { font-size: 13px; color: var(--text-light); font-weight: 300; line-height: 1.6; }
+
+    .includes-grid { display: grid; grid-template-columns: repeat(2,1fr); gap: 16px; margin-top: 32px; }
+    .inc-item { display: flex; align-items: flex-start; gap: 14px; padding: 16px 18px; border-radius: 10px; }
+    .inc-item-light { background: rgba(181,148,58,0.04); border: 1px solid rgba(181,148,58,0.1); }
+    .inc-item-dark { background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.06); }
+    .inc-icon { width: 36px; height: 36px; border-radius: 8px; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+    .inc-icon-light { background: var(--green-deep); }
+    .inc-icon-dark { background: rgba(181,148,58,0.1); }
+    .inc-icon svg { width: 18px; height: 18px; fill: none; stroke: var(--gold); stroke-width: 1.5; stroke-linecap: round; stroke-linejoin: round; }
+    .inc-text h5 { font-family: 'DM Sans'; font-size: 13px; font-weight: 500; margin-bottom: 2px; }
+    .inc-text p { font-size: 11px; font-weight: 300; line-height: 1.4; }
+    .inc-text-light h5 { color: var(--text-dark); }
+    .inc-text-light p { color: var(--text-light); }
+    .inc-text-dark h5 { color: var(--white); }
+    .inc-text-dark p { color: rgba(255,255,255,0.65); }
+
+    .stat-row { display: grid; grid-template-columns: repeat(3,1fr); gap: 24px; margin-top: 48px; }
+    .stat-box { text-align: center; padding: 28px 16px; background: rgba(181,148,58,0.06); border: 1px solid rgba(181,148,58,0.15); border-radius: 14px; }
+    .stat-box .big { font-family: 'Cormorant Garamond'; font-size: 44px; font-weight: 600; color: var(--gold); line-height: 1; margin-bottom: 6px; }
+    .stat-box .label { font-size: 11px; color: var(--text-light); text-transform: uppercase; letter-spacing: 2px; }
+
+    .pricing-box { background: var(--green-deep); color: var(--white); padding: 60px 50px; border-radius: 14px; margin-top: 40px; text-align: center; }
+    .pricing-box .price-tag { font-size: 11px; letter-spacing: 3px; text-transform: uppercase; color: var(--gold); margin-bottom: 16px; }
+    .pricing-box .big-price { font-family: 'Cormorant Garamond'; font-size: 72px; font-weight: 600; color: var(--gold); line-height: 1; margin-bottom: 8px; }
+    .pricing-box .price-desc { font-size: 13px; color: rgba(255,255,255,0.6); margin-bottom: 20px; }
+    .pricing-box .save-badge { background: var(--gold); color: var(--green-deep); padding: 8px 20px; border-radius: 20px; display: inline-block; font-size: 11px; font-weight: 700; letter-spacing: 1px; }
+
+    .cta-section { background: var(--green-deep); color: var(--white); padding: 100px 60px; max-width: 100%; text-align: center; }
+    .cta-inner { max-width: 800px; margin: 0 auto; }
+    .cta-title { font-family: 'Cormorant Garamond'; font-size: 48px; line-height: 1.2; margin-bottom: 24px; color: var(--white); }
+    .cta-sub { font-size: 15px; color: rgba(255,255,255,0.55); margin-bottom: 24px; line-height: 1.8; }
+    .cta-btn { display: inline-block; background: linear-gradient(135deg, var(--gold), var(--gold-light)); color: var(--green-deep); padding: 20px 56px; border-radius: 100px; font-size: 15px; font-weight: 600; text-decoration: none; letter-spacing: 2px; text-transform: uppercase; transition: transform 0.3s ease, box-shadow 0.3s ease; position: relative; z-index: 1; cursor: pointer; border: none; }
+    .cta-btn:hover { transform: translateY(-2px); box-shadow: 0 12px 40px rgba(181,148,58,0.3); }
+
+    .footer { background: var(--cream-dark); padding: 40px; text-align: center; font-size: 12px; color: var(--text-light); }
+
+    .reveal { opacity: 0; animation: revealUp 0.8s ease forwards; }
+    @keyframes revealUp { to { opacity: 1; transform: translateY(0); } from { opacity: 0; transform: translateY(30px); } }
+
+    @media (max-width: 768px) {
+      .cover { grid-template-columns: 1fr; }
+      .cover-left { padding: 60px 40px; }
+      .problem-grid { grid-template-columns: 1fr; }
+      .stat-row { grid-template-columns: 1fr; }
+      .section { padding: 60px 30px; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- COVER -->
+<section class="cover">
+  <div class="cover-left">
+    <p class="cover-tag">Propuesta de Marketing Digital</p>
+    <h1 class="cover-title">Más pacientes.<br><em>Cada mes.</em></h1>
+    <div class="cover-divider"></div>
+    <p class="cover-sub">Una estrategia integral de contenido, Google Ads y Meta Ads diseñada para <strong>atraer pacientes de alto valor</strong> a tu consultorio de cirugía plástica.</p>
+    <p class="cover-date">Marzo 2026 — Por Martin Mercedes</p>
+  </div>
+  <div class="cover-right"></div>
+</section>
+
+<!-- 01: DIAGNÓSTICO -->
+<section class="section">
+  <div class="section-inner">
+    <p class="section-tag">01 — Diagnóstico</p>
+    <h2 class="section-title">Dónde estás hoy</h2>
+    <p class="section-desc">Tu página web existe, pero hoy depende del tráfico orgánico que llega sin un plan. Cada mes pierdes pacientes potenciales que buscan "cirugía plástica", "abdominoplastia", "liposucción" o "aumento de pecho" en tu zona — pero no te encuentran.</p>
+
+    <div class="stat-row">
+      <div class="stat-box">
+        <div class="big">0</div>
+        <div class="label">Campañas activas<br>en Google Ads</div>
+      </div>
+      <div class="stat-box">
+        <div class="big">0</div>
+        <div class="label">Estrategia de<br>contenido mensual</div>
+      </div>
+      <div class="stat-box">
+        <div class="big">0</div>
+        <div class="label">Anuncios dirigidos<br>en Meta Ads</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 02: EL PROBLEMA -->
+<section class="section-cream">
+  <div class="section-inner">
+    <p class="section-tag">02 — El Problema</p>
+    <h2 class="section-title">Hoy dependes del azar</h2>
+    <p class="section-desc">Sin una estrategia digital activa, tu crecimiento queda a merced del algoritmo y las búsquedas espontáneas. Mientras tanto, tus competidores están capturando los pacientes que podrían ser tuyos.</p>
+
+    <div class="problem-grid">
+      <div class="problem-card">
+        <div class="num">1</div>
+        <h4>Sin presencia en búsquedas</h4>
+        <p>Cuando alguien busca "cirugía plástica Santo Domingo", tu consultorio no aparece. Los pacientes con intención de compra te ignoran y van a la competencia.</p>
+      </div>
+      <div class="problem-card">
+        <div class="num">2</div>
+        <h4>Redes sin estrategia</h4>
+        <p>Tu Instagram existe pero sin un calendario editorial. No hay contenido que eduque, inspire o genere confianza en tus procedimientos.</p>
+      </div>
+      <div class="problem-card">
+        <div class="num">3</div>
+        <h4>Sin retargeting</h4>
+        <p>Las personas que visitan tu web sin contactar se pierden. No hay anuncios dirigidos que los reconecten contigo más tarde.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 03: LA SOLUCIÓN -->
+<section class="section">
+  <div class="section-inner">
+    <p class="section-tag">03 — La Solución</p>
+    <h2 class="section-title">Una estrategia de tres frentes</h2>
+    <p class="section-desc">Captura pacientes en TODAS las etapas: desde búsquedas activas (Google Ads) hasta inspiración y descubrimiento (Meta Ads) + contenido educativo que construya autoridad (estrategia de contenido).</p>
+
+    <!-- GOOGLE ADS -->
+    <div style="margin-top: 60px; padding: 40px; background: rgba(181,148,58,0.04); border-radius: 12px; border-left: 4px solid var(--gold);">
+      <h3 style="font-size: 22px; color: var(--green-deep); margin-bottom: 12px; font-family: 'Cormorant Garamond';">Google Ads — Captura la intención</h3>
+      <p style="font-size: 14px; color: var(--text-mid); margin-bottom: 16px;">Personas que YA ESTÁN buscando cirugía plástica verán tus anuncios en Google. Son leads calificados con intención clara de compra.</p>
+      <div class="includes-grid">
+        <div class="inc-item inc-item-light"><div class="inc-icon inc-icon-light"><svg viewBox="0 0 24 24"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg></div><div class="inc-text inc-text-light"><h5>Campañas de búsqueda</h5><p>Keywords como "liposucción", "aumento de pecho", "lifting facial"</p></div></div>
+        <div class="inc-item inc-item-light"><div class="inc-icon inc-icon-light"><svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72"/></svg></div><div class="inc-text inc-text-light"><h5>Extensiones de anuncio</h5><p>Llamada directa, ubicación, reseñas — todo visible en el anuncio</p></div></div>
+        <div class="inc-item inc-item-light"><div class="inc-icon inc-icon-light"><svg viewBox="0 0 24 24"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg></div><div class="inc-text inc-text-light"><h5>Tracking de conversiones</h5><p>Sabes exactamente cuántos leads y citas genera cada anuncio</p></div></div>
+        <div class="inc-item inc-item-light"><div class="inc-icon inc-icon-light"><svg viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg></div><div class="inc-text inc-text-light"><h5>Landing pages optimizadas</h5><p>Cada anuncio lleva a una página diseñada para convertir</p></div></div>
+      </div>
+    </div>
+
+    <!-- META ADS -->
+    <div style="margin-top: 40px; padding: 40px; background: rgba(181,148,58,0.04); border-radius: 12px; border-left: 4px solid var(--gold);">
+      <h3 style="font-size: 22px; color: var(--green-deep); margin-bottom: 12px; font-family: 'Cormorant Garamond';">Meta Ads — Inspira y retargetea</h3>
+      <p style="font-size: 14px; color: var(--text-mid); margin-bottom: 16px;">Anuncios en Facebook e Instagram mostrando tus resultados, casos de antes/después y testimonios. Llega a personas en fase de consideración y reconecta con quienes visitaron tu web.</p>
+      <div class="includes-grid">
+        <div class="inc-item inc-item-light"><div class="inc-icon inc-icon-light"><svg viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg></div><div class="inc-text inc-text-light"><h5>Anuncios de resultados</h5><p>Antes/después y testimonios de pacientes satisfechas</p></div></div>
+        <div class="inc-item inc-item-light"><div class="inc-icon inc-icon-light"><svg viewBox="0 0 24 24"><polyline points="23 4 23 10 17 10"/><path d="M20.49 15a9 9 0 1 1-2.12-9.36L23 10"/></svg></div><div class="inc-text inc-text-light"><h5>Retargeting</h5><p>Re-impacta a quienes visitaron tu web sin contactar</p></div></div>
+        <div class="inc-item inc-item-light"><div class="inc-icon inc-icon-light"><svg viewBox="0 0 24 24"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg></div><div class="inc-text inc-text-light"><h5>Mensajería directa</h5><p>Botón de WhatsApp y Messenger para consultas inmediatas</p></div></div>
+        <div class="inc-item inc-item-light"><div class="inc-icon inc-icon-light"><svg viewBox="0 0 24 24"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg></div><div class="inc-text inc-text-light"><h5>Conversiones optimizadas</h5><p>Objetivo: agendar consulta o contacto directo</p></div></div>
+      </div>
+    </div>
+
+    <!-- ESTRATEGIA DE CONTENIDO -->
+    <div style="margin-top: 40px; padding: 40px; background: rgba(181,148,58,0.04); border-radius: 12px; border-left: 4px solid var(--gold);">
+      <h3 style="font-size: 22px; color: var(--green-deep); margin-bottom: 12px; font-family: 'Cormorant Garamond';">Estrategia de Contenido — Construye autoridad</h3>
+      <p style="font-size: 14px; color: var(--text-mid); margin-bottom: 16px;">Publicaciones semanales en Instagram y Facebook que educan sobre procedimientos, recuperación, cuidados post-operatorio y la importancia de elegir bien al cirujano.</p>
+      <div class="includes-grid">
+        <div class="inc-item inc-item-light"><div class="inc-icon inc-icon-light"><svg viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg></div><div class="inc-text inc-text-light"><h5>Calendario editorial</h5><p>Posts semanales + reels educativos sobre procedimientos</p></div></div>
+        <div class="inc-item inc-item-light"><div class="inc-icon inc-icon-light"><svg viewBox="0 0 24 24"><path d="M23 7l-7 5 7 5V7z"/><rect x="1" y="5" width="15" height="14" rx="2" ry="2"/></svg></div><div class="inc-text inc-text-light"><h5>Video testimonios</h5><p>Reels cortos de pacientes contando su experiencia</p></div></div>
+        <div class="inc-item inc-item-light"><div class="inc-icon inc-icon-light"><svg viewBox="0 0 24 24"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg></div><div class="inc-text inc-text-light"><h5>Respuestas a preguntas</h5><p>Contenido que responde dudas comunes sobre cirugía plástica</p></div></div>
+        <div class="inc-item inc-item-light"><div class="inc-icon inc-icon-light"><svg viewBox="0 0 24 24"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg></div><div class="inc-text inc-text-light"><h5>Engagement moderado</h5><p>Respuestas a comentarios y mensajes en redes</p></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PRICING -->
+<section class="section-dark">
+  <div class="section-inner">
+    <div class="pricing-box">
+      <p class="pricing-box price-tag">Paquete Completo</p>
+      <div style="font-family:'Cormorant Garamond',serif; font-size:72px; font-weight:600; color:var(--gold); line-height:1; margin-bottom:8px;">$500</div>
+      <div style="font-size:13px; color:rgba(255,255,255,0.6); margin-bottom:20px;">/mes · pauta de anuncios aparte</div>
+      <p style="font-size: 13px; color: rgba(255,255,255,0.5); margin-bottom: 24px;">Incluye: Google Ads + Meta Ads + Estrategia de contenido + Reportes mensuales</p>
+      <div style="background: var(--gold); color: var(--green-deep); font-size: 12px; font-weight: 700; padding: 8px 20px; border-radius: 20px; display: inline-block; letter-spacing: 0.05em;">TODO INCLUIDO</div>
+    </div>
+
+    <p style="font-size: 13px; color: rgba(255,255,255,0.4); margin-top: 40px; text-align: center;">
+      <strong>Nota importante:</strong> La pauta publicitaria (presupuesto de anuncios en Google y Meta) va aparte. Recomendado: $300–$500/mes para comenzar. El presupuesto te da control total sobre cuánto gastas en ads.
+    </p>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta-section">
+  <div class="cta-inner reveal">
+    <h2 class="cta-title">El sistema está listo.<br>Solo falta el tráfico.</h2>
+    <p class="cta-sub">Tu página web existe. Tu experiencia como cirujana es impecable. Ahora solo necesitas que los pacientes correctos te encuentren en el momento exacto. Eso es lo que hace esta estrategia.</p>
+    <button class="cta-btn" onclick="window.open('contrato.html','_blank')">Comenzar ahora</button>
+    <p style="font-size: 11px; color: rgba(255,255,255,0.15); margin-top: 20px;">Pauta de anuncios siempre aparte · va directo a Google y Meta</p>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <p>Martin Mercedes — Marketing Digital · República Dominicana · Marzo 2026</p>
+</footer>
+
+<script>
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.style.opacity = '1';
+        entry.target.style.transform = 'translateY(0)';
+      }
+    });
+  }, { threshold: 0.15 });
+  document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+</script>
+
+</body>
+</html>
