@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Logo — Anabel Mercedes</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600;700&family=Montserrat:wght@200;300;400;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --verde-oliva: #4A5D23;
+    --verde-claro: #6B7F4E;
+    --dorado: #B8860B;
+    --dorado-claro: #D4A937;
+    --dorado-suave: rgba(184, 134, 11, 0.15);
+    --negro: #0D0D0D;
+    --crema: #F5F0E8;
+    --blanco: #FAFAF8;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    background: linear-gradient(180deg, #F7F6F3 0%, #EDEAE4 100%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+    font-family: 'Montserrat', sans-serif;
+    padding: 80px 20px;
+    gap: 100px;
+  }
+
+  h2 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 11px;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    color: #B5B0A8;
+    margin-bottom: 30px;
+    font-weight: 300;
+  }
+
+  .section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  /* ============================================
+     LOGO — ICONO SOLO
+     ============================================ */
+  .logo-container {
+    position: relative;
+    width: 480px;
+    height: 480px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .logo-container.medium {
+    width: 260px;
+    height: 260px;
+  }
+
+  .logo-container.small {
+    width: 180px;
+    height: 180px;
+  }
+
+  /* Diamante — cuadrado rotado 45° con glow etéreo */
+  .diamond {
+    position: absolute;
+    width: 60%;
+    height: 60%;
+    border: 1.5px solid var(--dorado);
+    transform: rotate(45deg);
+    top: 50%;
+    left: 50%;
+    margin-top: -30%;
+    margin-left: -30%;
+    filter: drop-shadow(0 0 8px rgba(184, 134, 11, 0.2));
+  }
+
+  /* Segundo diamante decorativo — aún más fino */
+  .diamond-outer {
+    position: absolute;
+    width: 68%;
+    height: 68%;
+    border: 0.5px solid rgba(184, 134, 11, 0.25);
+    transform: rotate(45deg);
+    top: 50%;
+    left: 50%;
+    margin-top: -34%;
+    margin-left: -34%;
+  }
+
+  .logo-container.medium .diamond {
+    border-width: 1.2px;
+    filter: drop-shadow(0 0 6px rgba(184, 134, 11, 0.15));
+  }
+
+  .logo-container.medium .diamond-outer {
+    border-width: 0.5px;
+  }
+
+  .logo-container.small .diamond {
+    border-width: 1px;
+    filter: drop-shadow(0 0 4px rgba(184, 134, 11, 0.15));
+  }
+
+  .logo-container.small .diamond-outer {
+    border-width: 0.5px;
+  }
+
+  /* Letras AM — tipografía serif elegante */
+  .logo-letters {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    align-items: baseline;
+    line-height: 1;
+  }
+
+  .logo-letters span {
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: 600;
+    color: var(--verde-oliva);
+    display: inline-block;
+  }
+
+  .logo-container:not(.small):not(.medium) .logo-letters span {
+    font-size: 200px;
+    letter-spacing: -8px;
+  }
+
+  .logo-container:not(.small):not(.medium) .logo-letters .letter-a {
+    margin-right: -18px;
+  }
+
+  .logo-container.medium .logo-letters span {
+    font-size: 110px;
+    letter-spacing: -4px;
+  }
+
+  .logo-container.medium .logo-letters .letter-a {
+    margin-right: -10px;
+  }
+
+  .logo-container.small .logo-letters span {
+    font-size: 76px;
+    letter-spacing: -3px;
+  }
+
+  .logo-container.small .logo-letters .letter-a {
+    margin-right: -7px;
+  }
+
+  /* ============================================
+     VARIACION: ICONO + NOMBRE VERTICAL
+     ============================================ */
+  .logo-vertical {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 28px;
+  }
+
+  .logo-vertical .brand-name {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 300;
+    font-size: 16px;
+    letter-spacing: 10px;
+    color: var(--verde-oliva);
+    text-transform: uppercase;
+  }
+
+  .logo-vertical .brand-tagline {
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: 400;
+    font-style: italic;
+    font-size: 14px;
+    letter-spacing: 2px;
+    color: var(--dorado);
+    margin-top: -16px;
+  }
+
+  /* Linea decorativa fina */
+  .brand-line {
+    width: 40px;
+    height: 0.5px;
+    background: linear-gradient(90deg, transparent, var(--dorado), transparent);
+    margin-top: -12px;
+  }
+
+  /* ============================================
+     VARIACION: ICONO + NOMBRE HORIZONTAL
+     ============================================ */
+  .logo-horizontal {
+    display: flex;
+    align-items: center;
+    gap: 32px;
+  }
+
+  .logo-horizontal .brand-name-h {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 4px;
+  }
+
+  .logo-horizontal .brand-name-h .first-name {
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: 600;
+    font-size: 36px;
+    letter-spacing: 4px;
+    color: var(--verde-oliva);
+    text-transform: uppercase;
+    line-height: 1;
+  }
+
+  .logo-horizontal .brand-name-h .separator-line {
+    width: 100%;
+    height: 0.5px;
+    background: linear-gradient(90deg, var(--dorado), transparent);
+  }
+
+  .logo-horizontal .brand-name-h .last-name {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 300;
+    font-size: 12px;
+    letter-spacing: 9.5px;
+    color: var(--dorado);
+    text-transform: uppercase;
+    line-height: 1;
+  }
+
+  /* ============================================
+     FONDOS
+     ============================================ */
+  .bg-light {
+    background: var(--blanco);
+    padding: 70px;
+    border-radius: 4px;
+    box-shadow: 0 2px 40px rgba(0,0,0,0.04);
+  }
+
+  .bg-dark {
+    background: var(--negro);
+    padding: 70px;
+    border-radius: 4px;
+    box-shadow: 0 2px 40px rgba(0,0,0,0.1);
+  }
+
+  .bg-dark .logo-letters span {
+    color: var(--crema);
+  }
+
+  .bg-dark .diamond {
+    border-color: var(--dorado);
+    filter: drop-shadow(0 0 12px rgba(212, 169, 55, 0.25));
+  }
+
+  .bg-dark .diamond-outer {
+    border-color: rgba(212, 169, 55, 0.15);
+  }
+
+  .bg-dark .brand-name,
+  .bg-dark .first-name {
+    color: var(--crema) !important;
+  }
+
+  .bg-dark .last-name {
+    color: var(--dorado) !important;
+  }
+
+  .bg-dark .brand-tagline {
+    color: var(--dorado-claro) !important;
+  }
+
+  .bg-dark .brand-line {
+    background: linear-gradient(90deg, transparent, var(--dorado-claro), transparent) !important;
+  }
+
+  .bg-dark .separator-line {
+    background: linear-gradient(90deg, var(--dorado-claro), transparent) !important;
+  }
+
+  .bg-verde {
+    background: var(--verde-oliva);
+    padding: 70px;
+    border-radius: 4px;
+    box-shadow: 0 2px 40px rgba(0,0,0,0.08);
+  }
+
+  .bg-verde .logo-letters span {
+    color: var(--crema);
+  }
+
+  .bg-verde .diamond {
+    border-color: var(--dorado-claro);
+    filter: drop-shadow(0 0 12px rgba(212, 169, 55, 0.3));
+  }
+
+  .bg-verde .diamond-outer {
+    border-color: rgba(212, 169, 55, 0.2);
+  }
+
+  .bg-verde .brand-name,
+  .bg-verde .first-name {
+    color: var(--crema) !important;
+  }
+
+  .bg-verde .last-name {
+    color: var(--dorado-claro) !important;
+  }
+
+  .bg-verde .brand-tagline {
+    color: var(--dorado-claro) !important;
+  }
+
+  .bg-verde .brand-line {
+    background: linear-gradient(90deg, transparent, var(--dorado-claro), transparent) !important;
+  }
+
+  .bg-crema {
+    background: var(--crema);
+    padding: 70px;
+    border-radius: 4px;
+    box-shadow: 0 2px 40px rgba(0,0,0,0.04);
+  }
+
+  /* Divider etéreo */
+  .divider {
+    width: 1px;
+    height: 60px;
+    background: linear-gradient(180deg, transparent, rgba(184, 134, 11, 0.3), transparent);
+  }
+</style>
+</head>
+<body>
+
+  <!-- ========== 1. ICONO SOLO — VERSION PRINCIPAL ========== -->
+  <div class="section">
+    <h2>Icono Principal</h2>
+    <div class="bg-light">
+      <div class="logo-container">
+        <div class="diamond-outer"></div>
+        <div class="diamond"></div>
+        <div class="logo-letters">
+          <span class="letter-a">A</span><span class="letter-m">M</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="divider"></div>
+
+  <!-- ========== 2. ICONO + NOMBRE VERTICAL ========== -->
+  <div class="section">
+    <h2>Vertical — Landing &middot; Documentos</h2>
+    <div class="bg-light">
+      <div class="logo-vertical">
+        <div class="logo-container medium">
+          <div class="diamond-outer"></div>
+          <div class="diamond"></div>
+          <div class="logo-letters">
+            <span class="letter-a">A</span><span class="letter-m">M</span>
+          </div>
+        </div>
+        <div class="brand-line"></div>
+        <div class="brand-name">Anabel Mercedes</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="divider"></div>
+
+  <!-- ========== 3. ICONO + NOMBRE HORIZONTAL ========== -->
+  <div class="section">
+    <h2>Horizontal — Header &middot; Firmas</h2>
+    <div class="bg-light">
+      <div class="logo-horizontal">
+        <div class="logo-container small">
+          <div class="diamond-outer"></div>
+          <div class="diamond"></div>
+          <div class="logo-letters">
+            <span class="letter-a">A</span><span class="letter-m">M</span>
+          </div>
+        </div>
+        <div class="brand-name-h">
+          <span class="first-name">Anabel</span>
+          <div class="separator-line"></div>
+          <span class="last-name">Mercedes</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="divider"></div>
+
+  <!-- ========== 4. FONDO OSCURO ========== -->
+  <div class="section">
+    <h2>Version Clara — Fondos Oscuros</h2>
+    <div class="bg-dark">
+      <div class="logo-vertical">
+        <div class="logo-container medium">
+          <div class="diamond-outer"></div>
+          <div class="diamond"></div>
+          <div class="logo-letters">
+            <span class="letter-a">A</span><span class="letter-m">M</span>
+          </div>
+        </div>
+        <div class="brand-line"></div>
+        <div class="brand-name">Anabel Mercedes</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="divider"></div>
+
+  <!-- ========== 5. FONDO VERDE OLIVA ========== -->
+  <div class="section">
+    <h2>Sobre Verde Oliva — Stories &middot; Branding</h2>
+    <div class="bg-verde">
+      <div class="logo-vertical">
+        <div class="logo-container medium">
+          <div class="diamond-outer"></div>
+          <div class="diamond"></div>
+          <div class="logo-letters">
+            <span class="letter-a">A</span><span class="letter-m">M</span>
+          </div>
+        </div>
+        <div class="brand-line"></div>
+        <div class="brand-name">Anabel Mercedes</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="divider"></div>
+
+  <!-- ========== 6. FONDO CREMA ========== -->
+  <div class="section">
+    <h2>Sobre Crema — Elegancia Suave</h2>
+    <div class="bg-crema">
+      <div class="logo-horizontal">
+        <div class="logo-container small">
+          <div class="diamond-outer"></div>
+          <div class="diamond"></div>
+          <div class="logo-letters">
+            <span class="letter-a">A</span><span class="letter-m">M</span>
+          </div>
+        </div>
+        <div class="brand-name-h">
+          <span class="first-name">Anabel</span>
+          <div class="separator-line"></div>
+          <span class="last-name">Mercedes</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>

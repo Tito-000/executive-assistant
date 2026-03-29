@@ -1,0 +1,630 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Logo Variaciones — Anabel Mercedes</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Bodoni+Moda:ital,wght@0,400;0,500;0,600;0,700;1,400&family=EB+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Montserrat:wght@200;300;400;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --verde-oliva: #4A5D23;
+    --verde-claro: #6B7F4E;
+    --dorado: #B8860B;
+    --dorado-claro: #D4A937;
+    --negro: #0D0D0D;
+    --crema: #F5F0E8;
+    --blanco: #FAFAF8;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    background: linear-gradient(180deg, #F7F6F3 0%, #EDEAE4 100%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+    font-family: 'Montserrat', sans-serif;
+    padding: 80px 20px 120px;
+    gap: 40px;
+  }
+
+  .page-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: 300;
+    font-size: 28px;
+    color: var(--verde-oliva);
+    letter-spacing: 6px;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+  }
+
+  .page-subtitle {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 200;
+    font-size: 12px;
+    color: #B5B0A8;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    margin-bottom: 60px;
+  }
+
+  /* Grid de 2x2 */
+  .grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
+    max-width: 1200px;
+  }
+
+  .variation {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 24px;
+  }
+
+  .variation-label {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 10px;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    color: #B5B0A8;
+    font-weight: 300;
+  }
+
+  .card {
+    background: var(--blanco);
+    padding: 60px;
+    border-radius: 4px;
+    box-shadow: 0 2px 40px rgba(0,0,0,0.04);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-width: 480px;
+    min-height: 480px;
+    justify-content: center;
+  }
+
+  /* ============================================
+     VARIACION A — CORMORANT GARAMOND CLASICA
+     Serif elegante, letras livianas, diamante doble
+     ============================================ */
+  .var-a .logo-wrap {
+    position: relative;
+    width: 320px;
+    height: 320px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .var-a .diamond {
+    position: absolute;
+    width: 58%;
+    height: 58%;
+    border: 1.5px solid var(--dorado);
+    transform: rotate(45deg);
+    top: 50%; left: 50%;
+    margin-top: -29%; margin-left: -29%;
+    filter: drop-shadow(0 0 8px rgba(184, 134, 11, 0.2));
+  }
+
+  .var-a .diamond-outer {
+    position: absolute;
+    width: 66%;
+    height: 66%;
+    border: 0.5px solid rgba(184, 134, 11, 0.2);
+    transform: rotate(45deg);
+    top: 50%; left: 50%;
+    margin-top: -33%; margin-left: -33%;
+  }
+
+  .var-a .letters {
+    position: relative; z-index: 2;
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: 600;
+    font-size: 140px;
+    color: var(--verde-oliva);
+    letter-spacing: -6px;
+    line-height: 1;
+  }
+
+  .var-a .letters .a { margin-right: -12px; }
+
+  .var-a .name-block {
+    margin-top: 28px;
+    text-align: center;
+  }
+
+  .var-a .name-block .line {
+    width: 40px; height: 0.5px;
+    background: linear-gradient(90deg, transparent, var(--dorado), transparent);
+    margin: 0 auto 14px;
+  }
+
+  .var-a .name-block .name {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 300;
+    font-size: 13px;
+    letter-spacing: 9px;
+    color: var(--verde-oliva);
+    text-transform: uppercase;
+  }
+
+  /* ============================================
+     VARIACION B — PLAYFAIR DISPLAY EDITORIAL
+     Serif con contraste alto, más dramática,
+     diamante con esquinas sutilmente abiertas
+     ============================================ */
+  .var-b .logo-wrap {
+    position: relative;
+    width: 320px;
+    height: 320px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  /* Diamante con esquinas abiertas usando 4 líneas SVG */
+  .var-b .diamond-open {
+    position: absolute;
+    width: 100%; height: 100%;
+    top: 0; left: 0;
+  }
+
+  .var-b .letters {
+    position: relative; z-index: 2;
+    font-family: 'Playfair Display', serif;
+    font-weight: 700;
+    font-size: 140px;
+    color: var(--verde-oliva);
+    letter-spacing: -4px;
+    line-height: 1;
+  }
+
+  .var-b .letters .a { margin-right: -10px; }
+
+  .var-b .name-block {
+    margin-top: 28px;
+    text-align: center;
+  }
+
+  .var-b .name-block .line {
+    width: 60px; height: 0.5px;
+    background: linear-gradient(90deg, transparent, var(--dorado), transparent);
+    margin: 0 auto 14px;
+  }
+
+  .var-b .name-block .name {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 200;
+    font-size: 13px;
+    letter-spacing: 9px;
+    color: var(--verde-oliva);
+    text-transform: uppercase;
+  }
+
+  /* ============================================
+     VARIACION C — BODONI MODA ALTA COSTURA
+     Ultra elegante, contraste extremo thick/thin,
+     diamante simple, más espacio
+     ============================================ */
+  .var-c .logo-wrap {
+    position: relative;
+    width: 320px;
+    height: 320px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .var-c .diamond {
+    position: absolute;
+    width: 56%;
+    height: 56%;
+    border: 1px solid var(--dorado);
+    transform: rotate(45deg);
+    top: 50%; left: 50%;
+    margin-top: -28%; margin-left: -28%;
+    filter: drop-shadow(0 0 10px rgba(184, 134, 11, 0.15));
+  }
+
+  .var-c .letters {
+    position: relative; z-index: 2;
+    font-family: 'Bodoni Moda', serif;
+    font-weight: 500;
+    font-size: 150px;
+    color: var(--verde-oliva);
+    letter-spacing: -2px;
+    line-height: 1;
+  }
+
+  .var-c .letters .a { margin-right: -14px; }
+
+  .var-c .name-block {
+    margin-top: 32px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+  }
+
+  .var-c .name-block .first {
+    font-family: 'Bodoni Moda', serif;
+    font-weight: 400;
+    font-size: 20px;
+    letter-spacing: 8px;
+    color: var(--verde-oliva);
+    text-transform: uppercase;
+  }
+
+  .var-c .name-block .sep {
+    width: 30px; height: 0.5px;
+    background: var(--dorado);
+  }
+
+  .var-c .name-block .last {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 300;
+    font-size: 10px;
+    letter-spacing: 11px;
+    color: var(--dorado);
+    text-transform: uppercase;
+  }
+
+  /* ============================================
+     VARIACION D — EB GARAMOND CLASICA REFINADA
+     Serif old-style, doble diamante concéntrico,
+     feeling más clásico y atemporal
+     ============================================ */
+  .var-d .logo-wrap {
+    position: relative;
+    width: 320px;
+    height: 320px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .var-d .diamond-inner {
+    position: absolute;
+    width: 50%;
+    height: 50%;
+    border: 1px solid var(--dorado);
+    transform: rotate(45deg);
+    top: 50%; left: 50%;
+    margin-top: -25%; margin-left: -25%;
+    filter: drop-shadow(0 0 6px rgba(184, 134, 11, 0.2));
+  }
+
+  .var-d .diamond-mid {
+    position: absolute;
+    width: 60%;
+    height: 60%;
+    border: 0.5px solid rgba(184, 134, 11, 0.35);
+    transform: rotate(45deg);
+    top: 50%; left: 50%;
+    margin-top: -30%; margin-left: -30%;
+  }
+
+  .var-d .diamond-outer {
+    position: absolute;
+    width: 70%;
+    height: 70%;
+    border: 0.5px solid rgba(184, 134, 11, 0.12);
+    transform: rotate(45deg);
+    top: 50%; left: 50%;
+    margin-top: -35%; margin-left: -35%;
+  }
+
+  /* Punto decorativo dorado en la punta superior */
+  .var-d .dot-top {
+    position: absolute;
+    width: 4px; height: 4px;
+    background: var(--dorado);
+    border-radius: 50%;
+    top: 7%; left: 50%;
+    margin-left: -2px;
+    filter: drop-shadow(0 0 4px rgba(184, 134, 11, 0.4));
+  }
+
+  .var-d .dot-bottom {
+    position: absolute;
+    width: 4px; height: 4px;
+    background: var(--dorado);
+    border-radius: 50%;
+    bottom: 7%; left: 50%;
+    margin-left: -2px;
+    filter: drop-shadow(0 0 4px rgba(184, 134, 11, 0.4));
+  }
+
+  .var-d .letters {
+    position: relative; z-index: 2;
+    font-family: 'EB Garamond', serif;
+    font-weight: 600;
+    font-size: 140px;
+    color: var(--verde-oliva);
+    letter-spacing: -2px;
+    line-height: 1;
+  }
+
+  .var-d .letters .a { margin-right: -8px; }
+
+  .var-d .name-block {
+    margin-top: 28px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 6px;
+  }
+
+  .var-d .name-block .name {
+    font-family: 'EB Garamond', serif;
+    font-weight: 500;
+    font-size: 16px;
+    letter-spacing: 7px;
+    color: var(--verde-oliva);
+    text-transform: uppercase;
+  }
+
+  .var-d .name-block .dots {
+    font-family: 'EB Garamond', serif;
+    font-size: 10px;
+    color: var(--dorado);
+    letter-spacing: 6px;
+  }
+
+  /* ============================================
+     SEPARADOR ENTRE GRID Y OSCURAS
+     ============================================ */
+  .section-divider {
+    width: 1px;
+    height: 80px;
+    background: linear-gradient(180deg, transparent, rgba(184, 134, 11, 0.3), transparent);
+    margin: 20px 0;
+  }
+
+  .section-title {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 10px;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    color: #B5B0A8;
+    font-weight: 300;
+    margin-bottom: 40px;
+  }
+
+  /* Dark versions */
+  .card-dark {
+    background: var(--negro);
+    padding: 50px;
+    border-radius: 4px;
+    box-shadow: 0 2px 40px rgba(0,0,0,0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-width: 480px;
+    min-height: 480px;
+    justify-content: center;
+  }
+
+  .card-dark .letters,
+  .card-dark .name,
+  .card-dark .first,
+  .card-dark .name-block .name {
+    color: var(--crema) !important;
+  }
+
+  .card-dark .last,
+  .card-dark .dots {
+    color: var(--dorado-claro) !important;
+  }
+
+  .card-dark .diamond,
+  .card-dark .diamond-inner {
+    border-color: var(--dorado) !important;
+    filter: drop-shadow(0 0 14px rgba(212, 169, 55, 0.3)) !important;
+  }
+
+  .card-dark .diamond-outer,
+  .card-dark .diamond-mid {
+    border-color: rgba(212, 169, 55, 0.2) !important;
+  }
+
+  .card-dark .line,
+  .card-dark .sep {
+    background: linear-gradient(90deg, transparent, var(--dorado-claro), transparent) !important;
+  }
+
+  .card-dark .dot-top,
+  .card-dark .dot-bottom {
+    background: var(--dorado-claro) !important;
+    filter: drop-shadow(0 0 6px rgba(212, 169, 55, 0.5)) !important;
+  }
+
+  /* SVG lines for var-b */
+  .card-dark .open-line {
+    stroke: var(--dorado) !important;
+    filter: drop-shadow(0 0 6px rgba(212, 169, 55, 0.3));
+  }
+</style>
+</head>
+<body>
+
+  <div class="page-title">Anabel Mercedes</div>
+  <div class="page-subtitle">Variaciones del Logo &mdash; Selecciona tu favorita</div>
+
+  <!-- ========== GRID PRINCIPAL — FONDO CLARO ========== -->
+  <div class="grid">
+
+    <!-- VARIACION A -->
+    <div class="variation">
+      <div class="variation-label">A &mdash; Cormorant Garamond</div>
+      <div class="card var-a">
+        <div class="logo-wrap">
+          <div class="diamond-outer"></div>
+          <div class="diamond"></div>
+          <div class="letters"><span class="a">A</span><span class="m">M</span></div>
+        </div>
+        <div class="name-block">
+          <div class="line"></div>
+          <div class="name">Anabel Mercedes</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- VARIACION B -->
+    <div class="variation">
+      <div class="variation-label">B &mdash; Playfair Display</div>
+      <div class="card var-b">
+        <div class="logo-wrap">
+          <svg class="diamond-open" viewBox="0 0 320 320" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <!-- Top-right side -->
+            <line x1="160" y1="42" x2="268" y2="150" class="open-line" stroke="#B8860B" stroke-width="1.2" stroke-linecap="round" />
+            <!-- Right-bottom side -->
+            <line x1="268" y1="170" x2="160" y2="278" class="open-line" stroke="#B8860B" stroke-width="1.2" stroke-linecap="round" />
+            <!-- Bottom-left side -->
+            <line x1="140" y1="278" x2="52" y2="170" class="open-line" stroke="#B8860B" stroke-width="1.2" stroke-linecap="round" />
+            <!-- Left-top side -->
+            <line x1="52" y1="150" x2="140" y2="42" class="open-line" stroke="#B8860B" stroke-width="1.2" stroke-linecap="round" />
+            <!-- Glow filter -->
+            <defs>
+              <filter id="glow-b">
+                <feGaussianBlur stdDeviation="3" result="blur"/>
+                <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+              </filter>
+            </defs>
+          </svg>
+          <div class="letters"><span class="a">A</span><span class="m">M</span></div>
+        </div>
+        <div class="name-block">
+          <div class="line"></div>
+          <div class="name">Anabel Mercedes</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- VARIACION C -->
+    <div class="variation">
+      <div class="variation-label">C &mdash; Bodoni Moda</div>
+      <div class="card var-c">
+        <div class="logo-wrap">
+          <div class="diamond"></div>
+          <div class="letters"><span class="a">A</span><span class="m">M</span></div>
+        </div>
+        <div class="name-block">
+          <div class="first">Anabel</div>
+          <div class="sep"></div>
+          <div class="last">Mercedes</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- VARIACION D -->
+    <div class="variation">
+      <div class="variation-label">D &mdash; EB Garamond</div>
+      <div class="card var-d">
+        <div class="logo-wrap">
+          <div class="diamond-outer"></div>
+          <div class="diamond-mid"></div>
+          <div class="diamond-inner"></div>
+          <div class="dot-top"></div>
+          <div class="dot-bottom"></div>
+          <div class="letters"><span class="a">A</span><span class="m">M</span></div>
+        </div>
+        <div class="name-block">
+          <div class="dots">&bull; &bull; &bull;</div>
+          <div class="name">Anabel Mercedes</div>
+          <div class="dots">&bull; &bull; &bull;</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="section-divider"></div>
+
+  <!-- ========== MISMAS 4 EN FONDO OSCURO ========== -->
+  <div class="section-title">Las mismas 4 sobre fondo oscuro</div>
+
+  <div class="grid">
+
+    <!-- A DARK -->
+    <div class="variation">
+      <div class="variation-label">A &mdash; Oscura</div>
+      <div class="card-dark var-a">
+        <div class="logo-wrap">
+          <div class="diamond-outer"></div>
+          <div class="diamond"></div>
+          <div class="letters"><span class="a">A</span><span class="m">M</span></div>
+        </div>
+        <div class="name-block">
+          <div class="line"></div>
+          <div class="name">Anabel Mercedes</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- B DARK -->
+    <div class="variation">
+      <div class="variation-label">B &mdash; Oscura</div>
+      <div class="card-dark var-b">
+        <div class="logo-wrap">
+          <svg class="diamond-open" viewBox="0 0 320 320" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <line x1="160" y1="42" x2="268" y2="150" class="open-line" stroke="#D4A937" stroke-width="1.2" stroke-linecap="round" />
+            <line x1="268" y1="170" x2="160" y2="278" class="open-line" stroke="#D4A937" stroke-width="1.2" stroke-linecap="round" />
+            <line x1="140" y1="278" x2="52" y2="170" class="open-line" stroke="#D4A937" stroke-width="1.2" stroke-linecap="round" />
+            <line x1="52" y1="150" x2="140" y2="42" class="open-line" stroke="#D4A937" stroke-width="1.2" stroke-linecap="round" />
+          </svg>
+          <div class="letters"><span class="a">A</span><span class="m">M</span></div>
+        </div>
+        <div class="name-block">
+          <div class="line"></div>
+          <div class="name">Anabel Mercedes</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- C DARK -->
+    <div class="variation">
+      <div class="variation-label">C &mdash; Oscura</div>
+      <div class="card-dark var-c">
+        <div class="logo-wrap">
+          <div class="diamond"></div>
+          <div class="letters"><span class="a">A</span><span class="m">M</span></div>
+        </div>
+        <div class="name-block">
+          <div class="first">Anabel</div>
+          <div class="sep"></div>
+          <div class="last">Mercedes</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- D DARK -->
+    <div class="variation">
+      <div class="variation-label">D &mdash; Oscura</div>
+      <div class="card-dark var-d">
+        <div class="logo-wrap">
+          <div class="diamond-outer"></div>
+          <div class="diamond-mid"></div>
+          <div class="diamond-inner"></div>
+          <div class="dot-top"></div>
+          <div class="dot-bottom"></div>
+          <div class="letters"><span class="a">A</span><span class="m">M</span></div>
+        </div>
+        <div class="name-block">
+          <div class="dots">&bull; &bull; &bull;</div>
+          <div class="name">Anabel Mercedes</div>
+          <div class="dots">&bull; &bull; &bull;</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>
