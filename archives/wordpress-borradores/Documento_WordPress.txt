@@ -1,0 +1,119 @@
+CREACIÓN DE UN SITIO WEB EN WORDPRESS.COM - MI EXPERIENCIA
+
+INTRODUCCIÓN
+
+Decidí crear un sitio web en WordPress.com para aprender cómo funciona la plataforma. Nunca había hecho algo así antes, así que fue interesante ver lo fácil que resultó todo el proceso.
+
+Lo primero que hice fue irme a wordpress.com. La página de inicio está clara, con opciones para empezar. Como no tenía cuenta, tuve que registrarme. Opté por usar mi cuenta de Google porque es lo más rápido.
+
+PASO 1: REGISTRO
+
+Entré a wordpress.com y vi el botón de "Get started". Hice clic y me pidió que eligiera cómo quería iniciar sesión. Tenía varias opciones: correo, Google, Apple, GitHub. Escogí Google porque ya tengo una cuenta y no quería crear otra contraseña más.
+
+La autenticación fue rápida. WordPress.com me pidió permiso para acceder a mi cuenta de Google, lo cual tiene sentido por seguridad. Acepté los términos y listo, quedé adentro.
+
+PASO 2: CREAR EL SITIO
+
+Una vez dentro, me apareció el dashboard. En la sección de "Sitios" vi la opción de crear uno nuevo. Hice clic en "Crear un sitio".
+
+Lo siguiente fue elegir el dominio. WordPress.com me mostró tres opciones:
+1. Comprar un dominio personalizado (cuesta dinero)
+2. Usar un subdominio gratuito de WordPress.com
+3. Usar un dominio que ya tengo registrado
+
+Elegí la opción 2 porque no quería gastar dinero en este proyecto. El sistema me generó un nombre: martinmercedes100-vhpce.wordpress.com. No es el más bonito, pero cumple su función.
+
+PASO 3: ELEGIR UN TEMA
+
+Después de crear el sitio, WordPress.com me mostró una galería de temas. Hay muchísimos. Todos se ven profesionales. Algunos son para blogs, otros para portafolios, tiendas online, etcétera.
+
+Escogí uno limpio y minimalista. Tiene un header simple, una sección grande en el medio (que llaman "hero section"), y un pie de página. Nada complicado. Una vez seleccionado, WordPress me llevó directamente al editor para empezar a personalizar.
+
+PASO 4: PERSONALIZACIÓN DE LA PÁGINA PRINCIPAL
+
+El editor es un sistema de bloques. Cada cosa que ves (texto, imagen, botón) es un bloque que puedes editar. Es bastante intuitivo.
+
+Lo primero que hice fue cambiar el título. Puse "Martin Mercedes" como encabezado principal. Luego agregué algo de texto debajo que dice "Hello world!" como una introducción.
+
+Después subí una imagen. WordPress.com tiene un banco de imágenes integrado. Busqué "diseño agencia" y aparecieron varias opciones. Elegí una que muestra una computadora en un escritorio limpio. Debajo de la imagen puse un texto: "A sleek website for a design agency is showcased on a modern computer monitor in a bright office."
+
+También agregué un botón que dice "Empieza ahora". Es para que los visitantes sepan que pueden hacer clic en algo.
+
+PASO 5: AGREGAR MÁS PÁGINAS
+
+No quería que el sitio fuera solo la página de inicio. Así que agregué una página más. Fui al panel de navegación del lado izquierdo y busqué la opción de "agregar página". Creé una llamada "Sobre nosotros".
+
+WordPress actualiza automáticamente el menú de navegación cuando agregas páginas nuevas. En la parte superior ahora aparecen: Home | Sobre nosotros.
+
+PASO 6: PUBLICAR EL SITIO
+
+Cuando consideré que estaba listo, hice clic en el botón azul que dice "Publica tu web". WordPress me pidió que revisara cómo se ve en diferentes dispositivos (computadora, teléfono, tablet). Todo se veía bien.
+
+Después de publicar, el sitio quedó disponible en internet de inmediato. Ahora cualquiera puede visitarlo en martinmercedes100-vhpce.wordpress.com.
+
+HERRAMIENTAS QUE USÉ
+
+El editor de WordPress.com tiene muchos bloques diferentes. Los que más usé fueron:
+
+- Bloques de texto para párrafos y títulos
+- Bloque de imagen para fotos
+- Bloque de botón para la llamada a acción
+- Bloque de navegación para el menú
+
+También vi que tiene opciones de IA. Hay un botón que dice "Mejorar con IA" que puede sugerir texto automáticamente. Lo intenté pero no lo necesitaba para este proyecto.
+
+LO QUE ME GUSTÓ
+
+Lo primero es que es muy fácil. No necesito saber código ni nada técnico. Cualquiera puede hacerlo en menos de una hora.
+
+Segundo, todos los temas se ven profesionales. No se parece a un sitio hecho por alguien sin experiencia, sino que parece un sitio real.
+
+Tercero, todo es muy rápido. Desde que me registré hasta que publiqué el sitio pasaron unos 45 minutos.
+
+Lo que también está bien es que el sitio se adapta automáticamente a celulares. No tuve que hacer nada especial para eso. WordPress lo hace por defecto.
+
+LIMITACIONES
+
+El subdominio gratuito no es ideal si quiero algo profesional. Si tuviera que usar esto para un negocio real, compraría un dominio personalizado. Cuesta alrededor de $17 al año.
+
+También noté que muchas funcionalidades avanzadas requieren pagar. Si quiero agregar un formulario de contacto avanzado, vender productos, o cambiar el código HTML, necesito un plan de pago.
+
+Para un blog o un portafolio simple, el plan gratuito está bien. Pero si necesito vender algo o tener funcionalidades complejas, habría que invertir dinero.
+
+PARA QUÉ SIRVE WORDPRESS.COM
+
+Después de hacer esto, puedo decir que WordPress.com es ideal para:
+
+- Blogs personales
+- Portfolios de diseñadores o artistas
+- Sitios informativos de pequeños negocios
+- Restaurantes, peluquerías, consultores
+- Cualquier cosa que necesite presencia web rápido y barato
+
+No es ideal para:
+
+- Tiendas grandes de ecommerce (mejor usar Shopify)
+- Aplicaciones web complejas (eso requiere programación real)
+- Sitios que necesiten código customizado (no se puede acceder al HTML en plan gratuito)
+
+CÓMO MEJORARLO
+
+Si quisiera hacer este sitio mejor, haría esto:
+
+1. Compraría un dominio personalizado en lugar del subdominio gratuito
+2. Agregaría más páginas (Servicios, Portfolio, Contacto, Blog)
+3. Escribiría contenido más detallado en cada página
+4. Agregaría un formulario de contacto para que la gente pueda escribirme
+5. Conectaría mis redes sociales (LinkedIn, Instagram)
+6. Escribiría algunos artículos en un blog para que Google me encuentre mejor
+7. Si voy a vender algo, pagaría por un plan mejor
+
+CONCLUSIÓN
+
+WordPress.com me sorprendió. Pensé que iba a ser complicado, pero resultó ser muy simple. En menos de una hora tenía un sitio web completamente funcional y profesional.
+
+No necesité conocimientos técnicos. No tuve que pagar nada. El resultado se ve bien. Para alguien que necesita un sitio web rápido sin complicaciones, WordPress.com es la mejor opción.
+
+El sitio está en martinmercedes100-vhpce.wordpress.com si quieren verlo.
+
+La experiencia fue positiva. Definitivamente recomendaría esto a cualquiera que quiera crear un sitio web sin tener que aprender programación.

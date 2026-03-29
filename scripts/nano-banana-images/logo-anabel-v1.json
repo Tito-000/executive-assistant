@@ -1,0 +1,14 @@
+{
+  "prompt": "Professional minimalist flat design monogram logo combining the letters A and M into a single elegant geometric form. The A and M are intertwined and overlapping, creating one unified symmetrical mark. Primary color is olive green (#556B2F) with subtle gold (#C9A84C) accent lines. Ultra clean lines, no gradients, pure flat solid colors. The monogram is modern, sophisticated, and feminine but strong. Isolated on completely transparent background. Vector-like appearance. High fidelity design. Perfectly symmetrical. Do not add any text, words, or labels. Do not add shadows, 3D effects, or photorealism. Flat solid colors only. Crisp sharp edges.",
+  "negative_prompt": "realistic photograph, 3D render, photorealistic, blurry, low quality, cartoon style, hand-drawn, painted, watercolor, textured, gradients, shadows, depth effects, realistic shading, noisy, amateur design, cluttered, complex details, text, words, letters spelled out, typography, serif font, decorative elements, floral, nature, leaves, flowers",
+  "api_parameters": {
+    "resolution": "2K",
+    "output_format": "png",
+    "aspect_ratio": "1:1"
+  },
+  "settings": {
+    "resolution": "2K",
+    "style": "flat design, minimalist, professional monogram",
+    "quality": "vector-like, sharp, high fidelity"
+  }
+}

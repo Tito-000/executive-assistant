@@ -49,7 +49,13 @@ Qué tipos de tareas Martin tiende a evitar o posponer repetidamente.
 
 Victorias registradas para mantener perspectiva.
 
-_Sin registros aún._
+### Marzo 2026
+
+- **2026-03-27:** Mes fuerte de ingresos — ~$2,897 USD totales facturados:
+  - Proyecto e-commerce: RD$40,000 + RD$96,000 (~$2,267 USD)
+  - Entrega sitio web + anticipo: $1,097 USD ($1,000 + $97)
+  - Embudo de ventas orgánico (50% anticipo): RD$16,000 (~$267 USD)
+- **2026-03-27:** Nuevo servicio de agencia lanzado — creación de contenido para clientes
 
 ---
 

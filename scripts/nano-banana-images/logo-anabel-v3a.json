@@ -1,0 +1,14 @@
+{
+  "prompt": "Ultra high quality professional logo design. Bold capital letters A and M overlapping inside a rotated square diamond frame. The AM letters are deep olive green (#4A5D23) with thick bold weight. The diamond frame is true rich gold metallic color (#B8860B) with sharp clean corners. The letters overlap slightly in the center creating an elegant monogram. White or light cream background inside the diamond. Extremely clean execution, perfect geometry, razor sharp edges. This is a premium luxury brand mark for a personal brand. Studio quality graphic design. Professional vector-like rendering at maximum fidelity. Isolated on pure white (#FAFAFA) background. Do not add any shadows, reflections, or 3D effects. Completely flat design. No gradients.",
+  "negative_prompt": "yellow, bright yellow, lemon yellow, shadows, 3D, gradients, reflections, glow, blur, low quality, amateur, hand-drawn, sketch, watercolor, painted, cartoon, photorealistic, noisy, grainy, text below logo, tagline, extra decorations, floral, organic shapes, rounded",
+  "api_parameters": {
+    "resolution": "2K",
+    "output_format": "png",
+    "aspect_ratio": "1:1"
+  },
+  "settings": {
+    "resolution": "2K",
+    "style": "premium logo, bold monogram, diamond frame",
+    "quality": "ultra high fidelity, vector-like, studio quality"
+  }
+}

@@ -10,4 +10,4 @@ node_modules/
 .netlify/
 
 # API keys (seguridad)
-IA Master Resources/api-keys/
+recursos-ia/api-keys/

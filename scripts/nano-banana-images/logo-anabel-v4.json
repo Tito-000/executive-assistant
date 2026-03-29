@@ -1,0 +1,14 @@
+{
+  "prompt": "Premium personal brand monogram logo. Two capital letters A and M are elegantly merged using overlapping geometric shapes. The A sits in front and the M behind, creating a layered but flat effect through color difference: the A is olive green (#556B2F) and the M is slightly lighter sage green (#6B7F4E) with gold (#C9A84C) thin line separating them. The overall silhouette is tall and narrow, like a luxury fashion house logo. Ultra minimal, no unnecessary details. Completely flat solid colors. No gradients, no shadows, no 3D. Isolated on completely transparent background. Vector-quality rendering with perfectly sharp edges. Symmetrical design. Do not include any text, labels, taglines, or decorative borders.",
+  "negative_prompt": "realistic photograph, 3D render, photorealistic, blurry, low quality, cartoon style, hand-drawn, painted, watercolor, textured, gradients, shadows, depth effects, realistic shading, noisy, amateur design, cluttered, text, words, typography, decorative elements, floral, nature, organic shapes, banner, ribbon, circle frame",
+  "api_parameters": {
+    "resolution": "2K",
+    "output_format": "png",
+    "aspect_ratio": "1:1"
+  },
+  "settings": {
+    "resolution": "2K",
+    "style": "luxury fashion monogram, minimal, premium",
+    "quality": "vector-like, sharp, high fidelity"
+  }
+}

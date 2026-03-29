@@ -1,0 +1,14 @@
+{
+  "prompt": "Luxurious minimalist monogram logo of letters A and M merged together. The design uses elegant thin lines forming an interlocking AM where the crossbar of the A connects with the peaks of the M. Color: deep olive green (#4A5D23) as the primary fill, with thin gold (#C9A84C) outline accents. Clean geometric construction, art deco inspired but modern. Perfectly symmetrical. Isolated on completely transparent background. Flat design, zero gradients, zero shadows. Vector-quality sharp edges. Professional brand mark suitable for a premium personal brand. Do not include any additional text, decorations, or background elements.",
+  "negative_prompt": "realistic photograph, 3D render, photorealistic, blurry, low quality, cartoon style, hand-drawn, painted, watercolor, textured, gradients, shadows, depth effects, realistic shading, noisy, amateur design, cluttered, text labels, words, sentences, decorative borders, floral patterns, nature elements, circles around logo",
+  "api_parameters": {
+    "resolution": "2K",
+    "output_format": "png",
+    "aspect_ratio": "1:1"
+  },
+  "settings": {
+    "resolution": "2K",
+    "style": "art deco minimalist, luxurious monogram",
+    "quality": "vector-like, sharp, high fidelity"
+  }
+}

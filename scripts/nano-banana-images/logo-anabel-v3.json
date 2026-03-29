@@ -1,0 +1,14 @@
+{
+  "prompt": "Sophisticated geometric monogram mark combining capital letters A and M into one unified icon. The design uses negative space cleverly so both letters are clearly readable while forming a single cohesive shape. A diamond or angular frame subtly contains the monogram. Main color: rich olive green (#556B2F). Secondary accent: warm gold (#C9A84C). Style: ultra-modern, fashion-brand quality, suitable for Instagram profile picture. Completely flat design with solid colors. No gradients whatsoever. No shadows. No 3D effects. Isolated on completely transparent background. Crisp vector-like edges. Perfectly balanced and symmetrical. Do not add any text, words, or labels around the monogram.",
+  "negative_prompt": "realistic photograph, 3D render, photorealistic, blurry, low quality, cartoon style, hand-drawn, painted, watercolor, textured, gradients, shadows, depth effects, realistic shading, noisy, amateur design, cluttered, text, words, typography, serif, script font, decorative elements, floral, organic shapes, rounded corners",
+  "api_parameters": {
+    "resolution": "2K",
+    "output_format": "png",
+    "aspect_ratio": "1:1"
+  },
+  "settings": {
+    "resolution": "2K",
+    "style": "geometric, fashion-brand, modern monogram",
+    "quality": "vector-like, sharp, high fidelity"
+  }
+}

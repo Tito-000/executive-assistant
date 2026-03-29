@@ -1,0 +1,14 @@
+{
+  "prompt": "Ultra high quality professional monogram logo. Two bold capital letters A and M overlapping elegantly, centered in the composition. The AM letters are deep olive green (#4A5D23) with heavy bold weight, they are the absolute protagonist of the design. Behind them, an extremely thin hairline rotated square diamond outline in rich true gold (#B8860B), barely visible, just a whisper of a frame. The diamond is only a subtle geometric accent, paper thin. The AM dominates completely. Clean pure white (#FAFAFA) background. Maximum precision, mathematically perfect geometry, razor sharp edges, flawless symmetry. Ultra premium personal brand quality. Studio-grade execution rivaling top design agencies. Completely flat design, zero gradients, zero shadows, zero 3D effects, zero textures. Do not add any text, taglines, words, or decorative elements outside the logo.",
+  "negative_prompt": "yellow, bright yellow, lemon, shadows, 3D, gradients, reflections, glow, blur, low quality, amateur, hand-drawn, sketch, watercolor, painted, cartoon, photorealistic, noisy, grainy, text, tagline, extra decorations, floral, organic, thick frame, heavy frame, busy design, cluttered, ornate",
+  "api_parameters": {
+    "resolution": "2K",
+    "output_format": "png",
+    "aspect_ratio": "1:1"
+  },
+  "settings": {
+    "resolution": "2K",
+    "style": "ultra minimal monogram, hairline diamond outline, AM protagonist",
+    "quality": "studio grade, vector-like, maximum fidelity"
+  }
+}

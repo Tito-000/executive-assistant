@@ -1,0 +1,14 @@
+{
+  "prompt": "Ultra high quality professional monogram logo with editorial luxury feel. Two bold capital letters A and M overlapping in the center. The AM letters are deep olive green (#3D5A1E) with thick heavy weight. Behind them, a rotated square diamond frame with deliberately open corners — the four corners of the diamond do not connect, leaving small elegant gaps. The diamond frame is dark antique bronze gold (#996515), slightly thicker than a hairline but thinner than the letters. The open corners give it a modern editorial sophistication. Clean pure white (#FAFAFA) background. Maximum geometric precision, razor sharp edges, perfect symmetry. Ultra premium personal brand mark. Studio-grade graphic design execution. Completely flat design, zero gradients, zero shadows, zero 3D effects. Do not add any text, taglines, words, or decorative elements outside the logo.",
+  "negative_prompt": "yellow, bright yellow, lemon, shadows, 3D, gradients, reflections, glow, blur, low quality, amateur, hand-drawn, sketch, watercolor, painted, cartoon, photorealistic, noisy, grainy, text, tagline, extra decorations, floral, organic, closed corners, fully connected frame, busy design, cluttered, rounded",
+  "api_parameters": {
+    "resolution": "2K",
+    "output_format": "png",
+    "aspect_ratio": "1:1"
+  },
+  "settings": {
+    "resolution": "2K",
+    "style": "editorial luxury monogram, open-corner diamond, antique bronze",
+    "quality": "studio grade, vector-like, maximum fidelity"
+  }
+}

@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Garantía de Resultados — Dr. Welbin Paredes</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --green-deep: #1e3329;
+    --green: #2d4a3e;
+    --green-light: #3a6152;
+    --gold: #b5943a;
+    --gold-light: #d4af6a;
+    --cream: #f8f6f1;
+    --cream-dark: #ede8df;
+    --white: #ffffff;
+    --text-dark: #1a2318;
+    --text-mid: #3d5248;
+    --text-light: #7a9188;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body { font-family: 'DM Sans', sans-serif; background: var(--cream); color: var(--text-dark); line-height: 1.6; overflow-x: hidden; }
+  h1,h2,h3,h4 { font-family: 'Cormorant Garamond', serif; font-weight: 500; letter-spacing: 0.02em; }
+
+  /* ── COVER ── */
+  .cover { min-height: 100vh; background: var(--green-deep); display: grid; grid-template-columns: 1fr 1fr; position: relative; overflow: hidden; }
+  .cover::before { content: ''; position: absolute; top: -50%; left: -50%; width: 200%; height: 200%; background: radial-gradient(ellipse at 30% 20%, rgba(181,148,58,0.08) 0%, transparent 50%), radial-gradient(ellipse at 70% 80%, rgba(181,148,58,0.05) 0%, transparent 50%); animation: shimmer 20s ease-in-out infinite alternate; pointer-events: none; }
+  @keyframes shimmer { 0% { transform: translate(0,0); } 100% { transform: translate(-5%,5%); } }
+
+  .cover-left { display: flex; flex-direction: column; justify-content: center; padding: 80px 70px; position: relative; z-index: 2; }
+  .cover-right { position: relative; display: flex; flex-direction: column; align-items: center; justify-content: center; overflow: hidden; }
+  .cover-right::before { content: ''; position: absolute; inset: 0; background: radial-gradient(ellipse at center, transparent 30%, var(--green-deep) 100%); z-index: 1; pointer-events: none; }
+  .cover-photo { width: 280px; height: 280px; border-radius: 50%; object-fit: cover; border: 4px solid rgba(181,148,58,0.3); box-shadow: 0 40px 80px rgba(0,0,0,0.5); position: relative; z-index: 2; }
+  .cover-dr-name-badge { position: relative; z-index: 2; text-align: center; margin-top: 24px; }
+  .cover-dr-name-badge p { font-size: 11px; color: rgba(255,255,255,0.35); letter-spacing: 2px; text-transform: uppercase; }
+
+  .cover-tag { font-size: 11px; letter-spacing: 6px; text-transform: uppercase; color: var(--gold); margin-bottom: 24px; }
+  .cover-title { font-size: clamp(40px, 5vw, 64px); color: var(--white); line-height: 1.1; margin-bottom: 16px; }
+  .cover-title em { font-style: italic; color: var(--gold-light); }
+  .cover-divider { width: 60px; height: 1px; background: var(--gold); margin: 28px 0; }
+  .cover-sub { font-size: 13px; color: rgba(255,255,255,0.4); font-weight: 300; line-height: 1.6; }
+  .cover-sub strong { color: rgba(255,255,255,0.6); font-weight: 500; }
+  .cover-date { font-size: 12px; color: rgba(255,255,255,0.2); margin-top: 24px; }
+
+  /* ── SECTIONS ── */
+  .section { padding: 100px 60px; max-width: 1200px; margin: 0 auto; }
+  .section-dark { background: var(--green-deep); color: var(--white); max-width: 100%; padding: 100px 60px; }
+  .section-green { background: var(--green); color: var(--white); max-width: 100%; padding: 100px 60px; }
+  .section-cream { background: var(--cream-dark); max-width: 100%; padding: 100px 60px; }
+  .section-inner { max-width: 1200px; margin: 0 auto; }
+  .section-tag { font-family: 'DM Sans'; font-size: 11px; letter-spacing: 5px; text-transform: uppercase; color: var(--gold); margin-bottom: 16px; font-weight: 500; }
+  .section-title { font-size: clamp(34px, 4vw, 50px); line-height: 1.15; margin-bottom: 24px; }
+  .section-desc { font-size: 15px; line-height: 1.8; color: var(--text-mid); max-width: 700px; font-weight: 300; }
+  .section-dark .section-desc, .section-green .section-desc { color: rgba(255,255,255,0.55); }
+
+  /* ── GUARANTEE BOX ── */
+  .guarantee-wrapper { display: flex; justify-content: center; padding: 40px 0; }
+  .guarantee-box { max-width: 780px; width: 100%; text-align: center; padding: 60px 50px; border-radius: 24px; position: relative; background: linear-gradient(180deg, rgba(181,148,58,0.06) 0%, rgba(181,148,58,0.02) 100%); border: 2px solid rgba(181,148,58,0.35); box-shadow: 0 0 80px rgba(181,148,58,0.08), 0 30px 60px rgba(0,0,0,0.3); }
+  .guarantee-box::before { content: ''; position: absolute; inset: -2px; border-radius: 26px; border: 2px solid transparent; background: linear-gradient(135deg, rgba(181,148,58,0.5), rgba(212,175,106,0.2), rgba(181,148,58,0.5)) border-box; -webkit-mask: linear-gradient(#fff 0 0) padding-box, linear-gradient(#fff 0 0); mask: linear-gradient(#fff 0 0) padding-box, linear-gradient(#fff 0 0); -webkit-mask-composite: xor; mask-composite: exclude; animation: borderPulse 4s ease-in-out infinite; pointer-events: none; }
+  @keyframes borderPulse {
+    0%, 100% { opacity: 0.5; }
+    50% { opacity: 1; }
+  }
+  .guarantee-icon { width: 72px; height: 72px; margin: 0 auto 28px; background: linear-gradient(135deg, var(--gold), var(--gold-light)); border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 8px 32px rgba(181,148,58,0.25); }
+  .guarantee-icon svg { width: 34px; height: 34px; fill: none; stroke: var(--green-deep); stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+  .guarantee-condition { font-family: 'Cormorant Garamond'; font-size: clamp(22px, 3vw, 30px); color: rgba(255,255,255,0.7); line-height: 1.3; margin-bottom: 24px; font-weight: 400; }
+  .guarantee-result { font-family: 'Cormorant Garamond'; font-size: clamp(26px, 3.5vw, 38px); color: var(--white); line-height: 1.2; margin-bottom: 20px; font-weight: 600; }
+  .guarantee-result span { color: var(--gold-light); }
+  .guarantee-fine { font-size: 14px; color: rgba(255,255,255,0.45); font-weight: 400; letter-spacing: 1px; margin-bottom: 28px; }
+  .guarantee-note { display: inline-block; padding: 10px 24px; background: rgba(181,148,58,0.1); border: 1px solid rgba(181,148,58,0.2); border-radius: 100px; font-size: 13px; color: var(--gold-light); font-weight: 500; }
+
+  /* ── FUNNEL STEPS ── */
+  .funnel-flow { max-width: 900px; margin: 48px auto 0; }
+  .funnel-step-row { display: flex; align-items: center; justify-content: center; gap: 0; }
+  .funnel-item { flex: 1; text-align: center; padding: 28px 16px; background: rgba(181,148,58,0.04); border: 1px solid rgba(181,148,58,0.12); border-radius: 14px; position: relative; }
+  .funnel-item .step-num { font-family: 'DM Sans'; font-size: 10px; letter-spacing: 3px; text-transform: uppercase; color: var(--gold); margin-bottom: 8px; font-weight: 500; }
+  .funnel-item .step-value { font-family: 'Cormorant Garamond'; font-size: 36px; font-weight: 600; color: var(--gold); line-height: 1; margin-bottom: 4px; }
+  .funnel-item .step-label { font-size: 11px; color: var(--text-light); text-transform: uppercase; letter-spacing: 1px; }
+  .funnel-arrow-h { flex-shrink: 0; width: 40px; display: flex; align-items: center; justify-content: center; }
+  .funnel-arrow-h svg { width: 24px; height: 24px; fill: none; stroke: var(--gold); stroke-width: 1.5; opacity: 0.4; }
+  .funnel-item.result-item { background: linear-gradient(135deg, rgba(181,148,58,0.08), rgba(181,148,58,0.03)); border: 2px solid rgba(181,148,58,0.3); }
+  .funnel-item.result-item .step-value { color: var(--green-deep); font-size: 40px; }
+  .funnel-item.result-item .step-label { color: var(--gold); font-weight: 500; }
+
+  /* Vertical funnel for mobile */
+  .funnel-vertical { display: none; max-width: 400px; margin: 48px auto 0; }
+  .fv-step { text-align: center; padding: 24px 20px; background: rgba(181,148,58,0.04); border: 1px solid rgba(181,148,58,0.12); border-radius: 14px; }
+  .fv-step .step-num { font-family: 'DM Sans'; font-size: 10px; letter-spacing: 3px; text-transform: uppercase; color: var(--gold); margin-bottom: 6px; font-weight: 500; }
+  .fv-step .step-value { font-family: 'Cormorant Garamond'; font-size: 36px; font-weight: 600; color: var(--gold); line-height: 1; margin-bottom: 4px; }
+  .fv-step .step-label { font-size: 11px; color: var(--text-light); text-transform: uppercase; letter-spacing: 1px; }
+  .fv-step.result-item { background: linear-gradient(135deg, rgba(181,148,58,0.08), rgba(181,148,58,0.03)); border: 2px solid rgba(181,148,58,0.3); }
+  .fv-step.result-item .step-value { color: var(--green-deep); font-size: 40px; }
+  .fv-step.result-item .step-label { color: var(--gold); font-weight: 500; }
+  .fv-arrow { text-align: center; padding: 8px 0; }
+  .fv-arrow svg { width: 20px; height: 20px; fill: none; stroke: var(--gold); stroke-width: 1.5; opacity: 0.35; }
+
+  /* ── INCLUDES GRID ── */
+  .value-grid { display: grid; grid-template-columns: repeat(2,1fr); gap: 16px; margin-top: 40px; }
+  .value-item { display: flex; align-items: flex-start; gap: 16px; padding: 20px; background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.06); border-radius: 12px; }
+  .value-icon { width: 40px; height: 40px; border-radius: 10px; background: rgba(181,148,58,0.1); display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+  .value-icon svg { width: 20px; height: 20px; fill: none; stroke: var(--gold); stroke-width: 1.5; stroke-linecap: round; stroke-linejoin: round; }
+  .value-text h5 { font-family: 'DM Sans'; font-size: 14px; font-weight: 500; color: var(--white); margin-bottom: 4px; }
+  .value-text p { font-size: 12px; color: rgba(255,255,255,0.35); font-weight: 300; }
+  .value-text .valor { font-size: 11px; color: var(--gold-light); font-weight: 500; margin-top: 6px; }
+
+  .value-summary { text-align: center; margin-top: 48px; padding: 32px; background: rgba(181,148,58,0.06); border: 1px solid rgba(181,148,58,0.15); border-radius: 16px; }
+  .value-summary .crossed { font-family: 'Cormorant Garamond'; font-size: 28px; color: rgba(255,255,255,0.25); text-decoration: line-through; font-weight: 300; margin-bottom: 8px; }
+  .value-summary .actual { font-family: 'Cormorant Garamond'; font-size: 34px; color: var(--gold-light); font-weight: 600; }
+  .value-summary .actual-note { font-size: 12px; color: rgba(255,255,255,0.35); margin-top: 4px; }
+
+  /* ── TIMELINE ── */
+  .timeline { display: grid; grid-template-columns: repeat(3, 1fr); gap: 0; margin-top: 48px; max-width: 900px; margin-left: auto; margin-right: auto; position: relative; }
+  .timeline::before { content: ''; position: absolute; top: 36px; left: 15%; right: 15%; height: 2px; background: linear-gradient(90deg, var(--gold), rgba(181,148,58,0.2)); z-index: 0; }
+  .tl-step { text-align: center; position: relative; z-index: 1; }
+  .tl-dot { width: 72px; height: 72px; border-radius: 50%; background: var(--cream); border: 3px solid var(--gold); display: flex; align-items: center; justify-content: center; margin: 0 auto 20px; }
+  .tl-dot span { font-family: 'Cormorant Garamond'; font-size: 28px; font-weight: 600; color: var(--gold); }
+  .tl-step h4 { font-size: 20px; color: var(--text-dark); margin-bottom: 6px; }
+  .tl-step .tl-time { font-size: 11px; color: var(--gold); letter-spacing: 2px; text-transform: uppercase; font-weight: 500; margin-bottom: 8px; }
+  .tl-step p { font-size: 13px; color: var(--text-light); font-weight: 300; max-width: 220px; margin: 0 auto; line-height: 1.5; }
+  .tl-step:last-child .tl-dot { background: var(--green-deep); border-color: var(--gold-light); }
+  .tl-step:last-child .tl-dot span { color: var(--gold-light); }
+
+  /* ── INVESTMENT CARD ── */
+  .invest-card { max-width: 560px; margin: 48px auto 0; text-align: center; padding: 48px 40px; background: linear-gradient(180deg, rgba(181,148,58,0.08) 0%, rgba(181,148,58,0.02) 100%); border: 2px solid rgba(181,148,58,0.35); border-radius: 24px; position: relative; box-shadow: 0 30px 80px rgba(0,0,0,0.3); }
+  .invest-prices { display: flex; align-items: baseline; justify-content: center; gap: 12px; flex-wrap: wrap; margin-bottom: 12px; }
+  .invest-prices .setup { font-family: 'Cormorant Garamond'; font-size: 48px; font-weight: 600; color: var(--white); line-height: 1; }
+  .invest-prices .plus { font-size: 22px; color: rgba(255,255,255,0.25); }
+  .invest-prices .monthly { font-family: 'Cormorant Garamond'; font-size: 56px; font-weight: 600; color: var(--gold-light); line-height: 1; }
+  .invest-prices .per { font-size: 16px; color: rgba(255,255,255,0.35); font-weight: 300; }
+  .invest-detail { font-size: 12px; color: rgba(255,255,255,0.3); margin-bottom: 20px; }
+  .invest-badge { display: inline-block; background: linear-gradient(135deg, var(--gold), var(--gold-light)); color: var(--green-deep); padding: 10px 28px; border-radius: 100px; font-size: 12px; font-weight: 700; letter-spacing: 3px; text-transform: uppercase; margin-bottom: 24px; }
+  .invest-notes { font-size: 12px; color: rgba(255,255,255,0.25); line-height: 1.8; }
+
+  .cta-btn { display: inline-block; background: linear-gradient(135deg, var(--gold), var(--gold-light)); color: var(--green-deep); padding: 20px 56px; border-radius: 100px; font-size: 15px; font-weight: 600; text-decoration: none; letter-spacing: 2px; text-transform: uppercase; transition: transform 0.3s ease, box-shadow 0.3s ease; position: relative; z-index: 1; margin-top: 40px; }
+  .cta-btn:hover { transform: translateY(-2px); box-shadow: 0 12px 40px rgba(181,148,58,0.35); }
+
+  /* ── FOOTER ── */
+  .footer { text-align: center; padding: 32px; background: var(--green-deep); border-top: 1px solid rgba(255,255,255,0.05); }
+  .footer-text { font-size: 11px; color: rgba(255,255,255,0.2); letter-spacing: 2px; }
+
+  /* ── REVEAL ── */
+  .reveal { opacity: 0; transform: translateY(40px); transition: opacity 0.8s ease, transform 0.8s ease; }
+  .reveal.active { opacity: 1; transform: translateY(0); }
+  .reveal-delay-1 { transition-delay: 0.1s; }
+  .reveal-delay-2 { transition-delay: 0.2s; }
+  .reveal-delay-3 { transition-delay: 0.3s; }
+
+  /* ── RESPONSIVE ── */
+  @media (max-width: 768px) {
+    .cover { grid-template-columns: 1fr; min-height: auto; }
+    .cover-left { padding: 60px 24px 40px; order: 2; }
+    .cover-right { padding: 60px 24px 20px; min-height: auto; order: 1; }
+    .cover-photo { width: 180px; height: 180px; }
+    .cover-title { font-size: 36px; }
+    .section, .section-dark, .section-green, .section-cream { padding: 60px 24px; }
+    .guarantee-box { padding: 40px 24px; }
+    .guarantee-condition { font-size: 20px; }
+    .guarantee-result { font-size: 24px; }
+    .funnel-flow { display: none; }
+    .funnel-vertical { display: block; }
+    .value-grid { grid-template-columns: 1fr; }
+    .timeline { grid-template-columns: 1fr; gap: 32px; }
+    .timeline::before { display: none; }
+    .invest-prices .setup { font-size: 36px; }
+    .invest-prices .monthly { font-size: 44px; }
+    .invest-card { padding: 36px 24px; }
+    .cta-btn { padding: 18px 36px; font-size: 13px; }
+  }
+</style>
+</head>
+<body>
+
+<!-- ═══ 1. PORTADA ═══ -->
+<section class="cover">
+  <div class="cover-left">
+    <p class="cover-tag">Propuesta exclusiva</p>
+    <h1 class="cover-title">Garantía de<br>Resultados<br><em>Dr. Welbin Paredes</em></h1>
+    <div class="cover-divider"></div>
+    <p class="cover-sub"><strong>Cirugía Plástica, Reconstructiva y Estética</strong><br>Miembro SODOCIPRE &bull; Instituto de Cirugía Especializada</p>
+    <p class="cover-date">Marzo 2026</p>
+  </div>
+  <div class="cover-right">
+    <img src="dr-welbin-foto.jpg" alt="Dr. Welbin Paredes" class="cover-photo">
+    <div class="cover-dr-name-badge">
+      <p>Dr. Welbin Paredes</p>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ 2. ¿POR QUÉ UNA GARANTÍA? ═══ -->
+<section class="section">
+  <div class="reveal">
+    <p class="section-tag">Nuestra filosofía</p>
+    <h2 class="section-title">No le pedimos que confíe<br>en nosotros. Le pedimos que<br>nos ponga a prueba.</h2>
+    <p class="section-desc">Sabemos que invertir en marketing digital puede sentirse como un salto al vacío — especialmente cuando nunca lo ha hecho. Por eso, en lugar de pedirle que pague todo por adelantado, compartimos el riesgo con usted: paga la mitad ahora, y la otra mitad solo si ve resultados reales.</p>
+  </div>
+</section>
+
+<!-- ═══ 3. LA GARANTÍA ═══ -->
+<section class="section-dark">
+  <div class="section-inner">
+    <div class="reveal" style="text-align: center; margin-bottom: 32px;">
+      <p class="section-tag" style="text-align: center;">La garantía</p>
+      <h2 class="section-title" style="color: var(--white); text-align: center;">Riesgo compartido,<br>por escrito</h2>
+    </div>
+    <div class="guarantee-wrapper reveal reveal-delay-1">
+      <div class="guarantee-box">
+        <div class="guarantee-icon">
+          <svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><polyline points="9 12 11 14 15 10"/></svg>
+        </div>
+        <p class="guarantee-condition">Usted solo paga <strong style="color: var(--gold-light);">el 50% al inicio.</strong> Si en 3 meses no le generamos al menos <strong style="color: var(--gold-light);">3 pacientes nuevos</strong> a través de nuestro sistema...</p>
+        <p class="guarantee-result">No paga la otra mitad. <span>Así de simple.</span></p>
+        <p class="guarantee-fine">Sin letra pequeña. Sin condiciones ocultas. Sin excusas.</p>
+        <div class="guarantee-note">Solo 3 pacientes en 3 meses = usted decide si continuamos</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ 4. LOS NÚMEROS ═══ -->
+<section class="section-cream">
+  <div class="section-inner">
+    <div class="reveal" style="text-align: center;">
+      <p class="section-tag" style="text-align: center;">La matemática</p>
+      <h2 class="section-title" style="text-align: center;">Solo necesita 3 pacientes<br>en 3 meses</h2>
+    </div>
+
+    <!-- Horizontal funnel (desktop) -->
+    <div class="funnel-flow reveal reveal-delay-1">
+      <div class="funnel-step-row">
+        <div class="funnel-item">
+          <p class="step-num">Su riesgo inicial</p>
+          <p class="step-value">$1,500</p>
+          <p class="step-label">50% del setup</p>
+        </div>
+        <div class="funnel-arrow-h"><svg viewBox="0 0 24 24"><polyline points="9 6 15 12 9 18"/></svg></div>
+        <div class="funnel-item">
+          <p class="step-num">Leads esperados</p>
+          <p class="step-value">48 – 81</p>
+          <p class="step-label">Contactos interesados</p>
+        </div>
+        <div class="funnel-arrow-h"><svg viewBox="0 0 24 24"><polyline points="9 6 15 12 9 18"/></svg></div>
+        <div class="funnel-item">
+          <p class="step-num">Consultas agendadas</p>
+          <p class="step-value">8 – 16</p>
+          <p class="step-label">Citas en consultorio</p>
+        </div>
+        <div class="funnel-arrow-h"><svg viewBox="0 0 24 24"><polyline points="9 6 15 12 9 18"/></svg></div>
+        <div class="funnel-item">
+          <p class="step-num">Pacientes nuevos</p>
+          <p class="step-value">3 – 6</p>
+          <p class="step-label">Procedimientos cerrados</p>
+        </div>
+        <div class="funnel-arrow-h"><svg viewBox="0 0 24 24"><polyline points="9 6 15 12 9 18"/></svg></div>
+        <div class="funnel-item result-item">
+          <p class="step-num">Ingreso generado</p>
+          <p class="step-value">$15k – $30k</p>
+          <p class="step-label">ROI: 10× – 20×</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Vertical funnel (mobile) -->
+    <div class="funnel-vertical reveal reveal-delay-1">
+      <div class="fv-step">
+        <p class="step-num">Su riesgo inicial</p>
+        <p class="step-value">$1,500</p>
+        <p class="step-label">50% del setup</p>
+      </div>
+      <div class="fv-arrow"><svg viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9" fill="none" stroke="currentColor" stroke-width="1.5"/></svg></div>
+      <div class="fv-step">
+        <p class="step-num">Leads esperados</p>
+        <p class="step-value">48 – 81</p>
+        <p class="step-label">Contactos interesados</p>
+      </div>
+      <div class="fv-arrow"><svg viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9" fill="none" stroke="currentColor" stroke-width="1.5"/></svg></div>
+      <div class="fv-step">
+        <p class="step-num">Consultas agendadas</p>
+        <p class="step-value">8 – 16</p>
+        <p class="step-label">Citas en consultorio</p>
+      </div>
+      <div class="fv-arrow"><svg viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9" fill="none" stroke="currentColor" stroke-width="1.5"/></svg></div>
+      <div class="fv-step">
+        <p class="step-num">Pacientes nuevos</p>
+        <p class="step-value">3 – 6</p>
+        <p class="step-label">Procedimientos cerrados</p>
+      </div>
+      <div class="fv-arrow"><svg viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9" fill="none" stroke="currentColor" stroke-width="1.5"/></svg></div>
+      <div class="fv-step result-item">
+        <p class="step-num">Ingreso generado</p>
+        <p class="step-value">$15k – $30k</p>
+        <p class="step-label">ROI: 10× – 20×</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ 5. QUÉ INCLUYE ═══ -->
+<section class="section-green">
+  <div class="section-inner">
+    <div class="reveal">
+      <p class="section-tag">Todo incluido</p>
+      <h2 class="section-title" style="color: var(--white);">Su sistema completo de<br>adquisición de pacientes</h2>
+    </div>
+
+    <div class="value-grid reveal reveal-delay-1">
+      <div class="value-item">
+        <div class="value-icon"><svg viewBox="0 0 24 24"><path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"/></svg></div>
+        <div class="value-text">
+          <h5>Página web profesional</h5>
+          <p>Diseño premium específico para cirugía plástica con galería antes/después</p>
+          <p class="valor">Valor: $3,000</p>
+        </div>
+      </div>
+      <div class="value-item">
+        <div class="value-icon"><svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg></div>
+        <div class="value-text">
+          <h5>Meta Ads · 4-6 anuncios/mes</h5>
+          <p>Copy profesional + diseño visual + segmentación quirúrgica</p>
+          <p class="valor">Valor: $400/mes</p>
+        </div>
+      </div>
+      <div class="value-item">
+        <div class="value-icon"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg></div>
+        <div class="value-text">
+          <h5>Google Ads · búsqueda + extensiones</h5>
+          <p>Aparecer cuando buscan "cirujano plástico" en su zona</p>
+          <p class="valor">Valor: $350/mes</p>
+        </div>
+      </div>
+      <div class="value-item">
+        <div class="value-icon"><svg viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg></div>
+        <div class="value-text">
+          <h5>CRM + automatizaciones</h5>
+          <p>Seguimiento automático de cada lead desde el primer contacto</p>
+          <p class="valor">Valor: $500</p>
+        </div>
+      </div>
+      <div class="value-item">
+        <div class="value-icon"><svg viewBox="0 0 24 24"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"/><polyline points="17 6 23 6 23 12"/></svg></div>
+        <div class="value-text">
+          <h5>Retargeting de visitantes</h5>
+          <p>Seguir a quienes visitaron su web con anuncios personalizados</p>
+          <p class="valor">Valor: $300/mes</p>
+        </div>
+      </div>
+      <div class="value-item">
+        <div class="value-icon"><svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></div>
+        <div class="value-text">
+          <h5>Auditoría Google Business Profile</h5>
+          <p>Optimización de su perfil para aparecer en búsquedas locales</p>
+          <p class="valor">Valor: $200</p>
+        </div>
+      </div>
+      <div class="value-item" style="grid-column: 1 / -1; max-width: 460px; margin: 0 auto;">
+        <div class="value-icon"><svg viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg></div>
+        <div class="value-text">
+          <h5>Reportes mensuales</h5>
+          <p>Datos claros: leads, costo por lead, consultas, procedimientos cerrados</p>
+          <p class="valor">Incluido</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="value-summary reveal reveal-delay-2">
+      <p class="crossed">Valor total: $6,150+</p>
+      <p class="actual">Su riesgo hoy: solo $1,500</p>
+      <p class="actual-note">La otra mitad solo si ve resultados en 3 meses</p>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ 6. CÓMO FUNCIONA ═══ -->
+<section class="section">
+  <div class="reveal" style="text-align: center;">
+    <p class="section-tag" style="text-align: center;">Proceso</p>
+    <h2 class="section-title" style="text-align: center;">De la firma al<br>primer paciente</h2>
+  </div>
+
+  <div class="timeline reveal reveal-delay-1">
+    <div class="tl-step">
+      <div class="tl-dot"><span>1</span></div>
+      <p class="tl-time">Semana 1</p>
+      <h4>Setup completo</h4>
+      <p>Página web, CRM, cuentas publicitarias configuradas y listas. Usted paga $1,500.</p>
+    </div>
+    <div class="tl-step">
+      <div class="tl-dot"><span>2</span></div>
+      <p class="tl-time">Meses 1 – 3</p>
+      <h4>Campañas activas</h4>
+      <p>Anuncios corriendo, leads llegando, pacientes agendando. Todo trazable en el CRM.</p>
+    </div>
+    <div class="tl-step">
+      <div class="tl-dot"><span>3</span></div>
+      <p class="tl-time">Mes 3</p>
+      <h4>Evaluación</h4>
+      <p>¿Llegaron 3+ pacientes? Paga los otros $1,500. ¿No llegaron? No paga nada más.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ 7. INVERSIÓN ═══ -->
+<section class="section-dark">
+  <div class="section-inner">
+    <div class="reveal" style="text-align: center;">
+      <p class="section-tag" style="text-align: center;">Inversión</p>
+      <h2 class="section-title" style="color: var(--white); text-align: center;">Pague la mitad ahora.<br>La otra mitad, solo si funciona.</h2>
+    </div>
+
+    <div class="invest-card reveal reveal-delay-1">
+      <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 24px; margin-bottom: 24px;">
+        <div style="text-align: center; padding: 24px 16px; background: rgba(255,255,255,0.04); border-radius: 14px; border: 1px solid rgba(255,255,255,0.08);">
+          <p style="font-size: 10px; letter-spacing: 3px; text-transform: uppercase; color: var(--gold); margin-bottom: 8px;">Al firmar</p>
+          <p style="font-family: 'Cormorant Garamond'; font-size: 44px; font-weight: 600; color: var(--white); line-height: 1;">$1,500</p>
+          <p style="font-size: 11px; color: rgba(255,255,255,0.3); margin-top: 6px;">50% del setup</p>
+        </div>
+        <div style="text-align: center; padding: 24px 16px; background: rgba(181,148,58,0.06); border-radius: 14px; border: 1px solid rgba(181,148,58,0.15);">
+          <p style="font-size: 10px; letter-spacing: 3px; text-transform: uppercase; color: var(--gold); margin-bottom: 8px;">A los 3 meses</p>
+          <p style="font-family: 'Cormorant Garamond'; font-size: 44px; font-weight: 600; color: var(--gold-light); line-height: 1;">$1,500</p>
+          <p style="font-size: 11px; color: rgba(255,255,255,0.3); margin-top: 6px;">Solo si ve 3+ pacientes</p>
+        </div>
+      </div>
+      <div style="text-align: center; padding: 16px; background: rgba(255,255,255,0.03); border-radius: 10px; margin-bottom: 20px;">
+        <p style="font-size: 12px; color: rgba(255,255,255,0.4);">Después de los 3 meses:</p>
+        <p style="font-family: 'Cormorant Garamond'; font-size: 32px; font-weight: 600; color: var(--white); line-height: 1; margin-top: 4px;">$650<span style="font-size: 16px; color: rgba(255,255,255,0.35); font-weight: 300;">/mes</span></p>
+        <p style="font-size: 11px; color: rgba(255,255,255,0.25); margin-top: 4px;">Meta Ads + Google Ads + CRM + reportes</p>
+      </div>
+      <div class="invest-badge">Riesgo compartido</div>
+      <p class="invest-notes">
+        Pauta publicitaria aparte &middot; va directo a Meta/Google<br>
+        Recomendado: $400 – $800/mes en pauta<br><br>
+        <strong style="color: rgba(255,255,255,0.45);">Si no llegan 3 pacientes en 3 meses &rarr; no paga los otros $1,500</strong>
+      </p>
+    </div>
+
+    <div class="reveal reveal-delay-2" style="text-align: center;">
+      <a href="contrato-dr-welbin-paredes.html" class="cta-btn">Comenzar con riesgo compartido</a>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ FOOTER ═══ -->
+<footer class="footer">
+  <p class="footer-text">FLEXO MEDIA &mdash; MARKETING DIGITAL</p>
+</footer>
+
+<script>
+  // Scroll reveal
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('active');
+      }
+    });
+  }, { threshold: 0.15, rootMargin: '0px 0px -40px 0px' });
+
+  document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+</script>
+</body>
+</html>

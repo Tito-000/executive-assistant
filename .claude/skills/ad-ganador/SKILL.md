@@ -200,4 +200,4 @@ Reemplazar todos los placeholders con valores reales.
 - Textos siempre en español dominicano (tú, no usted)
 - Si los documentos de investigación están vacíos, notificar a Martin antes de continuar
 - Costo estimado: ~$0.04–0.09 por imagen, ~$0.12–0.27 por los 3 formatos
-- Registrar gasto en `IA Master Resources/gastos-api/gastos-api.csv` después de generar
+- Registrar gasto en `references/gastos-api.csv` después de generar

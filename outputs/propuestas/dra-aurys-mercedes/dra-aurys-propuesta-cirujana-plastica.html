@@ -34,9 +34,11 @@
     @keyframes shimmer { 0% { transform: translate(0,0); } 100% { transform: translate(-5%,5%); } }
 
     .cover-left { display: flex; flex-direction: column; justify-content: center; padding: 80px 70px; position: relative; z-index: 2; }
-    .cover-right { position: relative; display: flex; align-items: center; justify-content: center; overflow: hidden; }
-    .cover-right::before { content: ''; position: absolute; inset: 0; background: radial-gradient(ellipse at center, transparent 30%, var(--green-deep) 100%); z-index: 1; pointer-events: none; }
-    .cover-photo { width: 280px; height: 280px; border-radius: 50%; object-fit: cover; border: 4px solid rgba(181,148,58,0.3); box-shadow: 0 40px 80px rgba(0,0,0,0.5); position: relative; z-index: 2; }
+    .cover-right { position: relative; display: flex; align-items: center; justify-content: center; overflow: hidden; flex-direction: column; gap: 20px; z-index: 2; }
+    .cover-right::before { content: ''; position: absolute; inset: 0; background: radial-gradient(ellipse at center, transparent 30%, var(--green-deep) 100%); z-index: 0; pointer-events: none; }
+    .cover-photo { width: 280px; height: 280px; border-radius: 50%; object-fit: cover; border: 4px solid rgba(181,148,58,0.4); box-shadow: 0 40px 80px rgba(0,0,0,0.5); position: relative; z-index: 3; }
+    .cover-name { font-size: 18px; font-weight: 500; color: var(--white); font-family: 'Cormorant Garamond'; letter-spacing: 0.05em; position: relative; z-index: 3; }
+    .cover-title-sub { font-size: 13px; color: rgba(255,255,255,0.4); letter-spacing: 2px; text-transform: uppercase; position: relative; z-index: 3; }
     .cover-dr-name-badge { position: relative; z-index: 2; text-align: center; margin-top: 24px; }
     .cover-dr-name-badge p { font-size: 11px; color: rgba(255,255,255,0.35); letter-spacing: 2px; text-transform: uppercase; }
 
@@ -101,6 +103,50 @@
 
     .footer { background: var(--cream-dark); padding: 40px; text-align: center; font-size: 12px; color: var(--text-light); }
 
+    /* KEYWORDS TABLE */
+    .kw-table { width: 100%; border-collapse: collapse; margin: 24px 0 16px; font-size: 13px; }
+    .kw-table th { background: var(--green-deep); color: var(--white); padding: 12px 16px; text-align: left; font-size: 11px; letter-spacing: 2px; text-transform: uppercase; font-weight: 500; }
+    .kw-table td { padding: 12px 16px; border-bottom: 1px solid var(--cream-dark); font-weight: 300; color: var(--text-dark); }
+    .kw-table tr:last-child td { border-bottom: none; }
+    .kw-badge { display: inline-block; padding: 4px 12px; border-radius: 12px; font-size: 10px; font-weight: 600; letter-spacing: 1px; text-transform: uppercase; }
+    .kw-high { background: rgba(181,148,58,0.15); color: var(--gold); }
+    .kw-med { background: rgba(181,148,58,0.08); color: rgba(181,148,58,0.7); }
+
+    /* PRICING CARDS GRID */
+    .pricing-cards { display: grid; grid-template-columns: repeat(3,1fr); gap: 20px; margin-top: 48px; max-width: 1100px; margin-left: auto; margin-right: auto; }
+    .pricing-card { background: rgba(181,148,58,0.04); border: 1px solid rgba(181,148,58,0.1); border-radius: 14px; padding: 32px 24px; text-align: center; }
+    .pricing-card h4 { font-size: 18px; color: var(--text-dark); margin-bottom: 16px; }
+    .pricing-card ul { list-style: none; text-align: left; margin-bottom: 24px; }
+    .pricing-card li { font-size: 13px; color: var(--text-mid); padding: 8px 0; border-bottom: 1px solid rgba(181,148,58,0.05); font-weight: 300; }
+    .pricing-card li:last-child { border-bottom: none; }
+    .pricing-card .price { font-family: 'Cormorant Garamond'; font-size: 44px; font-weight: 600; color: var(--gold); line-height: 1; margin-bottom: 4px; }
+    .pricing-card .price-label { font-size: 11px; color: var(--text-light); }
+
+    /* 3-WAY CLOSE */
+    .close-3col { display: grid; grid-template-columns: 1fr 1.15fr 1fr; gap: 20px; max-width: 1100px; margin: 0 auto; align-items: start; }
+    .close-card { border-radius: 20px; padding: 40px 32px 36px; text-align: center; position: relative; }
+    .close-card-basic { background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.08); }
+    .close-card-featured { background: linear-gradient(180deg, rgba(181,148,58,0.08) 0%, rgba(181,148,58,0.02) 100%); border: 2px solid rgba(181,148,58,0.35); transform: scale(1.02); box-shadow: 0 30px 80px rgba(0,0,0,0.3); }
+    .close-card-danger { background: rgba(192,57,43,0.03); border: 1px solid rgba(192,57,43,0.08); }
+    .close-card-badge { position: absolute; top: -15px; left: 50%; transform: translateX(-50%); background: linear-gradient(135deg, var(--gold), var(--gold-light)); color: var(--green-deep); padding: 7px 24px; border-radius: 100px; font-size: 10px; font-weight: 700; letter-spacing: 3px; text-transform: uppercase; white-space: nowrap; }
+    .close-card h3 { font-family: 'Cormorant Garamond'; font-size: 26px; margin-bottom: 24px; }
+    .close-card-basic h3 { color: rgba(255,255,255,0.7); }
+    .close-card-featured h3 { font-size: 28px; color: var(--gold-light); }
+    .close-card-danger h3 { color: rgba(192,57,43,0.4); }
+    .close-list { text-align: left; margin-bottom: 24px; }
+    .close-item { display: flex; align-items: center; gap: 10px; padding: 10px 0; border-bottom: 1px solid rgba(255,255,255,0.06); font-size: 13px; font-weight: 300; }
+    .close-item svg { width: 16px; height: 16px; flex-shrink: 0; }
+    .close-card-basic .close-item { color: rgba(255,255,255,0.5); }
+    .close-card-featured .close-item { color: rgba(255,255,255,0.7); }
+    .close-card-danger .close-item { color: rgba(255,255,255,0.15); }
+    .close-price { background: rgba(255,255,255,0.03); border-radius: 12px; padding: 24px 16px; border: 1px solid rgba(255,255,255,0.06); }
+    .close-price .big { font-family: 'Cormorant Garamond'; font-size: 44px; font-weight: 600; color: rgba(255,255,255,0.6); line-height: 1; }
+    .close-card-featured .close-price { background: linear-gradient(135deg, rgba(181,148,58,0.1) 0%, rgba(181,148,58,0.04) 100%); border: 1px solid rgba(181,148,58,0.2); }
+    .close-card-featured .close-price .big { color: var(--white); }
+    .close-card-featured .close-price .big-highlight { color: var(--gold-light); font-size: 48px; }
+    .close-price .small { font-size: 11px; color: rgba(255,255,255,0.2); margin-top: 6px; }
+    .close-card-danger .close-price .big { color: rgba(192,57,43,0.25); }
+
     .reveal { opacity: 0; animation: revealUp 0.8s ease forwards; }
     @keyframes revealUp { to { opacity: 1; transform: translateY(0); } from { opacity: 0; transform: translateY(30px); } }
 
@@ -124,7 +170,13 @@
     <p class="cover-sub">Una estrategia integral de contenido, Google Ads y Meta Ads diseñada para <strong>atraer pacientes de alto valor</strong> a tu consultorio de cirugía plástica.</p>
     <p class="cover-date">Marzo 2026 — Por Martin Mercedes</p>
   </div>
-  <div class="cover-right"></div>
+  <div class="cover-right">
+    <img src="https://images.leadconnectorhq.com/image/f_webp/q_80/r_900/u_https://assets.cdn.filesafe.space/35VKsny1Wm9tODTzqbd5/media/67a901da9769a77ca36178e4.png" alt="Dra. Aurys Mercedes" class="cover-photo">
+    <div style="text-align: center;">
+      <p class="cover-name">Dra. Aurys Mercedes</p>
+      <p class="cover-title-sub">Cirujana Plástica Certificada</p>
+    </div>
+  </div>
 </section>
 
 <!-- 01: DIAGNÓSTICO -->
@@ -148,6 +200,47 @@
         <div class="label">Anuncios dirigidos<br>en Meta Ads</div>
       </div>
     </div>
+
+    <!-- KEYWORDS SECTION -->
+    <div style="margin-top: 72px;">
+      <h3 style="font-size: 26px; color: var(--green-deep); margin-bottom: 16px; font-family: 'Cormorant Garamond';">Sus pacientes ya lo están buscando en Google</h3>
+      <p style="font-size: 14px; color: var(--text-mid); margin-bottom: 32px; font-weight: 300;">Cada mes, miles de personas en República Dominicana buscan cirujanos plásticos online. La pregunta no es si hay demanda — es si lo están encontrando a usted.</p>
+
+      <div class="stat-row">
+        <div class="stat-box">
+          <div class="big">90,500</div>
+          <div class="label">Búsquedas/mes<br>"rinoplastia"</div>
+        </div>
+        <div class="stat-box">
+          <div class="big">40,000</div>
+          <div class="label">Búsquedas/mes<br>"liposucción"</div>
+        </div>
+        <div class="stat-box">
+          <div class="big">33,000</div>
+          <div class="label">Búsquedas/mes<br>"aumento de senos"</div>
+        </div>
+      </div>
+
+      <div style="margin-top: 48px;">
+        <h4 style="font-size: 18px; color: var(--text-dark); margin-bottom: 8px; font-family: 'Cormorant Garamond';">Palabras clave en República Dominicana</h4>
+        <p style="font-size: 13px; color: var(--text-light); font-weight: 300; margin-bottom: 20px;">Lo que buscan sus pacientes potenciales cada mes</p>
+        <table class="kw-table">
+          <thead><tr><th>Palabra Clave</th><th>Vol. Mensual Est.</th><th>Intención</th></tr></thead>
+          <tbody>
+            <tr><td>cirujano plástico Santo Domingo</td><td>500 – 1,500</td><td><span class="kw-badge kw-high">Alta</span></td></tr>
+            <tr><td>liposucción precio RD</td><td>300 – 800</td><td><span class="kw-badge kw-high">Alta</span></td></tr>
+            <tr><td>rinoplastia República Dominicana</td><td>200 – 600</td><td><span class="kw-badge kw-high">Alta</span></td></tr>
+            <tr><td>aumento de senos Santo Domingo</td><td>300 – 800</td><td><span class="kw-badge kw-high">Alta</span></td></tr>
+            <tr><td>cuánto cuesta una lipo en RD</td><td>300 – 700</td><td><span class="kw-badge kw-high">Alta</span></td></tr>
+            <tr><td>mejor cirujano plástico RD</td><td>200 – 500</td><td><span class="kw-badge kw-high">Alta</span></td></tr>
+            <tr><td>BBL República Dominicana</td><td>200 – 600</td><td><span class="kw-badge kw-med">Media</span></td></tr>
+            <tr><td>abdominoplastia RD</td><td>100 – 400</td><td><span class="kw-badge kw-med">Media</span></td></tr>
+            <tr><td>cirugía plástica antes y después</td><td>500 – 1,200</td><td><span class="kw-badge kw-med">Media</span></td></tr>
+          </tbody>
+        </table>
+        <p style="font-size: 11px; color: var(--text-light); margin-top: 12px; font-style: italic;">Fuentes: Google Keyword Planner, benchmarks de la industria (LocaliQ 2025, PPC.io). Volúmenes RD estimados.</p>
+      </div>
+    </div>
   </div>
 </section>
 
@@ -158,21 +251,171 @@
     <h2 class="section-title">Hoy dependes del azar</h2>
     <p class="section-desc">Sin una estrategia digital activa, tu crecimiento queda a merced del algoritmo y las búsquedas espontáneas. Mientras tanto, tus competidores están capturando los pacientes que podrían ser tuyos.</p>
 
+    <!-- PROBLEMA CARDS -->
     <div class="problem-grid">
       <div class="problem-card">
         <div class="num">1</div>
-        <h4>Sin presencia en búsquedas</h4>
-        <p>Cuando alguien busca "cirugía plástica Santo Domingo", tu consultorio no aparece. Los pacientes con intención de compra te ignoran y van a la competencia.</p>
+        <h4>Pacientes invisibles</h4>
+        <p>Cuando alguien busca "cirugía plástica Santo Domingo" o "liposucción RD", tu consultorio no aparece. Los pacientes con intención de compra te ignoran y van a la competencia.</p>
       </div>
       <div class="problem-card">
         <div class="num">2</div>
-        <h4>Redes sin estrategia</h4>
-        <p>Tu Instagram existe pero sin un calendario editorial. No hay contenido que eduque, inspire o genere confianza en tus procedimientos.</p>
+        <h4>Referidos impredecibles</h4>
+        <p>Tu crecimiento depende 100% del "boca a boca". Sin una estrategia de contenido + anuncios, no hay forma de captar nuevos pacientes de forma constante.</p>
       </div>
       <div class="problem-card">
         <div class="num">3</div>
-        <h4>Sin retargeting</h4>
-        <p>Las personas que visitan tu web sin contactar se pierden. No hay anuncios dirigidos que los reconecten contigo más tarde.</p>
+        <h4>Competencia invirtiendo</h4>
+        <p>Mientras esperas referidos, tus competidores están en Google Ads, Meta Ads e Instagram con contenido educativo. Ellos crecen. Tú no.</p>
+      </div>
+    </div>
+
+    <!-- ESTADÍSTICAS -->
+    <div style="display: grid; grid-template-columns: repeat(3,1fr); gap: 20px; margin-top: 60px;">
+      <div style="background: rgba(181,148,58,0.08); padding: 32px; border-radius: 14px; text-align: center; border-left: 4px solid var(--gold);">
+        <p style="font-family: 'Cormorant Garamond'; font-size: 52px; font-weight: 600; color: var(--green-deep); line-height: 1; margin-bottom: 8px;">72%</p>
+        <p style="font-size: 13px; color: var(--text-mid); font-weight: 300;">de las personas buscan cirujanos plásticos en Google antes de contactar</p>
+      </div>
+      <div style="background: rgba(181,148,58,0.08); padding: 32px; border-radius: 14px; text-align: center; border-left: 4px solid var(--gold);">
+        <p style="font-family: 'Cormorant Garamond'; font-size: 52px; font-weight: 600; color: var(--green-deep); line-height: 1; margin-bottom: 8px;">28%</p>
+        <p style="font-size: 13px; color: var(--text-mid); font-weight: 300;">de tus pacientes potenciales están en Facebook e Instagram ahora</p>
+      </div>
+      <div style="background: rgba(181,148,58,0.08); padding: 32px; border-radius: 14px; text-align: center; border-left: 4px solid var(--gold);">
+        <p style="font-family: 'Cormorant Garamond'; font-size: 52px; font-weight: 600; color: var(--green-deep); line-height: 1; margin-bottom: 8px;">$5,000</p>
+        <p style="font-size: 13px; color: var(--text-mid); font-weight: 300;">es lo que pierdes cada mes sin estrategia activa de captación</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- RESULTADOS ESPERADOS -->
+<section class="section-dark" style="padding: 100px 60px; background: var(--green-deep);">
+  <div class="section-inner">
+    <div style="text-align: center; margin-bottom: 50px;">
+      <h2 class="section-title" style="color: var(--white);">¿Qué resultados puedes esperar?</h2>
+      <p style="font-size: 13px; color: rgba(255,255,255,0.35); letter-spacing: 2px; text-transform: uppercase; font-weight: 300; margin-top: 12px;">Estimaciones conservadoras basadas en benchmarks reales de cirugía plástica (LocalIQ 2025, PPC.io)</p>
+    </div>
+
+    <!-- 4 MÉTRICAS GRANDES -->
+    <div style="display: grid; grid-template-columns: repeat(4,1fr); gap: 20px; margin-bottom: 60px; max-width: 1100px; margin-left: auto; margin-right: auto;">
+      <div style="background: rgba(181,148,58,0.08); border: 1px solid rgba(181,148,58,0.15); padding: 32px 20px; border-radius: 12px; text-align: center;">
+        <p style="font-family: 'Cormorant Garamond'; font-size: 44px; font-weight: 600; color: var(--gold-light); line-height: 1; margin-bottom: 10px;">5.81%</p>
+        <p style="font-size: 11px; color: rgba(255,255,255,0.3); letter-spacing: 2px; text-transform: uppercase;">CTR Promedio</p>
+      </div>
+      <div style="background: rgba(181,148,58,0.08); border: 1px solid rgba(181,148,58,0.15); padding: 32px 20px; border-radius: 12px; text-align: center;">
+        <p style="font-family: 'Cormorant Garamond'; font-size: 44px; font-weight: 600; color: var(--gold-light); line-height: 1; margin-bottom: 10px;">8.52%</p>
+        <p style="font-size: 11px; color: rgba(255,255,255,0.3); letter-spacing: 2px; text-transform: uppercase;">Conversión</p>
+      </div>
+      <div style="background: rgba(181,148,58,0.08); border: 1px solid rgba(181,148,58,0.15); padding: 32px 20px; border-radius: 12px; text-align: center;">
+        <p style="font-family: 'Cormorant Garamond'; font-size: 44px; font-weight: 600; color: var(--gold-light); line-height: 1; margin-bottom: 10px;">$15–30</p>
+        <p style="font-size: 11px; color: rgba(255,255,255,0.3); letter-spacing: 2px; text-transform: uppercase;">Costo/Lead RD</p>
+      </div>
+      <div style="background: rgba(181,148,58,0.08); border: 1px solid rgba(181,148,58,0.15); padding: 32px 20px; border-radius: 12px; text-align: center;">
+        <p style="font-family: 'Cormorant Garamond'; font-size: 44px; font-weight: 600; color: var(--gold-light); line-height: 1; margin-bottom: 10px;">$5,000</p>
+        <p style="font-size: 11px; color: rgba(255,255,255,0.3); letter-spacing: 2px; text-transform: uppercase;">Ticket/Procedimiento</p>
+      </div>
+    </div>
+
+    <!-- 2 COLUMNAS: GOOGLE ADS vs META + GOOGLE ADS -->
+    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 40px; max-width: 900px; margin: 0 auto;">
+
+      <!-- SOLO GOOGLE ADS -->
+      <div style="background: rgba(181,148,58,0.04); border: 1px solid rgba(181,148,58,0.12); border-radius: 16px; padding: 40px 36px;">
+        <h3 style="font-family: 'Cormorant Garamond'; font-size: 26px; color: rgba(255,255,255,0.7); margin-bottom: 8px;">Solo Google Ads</h3>
+        <p style="font-size: 12px; color: rgba(255,255,255,0.25); margin-bottom: 32px; letter-spacing: 1px; text-transform: uppercase;">Búsqueda enfocada</p>
+
+        <!-- Línea de $300 fee -->
+        <div style="background: rgba(181,148,58,0.06); border-radius: 10px; padding: 16px; text-align: center; margin-bottom: 24px;">
+          <p style="font-size: 12px; color: rgba(255,255,255,0.3); text-transform: uppercase; letter-spacing: 1px; margin-bottom: 4px;">Inversión Mensual</p>
+          <p style="font-family: 'Cormorant Garamond'; font-size: 36px; font-weight: 600; color: var(--gold-light); line-height: 1; margin-bottom: 4px;">$300</p>
+          <p style="font-size: 11px; color: rgba(255,255,255,0.2);">$300 fee + $400 pauta</p>
+        </div>
+
+        <p style="text-align: center; color: rgba(181,148,58,0.5); margin-bottom: 20px; font-size: 18px;">↓</p>
+
+        <!-- LEADS GENERADOS -->
+        <div style="background: rgba(181,148,58,0.06); border-radius: 10px; padding: 16px; text-align: center; margin-bottom: 24px;">
+          <p style="font-size: 12px; color: rgba(255,255,255,0.3); text-transform: uppercase; letter-spacing: 1px; margin-bottom: 4px;">Leads Generados</p>
+          <p style="font-family: 'Cormorant Garamond'; font-size: 36px; font-weight: 600; color: var(--gold-light); line-height: 1;">16 – 27</p>
+          <p style="font-size: 11px; color: rgba(255,255,255,0.25); margin-top: 4px;">CPA: $15 – $25</p>
+        </div>
+
+        <p style="text-align: center; color: rgba(181,148,58,0.5); margin-bottom: 20px; font-size: 18px;">↓</p>
+
+        <!-- CONSULTAS AGENDADAS -->
+        <div style="background: rgba(181,148,58,0.06); border-radius: 10px; padding: 16px; text-align: center; margin-bottom: 24px;">
+          <p style="font-size: 12px; color: rgba(255,255,255,0.3); text-transform: uppercase; letter-spacing: 1px; margin-bottom: 4px;">Consultas Agendadas</p>
+          <p style="font-family: 'Cormorant Garamond'; font-size: 36px; font-weight: 600; color: var(--gold-light); line-height: 1;">5 – 11</p>
+          <p style="font-size: 11px; color: rgba(255,255,255,0.25); margin-top: 4px;">Tasa: ~35%</p>
+        </div>
+
+        <p style="text-align: center; color: rgba(181,148,58,0.5); margin-bottom: 20px; font-size: 18px;">↓</p>
+
+        <!-- PROCEDIMIENTOS -->
+        <div style="background: rgba(181,148,58,0.06); border-radius: 10px; padding: 16px; text-align: center; margin-bottom: 24px;">
+          <p style="font-size: 12px; color: rgba(255,255,255,0.3); text-transform: uppercase; letter-spacing: 1px; margin-bottom: 4px;">Procedimientos</p>
+          <p style="font-family: 'Cormorant Garamond'; font-size: 36px; font-weight: 600; color: var(--gold-light); line-height: 1;">1 – 3</p>
+          <p style="font-size: 11px; color: rgba(255,255,255,0.25); margin-top: 4px;">Tasa: ~25%</p>
+        </div>
+
+        <p style="text-align: center; color: rgba(181,148,58,0.5); margin-bottom: 20px; font-size: 18px;">↓</p>
+
+        <!-- INGRESO ESTIMADO -->
+        <div style="background: rgba(181,148,58,0.1); border: 1px solid rgba(181,148,58,0.2); border-radius: 10px; padding: 16px; text-align: center;">
+          <p style="font-size: 12px; color: rgba(255,255,255,0.3); text-transform: uppercase; letter-spacing: 1px; margin-bottom: 4px;">Ingreso Estimado</p>
+          <p style="font-family: 'Cormorant Garamond'; font-size: 36px; font-weight: 600; color: var(--white); line-height: 1; margin-bottom: 4px;">$5k – $15k</p>
+          <p style="font-size: 11px; color: var(--gold); margin-top: 4px;">ROI: 5x – 17x</p>
+        </div>
+      </div>
+
+      <!-- META + GOOGLE ADS -->
+      <div style="background: linear-gradient(135deg, rgba(181,148,58,0.12) 0%, rgba(181,148,58,0.04) 100%); border: 2px solid rgba(181,148,58,0.28); border-radius: 16px; padding: 40px 36px; position: relative;">
+        <div style="position: absolute; top: -14px; left: 50%; transform: translateX(-50%); background: linear-gradient(135deg, var(--gold), var(--gold-light)); color: var(--green-deep); padding: 7px 22px; border-radius: 100px; font-size: 10px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase;">Recomendado</div>
+        <h3 style="font-family: 'Cormorant Garamond'; font-size: 26px; color: var(--gold-light); margin-bottom: 8px; margin-top: 8px;">Meta + Google Ads</h3>
+        <p style="font-size: 12px; color: rgba(181,148,58,0.6); margin-bottom: 32px; letter-spacing: 1px; text-transform: uppercase;">Máxima Visibilidad</p>
+
+        <!-- Línea de $1,600 total -->
+        <div style="background: rgba(181,148,58,0.1); border-radius: 10px; padding: 16px; text-align: center; margin-bottom: 24px; border: 1px solid rgba(181,148,58,0.2);">
+          <p style="font-size: 12px; color: rgba(255,255,255,0.35); text-transform: uppercase; letter-spacing: 1px; margin-bottom: 4px;">Inversión Mensual</p>
+          <p style="font-family: 'Cormorant Garamond'; font-size: 36px; font-weight: 600; color: var(--gold-light); line-height: 1; margin-bottom: 4px;">$1,600</p>
+          <p style="font-size: 11px; color: rgba(255,255,255,0.25);">$800 fee + $800 pauta · CRM incluido</p>
+        </div>
+
+        <p style="text-align: center; color: rgba(181,148,58,0.4); margin-bottom: 20px; font-size: 18px;">↓</p>
+
+        <!-- LEADS GENERADOS -->
+        <div style="background: rgba(181,148,58,0.1); border-radius: 10px; padding: 16px; text-align: center; margin-bottom: 24px; border: 1px solid rgba(181,148,58,0.2);">
+          <p style="font-size: 12px; color: rgba(255,255,255,0.35); text-transform: uppercase; letter-spacing: 1px; margin-bottom: 4px;">Leads Generados</p>
+          <p style="font-family: 'Cormorant Garamond'; font-size: 36px; font-weight: 600; color: var(--gold-light); line-height: 1;">28 – 48</p>
+          <p style="font-size: 11px; color: rgba(255,255,255,0.3); margin-top: 4px;">Meta + Google combinados</p>
+        </div>
+
+        <p style="text-align: center; color: rgba(181,148,58,0.4); margin-bottom: 20px; font-size: 18px;">↓</p>
+
+        <!-- CONSULTAS AGENDADAS -->
+        <div style="background: rgba(181,148,58,0.1); border-radius: 10px; padding: 16px; text-align: center; margin-bottom: 24px; border: 1px solid rgba(181,148,58,0.2);">
+          <p style="font-size: 12px; color: rgba(255,255,255,0.35); text-transform: uppercase; letter-spacing: 1px; margin-bottom: 4px;">Consultas Agendadas</p>
+          <p style="font-family: 'Cormorant Garamond'; font-size: 36px; font-weight: 600; color: var(--gold-light); line-height: 1;">8 – 19</p>
+          <p style="font-size: 11px; color: rgba(255,255,255,0.3); margin-top: 4px;">Tasa: ~35%</p>
+        </div>
+
+        <p style="text-align: center; color: rgba(181,148,58,0.4); margin-bottom: 20px; font-size: 18px;">↓</p>
+
+        <!-- PROCEDIMIENTOS -->
+        <div style="background: rgba(181,148,58,0.1); border-radius: 10px; padding: 16px; text-align: center; margin-bottom: 24px; border: 1px solid rgba(181,148,58,0.2);">
+          <p style="font-size: 12px; color: rgba(255,255,255,0.35); text-transform: uppercase; letter-spacing: 1px; margin-bottom: 4px;">Procedimientos</p>
+          <p style="font-family: 'Cormorant Garamond'; font-size: 36px; font-weight: 600; color: var(--gold-light); line-height: 1;">2 – 6</p>
+          <p style="font-size: 11px; color: rgba(255,255,255,0.3); margin-top: 4px;">Tasa: ~25%</p>
+        </div>
+
+        <p style="text-align: center; color: rgba(181,148,58,0.4); margin-bottom: 20px; font-size: 18px;">↓</p>
+
+        <!-- INGRESO ESTIMADO -->
+        <div style="background: rgba(181,148,58,0.15); border: 2px solid rgba(181,148,58,0.3); border-radius: 10px; padding: 16px; text-align: center;">
+          <p style="font-size: 12px; color: rgba(255,255,255,0.35); text-transform: uppercase; letter-spacing: 1px; margin-bottom: 4px;">Ingreso Estimado</p>
+          <p style="font-family: 'Cormorant Garamond'; font-size: 36px; font-weight: 600; color: var(--white); line-height: 1; margin-bottom: 4px;">$10k – $30k</p>
+          <p style="font-size: 11px; color: var(--gold-light); margin-top: 4px;">ROI: 6x – 19x</p>
+        </div>
       </div>
     </div>
   </div>
@@ -223,20 +466,217 @@
   </div>
 </section>
 
-<!-- PRICING -->
-<section class="section-dark">
+<!-- DESGLOSE DE SERVICIOS -->
+<section class="section">
   <div class="section-inner">
-    <div class="pricing-box">
-      <p class="pricing-box price-tag">Paquete Completo</p>
-      <div style="font-family:'Cormorant Garamond',serif; font-size:72px; font-weight:600; color:var(--gold); line-height:1; margin-bottom:8px;">$500</div>
-      <div style="font-size:13px; color:rgba(255,255,255,0.6); margin-bottom:20px;">/mes · pauta de anuncios aparte</div>
-      <p style="font-size: 13px; color: rgba(255,255,255,0.5); margin-bottom: 24px;">Incluye: Google Ads + Meta Ads + Estrategia de contenido + Reportes mensuales</p>
-      <div style="background: var(--gold); color: var(--green-deep); font-size: 12px; font-weight: 700; padding: 8px 20px; border-radius: 20px; display: inline-block; letter-spacing: 0.05em;">TODO INCLUIDO</div>
+    <div style="text-align: center; margin-bottom: 48px;">
+      <p class="section-tag">Inversión</p>
+      <h2 class="section-title">Lo que incluye cada estrategia</h2>
+      <p style="font-size: 14px; color: var(--text-mid); font-weight: 300;">Si contratara cada servicio por separado, así quedaría</p>
     </div>
 
-    <p style="font-size: 13px; color: rgba(255,255,255,0.4); margin-top: 40px; text-align: center;">
-      <strong>Nota importante:</strong> La pauta publicitaria (presupuesto de anuncios en Google y Meta) va aparte. Recomendado: $300–$500/mes para comenzar. El presupuesto te da control total sobre cuánto gastas en ads.
-    </p>
+    <div class="pricing-cards">
+      <!-- GOOGLE ADS -->
+      <div class="pricing-card">
+        <h4>Google Ads</h4>
+        <ul>
+          <li>✓ Campañas de búsqueda (keywords de cirugía plástica)</li>
+          <li>✓ Extensiones de anuncio (llamada, ubicación, reseñas)</li>
+          <li>✓ Tracking de conversiones</li>
+          <li>✓ Optimización mensual</li>
+        </ul>
+        <div class="price">$300</div>
+        <div class="price-label">/mes</div>
+      </div>
+
+      <!-- META ADS -->
+      <div class="pricing-card">
+        <h4>Meta Ads</h4>
+        <ul>
+          <li>✓ 4-6 anuncios mensuales en Facebook e Instagram</li>
+          <li>✓ Copy + diseño incluido</li>
+          <li>✓ Retargeting a visitantes del sitio</li>
+          <li>✓ Mensajería directa (WhatsApp / Messenger)</li>
+        </ul>
+        <div class="price">$300</div>
+        <div class="price-label">/mes</div>
+      </div>
+
+      <!-- CONTENIDO -->
+      <div class="pricing-card">
+        <h4>Estrategia de Contenido</h4>
+        <ul>
+          <li>✓ Calendario editorial mensual</li>
+          <li>✓ Posts semanales + reels educativos</li>
+          <li>✓ Video testimonios</li>
+          <li>✓ Engagement moderado en redes</li>
+        </ul>
+        <div class="price">$300</div>
+        <div class="price-label">/mes</div>
+      </div>
+    </div>
+
+    <div style="text-align: center; margin-top: 48px; padding: 32px; background: rgba(181,148,58,0.06); border-radius: 14px; border-left: 4px solid var(--gold);">
+      <p style="font-size: 13px; color: var(--text-light); margin-bottom: 8px; font-weight: 300;">Total individual: <strong>$900/mes</strong></p>
+      <p style="font-size: 16px; color: var(--gold); font-weight: 600;">Paquete Completo: <strong>$600/mes</strong></p>
+      <p style="font-size: 12px; color: var(--text-mid); margin-top: 8px;"><strong>Ahorro: $300/mes</strong></p>
+    </div>
+  </div>
+</section>
+
+<!-- 3-WAY CLOSE -->
+<section class="section-dark" style="padding: 120px 60px 100px;">
+  <div class="section-inner">
+    <div style="text-align: center; margin-bottom: 60px;">
+      <p class="section-tag" style="text-align: center;">Inversión</p>
+      <h2 class="section-title" style="color: var(--white); text-align: center; margin-bottom: 12px;">Elija su camino</h2>
+      <p style="font-size: 15px; color: rgba(255,255,255,0.35); font-weight: 300;">Tres opciones claras. La decisión es suya.</p>
+    </div>
+
+    <div class="close-3col">
+      <!-- OPCIÓN 1: SOLO GOOGLE ADS -->
+      <div class="close-card close-card-basic">
+        <p style="font-size: 10px; letter-spacing: 4px; text-transform: uppercase; color: rgba(255,255,255,0.25); margin-bottom: 12px;">Opción 1</p>
+        <h3>Solo Google Ads</h3>
+
+        <div class="close-list">
+          <div class="close-item">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+            <span>Campañas de búsqueda (keywords cirugía plástica RD)</span>
+          </div>
+          <div class="close-item">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+            <span>Extensiones de anuncio (llamada, ubicación)</span>
+          </div>
+          <div class="close-item">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+            <span>Tracking de conversiones</span>
+          </div>
+          <div class="close-item">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+            <span>Reporte mensual</span>
+          </div>
+          <div class="close-item" style="color: rgba(255,255,255,0.15); border-bottom-color: rgba(192,57,43,0.15);">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+            <span style="text-decoration: line-through;">Meta Ads</span>
+          </div>
+          <div class="close-item" style="color: rgba(255,255,255,0.15);">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+            <span style="text-decoration: line-through;">Estrategia de contenido</span>
+          </div>
+        </div>
+
+        <div class="close-price">
+          <div class="big">$300</div>
+          <div class="small">/mes</div>
+        </div>
+      </div>
+
+      <!-- OPCIÓN 2: PAQUETE COMPLETO -->
+      <div class="close-card close-card-featured">
+        <div class="close-card-badge">Recomendado</div>
+        <p style="font-size: 10px; letter-spacing: 4px; text-transform: uppercase; color: var(--gold); margin-bottom: 12px;">Opción 2</p>
+        <h3>Paquete Completo</h3>
+
+        <div class="close-list">
+          <div class="close-item">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+            <span>Google Ads · búsqueda + extensiones</span>
+          </div>
+          <div class="close-item">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+            <span>Meta Ads · 4-6 anuncios/mes (copy + diseño)</span>
+          </div>
+          <div class="close-item">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+            <span>Estrategia de contenido mensual</span>
+          </div>
+          <div class="close-item">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+            <span>CRM + automatizaciones GRATIS</span>
+          </div>
+          <div class="close-item">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+            <span>Reportes + optimización continua</span>
+          </div>
+        </div>
+
+        <div style="display: grid; grid-template-columns: repeat(3,1fr); gap: 8px; margin-bottom: 24px;">
+          <div style="background: rgba(181,148,58,0.08); border-radius: 10px; padding: 14px 8px; text-align: center;">
+            <p style="font-family: 'Cormorant Garamond'; font-size: 22px; color: var(--gold-light); line-height: 1;">20-40</p>
+            <p style="font-size: 9px; color: rgba(255,255,255,0.3); text-transform: uppercase; letter-spacing: 1px; margin-top: 4px;">leads/mes</p>
+          </div>
+          <div style="background: rgba(181,148,58,0.08); border-radius: 10px; padding: 14px 8px; text-align: center;">
+            <p style="font-family: 'Cormorant Garamond'; font-size: 22px; color: var(--gold-light); line-height: 1;">2-5</p>
+            <p style="font-size: 9px; color: rgba(255,255,255,0.3); text-transform: uppercase; letter-spacing: 1px; margin-top: 4px;">procedimientos</p>
+          </div>
+          <div style="background: rgba(181,148,58,0.08); border-radius: 10px; padding: 14px 8px; text-align: center;">
+            <p style="font-family: 'Cormorant Garamond'; font-size: 22px; color: var(--gold-light); line-height: 1;">$8-25k</p>
+            <p style="font-size: 9px; color: rgba(255,255,255,0.3); text-transform: uppercase; letter-spacing: 1px; margin-top: 4px;">ingreso/mes</p>
+          </div>
+        </div>
+
+        <div class="close-price">
+          <p style="font-family: 'Cormorant Garamond'; font-size: 40px; font-weight: 600; color: var(--white); line-height: 1; margin-bottom: 4px;">$600</p>
+          <p style="font-size: 11px; color: rgba(255,255,255,0.4); margin-bottom: 12px;">en lugar de $900/mes</p>
+          <div style="width: 40px; height: 1px; background: rgba(181,148,58,0.2); margin: 12px auto;"></div>
+          <div style="display: inline-block; background: var(--gold); color: var(--green-deep); padding: 6px 16px; border-radius: 100px; font-size: 10px; font-weight: 700; letter-spacing: 1px;">AHORRA $300/MES</div>
+          <p style="font-size: 10px; color: rgba(255,255,255,0.15); margin-top: 10px;">Pauta aparte · va directo a Google y Meta</p>
+        </div>
+      </div>
+
+      <!-- OPCIÓN 3: NO HACER NADA -->
+      <div class="close-card close-card-danger">
+        <p style="font-size: 10px; letter-spacing: 4px; text-transform: uppercase; color: rgba(255,255,255,0.15); margin-bottom: 12px;">Opción 3</p>
+        <h3>No hacer nada</h3>
+
+        <div class="close-list">
+          <div class="close-item">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+            <span style="text-decoration: line-through;">Sin publicidad digital</span>
+          </div>
+          <div class="close-item">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+            <span style="text-decoration: line-through;">Sin captación de leads</span>
+          </div>
+          <div class="close-item">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+            <span style="text-decoration: line-through;">Sin estrategia de contenido</span>
+          </div>
+          <div class="close-item">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+            <span style="text-decoration: line-through;">Sin seguimiento de pacientes</span>
+          </div>
+
+          <div style="height: 8px;"></div>
+
+          <div class="close-item" style="color: rgba(192,57,43,0.35);">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
+            <span>Seguir dependiendo de referidos</span>
+          </div>
+          <div class="close-item" style="color: rgba(192,57,43,0.35);">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
+            <span>La competencia sigue creciendo</span>
+          </div>
+          <div class="close-item" style="color: rgba(192,57,43,0.35);">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
+            <span>Pacientes perdidos cada mes</span>
+          </div>
+        </div>
+
+        <div class="close-price">
+          <div class="big">$0</div>
+          <div class="small">costo visible</div>
+          <div style="width: 40px; height: 1px; background: rgba(192,57,43,0.08); margin: 12px auto;"></div>
+          <p style="font-size: 10px; color: rgba(192,57,43,0.35);">Costo real: <strong>$5,000+/mes</strong> en procedimientos que se van a otro cirujano</p>
+        </div>
+      </div>
+    </div>
+
+    <div style="text-align: center; margin-top: 72px;">
+      <a href="contrato.html" target="_blank" class="cta-btn" style="padding: 20px 56px; font-size: 15px;">Comenzar ahora</a>
+      <p style="font-size: 11px; color: rgba(255,255,255,0.15); margin-top: 20px;">Al hacer clic se abrirá el contrato de servicios para revisión y firma</p>
+    </div>
   </div>
 </section>
 
@@ -245,8 +685,14 @@
   <div class="cta-inner reveal">
     <h2 class="cta-title">El sistema está listo.<br>Solo falta el tráfico.</h2>
     <p class="cta-sub">Tu página web existe. Tu experiencia como cirujana es impecable. Ahora solo necesitas que los pacientes correctos te encuentren en el momento exacto. Eso es lo que hace esta estrategia.</p>
-    <button class="cta-btn" onclick="window.open('contrato.html','_blank')">Comenzar ahora</button>
-    <p style="font-size: 11px; color: rgba(255,255,255,0.15); margin-top: 20px;">Pauta de anuncios siempre aparte · va directo a Google y Meta</p>
+    <div style="margin-top: 40px; text-align: center;">
+      <button class="cta-btn" onclick="window.open('contrato.html','_blank')">Descargar y firmar contrato</button>
+      <p style="font-size: 12px; color: rgba(255,255,255,0.35); margin-top: 20px; line-height: 1.8;">
+        <strong>Próximo paso:</strong><br>
+        Firma el contrato y realiza el depósito de $600 a la cuenta indicada.<br>
+        Empezamos en los próximos 2 días hábiles.
+      </p>
+    </div>
   </div>
 </section>
 

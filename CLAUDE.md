@@ -34,7 +34,11 @@ Los proyectos viven en `projects/`. Cada uno tiene su propio `README.md` con est
 **Mis objetivos personales:**
 - `projects/mis-objetivos/` — frentes personales (facturar $8k, Rolex, alimentación, bienestar, etc.)
 
+**Agencia:**
+- `projects/agencia-marketing/` — formalización de la agencia de marketing digital (identidad, web, sistemas, adquisición)
+
 **Clientes:**
+- `projects/clientes/anabel-mercedes/` — marca personal + contenido + ManyChat + landing, deadline 5 abr 2026
 - `projects/clientes/memorama/` — cliente activo, deadline 23 mar 2026
 - `projects/clientes/dra-aurys-mercedes/` — página web + embudos, en progreso
 - `projects/clientes/beatriz-5k-funnel/` — funnel $5k para Beatriz
@@ -96,12 +100,21 @@ Claude Code mantiene memoria persistente entre conversaciones. Guarda patrones, 
 
 `templates/session-summary.md` — para cerrar sesiones de trabajo.
 `templates/nano-banana/` — templates JSON para imágenes con nano-banana-images skill.
+`templates/MKR-market-research.md` — Market Research: audiencia, dolor, deseo, creencias, objeciones, avatar.
+`templates/TPA-top-player-analysis.md` — Top Player Analysis: competidores, estrategias, oportunidades.
+`templates/WWP-winners-writing-process.md` — Winner's Writing Process: niveles, mecanismo, customer journey, copy.
+`templates/CIA-method.md` — CIA Method: entrevista inicial + feedback final para optimizar.
 
 ## Referencias
 
-`references/sops/` — procedimientos estándar
-`references/examples/` — ejemplos de outputs y guías de estilo
 `references/gastos-api.csv` — tracking de costos de APIs de IA
+
+## Recursos IA
+
+`recursos-ia/` — prompts, conocimiento y API keys guardadas.
+- `recursos-ia/prompts/` — prompts reutilizables
+- `recursos-ia/conocimiento/` — conocimiento de IA
+- `recursos-ia/api-keys/` — API keys (gitignored)
 
 ## Scripts
 
@@ -109,6 +122,7 @@ Claude Code mantiene memoria persistente entre conversaciones. Guarda patrones, 
 - `scripts/excalidraw-visuals/` — genera PNGs con estilo excalidraw
 - `scripts/nano-banana-images/` — genera imágenes con Gemini
 - `scripts/immunotec/` — scripts específicos de Immunotec
+- `scripts/landing-fixes/` — scripts de corrección de landing pages
 
 ## Sesiones
 
