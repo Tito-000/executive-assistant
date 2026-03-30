@@ -1,0 +1,1925 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Guía de Marca — Anabel Mercedes</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Montserrat:wght@100;200;300;400;500;600;700&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --navy: #1A1F2E;
+    --navy-light: #232839;
+    --navy-rgb: 26,31,46;
+    --sage: #6B8868;
+    --sage-dark: #8BA888;
+    --sage-light: #A8C4A5;
+    --sage-muted: #3A4A38;
+    --brown: #7A5C44;
+    --brown-light: #A07D64;
+    --brown-dark: #5E4433;
+    --brown-muted: rgba(122,92,68,0.3);
+    --cream: #EDE8E0;
+    --cream-warm: #F5F2ED;
+    --white: #FAFAF8;
+    --text-light: rgba(237,232,224,0.55);
+    --text-muted: rgba(237,232,224,0.35);
+  }
+
+  @page { margin: 0; }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    background: var(--cream-warm);
+    font-family: 'Montserrat', sans-serif;
+    -webkit-font-smoothing: antialiased;
+    color: var(--navy);
+  }
+
+  /* ============================================
+     GLOBAL
+     ============================================ */
+  .page {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 40px;
+  }
+
+  .section-label {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 9px;
+    letter-spacing: 6px;
+    text-transform: uppercase;
+    font-weight: 400;
+    margin-bottom: 50px;
+  }
+
+  .section-label::after {
+    content: '';
+    display: block;
+    width: 20px;
+    height: 1px;
+    margin-top: 16px;
+  }
+
+  .section-label.light { color: var(--text-light); }
+  .section-label.light::after { background: linear-gradient(90deg, var(--sage), transparent); }
+  .section-label.dark { color: var(--brown); }
+  .section-label.dark::after { background: linear-gradient(90deg, var(--brown), transparent); }
+  .section-label.on-brown { color: rgba(237,232,224,0.4); }
+  .section-label.on-brown::after { background: linear-gradient(90deg, var(--sage-light), transparent); }
+
+  .full-dark { background: var(--navy); }
+  .full-cream { background: var(--cream-warm); }
+  .full-white { background: var(--white); }
+  .full-brown { background: var(--brown); }
+
+  .sec { padding: 100px 60px; }
+  .sec-sm { padding: 80px 60px; }
+
+  .rule-block {
+    max-width: 800px;
+    margin: 0 auto;
+  }
+
+  .rule-title {
+    font-family: 'DM Serif Display', serif;
+    font-size: 22px;
+    color: var(--navy);
+    margin-bottom: 12px;
+    line-height: 1.4;
+  }
+
+  .rule-title.light { color: var(--cream); }
+
+  .rule-text {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 13px;
+    font-weight: 300;
+    line-height: 2;
+    color: #555;
+    margin-bottom: 40px;
+  }
+
+  .rule-text.light {
+    color: var(--text-light);
+  }
+
+  .rule-text strong {
+    font-weight: 500;
+    color: var(--navy);
+  }
+
+  .rule-text.light strong {
+    color: var(--cream);
+  }
+
+  .divider-dot {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    margin: 50px auto;
+  }
+
+  .divider-dot span {
+    width: 3px;
+    height: 3px;
+    border-radius: 50%;
+    background: var(--brown-muted);
+  }
+
+  .grid-2 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    max-width: 900px;
+    margin: 0 auto;
+  }
+
+  .grid-3 {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    max-width: 900px;
+    margin: 0 auto;
+  }
+
+  .grid-4 {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    max-width: 1000px;
+    margin: 0 auto;
+  }
+
+  .do-dont-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+    max-width: 900px;
+    margin: 0 auto;
+  }
+
+  .badge-do, .badge-dont {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 8px;
+    font-weight: 500;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    padding: 4px 12px;
+    border-radius: 2px;
+    display: inline-block;
+    margin-bottom: 16px;
+  }
+
+  .badge-do { background: var(--sage); color: var(--white); }
+  .badge-dont { background: #C45B5B; color: var(--white); }
+
+  .spec-label {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 8px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    font-weight: 400;
+    color: var(--brown);
+    margin-bottom: 8px;
+  }
+
+  .spec-label.light { color: var(--brown-light); }
+
+  .spec-value {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 13px;
+    font-weight: 300;
+    color: var(--navy);
+    line-height: 1.8;
+  }
+
+  .spec-value.light { color: var(--cream); }
+
+  /* ============================================
+     0. PORTADA
+     ============================================ */
+  .cover {
+    background: var(--navy);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 80px 40px;
+    position: relative;
+    overflow: hidden;
+    text-align: center;
+  }
+
+  .cover::before {
+    content: '';
+    position: absolute;
+    width: 600px; height: 600px;
+    background: radial-gradient(circle, rgba(139,168,136,0.04) 0%, transparent 70%);
+    top: 50%; left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  .cover .c-circle {
+    position: relative;
+    width: 200px; height: 200px;
+    display: flex; align-items: center; justify-content: center;
+    margin-bottom: 50px;
+  }
+
+  .cover .c-circle::before {
+    content: '';
+    position: absolute;
+    width: 68%; height: 68%;
+    border: 1px solid var(--sage);
+    border-radius: 50%;
+    filter: drop-shadow(0 0 20px rgba(139,168,136,0.15));
+  }
+
+  .cover .c-circle::after {
+    content: '';
+    position: absolute;
+    width: 80%; height: 80%;
+    border: 0.5px solid rgba(139,168,136,0.08);
+    border-radius: 50%;
+  }
+
+  .cover .c-letters {
+    font-family: 'DM Serif Display', serif;
+    font-size: 80px;
+    color: var(--cream);
+    letter-spacing: -2px;
+    position: relative; z-index: 2;
+  }
+
+  .cover .c-name {
+    font-family: 'DM Serif Display', serif;
+    font-style: italic;
+    font-size: 18px;
+    color: var(--sage);
+    letter-spacing: 5px;
+    margin-bottom: 8px;
+  }
+
+  .cover .c-last {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 200;
+    font-size: 9px;
+    letter-spacing: 12px;
+    color: var(--brown-light);
+    text-transform: uppercase;
+    opacity: 0.5;
+    margin-bottom: 60px;
+  }
+
+  .cover .c-title {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 200;
+    font-size: 10px;
+    letter-spacing: 8px;
+    color: var(--text-light);
+    text-transform: uppercase;
+    padding: 20px 40px;
+    border-top: 0.5px solid rgba(139,168,136,0.15);
+    border-bottom: 0.5px solid rgba(139,168,136,0.15);
+  }
+
+  .cover .c-version {
+    margin-top: 30px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 200;
+    font-size: 9px;
+    letter-spacing: 3px;
+    color: var(--text-muted);
+  }
+
+  /* ============================================
+     1. TOC
+     ============================================ */
+  .toc {
+    max-width: 600px;
+    margin: 0 auto;
+  }
+
+  .toc-item {
+    display: flex;
+    align-items: baseline;
+    padding: 18px 0;
+    border-bottom: 0.5px solid rgba(122,92,68,0.1);
+  }
+
+  .toc-num {
+    font-family: 'DM Serif Display', serif;
+    font-size: 28px;
+    color: var(--brown-muted);
+    width: 60px;
+    flex-shrink: 0;
+  }
+
+  .toc-name {
+    font-family: 'DM Serif Display', serif;
+    font-size: 18px;
+    color: var(--navy);
+    flex: 1;
+  }
+
+  .toc-desc {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 10px;
+    font-weight: 300;
+    color: #999;
+    letter-spacing: 1px;
+  }
+
+  /* ============================================
+     CHAPTER HEADERS
+     ============================================ */
+  .chapter-header {
+    background: var(--navy);
+    padding: 80px 60px;
+    display: flex;
+    align-items: center;
+    gap: 30px;
+  }
+
+  .chapter-num {
+    font-family: 'DM Serif Display', serif;
+    font-size: 80px;
+    color: rgba(139,168,136,0.1);
+    line-height: 1;
+  }
+
+  .chapter-info {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .chapter-name {
+    font-family: 'DM Serif Display', serif;
+    font-size: 30px;
+    color: var(--cream);
+  }
+
+  .chapter-sub {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 300;
+    font-size: 11px;
+    color: var(--text-light);
+    letter-spacing: 2px;
+  }
+
+  /* ============================================
+     COLOR SWATCHES
+     ============================================ */
+  .color-card {
+    border-radius: 6px;
+    overflow: hidden;
+    box-shadow: 0 2px 16px rgba(0,0,0,0.06);
+  }
+
+  .color-card .cc-swatch {
+    height: 120px;
+  }
+
+  .color-card .cc-info {
+    background: var(--white);
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+  }
+
+  .color-card .cc-name {
+    font-family: 'DM Serif Display', serif;
+    font-size: 15px;
+    color: var(--navy);
+  }
+
+  .color-card .cc-hex {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 11px;
+    font-weight: 300;
+    color: #999;
+    letter-spacing: 1px;
+  }
+
+  .color-card .cc-rgb {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 9px;
+    font-weight: 200;
+    color: #BBB;
+  }
+
+  .color-card .cc-use {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 9px;
+    font-weight: 300;
+    color: var(--brown);
+    margin-top: 4px;
+    line-height: 1.6;
+  }
+
+  /* ============================================
+     TYPOGRAPHY SHOWCASE
+     ============================================ */
+  .type-card {
+    background: var(--white);
+    border-radius: 6px;
+    padding: 40px 30px;
+    box-shadow: 0 2px 16px rgba(0,0,0,0.04);
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .type-card .tc-sample-serif {
+    font-family: 'DM Serif Display', serif;
+    font-size: 48px;
+    color: var(--navy);
+    line-height: 1;
+  }
+
+  .type-card .tc-sample-sans {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 300;
+    font-size: 32px;
+    color: var(--navy);
+    letter-spacing: 2px;
+    line-height: 1;
+  }
+
+  .type-card .tc-sample-accent {
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    font-weight: 300;
+    font-size: 36px;
+    color: var(--sage-dark);
+    line-height: 1;
+  }
+
+  .type-card .tc-alphabet {
+    font-size: 11px;
+    font-weight: 300;
+    color: #AAA;
+    letter-spacing: 2px;
+    line-height: 2;
+  }
+
+  /* ============================================
+     LOGO VARIATIONS BOX
+     ============================================ */
+  .logo-var {
+    border-radius: 6px;
+    padding: 50px 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+    min-height: 220px;
+  }
+
+  .logo-var .lv-wrap {
+    position: relative;
+    width: 80px; height: 80px;
+    display: flex; align-items: center; justify-content: center;
+  }
+
+  .logo-var .lv-circle {
+    position: absolute;
+    width: 68%; height: 68%;
+    border-radius: 50%;
+    top: 50%; left: 50%;
+    margin-top: -34%; margin-left: -34%;
+  }
+
+  .logo-var .lv-letters {
+    font-family: 'DM Serif Display', serif;
+    font-size: 32px;
+    letter-spacing: -1px;
+    position: relative; z-index: 2;
+  }
+
+  .logo-var .lv-name {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 300;
+    font-size: 9px;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+  }
+
+  .logo-var .lv-label {
+    font-size: 7px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    font-weight: 300;
+    opacity: 0.5;
+  }
+
+  /* ============================================
+     SPACING DEMO
+     ============================================ */
+  .spacing-demo {
+    background: var(--white);
+    border-radius: 6px;
+    padding: 50px;
+    box-shadow: 0 2px 16px rgba(0,0,0,0.04);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    position: relative;
+  }
+
+  .spacing-demo .sd-logo {
+    position: relative;
+    width: 120px; height: 120px;
+    display: flex; align-items: center; justify-content: center;
+  }
+
+  .spacing-demo .sd-circle {
+    position: absolute;
+    width: 68%; height: 68%;
+    border: 1px solid var(--sage-muted);
+    border-radius: 50%;
+    top: 50%; left: 50%;
+    margin-top: -34%; margin-left: -34%;
+  }
+
+  .spacing-demo .sd-letters {
+    font-family: 'DM Serif Display', serif;
+    font-size: 48px;
+    color: var(--navy);
+    position: relative; z-index: 2;
+  }
+
+  .spacing-demo .sd-zone {
+    position: absolute;
+    border: 1px dashed rgba(139,168,136,0.3);
+    border-radius: 50%;
+    width: 100%; height: 100%;
+  }
+
+  .spacing-demo .sd-arrow {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 8px;
+    font-weight: 300;
+    color: var(--sage);
+    letter-spacing: 1px;
+  }
+
+  /* ============================================
+     PROPORTION BAR
+     ============================================ */
+  .prop-bar {
+    display: flex;
+    height: 50px;
+    border-radius: 4px;
+    overflow: hidden;
+    box-shadow: 0 2px 16px rgba(0,0,0,0.06);
+    margin-bottom: 10px;
+  }
+
+  .prop-labels {
+    display: flex;
+    margin-bottom: 40px;
+  }
+
+  .prop-labels span {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 8px;
+    font-weight: 300;
+    letter-spacing: 2px;
+    color: #999;
+    text-align: center;
+  }
+
+  /* ============================================
+     DO/DONT CARDS
+     ============================================ */
+  .dd-card {
+    background: var(--white);
+    border-radius: 6px;
+    padding: 30px;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.04);
+  }
+
+  .dd-card .dd-example {
+    border-radius: 4px;
+    padding: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 16px;
+    min-height: 120px;
+  }
+
+  .dd-card .dd-text {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 11px;
+    font-weight: 300;
+    color: #777;
+    line-height: 1.8;
+  }
+
+  /* ============================================
+     VOICE CARD
+     ============================================ */
+  .voice-card {
+    background: var(--navy-light);
+    border-radius: 6px;
+    padding: 36px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .voice-card .vc-label {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 8px;
+    font-weight: 400;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: var(--brown-light);
+  }
+
+  .voice-card .vc-title {
+    font-family: 'DM Serif Display', serif;
+    font-size: 18px;
+    color: var(--cream);
+  }
+
+  .voice-card .vc-text {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 11px;
+    font-weight: 300;
+    color: var(--text-light);
+    line-height: 1.9;
+  }
+
+  .voice-card .vc-example {
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    font-size: 15px;
+    color: var(--sage);
+    padding-top: 8px;
+    border-top: 0.5px solid rgba(139,168,136,0.1);
+    line-height: 1.6;
+  }
+
+  /* ============================================
+     SIZE SPEC TABLE
+     ============================================ */
+  .spec-table {
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+    border-collapse: collapse;
+  }
+
+  .spec-table th {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 8px;
+    font-weight: 400;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: var(--brown);
+    text-align: left;
+    padding: 12px 16px;
+    border-bottom: 1px solid rgba(122,92,68,0.15);
+  }
+
+  .spec-table td {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 12px;
+    font-weight: 300;
+    color: var(--navy);
+    padding: 14px 16px;
+    border-bottom: 0.5px solid rgba(122,92,68,0.08);
+    line-height: 1.6;
+  }
+
+  .spec-table td.mono {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+    color: var(--sage-dark);
+  }
+
+  /* ============================================
+     HIERARCHY DEMO
+     ============================================ */
+  .hierarchy-demo {
+    background: var(--navy);
+    border-radius: 6px;
+    padding: 50px;
+    box-shadow: 0 4px 30px rgba(0,0,0,0.15);
+    max-width: 600px;
+    margin: 0 auto;
+  }
+
+  .hierarchy-demo .hd-eyebrow {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 8px;
+    font-weight: 400;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    color: var(--brown-light);
+    margin-bottom: 16px;
+  }
+
+  .hierarchy-demo .hd-h1 {
+    font-family: 'DM Serif Display', serif;
+    font-size: 32px;
+    color: var(--cream);
+    line-height: 1.3;
+    margin-bottom: 8px;
+  }
+
+  .hierarchy-demo .hd-h2 {
+    font-family: 'DM Serif Display', serif;
+    font-size: 20px;
+    color: var(--sage);
+    line-height: 1.4;
+    margin-bottom: 16px;
+  }
+
+  .hierarchy-demo .hd-sep {
+    width: 30px; height: 1px;
+    background: linear-gradient(90deg, var(--sage), var(--brown));
+    margin-bottom: 16px;
+  }
+
+  .hierarchy-demo .hd-body {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 12px;
+    font-weight: 300;
+    color: var(--text-light);
+    line-height: 2;
+    margin-bottom: 20px;
+  }
+
+  .hierarchy-demo .hd-accent {
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    font-size: 15px;
+    color: var(--sage);
+    letter-spacing: 1px;
+    margin-bottom: 24px;
+  }
+
+  .hierarchy-demo .hd-cta {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 9px;
+    font-weight: 500;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: var(--navy);
+    background: var(--sage);
+    padding: 12px 28px;
+    border-radius: 2px;
+    display: inline-block;
+  }
+
+  .hierarchy-demo .hd-caption {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 9px;
+    font-weight: 200;
+    color: var(--brown-light);
+    opacity: 0.5;
+    margin-top: 10px;
+  }
+
+  /* annotation tags */
+  .anno {
+    display: inline-block;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 7px;
+    font-weight: 400;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--sage);
+    border: 0.5px solid rgba(139,168,136,0.3);
+    padding: 2px 8px;
+    border-radius: 2px;
+    margin-left: 10px;
+    vertical-align: middle;
+  }
+
+  /* ============================================
+     PHOTO STYLE GRID
+     ============================================ */
+  .photo-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 4px;
+    max-width: 700px;
+    margin: 0 auto;
+    border-radius: 6px;
+    overflow: hidden;
+  }
+
+  .photo-cell {
+    aspect-ratio: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 8px;
+    text-align: center;
+    padding: 20px;
+  }
+
+  .photo-cell .pc-icon {
+    font-size: 28px;
+    opacity: 0.3;
+  }
+
+  .photo-cell .pc-text {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 9px;
+    font-weight: 300;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--cream);
+  }
+
+  /* ============================================
+     FOOTER
+     ============================================ */
+  .guide-footer {
+    background: var(--navy);
+    padding: 80px 40px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+
+  .guide-footer .gf-logo {
+    font-family: 'DM Serif Display', serif;
+    font-size: 40px;
+    color: var(--cream);
+    letter-spacing: -1px;
+  }
+
+  .guide-footer .gf-text {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 200;
+    font-size: 9px;
+    letter-spacing: 4px;
+    color: var(--text-light);
+    text-transform: uppercase;
+  }
+
+  .guide-footer .gf-line {
+    width: 20px; height: 0.5px;
+    background: linear-gradient(90deg, transparent, var(--sage), transparent);
+  }
+</style>
+</head>
+<body>
+
+  <!-- ==================== PORTADA ==================== -->
+  <section class="cover">
+    <div class="c-circle">
+      <span class="c-letters">AM</span>
+    </div>
+    <div class="c-name">Anabel</div>
+    <div class="c-last">Mercedes</div>
+    <div class="c-title">Guía de Marca Completa</div>
+    <div class="c-version">Versión 1.0 &middot; Marzo 2026</div>
+  </section>
+
+  <!-- ==================== TABLA DE CONTENIDOS ==================== -->
+  <section class="full-cream sec">
+    <div class="section-label dark">Contenido</div>
+    <div class="toc">
+      <div class="toc-item">
+        <div class="toc-num">01</div>
+        <div style="display: flex; flex-direction: column; gap: 4px;">
+          <div class="toc-name">La Marca</div>
+          <div class="toc-desc">Esencia, propósito y personalidad</div>
+        </div>
+      </div>
+      <div class="toc-item">
+        <div class="toc-num">02</div>
+        <div style="display: flex; flex-direction: column; gap: 4px;">
+          <div class="toc-name">Logo</div>
+          <div class="toc-desc">Construcción, variaciones, espacio libre y tamaños mínimos</div>
+        </div>
+      </div>
+      <div class="toc-item">
+        <div class="toc-num">03</div>
+        <div style="display: flex; flex-direction: column; gap: 4px;">
+          <div class="toc-name">Paleta de Colores</div>
+          <div class="toc-desc">Colores primarios, secundarios, proporciones y combinaciones</div>
+        </div>
+      </div>
+      <div class="toc-item">
+        <div class="toc-num">04</div>
+        <div style="display: flex; flex-direction: column; gap: 4px;">
+          <div class="toc-name">Tipografía</div>
+          <div class="toc-desc">Familias, jerarquía, tamaños y reglas de uso</div>
+        </div>
+      </div>
+      <div class="toc-item">
+        <div class="toc-num">05</div>
+        <div style="display: flex; flex-direction: column; gap: 4px;">
+          <div class="toc-name">Voz y Tono</div>
+          <div class="toc-desc">Personalidad verbal, pilares de contenido, lo que sí y lo que no</div>
+        </div>
+      </div>
+      <div class="toc-item">
+        <div class="toc-num">06</div>
+        <div style="display: flex; flex-direction: column; gap: 4px;">
+          <div class="toc-name">Fotografía y Visual</div>
+          <div class="toc-desc">Estilo de imagen, filtros, composición</div>
+        </div>
+      </div>
+      <div class="toc-item">
+        <div class="toc-num">07</div>
+        <div style="display: flex; flex-direction: column; gap: 4px;">
+          <div class="toc-name">Aplicaciones</div>
+          <div class="toc-desc">Redes sociales, landing pages, tarjetas, email</div>
+        </div>
+      </div>
+      <div class="toc-item">
+        <div class="toc-num">08</div>
+        <div style="display: flex; flex-direction: column; gap: 4px;">
+          <div class="toc-name">Usos Incorrectos</div>
+          <div class="toc-desc">Qué evitar con la marca</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== 01. LA MARCA ==================== -->
+  <div class="chapter-header">
+    <div class="chapter-num">01</div>
+    <div class="chapter-info">
+      <div class="chapter-name">La Marca</div>
+      <div class="chapter-sub">Esencia, propósito y personalidad</div>
+    </div>
+  </div>
+
+  <section class="full-cream sec">
+    <div class="rule-block">
+      <div class="rule-title">Propósito de Marca</div>
+      <div class="rule-text">
+        Anabel Mercedes existe para <strong>empoderar a las personas a transformar su bienestar y su vida</strong> a través de la ciencia, la nutrición celular y el liderazgo auténtico. La marca representa un puente entre el conocimiento y la acción — entre saber que tu cuerpo merece más y dar el primer paso.
+      </div>
+
+      <div class="divider-dot"><span></span><span></span><span></span></div>
+
+      <div class="rule-title">Promesa de Marca</div>
+      <div class="rule-text">
+        &ldquo;Te acompaño a recuperar tu energía, tu salud y tu libertad — con ciencia real y desde un lugar de confianza.&rdquo;
+      </div>
+
+      <div class="divider-dot"><span></span><span></span><span></span></div>
+
+      <div class="rule-title">Personalidad de Marca</div>
+      <div class="rule-text">
+        La marca Anabel Mercedes se define por cinco atributos fundamentales:
+      </div>
+
+      <div class="grid-3" style="margin-bottom: 50px;">
+        <div style="text-align: center; padding: 30px 20px;">
+          <div style="font-family: 'DM Serif Display', serif; font-size: 32px; color: var(--brown-muted); margin-bottom: 12px;">01</div>
+          <div style="font-family: 'DM Serif Display', serif; font-size: 17px; color: var(--navy); margin-bottom: 8px;">Confiable</div>
+          <div style="font-family: 'Montserrat', sans-serif; font-size: 10px; font-weight: 300; color: #888; line-height: 1.8;">Respaldada por ciencia. No promete milagros — muestra resultados reales.</div>
+        </div>
+        <div style="text-align: center; padding: 30px 20px;">
+          <div style="font-family: 'DM Serif Display', serif; font-size: 32px; color: var(--brown-muted); margin-bottom: 12px;">02</div>
+          <div style="font-family: 'DM Serif Display', serif; font-size: 17px; color: var(--navy); margin-bottom: 8px;">Cercana</div>
+          <div style="font-family: 'Montserrat', sans-serif; font-size: 10px; font-weight: 300; color: #888; line-height: 1.8;">Accesible, humana, empática. Habla de tú a tú, no desde un pedestal.</div>
+        </div>
+        <div style="text-align: center; padding: 30px 20px;">
+          <div style="font-family: 'DM Serif Display', serif; font-size: 32px; color: var(--brown-muted); margin-bottom: 12px;">03</div>
+          <div style="font-family: 'DM Serif Display', serif; font-size: 17px; color: var(--navy); margin-bottom: 8px;">Elegante</div>
+          <div style="font-family: 'Montserrat', sans-serif; font-size: 10px; font-weight: 300; color: #888; line-height: 1.8;">Premium sin ser inalcanzable. Refinada sin ser fría.</div>
+        </div>
+        <div style="text-align: center; padding: 30px 20px;">
+          <div style="font-family: 'DM Serif Display', serif; font-size: 32px; color: var(--brown-muted); margin-bottom: 12px;">04</div>
+          <div style="font-family: 'DM Serif Display', serif; font-size: 17px; color: var(--navy); margin-bottom: 8px;">Natural</div>
+          <div style="font-family: 'Montserrat', sans-serif; font-size: 10px; font-weight: 300; color: #888; line-height: 1.8;">Conectada con la salud, la tierra y el bienestar auténtico.</div>
+        </div>
+        <div style="text-align: center; padding: 30px 20px;">
+          <div style="font-family: 'DM Serif Display', serif; font-size: 32px; color: var(--brown-muted); margin-bottom: 12px;">05</div>
+          <div style="font-family: 'DM Serif Display', serif; font-size: 17px; color: var(--navy); margin-bottom: 8px;">Líder</div>
+          <div style="font-family: 'Montserrat', sans-serif; font-size: 10px; font-weight: 300; color: #888; line-height: 1.8;">Inspira acción. No solo informa — guía y acompaña en el proceso.</div>
+        </div>
+      </div>
+
+      <div class="divider-dot"><span></span><span></span><span></span></div>
+
+      <div class="rule-title">Audiencia</div>
+      <div class="rule-text">
+        <strong>Primaria:</strong> Mujeres de 28-50 años, profesionales o madres, que buscan mejorar su salud, energía y calidad de vida. Valoran la ciencia por encima de las modas.<br><br>
+        <strong>Secundaria:</strong> Personas interesadas en generar ingresos desde casa a través de un modelo de negocio alineado con bienestar y propósito.
+      </div>
+
+      <div class="rule-title">Tagline</div>
+      <div style="font-family: 'Cormorant Garamond', serif; font-style: italic; font-size: 24px; color: var(--sage-dark); letter-spacing: 3px; margin-top: 10px;">
+        bienestar &middot; libertad &middot; propósito
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== 02. LOGO ==================== -->
+  <div class="chapter-header">
+    <div class="chapter-num">02</div>
+    <div class="chapter-info">
+      <div class="chapter-name">Logo</div>
+      <div class="chapter-sub">Construcción, variaciones y reglas de uso</div>
+    </div>
+  </div>
+
+  <section class="full-cream sec">
+    <div class="rule-block">
+      <div class="rule-title">Construcción del Logo</div>
+      <div class="rule-text">
+        El logo de Anabel Mercedes está compuesto por el monograma <strong>AM</strong> en tipografía DM Serif Display, enmarcado por un <strong>círculo fino</strong> en verde sage. El círculo representa unidad, totalidad y el ciclo del bienestar. Las letras serif transmiten autoridad y elegancia.<br><br>
+        El logotipo se complementa con el nombre completo en versiones extendidas para uso donde el monograma solo no sea suficiente.
+      </div>
+    </div>
+
+    <!-- Logo principal -->
+    <div class="spacing-demo" style="max-width: 500px; margin: 0 auto 60px;">
+      <div class="sd-logo">
+        <div class="sd-zone"></div>
+        <div class="sd-circle"></div>
+        <span class="sd-letters">AM</span>
+      </div>
+      <div class="sd-arrow">&larr; Zona de protección = 1x el diámetro del círculo &rarr;</div>
+      <div style="font-family: 'Montserrat', sans-serif; font-size: 10px; font-weight: 300; color: #999; margin-top: 10px; line-height: 1.8; text-align: center;">
+        Mantener siempre un espacio libre alrededor del logo equivalente al diámetro del círculo. Ningún elemento externo debe invadir esta zona.
+      </div>
+    </div>
+
+    <div class="divider-dot"><span></span><span></span><span></span></div>
+
+    <!-- Variaciones -->
+    <div class="rule-block">
+      <div class="rule-title">Variaciones Aprobadas</div>
+      <div class="rule-text">
+        El logo puede usarse en cuatro variaciones de fondo. Cada variación ajusta los colores del monograma y el círculo para mantener la legibilidad y la coherencia de marca.
+      </div>
+    </div>
+
+    <div class="grid-4" style="margin-bottom: 60px;">
+      <div class="logo-var" style="background: var(--navy);">
+        <div class="lv-label" style="color: var(--brown-light);">Fondo oscuro</div>
+        <div class="lv-wrap">
+          <div class="lv-circle" style="border: 0.8px solid var(--sage); filter: drop-shadow(0 0 8px rgba(139,168,136,0.15));"></div>
+          <span class="lv-letters" style="color: var(--cream);">AM</span>
+        </div>
+        <div class="lv-name" style="color: var(--text-light);">Anabel Mercedes</div>
+      </div>
+      <div class="logo-var" style="background: var(--white); box-shadow: 0 2px 16px rgba(0,0,0,0.04);">
+        <div class="lv-label" style="color: var(--brown);">Fondo claro</div>
+        <div class="lv-wrap">
+          <div class="lv-circle" style="border: 0.8px solid var(--sage-muted);"></div>
+          <span class="lv-letters" style="color: var(--navy);">AM</span>
+        </div>
+        <div class="lv-name" style="color: var(--navy);">Anabel Mercedes</div>
+      </div>
+      <div class="logo-var" style="background: var(--sage-dark);">
+        <div class="lv-label" style="color: rgba(237,232,224,0.3);">Sobre sage</div>
+        <div class="lv-wrap">
+          <div class="lv-circle" style="border: 0.8px solid rgba(237,232,224,0.35);"></div>
+          <span class="lv-letters" style="color: var(--cream);">AM</span>
+        </div>
+        <div class="lv-name" style="color: rgba(237,232,224,0.6);">Anabel Mercedes</div>
+      </div>
+      <div class="logo-var" style="background: var(--brown);">
+        <div class="lv-label" style="color: rgba(237,232,224,0.3);">Sobre café</div>
+        <div class="lv-wrap">
+          <div class="lv-circle" style="border: 0.8px solid var(--sage-light); filter: drop-shadow(0 0 8px rgba(168,196,165,0.15));"></div>
+          <span class="lv-letters" style="color: var(--cream);">AM</span>
+        </div>
+        <div class="lv-name" style="color: rgba(237,232,224,0.6);">Anabel Mercedes</div>
+      </div>
+    </div>
+
+    <div class="divider-dot"><span></span><span></span><span></span></div>
+
+    <!-- Tamaños mínimos -->
+    <div class="rule-block">
+      <div class="rule-title">Tamaños Mínimos</div>
+      <div class="rule-text">
+        Para garantizar la legibilidad del monograma, respetar estos tamaños mínimos:
+      </div>
+    </div>
+
+    <table class="spec-table" style="margin-bottom: 60px;">
+      <thead>
+        <tr>
+          <th>Formato</th>
+          <th>Tamaño mínimo</th>
+          <th>Uso</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Monograma (AM)</td>
+          <td class="mono">24px / 6mm</td>
+          <td>Favicon, íconos de app, watermarks</td>
+        </tr>
+        <tr>
+          <td>Logo + nombre vertical</td>
+          <td class="mono">80px / 20mm alto</td>
+          <td>Headers de landing, documentos</td>
+        </tr>
+        <tr>
+          <td>Logo + nombre horizontal</td>
+          <td class="mono">120px / 30mm ancho</td>
+          <td>Firmas de email, tarjetas</td>
+        </tr>
+        <tr>
+          <td>Impresión</td>
+          <td class="mono">15mm diámetro</td>
+          <td>Tarjetas, folletos, papelería</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <div class="divider-dot"><span></span><span></span><span></span></div>
+
+    <!-- Versiones del lockup -->
+    <div class="rule-block">
+      <div class="rule-title">Versiones del Lockup</div>
+      <div class="rule-text">
+        Existen tres configuraciones aprobadas del logo:
+      </div>
+    </div>
+
+    <div class="grid-3" style="margin-bottom: 40px;">
+      <!-- Solo monograma -->
+      <div style="background: var(--navy); border-radius: 6px; padding: 40px; display: flex; flex-direction: column; align-items: center; gap: 20px;">
+        <div style="position: relative; width: 80px; height: 80px; display: flex; align-items: center; justify-content: center;">
+          <div style="position: absolute; width: 68%; height: 68%; border: 0.8px solid var(--sage); border-radius: 50%; top: 50%; left: 50%; margin-top: -34%; margin-left: -34%;"></div>
+          <span style="font-family: 'DM Serif Display', serif; font-size: 32px; color: var(--cream); position: relative; z-index: 2;">AM</span>
+        </div>
+        <div>
+          <div class="spec-label light" style="text-align: center;">Solo monograma</div>
+          <div style="font-family: 'Montserrat', sans-serif; font-size: 9px; font-weight: 200; color: var(--text-light); text-align: center; line-height: 1.6;">Favicon, perfil IG, watermark, ícono de app</div>
+        </div>
+      </div>
+      <!-- Vertical -->
+      <div style="background: var(--navy); border-radius: 6px; padding: 40px; display: flex; flex-direction: column; align-items: center; gap: 20px;">
+        <div style="display: flex; flex-direction: column; align-items: center; gap: 14px;">
+          <div style="position: relative; width: 60px; height: 60px; display: flex; align-items: center; justify-content: center;">
+            <div style="position: absolute; width: 68%; height: 68%; border: 0.8px solid var(--sage); border-radius: 50%; top: 50%; left: 50%; margin-top: -34%; margin-left: -34%;"></div>
+            <span style="font-family: 'DM Serif Display', serif; font-size: 24px; color: var(--cream); position: relative; z-index: 2;">AM</span>
+          </div>
+          <div style="width: 20px; height: 0.5px; background: linear-gradient(90deg, transparent, var(--sage), transparent);"></div>
+          <div style="font-family: 'Montserrat', sans-serif; font-weight: 300; font-size: 9px; letter-spacing: 5px; color: var(--text-light); text-transform: uppercase;">Anabel Mercedes</div>
+        </div>
+        <div>
+          <div class="spec-label light" style="text-align: center;">Vertical</div>
+          <div style="font-family: 'Montserrat', sans-serif; font-size: 9px; font-weight: 200; color: var(--text-light); text-align: center; line-height: 1.6;">Landing pages, documentos, presentaciones</div>
+        </div>
+      </div>
+      <!-- Horizontal -->
+      <div style="background: var(--navy); border-radius: 6px; padding: 40px; display: flex; flex-direction: column; align-items: center; gap: 20px;">
+        <div style="display: flex; align-items: center; gap: 16px;">
+          <div style="position: relative; width: 44px; height: 44px; display: flex; align-items: center; justify-content: center;">
+            <div style="position: absolute; width: 68%; height: 68%; border: 0.8px solid var(--sage); border-radius: 50%; top: 50%; left: 50%; margin-top: -34%; margin-left: -34%;"></div>
+            <span style="font-family: 'DM Serif Display', serif; font-size: 18px; color: var(--cream); position: relative; z-index: 2;">AM</span>
+          </div>
+          <div>
+            <div style="font-family: 'DM Serif Display', serif; font-size: 14px; color: var(--cream);">Anabel</div>
+            <div style="width: 100%; height: 0.5px; background: linear-gradient(90deg, var(--sage), transparent); margin: 3px 0;"></div>
+            <div style="font-family: 'Montserrat', sans-serif; font-weight: 300; font-size: 7px; letter-spacing: 5px; color: var(--brown-light); text-transform: uppercase;">Mercedes</div>
+          </div>
+        </div>
+        <div>
+          <div class="spec-label light" style="text-align: center;">Horizontal</div>
+          <div style="font-family: 'Montserrat', sans-serif; font-size: 9px; font-weight: 200; color: var(--text-light); text-align: center; line-height: 1.6;">Headers, firmas de email, tarjetas</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== 03. PALETA ==================== -->
+  <div class="chapter-header">
+    <div class="chapter-num">03</div>
+    <div class="chapter-info">
+      <div class="chapter-name">Paleta de Colores</div>
+      <div class="chapter-sub">Colores primarios, secundarios y regla de proporción</div>
+    </div>
+  </div>
+
+  <section class="full-cream sec">
+    <!-- Regla 60/30/10 -->
+    <div class="rule-block">
+      <div class="rule-title">Regla de Proporción</div>
+      <div class="rule-text">
+        La paleta sigue una distribución <strong>55 / 20 / 15 / 10</strong> basada en la regla 60/30/10 del diseño. Navy domina como color base. Sage actúa como color de acento principal. Café aporta calidez y humanidad. Crema da respiro y elegancia.
+      </div>
+    </div>
+
+    <div style="max-width: 800px; margin: 0 auto 60px;">
+      <div class="prop-bar">
+        <div style="flex: 55; background: var(--navy);"></div>
+        <div style="flex: 20; background: var(--sage);"></div>
+        <div style="flex: 15; background: var(--brown);"></div>
+        <div style="flex: 10; background: var(--cream);"></div>
+      </div>
+      <div class="prop-labels">
+        <span style="flex: 55;">55% Navy</span>
+        <span style="flex: 20;">20% Sage Profundo</span>
+        <span style="flex: 15;">15% Café</span>
+        <span style="flex: 10;">10% Crema</span>
+      </div>
+    </div>
+
+    <div class="divider-dot"><span></span><span></span><span></span></div>
+
+    <!-- Colores primarios -->
+    <div class="rule-block" style="margin-bottom: 40px;">
+      <div class="rule-title">Colores Primarios</div>
+      <div class="rule-text">Los tres colores que definen la marca. Deben estar presentes en toda pieza visual.</div>
+    </div>
+
+    <div class="grid-3" style="margin-bottom: 60px;">
+      <div class="color-card">
+        <div class="cc-swatch" style="background: #1A1F2E;"></div>
+        <div class="cc-info">
+          <div class="cc-name">Midnight Navy</div>
+          <div class="cc-hex">#1A1F2E</div>
+          <div class="cc-rgb">RGB 26, 31, 46</div>
+          <div class="cc-use">Fondos principales, textos, headers. Es el color dominante — transmite autoridad y confianza.</div>
+        </div>
+      </div>
+      <div class="color-card">
+        <div class="cc-swatch" style="background: #6B8868;"></div>
+        <div class="cc-info">
+          <div class="cc-name">Sage Profundo</div>
+          <div class="cc-hex">#6B8868</div>
+          <div class="cc-rgb">RGB 107, 136, 104</div>
+          <div class="cc-use">Color principal de acento. CTAs, círculo del logo, elementos de acción. Más profundo y sofisticado — transmite salud con autoridad.</div>
+        </div>
+      </div>
+      <div class="color-card">
+        <div class="cc-swatch" style="background: #7A5C44;"></div>
+        <div class="cc-info">
+          <div class="cc-name">Café Cálido</div>
+          <div class="cc-hex">#7A5C44</div>
+          <div class="cc-rgb">RGB 122, 92, 68</div>
+          <div class="cc-use">Detalles cálidos, eyebrows, subtítulos secundarios. Aporta cercanía y autenticidad.</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="divider-dot"><span></span><span></span><span></span></div>
+
+    <!-- Colores secundarios -->
+    <div class="rule-block" style="margin-bottom: 40px;">
+      <div class="rule-title">Colores Secundarios y Neutros</div>
+      <div class="rule-text">Colores de soporte que complementan la paleta principal. Se usan para fondos, textos secundarios y variaciones.</div>
+    </div>
+
+    <div class="grid-4" style="margin-bottom: 60px;">
+      <div class="color-card">
+        <div class="cc-swatch" style="background: #8BA888;"></div>
+        <div class="cc-info">
+          <div class="cc-name">Verde Sage Claro</div>
+          <div class="cc-hex">#8BA888</div>
+          <div class="cc-use">Variación suave del sage. Hover states, acentos secundarios, fondos de stories.</div>
+        </div>
+      </div>
+      <div class="color-card">
+        <div class="cc-swatch" style="background: #A8C4A5;"></div>
+        <div class="cc-info">
+          <div class="cc-name">Sage Claro</div>
+          <div class="cc-hex">#A8C4A5</div>
+          <div class="cc-use">Hover states, acentos suaves, elementos decorativos.</div>
+        </div>
+      </div>
+      <div class="color-card">
+        <div class="cc-swatch" style="background: #A07D64;"></div>
+        <div class="cc-info">
+          <div class="cc-name">Café Claro</div>
+          <div class="cc-hex">#A07D64</div>
+          <div class="cc-use">Textos terciarios, subtítulos en fondos oscuros.</div>
+        </div>
+      </div>
+      <div class="color-card">
+        <div class="cc-swatch" style="background: #EDE8E0;"></div>
+        <div class="cc-info">
+          <div class="cc-name">Crema</div>
+          <div class="cc-hex">#EDE8E0</div>
+          <div class="cc-use">Fondos claros, texto sobre navy, elegancia suave.</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="divider-dot"><span></span><span></span><span></span></div>
+
+    <!-- Combinaciones -->
+    <div class="rule-block" style="margin-bottom: 40px;">
+      <div class="rule-title">Combinaciones Aprobadas</div>
+      <div class="rule-text">Cuatro combinaciones probadas para diferentes contextos. Cada una mantiene la armonía de la marca.</div>
+    </div>
+
+    <div style="max-width: 700px; margin: 0 auto; display: flex; flex-direction: column; gap: 24px;">
+      <div style="display: flex; align-items: center; gap: 24px;">
+        <div style="min-width: 180px;">
+          <div style="font-family: 'DM Serif Display', serif; font-size: 16px; color: var(--navy); margin-bottom: 4px;">Elegancia Nocturna</div>
+          <div style="font-family: 'Montserrat', sans-serif; font-size: 9px; font-weight: 300; color: var(--brown); letter-spacing: 1px;">Posts, landing pages, hero sections</div>
+        </div>
+        <div style="flex: 1; height: 36px; border-radius: 3px; overflow: hidden; display: flex; box-shadow: 0 2px 12px rgba(0,0,0,0.04);">
+          <div style="flex: 60; background: var(--navy);"></div>
+          <div style="flex: 25; background: var(--sage);"></div>
+          <div style="flex: 15; background: var(--cream);"></div>
+        </div>
+      </div>
+      <div style="display: flex; align-items: center; gap: 24px;">
+        <div style="min-width: 180px;">
+          <div style="font-family: 'DM Serif Display', serif; font-size: 16px; color: var(--navy); margin-bottom: 4px;">Calidez Natural</div>
+          <div style="font-family: 'Montserrat', sans-serif; font-size: 9px; font-weight: 300; color: var(--brown); letter-spacing: 1px;">Testimonios, stories, conexión emocional</div>
+        </div>
+        <div style="flex: 1; height: 36px; border-radius: 3px; overflow: hidden; display: flex; box-shadow: 0 2px 12px rgba(0,0,0,0.04);">
+          <div style="flex: 50; background: var(--brown);"></div>
+          <div style="flex: 30; background: var(--cream);"></div>
+          <div style="flex: 20; background: var(--sage-light);"></div>
+        </div>
+      </div>
+      <div style="display: flex; align-items: center; gap: 24px;">
+        <div style="min-width: 180px;">
+          <div style="font-family: 'DM Serif Display', serif; font-size: 16px; color: var(--navy); margin-bottom: 4px;">Tierra y Vida</div>
+          <div style="font-family: 'Montserrat', sans-serif; font-size: 9px; font-weight: 300; color: var(--brown); letter-spacing: 1px;">Educativos, carruseles, tips</div>
+        </div>
+        <div style="flex: 1; height: 36px; border-radius: 3px; overflow: hidden; display: flex; box-shadow: 0 2px 12px rgba(0,0,0,0.04);">
+          <div style="flex: 50; background: var(--cream);"></div>
+          <div style="flex: 30; background: var(--brown);"></div>
+          <div style="flex: 20; background: var(--sage);"></div>
+        </div>
+      </div>
+      <div style="display: flex; align-items: center; gap: 24px;">
+        <div style="min-width: 180px;">
+          <div style="font-family: 'DM Serif Display', serif; font-size: 16px; color: var(--navy); margin-bottom: 4px;">Transición Profunda</div>
+          <div style="font-family: 'Montserrat', sans-serif; font-size: 9px; font-weight: 300; color: var(--brown); letter-spacing: 1px;">Stories con gradiente, CTAs</div>
+        </div>
+        <div style="flex: 1; height: 36px; border-radius: 3px; overflow: hidden; display: flex; box-shadow: 0 2px 12px rgba(0,0,0,0.04);">
+          <div style="flex: 40; background: var(--brown);"></div>
+          <div style="flex: 40; background: var(--navy);"></div>
+          <div style="flex: 20; background: var(--sage);"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== 04. TIPOGRAFIA ==================== -->
+  <div class="chapter-header">
+    <div class="chapter-num">04</div>
+    <div class="chapter-info">
+      <div class="chapter-name">Tipografía</div>
+      <div class="chapter-sub">Familias, jerarquía y reglas de uso</div>
+    </div>
+  </div>
+
+  <section class="full-cream sec">
+    <div class="rule-block">
+      <div class="rule-title">Sistema Tipográfico</div>
+      <div class="rule-text">
+        La marca usa tres familias tipográficas, cada una con un rol claro. La combinación de serif + sans-serif + acento crea una jerarquía visual que comunica <strong>autoridad, claridad y elegancia</strong> simultáneamente.
+      </div>
+    </div>
+
+    <!-- 3 type cards -->
+    <div class="grid-3" style="margin-bottom: 60px;">
+      <div class="type-card">
+        <div style="font-family: 'Montserrat', sans-serif; font-size: 8px; font-weight: 400; letter-spacing: 3px; text-transform: uppercase; color: var(--brown);">Primaria — Títulos</div>
+        <div class="tc-sample-serif">Aa Bb</div>
+        <div style="font-family: 'DM Serif Display', serif; font-size: 16px; color: var(--navy);">DM Serif Display</div>
+        <div class="tc-alphabet" style="font-family: 'DM Serif Display', serif;">ABCDEFGHIJKLMNOPQRSTUVWXYZ<br>abcdefghijklmnopqrstuvwxyz<br>0123456789</div>
+        <div style="font-family: 'Montserrat', sans-serif; font-size: 10px; font-weight: 300; color: #999; line-height: 1.7;">
+          Títulos, subtítulos, frases de impacto, monograma del logo. Usar en <strong style="color: var(--navy);">Regular e Italic</strong>.
+        </div>
+      </div>
+      <div class="type-card">
+        <div style="font-family: 'Montserrat', sans-serif; font-size: 8px; font-weight: 400; letter-spacing: 3px; text-transform: uppercase; color: var(--brown);">Secundaria — Cuerpo</div>
+        <div class="tc-sample-sans">Aa Bb</div>
+        <div style="font-family: 'Montserrat', sans-serif; font-size: 16px; font-weight: 400; color: var(--navy);">Montserrat</div>
+        <div class="tc-alphabet">ABCDEFGHIJKLMNOPQRSTUVWXYZ<br>abcdefghijklmnopqrstuvwxyz<br>0123456789</div>
+        <div style="font-family: 'Montserrat', sans-serif; font-size: 10px; font-weight: 300; color: #999; line-height: 1.7;">
+          Cuerpo de texto, subtítulos, UI, labels, CTAs. Usar en <strong style="color: var(--navy);">Light (300), Regular (400) y Semibold (600)</strong>.
+        </div>
+      </div>
+      <div class="type-card">
+        <div style="font-family: 'Montserrat', sans-serif; font-size: 8px; font-weight: 400; letter-spacing: 3px; text-transform: uppercase; color: var(--brown);">Acento — Citas</div>
+        <div class="tc-sample-accent">Aa Bb</div>
+        <div style="font-family: 'Cormorant Garamond', serif; font-size: 16px; color: var(--sage-dark);">Cormorant Garamond</div>
+        <div class="tc-alphabet" style="font-family: 'Cormorant Garamond', serif; font-style: italic;">ABCDEFGHIJKLMNOPQRSTUVWXYZ<br>abcdefghijklmnopqrstuvwxyz<br>0123456789</div>
+        <div style="font-family: 'Montserrat', sans-serif; font-size: 10px; font-weight: 300; color: #999; line-height: 1.7;">
+          Citas, taglines, acentos decorativos. Usar siempre en <strong style="color: var(--navy);">Italic Light (300)</strong>.
+        </div>
+      </div>
+    </div>
+
+    <div class="divider-dot"><span></span><span></span><span></span></div>
+
+    <!-- Escala tipográfica -->
+    <div class="rule-block" style="margin-bottom: 40px;">
+      <div class="rule-title">Escala Tipográfica</div>
+      <div class="rule-text">Tamaños recomendados para mantener consistencia en todas las piezas.</div>
+    </div>
+
+    <table class="spec-table" style="margin-bottom: 60px;">
+      <thead>
+        <tr>
+          <th>Elemento</th>
+          <th>Fuente</th>
+          <th>Tamaño</th>
+          <th>Peso</th>
+          <th>Color</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>H1 — Título principal</td>
+          <td>DM Serif Display</td>
+          <td class="mono">28–36px</td>
+          <td>Regular</td>
+          <td>Navy o Crema</td>
+        </tr>
+        <tr>
+          <td>H2 — Subtítulo</td>
+          <td>DM Serif Display</td>
+          <td class="mono">20–24px</td>
+          <td>Regular / Italic</td>
+          <td>Navy o Sage</td>
+        </tr>
+        <tr>
+          <td>Eyebrow</td>
+          <td>Montserrat</td>
+          <td class="mono">8–9px</td>
+          <td>Regular (400)</td>
+          <td>Café Claro</td>
+        </tr>
+        <tr>
+          <td>Body</td>
+          <td>Montserrat</td>
+          <td class="mono">12–14px</td>
+          <td>Light (300)</td>
+          <td>Navy o Crema 55%</td>
+        </tr>
+        <tr>
+          <td>CTA / Botón</td>
+          <td>Montserrat</td>
+          <td class="mono">9–10px</td>
+          <td>Medium (500)</td>
+          <td>Navy sobre Sage</td>
+        </tr>
+        <tr>
+          <td>Label / Caption</td>
+          <td>Montserrat</td>
+          <td class="mono">7–8px</td>
+          <td>Light (300)</td>
+          <td>Café o Muted</td>
+        </tr>
+        <tr>
+          <td>Cita / Acento</td>
+          <td>Cormorant Garamond</td>
+          <td class="mono">15–18px</td>
+          <td>Italic Light</td>
+          <td>Sage</td>
+        </tr>
+        <tr>
+          <td>Tagline</td>
+          <td>Cormorant Garamond</td>
+          <td class="mono">13–15px</td>
+          <td>Italic Light</td>
+          <td>Café o Sage</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <div class="divider-dot"><span></span><span></span><span></span></div>
+
+    <!-- Jerarquía en contexto -->
+    <div class="rule-block" style="margin-bottom: 40px;">
+      <div class="rule-title">Jerarquía en Contexto</div>
+      <div class="rule-text">Así se ve el sistema tipográfico completo trabajando junto en una pieza real:</div>
+    </div>
+
+    <div class="hierarchy-demo" style="margin-bottom: 20px;">
+      <div class="hd-eyebrow">Anabel Mercedes <span class="anno">Eyebrow — Montserrat 400</span></div>
+      <div class="hd-h1">Transforma tu bienestar desde adentro <span class="anno">H1 — DM Serif Display</span></div>
+      <div class="hd-h2">La ciencia detrás de tu energía <span class="anno">H2 — DM Serif Italic</span></div>
+      <div class="hd-sep"></div>
+      <div class="hd-body">Descubre cómo miles de personas están recuperando su energía y calidad de vida con nutrición celular respaldada por ciencia. Tu cuerpo tiene la capacidad de regenerarse. <span class="anno">Body — Montserrat 300</span></div>
+      <div class="hd-accent">bienestar &middot; libertad &middot; propósito <span class="anno">Acento — Cormorant Italic</span></div>
+      <div class="hd-cta">Quiero saber más <span class="anno">CTA — Montserrat 500</span></div>
+      <div class="hd-caption">Sin compromiso &middot; 100% confidencial <span class="anno">Caption — Montserrat 200</span></div>
+    </div>
+  </section>
+
+  <!-- ==================== 05. VOZ Y TONO ==================== -->
+  <div class="chapter-header">
+    <div class="chapter-num">05</div>
+    <div class="chapter-info">
+      <div class="chapter-name">Voz y Tono</div>
+      <div class="chapter-sub">Personalidad verbal y pilares de contenido</div>
+    </div>
+  </div>
+
+  <section class="full-dark sec">
+    <div class="rule-block">
+      <div class="rule-title light">Principios de Comunicación</div>
+      <div class="rule-text light">
+        La voz de Anabel Mercedes es <strong>cálida, educada y empática</strong>. Habla como una amiga que sabe de salud — no como una vendedora. Siempre prioriza <strong>educar antes de vender</strong>, y conectar antes de convencer.
+      </div>
+    </div>
+
+    <div class="grid-3" style="margin-bottom: 60px;">
+      <div class="voice-card">
+        <div class="vc-label">Pilar 01</div>
+        <div class="vc-title">Educación</div>
+        <div class="vc-text">Contenido que enseña sobre salud, nutrición celular, glutatión y bienestar. Posiciona a Anabel como experta sin ser condescendiente.</div>
+        <div class="vc-example">&ldquo;Después de los 20, tu producción de glutatión baja 1% al año...&rdquo;</div>
+      </div>
+      <div class="voice-card">
+        <div class="vc-label">Pilar 02</div>
+        <div class="vc-title">Inspiración</div>
+        <div class="vc-text">Frases de impacto, historias de transformación, testimonios. Mueve emocionalmente y genera deseo de cambio.</div>
+        <div class="vc-example">&ldquo;Tu salud es la inversión más rentable que puedes hacer.&rdquo;</div>
+      </div>
+      <div class="voice-card">
+        <div class="vc-label">Pilar 03</div>
+        <div class="vc-title">Conexión</div>
+        <div class="vc-text">Historias personales, behind-the-scenes, vulnerabilidad auténtica. Muestra el lado humano detrás de la marca.</div>
+        <div class="vc-example">&ldquo;También tuve días donde no me sentía yo misma...&rdquo;</div>
+      </div>
+    </div>
+
+    <div class="divider-dot"><span></span><span></span><span></span></div>
+
+    <div class="rule-block" style="margin-bottom: 40px;">
+      <div class="rule-title light">Tono por Contexto</div>
+    </div>
+
+    <table class="spec-table" style="margin-bottom: 50px;">
+      <thead>
+        <tr>
+          <th style="color: var(--sage-light);">Contexto</th>
+          <th style="color: var(--sage-light);">Tono</th>
+          <th style="color: var(--sage-light);">Ejemplo</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td style="color: var(--cream);">Post educativo</td>
+          <td style="color: var(--text-light);">Informativo, claro, accesible</td>
+          <td style="color: var(--text-light);">&ldquo;Sabías que el glutatión es el antioxidante más poderoso que produce tu cuerpo?&rdquo;</td>
+        </tr>
+        <tr>
+          <td style="color: var(--cream);">Story</td>
+          <td style="color: var(--text-light);">Cercano, directo, conversacional</td>
+          <td style="color: var(--text-light);">&ldquo;Hoy te cuento algo que cambió mi perspectiva sobre la salud...&rdquo;</td>
+        </tr>
+        <tr>
+          <td style="color: var(--cream);">Landing page</td>
+          <td style="color: var(--text-light);">Inspirador, persuasivo con ciencia</td>
+          <td style="color: var(--text-light);">&ldquo;Transforma tu bienestar desde adentro — respaldado por 40+ años de ciencia.&rdquo;</td>
+        </tr>
+        <tr>
+          <td style="color: var(--cream);">Testimonio</td>
+          <td style="color: var(--text-light);">Auténtico, emocional, real</td>
+          <td style="color: var(--text-light);">&ldquo;Mi energía cambió por completo. Ya no siento ese agotamiento a media tarde.&rdquo;</td>
+        </tr>
+        <tr>
+          <td style="color: var(--cream);">CTA</td>
+          <td style="color: var(--text-light);">Claro, sin presión, invitación</td>
+          <td style="color: var(--text-light);">&ldquo;Quiero saber más&rdquo; / &ldquo;Comenta INFO&rdquo; / &ldquo;Escribe QUIERO&rdquo;</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <div class="divider-dot"><span></span><span></span><span></span></div>
+
+    <div class="rule-block">
+      <div class="rule-title light">Lo Que Sí y Lo Que No</div>
+    </div>
+
+    <div class="do-dont-grid">
+      <div>
+        <div class="badge-do">Sí</div>
+        <ul style="font-family: 'Montserrat', sans-serif; font-size: 11px; font-weight: 300; color: var(--text-light); line-height: 2.2; list-style: none;">
+          <li>&#10003; &nbsp;Hablar con datos y ciencia</li>
+          <li>&#10003; &nbsp;Usar lenguaje accesible y cercano</li>
+          <li>&#10003; &nbsp;Educar antes de vender</li>
+          <li>&#10003; &nbsp;Mostrar vulnerabilidad real</li>
+          <li>&#10003; &nbsp;Invitar sin presionar</li>
+          <li>&#10003; &nbsp;Usar testimonios verificables</li>
+        </ul>
+      </div>
+      <div>
+        <div class="badge-dont">No</div>
+        <ul style="font-family: 'Montserrat', sans-serif; font-size: 11px; font-weight: 300; color: var(--text-light); line-height: 2.2; list-style: none;">
+          <li>&#10007; &nbsp;Prometer curas o resultados mágicos</li>
+          <li>&#10007; &nbsp;Usar lenguaje agresivo de ventas</li>
+          <li>&#10007; &nbsp;Hablar mal de la competencia</li>
+          <li>&#10007; &nbsp;Usar jerga médica sin explicar</li>
+          <li>&#10007; &nbsp;Crear urgencia artificial (&ldquo;ÚLTIMA OPORTUNIDAD!!!!&rdquo;)</li>
+          <li>&#10007; &nbsp;Sonar como MLM genérico</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== 06. FOTOGRAFIA ==================== -->
+  <div class="chapter-header">
+    <div class="chapter-num">06</div>
+    <div class="chapter-info">
+      <div class="chapter-name">Fotografía y Visual</div>
+      <div class="chapter-sub">Estilo de imagen, filtros y composición</div>
+    </div>
+  </div>
+
+  <section class="full-cream sec">
+    <div class="rule-block">
+      <div class="rule-title">Estilo Fotográfico</div>
+      <div class="rule-text">
+        Las fotografías deben sentirse <strong>naturales, cálidas y auténticas</strong>. Evitar filtros extremos, colores saturados o ediciones que hagan la imagen parecer artificial. La iluminación ideal es <strong>luz natural suave</strong> — dorada o difusa.<br><br>
+        Las imágenes deben transmitir bienestar, calma y conexión humana. Preferir fondos limpios, tonos neutros y composiciones con espacio negativo.
+      </div>
+    </div>
+
+    <!-- Mood grid visual -->
+    <div class="photo-grid" style="margin-bottom: 60px;">
+      <div class="photo-cell" style="background: var(--navy);">
+        <div class="pc-icon">&#9788;</div>
+        <div class="pc-text">Luz natural</div>
+      </div>
+      <div class="photo-cell" style="background: var(--sage-dark);">
+        <div class="pc-icon">&#9673;</div>
+        <div class="pc-text">Tonos cálidos</div>
+      </div>
+      <div class="photo-cell" style="background: var(--brown);">
+        <div class="pc-icon">&#9740;</div>
+        <div class="pc-text">Espacio negativo</div>
+      </div>
+      <div class="photo-cell" style="background: var(--brown-dark);">
+        <div class="pc-icon">&#9752;</div>
+        <div class="pc-text">Naturaleza</div>
+      </div>
+      <div class="photo-cell" style="background: var(--navy-light);">
+        <div class="pc-icon">&#9733;</div>
+        <div class="pc-text">Autenticidad</div>
+      </div>
+      <div class="photo-cell" style="background: var(--sage);">
+        <div class="pc-icon">&#9825;</div>
+        <div class="pc-text">Bienestar</div>
+      </div>
+      <div class="photo-cell" style="background: linear-gradient(135deg, var(--brown), var(--navy));">
+        <div class="pc-icon">&#9683;</div>
+        <div class="pc-text">Minimalismo</div>
+      </div>
+      <div class="photo-cell" style="background: linear-gradient(135deg, var(--sage-dark), var(--brown));">
+        <div class="pc-icon">&#10023;</div>
+        <div class="pc-text">Texturas</div>
+      </div>
+      <div class="photo-cell" style="background: var(--cream); border: 0.5px solid #DDD;">
+        <div class="pc-icon" style="color: var(--navy); opacity: 0.2;">&#9679;</div>
+        <div class="pc-text" style="color: var(--navy);">Fondos limpios</div>
+      </div>
+    </div>
+
+    <div class="divider-dot"><span></span><span></span><span></span></div>
+
+    <div class="rule-block">
+      <div class="rule-title">Filtros y Edición</div>
+      <div class="rule-text">
+        <strong>Temperatura:</strong> Ligeramente cálida (+5 a +10)<br>
+        <strong>Saturación:</strong> Ligeramente desaturada (-10 a -15) — evitar colores chillones<br>
+        <strong>Contraste:</strong> Medio — no plano, no dramático<br>
+        <strong>Sombras:</strong> Ligeramente elevadas — look matte suave<br>
+        <strong>Tonos verdes/marrones:</strong> Mantener — son los tonos de marca<br>
+        <strong>Prohibido:</strong> Filtros de Instagram genéricos, blanco y negro (excepto para acentos), colores neón, ediciones tipo revista de moda<br><br>
+        El objetivo es que las fotos se sientan como si las tomó alguien con buen ojo, no un estudio profesional. <strong>Real pero refinado.</strong>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== 07. APLICACIONES ==================== -->
+  <div class="chapter-header">
+    <div class="chapter-num">07</div>
+    <div class="chapter-info">
+      <div class="chapter-name">Aplicaciones</div>
+      <div class="chapter-sub">Redes sociales, landing pages, tarjetas y email</div>
+    </div>
+  </div>
+
+  <section class="full-dark sec">
+    <div class="rule-block" style="margin-bottom: 50px;">
+      <div class="rule-title light">Instagram</div>
+      <div class="rule-text light">
+        El perfil de Instagram es el punto de contacto principal de la marca. Cada pieza debe respetar la identidad visual. Los formatos principales son: <strong>post de cita/frase</strong>, <strong>post educativo</strong>, <strong>testimonio</strong> y <strong>story con CTA</strong>.
+      </div>
+    </div>
+
+    <table class="spec-table" style="margin-bottom: 60px;">
+      <thead>
+        <tr>
+          <th style="color: var(--sage-light);">Formato</th>
+          <th style="color: var(--sage-light);">Dimensión</th>
+          <th style="color: var(--sage-light);">Fondo</th>
+          <th style="color: var(--sage-light);">Tipografía</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td style="color: var(--cream);">Post cuadrado</td>
+          <td style="color: var(--text-light);">1080 x 1080px</td>
+          <td style="color: var(--text-light);">Navy, Crema o Café</td>
+          <td style="color: var(--text-light);">DM Serif (título) + Montserrat (cuerpo)</td>
+        </tr>
+        <tr>
+          <td style="color: var(--cream);">Carrusel</td>
+          <td style="color: var(--text-light);">1080 x 1350px</td>
+          <td style="color: var(--text-light);">Alternar Navy y Crema entre slides</td>
+          <td style="color: var(--text-light);">DM Serif (cover) + Montserrat (contenido)</td>
+        </tr>
+        <tr>
+          <td style="color: var(--cream);">Story</td>
+          <td style="color: var(--text-light);">1080 x 1920px</td>
+          <td style="color: var(--text-light);">Gradiente Sage→Navy o Café→Navy</td>
+          <td style="color: var(--text-light);">DM Serif (frase) + Montserrat (CTA)</td>
+        </tr>
+        <tr>
+          <td style="color: var(--cream);">Reel cover</td>
+          <td style="color: var(--text-light);">1080 x 1920px</td>
+          <td style="color: var(--text-light);">Navy con texto centrado</td>
+          <td style="color: var(--text-light);">DM Serif grande + Montserrat subtitle</td>
+        </tr>
+        <tr>
+          <td style="color: var(--cream);">Foto de perfil</td>
+          <td style="color: var(--text-light);">320 x 320px</td>
+          <td style="color: var(--text-light);">Navy</td>
+          <td style="color: var(--text-light);">Monograma AM con círculo sage</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <div class="divider-dot"><span></span><span></span><span></span></div>
+
+    <div class="rule-block" style="margin-bottom: 50px;">
+      <div class="rule-title light">Landing Pages</div>
+      <div class="rule-text light">
+        <strong>Header:</strong> Logo horizontal sobre navy. CTA en sage.<br>
+        <strong>Hero:</strong> Fondo navy. Título en DM Serif (crema). Subtítulo en Cormorant (sage). Body en Montserrat 300.<br>
+        <strong>Secciones:</strong> Alternar navy y crema. Nunca más de 2 secciones del mismo color seguidas.<br>
+        <strong>CTAs:</strong> Fondo sage, texto navy. Siempre en Montserrat 500, uppercase, letter-spacing 3px.<br>
+        <strong>Footer:</strong> Navy con monograma, links en Montserrat 200.
+      </div>
+    </div>
+
+    <div class="divider-dot"><span></span><span></span><span></span></div>
+
+    <div class="rule-block" style="margin-bottom: 50px;">
+      <div class="rule-title light">Tarjeta de Presentación</div>
+      <div class="rule-text light">
+        <strong>Frente:</strong> Fondo blanco. Logo horizontal a la derecha. Nombre en DM Serif, título en Montserrat 300 uppercase. Línea decorativa sage→café. Info de contacto en Montserrat 300.<br>
+        <strong>Reverso:</strong> Fondo navy. Monograma AM centrado con círculo sage. Tagline en Cormorant italic.<br>
+        <strong>Dimensiones:</strong> 90mm x 50mm (estándar). Esquinas sin redondeo o con 2mm máximo.<br>
+        <strong>Papel:</strong> Mate texturizado o algodón 350g+.
+      </div>
+    </div>
+
+    <div class="divider-dot"><span></span><span></span><span></span></div>
+
+    <div class="rule-block">
+      <div class="rule-title light">Email y WhatsApp</div>
+      <div class="rule-text light">
+        <strong>Firma de email:</strong> Logo horizontal. Nombre en DM Serif. Título y datos en Montserrat Light. Separador: línea sage→café.<br>
+        <strong>WhatsApp:</strong> Foto de perfil = monograma AM sobre navy. Estado = tagline de marca. Mensajes siguen el tono conversacional cercano — sin emojis excesivos, máximo 2-3 por mensaje.
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== 08. USOS INCORRECTOS ==================== -->
+  <div class="chapter-header">
+    <div class="chapter-num">08</div>
+    <div class="chapter-info">
+      <div class="chapter-name">Usos Incorrectos</div>
+      <div class="chapter-sub">Qué evitar con la marca</div>
+    </div>
+  </div>
+
+  <section class="full-cream sec">
+    <div class="rule-block" style="margin-bottom: 50px;">
+      <div class="rule-title">Protege la Marca</div>
+      <div class="rule-text">
+        Para mantener la coherencia y el valor de la marca, estas son las reglas que nunca deben romperse. Cada violación debilita la percepción de profesionalismo y confianza.
+      </div>
+    </div>
+
+    <div class="do-dont-grid" style="margin-bottom: 40px;">
+      <!-- Logo -->
+      <div class="dd-card">
+        <div class="badge-dont">No hacer</div>
+        <div class="dd-example" style="background: var(--cream);">
+          <div style="position: relative; width: 80px; height: 80px; display: flex; align-items: center; justify-content: center; transform: rotate(15deg);">
+            <div style="position: absolute; width: 68%; height: 68%; border: 0.8px solid var(--sage-muted); border-radius: 50%; top: 50%; left: 50%; margin-top: -34%; margin-left: -34%;"></div>
+            <span style="font-family: 'DM Serif Display', serif; font-size: 32px; color: var(--navy); position: relative; z-index: 2;">AM</span>
+          </div>
+        </div>
+        <div class="dd-text">Nunca rotar, distorsionar o estirar el logo. Debe mantener siempre sus proporciones originales.</div>
+      </div>
+      <div class="dd-card">
+        <div class="badge-dont">No hacer</div>
+        <div class="dd-example" style="background: #FF6B6B;">
+          <div style="position: relative; width: 80px; height: 80px; display: flex; align-items: center; justify-content: center;">
+            <div style="position: absolute; width: 68%; height: 68%; border: 0.8px solid yellow; border-radius: 50%; top: 50%; left: 50%; margin-top: -34%; margin-left: -34%;"></div>
+            <span style="font-family: 'DM Serif Display', serif; font-size: 32px; color: yellow; position: relative; z-index: 2;">AM</span>
+          </div>
+        </div>
+        <div class="dd-text">Nunca usar colores fuera de la paleta aprobada. El logo solo existe en las 4 variaciones definidas.</div>
+      </div>
+    </div>
+
+    <div class="do-dont-grid" style="margin-bottom: 40px;">
+      <div class="dd-card">
+        <div class="badge-dont">No hacer</div>
+        <div class="dd-example" style="background: var(--cream);">
+          <div style="position: relative; width: 80px; height: 80px; display: flex; align-items: center; justify-content: center;">
+            <div style="position: absolute; width: 68%; height: 68%; border: 0.8px solid var(--sage-muted); border-radius: 50%; top: 50%; left: 50%; margin-top: -34%; margin-left: -34%;"></div>
+            <span style="font-family: Impact, sans-serif; font-size: 32px; color: var(--navy); position: relative; z-index: 2;">AM</span>
+          </div>
+        </div>
+        <div class="dd-text">Nunca cambiar la tipografía del monograma. Solo DM Serif Display es aceptable.</div>
+      </div>
+      <div class="dd-card">
+        <div class="badge-dont">No hacer</div>
+        <div class="dd-example" style="background: var(--navy);">
+          <div style="position: relative; width: 80px; height: 80px; display: flex; align-items: center; justify-content: center;">
+            <span style="font-family: 'DM Serif Display', serif; font-size: 32px; color: var(--cream); position: relative; z-index: 2; text-shadow: 0 0 20px rgba(255,0,0,0.5), 0 0 40px rgba(255,0,0,0.3);">AM</span>
+          </div>
+        </div>
+        <div class="dd-text">Nunca agregar sombras, bordes, efectos 3D o glows de colores no aprobados al logo.</div>
+      </div>
+    </div>
+
+    <div class="do-dont-grid" style="margin-bottom: 40px;">
+      <div class="dd-card">
+        <div class="badge-dont">No hacer</div>
+        <div class="dd-example" style="background: var(--cream);">
+          <span style="font-family: 'Comic Sans MS', cursive; font-size: 18px; color: var(--navy); text-align: center; line-height: 1.5;">Transforma tu<br>bienestar!!!! 🎉🔥💪</span>
+        </div>
+        <div class="dd-text">Nunca usar tipografías fuera del sistema (Comic Sans, Arial, etc.) ni emojis excesivos en piezas de marca.</div>
+      </div>
+      <div class="dd-card">
+        <div class="badge-dont">No hacer</div>
+        <div class="dd-example" style="background: var(--cream);">
+          <div style="text-align: center;">
+            <span style="font-family: 'Montserrat', sans-serif; font-size: 14px; font-weight: 700; color: red; text-transform: uppercase;">⚠️ ÚLTIMA OPORTUNIDAD!!!</span><br>
+            <span style="font-family: 'Montserrat', sans-serif; font-size: 11px; font-weight: 600; color: orange;">SOLO HOY - 50% OFF!!!</span>
+          </div>
+        </div>
+        <div class="dd-text">Nunca usar tácticas de urgencia agresivas, textos en rojo, o lenguaje tipo spam. La marca invita, no presiona.</div>
+      </div>
+    </div>
+
+    <div class="divider-dot"><span></span><span></span><span></span></div>
+
+    <div class="rule-block">
+      <div class="rule-title">Reglas Generales</div>
+      <div class="rule-text">
+        <strong>1.</strong> No colocar el logo sobre fondos con mucha textura o fotografías complejas sin overlay oscuro.<br>
+        <strong>2.</strong> No usar más de 2 tipografías en una sola pieza (ej: DM Serif + Montserrat, o DM Serif + Cormorant).<br>
+        <strong>3.</strong> No usar el monograma AM como un patrón repetitivo decorativo.<br>
+        <strong>4.</strong> No invertir la proporción de colores — navy siempre es dominante excepto en piezas específicas (educativos, testimonios).<br>
+        <strong>5.</strong> No recrear el logo manualmente — usar siempre los archivos originales.<br>
+        <strong>6.</strong> No agregar elementos decorativos al logo (flores, hojas, estrellas, etc.).<br>
+        <strong>7.</strong> No colocar texto demasiado cerca del logo — respetar siempre la zona de protección.
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== FOOTER ==================== -->
+  <section class="guide-footer">
+    <div class="gf-line"></div>
+    <div class="gf-logo">AM</div>
+    <div class="gf-text">Guía de Marca &middot; Anabel Mercedes &middot; 2026</div>
+    <div style="font-family: 'Cormorant Garamond', serif; font-style: italic; font-size: 14px; color: var(--sage); letter-spacing: 2px; margin-top: 10px;">
+      bienestar &middot; libertad &middot; propósito
+    </div>
+    <div class="gf-line"></div>
+    <div style="font-family: 'Montserrat', sans-serif; font-weight: 200; font-size: 8px; letter-spacing: 3px; color: var(--text-muted); text-transform: uppercase; margin-top: 20px;">
+      Diseñado por Martin Mercedes &middot; Versión 1.0
+    </div>
+  </section>
+
+</body>
+</html>

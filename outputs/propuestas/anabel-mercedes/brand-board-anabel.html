@@ -1,0 +1,1251 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Brand Board — Anabel Mercedes</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Montserrat:wght@100;200;300;400;500;600;700&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --navy: #1A1F2E;
+    --navy-light: #232839;
+    --sage: #6B8868;
+    --sage-dark: #8BA888;
+    --sage-light: #A8C4A5;
+    --sage-muted: #3A4A38;
+    --brown: #7A5C44;
+    --brown-light: #A07D64;
+    --brown-dark: #5E4433;
+    --brown-muted: rgba(122,92,68,0.3);
+    --cream: #EDE8E0;
+    --cream-warm: #F5F2ED;
+    --white: #FAFAF8;
+    --text-light: rgba(237,232,224,0.55);
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    background: var(--cream-warm);
+    font-family: 'Montserrat', sans-serif;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  /* ============================================
+     GLOBAL UTILITIES
+     ============================================ */
+  .full-dark { background: var(--navy); }
+  .full-cream { background: var(--cream-warm); }
+  .full-brown { background: var(--brown); }
+  .full-white { background: var(--white); }
+
+  .section-pad { padding: 100px 60px; }
+  .section-pad-sm { padding: 80px 60px; }
+
+  .section-label {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 9px;
+    letter-spacing: 6px;
+    text-transform: uppercase;
+    font-weight: 400;
+    text-align: center;
+    margin-bottom: 50px;
+  }
+
+  .section-label.light { color: var(--text-light); }
+  .section-label.dark { color: var(--brown); }
+  .section-label.on-brown { color: rgba(237,232,224,0.4); }
+
+  .section-label::after {
+    content: '';
+    display: block;
+    width: 20px;
+    height: 1px;
+    margin: 16px auto 0;
+  }
+
+  .section-label.light::after { background: linear-gradient(90deg, transparent, var(--sage), transparent); }
+  .section-label.dark::after { background: linear-gradient(90deg, transparent, var(--brown), transparent); }
+  .section-label.on-brown::after { background: linear-gradient(90deg, transparent, var(--sage-light), transparent); }
+
+  .center { display: flex; flex-direction: column; align-items: center; }
+
+  /* Hover effect on mockups */
+  .hoverable { transition: transform 0.3s ease, box-shadow 0.3s ease; }
+  .hoverable:hover { transform: translateY(-4px); box-shadow: 0 12px 40px rgba(0,0,0,0.12); }
+
+  /* ============================================
+     1. HERO
+     ============================================ */
+  .hero {
+    background: var(--navy);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 80px 40px;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .hero::before {
+    content: '';
+    position: absolute;
+    width: 500px; height: 500px;
+    background: radial-gradient(circle, rgba(139,168,136,0.05) 0%, transparent 70%);
+    top: 50%; left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  .hero .logo-wrap {
+    position: relative;
+    width: 300px; height: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .hero .circle {
+    position: absolute;
+    width: 68%; height: 68%;
+    border: 1px solid var(--sage);
+    border-radius: 50%;
+    top: 50%; left: 50%;
+    margin-top: -34%; margin-left: -34%;
+    filter: drop-shadow(0 0 20px rgba(139,168,136,0.15));
+  }
+
+  .hero .circle-outer {
+    position: absolute;
+    width: 78%; height: 78%;
+    border: 0.5px solid rgba(139,168,136,0.08);
+    border-radius: 50%;
+    top: 50%; left: 50%;
+    margin-top: -39%; margin-left: -39%;
+  }
+
+  .hero .letters {
+    position: relative; z-index: 2;
+    font-family: 'DM Serif Display', serif;
+    font-size: 130px;
+    color: var(--cream);
+    letter-spacing: -2px;
+    line-height: 1;
+  }
+
+  .hero .letters .a { margin-right: -8px; }
+
+  .hero .name-block {
+    margin-top: 40px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .hero .name-block .first {
+    font-family: 'DM Serif Display', serif;
+    font-style: italic;
+    font-size: 22px;
+    color: var(--sage);
+    letter-spacing: 5px;
+  }
+
+  .hero .name-block .last {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 200;
+    font-size: 10px;
+    letter-spacing: 12px;
+    color: var(--brown-light);
+    text-transform: uppercase;
+    opacity: 0.6;
+  }
+
+  .hero .tagline {
+    margin-top: 60px;
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    font-weight: 300;
+    font-size: 15px;
+    color: var(--brown-light);
+    letter-spacing: 3px;
+    opacity: 0.5;
+  }
+
+  /* ============================================
+     2. PALETA — PROPORCION BAR + SWATCHES
+     ============================================ */
+  .palette-section { max-width: 900px; margin: 0 auto; width: 100%; }
+
+  .proportion-bar {
+    display: flex;
+    height: 60px;
+    border-radius: 4px;
+    overflow: hidden;
+    box-shadow: 0 2px 20px rgba(0,0,0,0.06);
+    margin-bottom: 12px;
+  }
+
+  .proportion-bar div { display: flex; align-items: center; justify-content: center; }
+
+  .proportion-labels {
+    display: flex;
+    margin-bottom: 50px;
+  }
+
+  .proportion-labels span {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 8px;
+    font-weight: 300;
+    letter-spacing: 2px;
+    color: #999;
+    text-align: center;
+  }
+
+  .swatch-row {
+    display: flex;
+    gap: 40px;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .swatch {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+  }
+
+  .swatch-color {
+    width: 72px; height: 72px;
+    border-radius: 50%;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.08);
+  }
+
+  .swatch-name {
+    font-size: 9px;
+    font-weight: 400;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--navy);
+  }
+
+  .swatch-hex {
+    font-size: 9px;
+    font-weight: 200;
+    color: #AAA;
+    margin-top: -6px;
+    font-family: 'Montserrat', sans-serif;
+  }
+
+  /* ============================================
+     3. TIPOGRAFIAS + TYPE SPECIMEN
+     ============================================ */
+  .typo-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 60px;
+    max-width: 1000px;
+    margin: 0 auto 60px;
+  }
+
+  .typo-item { text-align: center; }
+
+  .typo-sample-serif {
+    font-family: 'DM Serif Display', serif;
+    font-size: 42px;
+    color: var(--cream);
+    margin-bottom: 14px;
+  }
+
+  .typo-sample-sans {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 300;
+    font-size: 30px;
+    color: var(--cream);
+    letter-spacing: 3px;
+    margin-bottom: 14px;
+  }
+
+  .typo-sample-accent {
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    font-weight: 300;
+    font-size: 32px;
+    color: var(--sage);
+    margin-bottom: 14px;
+  }
+
+  .typo-role {
+    font-size: 8px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: var(--brown-light);
+    font-weight: 400;
+    margin-bottom: 8px;
+  }
+
+  .typo-use {
+    font-size: 10px;
+    color: var(--text-light);
+    font-weight: 200;
+    line-height: 1.7;
+  }
+
+  /* Type specimen — contextual */
+  .specimen {
+    max-width: 600px;
+    margin: 0 auto;
+    background: var(--navy-light);
+    border-radius: 6px;
+    padding: 50px;
+    box-shadow: 0 8px 40px rgba(0,0,0,0.2);
+  }
+
+  .specimen .sp-eyebrow {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 8px;
+    font-weight: 400;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    color: var(--brown-light);
+    margin-bottom: 16px;
+  }
+
+  .specimen .sp-title {
+    font-family: 'DM Serif Display', serif;
+    font-size: 30px;
+    color: var(--cream);
+    line-height: 1.3;
+    margin-bottom: 16px;
+  }
+
+  .specimen .sp-sep {
+    width: 30px; height: 1px;
+    background: linear-gradient(90deg, var(--sage), var(--brown));
+    margin-bottom: 16px;
+  }
+
+  .specimen .sp-body {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 12px;
+    font-weight: 300;
+    color: var(--text-light);
+    line-height: 1.9;
+    margin-bottom: 20px;
+  }
+
+  .specimen .sp-accent {
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    font-size: 16px;
+    color: var(--sage);
+    letter-spacing: 1px;
+  }
+
+  /* ============================================
+     4. VARIACIONES DEL LOGO
+     ============================================ */
+  .var-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    max-width: 1100px;
+    margin: 0 auto;
+  }
+
+  .var-card {
+    padding: 40px 30px;
+    border-radius: 4px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 240px;
+    gap: 16px;
+  }
+
+  .var-card.bg-navy { background: var(--navy); }
+  .var-card.bg-white { background: var(--white); box-shadow: 0 2px 20px rgba(0,0,0,0.04); }
+  .var-card.bg-sage { background: var(--sage-dark); }
+  .var-card.bg-brown { background: var(--brown); }
+
+  .var-card .logo-sm {
+    position: relative;
+    width: 100px; height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .var-card .circle-sm {
+    position: absolute;
+    width: 68%; height: 68%;
+    border-radius: 50%;
+    top: 50%; left: 50%;
+    margin-top: -34%; margin-left: -34%;
+  }
+
+  .var-card.bg-navy .circle-sm { border: 0.8px solid var(--sage); filter: drop-shadow(0 0 8px rgba(139,168,136,0.15)); }
+  .var-card.bg-white .circle-sm { border: 0.8px solid var(--sage-muted); }
+  .var-card.bg-sage .circle-sm { border: 0.8px solid rgba(237,232,224,0.35); }
+  .var-card.bg-brown .circle-sm { border: 0.8px solid var(--sage-light); filter: drop-shadow(0 0 8px rgba(168,196,165,0.15)); }
+
+  .var-card .letters-sm {
+    position: relative; z-index: 2;
+    font-family: 'DM Serif Display', serif;
+    font-size: 42px;
+    letter-spacing: -1px;
+    line-height: 1;
+  }
+
+  .var-card.bg-navy .letters-sm { color: var(--cream); }
+  .var-card.bg-white .letters-sm { color: var(--navy); }
+  .var-card.bg-sage .letters-sm { color: var(--cream); }
+  .var-card.bg-brown .letters-sm { color: var(--cream); }
+
+  .var-card .var-name {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 300;
+    font-size: 9px;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+  }
+
+  .var-card.bg-navy .var-name { color: var(--text-light); }
+  .var-card.bg-white .var-name { color: var(--navy); }
+  .var-card.bg-sage .var-name { color: rgba(237,232,224,0.6); }
+  .var-card.bg-brown .var-name { color: rgba(237,232,224,0.6); }
+
+  .var-card .var-label {
+    font-size: 7px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    font-weight: 300;
+  }
+
+  .var-card.bg-navy .var-label { color: var(--brown-light); opacity: 0.5; }
+  .var-card.bg-white .var-label { color: var(--brown); opacity: 0.5; }
+  .var-card.bg-sage .var-label { color: rgba(237,232,224,0.3); }
+  .var-card.bg-brown .var-label { color: rgba(237,232,224,0.3); }
+
+  /* ============================================
+     5. COMBINACIONES — PROPORTION BARS
+     ============================================ */
+  .combos-wrap {
+    max-width: 700px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  .combo-row {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+  }
+
+  .combo-bar {
+    flex: 1;
+    height: 40px;
+    border-radius: 3px;
+    overflow: hidden;
+    display: flex;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.04);
+  }
+
+  .combo-info {
+    min-width: 180px;
+  }
+
+  .combo-info .combo-name {
+    font-family: 'DM Serif Display', serif;
+    font-size: 16px;
+    color: var(--navy);
+    margin-bottom: 4px;
+  }
+
+  .combo-info .combo-use {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 9px;
+    font-weight: 300;
+    color: var(--brown);
+    letter-spacing: 1px;
+  }
+
+  /* ============================================
+     6. APLICACIONES — UNIFIED GRID
+     ============================================ */
+  .app-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+    max-width: 1100px;
+    margin: 0 auto;
+  }
+
+  .app-grid .span-2 { grid-column: span 2; }
+
+  /* IG Post frame */
+  .ig-frame {
+    border-radius: 6px;
+    overflow: hidden;
+    box-shadow: 0 4px 24px rgba(0,0,0,0.08);
+  }
+
+  .ig-frame .ig-header {
+    background: var(--white);
+    padding: 10px 14px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    border-bottom: 0.5px solid #EEE;
+  }
+
+  .ig-frame .ig-avatar {
+    width: 24px; height: 24px;
+    border-radius: 50%;
+    background: var(--navy);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'DM Serif Display', serif;
+    font-size: 10px;
+    color: var(--cream);
+  }
+
+  .ig-frame .ig-username {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 10px;
+    font-weight: 500;
+    color: var(--navy);
+  }
+
+  .ig-frame .ig-content {
+    aspect-ratio: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 36px;
+    text-align: center;
+    gap: 16px;
+  }
+
+  /* Quote post */
+  .ig-quote { background: var(--navy); }
+  .ig-quote .q-mark {
+    font-family: 'DM Serif Display', serif;
+    font-size: 50px;
+    color: rgba(139,168,136,0.15);
+    line-height: 0.5;
+  }
+  .ig-quote .q-text {
+    font-family: 'DM Serif Display', serif;
+    font-style: italic;
+    font-size: 18px;
+    color: var(--cream);
+    line-height: 1.5;
+    max-width: 260px;
+  }
+  .ig-quote .q-line { width: 24px; height: 0.5px; background: linear-gradient(90deg, var(--sage), var(--brown-light)); }
+  .ig-quote .q-author {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 8px;
+    font-weight: 300;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    color: var(--brown-light);
+  }
+
+  /* Testimonio post */
+  .ig-testimonio { background: var(--brown); }
+  .ig-testimonio .t-mark {
+    font-family: 'DM Serif Display', serif;
+    font-size: 50px;
+    color: rgba(237,232,224,0.15);
+    line-height: 0.5;
+  }
+  .ig-testimonio .t-text {
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    font-size: 17px;
+    color: var(--cream);
+    line-height: 1.6;
+    max-width: 260px;
+  }
+  .ig-testimonio .t-line { width: 24px; height: 0.5px; background: var(--sage-light); }
+  .ig-testimonio .t-name {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 8px;
+    font-weight: 400;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: var(--sage-light);
+  }
+  .ig-testimonio .t-role {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 8px;
+    font-weight: 200;
+    color: rgba(237,232,224,0.4);
+    margin-top: -8px;
+  }
+
+  /* Educativo post */
+  .ig-edu { background: var(--cream); padding: 30px !important; align-items: flex-start !important; text-align: left !important; }
+  .ig-edu .edu-badge {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 7px;
+    font-weight: 500;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: var(--white);
+    background: var(--brown);
+    padding: 4px 10px;
+    border-radius: 2px;
+  }
+  .ig-edu .edu-num {
+    font-family: 'DM Serif Display', serif;
+    font-size: 44px;
+    color: var(--brown-muted);
+    line-height: 1;
+  }
+  .ig-edu .edu-title {
+    font-family: 'DM Serif Display', serif;
+    font-size: 20px;
+    color: var(--navy);
+    line-height: 1.3;
+  }
+  .ig-edu .edu-sep { width: 30px; height: 1px; background: linear-gradient(90deg, var(--brown), var(--sage)); }
+  .ig-edu .edu-body {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 11px;
+    font-weight: 300;
+    color: #555;
+    line-height: 1.8;
+  }
+  .ig-edu .edu-footer {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 0.5px solid var(--brown-muted);
+    padding-top: 10px;
+    margin-top: auto;
+  }
+  .ig-edu .edu-footer .ef-logo {
+    font-family: 'DM Serif Display', serif;
+    font-size: 16px;
+    color: var(--navy);
+  }
+  .ig-edu .edu-footer .ef-handle {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 8px;
+    font-weight: 300;
+    color: var(--brown);
+    letter-spacing: 1px;
+  }
+
+  /* Story frame */
+  .story-frame {
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 24px rgba(0,0,0,0.1);
+    max-width: 260px;
+  }
+
+  .story-content {
+    aspect-ratio: 9/16;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 36px;
+    text-align: center;
+    gap: 20px;
+  }
+
+  .story-sage { background: linear-gradient(180deg, var(--sage-dark) 0%, var(--navy) 100%); }
+  .story-brown { background: linear-gradient(180deg, var(--brown) 0%, var(--navy) 100%); }
+
+  .story-content .s-icon {
+    position: relative;
+    width: 44px; height: 44px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .story-content .s-icon .s-circle {
+    position: absolute;
+    width: 100%; height: 100%;
+    border: 0.6px solid rgba(237,232,224,0.4);
+    border-radius: 50%;
+  }
+
+  .story-content .s-icon .s-letters {
+    font-family: 'DM Serif Display', serif;
+    font-size: 18px;
+    color: var(--cream);
+    position: relative; z-index: 2;
+  }
+
+  .story-content .s-text {
+    font-family: 'DM Serif Display', serif;
+    font-size: 22px;
+    color: var(--cream);
+    line-height: 1.4;
+  }
+
+  .story-content .s-cta {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+    font-size: 9px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    padding: 8px 20px;
+    border-radius: 2px;
+  }
+
+  .story-sage .s-cta { color: var(--navy); background: var(--sage-light); }
+  .story-brown .s-cta { color: var(--brown); background: var(--cream); }
+
+  .story-content .s-sub {
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    font-size: 12px;
+    color: rgba(237,232,224,0.4);
+  }
+
+  /* Landing mockup */
+  .mock-landing {
+    background: var(--navy);
+    border-radius: 6px;
+    padding: 44px;
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+    box-shadow: 0 4px 24px rgba(0,0,0,0.1);
+    height: 100%;
+    justify-content: center;
+  }
+
+  .mock-landing .land-eyebrow {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 8px;
+    font-weight: 400;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    color: var(--brown-light);
+  }
+
+  .mock-landing .land-title {
+    font-family: 'DM Serif Display', serif;
+    font-size: 28px;
+    color: var(--cream);
+    line-height: 1.3;
+  }
+
+  .mock-landing .land-body {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 11px;
+    font-weight: 300;
+    color: var(--text-light);
+    line-height: 1.8;
+  }
+
+  .mock-landing .land-cta {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 9px;
+    font-weight: 500;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: var(--navy);
+    background: var(--sage);
+    padding: 12px 28px;
+    border-radius: 2px;
+    width: fit-content;
+  }
+
+  .mock-landing .land-note {
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    font-size: 11px;
+    color: var(--brown-light);
+    opacity: 0.4;
+  }
+
+  /* Business card */
+  .mock-bcard {
+    background: var(--white);
+    border-radius: 4px;
+    box-shadow: 0 4px 24px rgba(0,0,0,0.06);
+    padding: 32px 36px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    aspect-ratio: 1.8;
+  }
+
+  .mock-bcard .bc-left { display: flex; flex-direction: column; gap: 4px; }
+  .mock-bcard .bc-name { font-family: 'DM Serif Display', serif; font-size: 18px; color: var(--navy); }
+  .mock-bcard .bc-title { font-family: 'Montserrat', sans-serif; font-weight: 300; font-size: 7px; letter-spacing: 3px; text-transform: uppercase; color: var(--brown); }
+  .mock-bcard .bc-sep { width: 24px; height: 0.5px; background: linear-gradient(90deg, var(--sage), var(--brown)); margin: 4px 0; }
+  .mock-bcard .bc-info { font-family: 'Montserrat', sans-serif; font-weight: 300; font-size: 8px; color: #999; line-height: 1.8; }
+
+  .mock-bcard .bc-right {
+    position: relative;
+    width: 50px; height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .mock-bcard .bc-circle {
+    position: absolute;
+    width: 100%; height: 100%;
+    border: 0.6px solid var(--sage-muted);
+    border-radius: 50%;
+  }
+
+  .mock-bcard .bc-letters {
+    font-family: 'DM Serif Display', serif;
+    font-size: 20px;
+    color: var(--navy);
+    position: relative; z-index: 2;
+  }
+
+  /* Stats */
+  .stat-card {
+    border-radius: 4px;
+    padding: 36px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    gap: 10px;
+  }
+
+  .stat-card .stat-num {
+    font-family: 'DM Serif Display', serif;
+    font-size: 44px;
+    color: var(--cream);
+    line-height: 1;
+  }
+
+  .stat-card .stat-label {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 8px;
+    font-weight: 300;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    color: var(--sage-light);
+  }
+
+  /* ============================================
+     7. BRAND IN ACTION — MOSAIC
+     ============================================ */
+  .mosaic {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-auto-rows: minmax(160px, auto);
+    gap: 4px;
+    max-width: 1100px;
+    margin: 0 auto;
+  }
+
+  .mosaic .m-cell {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 30px;
+    text-align: center;
+    overflow: hidden;
+  }
+
+  .mosaic .m-tall { grid-row: span 2; }
+  .mosaic .m-wide { grid-column: span 2; }
+
+  /* ============================================
+     8. FOOTER
+     ============================================ */
+  .footer {
+    background: var(--navy);
+    padding: 80px 40px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+
+  .footer .f-logo {
+    font-family: 'DM Serif Display', serif;
+    font-size: 40px;
+    color: var(--cream);
+    letter-spacing: -1px;
+  }
+
+  .footer .f-text {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 200;
+    font-size: 9px;
+    letter-spacing: 4px;
+    color: var(--text-light);
+    text-transform: uppercase;
+  }
+
+  .footer .f-line {
+    width: 20px; height: 0.5px;
+    background: linear-gradient(90deg, transparent, var(--sage), transparent);
+  }
+</style>
+</head>
+<body>
+
+  <!-- ==================== 1. HERO ==================== -->
+  <section class="hero">
+    <div class="logo-wrap">
+      <div class="circle-outer"></div>
+      <div class="circle"></div>
+      <div class="letters"><span class="a">A</span><span class="m">M</span></div>
+    </div>
+    <div class="name-block">
+      <div class="first">Anabel</div>
+      <div class="last">Mercedes</div>
+    </div>
+    <div class="tagline">bienestar &middot; libertad &middot; propósito</div>
+  </section>
+
+  <!-- ==================== 2. PALETA ==================== -->
+  <section class="full-cream section-pad center">
+    <div class="section-label dark">Paleta de Colores</div>
+    <div class="palette-section">
+      <div class="proportion-bar">
+        <div style="flex: 55; background: var(--navy);"></div>
+        <div style="flex: 20; background: var(--sage);"></div>
+        <div style="flex: 15; background: var(--brown);"></div>
+        <div style="flex: 10; background: var(--cream);"></div>
+      </div>
+      <div class="proportion-labels" style="margin-bottom: 50px;">
+        <span style="flex: 55;">55%</span>
+        <span style="flex: 20;">20%</span>
+        <span style="flex: 15;">15%</span>
+        <span style="flex: 10;">10%</span>
+      </div>
+      <div class="swatch-row">
+        <div class="swatch">
+          <div class="swatch-color" style="background: #1A1F2E;"></div>
+          <div class="swatch-name">Midnight Navy</div>
+          <div class="swatch-hex">#1A1F2E</div>
+        </div>
+        <div class="swatch">
+          <div class="swatch-color" style="background: #6B8868;"></div>
+          <div class="swatch-name">Sage Profundo</div>
+          <div class="swatch-hex">#6B8868</div>
+        </div>
+        <div class="swatch">
+          <div class="swatch-color" style="background: #7A5C44;"></div>
+          <div class="swatch-name">Café Cálido</div>
+          <div class="swatch-hex">#7A5C44</div>
+        </div>
+        <div class="swatch">
+          <div class="swatch-color" style="background: #8BA888;"></div>
+          <div class="swatch-name">Sage Claro</div>
+          <div class="swatch-hex">#8BA888</div>
+        </div>
+        <div class="swatch">
+          <div class="swatch-color" style="background: #EDE8E0;"></div>
+          <div class="swatch-name">Crema</div>
+          <div class="swatch-hex">#EDE8E0</div>
+        </div>
+        <div class="swatch">
+          <div class="swatch-color" style="background: #FAFAF8; border: 0.5px solid #E0E0E0;"></div>
+          <div class="swatch-name">Blanco</div>
+          <div class="swatch-hex">#FAFAF8</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== 3. TIPOGRAFIAS ==================== -->
+  <section class="full-dark section-pad center">
+    <div class="section-label light">Tipografías</div>
+    <div class="typo-grid">
+      <div class="typo-item">
+        <div class="typo-sample-serif">Aa</div>
+        <div class="typo-role">DM Serif Display</div>
+        <div class="typo-use">Títulos, logo, frases de impacto</div>
+      </div>
+      <div class="typo-item">
+        <div class="typo-sample-sans">Aa</div>
+        <div class="typo-role">Montserrat</div>
+        <div class="typo-use">Cuerpo, subtítulos, interfaz</div>
+      </div>
+      <div class="typo-item">
+        <div class="typo-sample-accent">Aa</div>
+        <div class="typo-role">Cormorant Garamond</div>
+        <div class="typo-use">Acentos, citas, taglines</div>
+      </div>
+    </div>
+    <div class="specimen">
+      <div class="sp-eyebrow">Anabel Mercedes</div>
+      <div class="sp-title">Transforma tu bienestar desde adentro</div>
+      <div class="sp-sep"></div>
+      <div class="sp-body">Descubre cómo miles de personas están recuperando su energía y calidad de vida con ciencia real. Tu cuerpo tiene la capacidad de sanarse — solo necesita las herramientas correctas.</div>
+      <div class="sp-accent">bienestar &middot; libertad &middot; propósito</div>
+    </div>
+  </section>
+
+  <!-- ==================== 4. VARIACIONES DEL LOGO ==================== -->
+  <section class="full-cream section-pad center">
+    <div class="section-label dark">Variaciones del Logo</div>
+    <div class="var-grid">
+      <div class="var-card bg-navy hoverable">
+        <div class="var-label">Fondo oscuro</div>
+        <div class="logo-sm"><div class="circle-sm"></div><div class="letters-sm"><span class="a">A</span><span class="m">M</span></div></div>
+        <div class="var-name">Anabel Mercedes</div>
+      </div>
+      <div class="var-card bg-white hoverable">
+        <div class="var-label">Fondo claro</div>
+        <div class="logo-sm"><div class="circle-sm"></div><div class="letters-sm"><span class="a">A</span><span class="m">M</span></div></div>
+        <div class="var-name">Anabel Mercedes</div>
+      </div>
+      <div class="var-card bg-sage hoverable">
+        <div class="var-label">Sobre sage</div>
+        <div class="logo-sm"><div class="circle-sm"></div><div class="letters-sm"><span class="a">A</span><span class="m">M</span></div></div>
+        <div class="var-name">Anabel Mercedes</div>
+      </div>
+      <div class="var-card bg-brown hoverable">
+        <div class="var-label">Sobre café</div>
+        <div class="logo-sm"><div class="circle-sm"></div><div class="letters-sm"><span class="a">A</span><span class="m">M</span></div></div>
+        <div class="var-name">Anabel Mercedes</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== 5. COMBINACIONES ==================== -->
+  <section class="full-white section-pad-sm center">
+    <div class="section-label dark">Combinaciones de Color</div>
+    <div class="combos-wrap">
+      <div class="combo-row">
+        <div class="combo-info">
+          <div class="combo-name">Elegancia Nocturna</div>
+          <div class="combo-use">Posts, landing pages, hero sections</div>
+        </div>
+        <div class="combo-bar">
+          <div style="flex: 60; background: var(--navy);"></div>
+          <div style="flex: 25; background: var(--sage);"></div>
+          <div style="flex: 15; background: var(--cream);"></div>
+        </div>
+      </div>
+      <div class="combo-row">
+        <div class="combo-info">
+          <div class="combo-name">Calidez Natural</div>
+          <div class="combo-use">Testimonios, stories, conexión emocional</div>
+        </div>
+        <div class="combo-bar">
+          <div style="flex: 50; background: var(--brown);"></div>
+          <div style="flex: 30; background: var(--cream);"></div>
+          <div style="flex: 20; background: var(--sage-light);"></div>
+        </div>
+      </div>
+      <div class="combo-row">
+        <div class="combo-info">
+          <div class="combo-name">Tierra y Vida</div>
+          <div class="combo-use">Educativos, carruseles, tips</div>
+        </div>
+        <div class="combo-bar">
+          <div style="flex: 50; background: var(--cream);"></div>
+          <div style="flex: 30; background: var(--brown);"></div>
+          <div style="flex: 20; background: var(--sage);"></div>
+        </div>
+      </div>
+      <div class="combo-row">
+        <div class="combo-info">
+          <div class="combo-name">Transición Profunda</div>
+          <div class="combo-use">Stories con gradiente, CTAs</div>
+        </div>
+        <div class="combo-bar">
+          <div style="flex: 40; background: var(--brown);"></div>
+          <div style="flex: 40; background: var(--navy);"></div>
+          <div style="flex: 20; background: var(--sage);"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== 6. APLICACIONES ==================== -->
+  <section class="full-dark section-pad center">
+    <div class="section-label light">Aplicaciones</div>
+    <div class="app-grid">
+
+      <!-- Quote post IG -->
+      <div class="ig-frame hoverable">
+        <div class="ig-header"><div class="ig-avatar">AM</div><div class="ig-username">anabelmercedes</div></div>
+        <div class="ig-content ig-quote">
+          <div class="q-mark">&ldquo;</div>
+          <div class="q-text">Tu salud es la inversión más rentable que puedes hacer.</div>
+          <div class="q-line"></div>
+          <div class="q-author">Anabel Mercedes</div>
+        </div>
+      </div>
+
+      <!-- Testimonio post IG -->
+      <div class="ig-frame hoverable">
+        <div class="ig-header"><div class="ig-avatar">AM</div><div class="ig-username">anabelmercedes</div></div>
+        <div class="ig-content ig-testimonio">
+          <div class="t-mark">&ldquo;</div>
+          <div class="t-text">Mi energía cambió por completo. Ya no siento ese agotamiento a media tarde.</div>
+          <div class="t-line"></div>
+          <div class="t-name">María López</div>
+          <div class="t-role">Mamá emprendedora</div>
+        </div>
+      </div>
+
+      <!-- Story CTA sage -->
+      <div style="display: flex; gap: 16px;">
+        <div class="story-frame hoverable" style="flex: 1;">
+          <div class="story-content story-sage">
+            <div class="s-icon"><div class="s-circle"></div><div class="s-letters">AM</div></div>
+            <div class="s-text">¿Quieres generar ingresos desde casa?</div>
+            <div class="s-cta">Comenta "INFO"</div>
+            <div class="s-sub">te envío los detalles</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Educativo post IG -->
+      <div class="ig-frame hoverable">
+        <div class="ig-header"><div class="ig-avatar">AM</div><div class="ig-username">anabelmercedes</div></div>
+        <div class="ig-content ig-edu">
+          <div class="edu-badge">Tip</div>
+          <div class="edu-num">01</div>
+          <div class="edu-title">El glutatión es el antioxidante maestro</div>
+          <div class="edu-sep"></div>
+          <div class="edu-body">Después de los 20, tu producción natural baja 1% al año. A los 40, ya perdiste casi la mitad.</div>
+          <div class="edu-footer"><div class="ef-logo">AM</div><div class="ef-handle">@anabelmercedes</div></div>
+        </div>
+      </div>
+
+      <!-- Landing hero -->
+      <div class="mock-landing hoverable">
+        <div class="land-eyebrow">Anabel Mercedes</div>
+        <div class="land-title">Transforma tu bienestar desde adentro</div>
+        <div class="land-body">Descubre cómo miles de personas están recuperando su energía con ciencia real.</div>
+        <div class="land-cta">Quiero saber más</div>
+        <div class="land-note">Sin compromiso</div>
+      </div>
+
+      <!-- Story CTA brown -->
+      <div style="display: flex; gap: 16px;">
+        <div class="story-frame hoverable" style="flex: 1;">
+          <div class="story-content story-brown">
+            <div class="s-icon"><div class="s-circle"></div><div class="s-letters">AM</div></div>
+            <div class="s-text">Tu cuerpo merece lo mejor</div>
+            <div class="s-cta">Escribe "QUIERO"</div>
+            <div class="s-sub">y te cuento cómo empezar</div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Business card + Stats row -->
+    <div style="display: flex; gap: 20px; max-width: 1100px; width: 100%; margin-top: 24px; flex-wrap: wrap;">
+      <div class="mock-bcard hoverable" style="flex: 2; min-width: 300px;">
+        <div class="bc-left">
+          <div class="bc-name">Anabel Mercedes</div>
+          <div class="bc-title">Consultora de Bienestar</div>
+          <div class="bc-sep"></div>
+          <div class="bc-info">+1 (809) 000-0000<br>anabel@email.com<br>@anabelmercedes</div>
+        </div>
+        <div class="bc-right"><div class="bc-circle"></div><div class="bc-letters">AM</div></div>
+      </div>
+      <div class="stat-card hoverable" style="flex: 1; min-width: 140px; background: var(--brown); border-radius: 4px;">
+        <div class="stat-num">+500</div>
+        <div class="stat-label">Familias</div>
+      </div>
+      <div class="stat-card hoverable" style="flex: 1; min-width: 140px; background: var(--sage-dark); border-radius: 4px;">
+        <div class="stat-num">98%</div>
+        <div class="stat-label">Satisfacción</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== 7. BRAND IN ACTION ==================== -->
+  <section class="full-cream section-pad center">
+    <div class="section-label dark">Brand in Action</div>
+    <div class="mosaic">
+      <!-- Row 1 -->
+      <div class="m-cell m-tall" style="background: var(--navy); flex-direction: column; gap: 12px;">
+        <div style="position: relative; width: 70px; height: 70px; display: flex; align-items: center; justify-content: center;">
+          <div style="position: absolute; width: 68%; height: 68%; border: 0.6px solid var(--sage); border-radius: 50%; top: 50%; left: 50%; margin-top: -34%; margin-left: -34%;"></div>
+          <span style="font-family: 'DM Serif Display',serif; font-size: 28px; color: var(--cream); position: relative; z-index: 2;">AM</span>
+        </div>
+        <span style="font-family: 'DM Serif Display',serif; font-style: italic; font-size: 13px; color: var(--sage); letter-spacing: 3px;">Anabel</span>
+        <span style="font-family: 'Montserrat',sans-serif; font-weight: 200; font-size: 7px; letter-spacing: 8px; color: var(--brown-light); text-transform: uppercase; opacity: 0.6;">Mercedes</span>
+      </div>
+      <div class="m-cell m-wide" style="background: var(--brown);">
+        <span style="font-family: 'DM Serif Display',serif; font-style: italic; font-size: 20px; color: var(--cream); line-height: 1.5; max-width: 300px;">&ldquo;Tu salud es la inversión más rentable que puedes hacer.&rdquo;</span>
+      </div>
+      <div class="m-cell" style="background: var(--sage-dark);">
+        <span style="font-family: 'DM Serif Display',serif; font-size: 36px; color: var(--cream);">+500</span>
+      </div>
+      <!-- Row 2 -->
+      <div class="m-cell" style="background: var(--cream);">
+        <div style="display: flex; flex-direction: column; gap: 6px; align-items: flex-start;">
+          <span style="font-family: 'Montserrat',sans-serif; font-size: 6px; font-weight: 500; letter-spacing: 3px; text-transform: uppercase; color: var(--white); background: var(--brown); padding: 3px 8px; border-radius: 2px;">Tip</span>
+          <span style="font-family: 'DM Serif Display',serif; font-size: 14px; color: var(--navy); line-height: 1.3;">El glutatión es el antioxidante maestro</span>
+        </div>
+      </div>
+      <div class="m-cell" style="background: linear-gradient(180deg, var(--brown) 0%, var(--navy) 100%);">
+        <div style="display: flex; flex-direction: column; align-items: center; gap: 8px;">
+          <span style="font-family: 'DM Serif Display',serif; font-size: 14px; color: var(--cream);">Tu cuerpo merece lo mejor</span>
+          <span style="font-family: 'Montserrat',sans-serif; font-size: 7px; font-weight: 400; letter-spacing: 2px; color: var(--brown); background: var(--cream); padding: 4px 12px; border-radius: 2px; text-transform: uppercase;">Quiero</span>
+        </div>
+      </div>
+      <div class="m-cell" style="background: var(--navy);">
+        <div style="display: flex; flex-direction: column; align-items: center; gap: 4px;">
+          <span style="font-family: 'DM Serif Display',serif; font-size: 36px; color: var(--cream);">98%</span>
+          <span style="font-family: 'Montserrat',sans-serif; font-size: 7px; font-weight: 300; letter-spacing: 3px; color: var(--sage-light); text-transform: uppercase;">Satisfacción</span>
+        </div>
+      </div>
+      <!-- Row 3 -->
+      <div class="m-cell m-wide" style="background: var(--white); box-shadow: inset 0 0 0 0.5px #EEE;">
+        <div style="display: flex; align-items: center; gap: 16px;">
+          <div style="position: relative; width: 40px; height: 40px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">
+            <div style="position: absolute; width: 100%; height: 100%; border: 0.5px solid var(--sage-muted); border-radius: 50%;"></div>
+            <span style="font-family: 'DM Serif Display',serif; font-size: 16px; color: var(--navy); position: relative; z-index: 2;">AM</span>
+          </div>
+          <div>
+            <div style="font-family: 'DM Serif Display',serif; font-size: 14px; color: var(--navy);">Anabel Mercedes</div>
+            <div style="font-family: 'Montserrat',sans-serif; font-weight: 300; font-size: 7px; letter-spacing: 2px; color: var(--brown); text-transform: uppercase;">Consultora de Bienestar</div>
+          </div>
+        </div>
+      </div>
+      <div class="m-cell" style="background: var(--sage);">
+        <span style="font-family: 'Cormorant Garamond',serif; font-style: italic; font-size: 14px; color: var(--white); letter-spacing: 2px;">bienestar &middot; libertad</span>
+      </div>
+      <div class="m-cell" style="background: var(--brown);">
+        <span style="font-family: 'Montserrat',sans-serif; font-size: 7px; font-weight: 300; letter-spacing: 3px; color: var(--cream); text-transform: uppercase;">@anabelmercedes</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== 8. FOOTER ==================== -->
+  <section class="footer">
+    <div class="f-line"></div>
+    <div class="f-logo">AM</div>
+    <div class="f-text">Brand Board &middot; Anabel Mercedes &middot; 2026</div>
+    <div class="f-line"></div>
+  </section>
+
+</body>
+</html>

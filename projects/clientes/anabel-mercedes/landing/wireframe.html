@@ -1,0 +1,1111 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Wireframe — Landing Page Anabel Mercedes</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Montserrat:wght@300;400;500;600;700&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,400;1,500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --navy: #1A1F2E;
+    --sage: #6B8868;
+    --sage-light: #A8C4A5;
+    --brown: #7A5C44;
+    --cream: #EDE8E0;
+    --cream-warm: #F5F2ED;
+    --white: #FAFAF8;
+    --text-body: #4A4A4A;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: 'Montserrat', sans-serif;
+    background: #fff;
+    color: var(--navy);
+    font-size: 14px;
+    line-height: 1.7;
+  }
+
+  /* ====== WIREFRAME BADGE ====== */
+  .wire-badge {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background: var(--sage);
+    color: #fff;
+    padding: 8px 20px;
+    border-radius: 30px;
+    font-size: 10px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    font-weight: 600;
+    z-index: 1000;
+  }
+
+  /* ====== SECTION LABELS ====== */
+  .section-num {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    background: rgba(107,136,104,0.1);
+    color: var(--sage);
+    padding: 6px 14px;
+    border-radius: 20px;
+    font-size: 10px;
+    letter-spacing: 2px;
+    font-weight: 600;
+    text-transform: uppercase;
+    z-index: 10;
+  }
+
+  .section-note {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background: rgba(122,92,68,0.08);
+    color: var(--brown);
+    padding: 6px 14px;
+    border-radius: 20px;
+    font-size: 9px;
+    letter-spacing: 1px;
+    font-weight: 500;
+    text-transform: uppercase;
+    z-index: 10;
+  }
+
+  /* ====== NAV ====== */
+  .nav {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 24px 60px;
+    background: var(--cream-warm);
+    border-bottom: 1px solid rgba(26,31,46,0.04);
+  }
+
+  .nav-logo {
+    font-family: 'DM Serif Display', serif;
+    font-size: 22px;
+    color: var(--navy);
+  }
+
+  .nav-links {
+    display: flex;
+    gap: 32px;
+    list-style: none;
+    font-size: 11px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    font-weight: 500;
+    color: var(--text-body);
+  }
+
+  .nav-cta {
+    padding: 10px 24px;
+    background: var(--sage);
+    color: #fff;
+    border-radius: 30px;
+    font-size: 11px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    font-weight: 600;
+    text-decoration: none;
+  }
+
+  /* ====== S1: HERO ====== */
+  .hero {
+    position: relative;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    min-height: 90vh;
+    background: var(--cream-warm);
+    overflow: hidden;
+  }
+
+  .hero-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 80px 80px 80px 80px;
+  }
+
+  .hero-greeting {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 20px;
+    font-style: italic;
+    color: var(--brown);
+    margin-bottom: 16px;
+  }
+
+  .hero h1 {
+    font-family: 'DM Serif Display', serif;
+    font-size: 62px;
+    line-height: 1.1;
+    color: var(--navy);
+    margin-bottom: 28px;
+  }
+
+  .hero h1 em {
+    color: var(--sage);
+    font-style: italic;
+  }
+
+  .hero-desc {
+    font-size: 15px;
+    font-weight: 300;
+    color: var(--text-body);
+    line-height: 1.9;
+    max-width: 440px;
+    margin-bottom: 36px;
+  }
+
+  .hero-cta {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 18px 40px;
+    background: var(--sage);
+    color: #fff;
+    border-radius: 60px;
+    font-size: 12px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    font-weight: 600;
+    text-decoration: none;
+    width: fit-content;
+  }
+
+  .hero-photo {
+    position: relative;
+    background: linear-gradient(135deg, var(--cream) 0%, rgba(107,136,104,0.08) 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .photo-placeholder {
+    width: 380px;
+    height: 500px;
+    border-radius: 200px 200px 20px 20px;
+    background: linear-gradient(180deg, rgba(107,136,104,0.12) 0%, rgba(122,92,68,0.08) 100%);
+    border: 2px dashed rgba(107,136,104,0.2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .photo-placeholder span {
+    font-size: 11px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: var(--sage);
+    font-weight: 500;
+  }
+
+  .photo-placeholder .icon {
+    font-size: 48px;
+    color: rgba(107,136,104,0.3);
+  }
+
+  /* ====== S2: CREDENCIALES ====== */
+  .credentials {
+    position: relative;
+    padding: 50px 80px;
+    background: var(--white);
+    text-align: center;
+    border-top: 1px solid rgba(26,31,46,0.04);
+    border-bottom: 1px solid rgba(26,31,46,0.04);
+  }
+
+  .credentials p {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 22px;
+    font-weight: 400;
+    color: var(--text-body);
+    max-width: 700px;
+    margin: 0 auto;
+    line-height: 1.7;
+  }
+
+  .credentials strong {
+    color: var(--navy);
+    font-weight: 600;
+  }
+
+  /* ====== S3: RESULTADOS EN NUMEROS ====== */
+  .stats {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    gap: 80px;
+    padding: 70px 80px;
+    background: var(--navy);
+  }
+
+  .stat {
+    text-align: center;
+  }
+
+  .stat-num {
+    font-family: 'DM Serif Display', serif;
+    font-size: 52px;
+    color: var(--sage-light);
+    line-height: 1;
+  }
+
+  .stat-label {
+    font-size: 10px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: rgba(237,232,224,0.4);
+    margin-top: 10px;
+    font-weight: 400;
+  }
+
+  /* ====== S4: HISTORIA ====== */
+  .historia {
+    position: relative;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0;
+    background: var(--cream-warm);
+  }
+
+  .historia-photo {
+    background: linear-gradient(180deg, rgba(107,136,104,0.06) 0%, rgba(122,92,68,0.04) 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 600px;
+  }
+
+  .historia-content {
+    padding: 80px 70px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .label-sm {
+    font-size: 10px;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+    font-weight: 500;
+    margin-bottom: 20px;
+  }
+
+  .label-sm.sage { color: var(--sage); }
+  .label-sm.brown { color: var(--brown); }
+  .label-sm.cream { color: var(--cream); }
+  .label-sm.white { color: rgba(255,255,255,0.4); }
+
+  .historia-content h2 {
+    font-family: 'DM Serif Display', serif;
+    font-size: 38px;
+    line-height: 1.25;
+    color: var(--navy);
+    margin-bottom: 24px;
+  }
+
+  .historia-content p {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 19px;
+    line-height: 1.9;
+    color: var(--text-body);
+    margin-bottom: 16px;
+  }
+
+  .historia-content .highlight-quote {
+    margin: 28px 0;
+    padding: 28px 32px;
+    background: var(--white);
+    border-left: 3px solid var(--sage);
+    border-radius: 0 12px 12px 0;
+  }
+
+  .highlight-quote p {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 22px;
+    font-style: italic;
+    color: var(--navy);
+    font-weight: 500;
+    margin: 0;
+  }
+
+  /* ====== S5: PROBLEMA / IDENTIFICACION ====== */
+  .problema {
+    position: relative;
+    padding: 100px 80px;
+    background: var(--white);
+    text-align: center;
+  }
+
+  .problema h2 {
+    font-family: 'DM Serif Display', serif;
+    font-size: 40px;
+    color: var(--navy);
+    margin-bottom: 16px;
+  }
+
+  .problema-sub {
+    font-size: 15px;
+    font-weight: 300;
+    color: var(--text-body);
+    max-width: 550px;
+    margin: 0 auto 60px;
+    line-height: 1.9;
+  }
+
+  .problema-cards {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    max-width: 900px;
+    margin: 0 auto;
+  }
+
+  .p-card {
+    padding: 36px;
+    background: var(--cream-warm);
+    border-radius: 16px;
+    text-align: left;
+  }
+
+  .p-card p {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 18px;
+    font-style: italic;
+    color: var(--text-body);
+    line-height: 1.7;
+  }
+
+  .p-card .avatar-label {
+    display: inline-block;
+    margin-top: 16px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 9px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: var(--brown);
+    font-weight: 500;
+    font-style: normal;
+  }
+
+  /* ====== S6: MECANISMO ====== */
+  .mecanismo {
+    position: relative;
+    padding: 100px 80px;
+    background: var(--navy);
+  }
+
+  .mec-header {
+    margin-bottom: 60px;
+  }
+
+  .mec-header h2 {
+    font-family: 'DM Serif Display', serif;
+    font-size: 40px;
+    color: var(--cream);
+    margin-bottom: 16px;
+  }
+
+  .mec-header p {
+    font-size: 15px;
+    font-weight: 300;
+    color: rgba(237,232,224,0.6);
+    max-width: 550px;
+    line-height: 1.9;
+  }
+
+  .mec-steps {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+    margin-bottom: 60px;
+  }
+
+  .mec-step {
+    background: rgba(255,255,255,0.04);
+    border: 1px solid rgba(107,136,104,0.1);
+    border-radius: 16px;
+    padding: 40px 32px;
+  }
+
+  .mec-step-num {
+    font-family: 'DM Serif Display', serif;
+    font-size: 48px;
+    color: rgba(107,136,104,0.2);
+    line-height: 1;
+    margin-bottom: 16px;
+  }
+
+  .mec-step h3 {
+    font-family: 'DM Serif Display', serif;
+    font-size: 20px;
+    color: var(--cream);
+    margin-bottom: 12px;
+  }
+
+  .mec-step p {
+    font-size: 13px;
+    font-weight: 300;
+    color: rgba(237,232,224,0.6);
+    line-height: 1.9;
+  }
+
+  /* VS TABLE */
+  .vs-grid {
+    display: grid;
+    grid-template-columns: 1fr 40px 1fr;
+    gap: 0;
+    align-items: stretch;
+  }
+
+  .vs-box {
+    padding: 40px 36px;
+    border-radius: 16px;
+  }
+
+  .vs-box.bad {
+    background: rgba(196,87,75,0.05);
+    border: 1px solid rgba(196,87,75,0.1);
+  }
+
+  .vs-box.good {
+    background: rgba(107,136,104,0.06);
+    border: 1px solid rgba(107,136,104,0.12);
+  }
+
+  .vs-center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .vs-center span {
+    font-family: 'DM Serif Display', serif;
+    font-size: 18px;
+    color: rgba(237,232,224,0.15);
+  }
+
+  .vs-box h4 {
+    font-family: 'DM Serif Display', serif;
+    font-size: 18px;
+    margin-bottom: 20px;
+  }
+
+  .vs-box.bad h4 { color: #C4574B; }
+  .vs-box.good h4 { color: var(--sage-light); }
+
+  .vs-box ul {
+    list-style: none;
+    padding: 0;
+  }
+
+  .vs-box ul li {
+    padding: 7px 0 7px 24px;
+    font-size: 13px;
+    font-weight: 300;
+    color: rgba(237,232,224,0.6);
+    position: relative;
+  }
+
+  .vs-box.bad li::before { content: '✕'; position: absolute; left: 0; color: #C4574B; font-weight: 600; font-size: 11px; }
+  .vs-box.good li::before { content: '✓'; position: absolute; left: 0; color: var(--sage-light); font-weight: 600; }
+
+  /* ====== S7: TRANSPARENCIA ====== */
+  .transparencia {
+    position: relative;
+    padding: 100px 80px;
+    background: var(--cream-warm);
+  }
+
+  .trans-header {
+    text-align: center;
+    margin-bottom: 60px;
+  }
+
+  .trans-header h2 {
+    font-family: 'DM Serif Display', serif;
+    font-size: 40px;
+    color: var(--navy);
+    margin-bottom: 16px;
+  }
+
+  .trans-header p {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 20px;
+    color: var(--text-body);
+    max-width: 650px;
+    margin: 0 auto;
+    line-height: 1.8;
+  }
+
+  .timeline {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+    max-width: 900px;
+    margin: 0 auto;
+  }
+
+  .tl-card {
+    background: var(--white);
+    border-radius: 16px;
+    padding: 40px 32px;
+    text-align: center;
+    border: 1px solid rgba(26,31,46,0.04);
+  }
+
+  .tl-num {
+    font-family: 'DM Serif Display', serif;
+    font-size: 42px;
+    color: var(--sage);
+  }
+
+  .tl-label {
+    font-size: 10px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: var(--text-body);
+    opacity: 0.4;
+    margin-bottom: 16px;
+  }
+
+  .tl-desc {
+    font-size: 13px;
+    font-weight: 300;
+    color: var(--text-body);
+    line-height: 1.9;
+  }
+
+  .disclaimer {
+    max-width: 900px;
+    margin: 40px auto 0;
+    padding: 20px 28px;
+    background: var(--white);
+    border-radius: 10px;
+    font-size: 11px;
+    font-weight: 300;
+    color: rgba(26,31,46,0.35);
+    line-height: 1.8;
+    text-align: center;
+  }
+
+  /* ====== S8: TESTIMONIOS ====== */
+  .testimonios {
+    position: relative;
+    padding: 100px 80px;
+    background: var(--white);
+    text-align: center;
+  }
+
+  .testimonios h2 {
+    font-family: 'DM Serif Display', serif;
+    font-size: 40px;
+    color: var(--navy);
+    margin-bottom: 60px;
+  }
+
+  .test-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+    max-width: 900px;
+    margin: 0 auto;
+  }
+
+  .test-card {
+    padding: 36px;
+    background: var(--cream-warm);
+    border-radius: 16px;
+    text-align: left;
+  }
+
+  .test-card p {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 18px;
+    font-style: italic;
+    color: var(--navy);
+    line-height: 1.7;
+    margin-bottom: 20px;
+  }
+
+  .test-author {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+
+  .test-avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: rgba(107,136,104,0.12);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'DM Serif Display', serif;
+    font-size: 16px;
+    color: var(--sage);
+  }
+
+  .test-name { font-size: 13px; font-weight: 500; }
+  .test-role { font-size: 11px; color: var(--text-body); opacity: 0.5; }
+
+  /* ====== S9: PARA QUIEN ====== */
+  .para-quien {
+    position: relative;
+    padding: 100px 80px;
+    background: var(--sage);
+    text-align: center;
+  }
+
+  .para-quien h2 {
+    font-family: 'DM Serif Display', serif;
+    font-size: 40px;
+    color: #fff;
+    margin-bottom: 12px;
+  }
+
+  .para-quien > p {
+    font-size: 14px;
+    color: rgba(255,255,255,0.5);
+    margin-bottom: 50px;
+  }
+
+  .pq-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+    max-width: 900px;
+    margin: 0 auto;
+  }
+
+  .pq-col {
+    background: rgba(255,255,255,0.08);
+    border-radius: 16px;
+    padding: 44px 40px;
+    text-align: left;
+    border: 1px solid rgba(255,255,255,0.08);
+  }
+
+  .pq-col h3 {
+    font-family: 'DM Serif Display', serif;
+    font-size: 22px;
+    color: #fff;
+    margin-bottom: 24px;
+  }
+
+  .pq-col ul { list-style: none; padding: 0; }
+
+  .pq-col ul li {
+    padding: 8px 0 8px 28px;
+    font-size: 13px;
+    font-weight: 300;
+    color: rgba(255,255,255,0.8);
+    line-height: 1.7;
+    position: relative;
+  }
+
+  .pq-col.yes li::before { content: '✓'; position: absolute; left: 0; color: #fff; font-weight: 600; }
+  .pq-col.no li::before { content: '✕'; position: absolute; left: 0; color: rgba(255,255,255,0.3); font-weight: 600; }
+
+  /* ====== S10: CTA FINAL ====== */
+  .cta-final {
+    position: relative;
+    padding: 120px 80px;
+    background: var(--navy);
+    text-align: center;
+  }
+
+  .cta-final h2 {
+    font-family: 'DM Serif Display', serif;
+    font-size: 46px;
+    color: var(--cream);
+    line-height: 1.2;
+    max-width: 600px;
+    margin: 0 auto 20px;
+  }
+
+  .cta-final .sub {
+    font-size: 15px;
+    font-weight: 300;
+    color: rgba(237,232,224,0.5);
+    max-width: 450px;
+    margin: 0 auto 40px;
+    line-height: 1.9;
+  }
+
+  .cta-whatsapp {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    padding: 20px 48px;
+    background: #fff;
+    color: var(--navy);
+    border-radius: 60px;
+    font-size: 13px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    font-weight: 600;
+    text-decoration: none;
+  }
+
+  .cta-note {
+    margin-top: 20px;
+    font-size: 11px;
+    color: rgba(237,232,224,0.2);
+  }
+
+  /* ====== FOOTER ====== */
+  .footer {
+    padding: 40px 80px;
+    background: var(--navy);
+    border-top: 1px solid rgba(107,136,104,0.08);
+    text-align: center;
+  }
+
+  .footer p {
+    font-size: 11px;
+    color: rgba(237,232,224,0.2);
+  }
+
+  /* ====== RESPONSIVE ====== */
+  @media (max-width: 768px) {
+    .hero { grid-template-columns: 1fr; min-height: auto; }
+    .hero-text { padding: 60px 30px; }
+    .hero h1 { font-size: 38px; }
+    .hero-photo { min-height: 400px; }
+    .nav { padding: 16px 24px; }
+    .nav-links { display: none; }
+    .stats { flex-direction: column; gap: 30px; padding: 50px 30px; }
+    .historia { grid-template-columns: 1fr; }
+    .historia-photo { min-height: 300px; }
+    .historia-content { padding: 50px 30px; }
+    .problema, .mecanismo, .transparencia, .testimonios, .para-quien, .cta-final { padding: 70px 24px; }
+    .problema-cards, .test-grid, .pq-grid { grid-template-columns: 1fr; }
+    .mec-steps, .timeline { grid-template-columns: 1fr; }
+    .vs-grid { grid-template-columns: 1fr; }
+    .vs-center { padding: 10px 0; }
+    .credentials { padding: 40px 30px; }
+    .section-num, .section-note { position: relative; top: 0; left: 0; right: auto; display: inline-block; margin-bottom: 16px; margin-right: 8px; }
+  }
+</style>
+</head>
+<body>
+
+<div class="wire-badge">WIREFRAME v1</div>
+
+<!-- ============ NAV ============ -->
+<nav class="nav">
+  <div class="nav-logo">Anabel Mercedes</div>
+  <ul class="nav-links">
+    <li>Mi Historia</li>
+    <li>Cómo Funciona</li>
+    <li>Testimonios</li>
+  </ul>
+  <a href="#" class="nav-cta">Hablemos</a>
+</nav>
+
+<!-- ============ S1: HERO ============ -->
+<section class="hero">
+  <div class="section-num">S1 &mdash; Hero</div>
+  <div class="section-note">Estilo Gabby: asimétrico, foto + texto</div>
+
+  <div class="hero-text">
+    <div class="hero-greeting">hola, soy Anabel</div>
+    <h1>De Tímida a <em>Diamante Ejecutivo</em></h1>
+    <p class="hero-desc">Construí un negocio real sin perseguir a nadie. Sin mensajes fríos. Sin molestar a mis amigos. Solo un sistema y disciplina.</p>
+    <a href="#cta" class="hero-cta">Quiero saber cómo</a>
+  </div>
+
+  <div class="hero-photo">
+    <div class="photo-placeholder">
+      <div class="icon">&#128247;</div>
+      <span>Foto profesional</span>
+      <span style="font-size: 9px; color: var(--brown); letter-spacing: 1px;">de Anabel</span>
+    </div>
+  </div>
+</section>
+
+<!-- ============ S2: CREDENCIALES ============ -->
+<section class="credentials">
+  <div class="section-num">S2 &mdash; Credenciales</div>
+  <div class="section-note">1 frase. Como Gabby: "NYT Bestselling author..."</div>
+
+  <p><strong>Diamante Ejecutivo</strong> en Immunotec. Líder de un equipo de <strong>+50 personas</strong>. De tímida a construir un negocio real &mdash; sin perseguir, sin fingir, sin atajos.</p>
+</section>
+
+<!-- ============ S3: STATS ============ -->
+<section class="stats">
+  <div class="section-num" style="color: var(--sage-light);">S3 &mdash; Números</div>
+  <div class="section-note" style="color: var(--sage-light); background: rgba(107,136,104,0.15);">Social proof inmediato</div>
+
+  <div class="stat">
+    <div class="stat-num">50+</div>
+    <div class="stat-label">Personas en mi equipo</div>
+  </div>
+  <div class="stat">
+    <div class="stat-num">0</div>
+    <div class="stat-label">Mensajes fríos enviados</div>
+  </div>
+  <div class="stat">
+    <div class="stat-num">100%</div>
+    <div class="stat-label">Orgánico, sin ads</div>
+  </div>
+</section>
+
+<!-- ============ S4: HISTORIA ============ -->
+<section class="historia">
+  <div class="section-num">S4 &mdash; Mi Historia</div>
+  <div class="section-note">Estilo Gabby: 2 columnas, foto izq + texto der</div>
+
+  <div class="historia-photo">
+    <div class="photo-placeholder" style="width: 300px; height: 400px;">
+      <div class="icon">&#128247;</div>
+      <span>Foto casual</span>
+      <span style="font-size: 9px; color: var(--brown);">Anabel real, accesible</span>
+    </div>
+  </div>
+
+  <div class="historia-content">
+    <div class="label-sm sage">MI HISTORIA</div>
+    <h2>Yo era la persona más tímida que conocías</h2>
+    <p>Me sentaba en la esquina del salón y rezaba para que nadie me hablara. Cuando me hablaron de redes de mercadeo, mi primera reacción fue: eso no es para mí.</p>
+    <p>No sabía vender. No sabía liderar. No tenía contactos. No tenía NADA de lo que supuestamente necesitas.</p>
+
+    <div class="highlight-quote">
+      <p>"No gana el más carismático &mdash; gana el más consistente."</p>
+    </div>
+
+    <p>Pero estaba cansada de depender de un salario que no controlaba. Y una noche pensé: ¿y si lo intento? Hoy tengo un negocio que me da libertad. No porque sea especial &mdash; porque fui constante.</p>
+  </div>
+</section>
+
+<!-- ============ S5: PROBLEMA ============ -->
+<section class="problema">
+  <div class="section-num">S5 &mdash; Identificación</div>
+  <div class="section-note">Los 4 avatares del WWP</div>
+
+  <div class="label-sm sage">TAL VEZ TE IDENTIFICAS</div>
+  <h2>¿Te suena familiar?</h2>
+  <p class="problema-sub">No necesito convencerte de que quieres algo más. Ya lo sabes.</p>
+
+  <div class="problema-cards">
+    <div class="p-card">
+      <p>"Llevo años en el mismo trabajo. Me va 'bien'... pero sé que podría estar mejor."</p>
+      <span class="avatar-label">La profesional estancada</span>
+    </div>
+    <div class="p-card">
+      <p>"Quiero algo MÍO. Algo que pueda construir sin sacrificar tiempo con mis hijos."</p>
+      <span class="avatar-label">La mamá que busca algo propio</span>
+    </div>
+    <div class="p-card">
+      <p>"Alguien me escribió por DM con un 'cafecito'. Desde entonces, todo lo que suena a redes me da alergia."</p>
+      <span class="avatar-label">La escéptica (con razón)</span>
+    </div>
+    <div class="p-card">
+      <p>"Quiero diversificar sin arriesgar mi reputación."</p>
+      <span class="avatar-label">El empresario que diversifica</span>
+    </div>
+  </div>
+</section>
+
+<!-- ============ S6: MECANISMO ============ -->
+<section class="mecanismo">
+  <div class="section-num" style="color: var(--sage-light);">S6 &mdash; Cómo Funciona</div>
+  <div class="section-note" style="color: var(--sage-light); background: rgba(107,136,104,0.15);">3 pasos + comparativa VS</div>
+
+  <div class="mec-header">
+    <div class="label-sm cream">CÓMO FUNCIONA</div>
+    <h2>Atracción, no persecución</h2>
+    <p>No persigo a nadie. El contenido atrae, el sistema filtra, yo solo hablo con gente que YA quiere saber.</p>
+  </div>
+
+  <div class="mec-steps">
+    <div class="mec-step">
+      <div class="mec-step-num">01</div>
+      <h3>El contenido atrae</h3>
+      <p>Publico contenido real en Instagram. Las personas que resuenan se quedan. Sin pitches. Sin mentiras.</p>
+    </div>
+    <div class="mec-step">
+      <div class="mec-step-num">02</div>
+      <h3>El sistema filtra</h3>
+      <p>Cuando alguien quiere saber más, escribe una palabra. Automáticamente se califica. Solo hablo con interesados.</p>
+    </div>
+    <div class="mec-step">
+      <div class="mec-step-num">03</div>
+      <h3>Tú decides</h3>
+      <p>Sin presión. Te cuento cómo funciona, te muestro los números reales, y tú decides.</p>
+    </div>
+  </div>
+
+  <div class="vs-grid">
+    <div class="vs-box bad">
+      <h4>Lo que todos odian</h4>
+      <ul>
+        <li>Mensajes fríos a desconocidos</li>
+        <li>"Cafecitos" que son pitches</li>
+        <li>Presionar a amigos y familiares</li>
+        <li>Prometer "dinero fácil"</li>
+        <li>Fingir un estilo de vida</li>
+      </ul>
+    </div>
+    <div class="vs-center"><span>vs</span></div>
+    <div class="vs-box good">
+      <h4>Lo que yo hago</h4>
+      <ul>
+        <li>Contenido que atrae personas correctas</li>
+        <li>Si te invito a un café, es un café</li>
+        <li>Solo trabajo con quienes me buscan</li>
+        <li>Te digo la verdad: requiere trabajo</li>
+        <li>Muestro mi vida tal cual es</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ============ S7: TRANSPARENCIA ============ -->
+<section class="transparencia">
+  <div class="section-num">S7 &mdash; Expectativas Reales</div>
+  <div class="section-note">Transparencia = Trust</div>
+
+  <div class="trans-header">
+    <div class="label-sm sage">TRANSPARENCIA TOTAL</div>
+    <h2>Expectativas reales</h2>
+    <p>Sí, el 75% no gana nada. No te voy a mentir. Pero esa estadística no distingue entre quienes se lo tomaron en serio y quienes no.</p>
+  </div>
+
+  <div class="timeline">
+    <div class="tl-card">
+      <div class="tl-num">0-3</div>
+      <div class="tl-label">Meses</div>
+      <div class="tl-desc">Aprendizaje. Vas a escuchar "no". Vas a dudar. Es la fase más difícil &mdash; y la más importante.</div>
+    </div>
+    <div class="tl-card">
+      <div class="tl-num">6-12</div>
+      <div class="tl-label">Meses</div>
+      <div class="tl-desc">Tracción. Tu equipo crece. Primeros resultados consistentes. El sistema empieza a funcionar.</div>
+    </div>
+    <div class="tl-card">
+      <div class="tl-num">12-24</div>
+      <div class="tl-label">Meses</div>
+      <div class="tl-desc">Apalancamiento. Tu equipo lidera. Tu negocio crece porque ellos crecen.</div>
+    </div>
+  </div>
+
+  <div class="disclaimer">No prometo resultados específicos. Prometo sistema, mentoría y honestidad. Lo que logres depende de tu esfuerzo y consistencia.</div>
+</section>
+
+<!-- ============ S8: TESTIMONIOS ============ -->
+<section class="testimonios">
+  <div class="section-num">S8 &mdash; Testimonios</div>
+  <div class="section-note">Social proof del equipo real</div>
+
+  <div class="label-sm sage">TESTIMONIOS</div>
+  <h2>Lo que dice mi equipo</h2>
+
+  <div class="test-grid">
+    <div class="test-card">
+      <p>"Yo también pensaba que era pirámide. Anabel me mostró la realidad, no me presionó, y me dejó decidir. Llevo 8 meses y no me arrepiento."</p>
+      <div class="test-author">
+        <div class="test-avatar">M</div>
+        <div>
+          <div class="test-name">Miembro del equipo</div>
+          <div class="test-role">8 meses</div>
+        </div>
+      </div>
+    </div>
+    <div class="test-card">
+      <p>"Lo que más valoro es que nunca me mintió. Me dijo que iba a ser difícil. Y fue difícil. Pero el sistema funciona."</p>
+      <div class="test-author">
+        <div class="test-avatar">C</div>
+        <div>
+          <div class="test-name">Miembro del equipo</div>
+          <div class="test-role">14 meses</div>
+        </div>
+      </div>
+    </div>
+    <div class="test-card">
+      <p>"Soy mamá de 2 y lo hago en mis horas libres. Por primera vez tengo algo mío que yo controlo."</p>
+      <div class="test-author">
+        <div class="test-avatar">L</div>
+        <div>
+          <div class="test-name">Miembro del equipo</div>
+          <div class="test-role">11 meses</div>
+        </div>
+      </div>
+    </div>
+    <div class="test-card">
+      <p>"Tengo mi negocio y esto lo complementa perfecto. Lo manejo desde mi teléfono y Anabel me guía cada semana."</p>
+      <div class="test-author">
+        <div class="test-avatar">R</div>
+        <div>
+          <div class="test-name">Miembro del equipo</div>
+          <div class="test-role">6 meses</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ S9: PARA QUIEN ============ -->
+<section class="para-quien">
+  <div class="section-num" style="color: #fff; background: rgba(255,255,255,0.15);">S9 &mdash; Filtro</div>
+  <div class="section-note" style="color: #fff; background: rgba(255,255,255,0.15);">Honestidad = confianza</div>
+
+  <div class="label-sm white">HONESTIDAD ANTE TODO</div>
+  <h2>Esto no es para todos</h2>
+  <p>Y está bien. Prefiero que lo sepas antes.</p>
+
+  <div class="pq-grid">
+    <div class="pq-col yes">
+      <h3>Es para ti si...</h3>
+      <ul>
+        <li>Tienes disciplina y estás dispuesta a aprender</li>
+        <li>Buscas algo real a mediano plazo</li>
+        <li>Puedes dedicar 1-2 horas al día</li>
+        <li>Estás dispuesta a crear contenido</li>
+        <li>Valoras la honestidad y transparencia</li>
+      </ul>
+    </div>
+    <div class="pq-col no">
+      <h3>No es para ti si...</h3>
+      <ul>
+        <li>Buscas resultados rápidos sin esfuerzo</li>
+        <li>No tienes paciencia para 6-12 meses</li>
+        <li>Quieres que alguien trabaje por ti</li>
+        <li>Crees que esto es automático</li>
+        <li>No puedes invertir en ti misma</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ============ S10: CTA FINAL ============ -->
+<section class="cta-final" id="cta">
+  <div class="section-num" style="color: var(--sage-light);">S10 &mdash; CTA Final</div>
+  <div class="section-note" style="color: var(--sage-light); background: rgba(107,136,104,0.15);">WhatsApp directo</div>
+
+  <div class="label-sm sage" style="display: inline-block;">EL SIGUIENTE PASO</div>
+  <h2>Si esto resonó contigo, hablemos.</h2>
+  <p class="sub">Sin compromiso. Sin presión. Solo una conversación honesta.</p>
+  <a href="#" class="cta-whatsapp">Escríbeme por WhatsApp</a>
+  <div class="cta-note">Respondo personalmente en menos de 24 horas</div>
+</section>
+
+<!-- ============ FOOTER ============ -->
+<footer class="footer">
+  <p>Anabel Mercedes &mdash; 2026</p>
+</footer>
+
+</body>
+</html>

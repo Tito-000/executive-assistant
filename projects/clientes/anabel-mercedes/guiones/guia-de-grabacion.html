@@ -1,0 +1,1363 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Guía de Grabación — Anabel Mercedes</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Montserrat:wght@100;200;300;400;500;600;700&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --navy: #1A1F2E;
+    --navy-light: #232839;
+    --navy-rgb: 26,31,46;
+    --sage: #6B8868;
+    --sage-light: #A8C4A5;
+    --sage-muted: rgba(107,136,104,0.15);
+    --sage-border: rgba(107,136,104,0.25);
+    --brown: #7A5C44;
+    --brown-light: #A07D64;
+    --brown-muted: rgba(122,92,68,0.2);
+    --cream: #EDE8E0;
+    --cream-warm: #F5F2ED;
+    --white: #FAFAF8;
+    --text-body: #4A4A4A;
+    --text-light: rgba(237,232,224,0.6);
+    --text-muted: rgba(26,31,46,0.4);
+    --danger: #C4574B;
+    --danger-bg: rgba(196,87,75,0.08);
+    --success: #5A8A56;
+    --success-bg: rgba(90,138,86,0.08);
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    background: var(--cream-warm);
+    font-family: 'Montserrat', sans-serif;
+    -webkit-font-smoothing: antialiased;
+    color: var(--navy);
+    font-size: 13px;
+    line-height: 1.7;
+  }
+
+  @media print {
+    body { font-size: 11px; }
+    .page { padding: 20px !important; }
+    .sec { padding: 40px 20px !important; page-break-inside: avoid; }
+    .no-print { display: none !important; }
+  }
+
+  .page {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 0 40px;
+  }
+
+  /* ====== HERO ====== */
+  .hero {
+    background: var(--navy);
+    padding: 100px 60px 80px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .hero::before {
+    content: '';
+    position: absolute;
+    top: -200px;
+    right: -200px;
+    width: 500px;
+    height: 500px;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(107,136,104,0.08), transparent 70%);
+  }
+
+  .hero-label {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 9px;
+    letter-spacing: 6px;
+    text-transform: uppercase;
+    color: var(--sage);
+    margin-bottom: 30px;
+  }
+
+  .hero h1 {
+    font-family: 'DM Serif Display', serif;
+    font-size: 48px;
+    color: var(--cream);
+    line-height: 1.2;
+    margin-bottom: 16px;
+  }
+
+  .hero-sub {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 20px;
+    font-style: italic;
+    color: var(--text-light);
+    margin-bottom: 40px;
+  }
+
+  .hero-meta {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    font-size: 11px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: rgba(237,232,224,0.35);
+  }
+
+  .hero-meta span { font-weight: 400; }
+  .hero-meta strong { color: var(--sage); font-weight: 500; }
+
+  /* ====== SECTIONS ====== */
+  .sec {
+    padding: 80px 60px;
+  }
+
+  .sec-dark { background: var(--navy); }
+  .sec-cream { background: var(--cream-warm); }
+  .sec-white { background: var(--white); }
+  .sec-brown { background: var(--brown); }
+  .sec-sage { background: var(--sage); }
+
+  .section-label {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 9px;
+    letter-spacing: 6px;
+    text-transform: uppercase;
+    font-weight: 400;
+    margin-bottom: 40px;
+  }
+
+  .section-label::after {
+    content: '';
+    display: block;
+    width: 20px;
+    height: 1px;
+    margin-top: 14px;
+  }
+
+  .section-label.dark { color: var(--brown); }
+  .section-label.dark::after { background: linear-gradient(90deg, var(--brown), transparent); }
+  .section-label.light { color: var(--text-light); }
+  .section-label.light::after { background: linear-gradient(90deg, var(--sage), transparent); }
+  .section-label.on-sage { color: rgba(255,255,255,0.5); }
+  .section-label.on-sage::after { background: linear-gradient(90deg, rgba(255,255,255,0.4), transparent); }
+
+  .sec-title {
+    font-family: 'DM Serif Display', serif;
+    font-size: 32px;
+    line-height: 1.3;
+    margin-bottom: 16px;
+  }
+
+  .sec-subtitle {
+    font-size: 13px;
+    font-weight: 300;
+    color: var(--text-body);
+    max-width: 650px;
+    line-height: 2;
+    margin-bottom: 50px;
+  }
+
+  .sec-subtitle.light { color: var(--text-light); }
+
+  /* ====== TABLES ====== */
+  .data-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 30px 0;
+    font-size: 12px;
+  }
+
+  .data-table th {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 9px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    font-weight: 500;
+    text-align: left;
+    padding: 14px 16px;
+    border-bottom: 2px solid var(--sage-border);
+    color: var(--sage);
+  }
+
+  .data-table td {
+    padding: 14px 16px;
+    border-bottom: 1px solid rgba(26,31,46,0.06);
+    font-weight: 300;
+    color: var(--text-body);
+    vertical-align: top;
+  }
+
+  .data-table tr:last-child td { border-bottom: none; }
+
+  .data-table .tag {
+    display: inline-block;
+    padding: 3px 10px;
+    border-radius: 20px;
+    font-size: 10px;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+  }
+
+  .tag-prod { background: var(--sage-muted); color: var(--sage); }
+  .tag-org { background: var(--brown-muted); color: var(--brown); }
+  .tag-format { background: rgba(26,31,46,0.06); color: var(--navy); font-weight: 400; }
+
+  /* Dark table variant */
+  .data-table.on-dark th {
+    color: var(--sage-light);
+    border-bottom-color: rgba(107,136,104,0.2);
+  }
+
+  .data-table.on-dark td {
+    color: rgba(237,232,224,0.6);
+    border-bottom-color: rgba(255,255,255,0.05);
+  }
+
+  /* ====== CARDS ====== */
+  .card-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+    margin: 30px 0;
+  }
+
+  .card-grid-3 {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    margin: 30px 0;
+  }
+
+  .card {
+    background: var(--white);
+    border-radius: 12px;
+    padding: 28px;
+    border: 1px solid rgba(26,31,46,0.06);
+    transition: box-shadow 0.2s;
+  }
+
+  .card:hover {
+    box-shadow: 0 4px 20px rgba(26,31,46,0.06);
+  }
+
+  .card-dark {
+    background: var(--navy-light);
+    border-color: rgba(107,136,104,0.1);
+  }
+
+  .card-label {
+    font-size: 9px;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    color: var(--sage);
+    margin-bottom: 12px;
+    font-weight: 500;
+  }
+
+  .card-title {
+    font-family: 'DM Serif Display', serif;
+    font-size: 18px;
+    margin-bottom: 8px;
+    color: var(--navy);
+  }
+
+  .card-dark .card-title { color: var(--cream); }
+
+  .card-text {
+    font-size: 12px;
+    font-weight: 300;
+    line-height: 1.9;
+    color: var(--text-body);
+  }
+
+  .card-dark .card-text { color: var(--text-light); }
+
+  .card-meta {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+    margin-top: 14px;
+  }
+
+  .card-meta-item {
+    font-size: 10px;
+    padding: 4px 10px;
+    border-radius: 6px;
+    background: var(--sage-muted);
+    color: var(--sage);
+    font-weight: 400;
+  }
+
+  .card-dark .card-meta-item {
+    background: rgba(107,136,104,0.12);
+    color: var(--sage-light);
+  }
+
+  /* ====== GUIONES ====== */
+  .ficha {
+    background: var(--white);
+    border-radius: 16px;
+    border: 1px solid rgba(26,31,46,0.06);
+    margin-bottom: 32px;
+    overflow: hidden;
+  }
+
+  .ficha-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 24px 28px;
+    background: var(--navy);
+  }
+
+  .ficha-id {
+    font-family: 'DM Serif Display', serif;
+    font-size: 28px;
+    color: var(--sage);
+    margin-right: 16px;
+  }
+
+  .ficha-name {
+    font-family: 'DM Serif Display', serif;
+    font-size: 20px;
+    color: var(--cream);
+    flex: 1;
+  }
+
+  .ficha-format {
+    font-size: 10px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--sage-light);
+    padding: 5px 14px;
+    border: 1px solid rgba(107,136,104,0.3);
+    border-radius: 20px;
+    white-space: nowrap;
+  }
+
+  .ficha-body {
+    padding: 28px;
+  }
+
+  .guion-texto {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 17px;
+    line-height: 1.8;
+    color: var(--navy);
+  }
+
+  .guion-texto p {
+    margin-bottom: 16px;
+    padding-left: 20px;
+    border-left: 2px solid var(--sage-border);
+  }
+
+  .guion-texto p:last-child {
+    margin-bottom: 0;
+    border-left-color: var(--sage);
+    font-weight: 500;
+  }
+
+  .guion-texto p strong {
+    color: var(--sage);
+    font-weight: 600;
+    letter-spacing: 1px;
+  }
+
+  /* ====== LOCATION CARDS ====== */
+  .loc-card {
+    background: var(--navy-light);
+    border-radius: 14px;
+    padding: 32px;
+    border: 1px solid rgba(107,136,104,0.1);
+  }
+
+  .loc-letter {
+    font-family: 'DM Serif Display', serif;
+    font-size: 48px;
+    color: var(--sage);
+    line-height: 1;
+    margin-bottom: 6px;
+  }
+
+  .loc-name {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--cream);
+    margin-bottom: 14px;
+  }
+
+  .loc-desc {
+    font-size: 12px;
+    font-weight: 300;
+    color: var(--text-light);
+    line-height: 1.9;
+    margin-bottom: 16px;
+  }
+
+  .loc-videos {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+  }
+
+  .loc-badge {
+    font-size: 10px;
+    padding: 4px 10px;
+    border-radius: 6px;
+    background: rgba(107,136,104,0.12);
+    color: var(--sage-light);
+    font-weight: 400;
+  }
+
+  /* ====== SWATCHES ====== */
+  .swatch-row {
+    display: flex;
+    gap: 16px;
+    margin: 24px 0;
+    flex-wrap: wrap;
+  }
+
+  .swatch {
+    flex: 1;
+    min-width: 140px;
+    border-radius: 12px;
+    overflow: hidden;
+    border: 1px solid rgba(26,31,46,0.06);
+  }
+
+  .swatch-color {
+    height: 80px;
+  }
+
+  .swatch-info {
+    padding: 14px 16px;
+    background: var(--white);
+  }
+
+  .swatch-name {
+    font-size: 12px;
+    font-weight: 500;
+    color: var(--navy);
+    margin-bottom: 2px;
+  }
+
+  .swatch-hex {
+    font-size: 10px;
+    color: var(--text-muted);
+    font-weight: 300;
+  }
+
+  .swatch-use {
+    font-size: 10px;
+    color: var(--text-body);
+    font-weight: 300;
+    margin-top: 4px;
+  }
+
+  /* ====== OUTFIT GRID ====== */
+  .outfit-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 16px;
+    margin: 24px 0;
+  }
+
+  .outfit-card {
+    background: var(--white);
+    border-radius: 10px;
+    padding: 20px;
+    text-align: center;
+    border: 1px solid rgba(26,31,46,0.06);
+  }
+
+  .outfit-vid {
+    font-size: 10px;
+    font-weight: 500;
+    color: var(--sage);
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin-bottom: 8px;
+  }
+
+  .outfit-desc {
+    font-size: 11px;
+    font-weight: 300;
+    color: var(--text-body);
+    line-height: 1.6;
+  }
+
+  .outfit-dots {
+    display: flex;
+    justify-content: center;
+    gap: 6px;
+    margin-top: 10px;
+  }
+
+  .outfit-dot {
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    border: 1px solid rgba(26,31,46,0.1);
+  }
+
+  /* ====== INSTRUCCIONES ====== */
+  .instruc-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+  }
+
+  .instruc-block {
+    background: var(--white);
+    border-radius: 12px;
+    padding: 28px;
+    border: 1px solid rgba(26,31,46,0.06);
+  }
+
+  .instruc-block.full { grid-column: 1 / -1; }
+
+  .instruc-block.danger {
+    border-color: rgba(196,87,75,0.15);
+    background: linear-gradient(135deg, var(--white), rgba(196,87,75,0.02));
+  }
+
+  .instruc-icon {
+    font-size: 24px;
+    margin-bottom: 12px;
+  }
+
+  .instruc-title {
+    font-family: 'DM Serif Display', serif;
+    font-size: 16px;
+    color: var(--navy);
+    margin-bottom: 14px;
+  }
+
+  .instruc-list {
+    list-style: none;
+    padding: 0;
+  }
+
+  .instruc-list li {
+    position: relative;
+    padding: 8px 0 8px 24px;
+    font-size: 12px;
+    font-weight: 300;
+    color: var(--text-body);
+    line-height: 1.7;
+  }
+
+  .instruc-list li::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 15px;
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: var(--sage);
+  }
+
+  .instruc-list.danger-list li::before {
+    background: var(--danger);
+  }
+
+  .instruc-list li strong {
+    font-weight: 500;
+    color: var(--navy);
+  }
+
+  /* ====== CHECKLIST ====== */
+  .check-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+    margin: 24px 0;
+  }
+
+  .check-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    padding: 14px 18px;
+    border-radius: 8px;
+    font-size: 12px;
+    font-weight: 300;
+    color: var(--cream);
+    line-height: 1.6;
+  }
+
+  .check-box {
+    width: 18px;
+    height: 18px;
+    min-width: 18px;
+    border-radius: 4px;
+    border: 1.5px solid var(--sage);
+    margin-top: 1px;
+  }
+
+  /* ====== EQUIPO ====== */
+  .equipo-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+    margin: 24px 0;
+  }
+
+  .equipo-card {
+    background: var(--white);
+    border-radius: 10px;
+    padding: 22px;
+    border: 1px solid rgba(26,31,46,0.06);
+    text-align: center;
+  }
+
+  .equipo-icon {
+    font-size: 28px;
+    margin-bottom: 10px;
+  }
+
+  .equipo-name {
+    font-size: 12px;
+    font-weight: 500;
+    color: var(--navy);
+    margin-bottom: 4px;
+  }
+
+  .equipo-desc {
+    font-size: 11px;
+    font-weight: 300;
+    color: var(--text-body);
+  }
+
+  .equipo-req {
+    font-size: 9px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    margin-top: 8px;
+    font-weight: 500;
+  }
+
+  .equipo-req.required { color: var(--sage); }
+  .equipo-req.optional { color: var(--text-muted); }
+
+  /* ====== B-ROLL LIST ====== */
+  .broll-list {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    margin: 20px 0;
+  }
+
+  .broll-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 14px 18px;
+    background: rgba(107,136,104,0.06);
+    border-radius: 8px;
+    font-size: 12px;
+    font-weight: 300;
+    color: var(--cream);
+  }
+
+  .broll-num {
+    font-family: 'DM Serif Display', serif;
+    font-size: 18px;
+    color: var(--sage);
+    min-width: 24px;
+  }
+
+  /* ====== FOOTER ====== */
+  .footer {
+    padding: 40px 60px;
+    text-align: center;
+    background: var(--navy);
+  }
+
+  .footer p {
+    font-size: 11px;
+    color: rgba(237,232,224,0.3);
+    font-weight: 300;
+  }
+
+  .footer a {
+    color: var(--sage);
+    text-decoration: none;
+  }
+
+  /* ====== RESPONSIVE ====== */
+  @media (max-width: 768px) {
+    .hero { padding: 60px 30px 50px; }
+    .hero h1 { font-size: 32px; }
+    .hero-meta { flex-direction: column; gap: 10px; }
+    .sec { padding: 50px 24px; }
+    .card-grid, .instruc-grid, .check-grid, .broll-list { grid-template-columns: 1fr; }
+    .card-grid-3, .equipo-grid { grid-template-columns: 1fr; }
+    .outfit-grid { grid-template-columns: 1fr 1fr; }
+    .ficha-header { flex-direction: column; gap: 12px; align-items: flex-start; }
+    .ficha-grid { grid-template-columns: 1fr; }
+    .ficha-grid dt { padding-bottom: 2px; border-bottom: none; }
+    .ficha-grid dd { padding-top: 0; }
+    .swatch-row { flex-direction: column; }
+  }
+</style>
+</head>
+<body>
+
+<!-- ============ HERO ============ -->
+<section class="hero">
+  <div class="hero-label">ANABEL MERCEDES</div>
+  <h1>Guía de Grabación</h1>
+  <div class="hero-sub">8 Reels para Instagram — Pre-producción completa</div>
+  <div class="hero-meta">
+    <span><strong>Abril 2026</strong></span>
+    <span>8 Videos</span>
+    <span>~6 min de contenido</span>
+    <span>3 Locaciones</span>
+  </div>
+</section>
+
+<!-- ============ ENTREGABLES ============ -->
+<section class="sec sec-cream">
+  <div class="page">
+    <div class="section-label dark">01 &mdash; ENTREGABLES</div>
+    <div class="sec-title">Resumen de Videos</div>
+    <div class="sec-subtitle">8 Reels divididos en 4 de producción y 4 orgánicos. Cada uno con formato, duración y objetivo definido.</div>
+
+    <table class="data-table">
+      <thead>
+        <tr>
+          <th>#</th>
+          <th>Video</th>
+          <th>Formato</th>
+          <th>Duración</th>
+          <th>Tipo</th>
+          <th>Keyword</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>P1</strong></td>
+          <td>De Tímida a Diamante</td>
+          <td><span class="tag tag-format">Storytime</span></td>
+          <td>50-60s</td>
+          <td><span class="tag tag-prod">Producción</span></td>
+          <td>CÓMO</td>
+        </tr>
+        <tr>
+          <td><strong>P2</strong></td>
+          <td>El 75% No Gana Nada</td>
+          <td><span class="tag tag-format">Comparación</span></td>
+          <td>50-60s</td>
+          <td><span class="tag tag-prod">Producción</span></td>
+          <td>SISTEMA</td>
+        </tr>
+        <tr>
+          <td><strong>P3</strong></td>
+          <td>No Persigo a Nadie</td>
+          <td><span class="tag tag-format">Respuesta a Objeción</span></td>
+          <td>45-55s</td>
+          <td><span class="tag tag-prod">Producción</span></td>
+          <td>INFO</td>
+        </tr>
+        <tr>
+          <td><strong>P4</strong></td>
+          <td>Lo Construí Mientras Vivía Mi Vida</td>
+          <td><span class="tag tag-format">B-roll + Voiceover</span></td>
+          <td>50-60s</td>
+          <td><span class="tag tag-prod">Producción</span></td>
+          <td>QUIERO</td>
+        </tr>
+        <tr>
+          <td><strong>O1</strong></td>
+          <td>3 Cosas Que NUNCA Hago</td>
+          <td><span class="tag tag-format">Top 3 / Lista</span></td>
+          <td>30-40s</td>
+          <td><span class="tag tag-org">Orgánico</span></td>
+          <td>DIFERENTE</td>
+        </tr>
+        <tr>
+          <td><strong>O2</strong></td>
+          <td>Me Temblaban Las Manos</td>
+          <td><span class="tag tag-format">Momento Vulnerable</span></td>
+          <td>35-45s</td>
+          <td><span class="tag tag-org">Orgánico</span></td>
+          <td>HISTORIA</td>
+        </tr>
+        <tr>
+          <td><strong>O3</strong></td>
+          <td>"Eso Es Pirámide"</td>
+          <td><span class="tag tag-format">Myth Busting</span></td>
+          <td>40-50s</td>
+          <td><span class="tag tag-org">Orgánico</span></td>
+          <td>VERDAD</td>
+        </tr>
+        <tr>
+          <td><strong>O4</strong></td>
+          <td>Lo Que Nadie Te Dice</td>
+          <td><span class="tag tag-format">Opinión Impopular</span></td>
+          <td>40-50s</td>
+          <td><span class="tag tag-org">Orgánico</span></td>
+          <td>LIBRE</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<!-- ============ LOCACIONES ============ -->
+<section class="sec sec-dark">
+  <div class="page">
+    <div class="section-label light">02 &mdash; LOCACIONES</div>
+    <div class="sec-title" style="color: var(--cream);">3 Locaciones</div>
+    <div class="sec-subtitle light">Todas pueden ser en la misma casa + 1 espacio exterior/casual. Agrupadas para maximizar tiempo de grabación.</div>
+
+    <div class="card-grid-3">
+      <div class="loc-card">
+        <div class="loc-letter">A</div>
+        <div class="loc-name">Sala / Terraza</div>
+        <div class="loc-desc">Espacio con luz natural. Fondo limpio &mdash; pared clara, planta, o libros. Nada lujoso. Consistencia visual entre los 3 videos de producción.</div>
+        <div class="loc-videos">
+          <span class="loc-badge">P1</span>
+          <span class="loc-badge">P2</span>
+          <span class="loc-badge">P3</span>
+        </div>
+      </div>
+
+      <div class="loc-card">
+        <div class="loc-letter">B</div>
+        <div class="loc-name">Espacio Íntimo</div>
+        <div class="loc-desc">Cuarto, sillón, o rincón cálido. Luz suave (lámpara o ventana). Se siente personal, como si Anabel se sentó a hablar contigo.</div>
+        <div class="loc-videos">
+          <span class="loc-badge">O2</span>
+          <span class="loc-badge">O4</span>
+          <span class="loc-badge">P4 voiceover</span>
+        </div>
+      </div>
+
+      <div class="loc-card">
+        <div class="loc-letter">C</div>
+        <div class="loc-name">Casual / Móvil</div>
+        <div class="loc-desc">Caminando, en el carro, en la cocina. Lo que se sienta espontáneo y real. NO producido.</div>
+        <div class="loc-videos">
+          <span class="loc-badge">O1</span>
+          <span class="loc-badge">O3</span>
+        </div>
+      </div>
+    </div>
+
+    <div style="margin-top: 40px;">
+      <div class="sec-title" style="color: var(--cream); font-size: 22px;">B-roll para P4</div>
+      <div class="sec-subtitle light" style="margin-bottom: 20px;">Tomas adicionales que se graban aparte o en diferentes momentos del día.</div>
+      <div class="broll-list">
+        <div class="broll-item" style="background: rgba(107,136,104,0.08);"><div class="broll-num" style="color: var(--sage-light);">B1</div> Despertar con luz natural, sin alarma, estirarse</div>
+        <div class="broll-item" style="background: rgba(107,136,104,0.08);"><div class="broll-num" style="color: var(--sage-light);">B2</div> Agarrar café, revisar teléfono en la sala</div>
+        <div class="broll-item" style="background: rgba(107,136,104,0.08);"><div class="broll-num" style="color: var(--sage-light);">B3</div> Videollamada con equipo</div>
+        <div class="broll-item" style="background: rgba(107,136,104,0.08);"><div class="broll-num" style="color: var(--sage-light);">B4</div> Almorzando tranquila / con familia</div>
+        <div class="broll-item" style="background: rgba(107,136,104,0.08);"><div class="broll-num" style="color: var(--sage-light);">B5</div> Caminando sin prisa</div>
+        <div class="broll-item" style="background: rgba(107,136,104,0.08);"><div class="broll-num" style="color: var(--sage-light);">B6</div> Evento o reunión con equipo</div>
+        <div class="broll-item" style="background: rgba(107,136,104,0.08); grid-column: 1 / -1;"><div class="broll-num" style="color: var(--sage-light);">B7</div> <strong style="color: var(--cream);">Cierre a cámara</strong> &mdash; primer plano, directa, los últimos 8 seg del guión</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ ORDEN DE GRABACION ============ -->
+<section class="sec sec-white">
+  <div class="page">
+    <div class="section-label dark">03 &mdash; ORDEN DE GRABACIÓN</div>
+    <div class="sec-title">Plan de Rodaje</div>
+    <div class="sec-subtitle">Agrupado por locación. Tiempo estimado total: ~1.5 horas.</div>
+
+    <div class="card-grid">
+      <div class="card">
+        <div class="card-label">BLOQUE 1 &mdash; LOCACIÓN A</div>
+        <div class="card-title">Sala / Terraza</div>
+        <div class="card-text">
+          <strong>~45 min | 3 videos de producción</strong><br><br>
+          <strong>1. P1 &mdash; De Tímida a Diamante</strong><br>
+          Outfit 1. Empezar aquí &mdash; es la intro de Anabel. Arco emocional: vulnerable &rarr; segura. Varias tomas.<br><br>
+          <strong>2. P2 &mdash; El 75% No Gana Nada</strong><br>
+          Outfit 2. Tono directo, seguro. Datos se agregan en edición.<br><br>
+          <strong>3. P3 &mdash; No Persigo a Nadie</strong><br>
+          Outfit 2 o 3. Tono comprensivo, no defensivo.
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-label">BLOQUE 2 &mdash; LOCACIÓN B</div>
+        <div class="card-title">Espacio Íntimo</div>
+        <div class="card-text">
+          <strong>~20 min | 2 videos orgánicos</strong><br><br>
+          <strong>4. O2 &mdash; Me Temblaban Las Manos</strong><br>
+          Lo que tenga puesto. El más emocional. Si no se siente cómoda, grabar otro día. NO forzar.<br><br>
+          <strong>5. O4 &mdash; Lo Que Nadie Te Dice</strong><br>
+          Lo que tenga puesto. Tono reflexivo, maduro. Pausa de 1 seg antes de hablar.
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-label">BLOQUE 3 &mdash; LOCACIÓN C</div>
+        <div class="card-title">Casual / Móvil</div>
+        <div class="card-text">
+          <strong>~15 min | 2 videos orgánicos</strong><br><br>
+          <strong>6. O1 &mdash; 3 Cosas Que NUNCA Hago</strong><br>
+          Lo que tenga puesto. Selfie, energía firme y casi divertida. Puede caminar.<br><br>
+          <strong>7. O3 &mdash; "Eso Es Pirámide"</strong><br>
+          Lo que tenga puesto. Sonrisa ligera al inicio. NUNCA defensiva.
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-label">BLOQUE 4 &mdash; VARIAS LOCACIONES</div>
+        <div class="card-title">B-roll para P4</div>
+        <div class="card-text">
+          <strong>~20 min | Se graba aparte</strong><br><br>
+          7 tomas de B-roll (ver lista arriba). El voiceover se graba por separado en espacio silencioso.<br><br>
+          <strong>B7 es crucial:</strong> primer plano directo a cámara, los últimos 8 seg del guión. Es la primera vez que la ves directamente en el video.
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ VESTUARIO ============ -->
+<section class="sec sec-cream">
+  <div class="page">
+    <div class="section-label dark">04 &mdash; VESTUARIO</div>
+    <div class="sec-title">Paleta de Vestuario</div>
+    <div class="sec-subtitle">Basado en los colores de marca. Todas las prendas deben estar dentro de esta paleta.</div>
+
+    <div class="swatch-row">
+      <div class="swatch">
+        <div class="swatch-color" style="background: #EDE8E0;"></div>
+        <div class="swatch-info">
+          <div class="swatch-name">Crema / Beige</div>
+          <div class="swatch-hex">#EDE8E0</div>
+          <div class="swatch-use">Blusa, suéter &mdash; base neutra</div>
+        </div>
+      </div>
+      <div class="swatch">
+        <div class="swatch-color" style="background: #6B8868;"></div>
+        <div class="swatch-info">
+          <div class="swatch-name">Oliva / Sage</div>
+          <div class="swatch-hex">#6B8868</div>
+          <div class="swatch-use">Blusa, blazer &mdash; acento de marca</div>
+        </div>
+      </div>
+      <div class="swatch">
+        <div class="swatch-color" style="background: #000000;"></div>
+        <div class="swatch-info">
+          <div class="swatch-name">Negro</div>
+          <div class="swatch-hex">#000000</div>
+          <div class="swatch-use">Pantalón, falda &mdash; ancla visual</div>
+        </div>
+      </div>
+      <div class="swatch">
+        <div class="swatch-color" style="background: #7A5C44;"></div>
+        <div class="swatch-info">
+          <div class="swatch-name">Café Cálido</div>
+          <div class="swatch-hex">#7A5C44</div>
+          <div class="swatch-use">Accesorios, cinturón, zapatos</div>
+        </div>
+      </div>
+      <div class="swatch">
+        <div class="swatch-color" style="background: #FFFFFF; border: 1px solid #eee;"></div>
+        <div class="swatch-info">
+          <div class="swatch-name">Blanco</div>
+          <div class="swatch-hex">#FFFFFF</div>
+          <div class="swatch-use">Alternativa a crema</div>
+        </div>
+      </div>
+    </div>
+
+    <div style="margin-top: 40px;">
+      <div class="sec-title" style="font-size: 22px;">Combinaciones por Video</div>
+    </div>
+
+    <div class="outfit-grid">
+      <div class="outfit-card">
+        <div class="outfit-vid">P1</div>
+        <div class="outfit-desc">Blusa sage/oliva + pantalón negro</div>
+        <div class="outfit-dots">
+          <div class="outfit-dot" style="background: #6B8868;"></div>
+          <div class="outfit-dot" style="background: #000;"></div>
+        </div>
+      </div>
+      <div class="outfit-card">
+        <div class="outfit-vid">P2</div>
+        <div class="outfit-desc">Blusa crema + pantalón oscuro</div>
+        <div class="outfit-dots">
+          <div class="outfit-dot" style="background: #EDE8E0;"></div>
+          <div class="outfit-dot" style="background: #1A1F2E;"></div>
+        </div>
+      </div>
+      <div class="outfit-card">
+        <div class="outfit-vid">P3</div>
+        <div class="outfit-desc">Blusa blanca + accesorio café</div>
+        <div class="outfit-dots">
+          <div class="outfit-dot" style="background: #FFF; border-color: #ccc;"></div>
+          <div class="outfit-dot" style="background: #7A5C44;"></div>
+        </div>
+      </div>
+      <div class="outfit-card">
+        <div class="outfit-vid">P4</div>
+        <div class="outfit-desc">Varios outfits neutros y cálidos</div>
+        <div class="outfit-dots">
+          <div class="outfit-dot" style="background: #EDE8E0;"></div>
+          <div class="outfit-dot" style="background: #6B8868;"></div>
+          <div class="outfit-dot" style="background: #7A5C44;"></div>
+        </div>
+      </div>
+    </div>
+
+    <div style="margin-top: 20px; padding: 18px 24px; background: var(--white); border-radius: 10px; border: 1px solid rgba(26,31,46,0.06);">
+      <div style="font-size: 12px; font-weight: 300; color: var(--text-body); line-height: 1.9;">
+        <strong style="color: var(--navy);">Reglas:</strong> Sin logos grandes, sin estampados llamativos, sin colores neón. Sin look "demasiado arreglada". Accesorios discretos (aretes pequeños, reloj, pulsera simple). Variedad entre los videos de producción. Los orgánicos pueden repetir outfit.
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ GUIONES COMPLETOS ============ -->
+<section class="sec sec-white">
+  <div class="page">
+    <div class="section-label dark">05 &mdash; GUIONES COMPLETOS</div>
+    <div class="sec-title">Los 8 Guiones</div>
+    <div class="sec-subtitle">Cada guión contiene todo lo que Anabel dice en el video. No es para memorizar palabra por palabra &mdash; es la estructura y las ideas. Hazlas tuyas.</div>
+
+    <!-- P1 -->
+    <div class="ficha">
+      <div class="ficha-header">
+        <div style="display: flex; align-items: center; gap: 16px; flex: 1;">
+          <div class="ficha-id">P1</div>
+          <div class="ficha-name">De Tímida a Diamante</div>
+        </div>
+        <div class="ficha-format">Storytime &bull; 50-60s</div>
+      </div>
+      <div class="ficha-body">
+        <div class="guion-texto">
+          <p>"Yo era la persona que se sentaba en la esquina del salón y rezaba para que nadie le hablara. Hoy lidero un equipo de más de 50 personas."</p>
+          <p>"Cuando me hablaron de redes de mercadeo, mi primera reacción fue: eso no es para mí. No sabía vender. No sabía liderar. No tenía contactos. No tenía NADA de lo que supuestamente necesitas."</p>
+          <p>"Pero estaba cansada. Cansada de sentir que mi vida dependía de un salario que no controlaba. Cansada de ver pasar los años haciendo lo mismo. Y una noche, sola en mi cuarto, pensé: '¿Y si lo intento? ¿Qué es lo peor que puede pasar?'"</p>
+          <p>"Y lo intenté. Pero lo que vino después no fue lo que esperaba."</p>
+          <p>"Los primeros meses fueron brutales. Me dijeron que no decenas de veces. Iba a eventos rodeada de gente extrovertida que parecía tener todo resuelto, y yo ahí callada pensando '¿qué hago aquí?' Pero seguí. No porque fuera valiente &mdash; porque estaba más asustada de quedarme donde estaba."</p>
+          <p>"Y ahí fue cuando aprendí algo que lo cambió todo."</p>
+          <p>"Y ahí aprendí algo que cambió todo: en este negocio no gana el más carismático &mdash; gana el más consistente. Yo no convencía con discursos. Yo convencía con ejemplo. Aparecía todos los días. Escuchaba a mi equipo. Aprendía, fallaba, y volvía a intentar. Y poco a poco, persona por persona, construí un equipo real."</p>
+          <p>"¿Y sabes a dónde me llevó eso?"</p>
+          <p>"Hoy genero más de $10,000 al mes. No porque sea especial &mdash; porque fui constante cuando todo me decía que me rindiera."</p>
+          <p>"No te cuento esto para impresionarte. Te lo cuento porque si yo pude siendo la persona más tímida que conocías, la que no sabía hablar con nadie... ¿qué te dice eso de lo que TÚ puedes lograr si te lo propones de verdad?"</p>
+          <p>"Si quieres saber cómo empecé y qué hice diferente para construir esto, escribe <strong>CÓMO</strong> en los comentarios &mdash; y te cuento."</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- P2 -->
+    <div class="ficha">
+      <div class="ficha-header">
+        <div style="display: flex; align-items: center; gap: 16px; flex: 1;">
+          <div class="ficha-id">P2</div>
+          <div class="ficha-name">El 75% No Gana Nada</div>
+        </div>
+        <div class="ficha-format">Comparación &bull; 50-60s</div>
+      </div>
+      <div class="ficha-body">
+        <div class="guion-texto">
+          <p>"El 75% de la gente en redes de mercadeo no gana nada. Y no te voy a decir que eso es mentira &mdash; porque es verdad."</p>
+          <p>"Los números están ahí. Si buscas en Google, los vas a encontrar. La mayoría de personas que entran a este modelo no generan ingresos significativos. Eso es un hecho &mdash; y yo no voy a fingir que no existe."</p>
+          <p>"Pero déjame preguntarte algo: ¿sabías que el 90% de los restaurantes cierran en los primeros 5 años? ¿Eso significa que abrir un restaurante es estafa? ¿O significa que la mayoría lo abre sin preparación, sin capital suficiente, y sin saber lo que está haciendo?"</p>
+          <p>"Lo mismo pasa aquí. La gente que entra sin compromiso, sin alguien que la guíe, sin ganas de trabajar de verdad &mdash; por supuesto que no genera resultados. No es el modelo el que falla. Es la ejecución."</p>
+          <p>"Pero entonces, ¿qué hacen diferente los que SÍ construyen algo?"</p>
+          <p>"Ahora, los que SÍ lo hacen diferente &mdash; los que buscan mentoría, los que aprenden un sistema, los que tratan esto como un negocio real y no como un hobby &mdash; esos construyen algo. Yo lo vi en mi propia red: las personas que siguen un sistema, que son consistentes, que se dejan guiar... son las que en 12, 18 meses están generando ingresos reales."</p>
+          <p>"Y te lo digo por experiencia propia."</p>
+          <p>"Yo era la persona menos probable de lograr algo en redes de mercadeo. Tímida, sin experiencia en ventas, sin contactos. Me dijeron que no más veces de las que puedo contar. Pero me tomé esto en serio. Busqué quien me enseñara. Seguí un sistema. Y trabajé con disciplina todos los días &mdash; no cuando me sentía motivada, sino TODOS los días. Eso hizo toda la diferencia."</p>
+          <p>"La estadística dice que el 75% no gana nada. Pero la estadística no te dice quiénes son el otro 25% &mdash; y qué hicieron diferente. Esa es la pregunta que importa."</p>
+          <p>"Si quieres saber qué sistema es el que hace la diferencia, escribe <strong>SISTEMA</strong> en los comentarios."</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- P3 -->
+    <div class="ficha">
+      <div class="ficha-header">
+        <div style="display: flex; align-items: center; gap: 16px; flex: 1;">
+          <div class="ficha-id">P3</div>
+          <div class="ficha-name">No Persigo a Nadie</div>
+        </div>
+        <div class="ficha-format">Respuesta a Objeción &bull; 45-55s</div>
+      </div>
+      <div class="ficha-body">
+        <div class="guion-texto">
+          <p>"Si la palabra 'redes de mercadeo' te da alergia... te entiendo perfectamente. A mí también me la daba."</p>
+          <p>"A la mayoría de personas les presentaron este modelo de la peor manera posible. Y eso marcó cómo ven toda la industria. Déjame contarte lo que probablemente te pasó."</p>
+          <p>"Un amigo que no te hablaba hace años y de repente te escribe para invitarte a un 'café' que era un pitch disfrazado. Un mensaje frío de alguien que ni conoces pidiéndote '5 minutos de tu tiempo'. O peor: un familiar que te presionó hasta que compraste algo que no querías solo para que dejara de insistir."</p>
+          <p>"Yo viví eso también antes de empezar. Y es horrible."</p>
+          <p>"Pero hay algo que la mayoría no distingue &mdash; y es lo más importante."</p>
+          <p>"Pero lo que yo descubrí es que eso no es el negocio &mdash; son personas que no saben hacerlo. Es como decir que todos los restaurantes son malos porque comiste en uno pésimo. El modelo es simple: un producto real que ayuda a la gente, un equipo de personas que lo comparte, y un sistema donde creces ayudando a otros a crecer."</p>
+          <p>"Entonces, ¿cómo se ve cuando se hace bien?"</p>
+          <p>"Yo no persigo a nadie. No presiono. No le escribo a gente que no me habló primero. No invento un estilo de vida que no tengo. Simplemente construyo con personas que realmente quieren construir. Y te soy honesta: funciona mucho mejor que cualquier mensaje frío."</p>
+          <p>"No te estoy diciendo que esto es para todos. Te estoy diciendo que probablemente no te lo presentaron como debían &mdash; y eso no es justo ni para ti ni para el modelo."</p>
+          <p>"Si quieres saber cómo funciona realmente cuando se hace bien, escribe <strong>INFO</strong> en los comentarios. Sin compromiso, sin presión &mdash; exactamente como debería ser."</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- P4 -->
+    <div class="ficha">
+      <div class="ficha-header">
+        <div style="display: flex; align-items: center; gap: 16px; flex: 1;">
+          <div class="ficha-id">P4</div>
+          <div class="ficha-name">Lo Construí Mientras Vivía Mi Vida</div>
+        </div>
+        <div class="ficha-format">B-roll + Voiceover &bull; 50-60s</div>
+      </div>
+      <div class="ficha-body">
+        <div class="guion-texto">
+          <p>"No renuncié a nada para hacer esto. Lo construí paso a paso, con mi vida normal &mdash; mientras todavía tenía un trabajo, mientras todavía tenía dudas."</p>
+          <p>"Cuando empecé, no dejé todo para meterme en esto. Seguía con mi vida. Pero dedicaba tiempo todos los días &mdash; a aprender, a hablar con personas, a construir relaciones. No era glamuroso. No había atajos."</p>
+          <p>"Fui aprendiendo a liderar. No en un curso &mdash; en la vida real. Escuchando a personas que tenían miedo igual que yo. Enseñándoles lo que yo estaba aprendiendo. Construí mi equipo persona por persona. No de la noche a la mañana &mdash; mes a mes. Y cada persona que se sumaba y empezaba a crecer, me confirmaba que esto valía cada hora invertida."</p>
+          <p>"Y eso, con el tiempo, se convirtió en algo que no esperaba."</p>
+          <p>"Hoy mi vida se ve diferente. No porque me hice millonaria de la noche a la mañana &mdash; sino porque construí algo que genera ingresos de manera consistente. Tengo más libertad para decidir cómo uso mi tiempo. Tengo más opciones. Y lo más importante para mí: sé que lo construí yo. Nadie me lo dio. Nadie me lo regaló."</p>
+          <p>"Pero lo que más quiero que entiendas es esto."</p>
+          <p>"No necesitas ser extrovertida. No necesitas ser experta. No necesitas dejarlo todo. Solo necesitas estar dispuesta a trabajar por algo que vale la pena &mdash; y tener a alguien que te guíe."</p>
+          <p>"La libertad no se encuentra. Se construye. Y se construye un día a la vez."</p>
+          <p>"Si quieres saber cómo empecé y qué haría diferente si empezara hoy, escribe <strong>QUIERO</strong> en los comentarios."</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- O1 -->
+    <div class="ficha">
+      <div class="ficha-header">
+        <div style="display: flex; align-items: center; gap: 16px; flex: 1;">
+          <div class="ficha-id">O1</div>
+          <div class="ficha-name">3 Cosas Que NUNCA Hago</div>
+        </div>
+        <div class="ficha-format">Top 3 / Lista &bull; 30-40s</div>
+      </div>
+      <div class="ficha-body">
+        <div class="guion-texto">
+          <p>"3 cosas que yo NUNCA hago en mi negocio de redes de mercadeo."</p>
+          <p>"Uno: no le escribo a nadie que no me haya hablado primero. Si no me buscaste tú, no voy a aparecer en tu bandeja con un mensaje raro de 'hola, ¿cómo estás? tengo algo que mostrarte'. No. Eso no va conmigo."</p>
+          <p>"Pero eso no es lo peor que hacen."</p>
+          <p>"Dos: no invito a mis amigos a 'cafecitos' que son reuniones de negocio disfrazadas. Si te invito a un café, es un café real. Punto. Si en algún momento quieres saber sobre mi negocio, me preguntas tú."</p>
+          <p>"Y la tercera es la que más daño hace."</p>
+          <p>"Y tres: no te voy a prometer que esto es fácil, ni que te vas a hacer millonaria en un mes, ni que es 'dinero mientras duermes'. Esto es un negocio real. Requiere trabajo real, disciplina y paciencia. Y si alguien te dice lo contrario &mdash; huye."</p>
+          <p>"Si quieres saber qué es lo que SÍ hago y por qué funciona mejor que todo eso &mdash; escribe <strong>DIFERENTE</strong> en los comentarios."</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- O2 -->
+    <div class="ficha">
+      <div class="ficha-header">
+        <div style="display: flex; align-items: center; gap: 16px; flex: 1;">
+          <div class="ficha-id">O2</div>
+          <div class="ficha-name">Me Temblaban Las Manos</div>
+        </div>
+        <div class="ficha-format">Momento Vulnerable &bull; 35-45s</div>
+      </div>
+      <div class="ficha-body">
+        <div class="guion-texto">
+          <p>"La primera vez que fui a un evento de mi negocio... me temblaban las manos y quería salir corriendo."</p>
+          <p>"Estaba rodeada de gente que parecía tener todo resuelto. Extrovertidos. Líderes naturales. Personas que hablaban frente a 100 personas sin sudar."</p>
+          <p>"Y yo ahí. Callada en una esquina. Con las manos frías. Pensando: '¿qué hago yo aquí? Esto claramente no es para mí. Estas personas son de otro nivel.'"</p>
+          <p>"Pero después me enteré de algo que me cambió la cabeza."</p>
+          <p>"Pero después me enteré de algo que me cambió la cabeza: varios de los líderes más exitosos de ese salón &mdash; los que yo veía como inalcanzables &mdash; habían empezado EXACTAMENTE igual que yo. Tímidos. Inseguros. Sin saber si esto era para ellos. La única diferencia entre ellos y los que abandonaron... es que se quedaron."</p>
+          <p>"Y ese día aprendí algo que llevo conmigo hasta hoy."</p>
+          <p>"Ese día aprendí algo que llevo conmigo hasta hoy: no necesitas ser la más segura del salón para empezar. No necesitas sentirte lista. Lo que necesitas es ser consistente &mdash; porque la seguridad no es un requisito, es un resultado. Viene DESPUÉS de actuar, no antes."</p>
+          <p>"Si quieres saber más de cómo fue mi proceso &mdash; los miedos, los errores, lo que aprendí &mdash; escribe <strong>HISTORIA</strong> y te cuento."</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- O3 -->
+    <div class="ficha">
+      <div class="ficha-header">
+        <div style="display: flex; align-items: center; gap: 16px; flex: 1;">
+          <div class="ficha-id">O3</div>
+          <div class="ficha-name">"Eso Es Pirámide"</div>
+        </div>
+        <div class="ficha-format">Myth Busting &bull; 40-50s</div>
+      </div>
+      <div class="ficha-body">
+        <div class="guion-texto">
+          <p>"'Eso es una pirámide.' Me lo han dicho tantas veces que ya perdí la cuenta. Y mi respuesta siempre es la misma."</p>
+          <p>"Primero que nada: entiendo por qué lo piensas. La industria tiene mala fama &mdash; y en muchos casos, con razón. Si te presionaron, te mintieron, o desaparecieron cuando dijiste que no... lo siento. Tu experiencia es válida."</p>
+          <p>"Pero la persona que te lo presentó mal no es el modelo de negocio. Es como decir que todos los restaurantes son malos porque fuiste a uno pésimo. O que todos los doctores son malos porque uno te trató mal. El modelo es simple: un producto que funciona, personas que lo comparten, y un sistema de compensación por el equipo que construyen. Así funciona. Sin misterio."</p>
+          <p>"Y te lo puedo decir porque yo lo vivo."</p>
+          <p>"Yo llevo años en esto. He construido un equipo real de personas que confían en mí &mdash; no porque las perseguí, sino porque les mostré con hechos. Genero ingresos reales cada mes. Y lo hice sin perseguir a nadie, sin mentir sobre cuánto se gana, y sin prometer que es fácil. Porque no es fácil. Pero para mí, valió cada esfuerzo. Y puedo mirar atrás sin vergüenza de cómo lo hice."</p>
+          <p>"Así que si piensas que es pirámide &mdash; ok. Probablemente no te lo mostraron bien. Lo único que te pido es que no juzgues un modelo entero por una persona que lo hizo mal."</p>
+          <p>"Yo no defiendo la industria completa. Defiendo cómo YO lo hago &mdash; y los resultados hablan por sí solos."</p>
+          <p>"Si quieres saber la verdad completa de cómo funciona este modelo cuando se hace bien, escribe <strong>VERDAD</strong> en los comentarios."</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- O4 -->
+    <div class="ficha">
+      <div class="ficha-header">
+        <div style="display: flex; align-items: center; gap: 16px; flex: 1;">
+          <div class="ficha-id">O4</div>
+          <div class="ficha-name">Lo Que Nadie Te Dice</div>
+        </div>
+        <div class="ficha-format">Opinión Impopular &bull; 40-50s</div>
+      </div>
+      <div class="ficha-body">
+        <div class="guion-texto">
+          <p>"Lo que nadie te dice sobre las redes de mercadeo &mdash; y que ojalá alguien me hubiera dicho a mí antes de empezar."</p>
+          <p>"Voy a ser completamente honesta contigo. Si estás pensando en meterte en esto, necesitas saber estas 3 cosas primero."</p>
+          <p>"Uno: los primeros meses son duros. De verdad. Vas a escuchar muchos 'no'. Vas a dudar de ti misma en las noches. Vas a tener días donde quieres dejarlo todo. Y eso es completamente normal &mdash; le pasa a TODOS. No solo a ti."</p>
+          <p>"Y eso no es ni lo más importante."</p>
+          <p>"Dos: esto no es ingreso pasivo. No te vas a acostar y amanecer millonaria. Punto. Esto es un negocio donde TÚ trabajas con personas. Las escuchas. Las guías. Las entrenas. Las apoyas cuando quieren dejarlo. El día que dejes de liderar, se nota. Esto se llama liderazgo &mdash; no vacaciones."</p>
+          <p>"Pero hay una tercera cosa &mdash; y esta es la que me hizo quedarme."</p>
+          <p>"Pero tres &mdash; y esto es lo que me hizo quedarme a pesar de todo lo que te acabo de decir: cuando construyes un equipo sólido... cuando esas personas que empezaron inseguras empiezan a crecer, a generar sus propios resultados, a ganar confianza... ahí es cuando todo cambia. Tus ingresos crecen porque tu equipo crece. Tu tiempo se libera porque ellos ya aprendieron. Y te das cuenta de que construiste algo que funciona &mdash; no por ti sola, sino por las personas que formaste."</p>
+          <p>"La verdad no siempre es bonita. Pero te respeto lo suficiente como para decírtela. Y si después de saber todo esto todavía te interesa... probablemente eres de las que sí lo logran."</p>
+          <p>"Si quieres saber cómo se ve la libertad que da este negocio cuando lo haces bien &mdash; escribe <strong>LIBRE</strong>."</p>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ============ INSTRUCCIONES ============ -->
+<section class="sec sec-sage">
+  <div class="page">
+    <div class="section-label on-sage">06 &mdash; INSTRUCCIONES PARA ANABEL</div>
+    <div class="sec-title" style="color: #fff;">Antes, Durante y Después</div>
+    <div class="sec-subtitle" style="color: rgba(255,255,255,0.6);">Sigue estas instrucciones para que la grabación salga lo mejor posible.</div>
+
+    <div class="instruc-grid">
+      <div class="instruc-block">
+        <div class="instruc-icon">&#128214;</div>
+        <div class="instruc-title">Antes de Grabar</div>
+        <ul class="instruc-list">
+          <li><strong>Lee los guiones completos</strong> al menos 2 veces. No para memorizar &mdash; para entender la IDEA de cada video y hacerla tuya.</li>
+          <li><strong>Practica las primeras líneas</strong> frente al espejo o grabándote. Los primeros 3 segundos son los más importantes.</li>
+          <li><strong>Prepara los 3 outfits de producción</strong> la noche anterior. Verifica que estén dentro de la paleta.</li>
+          <li><strong>Limpia las locaciones.</strong> Sin desorden visible ni cosas que distraigan.</li>
+          <li><strong>Carga tu teléfono al 100%.</strong></li>
+        </ul>
+      </div>
+
+      <div class="instruc-block">
+        <div class="instruc-icon">&#127909;</div>
+        <div class="instruc-title">Durante la Grabación</div>
+        <ul class="instruc-list">
+          <li><strong>Graba cada video al menos 3 veces.</strong> La primera toma es de calentamiento. La mejor suele ser la 2da o 3ra.</li>
+          <li><strong>NO leas el guión mientras grabas.</strong> Habla con tus propias palabras. El guión es la estructura &mdash; tú le pones la vida.</li>
+          <li><strong>Mira al LENTE, no a tu reflejo.</strong> Eso crea conexión directa con el espectador.</li>
+          <li><strong>Habla como si le hablaras a UNA persona</strong> &mdash; una amiga sentada frente a ti.</li>
+          <li><strong>Si te equivocas, no pares.</strong> Pausa de 2 segundos y repite. Se corta en edición.</li>
+        </ul>
+      </div>
+
+      <div class="instruc-block">
+        <div class="instruc-icon">&#9989;</div>
+        <div class="instruc-title">Después de Grabar</div>
+        <ul class="instruc-list">
+          <li><strong>Envía TODOS los clips sin editar</strong> a Martin. Incluyendo las tomas "malas" &mdash; a veces las mejores reacciones están ahí.</li>
+          <li><strong>No borres nada de tu teléfono</strong> hasta que Martin confirme que tiene todo.</li>
+        </ul>
+      </div>
+
+      <div class="instruc-block danger">
+        <div class="instruc-icon">&#9940;</div>
+        <div class="instruc-title" style="color: var(--danger);">Lo Que NUNCA Hacer</div>
+        <ul class="instruc-list danger-list">
+          <li><strong>NUNCA mencionar Immunotec</strong> en ningún video. Ni el nombre, ni "mi empresa", ni nada que la identifique.</li>
+          <li><strong>NUNCA usar frases MLM genérico:</strong> "oportunidad increíble", "negocio del siglo", "ingreso pasivo", "dinero mientras duermes".</li>
+          <li><strong>NUNCA sonar defensiva</strong> en P3 u O3. Si sientes que te defiendes, para y respira.</li>
+          <li><strong>NUNCA fabricar emoción.</strong> Si un video pide vulnerabilidad y no lo sientes, graba otro día.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CHECKLIST ============ -->
+<section class="sec sec-dark">
+  <div class="page">
+    <div class="section-label light">07 &mdash; CHECKLIST</div>
+    <div class="sec-title" style="color: var(--cream);">Preparación para el Día de Grabación</div>
+    <div class="sec-subtitle light">Verifica cada punto antes de empezar a grabar.</div>
+
+    <div class="check-grid">
+      <div class="check-item"><div class="check-box"></div> 3 outfits de producción preparados (crema, oliva, negro, café)</div>
+      <div class="check-item"><div class="check-box"></div> Locación A limpia y con buena luz natural</div>
+      <div class="check-item"><div class="check-box"></div> Locación B preparada (espacio íntimo, luz cálida)</div>
+      <div class="check-item"><div class="check-box"></div> Teléfono cargado al 100%</div>
+      <div class="check-item"><div class="check-box"></div> Guiones leídos al menos 2 veces</div>
+      <div class="check-item"><div class="check-box"></div> Primeras líneas de cada video practicadas</div>
+      <div class="check-item"><div class="check-box"></div> Lista de tomas B-roll (B1-B7) revisada</div>
+      <div class="check-item"><div class="check-box"></div> Sin menciones de Immunotec (verificado)</div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ EQUIPO ============ -->
+<section class="sec sec-white">
+  <div class="page">
+    <div class="section-label dark">08 &mdash; EQUIPO NECESARIO</div>
+    <div class="sec-title">Kit de Grabación</div>
+
+    <div class="equipo-grid">
+      <div class="equipo-card">
+        <div class="equipo-icon">&#128241;</div>
+        <div class="equipo-name">Teléfono</div>
+        <div class="equipo-desc">Cámara buena para todos los videos</div>
+        <div class="equipo-req required">Obligatorio</div>
+      </div>
+      <div class="equipo-card">
+        <div class="equipo-icon">&#128247;</div>
+        <div class="equipo-name">Trípode / Soporte</div>
+        <div class="equipo-desc">Para producción (P1-P3) y O2</div>
+        <div class="equipo-req required">Recomendado</div>
+      </div>
+      <div class="equipo-card">
+        <div class="equipo-icon">&#9728;&#65039;</div>
+        <div class="equipo-name">Luz Natural</div>
+        <div class="equipo-desc">Ventana como iluminación principal</div>
+        <div class="equipo-req required">Obligatorio</div>
+      </div>
+      <div class="equipo-card">
+        <div class="equipo-icon">&#128161;</div>
+        <div class="equipo-name">Aro de Luz</div>
+        <div class="equipo-desc">Apoyo si la luz natural no alcanza</div>
+        <div class="equipo-req optional">Opcional</div>
+      </div>
+      <div class="equipo-card">
+        <div class="equipo-icon">&#127908;</div>
+        <div class="equipo-name">Micrófono Lavalier</div>
+        <div class="equipo-desc">Audio limpio, especialmente voiceover P4</div>
+        <div class="equipo-req required">Recomendado</div>
+      </div>
+      <div class="equipo-card">
+        <div class="equipo-icon">&#128263;</div>
+        <div class="equipo-name">Espacio Silencioso</div>
+        <div class="equipo-desc">Para voiceover de P4 sin ruido</div>
+        <div class="equipo-req required">Obligatorio</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FOOTER ============ -->
+<footer class="footer">
+  <p>Guía de Grabación &mdash; <a href="#">Anabel Mercedes</a> &mdash; Abril 2026</p>
+  <p style="margin-top: 8px;">8 Reels &mdash; Pre-producción completa con guiones</p>
+</footer>
+
+</body>
+</html>

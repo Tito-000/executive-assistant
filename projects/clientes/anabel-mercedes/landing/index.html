@@ -1,0 +1,962 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Anabel Mercedes — De Tímida a Diamante Ejecutivo</title>
+<meta name="description" content="Cómo construí un negocio de $10K+/mes sin perseguir a nadie. Sin mensajes fríos. Sin molestar a mis amigos. Solo un sistema y disciplina.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Montserrat:wght@100;200;300;400;500;600;700;800&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --navy: #1A1F2E;
+    --navy-light: #232839;
+    --navy-rgb: 26,31,46;
+    --sage: #6B8868;
+    --sage-light: #A8C4A5;
+    --sage-muted: rgba(107,136,104,0.12);
+    --sage-border: rgba(107,136,104,0.25);
+    --brown: #7A5C44;
+    --brown-light: #A07D64;
+    --cream: #EDE8E0;
+    --cream-warm: #F5F2ED;
+    --white: #FAFAF8;
+    --text-body: #4A4A4A;
+    --text-light: rgba(237,232,224,0.7);
+    --text-muted: rgba(26,31,46,0.45);
+    --danger: #C4574B;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: 'Montserrat', sans-serif;
+    -webkit-font-smoothing: antialiased;
+    color: var(--navy);
+    font-size: 15px;
+    line-height: 1.8;
+    background: var(--cream-warm);
+  }
+
+  /* ====== UTILITIES ====== */
+  .container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 40px;
+  }
+
+  .container-narrow {
+    max-width: 780px;
+    margin: 0 auto;
+    padding: 0 40px;
+  }
+
+  .text-center { text-align: center; }
+
+  .section-label {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 10px;
+    letter-spacing: 6px;
+    text-transform: uppercase;
+    font-weight: 500;
+    margin-bottom: 20px;
+    display: inline-block;
+  }
+
+  .section-label.sage { color: var(--sage); }
+  .section-label.cream { color: var(--cream); }
+  .section-label.brown { color: var(--brown); }
+  .section-label.white { color: rgba(255,255,255,0.5); }
+
+  /* ====== CTA BUTTON ====== */
+  .cta-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 18px 40px;
+    background: var(--sage);
+    color: #fff;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    text-decoration: none;
+    border-radius: 60px;
+    transition: all 0.3s ease;
+    border: none;
+    cursor: pointer;
+  }
+
+  .cta-btn:hover {
+    background: #5a7757;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 30px rgba(107,136,104,0.3);
+  }
+
+  .cta-btn-outline {
+    background: transparent;
+    border: 2px solid var(--sage);
+    color: var(--sage);
+  }
+
+  .cta-btn-outline:hover {
+    background: var(--sage);
+    color: #fff;
+  }
+
+  .cta-btn-white {
+    background: #fff;
+    color: var(--navy);
+  }
+
+  .cta-btn-white:hover {
+    background: var(--cream);
+    box-shadow: 0 8px 30px rgba(0,0,0,0.15);
+  }
+
+  /* ====== HERO ====== */
+  .hero {
+    background: var(--navy);
+    padding: 120px 40px 100px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .hero::before {
+    content: '';
+    position: absolute;
+    top: -300px;
+    right: -200px;
+    width: 700px;
+    height: 700px;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(107,136,104,0.06), transparent 70%);
+  }
+
+  .hero::after {
+    content: '';
+    position: absolute;
+    bottom: -200px;
+    left: -100px;
+    width: 500px;
+    height: 500px;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(122,92,68,0.04), transparent 70%);
+  }
+
+  .hero-content {
+    position: relative;
+    z-index: 1;
+    max-width: 800px;
+    margin: 0 auto;
+  }
+
+  .hero h1 {
+    font-family: 'DM Serif Display', serif;
+    font-size: 52px;
+    color: var(--cream);
+    line-height: 1.15;
+    margin-bottom: 24px;
+  }
+
+  .hero h1 em {
+    color: var(--sage-light);
+    font-style: italic;
+  }
+
+  .hero-sub {
+    font-size: 16px;
+    font-weight: 300;
+    color: var(--text-light);
+    max-width: 580px;
+    margin: 0 auto 40px;
+    line-height: 1.9;
+  }
+
+  .hero-proof {
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    margin-top: 60px;
+    padding-top: 40px;
+    border-top: 1px solid rgba(107,136,104,0.15);
+  }
+
+  .hero-stat {
+    text-align: center;
+  }
+
+  .hero-stat-num {
+    font-family: 'DM Serif Display', serif;
+    font-size: 36px;
+    color: var(--sage-light);
+    line-height: 1;
+  }
+
+  .hero-stat-label {
+    font-size: 10px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: rgba(237,232,224,0.35);
+    margin-top: 8px;
+    font-weight: 400;
+  }
+
+  /* ====== SECTION: HISTORIA ====== */
+  .sec-historia {
+    padding: 100px 0;
+    background: var(--cream-warm);
+  }
+
+  .historia-text {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 22px;
+    line-height: 1.9;
+    color: var(--navy);
+    font-weight: 400;
+  }
+
+  .historia-text p {
+    margin-bottom: 28px;
+  }
+
+  .historia-text strong {
+    font-weight: 600;
+    color: var(--sage);
+  }
+
+  .historia-highlight {
+    margin: 50px 0;
+    padding: 40px 48px;
+    background: var(--white);
+    border-radius: 16px;
+    border-left: 4px solid var(--sage);
+  }
+
+  .historia-highlight p {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 24px;
+    font-style: italic;
+    color: var(--navy);
+    line-height: 1.7;
+    margin: 0;
+  }
+
+  /* ====== SECTION: PROBLEMA ====== */
+  .sec-problema {
+    padding: 100px 0;
+    background: var(--white);
+  }
+
+  .problema-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    margin-top: 50px;
+  }
+
+  .problema-card {
+    padding: 36px;
+    border-radius: 14px;
+    background: var(--cream-warm);
+    border: 1px solid rgba(26,31,46,0.04);
+  }
+
+  .problema-card p {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 19px;
+    font-style: italic;
+    color: var(--text-body);
+    line-height: 1.7;
+  }
+
+  .problema-card .who {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 10px;
+    font-style: normal;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: var(--brown);
+    font-weight: 500;
+    margin-top: 16px;
+    display: block;
+  }
+
+  /* ====== SECTION: MECANISMO ====== */
+  .sec-mecanismo {
+    padding: 100px 0;
+    background: var(--navy);
+  }
+
+  .mecanismo-title {
+    font-family: 'DM Serif Display', serif;
+    font-size: 38px;
+    color: var(--cream);
+    line-height: 1.3;
+    margin-bottom: 20px;
+  }
+
+  .mecanismo-sub {
+    font-size: 15px;
+    font-weight: 300;
+    color: var(--text-light);
+    max-width: 600px;
+    line-height: 1.9;
+    margin-bottom: 60px;
+  }
+
+  .mecanismo-steps {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+  }
+
+  .mecanismo-step {
+    background: var(--navy-light);
+    border-radius: 16px;
+    padding: 40px 32px;
+    border: 1px solid rgba(107,136,104,0.1);
+    position: relative;
+  }
+
+  .mecanismo-step-num {
+    font-family: 'DM Serif Display', serif;
+    font-size: 48px;
+    color: rgba(107,136,104,0.15);
+    line-height: 1;
+    margin-bottom: 16px;
+  }
+
+  .mecanismo-step h3 {
+    font-family: 'DM Serif Display', serif;
+    font-size: 20px;
+    color: var(--cream);
+    margin-bottom: 14px;
+  }
+
+  .mecanismo-step p {
+    font-size: 13px;
+    font-weight: 300;
+    color: var(--text-light);
+    line-height: 1.9;
+  }
+
+  .mecanismo-vs {
+    margin-top: 60px;
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+    gap: 0;
+    align-items: stretch;
+  }
+
+  .vs-col {
+    padding: 40px 36px;
+    border-radius: 16px;
+  }
+
+  .vs-col.bad {
+    background: rgba(196,87,75,0.06);
+    border: 1px solid rgba(196,87,75,0.1);
+  }
+
+  .vs-col.good {
+    background: rgba(107,136,104,0.08);
+    border: 1px solid rgba(107,136,104,0.15);
+  }
+
+  .vs-divider {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 20px;
+  }
+
+  .vs-divider span {
+    font-family: 'DM Serif Display', serif;
+    font-size: 20px;
+    color: rgba(237,232,224,0.2);
+  }
+
+  .vs-col h4 {
+    font-family: 'DM Serif Display', serif;
+    font-size: 18px;
+    margin-bottom: 20px;
+  }
+
+  .vs-col.bad h4 { color: var(--danger); }
+  .vs-col.good h4 { color: var(--sage-light); }
+
+  .vs-col ul {
+    list-style: none;
+    padding: 0;
+  }
+
+  .vs-col ul li {
+    padding: 8px 0;
+    font-size: 13px;
+    font-weight: 300;
+    color: var(--text-light);
+    line-height: 1.6;
+    padding-left: 24px;
+    position: relative;
+  }
+
+  .vs-col.bad ul li::before {
+    content: '✕';
+    position: absolute;
+    left: 0;
+    color: var(--danger);
+    font-weight: 600;
+    font-size: 11px;
+  }
+
+  .vs-col.good ul li::before {
+    content: '✓';
+    position: absolute;
+    left: 0;
+    color: var(--sage-light);
+    font-weight: 600;
+    font-size: 12px;
+  }
+
+  /* ====== SECTION: NUMEROS ====== */
+  .sec-numeros {
+    padding: 100px 0;
+    background: var(--cream-warm);
+  }
+
+  .numeros-title {
+    font-family: 'DM Serif Display', serif;
+    font-size: 38px;
+    color: var(--navy);
+    line-height: 1.3;
+    margin-bottom: 20px;
+  }
+
+  .numeros-intro {
+    font-size: 15px;
+    font-weight: 300;
+    color: var(--text-body);
+    max-width: 650px;
+    line-height: 1.9;
+    margin-bottom: 50px;
+  }
+
+  .timeline-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+    margin-top: 40px;
+  }
+
+  .timeline-card {
+    background: var(--white);
+    border-radius: 16px;
+    padding: 40px 32px;
+    border: 1px solid rgba(26,31,46,0.05);
+    text-align: center;
+  }
+
+  .timeline-period {
+    font-family: 'DM Serif Display', serif;
+    font-size: 32px;
+    color: var(--sage);
+    margin-bottom: 6px;
+  }
+
+  .timeline-label {
+    font-size: 10px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: var(--text-muted);
+    margin-bottom: 20px;
+  }
+
+  .timeline-desc {
+    font-size: 13px;
+    font-weight: 300;
+    color: var(--text-body);
+    line-height: 1.9;
+  }
+
+  .numeros-disclaimer {
+    margin-top: 40px;
+    padding: 24px 32px;
+    background: var(--white);
+    border-radius: 12px;
+    border: 1px solid rgba(26,31,46,0.05);
+    font-size: 12px;
+    font-weight: 300;
+    color: var(--text-muted);
+    line-height: 1.8;
+  }
+
+  /* ====== SECTION: PRUEBA SOCIAL ====== */
+  .sec-prueba {
+    padding: 100px 0;
+    background: var(--white);
+  }
+
+  .testimonios-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+    margin-top: 50px;
+  }
+
+  .testimonio {
+    padding: 36px;
+    border-radius: 16px;
+    background: var(--cream-warm);
+    border: 1px solid rgba(26,31,46,0.04);
+  }
+
+  .testimonio-text {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 18px;
+    font-style: italic;
+    color: var(--navy);
+    line-height: 1.7;
+    margin-bottom: 20px;
+  }
+
+  .testimonio-author {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+  }
+
+  .testimonio-avatar {
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    background: var(--sage-muted);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'DM Serif Display', serif;
+    font-size: 18px;
+    color: var(--sage);
+  }
+
+  .testimonio-name {
+    font-size: 13px;
+    font-weight: 500;
+    color: var(--navy);
+  }
+
+  .testimonio-role {
+    font-size: 11px;
+    font-weight: 300;
+    color: var(--text-muted);
+  }
+
+  /* ====== SECTION: PARA QUIEN ====== */
+  .sec-para-quien {
+    padding: 100px 0;
+    background: var(--sage);
+  }
+
+  .para-quien-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+    margin-top: 50px;
+  }
+
+  .para-quien-col {
+    background: rgba(255,255,255,0.1);
+    border-radius: 16px;
+    padding: 44px 40px;
+    border: 1px solid rgba(255,255,255,0.1);
+  }
+
+  .para-quien-col h3 {
+    font-family: 'DM Serif Display', serif;
+    font-size: 22px;
+    color: #fff;
+    margin-bottom: 24px;
+  }
+
+  .para-quien-col ul {
+    list-style: none;
+    padding: 0;
+  }
+
+  .para-quien-col ul li {
+    padding: 10px 0 10px 28px;
+    font-size: 14px;
+    font-weight: 300;
+    color: rgba(255,255,255,0.85);
+    line-height: 1.7;
+    position: relative;
+  }
+
+  .para-quien-col.yes ul li::before {
+    content: '✓';
+    position: absolute;
+    left: 0;
+    color: #fff;
+    font-weight: 600;
+  }
+
+  .para-quien-col.no ul li::before {
+    content: '✕';
+    position: absolute;
+    left: 0;
+    color: rgba(255,255,255,0.4);
+    font-weight: 600;
+  }
+
+  /* ====== SECTION: CTA FINAL ====== */
+  .sec-cta {
+    padding: 120px 0;
+    background: var(--navy);
+    text-align: center;
+  }
+
+  .cta-title {
+    font-family: 'DM Serif Display', serif;
+    font-size: 42px;
+    color: var(--cream);
+    line-height: 1.25;
+    margin-bottom: 20px;
+    max-width: 650px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .cta-sub {
+    font-size: 15px;
+    font-weight: 300;
+    color: var(--text-light);
+    max-width: 500px;
+    margin: 0 auto 40px;
+    line-height: 1.9;
+  }
+
+  .cta-note {
+    margin-top: 24px;
+    font-size: 11px;
+    color: rgba(237,232,224,0.3);
+    font-weight: 300;
+  }
+
+  /* ====== FOOTER ====== */
+  .footer {
+    padding: 40px;
+    text-align: center;
+    background: var(--navy);
+    border-top: 1px solid rgba(107,136,104,0.08);
+  }
+
+  .footer p {
+    font-size: 11px;
+    color: rgba(237,232,224,0.25);
+    font-weight: 300;
+  }
+
+  /* ====== RESPONSIVE ====== */
+  @media (max-width: 768px) {
+    .hero { padding: 80px 24px 70px; }
+    .hero h1 { font-size: 32px; }
+    .hero-proof { flex-direction: column; gap: 24px; }
+    .container, .container-narrow { padding: 0 24px; }
+    .problema-grid, .testimonios-grid, .para-quien-grid { grid-template-columns: 1fr; }
+    .mecanismo-steps, .timeline-grid { grid-template-columns: 1fr; }
+    .mecanismo-vs { grid-template-columns: 1fr; gap: 16px; }
+    .vs-divider { padding: 10px 0; }
+    .vs-divider span { transform: rotate(90deg); }
+    .historia-highlight { padding: 28px 24px; }
+    .historia-highlight p { font-size: 20px; }
+    .mecanismo-title, .numeros-title, .cta-title { font-size: 30px; }
+    .sec-historia, .sec-problema, .sec-mecanismo, .sec-numeros, .sec-prueba, .sec-para-quien, .sec-cta {
+      padding: 70px 0;
+    }
+  }
+</style>
+</head>
+<body>
+
+<!-- ============ HERO ============ -->
+<section class="hero">
+  <div class="hero-content">
+    <div class="section-label sage">ANABEL MERCEDES</div>
+    <h1>De Tímida a <em>Diamante Ejecutivo</em></h1>
+    <div class="hero-sub">Cómo construí un negocio de $10K+/mes sin perseguir a nadie. Sin mensajes fríos. Sin molestar a mis amigos. Solo un sistema y disciplina.</div>
+    <a href="#hablemos" class="cta-btn">Quiero saber cómo</a>
+    <div class="hero-proof">
+      <div class="hero-stat">
+        <div class="hero-stat-num">$10K+</div>
+        <div class="hero-stat-label">Ingresos mensuales</div>
+      </div>
+      <div class="hero-stat">
+        <div class="hero-stat-num">50+</div>
+        <div class="hero-stat-label">Personas en mi equipo</div>
+      </div>
+      <div class="hero-stat">
+        <div class="hero-stat-num">0</div>
+        <div class="hero-stat-label">Mensajes fríos enviados</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ HISTORIA ============ -->
+<section class="sec-historia">
+  <div class="container-narrow">
+    <div class="section-label brown">MI HISTORIA</div>
+
+    <div class="historia-text">
+      <p>Yo era la persona que se sentaba en la esquina del salón y rezaba para que nadie le hablara.</p>
+
+      <p>Cuando me hablaron de redes de mercadeo, mi primera reacción fue: <strong>eso no es para mí.</strong> No sabía vender. No sabía liderar. No tenía contactos. No tenía NADA de lo que supuestamente necesitas para tener éxito en esto.</p>
+
+      <p>Pero estaba cansada. Cansada de sentir que mi vida dependía de un salario que no controlaba. Cansada de ver pasar los años haciendo lo mismo. Y una noche, sola en mi cuarto, pensé: "¿Y si lo intento? ¿Qué es lo peor que puede pasar?"</p>
+
+      <p>Los primeros meses fueron brutales. Me dijeron que no decenas de veces. Iba a eventos rodeada de gente extrovertida que parecía tener todo resuelto, y yo ahí callada pensando "¿qué hago aquí?"</p>
+
+      <p>Pero seguí. No porque fuera valiente &mdash; porque estaba más asustada de quedarme donde estaba.</p>
+    </div>
+
+    <div class="historia-highlight">
+      <p>"En este negocio no gana el más carismático &mdash; gana el más consistente. Yo no convencía con discursos. Convencía con ejemplo."</p>
+    </div>
+
+    <div class="historia-text">
+      <p>Aparecía todos los días. Escuchaba a mi equipo. Aprendía, fallaba, y volvía a intentar. Persona por persona, mes a mes, construí un equipo real.</p>
+
+      <p>Hoy genero más de <strong>$10,000 al mes</strong>. No porque sea especial &mdash; porque fui constante cuando todo me decía que me rindiera.</p>
+
+      <p>Si yo pude siendo la persona más tímida que conocías... <strong>¿qué te dice eso de lo que TÚ puedes lograr?</strong></p>
+    </div>
+  </div>
+</section>
+
+<!-- ============ PROBLEMA ============ -->
+<section class="sec-problema">
+  <div class="container">
+    <div class="section-label sage">TAL VEZ TE IDENTIFICAS</div>
+    <div class="numeros-title">¿Te suena familiar?</div>
+    <div class="numeros-intro">No necesito convencerte de que quieres algo más. Ya lo sabes. La pregunta es si crees que es posible para ti.</div>
+
+    <div class="problema-grid">
+      <div class="problema-card">
+        <p>"Llevo años en el mismo trabajo. Me va 'bien'... pero sé que podría estar mejor. Y lo peor no es el salario &mdash; es la sensación de que el tiempo pasa y yo sigo en lo mismo."</p>
+        <span class="who">La profesional estancada</span>
+      </div>
+      <div class="problema-card">
+        <p>"Quiero generar ingresos desde casa sin sacrificar el tiempo con mis hijos. Quiero algo MÍO. Pero cada vez que busco, todo parece estafa o requiere más tiempo del que tengo."</p>
+        <span class="who">La mamá que busca algo propio</span>
+      </div>
+      <div class="problema-card">
+        <p>"Alguien me escribió por DM para invitarme a un 'café' que era un pitch. Me dejó un mal sabor. Desde entonces, todo lo que suena a redes de mercadeo me da alergia."</p>
+        <span class="who">La escéptica (con razón)</span>
+      </div>
+      <div class="problema-card">
+        <p>"Tengo mi negocio pero tiene techo. Quiero diversificar mis ingresos sin invertir en otro negocio físico. Pero mi reputación es mi activo más valioso &mdash; no voy a arriesgarla."</p>
+        <span class="who">El empresario que busca diversificar</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ MECANISMO ============ -->
+<section class="sec-mecanismo">
+  <div class="container">
+    <div class="section-label cream">CÓMO FUNCIONA</div>
+    <div class="mecanismo-title">Atracción, no persecución</div>
+    <div class="mecanismo-sub">No persigo a nadie. No escribo mensajes fríos. No invento un estilo de vida. El contenido atrae, el sistema filtra, yo solo hablo con gente que YA quiere saber.</div>
+
+    <div class="mecanismo-steps">
+      <div class="mecanismo-step">
+        <div class="mecanismo-step-num">01</div>
+        <h3>El contenido atrae</h3>
+        <p>Publico contenido real en Instagram &mdash; mi historia, lo que aprendí, cómo funciona este modelo. Sin pitches. Sin mentiras. Las personas que resuenan se quedan.</p>
+      </div>
+      <div class="mecanismo-step">
+        <div class="mecanismo-step-num">02</div>
+        <h3>El sistema filtra</h3>
+        <p>Cuando alguien quiere saber más, escribe una palabra en los comentarios. Automáticamente recibe información y se califica. Solo hablo con personas que YA están interesadas.</p>
+      </div>
+      <div class="mecanismo-step">
+        <div class="mecanismo-step-num">03</div>
+        <h3>Tú decides</h3>
+        <p>Sin presión. Sin urgencia falsa. Te cuento cómo funciona, te muestro los números reales, y tú decides si es para ti. Si no lo es, está bien. Si sí, te guío paso a paso.</p>
+      </div>
+    </div>
+
+    <div class="mecanismo-vs">
+      <div class="vs-col bad">
+        <h4>Lo que todos odian del NM</h4>
+        <ul>
+          <li>Mensajes fríos a desconocidos</li>
+          <li>"Cafecitos" que son pitches disfrazados</li>
+          <li>Presionar a amigos y familiares</li>
+          <li>Prometer que es "dinero fácil"</li>
+          <li>Fingir un estilo de vida lujoso</li>
+          <li>Perseguir a cualquiera que respire</li>
+        </ul>
+      </div>
+      <div class="vs-divider"><span>vs</span></div>
+      <div class="vs-col good">
+        <h4>Lo que yo hago diferente</h4>
+        <ul>
+          <li>Contenido que atrae a las personas correctas</li>
+          <li>Si te invito a un café, es un café real</li>
+          <li>Solo trabajo con quienes me buscan</li>
+          <li>Te digo la verdad: requiere trabajo real</li>
+          <li>Muestro mi vida tal cual es</li>
+          <li>Construyo con personas que quieren construir</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ NUMEROS REALES ============ -->
+<section class="sec-numeros">
+  <div class="container">
+    <div class="section-label sage">TRANSPARENCIA TOTAL</div>
+    <div class="numeros-title">Los números reales</div>
+    <div class="numeros-intro">Sí, el 75% de la gente en network marketing no genera ingresos significativos. No te voy a decir que eso es mentira &mdash; porque es verdad. Pero esa estadística no distingue entre quienes se lo tomaron en serio y quienes no. Es como decir que el 90% de los restaurantes cierran en 5 años &mdash; ¿eso significa que abrir uno es estafa?</div>
+
+    <div class="numeros-intro" style="margin-top: -20px;">
+      La diferencia entre los que construyen algo real y los que no: <strong style="color: var(--sage);">sistema + mentoría + disciplina.</strong>
+    </div>
+
+    <div class="timeline-grid">
+      <div class="timeline-card">
+        <div class="timeline-period">0-3</div>
+        <div class="timeline-label">Meses</div>
+        <div class="timeline-desc">Aprendizaje. Vas a escuchar muchos "no". Vas a dudar. Es la fase más difícil &mdash; y la más importante. Aquí se construye la base.</div>
+      </div>
+      <div class="timeline-card">
+        <div class="timeline-period">6-12</div>
+        <div class="timeline-label">Meses</div>
+        <div class="timeline-desc">Tracción. Tu equipo empieza a crecer. Ves los primeros resultados consistentes. El sistema empieza a funcionar por ti.</div>
+      </div>
+      <div class="timeline-card">
+        <div class="timeline-period">12-24</div>
+        <div class="timeline-label">Meses</div>
+        <div class="timeline-desc">Apalancamiento. Tu equipo lidera. Tus ingresos crecen porque las personas que formaste también crecen. El ciclo se retroalimenta.</div>
+      </div>
+    </div>
+
+    <div class="numeros-disclaimer">
+      <strong style="color: var(--navy);">Nota importante:</strong> Estos tiempos son estimados basados en personas que trabajan con consistencia y siguen un sistema. Los resultados individuales varían. No prometo ingresos específicos &mdash; prometo sistema, mentoría y honestidad.
+    </div>
+  </div>
+</section>
+
+<!-- ============ PRUEBA SOCIAL ============ -->
+<section class="sec-prueba">
+  <div class="container">
+    <div class="section-label sage">TESTIMONIOS</div>
+    <div class="numeros-title">Lo que dice mi equipo</div>
+    <div class="numeros-intro">Personas reales que empezaron con las mismas dudas que tú.</div>
+
+    <div class="testimonios-grid">
+      <div class="testimonio">
+        <div class="testimonio-text">"Yo también pensaba que esto era pirámide. Anabel me mostró los números reales, no me presionó, y me dejó decidir. Llevo 8 meses y ya genero más que en mi trabajo anterior."</div>
+        <div class="testimonio-author">
+          <div class="testimonio-avatar">M</div>
+          <div>
+            <div class="testimonio-name">Miembro del equipo</div>
+            <div class="testimonio-role">8 meses en el equipo</div>
+          </div>
+        </div>
+      </div>
+      <div class="testimonio">
+        <div class="testimonio-text">"Lo que más valoro es que nunca me mintió. Me dijo que iba a ser difícil. Y fue difícil. Pero el sistema funciona si le das tiempo y disciplina."</div>
+        <div class="testimonio-author">
+          <div class="testimonio-avatar">C</div>
+          <div>
+            <div class="testimonio-name">Miembro del equipo</div>
+            <div class="testimonio-role">14 meses en el equipo</div>
+          </div>
+        </div>
+      </div>
+      <div class="testimonio">
+        <div class="testimonio-text">"Soy mamá de 2 y lo hago en mis horas libres. No es full-time, pero ya es un ingreso real que yo controlo. Eso para mí vale todo."</div>
+        <div class="testimonio-author">
+          <div class="testimonio-avatar">L</div>
+          <div>
+            <div class="testimonio-name">Miembro del equipo</div>
+            <div class="testimonio-role">11 meses en el equipo</div>
+          </div>
+        </div>
+      </div>
+      <div class="testimonio">
+        <div class="testimonio-text">"Tengo mi negocio propio y esto me da un ingreso adicional sin tener que abrir otro local. Lo manejo desde mi teléfono y Anabel me guía cada semana."</div>
+        <div class="testimonio-author">
+          <div class="testimonio-avatar">R</div>
+          <div>
+            <div class="testimonio-name">Miembro del equipo</div>
+            <div class="testimonio-role">6 meses en el equipo</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ PARA QUIEN ============ -->
+<section class="sec-para-quien">
+  <div class="container">
+    <div class="text-center">
+      <div class="section-label white">HONESTIDAD ANTE TODO</div>
+      <div class="mecanismo-title" style="color: #fff; margin-bottom: 10px;">Esto no es para todos</div>
+      <div class="mecanismo-sub" style="color: rgba(255,255,255,0.6); margin: 0 auto 50px;">Y está bien. Prefiero que lo sepas antes de hablar conmigo.</div>
+    </div>
+
+    <div class="para-quien-grid">
+      <div class="para-quien-col yes">
+        <h3>Es para ti si...</h3>
+        <ul>
+          <li>Tienes disciplina y estás dispuesta a aprender</li>
+          <li>Buscas algo real a mediano plazo, no dinero fácil</li>
+          <li>Puedes dedicar 1-2 horas al día de forma consistente</li>
+          <li>Estás dispuesta a crear contenido (con guía)</li>
+          <li>Quieres construir algo propio, no depender de un salario</li>
+          <li>Valoras la honestidad y la transparencia</li>
+        </ul>
+      </div>
+      <div class="para-quien-col no">
+        <h3>No es para ti si...</h3>
+        <ul>
+          <li>Buscas dinero rápido sin esfuerzo</li>
+          <li>No tienes paciencia para ver resultados en 6-12 meses</li>
+          <li>Quieres que alguien haga el trabajo por ti</li>
+          <li>No estás dispuesta a salir de tu zona de confort</li>
+          <li>Crees que esto es "ingreso pasivo" sin trabajo</li>
+          <li>No puedes invertir en ti misma para empezar</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CTA FINAL ============ -->
+<section class="sec-cta" id="hablemos">
+  <div class="container">
+    <div class="section-label sage">EL SIGUIENTE PASO</div>
+    <div class="cta-title">Si esto resonó contigo, hablemos.</div>
+    <div class="cta-sub">Sin compromiso. Sin presión. Solo una conversación honesta para ver si tiene sentido para ti.</div>
+    <a href="https://wa.me/18091234567?text=Hola%20Anabel%2C%20vi%20tu%20página%20y%20quiero%20saber%20más" class="cta-btn cta-btn-white" target="_blank">Escríbeme por WhatsApp</a>
+    <div class="cta-note">Respondo personalmente en menos de 24 horas</div>
+  </div>
+</section>
+
+<!-- ============ FOOTER ============ -->
+<footer class="footer">
+  <p>Anabel Mercedes &mdash; 2026</p>
+</footer>
+
+</body>
+</html>
