@@ -1,0 +1,2596 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Documentaci&oacute;n Estrat&eacute;gica Completa &mdash; Anabel Mercedes</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Montserrat:wght@100;200;300;400;500;600;700&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --navy: #1A1F2E;
+    --navy-light: #232839;
+    --navy-rgb: 26,31,46;
+    --sage: #6B8868;
+    --sage-light: #A8C4A5;
+    --sage-muted: rgba(107,136,104,0.15);
+    --sage-border: rgba(107,136,104,0.25);
+    --brown: #7A5C44;
+    --brown-light: #A07D64;
+    --brown-muted: rgba(122,92,68,0.2);
+    --cream: #EDE8E0;
+    --cream-warm: #F5F2ED;
+    --white: #FAFAF8;
+    --text-body: #4A4A4A;
+    --text-light: rgba(237,232,224,0.6);
+    --text-muted: rgba(26,31,46,0.4);
+    --danger: #C4574B;
+    --danger-bg: rgba(196,87,75,0.08);
+    --success: #5A8A56;
+    --success-bg: rgba(90,138,86,0.08);
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    background: var(--cream-warm);
+    font-family: 'Montserrat', sans-serif;
+    -webkit-font-smoothing: antialiased;
+    color: var(--navy);
+    font-size: 13px;
+    line-height: 1.7;
+  }
+
+  @media print {
+    body { font-size: 11px; }
+    .page { padding: 20px !important; }
+    .sec { padding: 40px 20px !important; page-break-inside: avoid; }
+    .no-print { display: none !important; }
+    .toc { display: none !important; }
+  }
+
+  .page {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 0 40px;
+  }
+
+  /* ====== HERO ====== */
+  .hero {
+    background: var(--navy);
+    padding: 100px 60px 80px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .hero::before {
+    content: '';
+    position: absolute;
+    top: -200px;
+    right: -200px;
+    width: 500px;
+    height: 500px;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(107,136,104,0.08), transparent 70%);
+  }
+
+  .hero-label {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 9px;
+    letter-spacing: 6px;
+    text-transform: uppercase;
+    color: var(--sage);
+    margin-bottom: 30px;
+  }
+
+  .hero h1 {
+    font-family: 'DM Serif Display', serif;
+    font-size: 48px;
+    color: var(--cream);
+    line-height: 1.2;
+    margin-bottom: 16px;
+  }
+
+  .hero-sub {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 20px;
+    font-style: italic;
+    color: var(--text-light);
+    margin-bottom: 40px;
+  }
+
+  .hero-meta {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    flex-wrap: wrap;
+    font-size: 11px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: rgba(237,232,224,0.35);
+  }
+
+  .hero-meta span { font-weight: 400; }
+  .hero-meta strong { color: var(--sage); font-weight: 500; }
+
+  /* ====== TOC ====== */
+  .toc {
+    background: var(--white);
+    padding: 60px;
+    border-bottom: 1px solid rgba(26,31,46,0.06);
+  }
+
+  .toc h2 {
+    font-family: 'DM Serif Display', serif;
+    font-size: 24px;
+    margin-bottom: 30px;
+    color: var(--navy);
+  }
+
+  .toc-list {
+    list-style: none;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px 40px;
+  }
+
+  .toc-list li a {
+    text-decoration: none;
+    color: var(--text-body);
+    font-weight: 300;
+    font-size: 13px;
+    display: flex;
+    align-items: baseline;
+    gap: 12px;
+    transition: color 0.2s;
+  }
+
+  .toc-list li a:hover { color: var(--sage); }
+
+  .toc-num {
+    font-family: 'DM Serif Display', serif;
+    font-size: 18px;
+    color: var(--sage);
+    min-width: 30px;
+  }
+
+  /* ====== SECTIONS ====== */
+  .sec {
+    padding: 80px 60px;
+  }
+
+  .sec-dark { background: var(--navy); }
+  .sec-cream { background: var(--cream-warm); }
+  .sec-white { background: var(--white); }
+
+  .section-label {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 9px;
+    letter-spacing: 6px;
+    text-transform: uppercase;
+    font-weight: 400;
+    margin-bottom: 40px;
+  }
+
+  .section-label::after {
+    content: '';
+    display: block;
+    width: 20px;
+    height: 1px;
+    margin-top: 14px;
+  }
+
+  .section-label.dark { color: var(--brown); }
+  .section-label.dark::after { background: linear-gradient(90deg, var(--brown), transparent); }
+  .section-label.light { color: var(--text-light); }
+  .section-label.light::after { background: linear-gradient(90deg, var(--sage), transparent); }
+
+  .sec-title {
+    font-family: 'DM Serif Display', serif;
+    font-size: 32px;
+    line-height: 1.3;
+    margin-bottom: 16px;
+  }
+
+  .sec-subtitle {
+    font-size: 13px;
+    font-weight: 300;
+    color: var(--text-body);
+    max-width: 750px;
+    line-height: 2;
+    margin-bottom: 50px;
+  }
+
+  .sec-subtitle.light { color: var(--text-light); }
+
+  /* ====== HEADINGS ====== */
+  h3 {
+    font-family: 'DM Serif Display', serif;
+    font-size: 22px;
+    color: var(--navy);
+    margin: 50px 0 16px;
+    line-height: 1.3;
+  }
+
+  h4 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--navy);
+    margin: 30px 0 10px;
+  }
+
+  h5 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 12px;
+    font-weight: 600;
+    color: var(--sage);
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    margin: 25px 0 8px;
+  }
+
+  .on-dark h3 { color: var(--cream); }
+  .on-dark h4 { color: var(--sage-light); }
+  .on-dark p, .on-dark li { color: var(--text-light); }
+
+  /* ====== TABLES ====== */
+  .data-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0 30px;
+    font-size: 12px;
+  }
+
+  .data-table th {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 9px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    font-weight: 500;
+    text-align: left;
+    padding: 14px 16px;
+    border-bottom: 2px solid var(--sage-border);
+    color: var(--sage);
+  }
+
+  .data-table td {
+    padding: 14px 16px;
+    border-bottom: 1px solid rgba(26,31,46,0.06);
+    font-weight: 300;
+    color: var(--text-body);
+    vertical-align: top;
+  }
+
+  .data-table tr:last-child td { border-bottom: none; }
+
+  .data-table.on-dark th {
+    color: var(--sage-light);
+    border-bottom-color: rgba(107,136,104,0.2);
+  }
+
+  .data-table.on-dark td {
+    color: rgba(237,232,224,0.6);
+    border-bottom-color: rgba(237,232,224,0.06);
+  }
+
+  /* ====== BLOCKQUOTES ====== */
+  blockquote {
+    border-left: 3px solid var(--sage);
+    padding: 16px 24px;
+    margin: 20px 0;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 16px;
+    font-style: italic;
+    color: var(--text-body);
+    background: var(--sage-muted);
+    border-radius: 0 6px 6px 0;
+    line-height: 1.8;
+  }
+
+  blockquote.on-dark {
+    background: rgba(107,136,104,0.08);
+    color: var(--text-light);
+  }
+
+  /* ====== LISTS ====== */
+  ul, ol {
+    margin: 12px 0 20px 24px;
+    font-weight: 300;
+    color: var(--text-body);
+  }
+
+  li { margin-bottom: 6px; }
+  li strong { font-weight: 600; color: var(--navy); }
+
+  .on-dark ul, .on-dark ol { color: var(--text-light); }
+  .on-dark li strong { color: var(--cream); }
+
+  /* ====== CONTENT BLOCKS ====== */
+  p {
+    margin-bottom: 14px;
+    font-weight: 300;
+    color: var(--text-body);
+    line-height: 1.9;
+  }
+
+  .insight-box {
+    background: var(--sage-muted);
+    border: 1px solid var(--sage-border);
+    border-radius: 8px;
+    padding: 20px 24px;
+    margin: 20px 0;
+  }
+
+  .insight-box p { color: var(--navy); margin-bottom: 6px; }
+  .insight-box strong { color: var(--sage); }
+
+  .warning-box {
+    background: var(--danger-bg);
+    border: 1px solid rgba(196,87,75,0.15);
+    border-radius: 8px;
+    padding: 20px 24px;
+    margin: 20px 0;
+  }
+
+  .warning-box p { color: var(--danger); margin-bottom: 6px; }
+
+  .pending-box {
+    background: var(--brown-muted);
+    border: 1px solid rgba(122,92,68,0.3);
+    border-radius: 8px;
+    padding: 20px 24px;
+    margin: 20px 0;
+    text-align: center;
+  }
+
+  .pending-box p { color: var(--brown); font-weight: 400; }
+
+  /* ====== COMPETITOR CARDS ====== */
+  .competitor-header {
+    background: var(--navy);
+    color: var(--cream);
+    padding: 30px;
+    border-radius: 10px;
+    margin: 40px 0 30px;
+  }
+
+  .competitor-header h3 {
+    color: var(--cream);
+    margin: 0 0 8px;
+    font-size: 26px;
+  }
+
+  .competitor-header p {
+    color: var(--text-light);
+    margin: 0;
+  }
+
+  /* ====== COPY BOX ====== */
+  .copy-box {
+    background: rgba(26,31,46,0.03);
+    border: 1px solid rgba(26,31,46,0.08);
+    border-radius: 8px;
+    padding: 20px 24px;
+    margin: 16px 0;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 15px;
+    font-style: italic;
+    line-height: 1.8;
+    color: var(--navy);
+  }
+
+  /* ====== DIVIDERS ====== */
+  hr {
+    border: none;
+    height: 1px;
+    background: rgba(26,31,46,0.08);
+    margin: 40px 0;
+  }
+
+  .on-dark hr { background: rgba(237,232,224,0.08); }
+
+  /* ====== TAGS ====== */
+  .tag {
+    display: inline-block;
+    padding: 3px 10px;
+    border-radius: 20px;
+    font-size: 10px;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+  }
+
+  .tag-sage { background: var(--sage-muted); color: var(--sage); }
+  .tag-brown { background: var(--brown-muted); color: var(--brown); }
+  .tag-navy { background: rgba(26,31,46,0.06); color: var(--navy); }
+
+  /* ====== FOOTER ====== */
+  .footer {
+    background: var(--navy);
+    padding: 50px 60px;
+    text-align: center;
+    color: rgba(237,232,224,0.3);
+    font-size: 11px;
+    letter-spacing: 1px;
+  }
+
+  .footer strong { color: var(--sage); font-weight: 500; }
+
+  /* ====== RESPONSIVE ====== */
+  @media (max-width: 768px) {
+    .hero { padding: 60px 30px 50px; }
+    .hero h1 { font-size: 32px; }
+    .hero-meta { flex-direction: column; gap: 10px; }
+    .sec { padding: 50px 24px; }
+    .toc { padding: 40px 24px; }
+    .toc-list { grid-template-columns: 1fr; }
+    .sec-title { font-size: 26px; }
+    h3 { font-size: 19px; }
+    .data-table { font-size: 11px; }
+    .data-table th, .data-table td { padding: 10px 10px; }
+    .hero-meta { font-size: 9px; }
+    .competitor-header { padding: 20px; }
+    .page { padding: 0 16px; }
+  }
+</style>
+</head>
+<body>
+
+<!-- ============================================================ -->
+<!-- HERO -->
+<!-- ============================================================ -->
+<div class="hero">
+  <div class="hero-label">Proyecto Anabel Mercedes</div>
+  <h1>Documentaci&oacute;n Estrat&eacute;gica Completa</h1>
+  <div class="hero-sub">Anabel Mercedes &mdash; Marca Personal</div>
+  <div class="hero-meta">
+    <span><strong>Marzo 2026</strong></span>
+    <span>Market Research + Top Player Analysis + WWP + CIA</span>
+  </div>
+</div>
+
+<!-- ============================================================ -->
+<!-- TABLE OF CONTENTS -->
+<!-- ============================================================ -->
+<div class="toc">
+  <div class="page">
+    <h2>&Iacute;ndice</h2>
+    <ul class="toc-list">
+      <li><a href="#mkr"><span class="toc-num">01</span> Market Research (MKR)</a></li>
+      <li><a href="#tpa"><span class="toc-num">02</span> Top Player Analysis (TPA)</a></li>
+      <li><a href="#wwp"><span class="toc-num">03</span> Winner&rsquo;s Writing Process (WWP)</a></li>
+      <li><a href="#cia"><span class="toc-num">04</span> CIA Method</a></li>
+      <li><a href="#mkr-audiencia"><span class="toc-num">1.1</span> Audiencia Objetivo</a></li>
+      <li><a href="#tpa-ana"><span class="toc-num">2.1</span> Ana Cantera</a></li>
+      <li><a href="#mkr-dolor"><span class="toc-num">1.2</span> Estado Doloroso Actual</a></li>
+      <li><a href="#tpa-frazer"><span class="toc-num">2.2</span> Frazer Brookes</a></li>
+      <li><a href="#mkr-sueno"><span class="toc-num">1.3</span> Estado de Ensue&ntilde;o Deseado</a></li>
+      <li><a href="#tpa-gaby"><span class="toc-num">2.3</span> Gaby Espino</a></li>
+      <li><a href="#mkr-valores"><span class="toc-num">1.4</span> Valores, Creencias y Tribus</a></li>
+      <li><a href="#tpa-resumen"><span class="toc-num">2.4</span> Resumen Comparativo</a></li>
+      <li><a href="#mkr-objeciones"><span class="toc-num">1.5</span> Objeciones</a></li>
+      <li><a href="#wwp-avatar"><span class="toc-num">3.1</span> Avatares y Niveles</a></li>
+      <li><a href="#mkr-avatar"><span class="toc-num">1.6</span> Avatares</a></li>
+      <li><a href="#wwp-journey"><span class="toc-num">3.2</span> Customer Journey (10 pasos)</a></li>
+      <li><a href="#mkr-datos"><span class="toc-num">1.7</span> Datos Duros e Investigaci&oacute;n</a></li>
+      <li><a href="#wwp-segmentos"><span class="toc-num">3.3</span> &Aacute;ngulos por Segmento</a></li>
+      <li><a href="#mkr-resumen"><span class="toc-num">1.8</span> Resumen Estrat&eacute;gico</a></li>
+      <li><a href="#cia-inicial"><span class="toc-num">4.1</span> CIA Inicial (pendiente)</a></li>
+    </ul>
+  </div>
+</div>
+
+<!-- ============================================================ -->
+<!-- SECTION 1: MARKET RESEARCH -->
+<!-- ============================================================ -->
+<div class="sec sec-cream" id="mkr">
+  <div class="page">
+    <div class="section-label dark">01 &mdash; Market Research</div>
+    <div class="sec-title">Market Research (MKR)</div>
+    <p class="sec-subtitle">Anabel Mercedes &mdash; Marca Personal + Atracci&oacute;n de Prospectos de Negocio</p>
+
+    <table class="data-table">
+      <tr><th>Campo</th><th>Detalle</th></tr>
+      <tr><td><strong>Proyecto</strong></td><td>Anabel Mercedes &mdash; Marca Personal</td></tr>
+      <tr><td><strong>Fecha</strong></td><td>Marzo 2026</td></tr>
+      <tr><td><strong>Mercado</strong></td><td>Rep&uacute;blica Dominicana / LatAm</td></tr>
+      <tr><td><strong>Fuentes</strong></td><td>Entrevista con Martin Mercedes (hermano y estratega), experiencia directa de Anabel como Diamante Ejecutivo de Immunotec, objeciones reales de prospectos, patrones del mercado MLM en RD, investigaci&oacute;n web (Trustpilot, BuzzFeed, HuffPost, Truth in Advertising, SmartPassiveIncomeSuccess, TalentedLadiesClub, income disclosure statements oficiales de Immunotec)</td></tr>
+    </table>
+
+    <!-- 1.1 AUDIENCIA -->
+    <h3 id="mkr-audiencia">Audiencia Objetivo</h3>
+    <p>Personas de alto valor &mdash; profesionales, emprendedores y personas con ambici&oacute;n &mdash; que podr&iacute;an estar abiertas a una oportunidad de negocio si la ven presentada de forma seria y profesional. NO el perfil t&iacute;pico de &ldquo;reclutamiento MLM&rdquo;. Anabel quiere atraer gente que normalmente NO considerar&iacute;a el network marketing.</p>
+
+    <ul>
+      <li><strong>G&eacute;nero:</strong> Mixto, con tendencia a mujeres (60/40). Dato de la industria: el 74% de los participantes en direct selling son mujeres globalmente. En Argentina llega al 95%. En el mercado LatAm, Anabel naturalmente atrae m&aacute;s mujeres pero los hombres empresarios son el segmento de mayor ticket.</li>
+      <li><strong>Rango de edad:</strong> 25&ndash;45 a&ntilde;os. Dato de la industria: el grupo m&aacute;s grande de participantes en MLM tiene 35-44 a&ntilde;os (25.9%), seguido por 25-34 (18.8%). Nuestro target est&aacute; exactamente en el peak.</li>
+      <li><strong>Ocupaci&oacute;n / Perfil:</strong> Profesionales con empleo estable pero insatisfechos, emprendedores buscando ingreso adicional, personas con mentalidad de crecimiento que quieren m&aacute;s pero no saben c&oacute;mo. Dato: el 52% de participantes MLM tienen t&iacute;tulo universitario. No es gente sin educaci&oacute;n &mdash; son profesionales que buscan alternativas.</li>
+      <li><strong>Nivel de ingresos:</strong> Medio a medio-alto. Ya ganan bien pero sienten que podr&iacute;an m&aacute;s, o est&aacute;n estancados. Dato: el ingreso promedio anual de un direct seller en USA es $6,016 (2023). Los que buscan Anabel est&aacute;n por encima de ese perfil &mdash; quieren construir algo serio, no un side hustle de $500/mes.</li>
+      <li><strong>Ubicaci&oacute;n:</strong> Santo Domingo, Santiago, principales ciudades de RD. Potencialmente LatAm. Dato: Immunotec opera en RD, M&eacute;xico, Colombia, Per&uacute;, Guatemala &mdash; y el mercado de las Am&eacute;ricas representa $62.6 billion (37.3% del mercado global). M&eacute;xico solo es $6.87B.</li>
+    </ul>
+
+    <hr>
+
+    <!-- 1.2 ESTADO DOLOROSO -->
+    <h3 id="mkr-dolor">Estado Doloroso Actual</h3>
+
+    <h4>&iquest;De qu&eacute; tienen miedo?</h4>
+    <ul>
+      <li>De quedarse estancados en el mismo trabajo, con el mismo salario, los pr&oacute;ximos 10 a&ntilde;os</li>
+      <li>De no poder darle a su familia el estilo de vida que quieren</li>
+      <li>De que el tiempo pase y nunca hagan algo propio &mdash; y se arrepientan</li>
+      <li>De arriesgarse a emprender y perder lo poco que tienen</li>
+      <li>De que los vean como &ldquo;el que vende cosas&rdquo; si entran a un MLM</li>
+      <li><strong>De perder dinero como los que vieron fracasar:</strong> Dato: el 50% abandona en el primer a&ntilde;o, el 90% en 5 a&ntilde;os, el 95% en 10. La gente conoce a alguien que perdi&oacute; plata &mdash; y eso les da miedo.</li>
+      <li><strong>De destruir relaciones:</strong> Historias reales documentadas &mdash; una ex-consultora de Younique: <em>&ldquo;Un hombre me escribi&oacute;... mi novia est&aacute; literalmente eligiendo el MLM sobre m&iacute;... destruye relaciones, de verdad.&rdquo;</em> Otra: <em>&ldquo;Ni mis amigas m&aacute;s cercanas quer&iacute;an que les vendiera.&rdquo;</em></li>
+      <li><strong>De que la &ldquo;sororidad&rdquo; sea falsa:</strong> Ex-consultora: <em>&ldquo;La &lsquo;sororidad&rsquo; es una basura... El bullying es insano. Te excluyen si no cumples metas.&rdquo;</em> La audiencia femenina de Anabel ha o&iacute;do estas historias.</li>
+    </ul>
+
+    <h4>&iquest;De qu&eacute; est&aacute;n enojados? &iquest;Con qui&eacute;n?</h4>
+    <ul>
+      <li>Con el sistema laboral: trabajan duro y no ven recompensa proporcional</li>
+      <li>Con sus jefes o clientes que no valoran su esfuerzo</li>
+      <li>Con ellos mismos por no haber tomado acci&oacute;n antes</li>
+      <li>Con la industria MLM por tener mala reputaci&oacute;n &mdash; saben que hay oportunidades reales pero el estigma los frena</li>
+      <li>Con la gente que los reclut&oacute; mal en el pasado (si tuvieron experiencia previa negativa)</li>
+      <li><strong>Con las mentiras que les contaron:</strong> <em>&ldquo;Me persuadieron para que inscribiera a mi esposo, y pagu&eacute; para inscribir a mi amiga... no fue 100% honesto&rdquo;</em> &mdash; Chrissy Antoniotti (340K+ views en YouTube contando por qu&eacute; dej&oacute; Beachbody). La gente que fue enga&ntilde;ada tiene rabia real.</li>
+      <li><strong>Con los mensajes falsos de &ldquo;amistad&rdquo;:</strong> <em>&ldquo;Pens&eacute; que hab&iacute;a inter&eacute;s genuino... result&oacute; que me ve&iacute;an como un n&uacute;mero.&rdquo;</em> La frustraci&oacute;n de descubrir que un contacto era transaccional, no aut&eacute;ntico.</li>
+      <li><strong>Con el targeting predatorio:</strong> Documentado que MLMs apuntan espec&iacute;ficamente a mujeres con hijos, personas post-universidad, inmigrantes latinos, y personas en crisis econ&oacute;mica. La percepci&oacute;n de que &ldquo;los MLM se aprovechan de los vulnerables&rdquo; es mainstream.</li>
+    </ul>
+
+    <h4>&iquest;Cu&aacute;les son sus principales frustraciones diarias?</h4>
+    <ul>
+      <li>Sentir que cambian tiempo por dinero sin salida</li>
+      <li>Ver a otros crecer financieramente y no saber qu&eacute; est&aacute;n haciendo diferente</li>
+      <li>Querer emprender pero no tener un modelo claro o de bajo riesgo para empezar</li>
+      <li>No tener libertad de tiempo &mdash; siempre atados al horario de alguien m&aacute;s</li>
+      <li>Sentir que tienen potencial pero no lo est&aacute;n usando</li>
+    </ul>
+
+    <h4>&iquest;De qu&eacute; se sienten avergonzados?</h4>
+    <ul>
+      <li>De no ganar lo que sienten que merecen</li>
+      <li>De haber dicho &ldquo;alg&uacute;n d&iacute;a voy a...&rdquo; y nunca haberlo hecho</li>
+      <li>De que su c&iacute;rculo los vea como alguien &ldquo;que no avanza&rdquo;</li>
+      <li>De considerar un MLM porque la sociedad lo ve como algo inferior</li>
+      <li>De no tener ahorros reales ni un plan B</li>
+      <li><strong>De haber ca&iacute;do antes:</strong> <em>&ldquo;No habl&eacute; durante casi dos a&ntilde;os despu&eacute;s de dejar el network marketing porque ten&iacute;a verg&uuml;enza... lo que hab&iacute;a promovido por tanto tiempo result&oacute; ser mentira.&rdquo;</em> &mdash; Ex-miembro MLM en podcast &ldquo;Life After MLM&rdquo;. La verg&uuml;enza es real y profunda &mdash; tanto de los que perdieron dinero como de los que reclutaron a otros.</li>
+      <li><strong>De que los asocien con el estereotipo:</strong> El meme de &ldquo;Hey Hun!&rdquo; (r/antiMLM, 700K+ miembros) &mdash; la imagen de la persona que manda mensajes masivos con emojis vendiendo cosas. Nadie profesional quiere ser visto as&iacute;.</li>
+    </ul>
+
+    <h4>&iquest;C&oacute;mo los hace sentir lidiar con sus problemas?</h4>
+    <ul>
+      <li>Frustrados por el estancamiento</li>
+      <li>Ansiosos por el futuro financiero</li>
+      <li>Con ganas de hacer algo pero paralizados por la indecisi&oacute;n</li>
+      <li>Solos &mdash; sienten que nadie en su c&iacute;rculo entiende su ambici&oacute;n</li>
+      <li><strong>Con culpa si intentan y fallan:</strong> El 40% reporta que la empresa los enga&ntilde;&oacute; sobre las probabilidades de &eacute;xito. La culpa no es solo financiera &mdash; es emocional: <em>&ldquo;Tiene todos los elementos de un culto. Si no tienes &eacute;xito &mdash; son tus fallas... Te quita el pensamiento cr&iacute;tico, la confianza, la independencia.&rdquo;</em> &mdash; Emma, terapeuta CBT y miembro de Anti-MLM Coalition</li>
+      <li><strong>Atrapados en el ciclo de autocr&iacute;tica:</strong> El modelo MLM usa &ldquo;constant self-reflection, or rather, self-critique&rdquo; como mecanismo de control. Si no ganas es porque no trabajaste suficiente, no porque el modelo sea el problema. Esto genera ansiedad real.</li>
+    </ul>
+
+    <h4>&iquest;Qu&eacute; piensan otros sobre ellos?</h4>
+    <ul>
+      <li>Su familia piensa que &ldquo;les va bien&rdquo; porque tienen trabajo &mdash; pero ellos saben que no es suficiente</li>
+      <li>Sus amigos los ver&iacute;an raro si entran a un MLM &mdash; &ldquo;&iquest;t&uacute; vendiendo eso?&rdquo;</li>
+      <li>Hay presi&oacute;n social de mantener una imagen de &eacute;xito</li>
+      <li><strong>La reacci&oacute;n real del entorno cuando alguien entra a un MLM:</strong> Documentado en m&uacute;ltiples fuentes &mdash; amigos que te dejan de seguir cuando empiezas a postear sobre productos. Familiares que se alejan porque sienten que los ves como prospectos. Ex-compa&ntilde;eros de escuela que te contactan despu&eacute;s de a&ntilde;os y cuando descubren que es para venderte algo, te bloquean. El estigma social es el obst&aacute;culo #1 para el target de Anabel &mdash; gente de alto valor que no quiere arriesgar su reputaci&oacute;n.</li>
+    </ul>
+
+    <h4>Si describieran el problema a un amigo:</h4>
+    <blockquote>&ldquo;Yo s&eacute; que puedo dar m&aacute;s, pero estoy atrapado. Trabajo duro, gano okay, pero no avanzo. Quiero algo propio pero no s&eacute; por d&oacute;nde empezar. Y lo peor es que el tiempo sigue pasando y yo aqu&iacute; en lo mismo.&rdquo;</blockquote>
+
+    <h4>&iquest;Qu&eacute; les impide resolver sus problemas ahora?</h4>
+    <ul>
+      <li>No ven el network marketing como una opci&oacute;n seria &mdash; lo asocian con &ldquo;pir&aacute;mides&rdquo; y gente vendiendo en WhatsApp</li>
+      <li>No conocen a nadie que lo haya hecho de forma profesional y exitosa</li>
+      <li>No tienen un modelo a seguir que se vea como ellos (profesional, de alto valor)</li>
+      <li>Miedo al qu&eacute; dir&aacute;n si se meten en &ldquo;eso&rdquo;</li>
+      <li>Creen que es mucho trabajo sin garant&iacute;a de resultado</li>
+      <li>Piensan que los productos son caros y dif&iacute;ciles de vender</li>
+      <li><strong>Dato real que alimenta la desconfianza:</strong> El 75.2% de consultores Immunotec no ganan nada seg&uacute;n el Income Disclosure 2022. Solo el 2.2% gana m&aacute;s de $1,000/mes. La gente que investiga encuentra esto.</li>
+      <li><strong>Comparaciones de precio que circulan online:</strong> Immunocal Platinum cuesta $5.47/sachet vs $0.32-$0.88 por tableta de glutati&oacute;n en Amazon &mdash; markup de 450-1,700% seg&uacute;n reviews. La audiencia educada busca esto antes de decidir.</li>
+      <li><strong>Experiencias previas traum&aacute;ticas con MLM:</strong> Muchos fueron contactados por personas que fing&iacute;an amistad genuina solo para venderles. Madres buscando conexi&oacute;n adulta que terminaron siendo un &ldquo;n&uacute;mero&rdquo;. Esto genera una barrera emocional profunda.</li>
+    </ul>
+
+    <h4>Lenguaje Negativo del Cliente</h4>
+
+    <h5>De entrevista directa (prospectos reales de Anabel):</h5>
+    <ul>
+      <li>&ldquo;Eso es pir&aacute;mide.&rdquo;</li>
+      <li>&ldquo;No tengo tiempo para eso.&rdquo;</li>
+      <li>&ldquo;Yo no soy vendedor.&rdquo;</li>
+      <li>&ldquo;No me gusta caerle atr&aacute;s a la gente.&rdquo;</li>
+      <li>&ldquo;Los productos son muy caros.&rdquo;</li>
+      <li>&ldquo;Si fuera tan f&aacute;cil, todo el mundo lo har&iacute;a.&rdquo;</li>
+      <li>&ldquo;Eso es para gente que no tiene nada mejor que hacer.&rdquo;</li>
+      <li>&ldquo;Eso no es un negocio real.&rdquo;</li>
+      <li>&ldquo;Es mucho trabajo para lo que pagan.&rdquo;</li>
+    </ul>
+
+    <h5>De investigaci&oacute;n web (lenguaje real encontrado en foros, reviews y redes sociales):</h5>
+    <ul>
+      <li>&ldquo;Gast&eacute; un mont&oacute;n de dinero tratando de que funcionara, solo para darme cuenta de que no iba a ganar nada sin joder a mis amigos.&rdquo;</li>
+      <li>&ldquo;Yo era la &uacute;nica en mi equipo que ganaba dinero&rdquo; &mdash; ex-distribuidora que se dio cuenta de que no era la &ldquo;utop&iacute;a de mujeres empoderando mujeres&rdquo; que le vendieron</li>
+      <li>&ldquo;Pens&eacute; que hab&iacute;a una conexi&oacute;n genuina... pero result&oacute; que me ve&iacute;an como un n&uacute;mero&rdquo;</li>
+      <li>&ldquo;&iquest;C&oacute;mo es que esto es legal?&rdquo; &mdash; reacci&oacute;n com&uacute;n al entender la estructura</li>
+      <li>&ldquo;Me presionaron para reclutar a&uacute;n m&aacute;s&rdquo; &mdash; describiendo a su upline como &ldquo;una pesadilla&rdquo;</li>
+      <li>&ldquo;Las posibilidades de generar grandes ingresos son much&iacute;simo mayores que con cualquier negocio convencional&rdquo; &mdash; la mentira #1 que las empresas MLM repiten</li>
+      <li>&ldquo;Mi MLM es diferente&rdquo; &mdash; frase que la gente ya identifica como red flag</li>
+      <li>&ldquo;Los productos son especiales y solo se consiguen por venta directa&rdquo; &mdash; argumento que ya no convence</li>
+      <li>&ldquo;Los cr&iacute;ticos son amargados y fracasados&rdquo; &mdash; t&aacute;ctica de deflecci&oacute;n que genera m&aacute;s desconfianza</li>
+      <li>&ldquo;Firmaron a familiares y despu&eacute;s devolvieron los kits&rdquo; &mdash; manipulaci&oacute;n de n&uacute;meros reales</li>
+    </ul>
+
+    <hr>
+
+    <!-- 1.3 ESTADO DE ENSUENO -->
+    <h3 id="mkr-sueno">Estado de Ensue&ntilde;o Deseado</h3>
+
+    <h4>Si pudieran agitar una varita m&aacute;gica:</h4>
+    <ul>
+      <li>Tener un negocio propio que genere ingresos sin depender de un jefe</li>
+      <li>Libertad de tiempo &mdash; decidir cu&aacute;ndo y d&oacute;nde trabajar</li>
+      <li>Generar ingresos residuales que sigan llegando aunque no trabajen un d&iacute;a</li>
+      <li>Ser reconocidos como emprendedores exitosos &mdash; que su c&iacute;rculo los admire</li>
+      <li>Darle a su familia un estilo de vida premium sin estr&eacute;s financiero</li>
+      <li>Pertenecer a una comunidad de personas ambiciosas y de alto nivel</li>
+    </ul>
+
+    <h4>&iquest;A qui&eacute;n quieren impresionar?</h4>
+    <ul>
+      <li>A su pareja &mdash; demostrar que pueden generar m&aacute;s</li>
+      <li>A su familia &mdash; ser el que &ldquo;lo logr&oacute;&rdquo;</li>
+      <li>A su c&iacute;rculo social &mdash; que vean que tomaron una decisi&oacute;n inteligente</li>
+      <li>A ellos mismos &mdash; romper con la mediocridad</li>
+    </ul>
+
+    <h4>&iquest;Qu&eacute; desean secretamente m&aacute;s?</h4>
+    <ul>
+      <li>Ser libres financieramente &mdash; no depender de un salario</li>
+      <li>Tener un estilo de vida aspiracional sin culpa</li>
+      <li>Ser l&iacute;deres &mdash; que la gente los busque, los siga, los respete</li>
+      <li>Demostrar que s&iacute; se puede &mdash; especialmente a los que dudaron de ellos</li>
+    </ul>
+
+    <h4>Si describieran sus sue&ntilde;os a un amigo:</h4>
+    <blockquote>&ldquo;Yo quiero llegar a un punto donde el dinero no sea un problema. Donde pueda decidir mi horario, viajar cuando quiera, y que mi negocio siga generando. No quiero ser millonario &mdash; quiero ser libre.&rdquo;</blockquote>
+
+    <h4>Lenguaje Positivo del Cliente</h4>
+
+    <h5>De entrevista directa:</h5>
+    <ul>
+      <li>&ldquo;Libertad financiera.&rdquo;</li>
+      <li>&ldquo;Ser mi propio jefe.&rdquo;</li>
+      <li>&ldquo;Ingresos residuales.&rdquo;</li>
+      <li>&ldquo;Trabajar desde cualquier lugar.&rdquo;</li>
+      <li>&ldquo;Estilo de vida.&rdquo;</li>
+      <li>&ldquo;Dejar un legado.&rdquo;</li>
+      <li>&ldquo;Comunidad de alto nivel.&rdquo;</li>
+      <li>&ldquo;Crecimiento personal.&rdquo;</li>
+    </ul>
+
+    <h5>De investigaci&oacute;n (lenguaje que usan los que S&Iacute; creen en el modelo):</h5>
+    <ul>
+      <li>&ldquo;Me cambi&oacute; la vida&rdquo; &mdash; la frase m&aacute;s repetida por defensores del network marketing</li>
+      <li>&ldquo;No es vender &mdash; es compartir algo que te funciona&rdquo; &mdash; reframe que usan los exitosos</li>
+      <li>&ldquo;Ingreso ilimitado / residual&rdquo; &mdash; Eric Worre (Go Pro): <em>&ldquo;unlimited/residual income, enjoy the people you work with, time freedom, personal growth&rdquo;</em></li>
+      <li>&ldquo;Yo constru&iacute; esto desde cero&rdquo; &mdash; narrativa de emprendimiento personal</li>
+      <li>&ldquo;Mi equipo es mi familia&rdquo; &mdash; sentido de pertenencia y comunidad</li>
+      <li>&ldquo;Hice m&aacute;s dinero con YouTube AdSense en mi video de &lsquo;por qu&eacute; dej&eacute;&rsquo; que con el MLM&rdquo; &mdash; Chrissy Antoniotti. Iron&iacute;a que ilustra un insight clave: la HISTORIA de la transformaci&oacute;n tiene m&aacute;s valor que el MLM mismo. Anabel puede usar su historia como contenido.</li>
+    </ul>
+
+    <hr>
+
+    <!-- 1.4 VALORES, CREENCIAS -->
+    <h3 id="mkr-valores">Valores, Creencias y Afiliaciones Tribales</h3>
+
+    <h4>&iquest;Qu&eacute; creen actualmente?</h4>
+    <ul>
+      <li>Que el &eacute;xito viene del trabajo duro y la educaci&oacute;n &mdash; pero est&aacute;n empezando a cuestionar eso</li>
+      <li>Que los MLM son esquemas piramidales o para gente desesperada</li>
+      <li>Que para emprender necesitas mucho capital</li>
+      <li>Que si nadie en su c&iacute;rculo lo hace, probablemente no funciona</li>
+      <li>Que el network marketing solo funciona para los que entraron primero</li>
+      <li><strong>Creencias reforzadas por internet:</strong> &ldquo;El 99% pierde dinero en MLM&rdquo; (dato FTC que circula ampliamente). &ldquo;Solo los de arriba ganan.&rdquo; Estas estad&iacute;sticas son reales y la audiencia las encuentra f&aacute;cilmente. No se pueden ignorar &mdash; hay que recontextualizar.</li>
+      <li><strong>Las 7 mentiras que ya conocen:</strong> La audiencia educada ya identific&oacute; patrones: (1) &ldquo;las oportunidades son mayores que en cualquier negocio convencional&rdquo;, (2) &ldquo;mi MLM es diferente&rdquo;, (3) &ldquo;es como una franquicia&rdquo;, (4) &ldquo;los productos son &uacute;nicos&rdquo;, (5) &ldquo;los premios y reviews prueban la calidad&rdquo;, (6) &ldquo;los cr&iacute;ticos son fracasados envidiosos&rdquo;, (7) historias de &eacute;xito infladas. Si el contenido de Anabel suena a cualquiera de estos, pierde credibilidad instant&aacute;neamente.</li>
+    </ul>
+
+    <h4>&iquest;A qui&eacute;n culpan?</h4>
+    <ul>
+      <li>Al sistema educativo que nunca les ense&ntilde;&oacute; sobre negocios</li>
+      <li>A los MLM que les dieron mala fama a todos por pr&aacute;cticas agresivas</li>
+      <li>A la persona que los invit&oacute; mal una vez (si tuvieron experiencia previa)</li>
+      <li>A la econom&iacute;a del pa&iacute;s por no dar suficientes oportunidades</li>
+      <li><strong>A los reguladores que no act&uacute;an:</strong> <em>&ldquo;Herbalife pag&oacute; $200 millones en restituci&oacute;n a 350,000 v&iacute;ctimas pero no se acus&oacute; a ning&uacute;n ejecutivo&rdquo;</em> &mdash; Current Affairs. La percepci&oacute;n de que las empresas MLM operan en un gray area legal alimenta la desconfianza.</li>
+      <li><strong>A la industria entera por proteger sus propios intereses:</strong> La DSA (Direct Selling Association) es vista como un lobby que protege a las empresas, no a los distribuidores. El movimiento antiMLM (r/antiMLM con 700K+ miembros, YouTubers con millones de views, documentales como LuLaRich) ha creado una narrativa cultural dominante contra el MLM.</li>
+      <li><strong>Al MLM que les quit&oacute; amistades:</strong> <em>&ldquo;Mi amiga me contact&oacute; despu&eacute;s de a&ntilde;os... result&oacute; que solo quer&iacute;a venderme. La bloqu&eacute;.&rdquo;</em> &mdash; patr&oacute;n repetido en cientos de historias online.</li>
+    </ul>
+
+    <h4>&iquest;Han intentado resolver el problema y fallaron?</h4>
+    <ul>
+      <li>Algunos intentaron emprender algo propio y fracasaron (falta de capital, tiempo o conocimiento)</li>
+      <li>Otros fueron invitados a un MLM antes y la experiencia fue mala (reclutamiento agresivo, sin sistema, sin resultados)</li>
+      <li>Algunos probaron freelancing o side hustles que no escalaron</li>
+      <li>Muchos simplemente nunca intentaron &mdash; est&aacute;n paralizados</li>
+      <li><strong>Patr&oacute;n documentado en foros:</strong> Personas que gastaron $2,000+ en inventario a los 18 a&ntilde;os y quedaron con cajas de producto y deuda de tarjeta de cr&eacute;dito. Personas que pasaron 5+ a&ntilde;os en la industria y perdieron decenas de miles de d&oacute;lares. Una persona que lleg&oacute; a la cima de su MLM y a&uacute;n as&iacute; se fue porque &ldquo;el &eacute;xito significaba ganar dinero a costa de otros&rdquo;.</li>
+      <li><strong>El trauma espec&iacute;fico:</strong> Gente que empez&oacute; a ver a amigos y familiares como &ldquo;signos de d&oacute;lar&rdquo; en vez de personas. Relaciones rotas por el constante pitching. Presi&oacute;n del upline para dejar su trabajo y dedicarse full-time sin tener ingresos estables.</li>
+    </ul>
+
+    <h4>&iquest;C&oacute;mo eval&uacute;an si una soluci&oacute;n va a funcionar?</h4>
+    <ul>
+      <li>Viendo a alguien como ellos que ya lo logr&oacute; (prueba social real)</li>
+      <li>Si la persona que les presenta se ve profesional y exitosa (no desesperada)</li>
+      <li>Si la empresa tiene trayectoria y productos reales (no solo promesas)</li>
+      <li>Si hay un sistema claro paso a paso (no &ldquo;invita a tus amigos y ya&rdquo;)</li>
+      <li>Si no tienen que ser vendedores tradicionales</li>
+      <li><strong>Googlear primero:</strong> El primer instinto del profesional de alto valor es buscar &ldquo;[empresa] + scam&rdquo; o &ldquo;[empresa] + estafa&rdquo;. Lo que encuentran de Immunotec: income disclosure, comparaciones de precio, reviews mixtas en Trustpilot (3.1/5). Si el contenido de Anabel no pasa el &ldquo;Google test&rdquo;, pierde al prospecto antes de que le escriba.</li>
+      <li><strong>Ver la transformaci&oacute;n real, no el pitch:</strong> La investigaci&oacute;n muestra que lo que convierte es ver a alguien COMO ELLOS que lo logr&oacute;. No promesas de ingreso &mdash; transformaci&oacute;n personal visible. El viaje de t&iacute;mida a l&iacute;der de Anabel ES el contenido m&aacute;s poderoso.</li>
+      <li><strong>Pedir transparencia sobre el income:</strong> <em>&ldquo;Busca datos reales de distribuci&oacute;n de ingresos &mdash; la proporci&oacute;n de qui&eacute;n gana cu&aacute;nto&rdquo;</em> &mdash; consejo repetido en foros antiMLM. La audiencia educada ya sabe que debe pedir esto.</li>
+    </ul>
+
+    <h4>&iquest;Qu&eacute; figuras o marcas respetan?</h4>
+    <ul>
+      <li>Emprendedores exitosos que empezaron de cero</li>
+      <li>L&iacute;deres de opini&oacute;n en desarrollo personal (Tony Robbins, personas locales de &eacute;xito)</li>
+      <li>Mujeres l&iacute;deres que construyeron algo propio</li>
+      <li>Marcas que proyectan profesionalismo y resultados</li>
+    </ul>
+
+    <h4>&iquest;Qu&eacute; rasgos de car&aacute;cter valoran?</h4>
+    <p>Autenticidad, liderazgo, disciplina, mentalidad de abundancia, profesionalismo</p>
+
+    <h4>&iquest;Qu&eacute; rasgos desprecian?</h4>
+    <ul>
+      <li>Desesperaci&oacute;n, reclutamiento agresivo, promesas falsas, falta de transparencia, gente que finge un estilo de vida que no tiene</li>
+      <li><strong>Espec&iacute;ficamente documentado:</strong> Fotos de estilos de vida curados en redes sociales que son mentira. Reviews y premios falsos generados por los mismos distribuidores (no clientes reales). Uplines que &ldquo;firman a familiares y devuelven los kits&rdquo; para manipular rangos. La frase &ldquo;los cr&iacute;ticos son envidiosos&rdquo; como escudo ante cr&iacute;ticas leg&iacute;timas.</li>
+    </ul>
+
+    <h4>Tendencias del mercado que conocen</h4>
+    <ul>
+      <li>Marca personal como herramienta de negocio (lo ven en Instagram/TikTok)</li>
+      <li>Contenido de valor como forma de atraer vs perseguir</li>
+      <li>El modelo de &ldquo;atracci&oacute;n&rdquo; vs el modelo de &ldquo;reclutamiento&rdquo; en MLM</li>
+      <li>Emprendimiento digital y trabajo remoto como tendencia</li>
+      <li><strong>El movimiento antiMLM es mainstream:</strong> r/antiMLM (700K+ miembros), YouTubers antiMLM (Kiki Chanel con 20M+ views y 200K+ subs), documentales en streaming (LuLaRich, Betting on Zero), el episodio de John Oliver (uno de los m&aacute;s vistos de Last Week Tonight). La audiencia de Anabel puede haber visto este contenido.</li>
+      <li><strong>MLM en crisis de credibilidad (2024-2025):</strong> Tupperware declar&oacute; bancarrota. Rodan + Fields, Seint y BeachBody abandonaron el modelo MLM. Esto refuerza la narrativa de que &ldquo;el MLM se est&aacute; muriendo&rdquo; &mdash; aunque el mercado global sigue en $190B.</li>
+      <li><strong>Micro-influencers &gt; mega-influencers:</strong> La tendencia en 2026 es que 5 micro-influencers generan m&aacute;s confianza que 1 celebrity. Esto favorece a Anabel &mdash; no necesita millones de seguidores, necesita una comunidad aut&eacute;ntica de alto engagement.</li>
+      <li><strong>Los hispanos son el mercado de mayor crecimiento digital:</strong> El 63% de latinos dicen que compran m&aacute;s de marcas que muestran gente como ellos. La autenticidad cultural es ventaja competitiva.</li>
+      <li><strong>Immunotec crece pero en silencio:</strong> Ingresos pasaron de $100M (2017) a $217M (2022), crecimiento &gt;100% en 5 a&ntilde;os. Pagan $1.46M semanales a distribuidores. La empresa tiene momentum, aunque la percepci&oacute;n p&uacute;blica no lo refleja.</li>
+    </ul>
+
+    <h4>Tribus a las que pertenecen</h4>
+    <ul>
+      <li>Comunidades de emprendimiento en Instagram y YouTube</li>
+      <li>Grupos de mujeres emprendedoras en RD</li>
+      <li>Comunidades de desarrollo personal y mentalidad</li>
+      <li>Grupos de WhatsApp de profesionales j&oacute;venes</li>
+      <li>Audiencia de podcasts de negocios y finanzas personales</li>
+      <li><strong>Audiencia pasiva de contenido antiMLM:</strong> Muchos en nuestro target han visto videos de YouTubers antiMLM (NOT THE GOOD GIRL, Savannah Marie, Kiki Chanel) o memes de r/antiMLM SIN ser activistas antiMLM. Simplemente absorben el escepticismo como norma cultural. No odian el MLM &mdash; pero su default es no confiar.</li>
+      <li><strong>Comunidad de Eric Worre / Go Pro:</strong> Los que S&Iacute; est&aacute;n abiertos al network marketing siguen a Eric Worre (5M+ views semanales), escuchan podcasts como Network Marketing Pro, y leen &ldquo;Go Pro&rdquo;. Estos ya pasaron la barrera del escepticismo &mdash; son la audiencia warm.</li>
+      <li><strong>Seguidoras de Vilma N&uacute;&ntilde;ez y marketing digital en espa&ntilde;ol:</strong> Consultoras y creadoras de contenido que ense&ntilde;an marca personal en LatAm. La audiencia de Anabel est&aacute; en la intersecci&oacute;n de &ldquo;marca personal&rdquo; + &ldquo;oportunidad de negocio&rdquo;.</li>
+    </ul>
+
+    <hr>
+
+    <!-- 1.5 OBJECIONES -->
+    <h3 id="mkr-objeciones">Objeciones (con contexto de investigaci&oacute;n real)</h3>
+
+    <h4>1. &ldquo;Eso es pir&aacute;mide&rdquo;</h4>
+    <p><strong>Por qu&eacute; lo dicen:</strong> El 98% de las 100 empresas MLM m&aacute;s grandes usaron &ldquo;income claims at&iacute;picos y no sustanciados&rdquo; seg&uacute;n Truth in Advertising. La percepci&oacute;n es leg&iacute;tima &mdash; no es ignorancia. La FTC dice que el 99% pierde dinero.</p>
+    <p><strong>C&oacute;mo se neutraliza:</strong> NO siendo defensivo. NO diciendo &ldquo;mi MLM es diferente&rdquo; (eso es la mentira #2 que ya identifican). En su lugar: mostrar los resultados reales de Anabel sin exagerar. Hablar de modelo de negocio con apalancamiento, no de &ldquo;oportunidad de la vida&rdquo;.</p>
+
+    <h4>2. &ldquo;No tengo tiempo&rdquo;</h4>
+    <p><strong>Por qu&eacute; lo dicen:</strong> Han visto a gente en MLM que vive pegada al tel&eacute;fono reclutando 24/7. Presi&oacute;n de uplines para &ldquo;dedicarle full time&rdquo;.</p>
+    <p><strong>C&oacute;mo se neutraliza:</strong> Mostrar que el sistema de Anabel se construye en horas parciales con contenido que trabaja por ti. El contenido atrae &mdash; no tienes que perseguir a nadie.</p>
+
+    <h4>3. &ldquo;No soy vendedor / no me gusta vender&rdquo;</h4>
+    <p><strong>Por qu&eacute; lo dicen:</strong> La experiencia m&aacute;s com&uacute;n con MLM es el mensaje fr&iacute;o de WhatsApp o la &ldquo;amiga&rdquo; que los contacta solo para vender. El modelo de &ldquo;persecuci&oacute;n&rdquo; es lo que odian.</p>
+    <p><strong>C&oacute;mo se neutraliza:</strong> El modelo de Anabel es attraction marketing. El contenido filtra y atrae. Cuando alguien te escribe, ya viene interesado. No hay venta &mdash; hay conversaci&oacute;n.</p>
+
+    <h4>4. &ldquo;Los productos son muy caros&rdquo;</h4>
+    <p><strong>Por qu&eacute; lo dicen:</strong> Immunocal cuesta $5.47/sachet. En Amazon encuentran glutati&oacute;n por $0.32-$0.88. El markup de 450-1,700% es un dato que cualquier profesional inteligente va a buscar.</p>
+    <p><strong>C&oacute;mo se neutraliza:</strong> Dos &aacute;ngulos: (1) Para el negocio &mdash; no est&aacute;s vendiendo sachets, est&aacute;s construyendo un activo con ingresos residuales. El costo es irrelevante vs el veh&iacute;culo financiero. (2) Para el producto &mdash; hay investigaci&oacute;n cl&iacute;nica detr&aacute;s de Immunocal que el glutati&oacute;n gen&eacute;rico no tiene. Pero NUNCA pelear en precio &mdash; pelear en valor.</p>
+
+    <h4>5. &ldquo;Si fuera tan f&aacute;cil, todo el mundo lo har&iacute;a&rdquo;</h4>
+    <p><strong>Por qu&eacute; lo dicen:</strong> Porque ven gente que lo intent&oacute; y fracas&oacute;. Porque el income disclosure dice que el 75% no gana nada.</p>
+    <p><strong>C&oacute;mo se neutraliza:</strong> &ldquo;No es f&aacute;cil. Pero es simple si tienes tres cosas: sistema, mentor&iacute;a y disciplina. La mayor&iacute;a no tiene ninguna de las tres. Yo te ofrezco las tres.&rdquo;</p>
+
+    <h4>6. &ldquo;Es mucho trabajo para lo que pagan&rdquo;</h4>
+    <p><strong>Por qu&eacute; lo dicen:</strong> Historias reales de gente que pas&oacute; 5+ a&ntilde;os y perdi&oacute; decenas de miles de d&oacute;lares. Personas que gastaron $2,000 en inventario y quedaron con cajas y deuda.</p>
+    <p><strong>C&oacute;mo se neutraliza:</strong> &ldquo;Todo negocio real requiere trabajo. La diferencia es el apalancamiento: en tu trabajo cambias 1 hora por 1 pago. Aqu&iacute; construyes una red que paga por el trabajo de todos, no solo el tuyo.&rdquo;</p>
+
+    <h4>7. &ldquo;No me gusta caerle atr&aacute;s a la gente&rdquo;</h4>
+    <p><strong>Por qu&eacute; lo dicen:</strong> Es la experiencia universal con MLM &mdash; el upline que presiona, los mensajes masivos de WhatsApp, las &ldquo;reuniones&rdquo; sorpresa. La gente que empez&oacute; a ver a sus amigos como &ldquo;signos de d&oacute;lar&rdquo;.</p>
+    <p><strong>C&oacute;mo se neutraliza:</strong> &ldquo;Exacto &mdash; por eso mi modelo es diferente. Yo publico contenido. La gente que resuena, me escribe. Nunca persigo a nadie. Si alguien no quiere, perfecto &mdash; hay 1,000 personas m&aacute;s que s&iacute;.&rdquo;</p>
+
+    <h4>8. &ldquo;Eso es para gente que no tiene nada mejor&rdquo;</h4>
+    <p><strong>Por qu&eacute; lo dicen:</strong> La imagen del MLM es la persona sin opciones, desesperada, vendiendo en el grupo de WhatsApp de la familia.</p>
+    <p><strong>C&oacute;mo se neutraliza:</strong> Mostrar el perfil real de los l&iacute;deres exitosos. Anabel es Diamante Ejecutivo, genera $10K+/mes, ha sido consultora del a&ntilde;o. No es alguien sin opciones &mdash; es alguien que ELIGI&Oacute; este modelo porque tiene apalancamiento. Y su equipo est&aacute; lleno de profesionales.</p>
+
+    <h4>9. &ldquo;Ya lo intent&eacute; y no funcion&oacute;&rdquo; (de investigaci&oacute;n)</h4>
+    <p><strong>Por qu&eacute; lo dicen:</strong> Experiencia previa traum&aacute;tica: upline que desapareci&oacute;, sin sistema, sin entrenamiento, gastos sin retorno.</p>
+    <p><strong>C&oacute;mo se neutraliza:</strong> &ldquo;El 99% de los que fracasan no ten&iacute;an sistema ni mentor&iacute;a. Tuviste una mala experiencia &mdash; no con el modelo, sino con la persona que te lo present&oacute; mal. Eso es exactamente lo que yo hago diferente.&rdquo;</p>
+
+    <h4>10. &ldquo;En internet dice que el 99% pierde dinero&rdquo; (de investigaci&oacute;n)</h4>
+    <p><strong>Por qu&eacute; lo dicen:</strong> Porque googlearon &ldquo;Immunotec scam&rdquo; o &ldquo;MLM estafa&rdquo; y encontraron las estad&iacute;sticas reales.</p>
+    <p><strong>C&oacute;mo se neutraliza:</strong> NO negarlo. &ldquo;S&iacute;, eso es real. La mayor&iacute;a que entra no hace nada. No tiene sistema, no tiene mentor, no tiene disciplina. Pero del 1% que s&iacute; lo tiene &mdash; mir&aacute; d&oacute;nde est&aacute;n. Yo llevo X a&ntilde;os y genero $Y/mes. La pregunta no es si funciona &mdash; la pregunta es si T&Uacute; est&aacute;s dispuesto a hacer lo que hay que hacer.&rdquo;</p>
+
+    <hr>
+
+    <!-- 1.6 AVATARES -->
+    <h3 id="mkr-avatar">Avatares</h3>
+
+    <h4>Avatar Principal: Laura</h4>
+
+    <table class="data-table">
+      <tr><th>Campo</th><th>Detalle</th></tr>
+      <tr><td><strong>Nombre</strong></td><td>Laura, 32 a&ntilde;os, Santo Domingo</td></tr>
+      <tr><td><strong>Ocupaci&oacute;n</strong></td><td>Marketing corporativo en una empresa mediana</td></tr>
+      <tr><td><strong>Ingreso</strong></td><td>RD$85,000/mes (~$1,400 USD)</td></tr>
+      <tr><td><strong>Estado civil</strong></td><td>En relaci&oacute;n, sin hijos todav&iacute;a</td></tr>
+      <tr><td><strong>Instagram</strong></td><td>Sigue cuentas de emprendimiento, desarrollo personal, y mujeres l&iacute;deres. Ha visto al menos 1-2 videos antiMLM en YouTube o TikTok. Tiene 800-1,200 seguidores.</td></tr>
+    </table>
+
+    <p><strong>Su historia:</strong> Le va &ldquo;bien&rdquo; en papel &mdash; tiene t&iacute;tulo, trabajo estable, gana m&aacute;s que el promedio dominicano. Pero siente que est&aacute; estancada. Lleva 4 a&ntilde;os en la misma empresa, los aumentos son m&iacute;nimos, y cada vez que ve a alguien de su edad emprendiendo algo propio, siente una mezcla de admiraci&oacute;n y frustraci&oacute;n.</p>
+
+    <p><strong>Su experiencia con MLM:</strong> Una vez la invitaron a Herbalife. La experiencia fue p&eacute;sima &mdash; la contact&oacute; una &ldquo;amiga&rdquo; de la universidad que no le hablaba desde hace a&ntilde;os. El pitch fue agresivo, la reuni&oacute;n fue inc&oacute;moda, y despu&eacute;s de 2 meses sin vender nada (porque le daba verg&uuml;enza ofrecerle a sus amigas), se fue. Perdi&oacute; RD$8,000 en el kit inicial. Desde entonces, asocia MLM con &ldquo;gente sin opciones&rdquo; y &ldquo;pir&aacute;mides&rdquo;. Pero en el fondo, cuando ve a alguien que S&Iacute; lo hace bien &mdash; sin desesperaci&oacute;n, con profesionalismo &mdash; algo se mueve.</p>
+
+    <p><strong>Lo que la convencer&iacute;a:</strong></p>
+    <ol>
+      <li>Ver a una mujer como ella &mdash; profesional, educada, sin desesperaci&oacute;n &mdash; que lo hizo y le fue bien</li>
+      <li>Que NO le vendan. Que ella descubra el contenido org&aacute;nicamente, investigue por su cuenta, y cuando est&eacute; lista, ella inicie la conversaci&oacute;n</li>
+      <li>Un sistema claro: &ldquo;haz esto, despu&eacute;s esto, despu&eacute;s esto&rdquo; &mdash; no &ldquo;invita a tus amigas&rdquo;</li>
+      <li>Que pase el &ldquo;Google test&rdquo; &mdash; si busca y encuentra puras quejas, se va</li>
+      <li>Prueba social real: n&uacute;meros, testimonios verificables, no promesas infladas</li>
+    </ol>
+
+    <p><strong>Lo que la har&iacute;a huir al instante:</strong></p>
+    <ul>
+      <li>Un DM que empiece con &ldquo;Hey reina, te tengo una oportunidad incre&iacute;ble&rdquo;</li>
+      <li>Contenido que suene a cualquiera de las 7 mentiras MLM</li>
+      <li>Promesas de &ldquo;gana $5K tu primer mes&rdquo;</li>
+      <li>La frase &ldquo;esto no es un MLM, es marketing de referidos&rdquo; (la detecta como red flag)</li>
+      <li>Fotos de estilos de vida que se ven fabricados</li>
+    </ul>
+
+    <blockquote><strong>Su lenguaje interno:</strong> &ldquo;Si esto realmente funciona, &iquest;por qu&eacute; el 99% pierde dinero? Pero... si es verdad que ella gana $10K al mes... &iquest;c&oacute;mo lo hizo? A lo mejor el problema no es el modelo &mdash; es c&oacute;mo lo hacen los dem&aacute;s.&rdquo;</blockquote>
+
+    <hr>
+
+    <h4>Avatar Secundario: Daniel</h4>
+
+    <table class="data-table">
+      <tr><th>Campo</th><th>Detalle</th></tr>
+      <tr><td><strong>Nombre</strong></td><td>Daniel, 38 a&ntilde;os, Santiago</td></tr>
+      <tr><td><strong>Ocupaci&oacute;n</strong></td><td>Due&ntilde;o de un negocio peque&ntilde;o (distribuci&oacute;n o servicios)</td></tr>
+      <tr><td><strong>Ingreso</strong></td><td>RD$150,000-200,000/mes (~$2,500-3,300 USD)</td></tr>
+      <tr><td><strong>Estado civil</strong></td><td>Casado, 2 hijos</td></tr>
+      <tr><td><strong>Instagram</strong></td><td>Menos activo que Laura. Sigue podcasts de negocios, finanzas, y emprendimiento. M&aacute;s consumidor de YouTube que de Instagram. Probablemente ha escuchado de Eric Worre.</td></tr>
+    </table>
+
+    <p><strong>Su historia:</strong> Tiene su negocio propio y le va bien, pero sabe que tiene techo. Quiere diversificar ingresos sin invertir en otro negocio f&iacute;sico. Ha escuchado de ingresos residuales y le intriga el concepto, pero la palabra &ldquo;MLM&rdquo; lo frena. No porque no tenga dinero para invertir &mdash; sino porque su reputaci&oacute;n entre empresarios es su activo m&aacute;s valioso. No va a arriesgarla por algo que sus socios ven como &ldquo;pir&aacute;mide&rdquo;.</p>
+
+    <p><strong>Lo que lo convencer&iacute;a:</strong></p>
+    <ol>
+      <li>Ver la oportunidad presentada como un VEH&Iacute;CULO FINANCIERO, no como &ldquo;vender productos&rdquo;</li>
+      <li>Datos concretos: ROI, timeline realista, income disclosure transparente</li>
+      <li>Que la persona que se lo presenta tenga credibilidad empresarial, no solo lifestyle curado</li>
+      <li>Poder hacerlo &ldquo;en silencio&rdquo; al principio &mdash; sin postear productos en sus redes &mdash; hasta que tenga resultados que respalden su decisi&oacute;n</li>
+    </ol>
+
+    <blockquote><strong>Su lenguaje interno:</strong> &ldquo;Si los n&uacute;meros son reales y hay un sistema, lo puedo hacer como un negocio m&aacute;s. Pero si huele a show de motivaci&oacute;n y promesas vac&iacute;as, paso.&rdquo;</blockquote>
+
+    <hr>
+
+    <!-- 1.7 DATOS DUROS -->
+    <h3 id="mkr-datos">Investigaci&oacute;n de Mercado &mdash; Fuentes Externas</h3>
+
+    <h4>Datos Duros de Immunotec (Income Disclosure Statements)</h4>
+
+    <table class="data-table">
+      <tr><th>M&eacute;trica</th><th>Dato</th><th>Fuente</th></tr>
+      <tr><td>Consultores que NO ganan nada</td><td>75.2%</td><td>Income Disclosure 2022</td></tr>
+      <tr><td>Consultores que ganan &lt;$100/mes</td><td>84.23%</td><td>Income Disclosure 2016</td></tr>
+      <tr><td>Consultores que ganan &gt;$1,000/mes</td><td>Solo 2.2%</td><td>Income Disclosure 2022</td></tr>
+      <tr><td>Consultores que ganan &gt;$5,000/mes</td><td>&lt;1%</td><td>Income Disclosure 2023-2024</td></tr>
+      <tr><td>P&eacute;rdida de dinero en MLMs general</td><td>99% de participantes</td><td>FTC / Consumer Awareness Institute</td></tr>
+      <tr><td>Costo m&iacute;nimo mensual para estar activo</td><td>$83/mes</td><td>Requisito de compra personal</td></tr>
+      <tr><td>Costo estimado primer a&ntilde;o</td><td>$1,290</td><td>Gastos operativos b&aacute;sicos</td></tr>
+      <tr><td>Markup de Immunocal vs alternativas</td><td>450-1,700%</td><td>Comparaciones online frecuentes</td></tr>
+      <tr><td>Trustpilot score</td><td>3.1/5 &mdash; 50% reviews de 1 estrella, 47% de 5 estrellas</td><td>Trustpilot</td></tr>
+      <tr><td>BBB (Better Business Bureau)</td><td>Ya NO acreditado &mdash; sin rating actual</td><td>BBB</td></tr>
+    </table>
+
+    <div class="insight-box">
+      <p><strong>Implicaci&oacute;n estrat&eacute;gica:</strong> La audiencia que investiga (profesionales de alto valor = nuestro target) VA a encontrar estos datos. El contenido de Anabel no puede ignorarlos ni contradecirlos. Tiene que reconocerlos y recontextualizar: &ldquo;S&iacute;, la mayor&iacute;a no gana &mdash; porque la mayor&iacute;a no tiene sistema, mentor&iacute;a ni disciplina. Los que s&iacute; lo tienen, construyen algo real.&rdquo;</p>
+    </div>
+
+    <h4>Datos Duros de la Industria MLM Global (2023-2025)</h4>
+
+    <table class="data-table">
+      <tr><th>M&eacute;trica</th><th>Dato</th><th>Fuente</th></tr>
+      <tr><td>Mercado global MLM</td><td>$190 billion USD (2024)</td><td>Global MLM Solution</td></tr>
+      <tr><td>Proyecci&oacute;n 2033</td><td>$294 billion USD</td><td>Global MLM Solution</td></tr>
+      <tr><td>Participantes globales</td><td>102.9 millones (2023)</td><td>WFDSA</td></tr>
+      <tr><td>Participantes USA</td><td>6.1 millones (2023) &mdash; bajando desde 7.3M en 2021</td><td>WFDSA</td></tr>
+      <tr><td>Mercado Am&eacute;ricas</td><td>$62.6 billion (37.3% global)</td><td>WFDSA</td></tr>
+      <tr><td>Mercado M&eacute;xico</td><td>$6.87 billion (#8 mundial)</td><td>WFDSA</td></tr>
+      <tr><td>% mujeres</td><td>74% global, 95% en Argentina</td><td>WFDSA</td></tr>
+      <tr><td>Edad pico</td><td>35-44 a&ntilde;os (25.9%)</td><td>WFDSA</td></tr>
+      <tr><td>Full-time</td><td>Solo 0.5M de 6.1M en USA (8%)</td><td>WFDSA</td></tr>
+      <tr><td>Part-time</td><td>5.6M (92%)</td><td>WFDSA</td></tr>
+      <tr><td>Dropout a&ntilde;o 1</td><td>50%</td><td>AARP/FTC</td></tr>
+      <tr><td>Dropout 5 a&ntilde;os</td><td>90%</td><td>AARP/FTC</td></tr>
+      <tr><td>Dropout 10 a&ntilde;os</td><td>95%</td><td>AARP/FTC</td></tr>
+      <tr><td>Ganan &gt;$100K/a&ntilde;o</td><td>0.05%</td><td>AARP MLM Study</td></tr>
+      <tr><td>Ganan &gt;$25K/a&ntilde;o</td><td>4%</td><td>AARP MLM Study</td></tr>
+      <tr><td>Ganan &lt;$5K/a&ntilde;o</td><td>15%</td><td>AARP MLM Study</td></tr>
+      <tr><td>Venta promedio anual por seller (USA)</td><td>$6,016</td><td>DSA 2023</td></tr>
+      <tr><td>% que reporta experiencia positiva</td><td>80%</td><td>DSA (pero cuestionado)</td></tr>
+      <tr><td>% que reporta ser enga&ntilde;ado sobre probabilidades</td><td>40%</td><td>AARP</td></tr>
+      <tr><td>Categor&iacute;a #1</td><td>Wellness (31.7% de ventas globales)</td><td>WFDSA</td></tr>
+      <tr><td>% con t&iacute;tulo universitario</td><td>52%</td><td>DSA</td></tr>
+    </table>
+
+    <div class="insight-box">
+      <p><strong>Insight clave para Anabel:</strong> Los participantes est&aacute;n bajando (7.3M &rarr; 6.1M en USA). El mercado sigue creciendo en revenue pero perdiendo gente. Las empresas que sobreviven son las que retienen mejor &mdash; y la retenci&oacute;n depende de sistema + resultados + comunidad. Exactamente lo que Anabel ofrece.</p>
+    </div>
+
+    <h4>Sentimiento del Mercado Online</h4>
+
+    <h5>Lo que dicen los detractores (lenguaje textual de foros y reviews):</h5>
+    <ul>
+      <li>&ldquo;99.6% de participantes pierden dinero&rdquo; &mdash; estad&iacute;stica FTC que circula masivamente</li>
+      <li>&ldquo;Los productos cuestan 5 veces m&aacute;s que alternativas iguales en Amazon&rdquo;</li>
+      <li>&ldquo;Instagram est&aacute; lleno de network marketers enga&ntilde;osos que esconden sus intenciones&rdquo;</li>
+      <li>&ldquo;No es un negocio real &mdash; eres un vendedor comisionado sin derechos laborales&rdquo;</li>
+      <li>&ldquo;Los premios y reviews son falsos &mdash; generados por los mismos distribuidores&rdquo;</li>
+      <li>&ldquo;Es un esquema piramidal disfrazado de oportunidad de negocio&rdquo;</li>
+      <li>&ldquo;Target freshly out of college who are seen as young and naive&rdquo; &mdash; percepci&oacute;n de targeting predatorio</li>
+    </ul>
+
+    <h5>Lo que dicen los defensores (lenguaje textual):</h5>
+    <ul>
+      <li>&ldquo;Me cambi&oacute; la vida&rdquo; &mdash; pero sin datos concretos</li>
+      <li>&ldquo;Immunocal le dio mejor calidad de vida a mi madre de 98 a&ntilde;os&rdquo; &mdash; testimonios de producto genuinos pero anecd&oacute;ticos</li>
+      <li>&ldquo;Reemplaz&oacute; mis medicamentos prescritos para diabetes y presi&oacute;n alta&rdquo; &mdash; claims que rozan lo regulatorio</li>
+      <li>&ldquo;Hice 4x mi inversi&oacute;n inicial de $800 a trav&eacute;s de ventas de producto&rdquo; &mdash; caso real pero raro</li>
+    </ul>
+
+    <h5>Lo que la audiencia ya sabe (y que la mayor&iacute;a de MLM ignoran):</h5>
+    <ol>
+      <li>Las &ldquo;7 mentiras MLM&rdquo; circulan en art&iacute;culos, videos y memes &mdash; la audiencia las reconoce al instante</li>
+      <li>El movimiento antiMLM es masivo: subreddits, TikToks, art&iacute;culos en BuzzFeed y HuffPost con historias virales de ex-miembros</li>
+      <li>Las historias de trauma emocional (relaciones rotas, deuda, manipulaci&oacute;n del upline) son las que m&aacute;s se comparten</li>
+      <li>La percepci&oacute;n de &ldquo;mujeres empoderando mujeres&rdquo; como fachada es un tema recurrente</li>
+      <li>&ldquo;&iquest;C&oacute;mo es que esto es legal?&rdquo; es una pregunta frecuente y genuina</li>
+    </ol>
+
+    <h4>Tendencia: Attraction Marketing vs. Reclutamiento Tradicional</h4>
+
+    <p><strong>Lo que est&aacute; funcionando en 2026</strong> (fuentes: 12AM Agency, ManyChat, Sprout Social, Social Media Examiner):</p>
+
+    <blockquote>&ldquo;S&eacute; un faro, no un meg&aacute;fono. Cuando te enfocas en dar valor y construir comunidad, las ventas son un subproducto natural de la confianza.&rdquo;</blockquote>
+
+    <h5>Estructura del perfil:</h5>
+    <ul>
+      <li>Bio formula: &ldquo;Ayudo a [audiencia target] a lograr [resultado] usando [m&eacute;todo]&rdquo; &mdash; NUNCA poner qu&eacute; vendes directamente</li>
+      <li>3 pilares de contenido: pasiones fuera del negocio (fitness, familia, growth) + contenido educativo + prueba social real</li>
+      <li>Consistencia visual: paleta de colores, tono, y est&eacute;tica que creen Brand Salience</li>
+    </ul>
+
+    <h5>Reels (herramienta #1 de alcance en 2026):</h5>
+    <ul>
+      <li>Hook de 3 segundos: <em>&ldquo;Deja de perder 3 horas al d&iacute;a prospectando...&rdquo;</em></li>
+      <li>Contenido educativo en el medio: 3 tips accionables</li>
+      <li>Call-to-Conversation al final: <em>&ldquo;Comenta &lsquo;LISTA&rsquo; si quieres el plan&rdquo;</em> &mdash; NO links de venta directa</li>
+      <li>La audiencia que comenta activa el algoritmo &rarr; m&aacute;s alcance org&aacute;nico</li>
+    </ul>
+
+    <h5>Stories (canal behind-the-scenes):</h5>
+    <ul>
+      <li>D&iacute;a a d&iacute;a real usando el producto (sin gui&oacute;n)</li>
+      <li>Screenshots de testimonios de clientes (con permiso)</li>
+      <li>Stickers interactivos (polls, sliders) para medir inter&eacute;s</li>
+      <li>Countdown stickers antes de Lives</li>
+    </ul>
+
+    <h5>Instagram Live (conversi&oacute;n):</h5>
+    <ul>
+      <li>5 min de valor/educaci&oacute;n &rarr; revelaci&oacute;n del producto &rarr; Q&amp;A</li>
+      <li>Bonos exclusivos para los que act&uacute;an durante el Live</li>
+      <li>Pre-launch: 48 horas de hype en Stories</li>
+    </ul>
+
+    <h5>DM strategy (donde ocurre la magia):</h5>
+    <ul>
+      <li>Hand-Raiser Posts: contenido que identifica pain points con preguntas abiertas</li>
+      <li>Responder Stories de prospectos con tips genuinos (NO pitches)</li>
+      <li>Permission-Based Selling: <em>&ldquo;Tengo un recurso que me ayud&oacute; con eso, &iquest;quieres que te lo mande?&rdquo;</em> &mdash; siempre pedir permiso antes de enviar links</li>
+      <li>Tratar DMs como CONVERSACI&Oacute;N, no como sala de cierre</li>
+    </ul>
+
+    <h5>Automatizaci&oacute;n (ManyChat):</h5>
+    <ul>
+      <li>Keyword triggers: &ldquo;Comenta X palabra&rdquo;</li>
+      <li>Mensaje autom&aacute;tico de calificaci&oacute;n</li>
+      <li>Routing condicional seg&uacute;n respuestas</li>
+      <li>Bot maneja la introducci&oacute;n &rarr; humano cierra la conversaci&oacute;n</li>
+    </ul>
+
+    <h5>Lo que NO hacer:</h5>
+    <ul>
+      <li>NO postear el nombre de la empresa en el contenido p&uacute;blico</li>
+      <li>NO hacer claims de ingreso sin disclaimer</li>
+      <li>NO usar mensajes fr&iacute;os a desconocidos</li>
+      <li>NO publicar fotos de estilo de vida que no sean reales</li>
+      <li>NO usar la frase &ldquo;mi MLM es diferente&rdquo;</li>
+    </ul>
+
+    <div class="insight-box">
+      <p><strong>Esto valida completamente la estrategia de Anabel:</strong> Marca personal + contenido de valor + atracci&oacute;n + ManyChat. La empresa se revela en la conversaci&oacute;n privada, no en el feed. El contenido filtra y atrae &mdash; Anabel nunca persigue a nadie.</p>
+    </div>
+
+    <h4>Immunotec &mdash; Datos del Negocio (para contexto estrat&eacute;gico)</h4>
+
+    <h5>Ingresos de la empresa:</h5>
+    <ul>
+      <li>2017: &gt;$100M (primer a&ntilde;o arriba de $100M)</li>
+      <li>2022: $217M (crecimiento &gt;100% en 5 a&ntilde;os)</li>
+      <li>Comisiones pagadas: ~35% de ingresos netos</li>
+      <li>Pagos semanales a distribuidores: $1.46M</li>
+      <li>21 l&iacute;deres entre los mayores ganadores globales del sector</li>
+    </ul>
+
+    <h5>Plan de compensaci&oacute;n &mdash; 6 formas de ingreso:</h5>
+    <ol>
+      <li>Ventas al por menor (comisi&oacute;n directa)</li>
+      <li>Immunodirect (comisiones por ventas referidas online)</li>
+      <li>Bono por desarrollo de negocio (10-25% del paquete de ingreso de nuevos)</li>
+      <li>Comisiones residuales (5-8 generaciones seg&uacute;n rango)</li>
+      <li>Bono por ascenso acelerado ($120 a $12,000)</li>
+      <li>Bono por l&iacute;nea ascendente ($160 a $4,000)</li>
+    </ol>
+
+    <p><strong>Rangos ejecutivos:</strong> Plata &rarr; Oro &rarr; Diamante &rarr; Diamante Ejecutivo &rarr; Platino</p>
+    <p><strong>Presencia:</strong> Canad&aacute;, USA, M&eacute;xico, RD, Colombia, Per&uacute;, Guatemala, UK, Irlanda, Espa&ntilde;a</p>
+    <p><strong>Producto estrella (Immunocal):</strong> Prote&iacute;na bioactiva de suero que ayuda al cuerpo a producir glutati&oacute;n. Listado en el Physician&rsquo;s Desk Reference (referencia farmac&eacute;utica). Investigaci&oacute;n cl&iacute;nica en McGill University desde 1978.</p>
+
+    <h5>Credibilidad cient&iacute;fica vs percepci&oacute;n p&uacute;blica:</h5>
+    <ul>
+      <li><strong>Punto fuerte:</strong> PDR listing, investigaci&oacute;n cl&iacute;nica real, 40+ a&ntilde;os de base cient&iacute;fica</li>
+      <li><strong>Punto d&eacute;bil:</strong> claims de salud exagerados por consultores individuales (no la empresa), comparaciones de precio con alternativas gen&eacute;ricas, BBB ya no acreditado</li>
+    </ul>
+
+    <h4>Vulnerabilidades Reales de Immunotec (que Anabel debe saber manejar)</h4>
+    <ol>
+      <li><strong>Ya no tiene acreditaci&oacute;n BBB</strong> &mdash; si alguien busca, lo encuentra</li>
+      <li><strong>Income disclosure es p&uacute;blico</strong> &mdash; 75% no gana nada</li>
+      <li><strong>Comparaciones de precio en Amazon</strong> &mdash; Immunocal vs glutati&oacute;n gen&eacute;rico</li>
+      <li><strong>Claims de salud no regulados</strong> &mdash; consultores haciendo promesas m&eacute;dicas que la empresa no respalda</li>
+      <li><strong>Historia de cambio de due&ntilde;os</strong> &mdash; BehindMLM documenta esto detalladamente</li>
+    </ol>
+
+    <h5>C&oacute;mo Anabel los neutraliza:</h5>
+    <ul>
+      <li>No defiende la industria &mdash; defiende su experiencia personal y sus resultados verificables</li>
+      <li>No vende producto &mdash; vende transformaci&oacute;n personal y modelo de negocio</li>
+      <li>No ignora las estad&iacute;sticas &mdash; las usa: &ldquo;La mayor&iacute;a no gana porque no tiene lo que yo te ofrezco: sistema + mentor&iacute;a + disciplina&rdquo;</li>
+      <li>No hace claims de salud &mdash; deja que los productos hablen por s&iacute; solos en la experiencia del cliente</li>
+      <li>Muestra su vida real, no una versi&oacute;n curada &mdash; la autenticidad es su arma contra la desconfianza</li>
+    </ul>
+
+    <hr>
+
+    <!-- 1.8 RESUMEN ESTRATEGICO -->
+    <h3 id="mkr-resumen">Resumen Estrat&eacute;gico de la Investigaci&oacute;n</h3>
+
+    <h4>Lo que la investigaci&oacute;n confirma:</h4>
+    <ol>
+      <li><strong>El escepticismo es el default.</strong> La audiencia de alto valor que Anabel busca ya ha sido expuesta al contenido antiMLM (700K+ miembros en r/antiMLM, documentales mainstream, YouTubers con millones de views). Su posici&oacute;n de entrada es NO confiar. El contenido tiene que ganarse esa confianza desde cero.</li>
+      <li><strong>La transparencia es la &uacute;nica arma.</strong> Los datos son p&uacute;blicos &mdash; income disclosure, comparaciones de precio, estad&iacute;sticas de la FTC. La audiencia que investiga (nuestro target) los va a encontrar. Intentar esconderlos = perder credibilidad. Reconocerlos y recontextualizarlos = ganar respeto.</li>
+      <li><strong>La historia de transformaci&oacute;n es el contenido m&aacute;s poderoso.</strong> Lo que convierte no son promesas de ingreso ni testimonios de producto. Es ver a alguien COMO ELLOS que hizo una transformaci&oacute;n real. Anabel era t&iacute;mida &rarr; ahora es Diamante Ejecutivo. Ese arco narrativo es m&aacute;s convincente que cualquier estad&iacute;stica.</li>
+      <li><strong>Nunca mencionar Immunotec en el contenido p&uacute;blico.</strong> La estrategia de attraction marketing funciona porque el prospecto llega a Anabel por su PERSONA, no por la empresa. La empresa se revela en la conversaci&oacute;n privada, cuando el prospecto ya conf&iacute;a.</li>
+      <li><strong>El modelo de &ldquo;atracci&oacute;n&rdquo; es verificablemente superior al de &ldquo;reclutamiento&rdquo;.</strong> Todos los datos de Instagram marketing 2026 confirman que el contenido de valor + engagement org&aacute;nico + DM conversacional convierte m&aacute;s que los mensajes fr&iacute;os, los pitches de grupo, o las publicaciones de producto.</li>
+      <li><strong>La objeci&oacute;n #1 no es el precio ni el tiempo &mdash; es el estigma social.</strong> Para el target de Anabel (profesionales de alto valor), el mayor miedo no es perder dinero &mdash; es que su c&iacute;rculo los vea como &ldquo;la persona que vende cosas&rdquo;. Todo el contenido debe posicionar el network marketing como una decisi&oacute;n inteligente de empresarios serios, no como un side hustle desesperado.</li>
+      <li><strong>Immunotec tiene fundamentos s&oacute;lidos pero percepci&oacute;n d&eacute;bil.</strong> Ingresos de $217M, crecimiento &gt;100% en 5 a&ntilde;os, producto con base cient&iacute;fica real. Pero la p&eacute;rdida del BBB, los income disclosures duros, y los claims exagerados de consultores individuales erosionan la percepci&oacute;n. Anabel no puede depender de la reputaci&oacute;n de la empresa &mdash; tiene que construir la suya propia.</li>
+    </ol>
+
+    <h4>Las 5 reglas de oro del contenido de Anabel (derivadas de la investigaci&oacute;n):</h4>
+    <ol>
+      <li><strong>Autenticidad radical</strong> &mdash; mostrar la vida real, no una versi&oacute;n curada. Los prospectos huyen de los estilos de vida fabricados.</li>
+      <li><strong>Nunca sonar a MLM</strong> &mdash; evitar las 7 mentiras, no usar el lenguaje de &ldquo;oportunidad de la vida&rdquo;, no hablar de &ldquo;libertad financiera&rdquo; sin contexto real.</li>
+      <li><strong>Contenido de valor primero</strong> &mdash; el 80% del contenido debe ser educativo/inspiracional sobre liderazgo, mentalidad, emprendimiento. El 20% puede ser sobre resultados y lifestyle real.</li>
+      <li><strong>Dejar que la audiencia venga</strong> &mdash; Reels con hooks, Call-to-Conversation (&ldquo;comenta X&rdquo;), DMs de valor, ManyChat para automatizar. Nunca perseguir.</li>
+      <li><strong>Pasar el Google test</strong> &mdash; asumir que cada prospecto va a buscar &ldquo;Immunotec estafa&rdquo; antes de escribir. El contenido de Anabel debe ser la PRIMERA respuesta cre&iacute;ble que encuentren.</li>
+    </ol>
+
+    <h4>Fuentes Consultadas</h4>
+
+    <h5>Immunotec espec&iacute;fico:</h5>
+    <ul>
+      <li>SmartPassiveIncomeSuccess &mdash; Is Immunotec a Scam?</li>
+      <li>Trustpilot &mdash; Immunotec Reviews (3.1/5, 36 reviews)</li>
+      <li>BehindMLM &mdash; Immunotec Review v2</li>
+      <li>Truth in Advertising &mdash; 2023 Immunotec Income Claims Database</li>
+      <li>Immunotec Income Disclosure Statement 2024 (PDF oficial)</li>
+      <li>ScamRisk &mdash; Immunotec Reviews</li>
+      <li>CenterForWorkLife &mdash; Immunotec Review</li>
+      <li>VivaElNetworking &mdash; Gu&iacute;a Completa Immunotec 2025</li>
+      <li>Diabetes Forum UK &mdash; Immunocal Discussion</li>
+      <li>Ruben Public Zone &mdash; Experimento Probando Immunocal</li>
+      <li>MLM Gateway &mdash; Personal Experience with Immunocal</li>
+    </ul>
+
+    <h5>Investigaci&oacute;n general MLM/antiMLM:</h5>
+    <ul>
+      <li>FTC &mdash; Multi-Level Marketing vs Pyramid Schemes</li>
+      <li>Current Affairs &mdash; How MLM Became the Perfect American Scam</li>
+      <li>TalentedLadiesClub &mdash; Seven Lies an MLM Rep Will Tell You</li>
+      <li>BuzzFeed &mdash; Former MLM Members Share Why They Got Out</li>
+      <li>BuzzFeed &mdash; 17 Infuriating Stories From People Tricked Into Joining MLMs</li>
+      <li>BuzzFeed &mdash; 18 Times MLM People Had No Shame (Reddit screenshots)</li>
+      <li>HuffPost &mdash; I Got Rich Working For An MLM And It Cost Me Everything</li>
+      <li>Birmingham Eastside &mdash; &ldquo;It Destroys Relationships&rdquo;</li>
+      <li>MakingManagingMoney &mdash; Why People Hate MLM</li>
+      <li>EstafasMLM &mdash; Las 10 Grandes Mentiras de las Empresas MLM</li>
+      <li>OzChen &mdash; Why I Never Joined MLM</li>
+      <li>Medium/FFWD &mdash; YouTube&rsquo;s Anti-MLM Problem</li>
+      <li>Anti-MLM Coalition &mdash; YouTubers antiMLM</li>
+      <li>Goodreads &mdash; Go Pro Reviews by Eric Worre</li>
+      <li>Life After MLM &mdash; Podcast</li>
+    </ul>
+
+    <h5>Estad&iacute;sticas de la industria:</h5>
+    <ul>
+      <li>Persuasion Nation &mdash; 39 Network Marketing &amp; MLM Statistics 2025</li>
+      <li>Global MLM Solution &mdash; 10 Eye-Opening MLM Statistics 2025</li>
+    </ul>
+
+    <h5>Estrategia de contenido y attraction marketing:</h5>
+    <ul>
+      <li>12AM Agency &mdash; How to Use Instagram for Network Marketing 2026</li>
+      <li>Sprout Social &mdash; Instagram Marketing Strategy 2026</li>
+      <li>Social Media Examiner &mdash; What&rsquo;s Working With Instagram Marketing Right Now</li>
+    </ul>
+
+    <h5>Comunidades antiMLM (referencia para entender el sentimiento):</h5>
+    <ul>
+      <li>r/antiMLM &mdash; 700,000+ miembros activos</li>
+      <li>Kiki Chanel (YouTube) &mdash; 200K+ subs, 20M+ views en contenido antiMLM</li>
+      <li>NOT THE GOOD GIRL (YouTube) &mdash; ex-top distributor de Rodan + Fields</li>
+      <li>Savannah Marie (YouTube) &mdash; ex-consultora LimeLight</li>
+      <li>John Oliver / Last Week Tonight &mdash; Segmento sobre MLM, uno de los m&aacute;s vistos del show</li>
+    </ul>
+
+  </div>
+</div>
+
+<!-- ============================================================ -->
+<!-- SECTION 2: TOP PLAYER ANALYSIS -->
+<!-- ============================================================ -->
+<div class="sec sec-white" id="tpa">
+  <div class="page">
+    <div class="section-label dark">02 &mdash; Top Player Analysis</div>
+    <div class="sec-title">Top Player Analysis (TPA)</div>
+    <p class="sec-subtitle">Anabel Mercedes &mdash; Marca Personal + Network Marketing. Competidores analizados: Ana Cantera, Frazer Brookes, Gaby Espino.</p>
+
+    <table class="data-table">
+      <tr><th>Campo</th><th>Detalle</th></tr>
+      <tr><td><strong>Fecha de an&aacute;lisis</strong></td><td>Marzo 2026</td></tr>
+      <tr><td><strong>Analista</strong></td><td>Martin Mercedes</td></tr>
+      <tr><td><strong>Competidores</strong></td><td>Ana Cantera, Frazer Brookes, Gaby Espino</td></tr>
+      <tr><td><strong>Fuentes</strong></td><td>Instagram profiles, anacantera.com, frazerbrookes.com, gabyespino.com, Meta Ad Library, VivaElNetworking, BusinessForHome, Diario Las Am&eacute;ricas, FARMASI oficial, TanyaAliza.com, Trustpilot, ManyChat case studies, SPEAKRJ analytics, TheCityCeleb, A3VTe.com, Vital Health Global, investigaci&oacute;n web</td></tr>
+    </table>
+
+    <!-- ================================ -->
+    <!-- COMPETIDOR 1: ANA CANTERA -->
+    <!-- ================================ -->
+    <div class="competitor-header" id="tpa-ana">
+      <h3>Competidor 1: Ana Cantera (@ana_cantera)</h3>
+      <p>Network Marketing + Coaching + Marca de belleza</p>
+    </div>
+
+    <h4>1. Client Overview</h4>
+    <table class="data-table">
+      <tr><th>Campo</th><th>Detalle</th></tr>
+      <tr><td><strong>Nombre</strong></td><td>Ana Cantera</td></tr>
+      <tr><td><strong>Industria</strong></td><td>Network Marketing + Coaching + Marca de belleza</td></tr>
+      <tr><td><strong>Primary Offer</strong></td><td>Reclutamiento al equipo A3VTe dentro de Vital Health Global (antes TLC) + Coaching/mentor&iacute;a &ldquo;Acciona&rdquo;</td></tr>
+      <tr><td><strong>Target Audience</strong></td><td>Mujeres latinas 25-45, aspiracionales, que buscan independencia financiera. Mix de amas de casa, profesionales estancadas, y emprendedoras buscando un modelo de negocio</td></tr>
+    </table>
+
+    <h4>2. Getting Attention &mdash; Organic Social Media</h4>
+
+    <h5>Plataformas y Seguidores:</h5>
+    <ul>
+      <li>Instagram (@ana_cantera): ~287,000</li>
+      <li>Instagram (@anacanterabeauty): ~13,000</li>
+      <li>Instagram (@anacantera.coach): desconocido</li>
+      <li>Facebook (/mentoranacantera): ~111,700 likes</li>
+      <li>YouTube (Ana Cantera): ~50,000+ suscriptores</li>
+      <li>TikTok (@coachanacantera): ~15,800</li>
+      <li>LinkedIn: ~452 conexiones (inactiva)</li>
+    </ul>
+
+    <h5>Frecuencia de Publicaci&oacute;n:</h5>
+    <ul>
+      <li>Instagram: ~3 posts por d&iacute;a + Stories diarias + Lives frecuentes</li>
+      <li>YouTube: Videos de wealth-building, presentaciones de negocio (irregular)</li>
+      <li>TikTok: Videos cortos motivacionales (baja frecuencia)</li>
+    </ul>
+
+    <h5>Observaciones de Engagement:</h5>
+    <ul>
+      <li>Engagement rate: <strong>0.70% - 0.99%</strong> &mdash; MUY bajo para su tama&ntilde;o de audiencia. Un ER saludable para 200K-300K es 1.5%-3%.</li>
+      <li>Crecimiento: +199 seguidores/d&iacute;a</li>
+      <li><strong>Problema:</strong> Tiene 3-4 cuentas de Instagram que fragmentan su audiencia y diluyen engagement</li>
+      <li>La audiencia puede estar inflada por seguidores de MLM pasivos que no interact&uacute;an</li>
+    </ul>
+
+    <h5>Strengths:</h5>
+    <ul>
+      <li>Alto volumen de publicaci&oacute;n (3/d&iacute;a en Instagram)</li>
+      <li>Historia personal genuina y compelling (madre soltera dominicana, de la nada al &eacute;xito)</li>
+      <li>Prueba social real: 50,000+ distribuidores, reality show Million Dollar Hustle (Lifetime, 2022), rangos m&aacute;ximos en 2 empresas MLM</li>
+      <li>Contenido en espa&ntilde;ol para mercado latino subatendido</li>
+      <li>Instagram Lives diarios funcionan como &ldquo;podcast visual&rdquo; &mdash; generan conversaci&oacute;n</li>
+      <li>Certificada por John Maxwell Team + Go Pro Hall of Fame + BusinessForHome speaker</li>
+    </ul>
+
+    <h5>Weaknesses:</h5>
+    <ul>
+      <li>Engagement rate pobre para su tama&ntilde;o &mdash; audiencia grande pero poco comprometida</li>
+      <li>Fragmentaci&oacute;n de audiencia en m&uacute;ltiples cuentas de Instagram (3-4 cuentas)</li>
+      <li>Contenido gen&eacute;rico de motivaci&oacute;n &mdash; mucho &ldquo;t&uacute; puedes&rdquo; pero poco educativo/t&aacute;ctico</li>
+      <li>TikTok con solo 15,800 seguidores = no captura audiencia joven/nueva</li>
+      <li>Contenido repetitivo: mentalidad millonaria, superaci&oacute;n personal, lifestyle. Dif&iacute;cil diferenciarse.</li>
+      <li>YouTube con ~50K subs es bajo para su nivel de marca</li>
+    </ul>
+
+    <h4>Paid Ads</h4>
+    <p><strong>Ana Cantera NO invierte en paid ads.</strong> Zero evidencia de campa&ntilde;as pagadas activas. Tiene Facebook Pixel (ID: 3179246432399365) y Google Analytics (G-J81SD6LCKH) instalados en anacantera.com pero no los usa para retargeting.</p>
+    <p>Su modelo de adquisici&oacute;n es 100% org&aacute;nico + boca a boca a trav&eacute;s de su red + eventos presenciales.</p>
+    <div class="warning-box"><p><strong>Esto es una debilidad significativa.</strong> Quien compita con paid media en el mismo espacio tiene ventaja inmediata.</p></div>
+
+    <h4>Point of Parity</h4>
+    <ul>
+      <li>Historia de transformaci&oacute;n personal como gancho principal (est&aacute;ndar en MLM)</li>
+      <li>Contenido motivacional gen&eacute;rico de &ldquo;mentalidad millonaria&rdquo;</li>
+      <li>Lifestyle aspiracional en redes (viajes, ropa de marca, lujos)</li>
+      <li>Promesa de libertad financiera a trav&eacute;s del network marketing</li>
+      <li>Sistema de entrenamiento/universidad para la red (A3VTe)</li>
+      <li>Eventos presenciales masivos (Convenci&oacute;n LEGADO, &Eacute;xito en Tacones)</li>
+      <li>WhatsApp como canal de cierre</li>
+      <li>Agendas/planners como producto de bajo costo ($25)</li>
+      <li>Marca de suplementos/belleza propia (Nuvida Collagen &mdash; commodity)</li>
+    </ul>
+
+    <h4>Offer</h4>
+    <p><strong>Oferta Principal:</strong> Unirse al equipo A3VTe como distribuidor de Vital Health Global (antes estaba en TLC)</p>
+
+    <h5>Ofertas Secundarias:</h5>
+    <ol>
+      <li>Nuvida Collagen (marca de belleza propia) &mdash; singles $29.99, bundles $50-$90</li>
+      <li>Membres&iacute;a &ldquo;Acciona&rdquo; (YouTube) &mdash; desde $30/mes</li>
+      <li>Agendas Ana Cantera &mdash; $25 c/u</li>
+      <li>Cursos en anacantera.com &mdash; 13+ cursos, precios no p&uacute;blicos</li>
+      <li>Eventos presenciales (&Eacute;xito en Tacones, Convenci&oacute;n LEGADO)</li>
+      <li>Cantera Investments (bienes ra&iacute;ces, sin datos p&uacute;blicos)</li>
+    </ol>
+
+    <p><strong>Oferta Especial:</strong> Membres&iacute;a de por vida en Vital Health Global por $580 MXN (~$33 USD) &mdash; acceso a productos con hasta 50% off + paquetes de inicio (Bronze, Silver, Platinum) con hasta 70% off y comisiones hasta 80% retail.</p>
+
+    <h5>Copy Angle:</h5>
+    <blockquote>&ldquo;Yo era como t&uacute; (broke, con sobrepeso, deprimida, madre soltera) y mira d&oacute;nde estoy ahora. T&uacute; tambi&eacute;n puedes si tomas acci&oacute;n.&rdquo; &mdash; Classic rags-to-riches story aplicado al MLM.</blockquote>
+
+    <p>&Aacute;ngulos espec&iacute;ficos:</p>
+    <ul>
+      <li><strong>&ldquo;Es tiempo de Accionar!&rdquo;</strong> &mdash; tagline principal</li>
+      <li><strong>&ldquo;Reinv&eacute;ntate y descubre tu mejor versi&oacute;n&rdquo;</strong> &mdash; promesa de transformaci&oacute;n</li>
+      <li><strong>&ldquo;Mente Millonaria&rdquo;</strong> &mdash; framework de mentalidad de riqueza</li>
+      <li><strong>&ldquo;1000 Familias&rdquo;</strong> &mdash; meta emocional (ayudar a 1000 familias a ser libres)</li>
+      <li><strong>&ldquo;La l&iacute;der mejor pagada de Latinoam&eacute;rica&rdquo;</strong> &mdash; claim de autoridad</li>
+      <li><strong>&ldquo;Cambiando generaciones&rdquo;</strong> &mdash; apelaci&oacute;n al legado familiar</li>
+    </ul>
+    <p>Tono: aspiracional, emocional, directo con energ&iacute;a alta, mix espa&ntilde;ol/ingl&eacute;s, componente religioso/espiritual.</p>
+
+    <h4>3. Monetization</h4>
+
+    <h5>Value Ladder:</h5>
+    <p><strong>Entry Level:</strong> Contenido org&aacute;nico gratis, Programa Acciona 2023, Agendas ($25), Nuvida Collagen singles ($29.99)</p>
+    <p><strong>Core:</strong> Membres&iacute;a Acciona YouTube ($30/mes), Nuvida bundles ($50-$90), Paquetes de inicio Vital Health, Membres&iacute;a Vital Health ($580 MXN / ~$33 USD)</p>
+    <p><strong>High Value:</strong> &Eacute;xito en Tacones (evento presencial), Convenci&oacute;n LEGADO, Mentor&iacute;a Millonaria, Paquetes premium Vital Health (Platinum), Cantera Investments (bienes ra&iacute;ces)</p>
+
+    <h5>Funnel principal (primitivo):</h5>
+    <ol>
+      <li>Contenido org&aacute;nico (IG, YT, TikTok, FB) &rarr; genera atenci&oacute;n</li>
+      <li>Linktree &rarr; links a WhatsApp, YouTube, tienda</li>
+      <li>WhatsApp directo (2 n&uacute;meros) &rarr; conversaci&oacute;n 1:1</li>
+      <li>Cierre manual &rarr; registro en Vital Health o compra de productos</li>
+      <li>Sistema A3VTe &rarr; retenci&oacute;n (universidad digital, app, entrenamientos, Club VIP)</li>
+    </ol>
+
+    <div class="warning-box"><p><strong>No hay email marketing, no hay secuencias automatizadas, no hay landing pages de conversi&oacute;n. Todo es manual.</strong></p></div>
+
+    <h5>Weaknesses in Funnels:</h5>
+    <ol>
+      <li><strong>Dependencia total de WhatsApp</strong> &mdash; no escalable, no medible, no automatizable</li>
+      <li><strong>Sin email marketing</strong> &mdash; no captura ni nurtures leads de forma automatizada</li>
+      <li><strong>CTA principal (&ldquo;Acciona&rdquo;) redirige a YouTube Memberships</strong> &mdash; pierde control del lead fuera de su ecosistema</li>
+      <li><strong>Sin pop-ups de captura</strong> en el sitio web</li>
+      <li><strong>Tienda en dominio separado</strong> (shop.anacantera.com) &mdash; fragmenta la experiencia</li>
+      <li><strong>Sin chatbot ni widget de WhatsApp</strong> en la web</li>
+      <li><strong>Sin retargeting</strong> a pesar de tener Pixel y GA instalados</li>
+      <li><strong>El funnel es lineal y manual</strong> &mdash; no hay bifurcaci&oacute;n por tipo de prospecto (negocio vs producto)</li>
+    </ol>
+
+    <h5>Landing Page (anacantera.com):</h5>
+    <p><strong>Hero:</strong> Tagline: &ldquo;Es tiempo de Accionar!&rdquo; &mdash; Subtema: &ldquo;Reinv&eacute;ntate y descubre tu mejor versi&oacute;n&rdquo; &mdash; Plataforma: WordPress + MaxCoach + LearnPress + WooCommerce + Elementor</p>
+    <p><strong>Colores de marca:</strong> #20AD96 (teal), #3F3A64 (p&uacute;rpura oscuro), #FFB606 (oro), #EFBFBB (rosa pastel)</p>
+
+    <p><strong>Puntos Fuertes:</strong> Ecosistema integrado (cursos + tienda + membres&iacute;as), Sistema de cursos profesionalizado con LMS (LearnPress), Tracking implementado (Pixel + GA)</p>
+    <p><strong>Debilidades:</strong> No hay funnel claro de lead capture en la home, CTA principal redirige fuera del sitio a YouTube, Sin pop-ups de captura de email, Sin chatbot ni widget de WhatsApp, Tienda en dominio separado, M&aacute;s brochure que funnel &mdash; no est&aacute; optimizada para conversi&oacute;n.</p>
+
+    <h5>Nurturing Leads:</h5>
+    <ul>
+      <li><strong>Email:</strong> No hay evidencia de email marketing activo, newsletters, ni secuencias automatizadas.</li>
+      <li><strong>Remarketing:</strong> No hay evidencia de remarketing activo.</li>
+      <li><strong>WhatsApp:</strong> Canal principal de comunicaci&oacute;n y cierre. 2 n&uacute;meros en Linktree.</li>
+      <li><strong>Sistema A3VTe como nurturing:</strong> Universidad digital, App exclusiva (iOS/Android), Entrenamientos en vivo + biblioteca digital, Kit de inicio con material impreso y digital, Flyers editables para social media + presentaciones listas. Es un sistema de retenci&oacute;n y duplicaci&oacute;n, no un funnel de nurturing digital.</li>
+    </ul>
+
+    <h5>Pricing and Upsells:</h5>
+    <table class="data-table">
+      <tr><th>Producto/Servicio</th><th>Precio</th></tr>
+      <tr><td>Agendas (3 modelos)</td><td>$25.00 c/u (antes $50)</td></tr>
+      <tr><td>Nuvida Collagen (single)</td><td>$29.99 (antes $40)</td></tr>
+      <tr><td>Membres&iacute;a Acciona (YouTube)</td><td>Desde $30/mes</td></tr>
+      <tr><td>Nuvida Bundles</td><td>$50 - $90</td></tr>
+      <tr><td>Membres&iacute;a Vital Health</td><td>$580 MXN (~$33 USD)</td></tr>
+      <tr><td>Paquetes inicio Vital Health</td><td>Var&iacute;an (Bronze, Silver, Platinum)</td></tr>
+      <tr><td>Eventos presenciales</td><td>Precio no p&uacute;blico</td></tr>
+      <tr><td>Mentor&iacute;a Millonaria</td><td>Precio no p&uacute;blico</td></tr>
+      <tr><td>Cursos anacantera.com (13+)</td><td>Precio no p&uacute;blico</td></tr>
+    </table>
+
+    <p><strong>Upsell / Cross-Sell:</strong></p>
+    <ul>
+      <li>Agenda &rarr; Membres&iacute;a Acciona &rarr; Paquete Vital Health &rarr; Mentor&iacute;a</li>
+      <li>Collagen &rarr; Bundle &rarr; Suscripci&oacute;n</li>
+      <li>Contenido gratis &rarr; Live &rarr; WhatsApp &rarr; Registro en equipo</li>
+    </ul>
+
+    <h4>Diagnosis</h4>
+    <h5>Strengths:</h5>
+    <ol>
+      <li>Historia personal genuina &mdash; de madre soltera dominicana deprimida a millonaria. Verificable.</li>
+      <li>Prueba social masiva &mdash; 50,000+ distribuidores, reality TV, rangos m&aacute;ximos en 2 empresas</li>
+      <li>Ecosistema completo &mdash; MLM + marca propia + cursos + tienda + eventos + inversiones</li>
+      <li>Velocidad de ejecuci&oacute;n &mdash; Diamante Negro en Vital Health en 30 d&iacute;as</li>
+      <li>Red establecida en 30+ pa&iacute;ses</li>
+      <li>Certificaciones leg&iacute;timas &mdash; John Maxwell Team, Go Pro Hall of Fame</li>
+      <li>Apelaci&oacute;n cultural &mdash; dominicana, habla directo al mercado latino</li>
+    </ol>
+
+    <h5>Weaknesses:</h5>
+    <ol>
+      <li>Zero paid ads &mdash; depende 100% de org&aacute;nico</li>
+      <li>Engagement rate pobre (0.70-0.99%)</li>
+      <li>Fragmentaci&oacute;n digital &mdash; 3+ cuentas IG, tienda separada, YouTube como membres&iacute;a</li>
+      <li>Sin email marketing ni nurturing automatizado</li>
+      <li>Funnel primitivo &mdash; todo se cierra por WhatsApp 1:1</li>
+      <li>TikTok subdesarrollado (15.8K)</li>
+      <li>Contenido gen&eacute;rico &mdash; mucha motivaci&oacute;n, poca educaci&oacute;n espec&iacute;fica</li>
+      <li>Cambio reciente de empresa (TLC &rarr; Vital Health) puede generar desconfianza</li>
+    </ol>
+
+    <div class="insight-box">
+      <p><strong>Better at Attention or Monetization?</strong> Atenci&oacute;n. Ana Cantera es significativamente mejor captando atenci&oacute;n que monetiz&aacute;ndola digitalmente. Tiene audiencia grande (287K IG, 50K YT, 111K FB) y prueba social real (reality TV, rangos). Pero su monetizaci&oacute;n digital es primitiva: sin paid ads, sin email, sin funnels automatizados, sin retargeting. <strong>Quien implemente paid ads + funnels + email en el coaching/NM latino puede competir con una fracci&oacute;n de su audiencia.</strong></p>
+    </div>
+
+    <h4>4. Copy F&oacute;rmula Extraction</h4>
+
+    <h5>A. Caracter&iacute;sticas y beneficios:</h5>
+    <p><strong>Vital Health Global (MLM):</strong> Suplementos con nanotecnolog&iacute;a y extractos naturales con adapt&oacute;genos, descuento de hasta 50% en productos al registrarse, comisiones de hasta 80% en ventas retail, red de 50,000+ distribuidores como prueba de sistema, Sistema A3VTe con app, universidad digital, material listo.</p>
+    <p><strong>Coaching/Mentor&iacute;a:</strong> Acceso a la &ldquo;mente&rdquo; detr&aacute;s de una red de 50K distribuidores, cursos de ventas, marketing, negociaciones, desarrollo personal, mentor&iacute;a directa con alguien que gener&oacute; ~$1M en su primer a&ntilde;o.</p>
+    <p><strong>Marca de belleza (Nuvida):</strong> Col&aacute;geno hidrolizado con &aacute;cido hialur&oacute;nico, biotina, vitamina C, sin parabenos.</p>
+
+    <h5>B. Textos atractivos:</h5>
+    <ul>
+      <li><em>&ldquo;Es tiempo de Accionar!&rdquo;</em> &mdash; urgencia + acci&oacute;n</li>
+      <li><em>&ldquo;Reinv&eacute;ntate y descubre tu mejor versi&oacute;n&rdquo;</em> &mdash; transformaci&oacute;n personal</li>
+      <li><em>&ldquo;Cambiando generaciones&rdquo;</em> &mdash; legado familiar</li>
+      <li><em>&ldquo;La l&iacute;der mejor pagada de Latinoam&eacute;rica&rdquo;</em> &mdash; autoridad social</li>
+      <li><em>&ldquo;1000 familias hacia la libertad financiera&rdquo;</em> &mdash; misi&oacute;n m&aacute;s grande que ella</li>
+      <li><em>&ldquo;Mientras t&uacute; te detienes por el miedo, hay gente avanzando&rdquo;</em> &mdash; presi&oacute;n social positiva</li>
+    </ul>
+
+    <h5>C. F&oacute;rmula de Valor de Hormozi:</h5>
+    <p><strong>Value = (Dream Outcome &times; Perceived Likelihood) / (Time Delay &times; Effort &amp; Sacrifice)</strong></p>
+    <table class="data-table">
+      <tr><th>Variable</th><th>Rating</th><th>Justificaci&oacute;n</th></tr>
+      <tr><td><strong>Dream Outcome</strong></td><td>8/10</td><td>Libertad financiera, viajes, lifestyle aspiracional, ayudar a tu familia. Claro y deseable.</td></tr>
+      <tr><td><strong>Perceived Likelihood</strong></td><td>7/10</td><td>Prueba social fuerte (rangos, reality TV, 50K distribuidores). Pero el cambio de TLC a Vital Health reduce confianza.</td></tr>
+      <tr><td><strong>Time Delay</strong></td><td>5/10</td><td>No comunica timeframes claros. &ldquo;Diamante Negro en 30 d&iacute;as&rdquo; es SU resultado, no el del prospecto promedio. Ambiguo.</td></tr>
+      <tr><td><strong>Effort &amp; Sacrifice</strong></td><td>4/10</td><td>No reduce la percepci&oacute;n de esfuerzo &mdash; su modelo requiere Lives diarios, WhatsApp constante, eventos. Parece trabajo intenso.</td></tr>
+    </table>
+    <p><strong>Score: MEDIO-ALTO.</strong> Dream outcome fuerte pero time delay y esfuerzo percibido son d&eacute;biles. No hay &ldquo;sistema f&aacute;cil&rdquo; claro para el prospecto nuevo.</p>
+
+    <h5>D. Mapa de Etiquetado por Oferta:</h5>
+    <table class="data-table">
+      <tr><th>Oferta</th><th>Tipo</th><th>Precio</th><th>Percepci&oacute;n de valor</th></tr>
+      <tr><td>Contenido gratis (IG/YT/TikTok)</td><td>Lead magnet</td><td>$0</td><td>Alta &mdash; contenido aspiracional</td></tr>
+      <tr><td>Agendas</td><td>Tripwire</td><td>$25</td><td>Media &mdash; commodity</td></tr>
+      <tr><td>Nuvida Collagen</td><td>Producto f&iacute;sico</td><td>$29.99</td><td>Media &mdash; mercado saturado de col&aacute;geno</td></tr>
+      <tr><td>Acciona (membres&iacute;a)</td><td>Recurrente</td><td>$30/mes</td><td>Media &mdash; redirige a YouTube</td></tr>
+      <tr><td>Vital Health (membres&iacute;a)</td><td>Core MLM</td><td>$580 MXN (~$33)</td><td>Alta &mdash; acceso a descuentos + comisiones</td></tr>
+      <tr><td>Mentor&iacute;a Millonaria</td><td>High ticket</td><td>No p&uacute;blico</td><td>Alta &mdash; acceso directo a Ana</td></tr>
+      <tr><td>Eventos (LEGADO, &Eacute;xito en Tacones)</td><td>Premium</td><td>No p&uacute;blico</td><td>Alta &mdash; experiencia + networking</td></tr>
+    </table>
+
+    <h5>E. C&oacute;mo usar esto para mejorar la oferta de Anabel:</h5>
+    <ol>
+      <li><strong>Anabel puede competir directamente</strong> en el mercado latino de NM con marca personal &mdash; Ana prueba que funciona pero deja gaps enormes en infraestructura digital</li>
+      <li><strong>Automatizar lo que Ana hace manual:</strong> ManyChat donde Ana usa WhatsApp, email sequences donde Ana no tiene nada, landing page con funnel donde Ana tiene un Linktree</li>
+      <li><strong>Contenido educativo &gt; motivacional:</strong> Ana satura de &ldquo;t&uacute; puedes&rdquo;. Anabel puede diferenciarse con contenido que ENSE&Ntilde;E (c&oacute;mo funciona el modelo, los n&uacute;meros reales, el proceso paso a paso)</li>
+      <li><strong>Transparencia como arma:</strong> Ana nunca habla de income disclosure. Anabel puede ser la primera en decir &ldquo;s&iacute;, la mayor&iacute;a no gana &mdash; esto es por qu&eacute;, y esto es lo que hago diferente&rdquo;</li>
+      <li><strong>Historia m&aacute;s relatable:</strong> Ana ya es &ldquo;inalcanzable&rdquo; (reality TV, Londres, millonaria). Anabel es &ldquo;alguien como yo&rdquo; para la profesional dominicana promedio</li>
+      <li><strong>Un solo Instagram, una sola marca:</strong> No fragmentar como Ana (3-4 cuentas). Todo bajo @anabel_mercedes con mensaje coherente</li>
+    </ol>
+
+    <h5>F. Ejemplo de copy para Anabel (inspirado en An&aacute;lisis Ana Cantera):</h5>
+    <div class="copy-box">
+      <strong>Hook (Reel):</strong> &ldquo;Ana Cantera gan&oacute; $1 mill&oacute;n en su primer a&ntilde;o. Gaby Espino tiene 14 millones de seguidores. Yo no tengo reality show ni soy actriz. Soy una mujer normal que era la m&aacute;s t&iacute;mida del sal&oacute;n... y constru&iacute; un negocio de $10K+/mes. &iquest;Quieres saber c&oacute;mo? Escribe C&Oacute;MO en los comentarios.&rdquo;
+    </div>
+    <div class="copy-box">
+      <strong>CTA (Story):</strong> &ldquo;No necesitas ser famosa. No necesitas ser extrovertida. Necesitas un sistema y a alguien que te muestre el camino con los n&uacute;meros reales sobre la mesa. Escribe SISTEMA y te cuento.&rdquo;
+    </div>
+    <div class="copy-box">
+      <strong>Bio:</strong> &ldquo;De t&iacute;mida a Diamante Ejecutivo | Te muestro c&oacute;mo constru&iacute; mi negocio sin perseguir a nadie | Escribe C&Oacute;MO&rdquo;
+    </div>
+
+    <hr>
+
+    <!-- ================================ -->
+    <!-- COMPETIDOR 2: FRAZER BROOKES -->
+    <!-- ================================ -->
+    <div class="competitor-header" id="tpa-frazer">
+      <h3>Competidor 2: Frazer Brookes (@frazerbrookesonline)</h3>
+      <p>Coaching / Training para Network Marketing + Social Media &mdash; &ldquo;The Ninja Networker&rdquo;</p>
+    </div>
+
+    <h4>1. Client Overview</h4>
+    <table class="data-table">
+      <tr><th>Campo</th><th>Detalle</th></tr>
+      <tr><td><strong>Nombre</strong></td><td>Frazer Brookes &mdash; &ldquo;The Ninja Networker&rdquo;</td></tr>
+      <tr><td><strong>Industria</strong></td><td>Coaching / Training para Network Marketing + Social Media</td></tr>
+      <tr><td><strong>Primary Offer</strong></td><td>Cursos y coaching de social media para network marketers. Value ladder de $0 a $4,995/a&ntilde;o</td></tr>
+      <tr><td><strong>Target Audience</strong></td><td>Network marketers activos de cualquier empresa que quieren crecer usando redes sociales. Mayor&iacute;a angloparlantes.</td></tr>
+    </table>
+
+    <h4>2. Getting Attention &mdash; Organic Social Media</h4>
+
+    <h5>Plataformas y Seguidores:</h5>
+    <ul>
+      <li>Instagram (@frazerbrookesonline): ~255,000 (~2,556 posts)</li>
+      <li>TikTok (@frazerbrookes): ~160,000 (997K likes)</li>
+      <li>Facebook (@FrazerBrookesOnline): ~142,000</li>
+      <li>YouTube: activo, subscriber count no disponible</li>
+      <li>LinkedIn: activo, sin dato de seguidores</li>
+      <li>Podcast (Network Marketing Ninja): 321+ episodios (Apple, Spotify, iHeart)</li>
+      <li>Telegram (@networkmarketingninja): canal gratuito</li>
+      <li><strong>Total estimado cross-platform: 550K-600K+</strong></li>
+    </ul>
+
+    <h5>Observaciones de Engagement:</h5>
+    <ul>
+      <li><strong>40% lift en Story engagement</strong> usando ManyChat automation (caso de estudio documentado por ManyChat)</li>
+      <li><strong>2,029 suscriptores en 14 d&iacute;as</strong> con Instagram Broadcasting + $0 en ads</li>
+      <li>Quote de Eric Worre: <em>&ldquo;He has absolutely cracked the code when it comes to creating engagement, conversation, connection with your audience&rdquo;</em></li>
+      <li>TikTok: 160K followers / 997K likes = ratio bajo, sugiere menor viralidad</li>
+    </ul>
+
+    <h5>Strengths:</h5>
+    <ul>
+      <li>Dominio absoluto de Instagram Stories como herramienta de conversi&oacute;n</li>
+      <li>Automatizaci&oacute;n inteligente con ManyChat (usa Randomizer para variar respuestas &mdash; no parece rob&oacute;tico)</li>
+      <li>Consistencia brutal: contenido diario, 321+ episodios de podcast, eventos anuales</li>
+      <li>Aut&eacute;ntico y relatable &mdash; no vende hype, ense&ntilde;a</li>
+      <li>Cross-platform fuerte: adapta contenido a cada formato</li>
+      <li>Caso de estudio oficial de ManyChat &mdash; tercero neutral valida su m&eacute;todo</li>
+      <li>Keynote speaker de GoPro por 6 a&ntilde;os consecutivos</li>
+      <li>Endorsements de Eric Worre, Tom Schreiter</li>
+    </ul>
+
+    <h5>Weaknesses:</h5>
+    <ul>
+      <li>YouTube parece ser su plataforma m&aacute;s d&eacute;bil</li>
+      <li>TikTok tiene 160K pero ratio de likes/seguidores es bajo &mdash; contenido menos viral</li>
+      <li>LinkedIn subutilizado para su nivel de marca</li>
+      <li>Threads es presencia m&iacute;nima</li>
+    </ul>
+
+    <h4>Paid Ads</h4>
+    <p>No se encontraron ads activos confirmados en Meta Ad Library. Hist&oacute;ricamente enfatiza que construy&oacute; su negocio SIN ads pagados (300K clientes con estrategias org&aacute;nicas de Facebook).</p>
+    <p>Sin embargo: Tiene Facebook Pixel, Google Analytics y TikTok Pixel en todas sus p&aacute;ginas (ClickFunnels). Su programa &ldquo;The Ninja Networker&rdquo; incluye m&oacute;dulos de Facebook Ads. Vincenzo Sannipoli (co-fundador) es especialista en paid ads. <strong>Es probable que corra retargeting</strong> a visitantes de funnels y promoci&oacute;n de eventos.</p>
+
+    <h4>Offer</h4>
+    <p><strong>Oferta Principal:</strong> Coaching y training de social media para network marketers &mdash; desde libros gratuitos hasta Inner Circle de $4,995/a&ntilde;o</p>
+
+    <table class="data-table">
+      <tr><th>Producto</th><th>Precio</th><th>Formato</th></tr>
+      <tr><td>I Dare You (libro digital)</td><td>Gratis</td><td>Lead magnet</td></tr>
+      <tr><td>I Double Dare You (libro digital)</td><td>Gratis</td><td>Lead magnet</td></tr>
+      <tr><td>Libros f&iacute;sicos</td><td>$19.95 c/u / $49.95 bundle</td><td>Tripwire</td></tr>
+      <tr><td>Online Sales Machine</td><td>$37</td><td>Workshop 3 partes</td></tr>
+      <tr><td>Instagram Success Code</td><td>$39</td><td>Workshop IG</td></tr>
+      <tr><td>Social Media Success Bundle</td><td>$39</td><td>Bundle: Reels + 7 Systems + Content + 100 Posts</td></tr>
+      <tr><td>AI Crash Course for NM</td><td>$49</td><td>11 herramientas IA</td></tr>
+      <tr><td>Social Content Code</td><td>$49</td><td>Workshop 3 d&iacute;as</td></tr>
+      <tr><td>Succeed With Stories</td><td>$49</td><td>Workshop 3 d&iacute;as</td></tr>
+      <tr><td>Lessons From Legends</td><td>$347</td><td>37 estrategias + $1K challenge + coaching mensual</td></tr>
+      <tr><td>90 Day Run</td><td>$497 (o 3x$199)</td><td>Assignments diarios + Q&amp;A semanal + WhatsApp</td></tr>
+      <tr><td>The Ninja Networker</td><td>$497/a&ntilde;o o $67/mes</td><td>Membres&iacute;a: FB, Ads, NM, branding, funnels</td></tr>
+      <tr><td>Inner Circle</td><td>$4,995/a&ntilde;o</td><td>6 workshops + Q&amp;A semanal + WhatsApp directo</td></tr>
+      <tr><td>1-on-1 Coaching</td><td>No publicado</td><td>90 d&iacute;as, se abre 2 veces al a&ntilde;o</td></tr>
+      <tr><td>Dare To Dream (Barcelona, abril 2026)</td><td>Variable (Dreamer/VIP/Super VIP)</td><td>3 d&iacute;as, hotel 5 estrellas</td></tr>
+      <tr><td>Success Summit</td><td>Variable</td><td>3 d&iacute;as, Europa</td></tr>
+    </table>
+
+    <h5>Copy Angle:</h5>
+    <p>&Aacute;ngulo principal: <strong>&ldquo;Social media es el camino moderno &mdash; yo lo hice desde cero, online, sin ads, y t&uacute; puedes hacerlo en 45 minutos al d&iacute;a.&rdquo;</strong></p>
+    <ul>
+      <li><strong>&ldquo;Hey Legend!&rdquo;</strong> &mdash; llama a su audiencia &ldquo;Legend&rdquo; constantemente. Es su marca verbal. Crea pertenencia.</li>
+      <li><strong>&ldquo;Cracked the code&rdquo;</strong> &mdash; referencia constante, reforzada por quote de Eric Worre</li>
+      <li><strong>&ldquo;Set your business on fire&rdquo;</strong> &mdash; su misi&oacute;n declarada</li>
+      <li><strong>&ldquo;Without becoming an expert&rdquo;</strong> &mdash; elimina barrera de conocimiento</li>
+      <li><strong>&ldquo;Simple, step by step&rdquo;</strong> &mdash; duplicabilidad como promesa</li>
+      <li><strong>&ldquo;45 minutes per day&rdquo;</strong> &mdash; reduce percepci&oacute;n de esfuerzo</li>
+      <li><strong>&ldquo;Recruit 2-5 new customers &amp; team members a week&rdquo;</strong> &mdash; promesa espec&iacute;fica y alcanzable</li>
+      <li><strong>&ldquo;I Dare You&rdquo; / &ldquo;I Double Dare You&rdquo;</strong> &mdash; challenge/provocaci&oacute;n como hook</li>
+    </ul>
+    <p>Tono: casual pero profesional, como coach deportivo. Anti-old-school (contra prospecci&oacute;n fr&iacute;a y m&eacute;todos tradicionales). Challenge-based. Storytelling personal: introvertido que construy&oacute; online.</p>
+
+    <h4>3. Monetization</h4>
+
+    <h5>Funnel principal (sofisticado):</h5>
+    <ol>
+      <li><strong>Atenci&oacute;n:</strong> Instagram Stories/Reels, TikTok, Facebook Lives, Podcast &rarr; genera inter&eacute;s</li>
+      <li><strong>Captura:</strong> Lead magnet gratuito (Social Media Success System) o Free Masterclass &rarr; email</li>
+      <li><strong>Nurturing:</strong> Email sequence + Facebook group + contenido org&aacute;nico continuo</li>
+      <li><strong>Primera compra:</strong> Workshop low-ticket ($37-$49) &mdash; bajo riesgo, alto valor percibido</li>
+      <li><strong>Ascensi&oacute;n:</strong> Upsell a Lessons From Legends ($347) o 90 Day Run ($497)</li>
+      <li><strong>Retenci&oacute;n:</strong> Ninja Networker ($497/a&ntilde;o) o Inner Circle ($4,995)</li>
+      <li><strong>M&aacute;ximo valor:</strong> 1-on-1 coaching o eventos live</li>
+    </ol>
+
+    <h5>T&aacute;cticas de funnel observadas:</h5>
+    <ul>
+      <li>Value stacking agresivo: valor declarado vs precio (ej: $632 vs $49)</li>
+      <li>Countdown timers en todas las p&aacute;ginas de venta</li>
+      <li>Order bumps en p&aacute;gina de libros (Social Media Success Bundle como add-on)</li>
+      <li>Aplicaci&oacute;n para high-ticket (Inner Circle y 1-on-1 requieren llamada = filtro + venta)</li>
+      <li>Libros f&iacute;sicos como tripwire ($19.95 captura datos de tarjeta)</li>
+      <li>ManyChat keyword automation en Lives/Stories (ej: &ldquo;Summit&rdquo; activa flujo DM)</li>
+      <li>Telegram como canal de comunicaci&oacute;n gratuito</li>
+      <li>Infraestructura: ClickFunnels + Facebook Pixel + GA + TikTok Pixel</li>
+    </ul>
+
+    <h5>Weaknesses in Funnels:</h5>
+    <ol>
+      <li><strong>Demasiados productos low-ticket</strong> (6+ workshops de $37-$49) &mdash; crea confusi&oacute;n: &iquest;cu&aacute;l compro primero?</li>
+      <li><strong>P&aacute;gina de eventos (/events) desactualizada</strong> &mdash; muestra eventos de 2018</li>
+      <li><strong>No hay chat en vivo ni WhatsApp widget</strong> en el sitio</li>
+      <li><strong>Sin quiz o assessment interactivo</strong> que segmente al visitante</li>
+      <li><strong>YouTube es su plataforma m&aacute;s d&eacute;bil</strong> &mdash; pierde un canal de conversi&oacute;n importante</li>
+      <li><strong>Precio del Inner Circle opaco</strong> &mdash; requiere hablar con equipo, puede perder leads que no quieren llamada</li>
+    </ol>
+
+    <h5>Nurturing Leads:</h5>
+    <ul>
+      <li><strong>Email:</strong> S&Iacute; usa email marketing. Captura emails a trav&eacute;s de Social Media Success System (lead magnet), Free Masterclass registration, y compra de libros. Usa ClickFunnels con automations nativas.</li>
+      <li><strong>Remarketing:</strong> Probable pero no confirmado. Pixels instalados (Facebook, Google, TikTok).</li>
+      <li><strong>ManyChat / Instagram Automation:</strong> Uso confirmado y documentado como caso de estudio oficial de ManyChat. Story Mention Trigger con Randomizer, Keyword Automation (&ldquo;Summit&rdquo;). Resultado: 40% lift en engagement + 2,029 suscriptores en 14 d&iacute;as sin ads.</li>
+      <li><strong>WhatsApp:</strong> Parte del Inner Circle ($4,995). Acceso directo por texto/audio a Frazer 12 meses.</li>
+      <li><strong>Comunidades:</strong> Facebook Groups por programa + Frazer+ (plataforma propia) + Telegram gratuito</li>
+    </ul>
+
+    <h5>Pricing Structure:</h5>
+    <table class="data-table">
+      <tr><th>Nivel</th><th>Rango de precio</th></tr>
+      <tr><td>Gratis</td><td>$0 (lead magnets, masterclass, podcast, Frazer+, Telegram)</td></tr>
+      <tr><td>Micro</td><td>$19.95 (libros f&iacute;sicos)</td></tr>
+      <tr><td>Low-ticket</td><td>$37-$49 (workshops)</td></tr>
+      <tr><td>Mid-ticket</td><td>$347-$497 (programas intensivos)</td></tr>
+      <tr><td>High-ticket</td><td>$4,995/a&ntilde;o (Inner Circle)</td></tr>
+      <tr><td>Premium</td><td>No publicado (1-on-1, eventos)</td></tr>
+    </table>
+
+    <h4>Diagnosis</h4>
+    <h5>Strengths:</h5>
+    <ol>
+      <li>Posicionamiento &uacute;nico: &ldquo;#1 Social Media Coach for NM&rdquo; &mdash; nadie reclama ese t&iacute;tulo con tanta autoridad</li>
+      <li>Historia personal poderosa: segunda generaci&oacute;n + introvertido + construy&oacute; online</li>
+      <li>Prueba social masiva: Eric Worre, Tom Schreiter, GoPro keynotes 6 a&ntilde;os, 42 pa&iacute;ses</li>
+      <li>Dominio de Instagram Stories: caso ManyChat documentado, 40% lift</li>
+      <li>Value ladder casi perfecto: $0 a $4,995+ con m&uacute;ltiples touchpoints</li>
+      <li>Consistencia extrema: 321+ episodios podcast, contenido diario, eventos anuales</li>
+      <li>Automatizaci&oacute;n inteligente: ManyChat + ClickFunnels + pixels</li>
+      <li>Trustpilot 4.3/5 (36 de 37 reviews = 5 estrellas)</li>
+    </ol>
+
+    <h5>Weaknesses:</h5>
+    <ol>
+      <li>Demasiados productos low-ticket crean confusi&oacute;n</li>
+      <li>P&aacute;gina de eventos desactualizada (2018)</li>
+      <li>YouTube d&eacute;bil</li>
+      <li>Todo en ingl&eacute;s &mdash; cero contenido en espa&ntilde;ol = <strong>OPORTUNIDAD MASIVA para mercado LATAM</strong></li>
+      <li>Sin blog/SEO &mdash; depende 100% de social</li>
+      <li>Sin chat en vivo en el sitio</li>
+      <li>LinkedIn subutilizado</li>
+      <li>Usa Telegram en vez de WhatsApp (WhatsApp domina en LATAM)</li>
+    </ol>
+
+    <div class="insight-box">
+      <p><strong>Better at Attention or Monetization?</strong> Ambas (Atenci&oacute;n 9/10, Monetizaci&oacute;n 8/10). Frazer es excelente en ambas. Su &uacute;nica debilidad de monetizaci&oacute;n: demasiados productos low-ticket que pueden confundir al comprador.</p>
+    </div>
+
+    <h5>C. F&oacute;rmula de Valor de Hormozi:</h5>
+    <table class="data-table">
+      <tr><th>Variable</th><th>Rating</th><th>Justificaci&oacute;n</th></tr>
+      <tr><td><strong>Dream Outcome</strong></td><td>9/10</td><td>&ldquo;Construir NM exitoso usando social media&rdquo; + libertad + nunca m&aacute;s prospectar en fr&iacute;o. Muy claro y deseable.</td></tr>
+      <tr><td><strong>Perceived Likelihood</strong></td><td>9/10</td><td>300K+ clientes, testimonios internacionales, endorsements de Worre/Schreiter, caso ManyChat, Trustpilot 4.3/5. Masivo y cre&iacute;ble.</td></tr>
+      <tr><td><strong>Time Delay</strong></td><td>7/10</td><td>Workshops de 3 d&iacute;as = resultados r&aacute;pidos. 90 Day Run = marco temporal claro. &ldquo;45 min/d&iacute;a&rdquo; = implementaci&oacute;n inmediata.</td></tr>
+      <tr><td><strong>Effort &amp; Sacrifice</strong></td><td>7/10</td><td>&ldquo;Sin ads pagados&rdquo; reduce barrera financiera. &ldquo;Step by step&rdquo; reduce complejidad. Precios accesibles ($37-$49 para entrar).</td></tr>
+    </table>
+    <p><strong>Score: MUY ALTO.</strong> Maximiza la f&oacute;rmula en todos los cuadrantes. Es honesto sobre que hay que trabajar &mdash; lo cual parad&oacute;jicamente genera m&aacute;s confianza.</p>
+
+    <h5>E. C&oacute;mo usar esto para mejorar la oferta de Anabel:</h5>
+    <ol>
+      <li><strong>Replicar el value ladder simplificado:</strong> Anabel no necesita 6 workshops &mdash; pero s&iacute; necesita: contenido gratis &rarr; lead magnet &rarr; oferta de entrada &rarr; conversaci&oacute;n &rarr; cierre.</li>
+      <li><strong>ManyChat como Frazer:</strong> El 40% lift en engagement es la prueba de concepto. Anabel va a tener ManyChat &mdash; esto la pone al nivel de Frazer en automatizaci&oacute;n.</li>
+      <li><strong>&ldquo;Hey Legend&rdquo; &rarr; equivalente para Anabel:</strong> Anabel necesita una identidad verbal para su tribu.</li>
+      <li><strong>Contenido educativo en espa&ntilde;ol:</strong> Frazer domina en ingl&eacute;s pero tiene CERO presencia en espa&ntilde;ol. El mercado LATAM de coaching para networkers est&aacute; virgen.</li>
+      <li><strong>Instagram Stories como veh&iacute;culo principal:</strong> Frazer prueba que Stories &gt; Feed para conversi&oacute;n.</li>
+      <li><strong>Lead magnet tipo &ldquo;sistema&rdquo;:</strong> No un ebook gen&eacute;rico &mdash; un &ldquo;sistema&rdquo; con nombre propio.</li>
+    </ol>
+
+    <h5>F. Ejemplo de copy para Anabel (inspirado en Frazer):</h5>
+    <div class="copy-box">
+      <strong>Hook:</strong> &ldquo;Descubre c&oacute;mo atraer personas a tu negocio usando Instagram &mdash; sin perseguir a nadie, sin mensajes fr&iacute;os, sin hacer el rid&iacute;culo. Escribe SISTEMA y te mando el m&eacute;todo que us&eacute; para construir mi equipo como Diamante Ejecutivo.&rdquo;
+    </div>
+    <div class="copy-box">
+      <strong>Story CTA:</strong> &ldquo;&iquest;Sab&iacute;as que puedes reclutar 2-3 personas por semana solo con tu contenido en Instagram? Sin llamadas fr&iacute;as. Sin molestarte a tus amigos. Si quieres saber c&oacute;mo, escribe ATRACCI&Oacute;N en mis comentarios.&rdquo;
+    </div>
+    <div class="copy-box">
+      <strong>Landing page headline:</strong> &ldquo;C&oacute;mo Constru&iacute; Un Equipo de Network Marketing Siendo la M&aacute;s T&iacute;mida del Sal&oacute;n &mdash; Y C&oacute;mo T&uacute; Puedes Hacerlo en 30 Minutos al D&iacute;a Usando Instagram (Masterclass Gratis)&rdquo;
+    </div>
+
+    <hr>
+
+    <!-- ================================ -->
+    <!-- COMPETIDOR 3: GABY ESPINO -->
+    <!-- ================================ -->
+    <div class="competitor-header" id="tpa-gaby">
+      <h3>Competidor 3: Gaby Espino (@gabyespino)</h3>
+      <p>Network Marketing (FARMASI) + Marca personal de belleza + Entretenimiento</p>
+    </div>
+
+    <h4>1. Client Overview</h4>
+    <table class="data-table">
+      <tr><th>Campo</th><th>Detalle</th></tr>
+      <tr><td><strong>Nombre</strong></td><td>Gaby Espino (Gabriela Cristina Espino Rugeri)</td></tr>
+      <tr><td><strong>Industria</strong></td><td>Network Marketing (FARMASI) + Marca personal de belleza + Entretenimiento</td></tr>
+      <tr><td><strong>Primary Offer</strong></td><td>Reclutamiento al equipo &ldquo;The Beauty Revolution&rdquo; dentro de FARMASI USA como Beauty Influencer</td></tr>
+      <tr><td><strong>Target Audience</strong></td><td>Mujeres latinas 25-50, aspiracionales, fans de telenovelas, que buscan independencia financiera y belleza</td></tr>
+    </table>
+
+    <h4>2. Getting Attention &mdash; Organic Social Media</h4>
+
+    <h5>Plataformas y Seguidores:</h5>
+    <ul>
+      <li>Instagram (@gabyespino): ~14,100,000</li>
+      <li>Instagram (@gabyespinostore): ~84,000 (tienda de labiales)</li>
+      <li>Facebook (/GabyEspino): ~7,100,000</li>
+      <li>TikTok (@gabyespinotiktok): ~1,500,000</li>
+      <li>YouTube (Gaby Espino TV): ~330,000</li>
+      <li>X/Twitter (@gabyespino): ~4,900,000</li>
+      <li><strong>Total: ~27,900,000+</strong></li>
+    </ul>
+
+    <h5>Observaciones de Engagement:</h5>
+    <ul>
+      <li><strong>Engagement rate: 0.05%</strong> &mdash; MUY MALO para su tama&ntilde;o</li>
+      <li>Promedio por post: ~26,894 likes, ~241 comentarios</li>
+      <li>La mayor&iacute;a de sus 14M son seguidores legacy de telenovelas que NO interact&uacute;an con contenido de MLM</li>
+      <li>Los comentarios frecuentemente incluyen cr&iacute;ticas de MLM, contaminando la percepci&oacute;n</li>
+    </ul>
+
+    <h5>Strengths:</h5>
+    <ul>
+      <li>Audiencia masiva de 28M+ total &mdash; alcance brutal</li>
+      <li>Credibilidad de celebridad: 16+ telenovelas, reconocimiento masivo en LatAm</li>
+      <li>Contenido aspiracional bien producido (locaciones, vestuario, cinematograf&iacute;a)</li>
+      <li>Narrativa: &ldquo;Dej&eacute; la actuaci&oacute;n y ahora gano m&aacute;s que nunca&rdquo; &mdash; genera curiosidad y controversia</li>
+      <li>Sabe usar la controversia como combustible: cuando la critican, genera m&aacute;s views</li>
+      <li>Multi-pa&iacute;s simult&aacute;neo: MX, CO, RD, USA, ES, PR, BR</li>
+    </ul>
+
+    <h5>Weaknesses:</h5>
+    <ul>
+      <li><strong>Engagement rate de 0.05% es terrible</strong> &mdash; la audiencia no convierte</li>
+      <li>Contenido se siente como pitch de ventas para seguidores casuales</li>
+      <li>Comentarios con cr&iacute;ticas de MLM contaminan la percepci&oacute;n</li>
+      <li>No segmenta contenido (mezcla FARMASI + lifestyle + labiales + spa + ropa en misma cuenta)</li>
+      <li>Contenido repetitivo: mismo mensaje &ldquo;t&uacute; tambi&eacute;n puedes&rdquo; constantemente</li>
+      <li>Su modelo NO es replicable &mdash; depende de fama previa como actriz</li>
+    </ul>
+
+    <h4>Paid Ads</h4>
+    <p>No se encontraron ads activos directamente atribuidos a Gaby Espino en Meta Ad Library. FARMASI USA Official corre ads institucionales que la mencionan. Su estrategia es 100% org&aacute;nica basada en su base de 14M followers + fama previa.</p>
+
+    <h5>Creativos org&aacute;nicos que funcionan como ads:</h5>
+    <ol>
+      <li><strong>Video cinematogr&aacute;fico de reclutamiento</strong> &mdash; filmado en mansi&oacute;n de Miami, vestida de blanco, estilo telenovela. CTA: &ldquo;Escribe QUIERO en los comentarios&rdquo;</li>
+      <li><strong>Demos de producto en Stories</strong> &mdash; prueba productos FARMASI en vivo</li>
+      <li><strong>Videos de respuesta a haters</strong> &mdash; confronta cr&iacute;ticas p&uacute;blicamente, genera viralidad</li>
+      <li><strong>Carruseles de lifestyle</strong> &mdash; fotos de viajes con equipo (Turqu&iacute;a, Venecia), eventos FARMASI</li>
+    </ol>
+
+    <h4>Point of Parity</h4>
+    <table class="data-table">
+      <tr><th>Pr&aacute;ctica</th><th>Gaby Espino</th><th>Otras celebridades FARMASI</th></tr>
+      <tr><td>Video cinematogr&aacute;fico de anuncio</td><td>S&iacute;</td><td>S&iacute; (Ximena Duque, Carolina Sandoval)</td></tr>
+      <tr><td>CTA &ldquo;escribe QUIERO&rdquo;</td><td>S&iacute;</td><td>S&iacute;</td></tr>
+      <tr><td>Mensajes de empoderamiento femenino</td><td>S&iacute;</td><td>S&iacute;</td></tr>
+      <tr><td>Demo de productos en stories</td><td>S&iacute;</td><td>S&iacute;</td></tr>
+      <tr><td>Viajes patrocinados como prueba social</td><td>S&iacute;</td><td>S&iacute;</td></tr>
+      <tr><td>Responder cr&iacute;ticas p&uacute;blicamente</td><td>S&iacute;</td><td>Menos frecuente</td></tr>
+    </table>
+    <p><strong>Nota:</strong> Ximena Duque, quien reclut&oacute; a Gaby y era la l&iacute;der original de celebridades en FARMASI, <strong>sali&oacute; de FARMASI en febrero 2025</strong> por una cl&aacute;usula de la empresa. Esto deja a Gaby como la celebridad principal de FARMASI en el mercado hispano.</p>
+
+    <h4>Offer</h4>
+    <p><strong>Oferta Principal:</strong> Unirse a FARMASI como Beauty Influencer bajo el equipo &ldquo;The Beauty Revolution&rdquo; de Gaby</p>
+    <table class="data-table">
+      <tr><th>Oferta</th><th>Precio</th><th>Detalle</th></tr>
+      <tr><td>Starter Kit FARMASI</td><td>$9.99-$19.99</td><td>Barrera de entrada ultra baja</td></tr>
+      <tr><td>Descuento inmediato</td><td>50%</td><td>En todos los productos FARMASI al registrarse</td></tr>
+      <tr><td>Comisi&oacute;n por ventas</td><td>Hasta 50% retail</td><td>Para Beauty Influencers</td></tr>
+      <tr><td>Product Pack &ldquo;Ignite&rdquo;</td><td>$75</td><td>Opcional al registrarse</td></tr>
+      <tr><td>Product Pack &ldquo;Forever Young&rdquo;</td><td>$125</td><td>Opcional</td></tr>
+      <tr><td>Product Pack premium</td><td>$200</td><td>Opcional</td></tr>
+    </table>
+
+    <h5>Ofertas secundarias:</h5>
+    <ul>
+      <li>Gaby Espino Store (labiales): $19.99-$24.99 individuales, $32-$40 kits</li>
+      <li>WIN x Gaby Espino (ropa deportiva): $17.70-$39.60</li>
+      <li>Agave Beauty Bar (spa en Miami): servicios recurrentes</li>
+      <li>Peace Love World (ropa casual): $40-$70</li>
+    </ul>
+
+    <h5>Copy Angle:</h5>
+    <p>&Aacute;ngulo principal: <strong>&ldquo;De actriz a empresaria &mdash; si yo pude reinventarme, t&uacute; tambi&eacute;n puedes crear tu libertad financiera&rdquo;</strong></p>
+    <ul>
+      <li><em>&ldquo;Escribe QUIERO en los comentarios y te mando un mensaje&rdquo;</em> &mdash; CTA principal</li>
+      <li><em>&ldquo;Mientras t&uacute; te detienes por miedo al qu&eacute; dir&aacute;n, hay gente avanzando&rdquo;</em> &mdash; presi&oacute;n social</li>
+      <li><em>&ldquo;El dinero no te da la felicidad completa, pero te da el poder de elegir&rdquo;</em> &mdash; reframe sobre dinero</li>
+      <li><em>&ldquo;No me arrepiento de ser actriz, amo mi vocaci&oacute;n, pero esta industria es una locura&rdquo;</em> &mdash; justificaci&oacute;n del cambio</li>
+      <li><em>&ldquo;Aqu&iacute; la idea no es solo vender productos, es venderte la idea de que t&uacute; tambi&eacute;n puedes&rdquo;</em> &mdash; aspiracional</li>
+      <li><em>&ldquo;Yo escucho esas frases: &lsquo;&iquest;Le lavaron el cerebro a Gaby?&rsquo;, &lsquo;&iquest;Ahora vende productos?&rsquo;&rdquo;</em> &mdash; usa objeciones como contenido</li>
+      <li><em>&ldquo;Ustedes saben que yo no juego... y esta no ser&aacute; la excepci&oacute;n!&rdquo;</em> &mdash; energ&iacute;a + confianza</li>
+    </ul>
+    <p>Tono: aspiracional y emocional, glamuroso, defensivo cuando es necesario, siempre &ldquo;nosotras/juntas&rdquo;.</p>
+
+    <h4>3. Monetization</h4>
+
+    <h5>Funnel principal (b&aacute;sico):</h5>
+    <ol>
+      <li>Contenido org&aacute;nico en IG/TikTok &rarr; genera atenci&oacute;n</li>
+      <li>Linktree &rarr; links a YouTube, registro, WhatsApp</li>
+      <li>CTA &ldquo;QUIERO&rdquo; en comentarios o WhatsApp directo</li>
+      <li>Registro en farmasius.com/gabyespino/register</li>
+      <li>Comunidad de equipo + coaching + eventos FARMASI</li>
+    </ol>
+    <div class="warning-box"><p><strong>El funnel es primitivo.</strong> Todo depende de DMs manuales y WhatsApp. No hay secuencia de email, no hay landing page de conversi&oacute;n, no hay automatizaci&oacute;n.</p></div>
+
+    <h5>Weaknesses in Funnels:</h5>
+    <ol>
+      <li><strong>Sin email marketing</strong> &mdash; no captura emails, pierde seguimiento de leads</li>
+      <li><strong>Sin remarketing</strong> &mdash; visitantes que no compran desaparecen para siempre</li>
+      <li><strong>Landing page tipo brochure</strong> &mdash; gabyespino.com no tiene estructura de funnel</li>
+      <li><strong>Sin testimonios en landing</strong> &mdash; cero prueba social de equipo o clientes en la web</li>
+      <li><strong>Sin lead magnet</strong> &mdash; no ofrece nada gratis a cambio de datos</li>
+      <li><strong>Sin segmentaci&oacute;n</strong> &mdash; mezcla FARMASI + labiales + spa + ropa + vida personal en una cuenta</li>
+      <li><strong>Sin webinars</strong> &mdash; reclutamiento 1-a-1 por DM, no escala</li>
+      <li><strong>Sin automatizaci&oacute;n</strong> &mdash; todo parece manual (WhatsApp, DMs)</li>
+      <li><strong>Tienda propia abandonada</strong> &mdash; labiales no aparecen en gabyespino.com principal</li>
+      <li><strong>Sin blog/SEO</strong> &mdash; no captura tr&aacute;fico de Google</li>
+    </ol>
+
+    <h5>Landing Page (gabyespino.com):</h5>
+    <p><strong>Hero:</strong> &ldquo;GABY ESPINO&rdquo; &mdash; &ldquo;entrepreneur - Networker - ACTRESS - HOST&rdquo;</p>
+    <p><strong>Dise&ntilde;o:</strong> elegante, colores negro (#050d18), crema (#f0ebe1). Tipograf&iacute;a: Tenor Sans, Playfair Display.</p>
+    <p><strong>Puntos Fuertes:</strong> Dise&ntilde;o premium y profesional, posiciona marca personal como multifac&eacute;tica, flujo a FARMASI integrado naturalmente.</p>
+    <p><strong>Debilidades:</strong> No tiene tienda integrada, no hay testimonios de clientes ni equipo, no hay lead magnet, no hay chatbot ni WhatsApp visible, no hay prueba social num&eacute;rica, no hay video en la landing, m&aacute;s &ldquo;brochure&rdquo; que &ldquo;funnel&rdquo;.</p>
+
+    <h5>Pricing and Upsells:</h5>
+    <table class="data-table">
+      <tr><th>Concepto</th><th>Precio</th></tr>
+      <tr><td>Starter Kit</td><td>$9.99-$19.99</td></tr>
+      <tr><td>PV m&iacute;nimo para comisiones</td><td>125 PV (~$125/mes)</td></tr>
+      <tr><td>Cuota mensual</td><td>$0</td></tr>
+    </table>
+
+    <h5>Estructura de comisiones FARMASI:</h5>
+    <table class="data-table">
+      <tr><th>Rango</th><th>Bonus mensual</th></tr>
+      <tr><td>Beauty Influencer</td><td>50% retail</td></tr>
+      <tr><td>Director</td><td>7.5% nivel 1, 6% nivel 2, 3.75% nivel 3</td></tr>
+      <tr><td>Golden Director</td><td>$2,000/mes</td></tr>
+      <tr><td>Platinum Director</td><td>$4,000/mes</td></tr>
+      <tr><td>Diamond Director</td><td>$16,000/mes</td></tr>
+      <tr><td>President Director (Gaby)</td><td>Top tier + hasta 6 niveles</td></tr>
+    </table>
+
+    <div class="warning-box">
+      <p><strong>DATO CLAVE:</strong> FARMASI NO publica Income Disclosure Statement. El programa &ldquo;Super Estrellas&rdquo; paga entre $10,000-$100,000/mes a celebridades como Gaby dependiendo de fama y alcance &mdash; esto es ADICIONAL a las comisiones MLM normales. Los ingresos de Gaby no son replicables porque incluyen este pago por fama.</p>
+    </div>
+
+    <h4>Diagnosis</h4>
+    <h5>Strengths:</h5>
+    <ol>
+      <li><strong>28M de seguidores</strong> &mdash; alcance masivo inalcanzable por mortales</li>
+      <li><strong>Credibilidad de celebridad</strong> &mdash; &ldquo;si una actriz exitosa elige esto, debe valer la pena&rdquo;</li>
+      <li><strong>Contenido viral de controversia</strong> &mdash; respuestas a haters generan conversaci&oacute;n y alcance</li>
+      <li><strong>Multi-pa&iacute;s</strong> &mdash; targeting simult&aacute;neo a 8+ pa&iacute;ses latinos</li>
+      <li><strong>Lifestyle genuinamente aspiracional</strong> &mdash; no fabricado</li>
+      <li><strong>Barrera de entrada ultra baja</strong> &mdash; $9.99 para unirse a FARMASI</li>
+      <li><strong>President Director en 1 a&ntilde;o</strong> &mdash; velocidad impresionante</li>
+    </ol>
+
+    <h5>Weaknesses:</h5>
+    <ol>
+      <li><strong>Engagement de 0.05%</strong> &mdash; la audiencia no convierte</li>
+      <li><strong>Modelo no replicable</strong> &mdash; depende de fama previa + programa &ldquo;Super Estrellas&rdquo; ($10K-$100K/mes por ser celebridad)</li>
+      <li><strong>Sin email marketing ni remarketing</strong> &mdash; pierde leads</li>
+      <li><strong>Landing page tipo brochure</strong> &mdash; sin funnel de conversi&oacute;n</li>
+      <li><strong>Sin testimonios en web</strong> &mdash; cero prueba social digital</li>
+      <li><strong>Sin automatizaci&oacute;n</strong> &mdash; todo manual (WhatsApp, DMs)</li>
+      <li><strong>FARMASI no publica Income Disclosure</strong> &mdash; red flag</li>
+      <li><strong>Contenido de producto directo</strong> huele a &ldquo;venta&rdquo; para esc&eacute;pticos</li>
+      <li><strong>Claims MLM tradicional</strong> &mdash; usa lenguaje que la audiencia educada identifica como red flags</li>
+      <li><strong>Cr&iacute;ticas p&uacute;blicas constantes</strong> &mdash; controversia del gel de paprika, cr&iacute;ticas por dejar actuaci&oacute;n</li>
+      <li><strong>Ximena Duque sali&oacute; de FARMASI</strong> (Feb 2025) &mdash; inestabilidad en el liderazgo de celebridades</li>
+      <li><strong>Su &eacute;xito NO es por marketing digital</strong> &mdash; es por fama previa. No hay sistema replicable.</li>
+    </ol>
+
+    <div class="insight-box">
+      <p><strong>Better at Attention or Monetization?</strong> Atenci&oacute;n. Gaby es 9/10 en atenci&oacute;n (28M seguidores, cobertura medi&aacute;tica, controversia viral) y 6/10 en monetizaci&oacute;n. <strong>Hay oportunidades enormes para alguien con mejor infraestructura digital y MENOS audiencia que convierta MEJOR.</strong></p>
+    </div>
+
+    <h5>C. F&oacute;rmula de Valor de Hormozi:</h5>
+    <table class="data-table">
+      <tr><th>Variable</th><th>Rating</th><th>Justificaci&oacute;n</th></tr>
+      <tr><td><strong>Dream Outcome</strong></td><td>8/10</td><td>Libertad financiera, empoderamiento, estilo de vida de celebridad, comunidad de mujeres. Aspiracional y claro.</td></tr>
+      <tr><td><strong>Perceived Likelihood</strong></td><td>5/10</td><td>Gaby es inalcanzable &mdash; su &eacute;xito se debe a ser actriz famosa + programa &ldquo;Super Estrellas&rdquo;. La audiencia promedio NO puede replicar esto.</td></tr>
+      <tr><td><strong>Time Delay</strong></td><td>6/10</td><td>&ldquo;President Director en 1 a&ntilde;o&rdquo; suena r&aacute;pido pero es SU timeline con 14M seguidores.</td></tr>
+      <tr><td><strong>Effort &amp; Sacrifice</strong></td><td>7/10</td><td>$9.99 para empezar es bajo. 50% descuento inmediato es atractivo. Pero 125 PV/mes ($125) es un compromiso real.</td></tr>
+    </table>
+    <p><strong>Score: MEDIO.</strong> Dream outcome alto pero perceived likelihood baja. La desconexi&oacute;n entre la promesa y la realidad (modelo no replicable, fama como ventaja injusta, sin income disclosure) es el punto d&eacute;bil.</p>
+
+    <h5>E. C&oacute;mo usar esto para mejorar la oferta de Anabel:</h5>
+    <ol>
+      <li><strong>La barrera de entrada baja funciona:</strong> $9.99 de FARMASI es genial como concepto. Immunotec cuesta ~$500 &mdash; Anabel necesita reframear ese costo como inversi&oacute;n con ROI claro</li>
+      <li><strong>El CTA &ldquo;QUIERO&rdquo; es efectivo pero primitivo:</strong> Anabel puede hacer lo mismo pero con ManyChat detr&aacute;s &mdash; automatizar lo que Gaby hace manual</li>
+      <li><strong>No mencionar empresa en p&uacute;blico:</strong> Gaby menciona FARMASI en su bio. Anabel NO debe mencionar Immunotec</li>
+      <li><strong>Contenido para esc&eacute;pticos, no para fans:</strong> Gaby habla a mujeres que ya est&aacute;n abiertas al MLM. Anabel puede hablar a profesionales que NUNCA considerar&iacute;an MLM &mdash; mercado sin atender</li>
+      <li><strong>La controversia como contenido puede funcionar:</strong> Anabel puede RECONOCER las objeciones y recontextualizarlas con datos</li>
+      <li><strong>Landing page REAL vs brochure:</strong> gabyespino.com no convierte. Anabel necesita una landing page con testimonio, historia, prueba social, CTA a conversaci&oacute;n</li>
+      <li><strong>El dato &ldquo;Super Estrellas&rdquo; es un arma:</strong> &ldquo;Ella cobra $10K-$100K/mes solo por ser famosa, aparte de comisiones. Ese no es tu modelo. Mi modelo S&Iacute; es replicable.&rdquo;</li>
+    </ol>
+
+    <h5>F. Ejemplo de copy para Anabel (diferenci&aacute;ndose de Gaby):</h5>
+    <div class="copy-box">
+      <strong>Hook (Reel):</strong> &ldquo;Gaby Espino tiene 14 millones de seguidores y le pagan $100K al mes solo por ser famosa. Yo no tengo fama. No tengo millones de seguidores. Soy una mujer normal de RD que era la m&aacute;s t&iacute;mida del sal&oacute;n. Y constru&iacute; un negocio real. La diferencia? Mi sistema lo puede hacer CUALQUIERA. Escribe REAL en los comentarios.&rdquo;
+    </div>
+    <div class="copy-box">
+      <strong>Story CTA:</strong> &ldquo;No necesitas 14 millones de seguidores. No necesitas ser actriz. Necesitas un sistema que funcione sin perseguir a nadie. Escribe SISTEMA y te muestro c&oacute;mo empec&eacute;.&rdquo;
+    </div>
+    <div class="copy-box">
+      <strong>Objeci&oacute;n anticipada (post educativo):</strong> &ldquo;FARMASI cobra $9.99 para empezar. Suena genial, &iquest;verdad? Pero necesitas $125/mes en productos para calificar a comisiones. Y no publican cu&aacute;nto gana la gente. En Immunotec la inversi&oacute;n inicial es mayor &mdash; pero te digo EXACTAMENTE cu&aacute;nto gana cada rango. Porque la transparencia no es negociable. Preg&uacute;ntame los n&uacute;meros reales.&rdquo;
+    </div>
+
+    <hr>
+
+    <!-- ================================ -->
+    <!-- RESUMEN COMPARATIVO -->
+    <!-- ================================ -->
+    <h3 id="tpa-resumen">Resumen Comparativo &mdash; Oportunidades para Anabel</h3>
+
+    <h4>Tabla Comparativa Final</h4>
+    <div style="overflow-x: auto;">
+    <table class="data-table">
+      <tr><th>Dimensi&oacute;n</th><th>Ana Cantera</th><th>Frazer Brookes</th><th>Gaby Espino</th><th>Oportunidad para Anabel</th></tr>
+      <tr><td><strong>Seguidores</strong></td><td>287K</td><td>550K+ cross-platform</td><td>28M+</td><td>No competir en volumen &mdash; competir en CONVERSI&Oacute;N. ManyChat + funnel puede generar m&aacute;s leads que 28M pasivos</td></tr>
+      <tr><td><strong>Engagement</strong></td><td>0.70-0.99%</td><td>Alto (40% lift Stories)</td><td>0.05%</td><td>Engagement rate &gt; follower count. Anabel con 2,445 seguidores comprometidos vale m&aacute;s que 14M dormidos</td></tr>
+      <tr><td><strong>Idioma/Mercado</strong></td><td>Espa&ntilde;ol (biling&uuml;e)</td><td>Ingl&eacute;s (100%)</td><td>Espa&ntilde;ol (biling&uuml;e)</td><td>Espa&ntilde;ol nativo + mercado RD espec&iacute;fico. Frazer no toca LATAM. Gap enorme</td></tr>
+      <tr><td><strong>Historia personal</strong></td><td>De crisis a &eacute;xito</td><td>Networker 2da generaci&oacute;n</td><td>Actriz famosa</td><td>&ldquo;De t&iacute;mida a Diamante&rdquo; &mdash; &Uacute;NICA. Transformaci&oacute;n silenciosa y real</td></tr>
+      <tr><td><strong>Transparencia</strong></td><td>No habla de n&uacute;meros</td><td>Ense&ntilde;a sistema, no income</td><td>No publica income disclosure</td><td>SER la voz honesta: &ldquo;S&iacute;, el 75% no gana. Aqu&iacute; est&aacute; por qu&eacute;&rdquo;</td></tr>
+      <tr><td><strong>Paid Ads</strong></td><td>Ninguno</td><td>Probable retargeting</td><td>Ninguno</td><td>Paid ads = ventaja t&eacute;cnica inmediata</td></tr>
+      <tr><td><strong>Email Marketing</strong></td><td>No</td><td>S&iacute; (ClickFunnels)</td><td>No</td><td>Email marketing = ventaja sobre Ana y Gaby</td></tr>
+      <tr><td><strong>ManyChat</strong></td><td>No</td><td>S&iacute; (caso de estudio)</td><td>No</td><td>ManyChat es la ventaja #1. Anabel lo va a tener &mdash; como Frazer, pero en espa&ntilde;ol</td></tr>
+      <tr><td><strong>Landing Page</strong></td><td>Brochure/curso</td><td>Funnel optimizado</td><td>Brochure</td><td>Landing con historia + prueba social + CTA a conversaci&oacute;n</td></tr>
+      <tr><td><strong>Funnel</strong></td><td>WhatsApp manual</td><td>$0 &rarr; $4,995 (completo)</td><td>WhatsApp manual</td><td>Funnel automatizado: contenido &rarr; ManyChat &rarr; calificaci&oacute;n &rarr; conversaci&oacute;n</td></tr>
+      <tr><td><strong>Empresa mencionada</strong></td><td>No en feed</td><td>No (es coach neutral)</td><td>S&Iacute; &mdash; FARMASI en bio</td><td>NUNCA mencionar Immunotec p&uacute;blicamente</td></tr>
+      <tr><td><strong>Target</strong></td><td>Mujeres que creen en MLM</td><td>Networkers activos</td><td>Fans latinas de Gaby</td><td>Profesionales de alto valor que NUNCA considerar&iacute;an MLM</td></tr>
+      <tr><td><strong>Accesibilidad</strong></td><td>Medio (Londres, reality)</td><td>Bajo (ingl&eacute;s, coach)</td><td>Bajo (celebridad)</td><td>ALTA &mdash; Anabel es &ldquo;alguien como yo&rdquo;</td></tr>
+      <tr><td><strong>Automatizaci&oacute;n</strong></td><td>Manual (Lives &rarr; DM)</td><td>Alta (ManyChat + ClickFunnels)</td><td>Manual (QUIERO &rarr; DM)</td><td>Automatizaci&oacute;n inteligente</td></tr>
+      <tr><td><strong>Value Ladder</strong></td><td>Fragmentado</td><td>Casi perfecto ($0-$4,995)</td><td>Plano (kit $9.99 &rarr; MLM)</td><td>Simplificado: gratis &rarr; lead magnet &rarr; conversaci&oacute;n &rarr; cierre</td></tr>
+      <tr><td><strong>Monetizaci&oacute;n digital</strong></td><td>4/10</td><td>8/10</td><td>6/10</td><td>Replicar principios de Frazer adaptados al mercado latino</td></tr>
+    </table>
+    </div>
+
+    <h4>&Aacute;ngulo Ganador</h4>
+    <blockquote>&ldquo;La mujer que era la m&aacute;s t&iacute;mida del sal&oacute;n construy&oacute; un negocio de $10K+/mes &mdash; sin perseguir a nadie, sin mensajes fr&iacute;os, sin fingir un estilo de vida que no ten&iacute;a. Y ahora te muestra c&oacute;mo.&rdquo;</blockquote>
+
+    <p>Este &aacute;ngulo funciona porque:</p>
+    <ol>
+      <li><strong>Rompe el estereotipo</strong> de que necesitas ser extrovertida, famosa, o &ldquo;de ventas&rdquo;</li>
+      <li><strong>Es verificable</strong> &mdash; Anabel es Diamante Ejecutivo con resultados reales</li>
+      <li><strong>Conecta con la objeci&oacute;n #1</strong> &mdash; &ldquo;Yo no soy vendedor&rdquo; / &ldquo;No tengo personalidad para eso&rdquo;</li>
+      <li><strong>Es &Uacute;NICO</strong> &mdash; ninguno de los 3 competidores tiene esta historia</li>
+      <li><strong>Genera curiosidad</strong> &mdash; &ldquo;Si ella pudo siendo t&iacute;mida, &iquest;qu&eacute; me detiene a m&iacute;?&rdquo;</li>
+      <li><strong>Es replicable</strong> &mdash; a diferencia de Gaby (fama) o Ana (reality TV), la historia de Anabel dice &ldquo;si yo pude, t&uacute; REALMENTE puedes&rdquo;</li>
+    </ol>
+
+    <h4>7 Cosas Que Anabel Debe Tener Que La Competencia No Tiene</h4>
+    <ol>
+      <li><strong>Transparencia radical sobre los n&uacute;meros</strong> &mdash; income disclosure recontextualizado, no escondido. Nadie lo hace.</li>
+      <li><strong>Funnel automatizado (ManyChat + Landing)</strong> &mdash; ni Ana ni Gaby lo tienen. Frazer lo tiene pero solo en ingl&eacute;s. Anabel lo tendr&aacute; en espa&ntilde;ol.</li>
+      <li><strong>Contenido para esc&eacute;pticos</strong> &mdash; hablar al profesional que NUNCA considerar&iacute;a MLM. Mercado sin atender.</li>
+      <li><strong>Landing page de conversi&oacute;n real</strong> &mdash; con historia, testimonios, prueba social, CTA a conversaci&oacute;n. No un brochure.</li>
+      <li><strong>Historia &ldquo;de t&iacute;mida a Diamante&rdquo;</strong> como pilar de contenido &mdash; arco narrativo &uacute;nico e irreplicable.</li>
+      <li><strong>Contenido educativo sobre el modelo real</strong> &mdash; c&oacute;mo funcionan las comisiones, qu&eacute; es el volumen, cu&aacute;nto tiempo toma. No motivaci&oacute;n vac&iacute;a.</li>
+      <li><strong>&ldquo;Google test&rdquo; anticipado</strong> &mdash; contenido que aparezca cuando busquen &ldquo;Anabel Mercedes Immunotec&rdquo; que sea cre&iacute;ble, profesional, y honesto.</li>
+    </ol>
+
+    <h4>Fuentes del An&aacute;lisis TPA</h4>
+
+    <h5>Ana Cantera:</h5>
+    <ul>
+      <li>Ana Cantera - Website (anacantera.com)</li>
+      <li>Ana Cantera Biography - TheCityCeleb</li>
+      <li>A3VTe - Movimiento (a3vte.com)</li>
+      <li>Ana Cantera - Grand Ambassador - BusinessForHome</li>
+      <li>Ana Cantera - Executive Ambassador - BusinessForHome</li>
+      <li>Ana Cantera Beauty (anacanterabeauty.com)</li>
+      <li>Vital Health Global (vitalhealthglobal.com)</li>
+      <li>VivaElNetworking - Qui&eacute;n es Ana Cantera</li>
+      <li>Million Dollar Hustle - IMDb</li>
+      <li>SPEAKRJ - Instagram Stats</li>
+    </ul>
+
+    <h5>Frazer Brookes:</h5>
+    <ul>
+      <li>Frazer Brookes - Homepage &amp; About (frazerbrookes.com)</li>
+      <li>Inner Circle Program</li>
+      <li>The Ninja Networker (theninjanetworker.com)</li>
+      <li>Trustpilot Reviews (4.3/5)</li>
+      <li>ManyChat Case Study</li>
+      <li>ManyChat Broadcasting Case Study</li>
+      <li>MLM Nation Interview</li>
+      <li>Ninja Networker Review - Gordon Attard</li>
+      <li>Frazer+ Platform (frazerplus.com)</li>
+      <li>Dare To Dream Event (daretodreamevent.com)</li>
+    </ul>
+
+    <h5>Gaby Espino:</h5>
+    <ul>
+      <li>Diario Las Am&eacute;ricas &mdash; Gaby Espino enfrenta cr&iacute;ticas MLM</li>
+      <li>Las Top News &mdash; Gaby responde cr&iacute;ticas</li>
+      <li>Hola US &mdash; Controversia producto est&eacute;tico</li>
+      <li>Yahoo Vida y Estilo &mdash; Network Marketing (Gaby y Ximena)</li>
+      <li>La Opini&oacute;n &mdash; Ximena Duque deja FARMASI</li>
+      <li>FARMASI USA - Facebook</li>
+      <li>Finance Guy - FARMASI Review</li>
+      <li>Dear Boss I Quit - FARMASI MLM Review</li>
+      <li>BusinessForHome - FARMASI AAA+ Ranking</li>
+      <li>SPEAKRJ - Instagram Analytics</li>
+      <li>Gaby Espino Website (gabyespino.com)</li>
+      <li>WIN Fitness Wear - Gaby Collection</li>
+      <li>FARMASI US Official (farmasius.com)</li>
+    </ul>
+
+    <h5>Otras fuentes:</h5>
+    <ul>
+      <li>TanyaAliza.com &mdash; Build NM Without Mentioning Company</li>
+      <li>DirectSellingStar &mdash; 10 NM Influencers</li>
+    </ul>
+
+  </div>
+</div>
+
+<!-- ============================================================ -->
+<!-- SECTION 3: WINNER'S WRITING PROCESS -->
+<!-- ============================================================ -->
+<div class="sec sec-cream" id="wwp">
+  <div class="page">
+    <div class="section-label dark">03 &mdash; Winner&rsquo;s Writing Process</div>
+    <div class="sec-title">Winner&rsquo;s Writing Process (WWP)</div>
+    <p class="sec-subtitle">Anabel Mercedes &mdash; Marca Personal. Business Objective: Llegar a 10,000 seguidores en Instagram y obtener 10 prospectos de negocio calificados para junio 2026.</p>
+
+    <table class="data-table">
+      <tr><th>Campo</th><th>Detalle</th></tr>
+      <tr><td><strong>Business Type</strong></td><td>Network marketer de Immunotec (Diamante Ejecutivo) posicion&aacute;ndose como marca personal para atraer prospectos de negocio y clientes de producto</td></tr>
+      <tr><td><strong>Business Objective</strong></td><td>Llegar a 10,000 seguidores en Instagram y obtener 10 prospectos de negocio calificados &mdash; todo para junio 2026</td></tr>
+      <tr><td><strong>Funnel</strong></td><td>Contenido org&aacute;nico (Reels/Stories) &rarr; ManyChat (keyword trigger) &rarr; Calificaci&oacute;n autom&aacute;tica &rarr; Conversaci&oacute;n 1:1 (DM/WhatsApp) &rarr; Landing Page (prueba social) &rarr; Cierre &rarr; Onboarding &rarr; Retenci&oacute;n</td></tr>
+    </table>
+
+    <!-- WWP 1: WHO AM I TALKING TO -->
+    <h3 id="wwp-avatar">1. Who Am I Talking To?</h3>
+
+    <h4>Avatar principal: Laura</h4>
+    <ul>
+      <li><strong>Qui&eacute;n es:</strong> Mujer, 32 a&ntilde;os, Santo Domingo. Marketing corporativo en empresa mediana. RD$85,000/mes (~$1,400 USD). En relaci&oacute;n, sin hijos. Sigue cuentas de emprendimiento y mujeres l&iacute;deres en IG. Ha visto al menos 1-2 videos antiMLM.</li>
+      <li><strong>Qu&eacute; le duele:</strong> Estancada en el mismo trabajo hace 4 a&ntilde;os. Siente que tiene potencial pero no lo usa. Ve a otros emprender y siente frustraci&oacute;n. Quiere algo propio pero no sabe c&oacute;mo empezar sin arriesgar lo que tiene.</li>
+      <li><strong>Qu&eacute; busca:</strong> Ingresos adicionales sin dejar su empleo. Un modelo que no requiera ser &ldquo;vendedora&rdquo;. Algo que se pueda hacer en horas parciales. Alguien como ella que lo haya logrado.</li>
+      <li><strong>Qu&eacute; ha probado:</strong> Herbalife hace a&ntilde;os &mdash; experiencia p&eacute;sima (contacto fr&iacute;o, kit de RD$8K perdido, verg&uuml;enza de ofrecerle a amigas). Desde entonces asocia MLM con &ldquo;pir&aacute;mides&rdquo;. Pero cuando ve a alguien que lo hace bien, algo se mueve.</li>
+      <li><strong>C&oacute;mo decide:</strong> Google test (busca &ldquo;[empresa] + scam&rdquo;), mira testimonios verificables, necesita sentir que ella descubri&oacute; la oportunidad &mdash; no que le vendieron. El contenido la atrae &rarr; investiga por su cuenta &rarr; ella inicia la conversaci&oacute;n.</li>
+    </ul>
+
+    <h4>Avatar secundario: Daniel</h4>
+    <ul>
+      <li><strong>Qui&eacute;n es:</strong> Hombre, 38 a&ntilde;os, Santiago. Due&ntilde;o de negocio peque&ntilde;o (distribuci&oacute;n). RD$150,000-200,000/mes (~$2,500-3,300 USD). Casado, 2 hijos. Menos activo en IG. Consumidor de YouTube y podcasts de negocios.</li>
+      <li><strong>Qu&eacute; le duele:</strong> Tiene su negocio pero sabe que tiene techo. Quiere diversificar sin invertir en otro negocio f&iacute;sico. Le intriga el ingreso residual pero la palabra &ldquo;MLM&rdquo; lo frena &mdash; su reputaci&oacute;n entre empresarios es su activo m&aacute;s valioso.</li>
+      <li><strong>C&oacute;mo decide:</strong> Datos concretos: ROI, timeline realista, income disclosure transparente. Quiere ver la oportunidad como VEH&Iacute;CULO FINANCIERO, no como &ldquo;vender productos&rdquo;. Necesita poder hacerlo &ldquo;en silencio&rdquo; hasta tener resultados.</li>
+    </ul>
+
+    <h4>Current State &mdash; Niveles Ajustados:</h4>
+    <table class="data-table">
+      <tr><th>Variable</th><th>Nivel inicial</th><th>Nivel objetivo</th></tr>
+      <tr><td><strong>Pain</strong> (estancamiento profesional/financiero)</td><td>6/10</td><td>&mdash;</td></tr>
+      <tr><td><strong>Desire</strong> (libertad financiera, algo propio)</td><td>7/10</td><td>9/10</td></tr>
+      <tr><td><strong>Belief the Idea Will Work</strong> (el NM funciona como modelo)</td><td>3/10</td><td>7/10</td></tr>
+      <tr><td><strong>Trust in the Company/Person</strong> (conf&iacute;an en Anabel/Immunotec)</td><td>2/10</td><td>7/10</td></tr>
+    </table>
+
+    <div class="insight-box">
+      <p><strong>An&aacute;lisis:</strong> El dolor y el deseo ya est&aacute;n ah&iacute; &mdash; no hay que crearlos. El problema est&aacute; en <strong>Belief</strong> (3/10) y <strong>Trust</strong> (2/10). La audiencia no cree que el modelo funcione y no conf&iacute;a en nadie que lo presente. El 80% del trabajo de contenido de Anabel es subir Belief y Trust. El dolor y el deseo se usan como puerta de entrada, no como palanca principal.</p>
+    </div>
+
+    <h4>Jugada en cada nivel:</h4>
+
+    <h5>Pain 6/10 &mdash; No amplificar demasiado. Abrir con identificaci&oacute;n, no con miedo.</h5>
+    <p>La audiencia ya sabe que est&aacute; estancada. No necesita que le digan &ldquo;est&aacute;s mal&rdquo;. Necesita sentirse VISTA.</p>
+    <div class="copy-box">&ldquo;Llevas 4 a&ntilde;os en el mismo trabajo. Te va &lsquo;bien&rsquo;... pero sabes que podr&iacute;as estar mejor. Y lo peor no es el salario &mdash; es la sensaci&oacute;n de que el tiempo pasa y t&uacute; sigues en lo mismo.&rdquo;</div>
+
+    <h5>Desire 7/10 &rarr; 9/10 &mdash; Mostrar el estado de ensue&ntilde;o de forma REAL, no fabricada.</h5>
+    <p>No lifestyle curado. Mostrar la libertad de tiempo, la autonom&iacute;a, los viajes con el equipo &mdash; pero siempre desde la realidad de Anabel, no desde la fantas&iacute;a.</p>
+    <div class="copy-box">&ldquo;Hoy me despert&eacute; sin alarma. Trabaj&eacute; 2 horas en mi negocio. Almorc&eacute; con mi familia. Y s&eacute; que ma&ntilde;ana mis ingresos van a seguir llegando. No soy millonaria &mdash; soy libre. Y eso vale m&aacute;s.&rdquo;</div>
+
+    <h5>Belief 3/10 &rarr; 7/10 &mdash; EL MOVIMIENTO M&Aacute;S IMPORTANTE. Educaci&oacute;n + transparencia + mecanismo.</h5>
+    <p>La audiencia CREE que el MLM no funciona porque tiene datos que lo respaldan (75% no gana, 99% pierde). No se puede ignorar esto. Hay que RECONOCERLO y recontextualizar.</p>
+    <div class="copy-box">&ldquo;S&iacute;, el 75% de la gente que entra a network marketing no gana nada. &iquest;Sabes por qu&eacute;? Porque entran sin sistema, sin mentor&iacute;a, y sin disciplina. Es como abrir un restaurante sin saber cocinar y quejarse de que el negocio no funciona. Los que S&Iacute; tienen sistema &mdash; mira lo que construyen.&rdquo;</div>
+
+    <h5>Trust 2/10 &rarr; 7/10 &mdash; Prueba social real + Google test anticipado + autenticidad constante.</h5>
+    <p>La audiencia no conf&iacute;a en nadie que presente NM. La confianza se construye con tiempo: contenido consistente, historias reales, transparencia sobre los n&uacute;meros, y NUNCA presionar.</p>
+    <div class="copy-box">&ldquo;No te voy a decir que esto es f&aacute;cil. No te voy a prometer que vas a ganar $5K tu primer mes. Lo que s&iacute; te puedo decir es esto: yo era la persona m&aacute;s t&iacute;mida que conoc&iacute;as. Me daba miedo hasta hacer una story. Y hoy genero m&aacute;s de $10K al mes con un negocio que constru&iacute; con mi tel&eacute;fono. Si quieres saber c&oacute;mo &mdash; preg&uacute;ntame. Si no, est&aacute; bien. No persigo a nadie.&rdquo;</div>
+
+    <hr>
+
+    <!-- WWP 2: WHERE ARE THEY NOW -->
+    <h3>2. Where Are They Now?</h3>
+
+    <h4>Roadblocks:</h4>
+    <ol>
+      <li><strong>&ldquo;Eso es pir&aacute;mide&rdquo;</strong> &mdash; El 98% de las 100 empresas MLM m&aacute;s grandes usaron income claims no sustanciados (Truth in Advertising). La percepci&oacute;n es leg&iacute;tima.</li>
+      <li><strong>Experiencia previa traum&aacute;tica</strong> &mdash; Contacto fr&iacute;o, kit sin retorno, upline que desapareci&oacute;. Asocian MLM con esa experiencia, no con el modelo.</li>
+      <li><strong>El Google test</strong> &mdash; Buscan &ldquo;Immunotec scam&rdquo; y encuentran: 75.2% no gana nada, comparaciones de precio desfavorables (Immunocal $5.47/sachet vs glutati&oacute;n $0.32 en Amazon), reviews mixtas en Trustpilot (3.1/5, 50% de 1 estrella).</li>
+      <li><strong>Presi&oacute;n social</strong> &mdash; El estigma de &ldquo;meterse en eso&rdquo;. r/antiMLM tiene 700K+ miembros. Documentales como LuLaRich son mainstream. Nadie profesional quiere ser visto como &ldquo;el que vende cosas&rdquo;.</li>
+      <li><strong>&ldquo;No soy vendedor&rdquo;</strong> &mdash; El modelo tradicional de perseguir gente los repele. Creen que NM = vender a tus amigos.</li>
+      <li><strong>Las 7 mentiras que ya reconocen</strong> &mdash; &ldquo;Mi MLM es diferente&rdquo;, &ldquo;oportunidades ilimitadas&rdquo;, &ldquo;los cr&iacute;ticos son envidiosos&rdquo;. Si el contenido suena a cualquiera de estas, pierden credibilidad instant&aacute;neamente.</li>
+      <li><strong>Falta de modelo a seguir accesible</strong> &mdash; Ven a Gaby Espino (14M seguidores, actriz) o Ana Cantera (reality TV, Londres). Son inalcanzables. No conocen a alguien COMO ELLOS que lo haya logrado.</li>
+    </ol>
+
+    <h4>Mechanism:</h4>
+    <p><strong>Anabel como marca personal de atracci&oacute;n &rarr;</strong> publica contenido de valor en Instagram (educativo, de su historia, de resultados reales) <strong>&rarr;</strong> la audiencia la descubre org&aacute;nicamente <strong>&rarr;</strong> el contenido filtra y pre-califica (los que no resuenan se van solos, los que s&iacute; resuenan se quedan) <strong>&rarr;</strong> keyword trigger en comentarios activa ManyChat <strong>&rarr;</strong> ManyChat califica autom&aacute;ticamente (&iquest;buscas producto o negocio?) <strong>&rarr;</strong> leads calificados entran a conversaci&oacute;n 1:1 con Anabel <strong>&rarr;</strong> Anabel presenta la oportunidad en DM/WhatsApp/Zoom de forma honesta y transparente <strong>&rarr;</strong> el prospecto decide SIN presi&oacute;n <strong>&rarr;</strong> los que entran reciben onboarding con sistema de duplicaci&oacute;n <strong>&rarr;</strong> construyen su red bajo el sistema de Anabel <strong>&rarr;</strong> resultados reales generan m&aacute;s contenido y prueba social <strong>&rarr;</strong> el ciclo se retroalimenta.</p>
+
+    <div class="insight-box">
+      <p><strong>El mecanismo diferenciador:</strong> Anabel NUNCA persigue. El contenido atrae. ManyChat filtra. Ella solo habla con gente que YA est&aacute; interesada. Esto elimina la objeci&oacute;n #1 (perseguir gente) y la #3 (ser vendedor).</p>
+    </div>
+
+    <h4>Market Awareness:</h4>
+    <p><strong>Nivel 2/4</strong> &rarr; Saben que tienen un problema (estancamiento) y conocen que existen soluciones (emprender, freelance, inversi&oacute;n, NM). Pero NO conocen a Anabel como soluci&oacute;n. Algunos ni saben que el attraction marketing existe como modelo dentro de NM.</p>
+    <p><strong>Jugada:</strong> No vender directamente. Primero EDUCAR. Mostrar que existe una forma diferente de hacer network marketing que no requiere perseguir gente, que no requiere ser extrovertido, y que tiene un sistema replicable.</p>
+
+    <h4>Market Sophistication:</h4>
+    <p><strong>Etapa 5/5</strong> &rarr; El mercado de NM/MLM est&aacute; en la etapa M&Aacute;S sofisticada. Ya escucharon TODAS las promesas. Ya vieron TODOS los testimonios. Ya les hicieron TODOS los pitches. No creen en nada. El movimiento antiMLM cre&oacute; una capa de escepticismo que es el default cultural.</p>
+    <p><strong>Jugada:</strong> NO competir con promesas. NO competir con mecanismos. <strong>Conectar con IDENTIDAD.</strong></p>
+
+    <blockquote>
+      Anabel no dice &ldquo;gana dinero con network marketing&rdquo; (promesa muerta).<br>
+      Anabel no dice &ldquo;mi sistema de atracci&oacute;n funciona mejor&rdquo; (mecanismo que suena a m&aacute;s de lo mismo).<br>
+      Anabel dice: <strong>&ldquo;Yo soy como t&uacute;. Era t&iacute;mida. Me daba miedo. Y constru&iacute; esto. Si yo pude, t&uacute; puedes &mdash; pero solo si est&aacute;s dispuesta a hacer lo que hay que hacer.&rdquo;</strong><br><br>
+      Es identidad: &ldquo;Soy el tipo de persona que toma acci&oacute;n a pesar del miedo.&rdquo;<br>
+      Es tribu: &ldquo;Pertenezco al grupo de personas que construyen algo real en silencio.&rdquo;<br>
+      Es anti-hype: &ldquo;No te prometo nada. Te muestro lo que hice. T&uacute; decides.&rdquo;
+    </blockquote>
+
+    <hr>
+
+    <!-- WWP 3: WHAT DO I WANT THEM TO DO -->
+    <h3>3. What Do I Want Them to Do?</h3>
+    <ol>
+      <li><strong>Descubrir a Anabel</strong> &mdash; Ver un Reel o Story en el feed de Instagram (org&aacute;nico)</li>
+      <li><strong>Quedarse</strong> &mdash; Seguir la cuenta porque el contenido resuena y es diferente a lo que ven de otros networkers</li>
+      <li><strong>Interactuar</strong> &mdash; Comentar un keyword trigger (&ldquo;C&Oacute;MO&rdquo;, &ldquo;SISTEMA&rdquo;, &ldquo;QUIERO&rdquo;) en un post o Story</li>
+      <li><strong>Calificarse</strong> &mdash; Responder las preguntas de ManyChat (autom&aacute;tico)</li>
+      <li><strong>Conversar</strong> &mdash; Iniciar conversaci&oacute;n real con Anabel por DM o WhatsApp</li>
+      <li><strong>Investigar</strong> &mdash; Visitar la landing page para ver la historia completa, testimonios y prueba social</li>
+      <li><strong>Decidir</strong> &mdash; Tomar la decisi&oacute;n de unirse al equipo o probar el producto (sin presi&oacute;n)</li>
+      <li><strong>Entrar</strong> &mdash; Registrarse en Immunotec bajo el equipo de Anabel</li>
+      <li><strong>Crecer</strong> &mdash; Recibir onboarding, sistema de duplicaci&oacute;n, y mentor&iacute;a</li>
+      <li><strong>Referir</strong> &mdash; Crear contenido propio y atraer a otros (el ciclo se repite)</li>
+    </ol>
+
+    <hr>
+
+    <!-- WWP 4: CUSTOMER JOURNEY -->
+    <h3 id="wwp-journey">4. Qu&eacute; Necesitan Ver y Sentir para Hacerlo</h3>
+
+    <h4>Paso 1: Descubrir a Anabel (Reel / Story en Instagram)</h4>
+    <p><strong>Plataforma:</strong> Instagram (org&aacute;nico) &mdash; <strong>Tipo de creativo:</strong> Reels (15-60 seg), Stories (behind the scenes), Carruseles (educativo)</p>
+
+    <h5>Hooks principales (opciones para testear):</h5>
+    <div class="copy-box">
+      Hook A: &ldquo;Era la persona m&aacute;s t&iacute;mida del sal&oacute;n. Hoy genero m&aacute;s de $10K al mes con mi tel&eacute;fono.&rdquo;<br><br>
+      Hook B: &ldquo;El 75% de la gente en network marketing no gana nada. D&eacute;jame explicarte por qu&eacute; &mdash; y qu&eacute; hago yo diferente.&rdquo;<br><br>
+      Hook C: &ldquo;Si alguien te contact&oacute; por DM para venderte algo, NO soy yo. Yo no persigo a nadie. Esto es lo que hago en su lugar.&rdquo;<br><br>
+      Hook D: &ldquo;3 cosas que NO hago en mi negocio: mensajes fr&iacute;os, perseguir amigos, fingir un estilo de vida.&rdquo;<br><br>
+      Hook E: &ldquo;&iquest;Sab&iacute;as que existe un modelo de negocio donde la gente TE busca a ti? Se llama atracci&oacute;n. Y esto es c&oacute;mo funciona.&rdquo;
+    </div>
+
+    <p><strong>Copy angle:</strong> Anti-MLM-tradicional DESDE DENTRO. Anabel reconoce todo lo malo de la industria y se posiciona como la alternativa honesta.</p>
+
+    <h5>3 pilares de contenido:</h5>
+    <ol>
+      <li><strong>Historia personal (30%)</strong> &mdash; &ldquo;De t&iacute;mida a Diamante&rdquo;. Momentos reales, vulnerabilidad, el viaje.</li>
+      <li><strong>Educativo (50%)</strong> &mdash; C&oacute;mo funciona el modelo. Por qu&eacute; la mayor&iacute;a falla. Qu&eacute; es attraction marketing. Transparencia sobre los n&uacute;meros. Tips accionables.</li>
+      <li><strong>Lifestyle real (20%)</strong> &mdash; Viajes con el equipo, libertad de tiempo, momentos con familia. REAL, no curado.</li>
+    </ol>
+
+    <p><strong>Qu&eacute; deben sentir:</strong> <em>&ldquo;Esta mujer es diferente. No me est&aacute; vendiendo. Habla como yo pienso. Es honesta sobre los n&uacute;meros. Me identifico con ella.&rdquo;</em></p>
+
+    <p><strong>Detalles espec&iacute;ficos:</strong></p>
+    <ul>
+      <li>Frecuencia: 4-5 Reels/semana + Stories diarias</li>
+      <li>Duraci&oacute;n Reels: 15-30 seg para hooks, 30-60 seg para educativo</li>
+      <li>NUNCA mencionar Immunotec en contenido p&uacute;blico</li>
+      <li>Bio: &ldquo;De t&iacute;mida a Diamante Ejecutivo | Te muestro c&oacute;mo constru&iacute; mi negocio sin perseguir a nadie&rdquo;</li>
+      <li>Est&eacute;tica: profesional pero accesible. Nada de lujos fabricados.</li>
+    </ul>
+
+    <hr>
+
+    <h4>Paso 2: Quedarse (Seguir la cuenta)</h4>
+    <p><strong>Qu&eacute; ven:</strong> Un perfil coherente: bio clara, highlights organizados, contenido consistente.</p>
+    <ul>
+      <li>Highlights: &ldquo;Mi Historia&rdquo;, &ldquo;C&oacute;mo Funciona&rdquo;, &ldquo;Resultados&rdquo;, &ldquo;Testimonios&rdquo;, &ldquo;FAQ&rdquo;</li>
+      <li>Feed que alterna entre los 3 pilares (historia, educativo, lifestyle)</li>
+      <li>Stories diarias que muestran el d&iacute;a a d&iacute;a real</li>
+      <li>Publicar contenido nuevo m&iacute;nimo 4 posts/semana</li>
+    </ul>
+    <p><strong>Qu&eacute; sienten:</strong> <em>&ldquo;Esta cuenta vale la pena seguir. No es spam. Aprendo algo cada vez que veo su contenido. Y su historia me intriga.&rdquo;</em></p>
+
+    <hr>
+
+    <h4>Paso 3: Interactuar (Keyword trigger)</h4>
+    <p><strong>Qu&eacute; ven:</strong></p>
+    <ul>
+      <li>CTA al final del Reel: <em>&ldquo;Si quieres saber c&oacute;mo empec&eacute;, escribe C&Oacute;MO en los comentarios&rdquo;</em></li>
+      <li>CTA en Story: <em>&ldquo;&iquest;Te interesa saber m&aacute;s? Escribe SISTEMA y te mando un mensaje&rdquo;</em></li>
+      <li>CTA en carrusel: <em>&ldquo;Slide final &rarr; Si esto reson&oacute; contigo, comenta LISTA&rdquo;</em></li>
+    </ul>
+    <h5>Keywords a testear:</h5>
+    <ul>
+      <li>&ldquo;C&Oacute;MO&rdquo; &mdash; para curiosos sobre el modelo</li>
+      <li>&ldquo;SISTEMA&rdquo; &mdash; para gente que quiere saber el m&eacute;todo</li>
+      <li>&ldquo;QUIERO&rdquo; &mdash; para gente m&aacute;s adelantada en la decisi&oacute;n</li>
+      <li>&ldquo;INFO&rdquo; &mdash; gen&eacute;rico para cualquier contenido</li>
+    </ul>
+    <p><strong>Qu&eacute; sienten:</strong> <em>&ldquo;Es f&aacute;cil. Solo tengo que escribir una palabra. No me compromete a nada. Veamos qu&eacute; pasa.&rdquo;</em></p>
+
+    <hr>
+
+    <h4>Paso 4: Calificarse (ManyChat autom&aacute;tico)</h4>
+    <p><strong>Qu&eacute; ven:</strong> DM autom&aacute;tico de Anabel (v&iacute;a ManyChat) que se siente humano:</p>
+
+    <div class="copy-box">
+      &ldquo;Hola! Gracias por tu inter&eacute;s. Me encanta que quieras saber m&aacute;s.&rdquo;<br>
+      &ldquo;Antes de contarte, me gustar&iacute;a entender un poco qu&eacute; te llam&oacute; la atenci&oacute;n. &iquest;Qu&eacute; te describe mejor?&rdquo;<br><br>
+      <strong>Opci&oacute;n A:</strong> &ldquo;Busco una oportunidad de negocio / ingresos extra&rdquo;<br>
+      <strong>Opci&oacute;n B:</strong> &ldquo;Me interesa m&aacute;s el tema de salud / productos&rdquo;<br>
+      <strong>Opci&oacute;n C:</strong> &ldquo;Solo quiero saber m&aacute;s por curiosidad&rdquo;
+    </div>
+
+    <h5>Si escoge A (negocio):</h5>
+    <div class="copy-box">
+      &ldquo;Perfecto. Te cuento brevemente: yo constru&iacute; mi negocio usando Instagram y un sistema de atracci&oacute;n &mdash; sin perseguir a nadie. Si te interesa, puedo mandarte un video corto donde explico c&oacute;mo funciona. &iquest;Te lo mando?&rdquo;<br>
+      &rarr; Si dice s&iacute; &rarr; env&iacute;a video de Anabel (2-3 min) + link a landing page<br>
+      &rarr; Pregunta: &ldquo;&iquest;Cu&aacute;ndo te queda bien para hablar? Prefiero explicarte bien por [audio/video/texto]&rdquo;
+    </div>
+
+    <h5>Si escoge B (producto):</h5>
+    <div class="copy-box">
+      &ldquo;Genial! Te cuento sobre lo que uso y c&oacute;mo me ha funcionado. &iquest;Tienes alg&uacute;n tema de salud espec&iacute;fico que te interese?&rdquo;<br>
+      &rarr; Routing a conversaci&oacute;n sobre producto
+    </div>
+
+    <h5>Si escoge C (curiosidad):</h5>
+    <div class="copy-box">
+      &ldquo;Me alegra la curiosidad. Te dejo este video donde cuento mi historia &mdash; de t&iacute;mida a construir un negocio de $10K+/mes. Si despu&eacute;s quieres saber m&aacute;s, escr&iacute;beme.&rdquo;<br>
+      &rarr; Env&iacute;a video + no presiona
+    </div>
+
+    <p><strong>Qu&eacute; sienten:</strong> <em>&ldquo;No me presion&oacute;. Me pregunt&oacute; qu&eacute; me interesa. Se siente como una conversaci&oacute;n, no como un pitch.&rdquo;</em></p>
+    <p><strong>Detalles:</strong> ManyChat debe usar Randomizer para variar las respuestas. Respuesta autom&aacute;tica en &lt;60 segundos del keyword. Despu&eacute;s de la calificaci&oacute;n, Anabel toma la conversaci&oacute;n personalmente. Datos capturados: nombre, inter&eacute;s (negocio/producto/curiosidad), nivel de urgencia.</p>
+
+    <hr>
+
+    <h4>Paso 5: Conversar (DM o WhatsApp con Anabel)</h4>
+    <p><strong>Qu&eacute; ven:</strong> Anabel les escribe personalmente (ya no bot). El tono es de conversaci&oacute;n real, no de pitch.</p>
+
+    <h5>Script de apertura (despu&eacute;s de ManyChat):</h5>
+    <div class="copy-box">&ldquo;[Nombre], encantada. Vi que te interesa saber m&aacute;s sobre [lo que escogi&oacute;]. Cu&eacute;ntame un poco de ti &mdash; &iquest;a qu&eacute; te dedicas? &iquest;Qu&eacute; te llam&oacute; la atenci&oacute;n?&rdquo;</div>
+
+    <h5>Si preguntan directamente &ldquo;&iquest;qu&eacute; es?&rdquo;:</h5>
+    <div class="copy-box">&ldquo;Es un negocio de salud y bienestar donde genero ingresos ayudando a personas &mdash; usando mi contenido en Instagram, sin perseguir a nadie. No es el MLM t&iacute;pico de &lsquo;invita a tus amigos&rsquo;. Es un sistema de atracci&oacute;n. &iquest;Quieres que te cuente c&oacute;mo funciona?&rdquo;</div>
+
+    <h5>Si preguntan &ldquo;&iquest;cu&aacute;nto cuesta?&rdquo;:</h5>
+    <div class="copy-box">&ldquo;La inversi&oacute;n inicial es de alrededor de $500. Pero antes de hablar de n&uacute;meros, quiero saber si tiene sentido para ti. &iquest;Qu&eacute; buscas &mdash; ingresos extra, algo full-time, o solo diversificar?&rdquo;</div>
+
+    <h5>Si dicen &ldquo;eso es pir&aacute;mide&rdquo;:</h5>
+    <div class="copy-box">&ldquo;Entiendo por qu&eacute; lo piensas &mdash; el 98% de la industria da esa imagen. Te soy honesta: el 75% de la gente que entra no gana nada. &iquest;Sabes por qu&eacute;? Porque entran sin sistema y sin mentor&iacute;a. Lo que yo hago diferente es que NO recluto &mdash; atraigo. Y te doy un sistema paso a paso. &iquest;Quieres que te explique c&oacute;mo funciona realmente?&rdquo;</div>
+
+    <h5>Si dicen &ldquo;ya lo intent&eacute; y no funcion&oacute;&rdquo;:</h5>
+    <div class="copy-box">&ldquo;Lo siento que tuviste esa experiencia. Muchos la tienen. La realidad es que el 99% de las personas que fracasan no ten&iacute;an sistema ni apoyo real. No fallaste t&uacute; &mdash; fall&oacute; la persona que te lo present&oacute; mal. Lo que hago diferente es [sistema + mentor&iacute;a + atracci&oacute;n]. &iquest;Quieres ver c&oacute;mo es diferente?&rdquo;</div>
+
+    <h5>Si dicen &ldquo;d&eacute;jame pensarlo&rdquo;:</h5>
+    <div class="copy-box">&ldquo;Claro, t&oacute;mate tu tiempo. No hay prisa. Si tienes preguntas despu&eacute;s, aqu&iacute; estoy. Y te dejo el link de mi p&aacute;gina donde puedes ver m&aacute;s sobre mi historia y testimonios reales: [landing page]&rdquo;</div>
+
+    <p><strong>Qu&eacute; sienten:</strong> <em>&ldquo;No me presion&oacute;. Me escuch&oacute;. Fue honesta sobre los n&uacute;meros. Me trat&oacute; como persona, no como prospecto. Quiero saber m&aacute;s.&rdquo;</em></p>
+    <p><strong>Detalles:</strong> Anabel responde en &lt;2 horas. Tono: casual, directo, honesto. Cero emojis de fuego o cohete. NUNCA enviar links sin contexto. NUNCA presionar para cerrar en la primera conversaci&oacute;n.</p>
+
+    <hr>
+
+    <h4>Paso 6: Investigar (Landing Page)</h4>
+
+    <h5>Estructura de la landing page:</h5>
+    <ol>
+      <li><strong>Hero Section:</strong> Foto de Anabel &mdash; profesional, accesible, real. Headline: <em>&ldquo;De T&iacute;mida a Diamante Ejecutivo &mdash; C&oacute;mo Constru&iacute; Un Negocio de $10K+/Mes Sin Perseguir a Nadie&rdquo;</em>. Subt&iacute;tulo: <em>&ldquo;Sin mensajes fr&iacute;os. Sin molestar a mis amigos. Sin fingir un estilo de vida. Solo un sistema y disciplina.&rdquo;</em> CTA: &ldquo;Quiero saber c&oacute;mo&rdquo;</li>
+      <li><strong>La historia de Anabel (conexi&oacute;n emocional):</strong> T&iacute;mida, le daba miedo hablar en p&uacute;blico, no ten&iacute;a perfil de &ldquo;vendedora&rdquo;. El momento que cambi&oacute; todo. Los primeros meses dif&iacute;ciles &mdash; sin suavizar. Los resultados que vinieron despu&eacute;s &mdash; con n&uacute;meros reales. <em>&ldquo;Si yo pude siendo la m&aacute;s t&iacute;mida, &iquest;qu&eacute; te detiene a ti?&rdquo;</em></li>
+      <li><strong>El problema (identificaci&oacute;n):</strong> &ldquo;&iquest;Te sientes estancada?&rdquo; &mdash; hablar los dolores del avatar. &ldquo;&iquest;Has intentado algo y no funcion&oacute;?&rdquo; &mdash; validar experiencias previas. &ldquo;&iquest;Te dijeron que el network marketing es pir&aacute;mide?&rdquo; &mdash; anticipar la objeci&oacute;n.</li>
+      <li><strong>C&oacute;mo es diferente (mecanismo):</strong> Attraction marketing explicado en 3 pasos simples. &ldquo;Nunca persigo. El contenido atrae. ManyChat filtra. Yo solo hablo con gente que YA quiere.&rdquo; Comparaci&oacute;n: MLM tradicional vs modelo de Anabel (tabla visual).</li>
+      <li><strong>Los n&uacute;meros reales (transparencia):</strong> Income disclosure recontextualizado. &ldquo;S&iacute;, el 75% no gana. Aqu&iacute; est&aacute; por qu&eacute;. Y esto es lo que hago diferente.&rdquo; Timeline realista: qu&eacute; esperar en 3, 6 y 12 meses.</li>
+      <li><strong>Prueba social:</strong> Testimonios de miembros del equipo (texto + foto). Screenshots de resultados verificables. Certificaciones y rangos de Anabel. Fotos de eventos del equipo.</li>
+      <li><strong>Para qui&eacute;n es y para qui&eacute;n NO:</strong> ES para ti si: tienes disciplina, est&aacute;s dispuesta a aprender, quieres algo real a mediano plazo. NO es para ti si: buscas dinero f&aacute;cil, no tienes paciencia, no est&aacute;s dispuesta a crear contenido.</li>
+      <li><strong>CTA final:</strong> &ldquo;Si esto reson&oacute; contigo, hablemos.&rdquo; &rarr; bot&oacute;n a WhatsApp o formulario. No hay compra directa en la landing &mdash; el objetivo es generar conversaci&oacute;n.</li>
+    </ol>
+
+    <p><strong>Qu&eacute; deben sentir:</strong> <em>&ldquo;Esto es diferente. Es honesta. Los n&uacute;meros est&aacute;n ah&iacute;. La historia es real. Me identifico. Quiero hablar con ella.&rdquo;</em></p>
+
+    <hr>
+
+    <h4>Paso 7: Decidir (Sin presi&oacute;n)</h4>
+    <p>Anabel responde las &uacute;ltimas dudas por DM/WhatsApp/Zoom. Si hay una llamada, es conversacional &mdash; no un pitch de cierre. Comparte el plan de compensaci&oacute;n real con el prospecto.</p>
+    <p><strong>Qu&eacute; sienten:</strong> <em>&ldquo;Tengo toda la informaci&oacute;n. No me presionaron. La decisi&oacute;n es m&iacute;a.&rdquo;</em></p>
+    <ul>
+      <li>Si dice no &rarr; responder con gracia: <em>&ldquo;Todo bien, respeto tu decisi&oacute;n. Si en el futuro algo cambia, aqu&iacute; estoy.&rdquo;</em></li>
+      <li>Si dice &ldquo;necesito tiempo&rdquo; &rarr; no hacer follow-up agresivo. Un mensaje a los 5-7 d&iacute;as: <em>&ldquo;Hey [nombre], solo quer&iacute;a saber si te qued&oacute; alguna duda. Sin prisa.&rdquo;</em></li>
+      <li>Si dice s&iacute; &rarr; pasar al Paso 8</li>
+    </ul>
+
+    <hr>
+
+    <h4>Paso 8: Entrar (Registro en Immunotec)</h4>
+    <p><strong>Qu&eacute; ven:</strong> Link de registro bajo el equipo de Anabel, gu&iacute;a paso a paso de c&oacute;mo registrarse, mensaje de bienvenida de Anabel: <em>&ldquo;Bienvenida al equipo. Tu primer paso ya lo diste &mdash; el m&aacute;s dif&iacute;cil. Ahora arrancamos.&rdquo;</em></p>
+    <p><strong>Qu&eacute; sienten:</strong> <em>&ldquo;Tom&eacute; una buena decisi&oacute;n. Hay un sistema. No estoy sola.&rdquo;</em></p>
+    <ul>
+      <li>Inversi&oacute;n inicial: ~$500 USD (kit de inicio + primer pedido)</li>
+      <li>Anabel env&iacute;a video de bienvenida + acceso al sistema de onboarding</li>
+      <li>Primer call/zoom de onboarding en &lt;48 horas del registro</li>
+    </ul>
+
+    <hr>
+
+    <h4>Paso 9: Crecer (Onboarding + Sistema de Duplicaci&oacute;n)</h4>
+    <p><strong>Qu&eacute; ven:</strong></p>
+    <ul>
+      <li>Sistema de onboarding paso a paso (no improvisado)</li>
+      <li>Calendario de entrenamiento del equipo</li>
+      <li>Grupo de WhatsApp/Telegram del equipo de Anabel</li>
+      <li>Acceso a templates de contenido, scripts de conversaci&oacute;n, gu&iacute;as de ManyChat</li>
+      <li>Mentor&iacute;a 1:1 con Anabel durante los primeros 90 d&iacute;as</li>
+    </ul>
+    <p><strong>Qu&eacute; sienten:</strong> <em>&ldquo;Hay un sistema real. No me dejaron sola. S&eacute; exactamente qu&eacute; hacer.&rdquo;</em></p>
+
+    <hr>
+
+    <h4>Paso 10: Referir (El ciclo se repite)</h4>
+    <p><strong>Qu&eacute; ven:</strong></p>
+    <ul>
+      <li>Anabel les ense&ntilde;a a crear su propio contenido con los mismos principios</li>
+      <li>Templates de Reels, hooks, copy</li>
+      <li>Gu&iacute;a para configurar su propio ManyChat</li>
+      <li>El nuevo miembro empieza a publicar y atraer &rarr; genera sus propios leads &rarr; el ciclo se repite</li>
+    </ul>
+    <p><strong>Qu&eacute; sienten:</strong> <em>&ldquo;Puedo hacer esto. Tengo las herramientas. El sistema funciona para m&iacute; tambi&eacute;n.&rdquo;</em></p>
+
+    <h5>Mensaje de recompra/referido (a los 30 d&iacute;as):</h5>
+    <div class="copy-box">&ldquo;[Nombre], &iquest;c&oacute;mo vas con el sistema? &iquest;Qu&eacute; dudas tienes? En las pr&oacute;ximas semanas vamos a trabajar en tu primer Reel y tu primer keyword trigger. Ya ver&aacute;s &mdash; cuando la primera persona te escriba por tu contenido, todo cambia.&rdquo;</div>
+
+    <hr>
+
+    <!-- WWP 5: ANGULOS POR SEGMENTO -->
+    <h3 id="wwp-segmentos">5. &Aacute;ngulos por Segmento</h3>
+
+    <h4>Segmento A: La Profesional Estancada (Laura)</h4>
+    <p><strong>Avatar:</strong> Mujer 28-38, empleo estable, RD$60K-120K/mes. Siente que tiene potencial pero est&aacute; atrapada. Nunca ha hecho NM o tuvo una mala experiencia.</p>
+
+    <table class="data-table">
+      <tr><th>Variable</th><th>Nivel</th><th>Jugada</th></tr>
+      <tr><td>Pain</td><td>6/10</td><td>Abrir con identificaci&oacute;n: &ldquo;&iquest;Llevas a&ntilde;os en lo mismo?&rdquo;</td></tr>
+      <tr><td>Desire</td><td>7/10</td><td>Mostrar libertad de tiempo + autonom&iacute;a, no lujos</td></tr>
+      <tr><td>Belief</td><td>3/10</td><td>Educaci&oacute;n sobre atracci&oacute;n marketing + transparencia sobre n&uacute;meros</td></tr>
+      <tr><td>Trust</td><td>2/10</td><td>Historia personal de Anabel + contenido consistente + Google test anticipado</td></tr>
+    </table>
+
+    <p><strong>Mecanismo clave:</strong> &ldquo;Contenido que atrae &rarr; ManyChat que filtra &rarr; conversaci&oacute;n solo con interesados. NUNCA perseguir.&rdquo;</p>
+
+    <h5>&Aacute;ngulos de copy para contenido:</h5>
+    <div class="copy-box">
+      &ldquo;Era la persona m&aacute;s t&iacute;mida del sal&oacute;n. Hoy tengo un negocio propio. No necesit&eacute; ser extrovertida &mdash; necesit&eacute; un sistema.&rdquo;<br><br>
+      &ldquo;Si la palabra &lsquo;MLM&rsquo; te da alergia, te entiendo. A m&iacute; tambi&eacute;n me la daba. D&eacute;jame contarte qu&eacute; es diferente.&rdquo;<br><br>
+      &ldquo;No renunci&eacute; a mi trabajo para hacer esto. Lo constru&iacute; en mis horas libres. Y cuando los n&uacute;meros superaron mi salario... ah&iacute; s&iacute; renunci&eacute;.&rdquo;
+    </div>
+
+    <h5>Objeciones principales:</h5>
+    <ul>
+      <li>&ldquo;Eso es pir&aacute;mide&rdquo; &rarr; &ldquo;El 75% no gana. Por eso hay que tener sistema. Aqu&iacute; est&aacute;n mis n&uacute;meros reales.&rdquo;</li>
+      <li>&ldquo;No tengo tiempo&rdquo; &rarr; &ldquo;Yo lo constru&iacute; con 1-2 horas al d&iacute;a. El contenido trabaja por ti 24/7.&rdquo;</li>
+      <li>&ldquo;No soy vendedora&rdquo; &rarr; &ldquo;Yo tampoco. Mi modelo es atracci&oacute;n &mdash; la gente me busca a m&iacute;.&rdquo;</li>
+    </ul>
+
+    <hr>
+
+    <h4>Segmento B: El Empresario que Busca Diversificar (Daniel)</h4>
+    <p><strong>Avatar:</strong> Hombre 35-45, due&ntilde;o de negocio o ejecutivo. RD$150K+/mes. Quiere ingresos residuales pero su reputaci&oacute;n es sagrada.</p>
+
+    <table class="data-table">
+      <tr><th>Variable</th><th>Nivel</th><th>Jugada</th></tr>
+      <tr><td>Pain</td><td>4/10</td><td>No amplificar &mdash; &eacute;l no est&aacute; &ldquo;mal&rdquo;. Abrir con oportunidad, no dolor.</td></tr>
+      <tr><td>Desire</td><td>8/10</td><td>Hablar de VEH&Iacute;CULO FINANCIERO, diversificaci&oacute;n, ingreso pasivo</td></tr>
+      <tr><td>Belief</td><td>4/10</td><td>Datos concretos: ROI, timeline, comp plan, income disclosure</td></tr>
+      <tr><td>Trust</td><td>3/10</td><td>Credenciales de Anabel + resultados verificables + tono empresarial</td></tr>
+    </table>
+
+    <p><strong>Mecanismo clave:</strong> &ldquo;Un activo de ingresos residuales con apalancamiento &mdash; donde el trabajo de tu red multiplica tu tiempo.&rdquo;</p>
+
+    <h5>&Aacute;ngulos de copy para contenido:</h5>
+    <div class="copy-box">
+      &ldquo;&iquest;Qu&eacute; pasar&iacute;a si pudieras generar ingresos mientras duermes &mdash; sin abrir otro negocio f&iacute;sico?&rdquo;<br><br>
+      &ldquo;El ingreso residual no es una promesa &mdash; es matem&aacute;tica. D&eacute;jame mostrarte los n&uacute;meros.&rdquo;<br><br>
+      &ldquo;Los empresarios m&aacute;s inteligentes que conozco tienen m&uacute;ltiples fuentes de ingreso. Esta es una de las m&iacute;as.&rdquo;
+    </div>
+
+    <h5>Objeciones principales:</h5>
+    <ul>
+      <li>&ldquo;Eso es para otra gente&rdquo; &rarr; &ldquo;Mi equipo tiene ingenieros, abogados, due&ntilde;os de negocio. No es para &lsquo;otra gente&rsquo; &mdash; es para gente con visi&oacute;n.&rdquo;</li>
+      <li>&ldquo;No quiero quemar mi reputaci&oacute;n&rdquo; &rarr; &ldquo;Perfecto &mdash; lo puedes hacer en silencio hasta que tus resultados hablen por ti. Sin postear nada p&uacute;blico.&rdquo;</li>
+      <li>&ldquo;&iquest;Cu&aacute;nto puedo ganar realmente?&rdquo; &rarr; Mostrar comp plan + income disclosure + timeline realista de 6-12 meses</li>
+    </ul>
+
+    <hr>
+
+    <h4>Segmento C: La Mam&aacute; que Busca Algo Propio</h4>
+    <p><strong>Avatar:</strong> Mujer 30-42, madre de 1-2 hijos. Dej&oacute; de trabajar o trabaja medio tiempo. Quiere generar ingresos desde casa sin sacrificar tiempo con sus hijos.</p>
+
+    <table class="data-table">
+      <tr><th>Variable</th><th>Nivel</th><th>Jugada</th></tr>
+      <tr><td>Pain</td><td>7/10</td><td>Alta &mdash; siente que perdi&oacute; su identidad fuera de ser mam&aacute;</td></tr>
+      <tr><td>Desire</td><td>8/10</td><td>Contribuir econ&oacute;micamente + recuperar algo propio</td></tr>
+      <tr><td>Belief</td><td>3/10</td><td>Cree que NM es para &ldquo;vendedoras&rdquo; agresivas</td></tr>
+      <tr><td>Trust</td><td>2/10</td><td>La han contactado por DM mil veces con pitches de MLM</td></tr>
+    </table>
+
+    <p><strong>Mecanismo clave:</strong> &ldquo;Construir en 1-2 horas al d&iacute;a mientras tus hijos duermen &mdash; con contenido que trabaja por ti.&rdquo;</p>
+
+    <h5>&Aacute;ngulos de copy para contenido:</h5>
+    <div class="copy-box">
+      &ldquo;Ser mam&aacute; es lo mejor que me pas&oacute;. Pero tambi&eacute;n quer&iacute;a algo M&Iacute;O. Y lo encontr&eacute;.&rdquo;<br><br>
+      &ldquo;No quiero que mis hijos crezcan y vean a una mam&aacute; que dej&oacute; sus sue&ntilde;os por miedo.&rdquo;<br><br>
+      &ldquo;1 hora al d&iacute;a. Tu tel&eacute;fono. Un sistema. Eso es lo que necesit&eacute; para empezar.&rdquo;
+    </div>
+
+    <h5>Objeciones principales:</h5>
+    <ul>
+      <li>&ldquo;No tengo tiempo&rdquo; &rarr; &ldquo;1-2 horas al d&iacute;a. El contenido trabaja 24/7. Mientras tus hijos duermen, tu negocio sigue atrayendo.&rdquo;</li>
+      <li>&ldquo;No quiero molestar a mis amigas&rdquo; &rarr; &ldquo;Yo no molesto a nadie. Publico contenido y la gente que resuena me busca.&rdquo;</li>
+      <li>&ldquo;Mi esposo no cree en eso&rdquo; &rarr; &ldquo;El m&iacute;o tampoco al principio. Cuando vio el primer cheque, cambi&oacute; de opini&oacute;n.&rdquo;</li>
+    </ul>
+
+    <hr>
+
+    <h4>6. Mapa de &Aacute;ngulos &rarr; Segmentos de Audiencia</h4>
+
+    <table class="data-table">
+      <tr><th>Segmento</th><th>Segmentaci&oacute;n recomendada (Ads futuros)</th><th>&Aacute;ngulo principal</th><th>Keyword trigger</th></tr>
+      <tr><td><strong>Profesional estancada</strong></td><td>Mujeres 28-38, Santo Domingo/Santiago, intereses: emprendimiento, desarrollo personal, marca personal</td><td>&ldquo;De t&iacute;mida a Diamante &mdash; sin perseguir a nadie&rdquo;</td><td>C&Oacute;MO</td></tr>
+      <tr><td><strong>Empresario diversificador</strong></td><td>Hombres 35-45, due&ntilde;os de negocio, intereses: inversi&oacute;n, finanzas, ingreso pasivo</td><td>&ldquo;Veh&iacute;culo financiero con apalancamiento &mdash; los n&uacute;meros hablan&rdquo;</td><td>NEGOCIO</td></tr>
+      <tr><td><strong>Mam&aacute; que busca algo propio</strong></td><td>Mujeres 30-42, con hijos, intereses: maternidad, trabajo desde casa, emprendimiento femenino</td><td>&ldquo;1 hora al d&iacute;a + tu tel&eacute;fono = algo tuyo&rdquo;</td><td>MAM&Aacute;</td></tr>
+    </table>
+
+  </div>
+</div>
+
+<!-- ============================================================ -->
+<!-- SECTION 4: CIA METHOD -->
+<!-- ============================================================ -->
+<div class="sec sec-white" id="cia">
+  <div class="page">
+    <div class="section-label dark">04 &mdash; CIA Method</div>
+    <div class="sec-title">CIA Method</div>
+    <p class="sec-subtitle">Competitive Intelligence Analysis &mdash; Templates para ejecutar con prospectos reales del mercado de Anabel.</p>
+
+    <div class="pending-box">
+      <p><strong>NOTA:</strong> Ambos documentos CIA (Inicial y Final) son templates que a&uacute;n no han sido ejecutados. Se incluyen aqu&iacute; como referencia para cuando se realicen las entrevistas con personas del mercado objetivo.</p>
+    </div>
+
+    <!-- CIA INICIAL -->
+    <h3 id="cia-inicial">CIA Method &mdash; Inicial</h3>
+
+    <table class="data-table">
+      <tr><th>Campo</th><th>Detalle</th></tr>
+      <tr><td><strong>Proyecto</strong></td><td>Anabel Mercedes &mdash; Marca Personal</td></tr>
+      <tr><td><strong>Fecha</strong></td><td>(Pendiente)</td></tr>
+      <tr><td><strong>Entrevistado</strong></td><td>[Nombre &mdash; alguien que est&aacute; DENTRO del mercado de network marketing / marca personal en RD]</td></tr>
+      <tr><td><strong>Perfil</strong></td><td>[Qui&eacute;n es: prospecto de negocio, seguidor de cuentas similares, persona del nicho]</td></tr>
+    </table>
+
+    <h4>Preparaci&oacute;n</h4>
+    <p><strong>3 opciones a mostrar (sin revelar cu&aacute;l es la de Anabel):</strong></p>
+    <ul>
+      <li><strong>Competidor A:</strong> [Nombre &mdash; del TPA]</li>
+      <li><strong>Competidor B:</strong> [Nombre &mdash; del TPA]</li>
+      <li><strong>Anabel:</strong> [Lo que estamos planeando &mdash; perfil, contenido, propuesta]</li>
+    </ul>
+
+    <p><strong>Qu&eacute; se le muestra:</strong></p>
+    <ul>
+      <li>Perfiles de Instagram de los 3</li>
+      <li>Contenido / posts / reels de los 3</li>
+      <li>Link in bio / landing de los 3</li>
+      <li>Propuesta de valor / oferta de los 3</li>
+    </ul>
+
+    <h4>Preguntas durante la comparaci&oacute;n</h4>
+
+    <h5>Primera impresi&oacute;n:</h5>
+    <ul>
+      <li>De estas 3 opciones, &iquest;cu&aacute;l te llama m&aacute;s la atenci&oacute;n? &iquest;Por qu&eacute;?</li>
+      <li>&iquest;Cu&aacute;l te genera m&aacute;s confianza? &iquest;Por qu&eacute;?</li>
+      <li>&iquest;A cu&aacute;l le escribir&iacute;as / seguir&iacute;as? &iquest;Por qu&eacute;?</li>
+      <li>&iquest;Cu&aacute;l NO seguir&iacute;as? &iquest;Por qu&eacute;?</li>
+    </ul>
+
+    <h5>Sobre los mensajes y el contenido:</h5>
+    <ul>
+      <li>&iquest;Cu&aacute;l contenido te habla m&aacute;s directamente a ti?</li>
+      <li>&iquest;Hay algo que ves y dices &ldquo;eso me pasa a m&iacute;&rdquo;?</li>
+      <li>&iquest;Hay algo que suena falso, exagerado o que no te crees?</li>
+      <li>&iquest;Qu&eacute; informaci&oacute;n te falta?</li>
+    </ul>
+
+    <h5>Sobre la oferta:</h5>
+    <ul>
+      <li>&iquest;Cu&aacute;l propuesta te parece mejor?</li>
+      <li>&iquest;Qu&eacute; har&iacute;a falta para que dijeras &ldquo;quiero saber m&aacute;s&rdquo;?</li>
+    </ul>
+
+    <h5>Sobre objeciones:</h5>
+    <ul>
+      <li>&iquest;Qu&eacute; te preocupa de cada opci&oacute;n?</li>
+      <li>&iquest;Qu&eacute; te har&iacute;a NO confiar en alguno?</li>
+    </ul>
+
+    <h5>Sobre el mercado:</h5>
+    <ul>
+      <li>&iquest;T&uacute; has buscado este tipo de contenido / oportunidad antes?</li>
+      <li>&iquest;Qu&eacute; es lo que m&aacute;s te frustra de las opciones que existen?</li>
+      <li>Si pudieras dise&ntilde;ar la cuenta perfecta, &iquest;c&oacute;mo ser&iacute;a?</li>
+    </ul>
+
+    <h4>Revelar y profundizar</h4>
+    <ul>
+      <li>Ahora que sabes cu&aacute;l es la de Anabel, &iquest;cambiar&iacute;as tu respuesta?</li>
+      <li>&iquest;Qu&eacute; le mejorar&iacute;as espec&iacute;ficamente?</li>
+      <li>&iquest;Qu&eacute; tiene la competencia que deber&iacute;amos tener?</li>
+      <li>&iquest;Qu&eacute; tenemos que la competencia no tiene?</li>
+    </ul>
+
+    <h4>Resumen de hallazgos</h4>
+    <p><strong>Insights clave:</strong> (Pendiente)</p>
+    <p><strong>Qu&eacute; validamos:</strong> (Pendiente)</p>
+    <p><strong>Qu&eacute; hay que cambiar:</strong> (Pendiente)</p>
+    <p><strong>Ajustes a ejecutar:</strong> (Pendiente)</p>
+
+    <hr>
+
+    <!-- CIA FINAL -->
+    <h3>CIA Method &mdash; Final</h3>
+
+    <table class="data-table">
+      <tr><th>Campo</th><th>Detalle</th></tr>
+      <tr><td><strong>Proyecto</strong></td><td>Anabel Mercedes &mdash; Marca Personal</td></tr>
+      <tr><td><strong>Fecha</strong></td><td>[Se llena en Fase 5 del proyecto]</td></tr>
+      <tr><td><strong>Entrevistado</strong></td><td>[Nombre]</td></tr>
+      <tr><td><strong>Perfil</strong></td><td>[Qui&eacute;n es]</td></tr>
+    </table>
+
+    <h4>Preparaci&oacute;n</h4>
+    <p><strong>Mostrar lo que se cre&oacute; ya en vivo vs competidores:</strong></p>
+    <ul>
+      <li>Perfil de Instagram de Anabel (con contenido publicado)</li>
+      <li>Landing page de Anabel</li>
+      <li>Automatizaci&oacute;n ManyChat (mostrar el flujo)</li>
+      <li>Comparar lado a lado con los mismos competidores del CIA inicial</li>
+    </ul>
+
+    <h4>Preguntas</h4>
+
+    <h5>Sobre lo que se mont&oacute;:</h5>
+    <ul>
+      <li>&iquest;Qu&eacute; te parece ahora vs la primera vez que lo viste?</li>
+      <li>&iquest;Qu&eacute; te gusta m&aacute;s?</li>
+      <li>&iquest;Qu&eacute; todav&iacute;a no te convence?</li>
+      <li>&iquest;Seguir&iacute;as a esta cuenta? &iquest;Le escribir&iacute;as? &iquest;S&iacute; o no, y por qu&eacute;?</li>
+    </ul>
+
+    <h5>Sobre la experiencia real:</h5>
+    <ul>
+      <li>&iquest;Qu&eacute; feedback has visto de la gente? (comentarios, DMs, preguntas)</li>
+      <li>&iquest;Qu&eacute; tipo de personas est&aacute;n respondiendo? &iquest;Son las que esper&aacute;bamos?</li>
+      <li>&iquest;Hay preguntas o objeciones que no anticipamos?</li>
+    </ul>
+
+    <h5>Sobre optimizaci&oacute;n:</h5>
+    <ul>
+      <li>&iquest;Qu&eacute; cambiar&iacute;as si fuera tuyo?</li>
+      <li>&iquest;Qu&eacute; le agregar&iacute;as?</li>
+      <li>&iquest;Qu&eacute; le quitar&iacute;as?</li>
+    </ul>
+
+    <h4>Resumen de hallazgos</h4>
+    <p><strong>Insights clave:</strong> (Pendiente)</p>
+    <p><strong>Qu&eacute; validamos:</strong> (Pendiente)</p>
+    <p><strong>Qu&eacute; hay que cambiar:</strong> (Pendiente)</p>
+    <p><strong>Ajustes a ejecutar:</strong> (Pendiente)</p>
+
+  </div>
+</div>
+
+<!-- ============================================================ -->
+<!-- FOOTER -->
+<!-- ============================================================ -->
+<div class="footer">
+  <p><strong>Anabel Mercedes</strong> &mdash; Documentaci&oacute;n Estrat&eacute;gica Completa</p>
+  <p>Marzo 2026 &bull; Preparado por Martin Mercedes</p>
+  <p style="margin-top: 16px; font-size: 10px;">MKR + TPA + WWP + CIA &mdash; Todos los derechos reservados</p>
+</div>
+
+</body>
+</html>
