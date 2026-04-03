@@ -1,0 +1,1458 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>GRVTY™ — Brand Guidelines</title>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@300;400;500;600;700;800;900&family=Inter:wght@300;400;500;600;700;900&display=swap" rel="stylesheet">
+<style>
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+:root {
+  --black:     #0D0D0D;
+  --bg:        #181818;
+  --bg2:       #202020;
+  --border:    #252525;
+  --gray-700:  #353535;
+  --gray-500:  #707070;
+  --gray-300:  #C9C9C9;
+  --white:     #FFFFFF;
+  --cyan:      #00E3FF;
+  --cyan-dark: #0099BB;
+  --yellow:    #FAFA00;
+  --purple:    #713DFF;
+  --orange:    #F54900;
+  --green:     #00D46A;
+}
+
+body {
+  background: var(--black);
+  color: var(--white);
+  font-family: 'Inter', sans-serif;
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+/* ─── TYPOGRAPHY ─── */
+.label {
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 0.35em;
+  text-transform: uppercase;
+  color: var(--gray-500);
+}
+
+.label-cyan  { color: var(--cyan); }
+.label-dim   { color: var(--gray-700); }
+
+h1, h2, h3 {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-weight: 900;
+  letter-spacing: -0.01em;
+  line-height: 1;
+}
+
+/* ─── LAYOUT ─── */
+.page-cover {
+  min-height: 100vh;
+  background: var(--black);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 64px 80px;
+  position: relative;
+  overflow: hidden;
+  border-bottom: 1px solid var(--border);
+}
+
+.page-cover::before {
+  content: '';
+  position: absolute;
+  bottom: -200px; left: 50%;
+  transform: translateX(-50%);
+  width: 900px; height: 900px;
+  background: radial-gradient(circle, rgba(0,227,255,0.06) 0%, transparent 60%);
+  pointer-events: none;
+}
+
+.cover-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.cover-center {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 32px;
+  padding: 60px 0;
+}
+
+.cover-lockup {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+}
+
+.cover-title {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 160px;
+  font-weight: 900;
+  line-height: 0.9;
+  letter-spacing: -0.02em;
+  color: var(--white);
+}
+
+.cover-title span { color: var(--cyan); }
+
+.cover-bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+
+/* ─── CHAPTER DIVIDERS ─── */
+.chapter {
+  padding: 40px 80px;
+  background: var(--black);
+  border-bottom: 1px solid var(--border);
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+
+.chapter-num {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 80px;
+  font-weight: 900;
+  color: var(--border);
+  line-height: 1;
+  min-width: 100px;
+}
+
+.chapter-title {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 48px;
+  font-weight: 900;
+  letter-spacing: -0.01em;
+  color: var(--white);
+}
+
+.chapter-line { flex: 1; height: 1px; background: var(--border); }
+
+/* ─── SECTIONS ─── */
+.section {
+  padding: 80px;
+  border-bottom: 1px solid var(--border);
+}
+
+.section-2col {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2px;
+}
+
+.section-3col {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 2px;
+}
+
+.section-4col {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 2px;
+}
+
+.cell {
+  padding: 56px 48px;
+  background: var(--bg);
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  justify-content: center;
+}
+
+.cell.dark  { background: var(--black); }
+.cell.light { background: var(--white); }
+.cell.mid   { background: var(--bg2); }
+.cell.center { align-items: center; }
+
+/* ─── THE MARK ─── */
+/* Triangle mark — points: (50,95) (2,10) (98,10) on 100×100 grid */
+
+/* ─── LOGO WORDMARK ─── */
+.wm {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-weight: 900;
+  letter-spacing: -0.01em;
+  line-height: 1;
+  color: var(--white);
+}
+
+.wm-xl  { font-size: 96px; }
+.wm-lg  { font-size: 64px; }
+.wm-md  { font-size: 40px; }
+.wm-sm  { font-size: 24px; }
+.wm-xs  { font-size: 16px; }
+.wm-nav { font-size: 22px; letter-spacing: 0.02em; }
+
+.wm .dot  { color: var(--cyan); }
+.on-light .wm { color: var(--black); }
+.on-light .wm .dot { color: var(--cyan-dark); }
+.on-yellow .wm { color: var(--black); }
+.on-yellow .wm .dot { color: var(--black); }
+
+.lockup {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+}
+
+.lockup-v {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 14px;
+}
+
+.lockup-v-center {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 14px;
+}
+
+/* ─── PALETTE ─── */
+.swatch-row { display: flex; gap: 2px; }
+
+.swatch {
+  flex: 1;
+  height: 96px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 12px 16px;
+}
+
+.swatch-lg { height: 160px; flex: 2; }
+
+.sw-name { font-size: 9px; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; }
+.sw-hex  { font-size: 10px; font-weight: 400; opacity: 0.55; margin-top: 2px; font-family: monospace; }
+
+/* ─── ICONS ─── */
+.icons-grid {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 2px;
+  background: var(--border);
+}
+
+.icon-cell {
+  background: var(--bg);
+  padding: 40px 28px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  min-height: 180px;
+}
+
+.icon-cell.dark { background: var(--black); }
+.icon-cell.mid  { background: var(--bg2); }
+
+.icon-name {
+  font-size: 9px;
+  font-weight: 600;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--gray-500);
+  text-align: center;
+}
+
+/* ─── TYPOGRAPHY ─── */
+.type-scale { display: flex; flex-direction: column; gap: 24px; }
+
+/* ─── BUTTONS ─── */
+.btn-primary {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 14px 28px;
+  background: var(--cyan);
+  color: var(--black);
+  font-family: 'Inter', sans-serif;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  border: none;
+  cursor: pointer;
+  border-radius: 6px;
+}
+
+.btn-outline {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 13px 28px;
+  background: transparent;
+  color: var(--white);
+  font-family: 'Inter', sans-serif;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  border: 1px solid var(--gray-700);
+  cursor: pointer;
+  border-radius: 6px;
+}
+
+.btn-ghost {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: transparent;
+  color: var(--gray-300);
+  font-family: 'Inter', sans-serif;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  border: none;
+  cursor: pointer;
+  padding: 8px 0;
+}
+
+/* ─── TAGS / BADGES ─── */
+.tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 5px 12px;
+  border-radius: 100px;
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.tag-cyan   { background: rgba(0,227,255,0.12); color: var(--cyan); border: 1px solid rgba(0,227,255,0.2); }
+.tag-yellow { background: rgba(250,250,0,0.1);  color: var(--yellow); border: 1px solid rgba(250,250,0,0.2); }
+.tag-purple { background: rgba(113,61,255,0.15); color: var(--purple); border: 1px solid rgba(113,61,255,0.25); }
+.tag-orange { background: rgba(245,73,0,0.12);  color: var(--orange); border: 1px solid rgba(245,73,0,0.2); }
+.tag-green  { background: rgba(0,212,106,0.1);  color: var(--green); border: 1px solid rgba(0,212,106,0.2); }
+.tag-white  { background: rgba(255,255,255,0.06); color: var(--gray-300); border: 1px solid var(--border); }
+
+/* ─── CARDS ─── */
+.card {
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 32px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.card-title {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 28px;
+  font-weight: 800;
+  letter-spacing: -0.01em;
+}
+
+.card-body {
+  font-size: 13px;
+  color: var(--gray-300);
+  line-height: 1.7;
+}
+
+/* ─── NAV MOCKUP ─── */
+.nav-mockup {
+  background: rgba(24,24,24,0.85);
+  backdrop-filter: blur(50px);
+  border-bottom: 0.5px solid var(--gray-700);
+  padding: 20px 48px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.nav-links {
+  display: flex;
+  gap: 36px;
+  list-style: none;
+}
+
+.nav-links li {
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--gray-500);
+}
+
+.nav-links li.active { color: var(--white); }
+
+/* ─── HERO MOCKUP ─── */
+.hero-mockup {
+  background: var(--black);
+  padding: 100px 80px 80px;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-mockup::before {
+  content: '';
+  position: absolute;
+  bottom: -300px; left: 50%;
+  transform: translateX(-50%);
+  width: 800px; height: 800px;
+  background: radial-gradient(circle, rgba(0,227,255,0.07) 0%, transparent 60%);
+  pointer-events: none;
+}
+
+.hero-kicker {
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.4em;
+  text-transform: uppercase;
+  color: var(--cyan);
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.hero-kicker::before {
+  content: '';
+  display: block;
+  width: 24px;
+  height: 2px;
+  background: var(--cyan);
+}
+
+.hero-headline {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 88px;
+  font-weight: 900;
+  line-height: 0.93;
+  letter-spacing: -0.02em;
+  color: var(--white);
+  max-width: 800px;
+  margin-bottom: 28px;
+}
+
+.hero-sub {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.65;
+  color: var(--gray-300);
+  max-width: 480px;
+  margin-bottom: 44px;
+}
+
+.hero-actions {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+/* ─── GRADIENT BACKGROUNDS ─── */
+.grad-cyan   { background: radial-gradient(ellipse 80% 60% at 50% 120%, rgba(0,227,255,0.15) 0%, transparent 70%), var(--black); }
+.grad-purple { background: radial-gradient(ellipse 80% 60% at 50% 120%, rgba(113,61,255,0.2) 0%, transparent 70%), var(--black); }
+.grad-orange { background: radial-gradient(ellipse 80% 60% at 50% 120%, rgba(245,73,0,0.15) 0%, transparent 70%), var(--black); }
+
+/* ─── INCORRECT USE ─── */
+.wrong-cell {
+  background: var(--bg2);
+  padding: 40px 36px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  position: relative;
+  min-height: 200px;
+  justify-content: center;
+}
+
+.wrong-badge {
+  position: absolute;
+  top: 14px; left: 14px;
+  background: #FF3B3B;
+  color: #fff;
+  font-size: 8px;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  padding: 3px 8px;
+  border-radius: 3px;
+}
+
+.wrong-desc {
+  position: absolute;
+  bottom: 14px; left: 14px; right: 14px;
+  font-size: 10px;
+  color: var(--gray-500);
+}
+
+/* ─── SPACING SYSTEM ─── */
+.space-row {
+  display: flex;
+  align-items: flex-end;
+  gap: 2px;
+}
+
+.space-block {
+  background: rgba(0,227,255,0.15);
+  border: 1px solid rgba(0,227,255,0.25);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 6px 8px;
+  min-width: 48px;
+}
+
+.space-val {
+  font-size: 8px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  color: var(--cyan);
+}
+
+/* ─── DIVIDER LINE ─── */
+.divider {
+  height: 1px;
+  background: var(--border);
+  margin: 0;
+}
+
+/* ─── FOOTER ─── */
+.page-footer {
+  padding: 48px 80px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+</style>
+</head>
+<body>
+
+<!-- ══════════════════════════════════════════════════
+     COVER
+══════════════════════════════════════════════════ -->
+<div class="page-cover">
+  <div class="cover-top">
+    <div class="label label-dim">Brand Guidelines · Version 1.0 · 2026</div>
+    <div class="label label-dim">Confidential</div>
+  </div>
+
+  <div class="cover-center">
+    <div class="label label-cyan">GRVTY™ — Identity System</div>
+    <div class="cover-lockup">
+      <svg width="160" height="160" viewBox="0 0 100 100" fill="none">
+        <polygon points="50,95 2,10 98,10" fill="#00E3FF"/>
+      </svg>
+      <div class="cover-title">GRVTY<span>.</span></div>
+    </div>
+    <div style="font-size:16px;color:var(--gray-500);letter-spacing:0.2em;text-transform:uppercase;font-weight:500">Inevitable.</div>
+  </div>
+
+  <div class="cover-bottom">
+    <div style="font-size:11px;color:var(--gray-700)">AI · Funnels · Growth</div>
+    <div style="font-size:11px;color:var(--gray-700)">grvty.io</div>
+  </div>
+</div>
+
+<!-- ══════════════════════════════════════════════════
+     01 — LOGO
+══════════════════════════════════════════════════ -->
+<div class="chapter">
+  <div class="chapter-num">01</div>
+  <div class="chapter-title">Logo</div>
+  <div class="chapter-line"></div>
+</div>
+
+<!-- Primary lockup -->
+<div class="section" style="padding-bottom:0;">
+  <div class="label" style="margin-bottom:40px;">Primary lockup — Horizontal</div>
+</div>
+<div class="section-2col">
+  <div class="cell dark" style="min-height:280px;">
+    <div class="label label-dim">On Dark · Primary</div>
+    <div class="lockup">
+      <svg width="72" height="72" viewBox="0 0 100 100" fill="none">
+        <polygon points="50,95 2,10 98,10" fill="#00E3FF"/>
+      </svg>
+      <span class="wm wm-lg">GRVTY<span class="dot">.</span></span>
+    </div>
+  </div>
+  <div class="cell light on-light" style="min-height:280px;">
+    <div class="label" style="color:#bbb;">On Light · Primary</div>
+    <div class="lockup">
+      <svg width="72" height="72" viewBox="0 0 100 100" fill="none">
+        <polygon points="50,95 2,10 98,10" fill="#0099BB"/>
+      </svg>
+      <span class="wm wm-lg" style="color:#0D0D0D;">GRVTY<span style="color:#0099BB">.</span></span>
+    </div>
+  </div>
+</div>
+
+<!-- Secondary lockups -->
+<div class="section" style="padding-bottom:0;padding-top:40px;">
+  <div class="label" style="margin-bottom:40px;">Secondary lockups</div>
+</div>
+<div class="section-3col">
+
+  <!-- Vertical -->
+  <div class="cell dark center" style="min-height:320px;">
+    <div class="label label-dim">Vertical — Stacked</div>
+    <div class="lockup-v-center">
+      <svg width="64" height="64" viewBox="0 0 100 100" fill="none">
+        <polygon points="50,95 2,10 98,10" fill="#00E3FF"/>
+      </svg>
+      <span class="wm wm-md" style="text-align:center;">GRVTY<span class="dot">.</span></span>
+    </div>
+    <div class="label label-dim">→ Social · Square formats</div>
+  </div>
+
+  <!-- With tagline -->
+  <div class="cell" style="background:#181818;min-height:320px;">
+    <div class="label label-dim">Horizontal + Tagline</div>
+    <div class="lockup">
+      <svg width="52" height="52" viewBox="0 0 100 100" fill="none">
+        <polygon points="50,95 2,10 98,10" fill="#00E3FF"/>
+      </svg>
+      <div class="lockup-v" style="gap:6px;">
+        <span class="wm wm-md">GRVTY<span class="dot">.</span></span>
+        <span style="font-size:10px;font-weight:500;letter-spacing:0.35em;text-transform:uppercase;color:var(--gray-500)">Inevitable.</span>
+      </div>
+    </div>
+    <div class="label label-dim">→ Proposals · Pitch decks</div>
+  </div>
+
+  <!-- Mark only -->
+  <div class="cell dark center" style="min-height:320px;">
+    <div class="label label-dim">Mark Only</div>
+    <svg width="96" height="96" viewBox="0 0 100 100" fill="none">
+      <polygon points="50,95 2,10 98,10" fill="#00E3FF"/>
+    </svg>
+    <div class="label label-dim">→ App icon · Favicon · Watermark</div>
+  </div>
+
+</div>
+
+<!-- Avatar formats -->
+<div class="section" style="padding-bottom:0;padding-top:40px;">
+  <div class="label" style="margin-bottom:40px;">Avatar & app icon formats</div>
+</div>
+<div style="display:grid;grid-template-columns:repeat(5,1fr);gap:2px;">
+
+  <div class="cell dark center" style="min-height:200px;">
+    <svg width="88" height="88" viewBox="0 0 120 120" fill="none">
+      <rect width="120" height="120" fill="#0D0D0D"/>
+      <polygon points="60,108 8,18 112,18" fill="#00E3FF"/>
+    </svg>
+    <div class="label label-dim">Square</div>
+  </div>
+
+  <div class="cell center" style="background:#181818;min-height:200px;">
+    <svg width="88" height="88" viewBox="0 0 120 120" fill="none">
+      <rect width="120" height="120" rx="28" fill="#0D0D0D"/>
+      <polygon points="60,108 8,18 112,18" fill="#00E3FF"/>
+    </svg>
+    <div class="label label-dim">Rounded · iOS</div>
+  </div>
+
+  <div class="cell dark center" style="min-height:200px;">
+    <svg width="88" height="88" viewBox="0 0 120 120" fill="none">
+      <circle cx="60" cy="60" r="60" fill="#0D0D0D"/>
+      <polygon points="60,106 12,22 108,22" fill="#00E3FF"/>
+    </svg>
+    <div class="label label-dim">Circle · Social</div>
+  </div>
+
+  <div class="cell dark center" style="min-height:200px;">
+    <svg width="88" height="88" viewBox="0 0 120 120" fill="none">
+      <rect width="120" height="120" fill="#00E3FF"/>
+      <polygon points="60,108 8,18 112,18" fill="#0D0D0D"/>
+    </svg>
+    <div class="label label-dim">Cyan bg</div>
+  </div>
+
+  <div class="cell dark center" style="min-height:200px;">
+    <div style="display:flex;flex-direction:column;gap:12px;align-items:center;">
+      <svg width="48" height="48" viewBox="0 0 120 120" fill="none">
+        <rect width="120" height="120" rx="28" fill="#0D0D0D"/>
+        <polygon points="60,108 8,18 112,18" fill="#00E3FF"/>
+      </svg>
+      <svg width="32" height="32" viewBox="0 0 120 120" fill="none">
+        <rect width="120" height="120" rx="20" fill="#0D0D0D"/>
+        <polygon points="60,108 8,18 112,18" fill="#00E3FF"/>
+      </svg>
+      <svg width="16" height="16" viewBox="0 0 120 120" fill="none">
+        <rect width="120" height="120" fill="#0D0D0D"/>
+        <polygon points="60,108 8,18 112,18" fill="#00E3FF"/>
+      </svg>
+    </div>
+    <div class="label label-dim">Favicon scale</div>
+  </div>
+
+</div>
+
+<!-- Size scale -->
+<div class="section" style="padding-top:56px;padding-bottom:56px;background:var(--bg);">
+  <div class="label" style="margin-bottom:48px;">Size scale</div>
+  <div style="display:flex;flex-direction:column;gap:32px;">
+    <div>
+      <div class="label label-dim" style="margin-bottom:16px;">Hero · 120px</div>
+      <div class="lockup">
+        <svg width="100" height="100" viewBox="0 0 100 100" fill="none"><polygon points="50,95 2,10 98,10" fill="#00E3FF"/></svg>
+        <span class="wm" style="font-size:120px;">GRVTY<span class="dot">.</span></span>
+      </div>
+    </div>
+    <div>
+      <div class="label label-dim" style="margin-bottom:14px;">Large · 64px</div>
+      <div class="lockup">
+        <svg width="56" height="56" viewBox="0 0 100 100" fill="none"><polygon points="50,95 2,10 98,10" fill="#00E3FF"/></svg>
+        <span class="wm wm-lg">GRVTY<span class="dot">.</span></span>
+      </div>
+    </div>
+    <div>
+      <div class="label label-dim" style="margin-bottom:12px;">Medium · 40px</div>
+      <div class="lockup">
+        <svg width="36" height="36" viewBox="0 0 100 100" fill="none"><polygon points="50,95 2,10 98,10" fill="#00E3FF"/></svg>
+        <span class="wm wm-md">GRVTY<span class="dot">.</span></span>
+      </div>
+    </div>
+    <div>
+      <div class="label label-dim" style="margin-bottom:10px;">Navbar · 22px</div>
+      <div class="lockup">
+        <svg width="20" height="20" viewBox="0 0 100 100" fill="none"><polygon points="50,95 2,10 98,10" fill="#00E3FF"/></svg>
+        <span class="wm wm-nav">GRVTY<span class="dot">.</span></span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Incorrect use -->
+<div class="section" style="padding-bottom:0;padding-top:56px;">
+  <div class="label" style="margin-bottom:40px;">Logo misuse — Never do this</div>
+</div>
+<div style="display:grid;grid-template-columns:repeat(3,1fr);gap:2px;">
+
+  <div class="wrong-cell">
+    <div class="wrong-badge">✗ Wrong</div>
+    <div class="lockup" style="margin-top:24px;">
+      <svg width="44" height="44" viewBox="0 0 100 100" fill="none" style="transform:rotate(180deg)">
+        <polygon points="50,95 2,10 98,10" fill="#00E3FF"/>
+      </svg>
+      <span class="wm wm-sm">GRVTY<span class="dot">.</span></span>
+    </div>
+    <div class="wrong-desc">Never rotate or flip the mark</div>
+  </div>
+
+  <div class="wrong-cell">
+    <div class="wrong-badge">✗ Wrong</div>
+    <div class="lockup" style="margin-top:24px;">
+      <svg width="44" height="44" viewBox="0 0 100 100" fill="none">
+        <polygon points="50,95 2,10 98,10" fill="#FF3B3B"/>
+      </svg>
+      <span class="wm wm-sm" style="color:#FF3B3B;">GRVTY.</span>
+    </div>
+    <div class="wrong-desc">Never use off-brand colors</div>
+  </div>
+
+  <div class="wrong-cell">
+    <div class="wrong-badge">✗ Wrong</div>
+    <div class="lockup" style="margin-top:24px;">
+      <svg width="44" height="44" viewBox="0 0 100 100" fill="none" style="transform:scaleX(1.7)">
+        <polygon points="50,95 2,10 98,10" fill="#00E3FF"/>
+      </svg>
+      <span class="wm wm-sm">GRVTY<span class="dot">.</span></span>
+    </div>
+    <div class="wrong-desc">Never stretch or distort the mark</div>
+  </div>
+
+  <div class="wrong-cell">
+    <div class="wrong-badge">✗ Wrong</div>
+    <div style="margin-top:24px;display:flex;align-items:center;gap:2px;">
+      <svg width="44" height="44" viewBox="0 0 100 100" fill="none">
+        <polygon points="50,95 2,10 98,10" fill="#00E3FF"/>
+      </svg>
+      <span class="wm wm-sm">GRVTY<span class="dot">.</span></span>
+    </div>
+    <div class="wrong-desc">Never place mark too close to wordmark</div>
+  </div>
+
+  <div class="wrong-cell">
+    <div class="wrong-badge">✗ Wrong</div>
+    <div style="margin-top:24px;background:linear-gradient(135deg,#8B5CF6,#EC4899);padding:12px;display:inline-flex;align-items:center;gap:10px;">
+      <svg width="36" height="36" viewBox="0 0 100 100" fill="none">
+        <polygon points="50,95 2,10 98,10" fill="#fff"/>
+      </svg>
+      <span class="wm wm-sm">GRVTY.</span>
+    </div>
+    <div class="wrong-desc">Never place on colorful or photo backgrounds</div>
+  </div>
+
+  <div class="wrong-cell">
+    <div class="wrong-badge">✗ Wrong</div>
+    <div style="margin-top:24px;display:flex;align-items:center;gap:12px;">
+      <svg width="44" height="44" viewBox="0 0 100 100" fill="none">
+        <polygon points="50,95 2,10 98,10" fill="#00E3FF" opacity="0.25"/>
+      </svg>
+      <span class="wm wm-sm" style="opacity:0.25;">GRVTY<span class="dot">.</span></span>
+    </div>
+    <div class="wrong-desc">Never reduce opacity of the logo</div>
+  </div>
+
+</div>
+
+<!-- ══════════════════════════════════════════════════
+     02 — COLOR
+══════════════════════════════════════════════════ -->
+<div class="chapter" style="margin-top:2px;">
+  <div class="chapter-num">02</div>
+  <div class="chapter-title">Color</div>
+  <div class="chapter-line"></div>
+</div>
+
+<div class="section">
+  <div class="label" style="margin-bottom:40px;">Primary palette</div>
+  <div class="swatch-row" style="margin-bottom:2px;">
+    <div class="swatch swatch-lg" style="background:#0D0D0D;">
+      <div class="sw-name" style="color:#fff;">Black</div>
+      <div class="sw-hex" style="color:#fff;">#0D0D0D</div>
+    </div>
+    <div class="swatch swatch-lg" style="background:#00E3FF;">
+      <div class="sw-name" style="color:#000;">Cyan</div>
+      <div class="sw-hex" style="color:#000;">#00E3FF</div>
+    </div>
+    <div class="swatch swatch-lg" style="background:#FFFFFF;border:1px solid #E0E0E0;">
+      <div class="sw-name" style="color:#000;">White</div>
+      <div class="sw-hex" style="color:#000;">#FFFFFF</div>
+    </div>
+  </div>
+
+  <div class="label" style="margin-bottom:24px;margin-top:48px;">Secondary palette — accent colors</div>
+  <div class="swatch-row">
+    <div class="swatch" style="background:#FAFA00;">
+      <div class="sw-name" style="color:#000;">Electric Yellow</div>
+      <div class="sw-hex" style="color:#000;">#FAFA00</div>
+    </div>
+    <div class="swatch" style="background:#713DFF;">
+      <div class="sw-name" style="color:#fff;">Deep Purple</div>
+      <div class="sw-hex" style="color:#fff;">#713DFF</div>
+    </div>
+    <div class="swatch" style="background:#F54900;">
+      <div class="sw-name" style="color:#fff;">Burn Orange</div>
+      <div class="sw-hex" style="color:#fff;">#F54900</div>
+    </div>
+    <div class="swatch" style="background:#00D46A;">
+      <div class="sw-name" style="color:#000;">Growth Green</div>
+      <div class="sw-hex" style="color:#000;">#00D46A</div>
+    </div>
+  </div>
+
+  <div class="label" style="margin-bottom:24px;margin-top:48px;">Neutral palette</div>
+  <div class="swatch-row">
+    <div class="swatch" style="background:#181818;">
+      <div class="sw-name" style="color:#fff;">BG Primary</div>
+      <div class="sw-hex" style="color:#fff;">#181818</div>
+    </div>
+    <div class="swatch" style="background:#202020;">
+      <div class="sw-name" style="color:#fff;">BG Secondary</div>
+      <div class="sw-hex" style="color:#fff;">#202020</div>
+    </div>
+    <div class="swatch" style="background:#353535;">
+      <div class="sw-name" style="color:#fff;">Border</div>
+      <div class="sw-hex" style="color:#fff;">#353535</div>
+    </div>
+    <div class="swatch" style="background:#707070;">
+      <div class="sw-name" style="color:#fff;">Gray Mid</div>
+      <div class="sw-hex" style="color:#fff;">#707070</div>
+    </div>
+    <div class="swatch" style="background:#C9C9C9;">
+      <div class="sw-name" style="color:#000;">Gray Light</div>
+      <div class="sw-hex" style="color:#000;">#C9C9C9</div>
+    </div>
+  </div>
+
+  <!-- Logo in each accent color -->
+  <div class="label" style="margin-bottom:24px;margin-top:48px;">Logo in accent colors — special use only</div>
+  <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:2px;">
+    <div style="background:#0D0D0D;padding:40px;display:flex;flex-direction:column;gap:20px;align-items:flex-start;">
+      <div class="lockup">
+        <svg width="40" height="40" viewBox="0 0 100 100" fill="none"><polygon points="50,95 2,10 98,10" fill="#FAFA00"/></svg>
+        <span class="wm wm-sm" style="color:#fff;">GRVTY<span style="color:#FAFA00">.</span></span>
+      </div>
+      <div class="label" style="color:#FAFA00;">Yellow · Campaigns</div>
+    </div>
+    <div style="background:#09060F;padding:40px;display:flex;flex-direction:column;gap:20px;align-items:flex-start;">
+      <div class="lockup">
+        <svg width="40" height="40" viewBox="0 0 100 100" fill="none"><polygon points="50,95 2,10 98,10" fill="#713DFF"/></svg>
+        <span class="wm wm-sm" style="color:#fff;">GRVTY<span style="color:#713DFF">.</span></span>
+      </div>
+      <div class="label" style="color:#713DFF;">Purple · AI services</div>
+    </div>
+    <div style="background:#0F0600;padding:40px;display:flex;flex-direction:column;gap:20px;align-items:flex-start;">
+      <div class="lockup">
+        <svg width="40" height="40" viewBox="0 0 100 100" fill="none"><polygon points="50,95 2,10 98,10" fill="#F54900"/></svg>
+        <span class="wm wm-sm" style="color:#fff;">GRVTY<span style="color:#F54900">.</span></span>
+      </div>
+      <div class="label" style="color:#F54900;">Orange · Urgency</div>
+    </div>
+    <div style="background:#001A0A;padding:40px;display:flex;flex-direction:column;gap:20px;align-items:flex-start;">
+      <div class="lockup">
+        <svg width="40" height="40" viewBox="0 0 100 100" fill="none"><polygon points="50,95 2,10 98,10" fill="#00D46A"/></svg>
+        <span class="wm wm-sm" style="color:#fff;">GRVTY<span style="color:#00D46A">.</span></span>
+      </div>
+      <div class="label" style="color:#00D46A;">Green · Growth results</div>
+    </div>
+  </div>
+</div>
+
+<!-- ══════════════════════════════════════════════════
+     03 — TYPOGRAPHY
+══════════════════════════════════════════════════ -->
+<div class="chapter">
+  <div class="chapter-num">03</div>
+  <div class="chapter-title">Typography</div>
+  <div class="chapter-line"></div>
+</div>
+
+<div class="section-2col">
+
+  <div class="cell dark" style="padding:64px;">
+    <div class="label label-dim" style="margin-bottom:32px;">Display — Barlow Condensed 900</div>
+    <div style="font-family:'Barlow Condensed',sans-serif;font-size:88px;font-weight:900;line-height:0.9;letter-spacing:-0.02em;color:#fff;margin-bottom:24px;">
+      Aa Bb Cc
+    </div>
+    <div style="font-family:'Barlow Condensed',sans-serif;font-size:20px;font-weight:900;letter-spacing:0.04em;color:var(--gray-500);">
+      ABCDEFGHIJKLMNOPQRSTUVWXYZ
+    </div>
+    <div style="font-family:'Barlow Condensed',sans-serif;font-size:20px;font-weight:900;letter-spacing:0.04em;color:var(--gray-500);margin-top:6px;">
+      0123456789 !@#$%&
+    </div>
+    <div style="margin-top:32px;display:flex;flex-direction:column;gap:10px;">
+      <div style="font-family:'Barlow Condensed',sans-serif;font-size:48px;font-weight:900;color:#fff;line-height:1;">H1 · 48px · 900</div>
+      <div style="font-family:'Barlow Condensed',sans-serif;font-size:36px;font-weight:900;color:#fff;line-height:1;">H2 · 36px · 900</div>
+      <div style="font-family:'Barlow Condensed',sans-serif;font-size:28px;font-weight:800;color:#fff;line-height:1;">H3 · 28px · 800</div>
+      <div style="font-family:'Barlow Condensed',sans-serif;font-size:22px;font-weight:700;color:#fff;line-height:1;">H4 · 22px · 700</div>
+    </div>
+  </div>
+
+  <div class="cell" style="background:var(--bg);padding:64px;">
+    <div class="label label-dim" style="margin-bottom:32px;">Body — Inter</div>
+    <div style="font-size:48px;font-weight:700;line-height:0.95;color:#fff;margin-bottom:24px;">Aa Bb Cc</div>
+    <div style="font-size:14px;color:var(--gray-300);line-height:1.7;max-width:400px;margin-bottom:32px;">
+      We build AI-powered funnel systems that pull customers to your business. Like gravity — you don't see it, you just see the results.
+    </div>
+    <div style="display:flex;flex-direction:column;gap:10px;">
+      <div style="font-size:16px;font-weight:700;color:#fff;">Body Large · 16px · 700</div>
+      <div style="font-size:14px;font-weight:400;color:var(--gray-300);">Body Regular · 14px · 400</div>
+      <div style="font-size:12px;font-weight:600;color:var(--gray-500);">Caption · 12px · 600</div>
+      <div style="font-size:10px;font-weight:700;letter-spacing:0.3em;text-transform:uppercase;color:var(--gray-500);">LABEL · 10px · 700 · CAPS</div>
+      <div style="font-size:9px;font-weight:700;letter-spacing:0.35em;text-transform:uppercase;color:var(--gray-700);">micro label · 9px · 700 · caps</div>
+    </div>
+  </div>
+
+</div>
+
+<!-- ══════════════════════════════════════════════════
+     04 — ICONOGRAPHY
+══════════════════════════════════════════════════ -->
+<div class="chapter">
+  <div class="chapter-num">04</div>
+  <div class="chapter-title">Iconography</div>
+  <div class="chapter-line"></div>
+</div>
+
+<div class="section" style="padding-bottom:0;">
+  <div class="label" style="margin-bottom:8px;">Icon style — 24px · 1.5px stroke · rounded caps · no fill</div>
+  <div style="font-size:11px;color:var(--gray-500);margin-bottom:40px;">All icons use a consistent 24×24px grid, 1.5px stroke weight, rounded line caps and joins.</div>
+</div>
+
+<!-- SERVICE ICONS — NoGood style, stroke-based, thematic -->
+<div class="icons-grid">
+
+  <!-- Funnels -->
+  <div class="icon-cell dark">
+    <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#00E3FF" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M3 4h18l-7 8v6l-4-2v-4L3 4z"/>
+    </svg>
+    <div class="icon-name">Funnels</div>
+  </div>
+
+  <!-- AI / Brain -->
+  <div class="icon-cell mid">
+    <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#00E3FF" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M9.5 2a2.5 2.5 0 0 1 5 0"/>
+      <path d="M14.5 2C17 2 19 4 19 6.5c0 1-.3 2-.8 2.7"/>
+      <path d="M9.5 2C7 2 5 4 5 6.5c0 1 .3 2 .8 2.7"/>
+      <path d="M12 13v9"/>
+      <path d="M8 17l4-4 4 4"/>
+      <ellipse cx="12" cy="11" rx="4" ry="3"/>
+      <path d="M8 9.5C6.5 9 5 8 5 6.5"/>
+      <path d="M16 9.5C17.5 9 19 8 19 6.5"/>
+    </svg>
+    <div class="icon-name">AI Strategy</div>
+  </div>
+
+  <!-- Growth / Chart -->
+  <div class="icon-cell dark">
+    <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#00E3FF" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+      <polyline points="22 7 13.5 15.5 8.5 10.5 2 17"/>
+      <polyline points="16 7 22 7 22 13"/>
+    </svg>
+    <div class="icon-name">Growth</div>
+  </div>
+
+  <!-- Ads / Megaphone -->
+  <div class="icon-cell mid">
+    <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#00E3FF" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M3 11l19-9-9 19-2-8-8-2z"/>
+    </svg>
+    <div class="icon-name">Paid Media</div>
+  </div>
+
+  <!-- Landing Page / Browser -->
+  <div class="icon-cell dark">
+    <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#00E3FF" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+      <rect x="2" y="3" width="20" height="18" rx="2"/>
+      <path d="M2 9h20"/>
+      <circle cx="6" cy="6" r="1" fill="#00E3FF" stroke="none"/>
+      <circle cx="9" cy="6" r="1" fill="#00E3FF" stroke="none"/>
+      <path d="M7 14h10M7 17h6"/>
+    </svg>
+    <div class="icon-name">Landing Pages</div>
+  </div>
+
+  <!-- CRM / Users -->
+  <div class="icon-cell mid">
+    <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#00E3FF" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
+      <circle cx="9" cy="7" r="4"/>
+      <path d="M23 21v-2a4 4 0 0 0-3-3.87"/>
+      <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+    </svg>
+    <div class="icon-name">CRM</div>
+  </div>
+
+  <!-- Email / Automation -->
+  <div class="icon-cell dark">
+    <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#00E3FF" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+      <polyline points="22,6 12,13 2,6"/>
+    </svg>
+    <div class="icon-name">Email</div>
+  </div>
+
+  <!-- SEO / Search -->
+  <div class="icon-cell mid">
+    <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#00E3FF" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+      <circle cx="11" cy="11" r="8"/>
+      <line x1="21" y1="21" x2="16.65" y2="16.65"/>
+      <path d="M8 11h6M11 8v6"/>
+    </svg>
+    <div class="icon-name">SEO</div>
+  </div>
+
+  <!-- Analytics / Pie -->
+  <div class="icon-cell dark">
+    <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#00E3FF" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M21.21 15.89A10 10 0 1 1 8 2.83"/>
+      <path d="M22 12A10 10 0 0 0 12 2v10z"/>
+    </svg>
+    <div class="icon-name">Analytics</div>
+  </div>
+
+  <!-- Automation / Bolt -->
+  <div class="icon-cell mid">
+    <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#00E3FF" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+      <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/>
+    </svg>
+    <div class="icon-name">Automation</div>
+  </div>
+
+  <!-- Gravity / Target -->
+  <div class="icon-cell dark">
+    <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#00E3FF" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+      <circle cx="12" cy="12" r="10"/>
+      <circle cx="12" cy="12" r="6"/>
+      <circle cx="12" cy="12" r="2"/>
+      <line x1="12" y1="2" x2="12" y2="6" stroke="#00E3FF" stroke-width="1.5"/>
+      <line x1="12" y1="18" x2="12" y2="22" stroke="#00E3FF" stroke-width="1.5"/>
+    </svg>
+    <div class="icon-name">Targeting</div>
+  </div>
+
+  <!-- Conversion / Arrow in box -->
+  <div class="icon-cell mid">
+    <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#00E3FF" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M5 12h14"/>
+      <path d="M12 5l7 7-7 7"/>
+    </svg>
+    <div class="icon-name">Conversion</div>
+  </div>
+
+</div>
+
+<!-- Icon color variations -->
+<div class="section" style="padding-bottom:0;padding-top:48px;">
+  <div class="label" style="margin-bottom:32px;">Icon color usage by context</div>
+</div>
+<div style="display:grid;grid-template-columns:repeat(5,1fr);gap:2px;">
+
+  <div class="icon-cell dark" style="min-height:160px;">
+    <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#00E3FF" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+      <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/>
+    </svg>
+    <div class="icon-name" style="color:#00E3FF;">Cyan · Primary</div>
+  </div>
+
+  <div class="icon-cell" style="background:#181818;min-height:160px;">
+    <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#FAFA00" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+      <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/>
+    </svg>
+    <div class="icon-name" style="color:#FAFA00;">Yellow · Highlight</div>
+  </div>
+
+  <div class="icon-cell" style="background:#09060F;min-height:160px;">
+    <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#713DFF" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+      <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/>
+    </svg>
+    <div class="icon-name" style="color:#713DFF;">Purple · AI</div>
+  </div>
+
+  <div class="icon-cell" style="background:#F5F5F5;min-height:160px;">
+    <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#0D0D0D" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+      <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/>
+    </svg>
+    <div class="icon-name" style="color:#999;">Dark · On Light</div>
+  </div>
+
+  <div class="icon-cell" style="background:#353535;min-height:160px;">
+    <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#C9C9C9" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+      <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/>
+    </svg>
+    <div class="icon-name" style="color:#555;">Gray · Inactive</div>
+  </div>
+
+</div>
+
+<!-- ══════════════════════════════════════════════════
+     05 — UI COMPONENTS
+══════════════════════════════════════════════════ -->
+<div class="chapter" style="margin-top:2px;">
+  <div class="chapter-num">05</div>
+  <div class="chapter-title">UI Components</div>
+  <div class="chapter-line"></div>
+</div>
+
+<div class="section">
+
+  <!-- Buttons -->
+  <div class="label" style="margin-bottom:32px;">Buttons</div>
+  <div style="display:flex;flex-wrap:wrap;gap:16px;margin-bottom:56px;">
+    <button class="btn-primary">
+      Get Started
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+    </button>
+    <button class="btn-outline">See Our Work</button>
+    <button class="btn-ghost">
+      Learn More
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+    </button>
+    <button style="display:inline-flex;align-items:center;gap:10px;padding:14px 28px;background:var(--yellow);color:#000;font-family:'Inter',sans-serif;font-size:12px;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;border:none;cursor:pointer;border-radius:6px;">
+      Start Now →
+    </button>
+    <button style="display:inline-flex;align-items:center;gap:10px;padding:14px 28px;background:var(--purple);color:#fff;font-family:'Inter',sans-serif;font-size:12px;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;border:none;cursor:pointer;border-radius:6px;">
+      AI Services
+    </button>
+  </div>
+
+  <!-- Tags -->
+  <div class="label" style="margin-bottom:24px;">Tags & Badges</div>
+  <div style="display:flex;flex-wrap:wrap;gap:10px;margin-bottom:56px;">
+    <span class="tag tag-cyan">AI-Powered</span>
+    <span class="tag tag-yellow">New</span>
+    <span class="tag tag-purple">Premium</span>
+    <span class="tag tag-orange">Hot</span>
+    <span class="tag tag-green">Live</span>
+    <span class="tag tag-white">Meta Ads</span>
+    <span class="tag tag-white">Google Ads</span>
+    <span class="tag tag-white">Funnels</span>
+    <span class="tag tag-white">Landing Pages</span>
+    <span class="tag tag-cyan">
+      <svg width="8" height="8" viewBox="0 0 8 8" fill="currentColor"><circle cx="4" cy="4" r="4"/></svg>
+      Active
+    </span>
+  </div>
+
+  <!-- Cards -->
+  <div class="label" style="margin-bottom:24px;">Cards</div>
+  <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-bottom:56px;">
+
+    <div class="card">
+      <div style="display:flex;align-items:center;gap:14px;">
+        <div style="width:44px;height:44px;background:rgba(0,227,255,0.1);border-radius:10px;display:flex;align-items:center;justify-content:center;border:1px solid rgba(0,227,255,0.15);">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#00E3FF" stroke-width="1.5" stroke-linecap="round"><path d="M3 4h18l-7 8v6l-4-2v-4L3 4z"/></svg>
+        </div>
+        <span class="tag tag-cyan">Funnels</span>
+      </div>
+      <div class="card-title">AI Funnel Systems</div>
+      <div class="card-body">We design and build high-converting funnel systems powered by automation and AI that work 24/7.</div>
+      <button class="btn-ghost" style="margin-top:8px;">Learn more <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg></button>
+    </div>
+
+    <div class="card">
+      <div style="display:flex;align-items:center;gap:14px;">
+        <div style="width:44px;height:44px;background:rgba(113,61,255,0.12);border-radius:10px;display:flex;align-items:center;justify-content:center;border:1px solid rgba(113,61,255,0.2);">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#713DFF" stroke-width="1.5" stroke-linecap="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
+        </div>
+        <span class="tag tag-purple">AI</span>
+      </div>
+      <div class="card-title">Paid Media</div>
+      <div class="card-body">Meta Ads and Google Ads campaigns optimized by AI. We manage spend, creative, and testing.</div>
+      <button class="btn-ghost" style="margin-top:8px;">Learn more <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg></button>
+    </div>
+
+    <div class="card">
+      <div style="display:flex;align-items:center;gap:14px;">
+        <div style="width:44px;height:44px;background:rgba(0,212,106,0.1);border-radius:10px;display:flex;align-items:center;justify-content:center;border:1px solid rgba(0,212,106,0.15);">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#00D46A" stroke-width="1.5" stroke-linecap="round"><polyline points="22 7 13.5 15.5 8.5 10.5 2 17"/><polyline points="16 7 22 7 22 13"/></svg>
+        </div>
+        <span class="tag tag-green">Results</span>
+      </div>
+      <div class="card-title">Growth Analytics</div>
+      <div class="card-body">Real-time dashboards and reporting that show exactly where your growth is coming from.</div>
+      <button class="btn-ghost" style="margin-top:8px;">Learn more <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg></button>
+    </div>
+
+  </div>
+
+  <!-- Input -->
+  <div class="label" style="margin-bottom:24px;">Form Elements</div>
+  <div style="display:flex;flex-direction:column;gap:12px;max-width:480px;">
+    <div style="position:relative;">
+      <input type="text" placeholder="Your name" style="width:100%;padding:14px 16px;background:var(--bg);border:1px solid var(--gray-700);border-radius:6px;color:#fff;font-family:'Inter',sans-serif;font-size:14px;outline:none;">
+    </div>
+    <div style="position:relative;">
+      <input type="email" placeholder="your@email.com" style="width:100%;padding:14px 16px;background:var(--bg);border:1px solid var(--cyan);border-radius:6px;color:#fff;font-family:'Inter',sans-serif;font-size:14px;outline:none;box-shadow:0 0 0 3px rgba(0,227,255,0.08);">
+    </div>
+    <button class="btn-primary" style="align-self:flex-start;">
+      Get Your Free Audit →
+    </button>
+  </div>
+
+</div>
+
+<!-- ══════════════════════════════════════════════════
+     06 — MOTION & EFFECTS
+══════════════════════════════════════════════════ -->
+<div class="chapter">
+  <div class="chapter-num">06</div>
+  <div class="chapter-title">Motion & Effects</div>
+  <div class="chapter-line"></div>
+</div>
+
+<div class="section-3col">
+  <div class="cell dark">
+    <div class="label label-dim">Gradient Backgrounds</div>
+    <div style="margin-top:16px;display:flex;flex-direction:column;gap:8px;">
+      <div style="height:80px;border-radius:8px;" class="grad-cyan"></div>
+      <div style="font-size:11px;color:var(--gray-500);">Cyan glow · Primary pages</div>
+    </div>
+    <div style="margin-top:12px;display:flex;flex-direction:column;gap:8px;">
+      <div style="height:80px;border-radius:8px;" class="grad-purple"></div>
+      <div style="font-size:11px;color:var(--gray-500);">Purple glow · AI sections</div>
+    </div>
+    <div style="margin-top:12px;display:flex;flex-direction:column;gap:8px;">
+      <div style="height:80px;border-radius:8px;" class="grad-orange"></div>
+      <div style="font-size:11px;color:var(--gray-500);">Orange glow · CTA sections</div>
+    </div>
+  </div>
+
+  <div class="cell" style="background:var(--bg);">
+    <div class="label label-dim">Glassmorphism</div>
+    <div style="margin-top:20px;position:relative;height:160px;">
+      <div style="position:absolute;top:0;left:0;right:0;bottom:0;background:linear-gradient(135deg,rgba(0,227,255,0.1),rgba(113,61,255,0.1));border-radius:12px;"></div>
+      <div style="position:relative;background:rgba(255,255,255,0.04);backdrop-filter:blur(20px);border:1px solid rgba(255,255,255,0.08);border-radius:12px;padding:24px;height:100%;display:flex;flex-direction:column;justify-content:space-between;">
+        <div class="tag tag-cyan">Live Campaign</div>
+        <div>
+          <div style="font-family:'Barlow Condensed',sans-serif;font-size:28px;font-weight:900;color:#fff;">+342% ROAS</div>
+          <div style="font-size:11px;color:var(--gray-500);margin-top:4px;">Last 30 days</div>
+        </div>
+      </div>
+    </div>
+    <div style="font-size:11px;color:var(--gray-500);margin-top:12px;">backdrop-filter: blur(20px) · Use for floating cards and overlays</div>
+  </div>
+
+  <div class="cell dark">
+    <div class="label label-dim">Transitions</div>
+    <div style="margin-top:20px;display:flex;flex-direction:column;gap:16px;">
+      <div style="display:flex;justify-content:space-between;align-items:center;padding:12px 0;border-bottom:1px solid var(--border);">
+        <div style="font-size:12px;color:var(--gray-300);">Default</div>
+        <div style="font-size:11px;color:var(--gray-500);font-family:monospace;">0.2s ease-in-out</div>
+      </div>
+      <div style="display:flex;justify-content:space-between;align-items:center;padding:12px 0;border-bottom:1px solid var(--border);">
+        <div style="font-size:12px;color:var(--gray-300);">Button fill</div>
+        <div style="font-size:11px;color:var(--gray-500);font-family:monospace;">0.4s ease</div>
+      </div>
+      <div style="display:flex;justify-content:space-between;align-items:center;padding:12px 0;border-bottom:1px solid var(--border);">
+        <div style="font-size:12px;color:var(--gray-300);">Page enter</div>
+        <div style="font-size:11px;color:var(--gray-500);font-family:monospace;">0.6s cubic-bezier</div>
+      </div>
+      <div style="display:flex;justify-content:space-between;align-items:center;padding:12px 0;">
+        <div style="font-size:12px;color:var(--gray-300);">Hover opacity</div>
+        <div style="font-size:11px;color:var(--gray-500);font-family:monospace;">opacity: 0.7</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ══════════════════════════════════════════════════
+     07 — SPACING SYSTEM
+══════════════════════════════════════════════════ -->
+<div class="chapter">
+  <div class="chapter-num">07</div>
+  <div class="chapter-title">Spacing</div>
+  <div class="chapter-line"></div>
+</div>
+
+<div class="section" style="background:var(--bg);">
+  <div class="label" style="margin-bottom:40px;">8pt spacing scale</div>
+  <div class="space-row">
+    <div class="space-block" style="height:8px;"><div class="space-val">4</div></div>
+    <div class="space-block" style="height:16px;"><div class="space-val">8</div></div>
+    <div class="space-block" style="height:24px;"><div class="space-val">12</div></div>
+    <div class="space-block" style="height:32px;"><div class="space-val">16</div></div>
+    <div class="space-block" style="height:48px;"><div class="space-val">24</div></div>
+    <div class="space-block" style="height:64px;"><div class="space-val">32</div></div>
+    <div class="space-block" style="height:80px;"><div class="space-val">40</div></div>
+    <div class="space-block" style="height:96px;"><div class="space-val">48</div></div>
+    <div class="space-block" style="height:128px;"><div class="space-val">64</div></div>
+    <div class="space-block" style="height:160px;"><div class="space-val">80</div></div>
+  </div>
+  <div style="margin-top:40px;display:grid;grid-template-columns:repeat(3,1fr);gap:24px;">
+    <div>
+      <div class="label label-dim" style="margin-bottom:12px;">Border Radius</div>
+      <div style="display:flex;flex-direction:column;gap:8px;">
+        <div style="display:flex;align-items:center;gap:12px;font-size:12px;color:var(--gray-300);">
+          <div style="width:32px;height:32px;background:var(--gray-700);border-radius:0;"></div>0px · Sharp edges
+        </div>
+        <div style="display:flex;align-items:center;gap:12px;font-size:12px;color:var(--gray-300);">
+          <div style="width:32px;height:32px;background:var(--gray-700);border-radius:4px;"></div>4px · Subtle
+        </div>
+        <div style="display:flex;align-items:center;gap:12px;font-size:12px;color:var(--gray-300);">
+          <div style="width:32px;height:32px;background:var(--gray-700);border-radius:8px;"></div>8px · Cards, inputs
+        </div>
+        <div style="display:flex;align-items:center;gap:12px;font-size:12px;color:var(--gray-300);">
+          <div style="width:32px;height:32px;background:var(--gray-700);border-radius:12px;"></div>12px · Panels
+        </div>
+        <div style="display:flex;align-items:center;gap:12px;font-size:12px;color:var(--gray-300);">
+          <div style="width:32px;height:16px;background:var(--gray-700);border-radius:100px;"></div>100px · Pills / Tags
+        </div>
+      </div>
+    </div>
+    <div>
+      <div class="label label-dim" style="margin-bottom:12px;">Border Weights</div>
+      <div style="display:flex;flex-direction:column;gap:16px;">
+        <div>
+          <div style="height:0.5px;background:var(--gray-700);margin-bottom:6px;"></div>
+          <div style="font-size:11px;color:var(--gray-500);">0.5px · Nav dividers</div>
+        </div>
+        <div>
+          <div style="height:1px;background:var(--gray-700);margin-bottom:6px;"></div>
+          <div style="font-size:11px;color:var(--gray-500);">1px · Cards, sections</div>
+        </div>
+        <div>
+          <div style="height:2px;background:var(--cyan);margin-bottom:6px;"></div>
+          <div style="font-size:11px;color:var(--gray-500);">2px cyan · Active states</div>
+        </div>
+      </div>
+    </div>
+    <div>
+      <div class="label label-dim" style="margin-bottom:12px;">Shadow System</div>
+      <div style="display:flex;flex-direction:column;gap:16px;">
+        <div style="background:var(--bg2);border-radius:8px;padding:16px;box-shadow:0 1px 3px rgba(0,0,0,0.4);">
+          <div style="font-size:11px;color:var(--gray-500);">Shadow SM</div>
+          <div style="font-size:10px;color:var(--gray-700);font-family:monospace;margin-top:4px;">0 1px 3px rgba(0,0,0,0.4)</div>
+        </div>
+        <div style="background:var(--bg2);border-radius:8px;padding:16px;box-shadow:0 4px 16px rgba(0,0,0,0.5);">
+          <div style="font-size:11px;color:var(--gray-500);">Shadow MD</div>
+          <div style="font-size:10px;color:var(--gray-700);font-family:monospace;margin-top:4px;">0 4px 16px rgba(0,0,0,0.5)</div>
+        </div>
+        <div style="background:var(--bg2);border-radius:8px;padding:16px;box-shadow:0 0 0 1px rgba(0,227,255,0.2), 0 4px 24px rgba(0,227,255,0.08);">
+          <div style="font-size:11px;color:var(--cyan);">Glow · Cyan</div>
+          <div style="font-size:10px;color:var(--gray-700);font-family:monospace;margin-top:4px;">0 0 0 1px rgba(0,227,255,0.2)</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ══════════════════════════════════════════════════
+     08 — IN CONTEXT
+══════════════════════════════════════════════════ -->
+<div class="chapter">
+  <div class="chapter-num">08</div>
+  <div class="chapter-title">In Context</div>
+  <div class="chapter-line"></div>
+</div>
+
+<!-- Nav mockup -->
+<div class="nav-mockup">
+  <div class="lockup">
+    <svg width="22" height="22" viewBox="0 0 100 100" fill="none">
+      <polygon points="50,95 2,10 98,10" fill="#00E3FF"/>
+    </svg>
+    <span class="wm wm-nav">GRVTY<span class="dot">.</span></span>
+  </div>
+  <ul class="nav-links">
+    <li>Services</li>
+    <li class="active">Work</li>
+    <li>About</li>
+    <li>Pricing</li>
+  </ul>
+  <div style="display:flex;align-items:center;gap:12px;">
+    <button class="btn-ghost">Log in</button>
+    <button class="btn-primary">Get Started <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg></button>
+  </div>
+</div>
+
+<!-- Hero mockup -->
+<div class="hero-mockup">
+  <div class="hero-kicker">AI · Funnels · Growth</div>
+  <div class="hero-headline">The invisible force pulling customers<br>to your business.</div>
+  <div class="hero-sub">GRVTY builds AI-powered funnel systems that work 24/7. Like gravity — you don't see it, you just see the results.</div>
+  <div class="hero-actions">
+    <button class="btn-primary" style="font-size:13px;padding:16px 32px;">
+      Get Your Free Audit
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+    </button>
+    <button class="btn-ghost" style="font-size:13px;">
+      See Our Work
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+    </button>
+  </div>
+</div>
+
+<!-- ─── FOOTER ─── -->
+<div class="page-footer">
+  <div class="lockup">
+    <svg width="20" height="20" viewBox="0 0 100 100" fill="none">
+      <polygon points="50,95 2,10 98,10" fill="#00E3FF"/>
+    </svg>
+    <span class="wm wm-nav" style="color:var(--gray-700);">GRVTY<span style="color:var(--gray-700)">.</span></span>
+  </div>
+  <div style="font-size:10px;color:var(--gray-700);letter-spacing:0.1em;">Brand Identity System v1.0 · Confidential · 2026</div>
+</div>
+
+</body>
+</html>

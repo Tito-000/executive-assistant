@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 220 72" width="220" height="72">
+  <defs>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display&amp;family=Montserrat:wght@300;400&amp;display=swap');
+    </style>
+  </defs>
+
+  <!-- Circle mark -->
+  <circle cx="36" cy="36" r="28" fill="none" stroke="#6B8868" stroke-width="1"/>
+
+  <!-- AM monogram -->
+  <text x="36" y="46"
+    font-family="'DM Serif Display', Georgia, serif"
+    font-size="28"
+    fill="#1A1F2E"
+    text-anchor="middle"
+    letter-spacing="-1">AM</text>
+
+  <!-- Name: ANABEL MERCEDES -->
+  <text x="80" y="31"
+    font-family="'Montserrat', Arial, sans-serif"
+    font-size="11"
+    font-weight="300"
+    fill="#1A1F2E"
+    letter-spacing="3.5"
+    text-anchor="start">ANABEL</text>
+
+  <text x="80" y="46"
+    font-family="'Montserrat', Arial, sans-serif"
+    font-size="11"
+    font-weight="300"
+    fill="#1A1F2E"
+    letter-spacing="3.5"
+    text-anchor="start">MERCEDES</text>
+
+  <!-- Tagline -->
+  <text x="80" y="60"
+    font-family="'Montserrat', Arial, sans-serif"
+    font-size="6.5"
+    font-weight="400"
+    fill="#6B8868"
+    letter-spacing="4"
+    text-anchor="start">MARCA PERSONAL</text>
+</svg>

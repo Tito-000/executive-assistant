@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Gravity — Wordmark</title>
+<link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+body { background: #0A0A0A; font-family: 'Inter', sans-serif; }
+
+.hdr {
+  padding: 44px 80px 36px;
+  border-bottom: 1px solid #111;
+  display: flex; justify-content: space-between; align-items: flex-end;
+}
+.hdr-t { font-size:9px;font-weight:600;letter-spacing:.4em;text-transform:uppercase;color:#1A1A1A; }
+.hdr-s { font-size:9px;color:#141414;letter-spacing:.12em; }
+
+.grid { display:grid; grid-template-columns:1fr 1fr; gap:1px; background:#111; }
+
+.cell {
+  min-height: 360px;
+  display:flex; flex-direction:column; align-items:center; justify-content:center;
+  padding:64px 56px; gap:20px;
+  position:relative; background:#0A0A0A;
+}
+.n   { position:absolute;top:26px;left:30px;font-size:8px;font-weight:600;letter-spacing:.28em;color:#181818;text-transform:uppercase; }
+.lbl { font-size:8px;font-weight:700;letter-spacing:.3em;text-transform:uppercase;color:#00E3FF;text-align:center; }
+.sub { font-size:10px;color:#1C1C1C;text-align:center;max-width:300px;line-height:1.65; }
+</style>
+</head>
+<body>
+
+<div class="hdr">
+  <div class="hdr-t">Gravity — Chakra Petch · 10 versiones</div>
+  <div class="hdr-s">Nombre completo · fuente futurista</div>
+</div>
+
+<div class="grid">
+
+  <!-- 01 · CLEAN — la base -->
+  <div class="cell" style="background:#0C0C0C;">
+    <div class="n">01</div>
+    <span style="
+      font-family:'Chakra Petch',sans-serif;
+      font-weight:700; font-size:96px; line-height:1;
+      letter-spacing:-.02em; color:#fff;
+    ">Gravity<span style="color:#00E3FF;">.</span></span>
+    <div class="lbl">700 · Mixed Case · Clean</div>
+    <div class="sub">Mixed case — la G mayúscula, el resto minúsculas. Moderno, confiado.</div>
+  </div>
+
+  <!-- 02 · TODO CAPS -->
+  <div class="cell" style="background:#090909;">
+    <div class="n">02</div>
+    <span style="
+      font-family:'Chakra Petch',sans-serif;
+      font-weight:700; font-size:88px; line-height:1;
+      letter-spacing:-.01em; color:#fff;
+      text-transform:uppercase;
+    ">GRAVITY<span style="color:#00E3FF;">.</span></span>
+    <div class="lbl">700 · All Caps</div>
+    <div class="sub">Todo en mayúsculas. Más agresivo, más presencia.</div>
+  </div>
+
+  <!-- 03 · ITALIC — Chakra Petch italic es único -->
+  <div class="cell" style="background:#080808;">
+    <div class="n">03</div>
+    <span style="
+      font-family:'Chakra Petch',sans-serif;
+      font-weight:700; font-size:96px; line-height:1;
+      letter-spacing:-.02em; color:#fff;
+      font-style:italic;
+    ">Gravity<span style="color:#00E3FF;">.</span></span>
+    <div class="lbl">700 Italic · Forward</div>
+    <div class="sub">Los ángulos del italic de Chakra Petch son únicos. El nombre avanza.</div>
+  </div>
+
+  <!-- 04 · CAPS ITALIC -->
+  <div class="cell" style="background:#0A0A0A;">
+    <div class="n">04</div>
+    <span style="
+      font-family:'Chakra Petch',sans-serif;
+      font-weight:700; font-size:88px; line-height:1;
+      letter-spacing:-.01em; color:#fff;
+      font-style:italic; text-transform:uppercase;
+    ">GRAVITY<span style="color:#00E3FF;">.</span></span>
+    <div class="lbl">700 Caps Italic</div>
+    <div class="sub">Mayúsculas + italic. Máxima presencia.</div>
+  </div>
+
+  <!-- 05 · GRAVITY en cian puro -->
+  <div class="cell" style="background:#060606;">
+    <div class="n">05</div>
+    <div style="position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:560px;height:220px;background:radial-gradient(ellipse,rgba(0,227,255,.06) 0%,transparent 65%);pointer-events:none;"></div>
+    <span style="
+      font-family:'Chakra Petch',sans-serif;
+      font-weight:700; font-size:96px; line-height:1;
+      letter-spacing:-.02em; color:#00E3FF;
+    ">Gravity</span>
+    <div class="lbl">Full Cyan</div>
+    <div class="sub">El nombre en cian. El color carga todo el peso.</div>
+  </div>
+
+  <!-- 06 · SISTEMA COMPLETO — el mejor para agencia -->
+  <div class="cell" style="background:#090909;">
+    <div class="n">06</div>
+    <div style="display:flex;flex-direction:column;align-items:flex-start;gap:10px;">
+      <span style="
+        font-family:'Chakra Petch',sans-serif;
+        font-weight:700; font-size:96px; line-height:1;
+        letter-spacing:-.02em; color:#fff;
+      ">Gravity<span style="color:#00E3FF;">.</span></span>
+      <div style="display:flex;align-items:center;gap:10px;padding-left:2px;">
+        <div style="width:16px;height:1px;background:#00E3FF;opacity:.4;"></div>
+        <span style="font-family:'Inter',sans-serif;font-size:10px;font-weight:400;letter-spacing:.5em;text-transform:uppercase;color:#1E1E1E;">Growth Agency</span>
+      </div>
+    </div>
+    <div class="lbl">+ Descriptor</div>
+    <div class="sub">Nombre + "Growth Agency". Sistema completo.</div>
+  </div>
+
+  <!-- 07 · TRACKING ABIERTO — cartel -->
+  <div class="cell" style="background:#0C0C0C;">
+    <div class="n">07</div>
+    <span style="
+      font-family:'Chakra Petch',sans-serif;
+      font-weight:700; font-size:72px; line-height:1;
+      letter-spacing:.12em; color:#fff;
+      text-transform:uppercase;
+    ">GRAVITY<span style="color:#00E3FF;letter-spacing:0;">.</span></span>
+    <div class="lbl">Wide Tracking · Caps</div>
+    <div class="sub">Tracking abierto. Las letras respiran. Tipo cartel.</div>
+  </div>
+
+  <!-- 08 · INVERTIDO — cian sólido -->
+  <div class="cell" style="background:#00E3FF;">
+    <div class="n" style="color:rgba(0,0,0,.15);">08</div>
+    <span style="
+      font-family:'Chakra Petch',sans-serif;
+      font-weight:700; font-size:96px; line-height:1;
+      letter-spacing:-.02em; color:#0A0A0A;
+    ">Gravity</span>
+    <div class="lbl" style="color:rgba(0,0,0,.3);">Inverted · Cyan Block</div>
+    <div class="sub" style="color:rgba(0,0,0,.25);">Para merch, portadas, momentos de impacto.</div>
+  </div>
+
+  <!-- 09 · G GRANDE + ravity pequeño — jerarquía interna -->
+  <div class="cell" style="background:#080808;">
+    <div class="n">09</div>
+    <div style="display:flex;align-items:flex-end;gap:0;line-height:1;">
+      <span style="
+        font-family:'Chakra Petch',sans-serif;
+        font-weight:700; font-size:140px; line-height:1;
+        letter-spacing:-.02em; color:#00E3FF;
+      ">G</span>
+      <span style="
+        font-family:'Chakra Petch',sans-serif;
+        font-weight:700; font-size:72px; line-height:1;
+        letter-spacing:-.02em; color:#fff;
+        margin-bottom:14px;
+      ">ravity.</span>
+    </div>
+    <div class="lbl">G Big · ravity Small</div>
+    <div class="sub">La G en cian domina. El resto del nombre la sigue. Jerarquía clara.</div>
+  </div>
+
+  <!-- 10 · NAVBAR REAL — en producción -->
+  <div class="cell" style="background:#0D0D0D;padding:0;justify-content:flex-start;">
+    <div class="n">10</div>
+
+    <div style="width:100%;padding:22px 40px;border-bottom:1px solid #161616;display:flex;justify-content:space-between;align-items:center;">
+      <span style="font-family:'Chakra Petch',sans-serif;font-weight:700;font-size:24px;line-height:1;letter-spacing:-.01em;color:#fff;">Gravity<span style="color:#00E3FF;">.</span></span>
+      <div style="display:flex;gap:28px;align-items:center;">
+        <span style="font-size:11px;font-weight:500;color:#2A2A2A;">Servicios</span>
+        <span style="font-size:11px;font-weight:500;color:#2A2A2A;">Trabajo</span>
+        <span style="font-size:11px;font-weight:500;color:#2A2A2A;">Nosotros</span>
+        <span style="font-size:11px;font-weight:700;color:#0A0A0A;background:#00E3FF;padding:8px 20px;">Contacto</span>
+      </div>
+    </div>
+
+    <div style="padding:44px 40px;display:flex;flex-direction:column;gap:10px;flex:1;justify-content:center;">
+      <span style="font-family:'Chakra Petch',sans-serif;font-weight:700;font-size:52px;line-height:.95;letter-spacing:-.02em;color:#fff;">Hacemos que<br>el crecimiento<br><span style="color:#00E3FF;">sea inevitable.</span></span>
+    </div>
+
+    <div class="lbl" style="position:absolute;bottom:24px;">In Context · Navbar Real</div>
+  </div>
+
+</div>
+
+<!-- STRIP FINAL -->
+<div style="background:#060606;border-top:1px solid #0F0F0F;padding:52px 80px;">
+  <div style="font-size:8px;font-weight:600;letter-spacing:.35em;text-transform:uppercase;color:#151515;margin-bottom:36px;">Gravity · Chakra Petch 700 · todos los tamaños</div>
+  <div style="display:flex;align-items:center;gap:52px;flex-wrap:wrap;">
+    <div style="display:flex;flex-direction:column;gap:8px;">
+      <span style="font-family:'Chakra Petch',sans-serif;font-weight:700;font-size:72px;line-height:1;letter-spacing:-.02em;color:#fff;">Gravity<span style="color:#00E3FF;">.</span></span>
+      <span style="font-size:7px;color:#1A1A1A;letter-spacing:.2em;text-transform:uppercase;">hero</span>
+    </div>
+    <div style="display:flex;flex-direction:column;gap:8px;">
+      <span style="font-family:'Chakra Petch',sans-serif;font-weight:700;font-size:36px;line-height:1;letter-spacing:-.01em;color:#fff;">Gravity<span style="color:#00E3FF;">.</span></span>
+      <span style="font-size:7px;color:#1A1A1A;letter-spacing:.2em;text-transform:uppercase;">navbar</span>
+    </div>
+    <div style="display:flex;flex-direction:column;gap:8px;">
+      <span style="font-family:'Chakra Petch',sans-serif;font-weight:700;font-size:22px;line-height:1;letter-spacing:0em;color:#fff;">Gravity<span style="color:#00E3FF;">.</span></span>
+      <span style="font-size:7px;color:#1A1A1A;letter-spacing:.2em;text-transform:uppercase;">small</span>
+    </div>
+    <div style="display:flex;flex-direction:column;gap:8px;">
+      <span style="font-family:'Chakra Petch',sans-serif;font-weight:700;font-size:14px;line-height:1;letter-spacing:0em;color:#fff;">Gravity<span style="color:#00E3FF;">.</span></span>
+      <span style="font-size:7px;color:#1A1A1A;letter-spacing:.2em;text-transform:uppercase;">tiny</span>
+    </div>
+    <div style="background:#fff;padding:10px 18px;display:flex;flex-direction:column;gap:8px;">
+      <span style="font-family:'Chakra Petch',sans-serif;font-weight:700;font-size:36px;line-height:1;letter-spacing:-.01em;color:#0A0A0A;">Gravity<span style="color:#0099BB;">.</span></span>
+      <span style="font-size:7px;color:#ccc;letter-spacing:.2em;text-transform:uppercase;">on white</span>
+    </div>
+    <div style="background:#00E3FF;padding:10px 18px;display:flex;flex-direction:column;gap:8px;">
+      <span style="font-family:'Chakra Petch',sans-serif;font-weight:700;font-size:36px;line-height:1;letter-spacing:-.01em;color:#0A0A0A;">Gravity</span>
+      <span style="font-size:7px;color:rgba(0,0,0,.3);letter-spacing:.2em;text-transform:uppercase;">on cyan</span>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>

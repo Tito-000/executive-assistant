@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>GRVTY — Minimal. Significativo.</title>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@300;400;700;800;900&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+body { background: #0A0A0A; font-family: 'Inter', sans-serif; }
+
+.header {
+  padding: 48px 80px 40px;
+  border-bottom: 1px solid #111;
+  display: flex; justify-content: space-between; align-items: flex-end;
+}
+.h-title { font-size:9px;font-weight:600;letter-spacing:.4em;text-transform:uppercase;color:#1A1A1A; }
+.h-rule  { font-size:9px;color:#141414;letter-spacing:.15em;font-style:italic; }
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1px;
+  background: #111;
+}
+
+.cell {
+  min-height: 420px;
+  display: flex; flex-direction: column;
+  align-items: center; justify-content: center;
+  padding: 80px 64px;
+  position: relative;
+  background: #0A0A0A;
+}
+
+.n { position:absolute;top:28px;left:32px;font-size:8px;font-weight:600;letter-spacing:.3em;color:#181818;text-transform:uppercase; }
+.idea { position:absolute;bottom:28px;left:32px;right:32px;font-size:10px;color:#1C1C1C;line-height:1.6; }
+.lbl { position:absolute;top:28px;right:32px;font-size:8px;font-weight:700;letter-spacing:.3em;color:#00E3FF;text-transform:uppercase; }
+</style>
+</head>
+<body>
+
+<div class="header">
+  <div class="h-title">GRVTY™ — Minimal. Significativo.</div>
+  <div class="h-rule">cada uno tiene una sola idea — sin relleno</div>
+</div>
+
+<div class="grid">
+
+  <!-- ════════════════════════════════
+    01 · LA Y CAE
+    La única letra diferente es la Y —
+    baja 8px del baseline. Todo lo demás
+    está perfecto. Esa sola imperfección
+    es la gravedad actuando.
+  ════════════════════════════════ -->
+  <div class="cell">
+    <div class="n">01</div>
+    <div class="lbl">Gravity Acts</div>
+
+    <div style="display:flex;align-items:baseline;line-height:1;gap:0;">
+      <span style="font-family:'Barlow Condensed',sans-serif;font-weight:900;font-size:120px;color:#fff;letter-spacing:-.025em;">GRVT</span>
+      <!-- La Y cae del baseline -->
+      <span style="font-family:'Barlow Condensed',sans-serif;font-weight:900;font-size:120px;color:#fff;letter-spacing:-.025em;position:relative;top:10px;">Y</span>
+    </div>
+
+    <div class="idea">La Y se cae. Solo ella. El resto está perfecto — y eso lo hace más perturbador. La gravedad no se anuncia: actúa.</div>
+  </div>
+
+  <!-- ════════════════════════════════
+    02 · EL PUNTO QUE PESA
+    GRVTY limpio, sin nada.
+    Solo un punto al final —
+    pero ese punto es del doble del
+    tamaño que debería ser.
+    Nada más. El peso está ahí.
+  ════════════════════════════════ -->
+  <div class="cell" style="background:#090909;">
+    <div class="n">02</div>
+    <div class="lbl">The Weight</div>
+
+    <div style="display:flex;align-items:flex-end;line-height:1;gap:0;">
+      <span style="font-family:'Barlow Condensed',sans-serif;font-weight:900;font-size:120px;color:#fff;letter-spacing:-.025em;">GRVTY</span>
+      <!-- El punto GRANDE — ocupa lo que un punto no debería -->
+      <span style="
+        display:inline-block;
+        width:22px; height:22px;
+        background:#00E3FF;
+        border-radius:50%;
+        margin-left:4px;
+        margin-bottom:14px;
+        flex-shrink:0;
+      "></span>
+    </div>
+
+    <div class="idea">El punto al final del nombre pesa el doble de lo que debería. Un solo círculo cian — grande, deliberado — dice todo lo que el nombre no puede con letras.</div>
+  </div>
+
+  <!-- ════════════════════════════════
+    03 · GRVTY EN BLANCO — SOBRE BLANCO
+    El nombre existe pero apenas.
+    Solo lo ves porque hay una línea cian
+    fina debajo. El logo es casi invisible
+    — pero la línea lo hace inevitable.
+  ════════════════════════════════ -->
+  <div class="cell" style="background:#F7F7F7;">
+    <div class="n" style="color:#DADADA;">03</div>
+    <div class="lbl" style="color:#00B8CC;">Near Invisible</div>
+
+    <div style="display:inline-flex;flex-direction:column;align-items:flex-start;gap:0;">
+      <!-- El texto en blanco sobre blanco — solo se ve por el contraste mínimo -->
+      <span style="
+        font-family:'Barlow Condensed',sans-serif;
+        font-weight:900; font-size:120px; line-height:1;
+        letter-spacing:-.025em;
+        color:#EBEBEB;
+      ">GRVTY</span>
+      <!-- La línea lo revela todo -->
+      <div style="width:100%;height:3px;background:#00E3FF;margin-top:4px;"></div>
+    </div>
+
+    <div class="idea" style="color:#C8C8C8;">Casi no lo ves. Y por eso lo ves más. La línea cian es la única razón por la que el nombre existe aquí. La gravedad es invisible — pero sus efectos no.</div>
+  </div>
+
+  <!-- ════════════════════════════════
+    04 · UN SOLO TRAZO
+    GRVTY escrito a mano con un
+    solo trazo continuo en SVG —
+    como si alguien lo firmara
+    sin levantar el lápiz.
+    Minimal absoluto.
+  ════════════════════════════════ -->
+  <div class="cell" style="background:#080808;">
+    <div class="n">04</div>
+    <div class="lbl">One Stroke</div>
+
+    <svg viewBox="0 0 440 90" width="440" height="90" style="overflow:visible;">
+      <defs>
+        <filter id="subtle-glow">
+          <feGaussianBlur stdDeviation="1" result="b"/>
+          <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+        </filter>
+      </defs>
+
+      <!-- G -->
+      <path d="M 52 12 A 38 38 0 1 0 52 76 L 52 48 L 72 48" stroke="#fff" stroke-width="5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+      <!-- R -->
+      <path d="M 104 76 L 104 12 L 104 12 Q 140 12 140 38 Q 140 54 104 54 L 140 76" stroke="#fff" stroke-width="5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+      <!-- V -->
+      <path d="M 162 12 L 184 76 L 206 12" stroke="#fff" stroke-width="5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+      <!-- T -->
+      <path d="M 224 12 L 262 12 M 243 12 L 243 76" stroke="#fff" stroke-width="5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+      <!-- Y -->
+      <path d="M 282 12 L 306 48 L 330 12 M 306 48 L 306 76" stroke="#fff" stroke-width="5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+      <!-- Punto cian -->
+      <circle cx="348" cy="72" r="6" fill="#00E3FF" filter="url(#subtle-glow)"/>
+    </svg>
+
+    <div class="idea">Solo líneas. Sin relleno, sin peso, sin efectos. El nombre dibujado — como una firma, como una ecuación. Lo mínimo posible que sigue siendo GRVTY.</div>
+  </div>
+
+  <!-- ════════════════════════════════
+    05 · ESPACIO EN BLANCO ES LA MARCA
+    El nombre pequeño, centrado,
+    rodeado de silencio absoluto.
+    El espacio vacío ES el logo.
+    Como Apple en sus inicios —
+    la confianza de no necesitar más.
+  ════════════════════════════════ -->
+  <div class="cell" style="background:#050505;min-height:480px;">
+    <div class="n">05</div>
+    <div class="lbl">Confidence</div>
+
+    <!-- El nombre en el centro — pequeño, sin disculpas -->
+    <span style="
+      font-family:'Barlow Condensed',sans-serif;
+      font-weight:900; font-size:52px; line-height:1;
+      letter-spacing:.08em;
+      color:#fff;
+      text-transform:uppercase;
+    ">GRVTY</span>
+
+    <div class="idea">El logo pequeño en el centro de nada. El espacio vacío que lo rodea no es ausencia — es presencia. La confianza de no necesitar más.</div>
+  </div>
+
+  <!-- ════════════════════════════════
+    06 · LA R COMO FLECHA
+    La pata derecha de la R se extiende
+    más de lo normal — apunta hacia abajo
+    y a la derecha. Como una flecha.
+    Como el arrow de FedEx.
+    Un solo trazo cambia todo.
+  ════════════════════════════════ -->
+  <div class="cell" style="background:#0A0A0A;">
+    <div class="n">06</div>
+    <div class="lbl">The Arrow (FedEx Principle)</div>
+
+    <svg viewBox="0 0 460 110" width="460" height="110" style="overflow:visible;">
+      <!-- G -->
+      <text x="0" y="100" font-family="'Barlow Condensed',sans-serif" font-weight="900" font-size="108" fill="#fff" letter-spacing="-2">G</text>
+
+      <!-- R — con la pata extendida hacia abajo (flecha) -->
+      <g>
+        <!-- Cuerpo de la R sin la pata -->
+        <path d="
+          M 85 100 L 85 5
+          L 85 5 Q 148 5 148 40 Q 148 65 115 68
+          L 85 68
+        " fill="none" stroke="#fff" stroke-width="22" stroke-linecap="square" stroke-linejoin="miter"/>
+        <!-- Pata extendida hacia abajo — la flecha -->
+        <line x1="112" y1="66" x2="158" y2="108" stroke="#00E3FF" stroke-width="22" stroke-linecap="square"/>
+      </g>
+
+      <!-- VTY -->
+      <text x="163" y="100" font-family="'Barlow Condensed',sans-serif" font-weight="900" font-size="108" fill="#fff" letter-spacing="-2">VTY</text>
+      <!-- punto -->
+      <text x="435" y="100" font-family="'Barlow Condensed',sans-serif" font-weight="900" font-size="108" fill="#00E3FF">.</text>
+    </svg>
+
+    <div class="idea">La pata de la R se extiende y baja — señala hacia abajo y adelante. Como la flecha del FedEx: solo lo ves cuando alguien te lo muestra. Después ya no puedes dejar de verlo.</div>
+  </div>
+
+  <!-- ════════════════════════════════
+    07 · DOS PESOS — MISMO NOMBRE
+    La primera mitad de GRVTY en 300.
+    La segunda en 900. Sin transición.
+    El corte es exactamente en el medio
+    de la V — la letra del punto de quiebre.
+  ════════════════════════════════ -->
+  <div class="cell" style="background:#080808;">
+    <div class="n">07</div>
+    <div class="lbl">The Break Point</div>
+
+    <div style="display:flex;align-items:baseline;gap:0;line-height:1;">
+      <!-- GR en delgado -->
+      <span style="font-family:'Barlow Condensed',sans-serif;font-weight:300;font-size:120px;color:rgba(255,255,255,.45);letter-spacing:-.015em;">GR</span>
+      <!-- La V — mitad delgado, mitad grueso -->
+      <svg viewBox="0 0 64 110" width="64" height="110" style="overflow:visible;margin:0 -3px;">
+        <!-- Mitad izquierda de V — thin -->
+        <polygon points="2,5 32,100 32,100 2,5" fill="none" stroke="rgba(255,255,255,.45)" stroke-width="4" stroke-linejoin="round"/>
+        <!-- Mitad derecha de V — bold -->
+        <polygon points="32,100 62,5 62,5 32,100" fill="none" stroke="#fff" stroke-width="14" stroke-linejoin="round"/>
+      </svg>
+      <!-- TY en bold -->
+      <span style="font-family:'Barlow Condensed',sans-serif;font-weight:900;font-size:120px;color:#fff;letter-spacing:-.03em;margin-left:-3px;">TY</span>
+      <span style="font-family:'Barlow Condensed',sans-serif;font-weight:900;font-size:120px;color:#00E3FF;letter-spacing:-.03em;">.</span>
+    </div>
+
+    <div class="idea">El corte pasa exactamente por la V. Antes: liviano, casi invisible. Después: sólido, definitivo. El momento exacto en que la gravedad gana.</div>
+  </div>
+
+  <!-- ════════════════════════════════
+    08 · SOLO EL CONTORNO — ROTO
+    GRVTY en outline, pero con un
+    corte horizontal que rompe todas
+    las letras al mismo nivel —
+    como si pasó algo por ahí.
+    El nombre sobrevive la ruptura.
+  ════════════════════════════════ -->
+  <div class="cell" style="background:#060606;">
+    <div class="n">08</div>
+    <div class="lbl">Rupture</div>
+
+    <svg viewBox="0 0 460 110" width="460" height="110" style="overflow:visible;">
+      <defs>
+        <clipPath id="top-only">
+          <rect x="-10" y="0" width="480" height="52"/>
+        </clipPath>
+        <clipPath id="bot-only">
+          <rect x="-10" y="58" width="480" height="60"/>
+        </clipPath>
+      </defs>
+
+      <!-- Parte superior — blanca -->
+      <g clip-path="url(#top-only)">
+        <text x="0" y="100"
+          font-family="'Barlow Condensed',sans-serif"
+          font-weight="900" font-size="108"
+          fill="none" stroke="#fff" stroke-width="2"
+          letter-spacing="-2">GRVTY.</text>
+      </g>
+
+      <!-- Parte inferior — offset 5px a la derecha, cian -->
+      <g clip-path="url(#bot-only)" transform="translate(5,0)">
+        <text x="0" y="100"
+          font-family="'Barlow Condensed',sans-serif"
+          font-weight="900" font-size="108"
+          fill="none" stroke="#00E3FF" stroke-width="2"
+          letter-spacing="-2">GRVTY.</text>
+      </g>
+
+      <!-- La brecha visible entre las dos partes -->
+      <line x1="-10" y1="55" x2="480" y2="55" stroke="#0A0A0A" stroke-width="7"/>
+    </svg>
+
+    <div class="idea">Una línea horizontal parte el nombre en dos. La mitad de abajo se desplaza 5px. El nombre está roto — pero sigue siendo legible. Inevitable aunque fracturado.</div>
+  </div>
+
+  <!-- ════════════════════════════════
+    09 · GRAVITY = INVISIBLE
+    El nombre en negro sobre negro.
+    Solo se ve la línea cian debajo.
+    Scroll o acércate para verlo.
+    La gravedad no se ve — se siente.
+  ════════════════════════════════ -->
+  <div class="cell" style="background:#0A0A0A;">
+    <div class="n">09</div>
+    <div class="lbl">Invisible Force</div>
+
+    <div style="display:inline-flex;flex-direction:column;gap:0;">
+      <!-- El nombre — casi igual al fondo -->
+      <span style="
+        font-family:'Barlow Condensed',sans-serif;
+        font-weight:900; font-size:120px; line-height:1;
+        letter-spacing:-.025em;
+        color:#141414;
+      ">GRVTY</span>
+      <!-- La línea que lo revela -->
+      <div style="height:3px;background:#00E3FF;width:100%;margin-top:4px;"></div>
+    </div>
+
+    <div class="idea">El nombre casi no existe. La línea cian debajo es lo único real. La gravedad es invisible — pero sus efectos no lo son. Solo la consecuencia se ve.</div>
+  </div>
+
+  <!-- ════════════════════════════════
+    10 · GRVTY COMPLETO
+    El logo que tiene todo:
+    El nombre. El underline que se desvanece.
+    La tagline micro.
+    Nada más. Nada menos.
+    Este es el sistema completo.
+  ════════════════════════════════ -->
+  <div class="cell" style="background:#090909;">
+    <div class="n">10</div>
+    <div class="lbl">The Complete Mark</div>
+
+    <div style="display:inline-flex;flex-direction:column;align-items:flex-start;gap:0;">
+      <span style="
+        font-family:'Barlow Condensed',sans-serif;
+        font-weight:900; font-size:120px; line-height:1;
+        letter-spacing:-.025em; color:#fff;
+      ">GRVTY</span>
+      <!-- Línea que empieza sólida y se desvanece -->
+      <div style="
+        width:100%; height:3px; margin-top:4px;
+        background: linear-gradient(90deg, #00E3FF 0%, #00E3FF 60%, rgba(0,227,255,0) 100%);
+      "></div>
+      <!-- Tagline — invisible casi -->
+      <div style="width:100%;display:flex;justify-content:flex-end;margin-top:10px;">
+        <span style="
+          font-family:'Inter',sans-serif;
+          font-size:9px; font-weight:400;
+          letter-spacing:.55em;
+          text-transform:uppercase;
+          color:#1E1E1E;
+        ">Inevitable.</span>
+      </div>
+    </div>
+
+    <div class="idea">Todo en su lugar. El nombre. La línea que empieza y no termina — como el horizonte. La tagline tan pequeña que casi no está. Sistema completo. No falta nada. No sobra nada.</div>
+  </div>
+
+</div>
+
+<!-- ══ COMPARACIÓN FINAL ══ -->
+<div style="background:#060606;border-top:1px solid #0F0F0F;padding:64px 80px;">
+  <div style="font-size:8px;font-weight:600;letter-spacing:.4em;text-transform:uppercase;color:#161616;margin-bottom:44px;">Los más fuertes — navbar size</div>
+
+  <div style="display:flex;gap:64px;align-items:flex-end;flex-wrap:wrap;">
+
+    <div style="display:flex;flex-direction:column;gap:12px;">
+      <div style="display:flex;align-items:baseline;gap:0;line-height:1;">
+        <span style="font-family:'Barlow Condensed',sans-serif;font-weight:900;font-size:42px;color:#fff;letter-spacing:-.02em;">GRVT</span>
+        <span style="font-family:'Barlow Condensed',sans-serif;font-weight:900;font-size:42px;color:#fff;letter-spacing:-.02em;position:relative;top:4px;">Y</span>
+      </div>
+      <span style="font-size:7px;color:#1A1A1A;letter-spacing:.2em;text-transform:uppercase;">01 — la Y cae</span>
+    </div>
+
+    <div style="display:flex;flex-direction:column;gap:12px;">
+      <div style="display:flex;align-items:flex-end;gap:0;">
+        <span style="font-family:'Barlow Condensed',sans-serif;font-weight:900;font-size:42px;color:#fff;letter-spacing:-.02em;">GRVTY</span>
+        <span style="display:inline-block;width:9px;height:9px;background:#00E3FF;border-radius:50%;margin-left:3px;margin-bottom:6px;flex-shrink:0;"></span>
+      </div>
+      <span style="font-size:7px;color:#1A1A1A;letter-spacing:.2em;text-transform:uppercase;">02 — el punto pesa</span>
+    </div>
+
+    <div style="display:flex;flex-direction:column;gap:12px;">
+      <div style="display:inline-flex;flex-direction:column;">
+        <span style="font-family:'Barlow Condensed',sans-serif;font-weight:900;font-size:42px;color:#fff;letter-spacing:-.025em;">GRVTY</span>
+        <div style="height:2px;background:linear-gradient(90deg,#00E3FF 0%,#00E3FF 60%,transparent 100%);margin-top:2px;"></div>
+      </div>
+      <span style="font-size:7px;color:#00E3FF;letter-spacing:.2em;text-transform:uppercase;">★ 10 — sistema completo</span>
+    </div>
+
+    <div style="display:flex;flex-direction:column;gap:12px;">
+      <div style="display:flex;align-items:baseline;gap:0;">
+        <span style="font-family:'Barlow Condensed',sans-serif;font-weight:300;font-size:42px;color:rgba(255,255,255,.4);letter-spacing:-.01em;">GR</span>
+        <span style="font-family:'Barlow Condensed',sans-serif;font-weight:900;font-size:42px;color:#fff;letter-spacing:-.02em;">VTY</span>
+        <span style="font-family:'Barlow Condensed',sans-serif;font-weight:900;font-size:42px;color:#00E3FF;letter-spacing:-.02em;">.</span>
+      </div>
+      <span style="font-size:7px;color:#1A1A1A;letter-spacing:.2em;text-transform:uppercase;">07 — el break point</span>
+    </div>
+
+  </div>
+</div>
+
+</body>
+</html>

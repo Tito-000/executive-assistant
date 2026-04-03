@@ -1,0 +1,469 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>GRVTY — Mark Concepts</title>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  body { background: #080808; font-family: 'Inter', sans-serif; padding: 0; }
+
+  .page-top {
+    padding: 52px 64px 40px;
+    border-bottom: 1px solid #181818;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+  }
+
+  .page-top-title {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 13px;
+    letter-spacing: 0.5em;
+    color: #2A2A2A;
+  }
+
+  .page-top-note {
+    font-size: 10px;
+    color: #2A2A2A;
+    letter-spacing: 0.15em;
+  }
+
+  /* ─── BIG MARK GRID ─── */
+  .marks-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 2px;
+    background: #0E0E0E;
+  }
+
+  .mark-cell {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 460px;
+    gap: 36px;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .mark-id {
+    position: absolute;
+    top: 24px;
+    left: 28px;
+    font-size: 9px;
+    font-weight: 700;
+    letter-spacing: 0.3em;
+    text-transform: uppercase;
+  }
+
+  .mark-name {
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+    text-align: center;
+  }
+
+  .mark-desc {
+    font-size: 11px;
+    font-weight: 400;
+    color: #444;
+    text-align: center;
+    max-width: 200px;
+    line-height: 1.6;
+    letter-spacing: 0.03em;
+  }
+
+  /* ─── COLOR PALETTE ROW ─── */
+  .palette-section {
+    padding: 64px;
+    border-top: 1px solid #181818;
+  }
+
+  .palette-label {
+    font-size: 9px;
+    font-weight: 700;
+    letter-spacing: 0.35em;
+    text-transform: uppercase;
+    color: #2A2A2A;
+    margin-bottom: 40px;
+  }
+
+  .palettes-grid {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 2px;
+  }
+
+  .palette-swatch-group {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+  }
+
+  .swatch-main {
+    height: 120px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 12px 14px;
+  }
+
+  .swatch-pair {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2px;
+    height: 40px;
+  }
+
+  .swatch-small { height: 40px; }
+
+  .swatch-name {
+    font-size: 9px;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+  }
+
+  .swatch-hex {
+    font-size: 9px;
+    font-weight: 400;
+    opacity: 0.6;
+    margin-top: 2px;
+    font-family: monospace;
+  }
+
+  .emotion-tag {
+    padding: 10px 14px;
+    font-size: 9px;
+    font-weight: 600;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    background: #111;
+  }
+</style>
+</head>
+<body>
+
+<div class="page-top">
+  <div class="page-top-title">GRVTY™ — Mark Exploration</div>
+  <div class="page-top-note">Pick one mark · Then we build the full system</div>
+</div>
+
+<!-- ═══════════════════════════════════════
+     6 MARK CONCEPTS
+═══════════════════════════════════════ -->
+<div class="marks-grid">
+
+  <!-- ── MARK A: G Letterform — geometric, modular ── -->
+  <div class="mark-cell" style="background:#0D0D0D;">
+    <div class="mark-id" style="color:#333">A</div>
+    <svg width="180" height="180" viewBox="0 0 100 100" fill="none">
+      <!-- Geometric G built on a strict grid — 4 bold rectangles -->
+      <!-- Left pillar -->
+      <rect x="8" y="8" width="18" height="84" fill="#00E3FF"/>
+      <!-- Top bar -->
+      <rect x="8" y="8" width="84" height="18" fill="#00E3FF"/>
+      <!-- Bottom bar -->
+      <rect x="8" y="74" width="84" height="18" fill="#00E3FF"/>
+      <!-- Right half-bar (G spur stops at center) -->
+      <rect x="74" y="46" width="18" height="28" fill="#00E3FF"/>
+      <!-- Inner spur — the horizontal tooth of the G -->
+      <rect x="46" y="46" width="28" height="14" fill="#00E3FF"/>
+    </svg>
+    <div class="mark-name" style="color:#00E3FF">Geometric G</div>
+    <div class="mark-desc">Clean. Corporate-bold. Letters built from identical rectangular units — like a logo you'd see on a skyscraper.</div>
+  </div>
+
+  <!-- ── MARK B: Pull / Vortex — orbiting dot ── -->
+  <div class="mark-cell" style="background:#050505;">
+    <div class="mark-id" style="color:#333">B</div>
+    <svg width="180" height="180" viewBox="0 0 100 100" fill="none">
+      <defs>
+        <radialGradient id="vortex" cx="50%" cy="50%" r="50%">
+          <stop offset="0%" stop-color="#00E3FF" stop-opacity="1"/>
+          <stop offset="60%" stop-color="#00E3FF" stop-opacity="0.15"/>
+          <stop offset="100%" stop-color="#00E3FF" stop-opacity="0"/>
+        </radialGradient>
+      </defs>
+      <!-- Outer glow ring -->
+      <circle cx="50" cy="50" r="46" fill="url(#vortex)" opacity="0.12"/>
+      <!-- Three concentric rings — decreasing thickness -->
+      <circle cx="50" cy="50" r="44" stroke="#00E3FF" stroke-width="1" fill="none" opacity="0.15"/>
+      <circle cx="50" cy="50" r="34" stroke="#00E3FF" stroke-width="1.5" fill="none" opacity="0.3"/>
+      <circle cx="50" cy="50" r="22" stroke="#00E3FF" stroke-width="2" fill="none" opacity="0.6"/>
+      <!-- Core — the gravitational center -->
+      <circle cx="50" cy="50" r="10" fill="#00E3FF"/>
+      <!-- Single orbiting dot — a body caught in gravity -->
+      <circle cx="50" cy="6" r="5" fill="#00E3FF"/>
+      <!-- Orbit trail arc -->
+      <path d="M 50 6 A 44 44 0 0 1 88 62" stroke="#00E3FF" stroke-width="1.2" fill="none" opacity="0.25" stroke-dasharray="3,4"/>
+    </svg>
+    <div class="mark-name" style="color:#00E3FF">Gravitational Pull</div>
+    <div class="mark-desc">A body in orbit. Rings of influence pulling inward. The center is where your business lives.</div>
+  </div>
+
+  <!-- ── MARK C: Downward arrow / force vector ── -->
+  <div class="mark-cell" style="background:#0A0A0A;">
+    <div class="mark-id" style="color:#333">C</div>
+    <svg width="180" height="180" viewBox="0 0 100 100" fill="none">
+      <!-- Arrow pointing down — gravity as a force vector -->
+      <!-- Vertical shaft -->
+      <rect x="41" y="8" width="18" height="52" fill="#00E3FF"/>
+      <!-- Arrowhead — wide triangle pointing down -->
+      <polygon points="50,92 14,46 86,46" fill="#00E3FF"/>
+      <!-- Small notch cut into arrowhead base to separate from shaft -->
+      <rect x="41" y="46" width="18" height="8" fill="#0A0A0A"/>
+    </svg>
+    <div class="mark-name" style="color:#00E3FF">Force Vector</div>
+    <div class="mark-desc">A directional arrow pointing down. Pure, simple, unmistakable. Gravity is a force — this looks like one.</div>
+  </div>
+
+  <!-- ── MARK D: Bold G with cutout angle ── -->
+  <div class="mark-cell" style="background:#0D0D0D;">
+    <div class="mark-id" style="color:#333">D</div>
+    <svg width="180" height="180" viewBox="0 0 100 100" fill="none">
+      <!-- Solid circle base -->
+      <circle cx="50" cy="50" r="46" fill="#00E3FF"/>
+      <!-- G cutout using dark shapes on the cyan circle -->
+      <!-- Inner circle cutout (creates the ring) -->
+      <circle cx="50" cy="50" r="32" fill="#0D0D0D"/>
+      <!-- Restore left arc of G (the open left piece) -->
+      <rect x="4" y="30" width="14" height="40" fill="#00E3FF"/>
+      <!-- Bottom of G arc -->
+      <rect x="4" y="64" width="52" height="14" fill="#00E3FF"/>
+      <!-- Top of G arc -->
+      <rect x="4" y="22" width="52" height="14" fill="#00E3FF"/>
+      <!-- G spur — horizontal tooth at mid-right -->
+      <rect x="50" y="44" width="30" height="14" fill="#00E3FF"/>
+    </svg>
+    <div class="mark-name" style="color:#00E3FF">Circle G</div>
+    <div class="mark-desc">The G embedded in a circle. Rounded, contained, versatile. Works great as an app icon or stamp.</div>
+  </div>
+
+  <!-- ── MARK E: Two descending bars / falling ── -->
+  <div class="mark-cell" style="background:#060606;">
+    <div class="mark-id" style="color:#333">E</div>
+    <svg width="180" height="180" viewBox="0 0 100 100" fill="none">
+      <!-- Three vertical bars, descending like a waterfall or falling blocks -->
+      <!-- Each bar is taller than the last — gravity pulling down unevenly -->
+      <rect x="10" y="28" width="22" height="64" rx="2" fill="#00E3FF"/>
+      <rect x="39" y="16" width="22" height="76" rx="2" fill="#00E3FF" opacity="0.7"/>
+      <rect x="68" y="8" width="22" height="84" rx="2" fill="#00E3FF" opacity="0.4"/>
+      <!-- Small dot below each bar (impact point) -->
+      <circle cx="21" cy="98" r="3" fill="#00E3FF"/>
+      <circle cx="50" cy="98" r="3" fill="#00E3FF" opacity="0.7"/>
+      <circle cx="79" cy="98" r="3" fill="#00E3FF" opacity="0.4"/>
+    </svg>
+    <div class="mark-name" style="color:#00E3FF">Falling Bars</div>
+    <div class="mark-desc">Three bars descending at different rates. Like a chart going up — or objects caught mid-fall. Modern, data-forward.</div>
+  </div>
+
+  <!-- ── MARK F: Letter G as negative space in solid square ── -->
+  <div class="mark-cell" style="background:#0D0D0D;">
+    <div class="mark-id" style="color:#333">F</div>
+    <svg width="180" height="180" viewBox="0 0 100 100" fill="none">
+      <!-- Full cyan square -->
+      <rect width="100" height="100" fill="#00E3FF"/>
+      <!-- G as negative black cutout inside the square -->
+      <!-- Outer G arc: remove a C-shape from inside the square -->
+      <!-- Remove inner circle of G (the arc opening) -->
+      <rect x="22" y="14" width="56" height="14" fill="#0D0D0D"/>
+      <rect x="64" y="14" width="14" height="30" fill="#0D0D0D"/>
+      <rect x="22" y="72" width="56" height="14" fill="#0D0D0D"/>
+      <rect x="14" y="14" width="14" height="72" fill="#0D0D0D"/>
+      <rect x="22" y="28" width="42" height="44" fill="#0D0D0D"/>
+      <!-- Restore the spur (the horizontal tooth of the G) -->
+      <rect x="50" y="44" width="28" height="14" fill="#00E3FF"/>
+    </svg>
+    <div class="mark-name" style="color:#00E3FF">G in Block</div>
+    <div class="mark-desc">The G lives as negative space cut from a solid cyan square. Like UNFAIR's U block — but for GRVTY. Bold. Heavy. Iconic.</div>
+  </div>
+
+</div>
+
+<!-- ═══════════════════════════════════════
+     COLOR PALETTES — DIFFERENT EMOTIONS
+═══════════════════════════════════════ -->
+<div class="palette-section">
+
+  <div class="palette-label">Color Palettes — Different Emotions · Pick one with the mark</div>
+
+  <div class="palettes-grid">
+
+    <!-- PALETTE 1: Cyber / Electric — current -->
+    <div class="palette-swatch-group">
+      <div class="emotion-tag" style="color:#00E3FF">Electric</div>
+      <div class="swatch-main" style="background:#0D0D0D">
+        <div class="swatch-name" style="color:#fff">Black</div>
+        <div class="swatch-hex" style="color:#fff">#0D0D0D</div>
+      </div>
+      <div class="swatch-pair">
+        <div class="swatch-small" style="background:#00E3FF"></div>
+        <div class="swatch-small" style="background:#0099BB"></div>
+      </div>
+      <div style="padding:10px 14px;background:#111;font-size:10px;color:#444;line-height:1.5">
+        Tech agency. AI. Future. Cold precision.
+      </div>
+    </div>
+
+    <!-- PALETTE 2: Neon Green — growth, money -->
+    <div class="palette-swatch-group">
+      <div class="emotion-tag" style="color:#39FF14">Growth</div>
+      <div class="swatch-main" style="background:#080808">
+        <div class="swatch-name" style="color:#fff">Deep Black</div>
+        <div class="swatch-hex" style="color:#fff">#080808</div>
+      </div>
+      <div class="swatch-pair">
+        <div class="swatch-small" style="background:#39FF14"></div>
+        <div class="swatch-small" style="background:#1A7A00"></div>
+      </div>
+      <div style="padding:10px 14px;background:#111;font-size:10px;color:#444;line-height:1.5">
+        Money. Results. Growth hacking. Raw performance.
+      </div>
+    </div>
+
+    <!-- PALETTE 3: Hot Orange — aggressive, conversion -->
+    <div class="palette-swatch-group">
+      <div class="emotion-tag" style="color:#FF5C00">Aggressive</div>
+      <div class="swatch-main" style="background:#0F0800">
+        <div class="swatch-name" style="color:#fff">Near Black</div>
+        <div class="swatch-hex" style="color:#fff">#0F0800</div>
+      </div>
+      <div class="swatch-pair">
+        <div class="swatch-small" style="background:#FF5C00"></div>
+        <div class="swatch-small" style="background:#FF9A3C"></div>
+      </div>
+      <div style="padding:10px 14px;background:#111;font-size:10px;color:#444;line-height:1.5">
+        Urgency. Sales. Conversion. High energy.
+      </div>
+    </div>
+
+    <!-- PALETTE 4: Violet / Purple — premium AI -->
+    <div class="palette-swatch-group">
+      <div class="emotion-tag" style="color:#A855F7">Premium AI</div>
+      <div class="swatch-main" style="background:#09060F">
+        <div class="swatch-name" style="color:#fff">Dark Void</div>
+        <div class="swatch-hex" style="color:#fff">#09060F</div>
+      </div>
+      <div class="swatch-pair">
+        <div class="swatch-small" style="background:#A855F7"></div>
+        <div class="swatch-small" style="background:#6B21A8"></div>
+      </div>
+      <div style="padding:10px 14px;background:#111;font-size:10px;color:#444;line-height:1.5">
+        Luxury AI. Sophisticated. Premium pricing.
+      </div>
+    </div>
+
+    <!-- PALETTE 5: Red / Blood — disruptive, fearless -->
+    <div class="palette-swatch-group">
+      <div class="emotion-tag" style="color:#FF1A1A">Disruptive</div>
+      <div class="swatch-main" style="background:#0D0000">
+        <div class="swatch-name" style="color:#fff">Deep Red-Black</div>
+        <div class="swatch-hex" style="color:#fff">#0D0000</div>
+      </div>
+      <div class="swatch-pair">
+        <div class="swatch-small" style="background:#FF1A1A"></div>
+        <div class="swatch-small" style="background:#990000"></div>
+      </div>
+      <div style="padding:10px 14px;background:#111;font-size:10px;color:#444;line-height:1.5">
+        Fearless. Challenger brand. Breaks rules.
+      </div>
+    </div>
+
+    <!-- PALETTE 6: Gold / Black — authority -->
+    <div class="palette-swatch-group">
+      <div class="emotion-tag" style="color:#D4AF37">Authority</div>
+      <div class="swatch-main" style="background:#0A0800">
+        <div class="swatch-name" style="color:#fff">Dark Gold-Black</div>
+        <div class="swatch-hex" style="color:#fff">#0A0800</div>
+      </div>
+      <div class="swatch-pair">
+        <div class="swatch-small" style="background:#D4AF37"></div>
+        <div class="swatch-small" style="background:#8B6914"></div>
+      </div>
+      <div style="padding:10px 14px;background:#111;font-size:10px;color:#444;line-height:1.5">
+        Elite. Exclusive. Premium results. High-ticket.
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Mark + palette combos preview -->
+  <div style="margin-top:2px;display:grid;grid-template-columns:repeat(6,1fr);gap:2px;">
+
+    <div style="background:#0D0D0D;padding:32px 24px;display:flex;flex-direction:column;align-items:center;gap:14px;">
+      <svg width="56" height="56" viewBox="0 0 100 100" fill="none">
+        <rect x="8" y="8" width="18" height="84" fill="#00E3FF"/>
+        <rect x="8" y="8" width="84" height="18" fill="#00E3FF"/>
+        <rect x="8" y="74" width="84" height="18" fill="#00E3FF"/>
+        <rect x="74" y="46" width="18" height="28" fill="#00E3FF"/>
+        <rect x="46" y="46" width="28" height="14" fill="#00E3FF"/>
+      </svg>
+      <span style="font-family:'Bebas Neue',sans-serif;font-size:28px;letter-spacing:0.08em;color:#fff">GRVTY<span style="color:#00E3FF">.</span></span>
+    </div>
+
+    <div style="background:#080808;padding:32px 24px;display:flex;flex-direction:column;align-items:center;gap:14px;">
+      <svg width="56" height="56" viewBox="0 0 100 100" fill="none">
+        <rect x="8" y="8" width="18" height="84" fill="#39FF14"/>
+        <rect x="8" y="8" width="84" height="18" fill="#39FF14"/>
+        <rect x="8" y="74" width="84" height="18" fill="#39FF14"/>
+        <rect x="74" y="46" width="18" height="28" fill="#39FF14"/>
+        <rect x="46" y="46" width="28" height="14" fill="#39FF14"/>
+      </svg>
+      <span style="font-family:'Bebas Neue',sans-serif;font-size:28px;letter-spacing:0.08em;color:#fff">GRVTY<span style="color:#39FF14">.</span></span>
+    </div>
+
+    <div style="background:#0F0800;padding:32px 24px;display:flex;flex-direction:column;align-items:center;gap:14px;">
+      <svg width="56" height="56" viewBox="0 0 100 100" fill="none">
+        <rect x="8" y="8" width="18" height="84" fill="#FF5C00"/>
+        <rect x="8" y="8" width="84" height="18" fill="#FF5C00"/>
+        <rect x="8" y="74" width="84" height="18" fill="#FF5C00"/>
+        <rect x="74" y="46" width="18" height="28" fill="#FF5C00"/>
+        <rect x="46" y="46" width="28" height="14" fill="#FF5C00"/>
+      </svg>
+      <span style="font-family:'Bebas Neue',sans-serif;font-size:28px;letter-spacing:0.08em;color:#fff">GRVTY<span style="color:#FF5C00">.</span></span>
+    </div>
+
+    <div style="background:#09060F;padding:32px 24px;display:flex;flex-direction:column;align-items:center;gap:14px;">
+      <svg width="56" height="56" viewBox="0 0 100 100" fill="none">
+        <rect x="8" y="8" width="18" height="84" fill="#A855F7"/>
+        <rect x="8" y="8" width="84" height="18" fill="#A855F7"/>
+        <rect x="8" y="74" width="84" height="18" fill="#A855F7"/>
+        <rect x="74" y="46" width="18" height="28" fill="#A855F7"/>
+        <rect x="46" y="46" width="28" height="14" fill="#A855F7"/>
+      </svg>
+      <span style="font-family:'Bebas Neue',sans-serif;font-size:28px;letter-spacing:0.08em;color:#fff">GRVTY<span style="color:#A855F7">.</span></span>
+    </div>
+
+    <div style="background:#0D0000;padding:32px 24px;display:flex;flex-direction:column;align-items:center;gap:14px;">
+      <svg width="56" height="56" viewBox="0 0 100 100" fill="none">
+        <rect x="8" y="8" width="18" height="84" fill="#FF1A1A"/>
+        <rect x="8" y="8" width="84" height="18" fill="#FF1A1A"/>
+        <rect x="8" y="74" width="84" height="18" fill="#FF1A1A"/>
+        <rect x="74" y="46" width="18" height="28" fill="#FF1A1A"/>
+        <rect x="46" y="46" width="28" height="14" fill="#FF1A1A"/>
+      </svg>
+      <span style="font-family:'Bebas Neue',sans-serif;font-size:28px;letter-spacing:0.08em;color:#fff">GRVTY<span style="color:#FF1A1A">.</span></span>
+    </div>
+
+    <div style="background:#0A0800;padding:32px 24px;display:flex;flex-direction:column;align-items:center;gap:14px;">
+      <svg width="56" height="56" viewBox="0 0 100 100" fill="none">
+        <rect x="8" y="8" width="18" height="84" fill="#D4AF37"/>
+        <rect x="8" y="8" width="84" height="18" fill="#D4AF37"/>
+        <rect x="8" y="74" width="84" height="18" fill="#D4AF37"/>
+        <rect x="74" y="46" width="18" height="28" fill="#D4AF37"/>
+        <rect x="46" y="46" width="28" height="14" fill="#D4AF37"/>
+      </svg>
+      <span style="font-family:'Bebas Neue',sans-serif;font-size:28px;letter-spacing:0.08em;color:#fff">GRVTY<span style="color:#D4AF37">.</span></span>
+    </div>
+
+  </div>
+
+</div>
+
+</body>
+</html>

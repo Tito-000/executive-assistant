@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>GRVTY — Monogram Concepts</title>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;600;700;900&family=Barlow+Condensed:wght@700;800;900&family=Oswald:wght@600;700&family=Black+Han+Sans&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+    background: #0F0F0F;
+    font-family: 'Inter', sans-serif;
+  }
+
+  .page-top {
+    padding: 48px 64px 40px;
+    border-bottom: 1px solid #1A1A1A;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+  }
+
+  .page-top-title {
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 0.4em;
+    text-transform: uppercase;
+    color: #2A2A2A;
+  }
+
+  .page-top-sub {
+    font-size: 10px;
+    color: #222;
+    letter-spacing: 0.15em;
+  }
+
+  /* ─── MONOGRAM GRID ─── */
+  .mono-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 2px;
+    background: #111;
+  }
+
+  .mono-cell {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 480px;
+    gap: 40px;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .mono-id {
+    position: absolute;
+    top: 24px;
+    left: 28px;
+    font-size: 9px;
+    font-weight: 700;
+    letter-spacing: 0.3em;
+    text-transform: uppercase;
+    color: #2A2A2A;
+  }
+
+  .mono-meta {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+  }
+
+  .mono-name {
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 0.3em;
+    text-transform: uppercase;
+    text-align: center;
+  }
+
+  .mono-desc {
+    font-size: 11px;
+    font-weight: 400;
+    color: #3A3A3A;
+    text-align: center;
+    max-width: 220px;
+    line-height: 1.6;
+  }
+
+  /* The actual monogram mark — built from HTML/CSS text */
+  .mark-wrap {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  /* ─── COLOR COMBOS ─── */
+  .combos-section {
+    padding: 64px;
+    border-top: 1px solid #1A1A1A;
+  }
+
+  .combos-label {
+    font-size: 9px;
+    font-weight: 700;
+    letter-spacing: 0.35em;
+    text-transform: uppercase;
+    color: #2A2A2A;
+    margin-bottom: 2px;
+  }
+
+  .combos-grid {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 2px;
+  }
+
+  .combo-cell {
+    padding: 40px 28px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    min-height: 220px;
+    justify-content: center;
+  }
+
+  .combo-label {
+    font-size: 9px;
+    font-weight: 600;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    text-align: center;
+  }
+
+  .combo-wordmark {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 20px;
+    font-weight: 900;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+  }
+</style>
+</head>
+<body>
+
+<div class="page-top">
+  <div class="page-top-title">GRVTY™ — Monogram Exploration</div>
+  <div class="page-top-sub">NoGood style · Pick mark + color</div>
+</div>
+
+<div class="mono-grid">
+
+  <!-- ── MARK 1: GV block — NoGood exact style ── -->
+  <div class="mono-cell" style="background:#181818;">
+    <div class="mono-id">01</div>
+    <div class="mark-wrap">
+      <!-- GV as two ultra-bold letters side by side, NoGood style -->
+      <div style="
+        background: #FAFA00;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        padding: 10px 16px;
+        gap: 2px;
+      ">
+        <span style="
+          font-family: 'Barlow Condensed', sans-serif;
+          font-size: 96px;
+          font-weight: 900;
+          line-height: 1;
+          color: #181818;
+          letter-spacing: -0.04em;
+        ">GV</span>
+      </div>
+    </div>
+    <div class="mono-meta">
+      <div class="mono-name" style="color:#FAFA00">GV Block</div>
+      <div class="mono-desc">Exactamente como NoGood. Dos iniciales, tipografía ultra-bold condensed, bloque de color.</div>
+    </div>
+  </div>
+
+  <!-- ── MARK 2: G solo — oversized, half-cut ── -->
+  <div class="mono-cell" style="background:#181818;">
+    <div class="mono-id">02</div>
+    <div class="mark-wrap">
+      <!-- G solo, cropped — confident, like a stamp -->
+      <div style="
+        background: #00E3FF;
+        width: 160px;
+        height: 160px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        overflow: hidden;
+        position: relative;
+      ">
+        <span style="
+          font-family: 'Barlow Condensed', sans-serif;
+          font-size: 200px;
+          font-weight: 900;
+          line-height: 1;
+          color: #181818;
+          letter-spacing: -0.04em;
+          position: absolute;
+          top: -8px;
+          left: 4px;
+        ">G</span>
+      </div>
+    </div>
+    <div class="mono-meta">
+      <div class="mono-name" style="color:#00E3FF">G Stamp</div>
+      <div class="mono-desc">La G sola, oversized, cortada por el marco. Agresivo, seguro, imposible de ignorar.</div>
+    </div>
+  </div>
+
+  <!-- ── MARK 3: GR stacked ── -->
+  <div class="mono-cell" style="background:#181818;">
+    <div class="mono-id">03</div>
+    <div class="mark-wrap">
+      <!-- GR stacked vertically -->
+      <div style="
+        background: #A855F7;
+        display: inline-flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 8px 20px 12px;
+        gap: 0px;
+      ">
+        <span style="
+          font-family: 'Barlow Condensed', sans-serif;
+          font-size: 80px;
+          font-weight: 900;
+          line-height: 0.9;
+          color: #181818;
+          letter-spacing: -0.02em;
+          display: block;
+        ">G</span>
+        <span style="
+          font-family: 'Barlow Condensed', sans-serif;
+          font-size: 80px;
+          font-weight: 900;
+          line-height: 0.9;
+          color: #181818;
+          letter-spacing: -0.02em;
+          display: block;
+        ">R</span>
+      </div>
+    </div>
+    <div class="mono-meta">
+      <div class="mono-name" style="color:#A855F7">GR Stack</div>
+      <div class="mono-desc">Dos letras apiladas. Formato cuadrado, perfecto para avatar e ícono de app.</div>
+    </div>
+  </div>
+
+  <!-- ── MARK 4: GV outlined ── -->
+  <div class="mono-cell" style="background:#0D0D0D;">
+    <div class="mono-id">04</div>
+    <div class="mark-wrap">
+      <!-- GV outlined — just the border, no fill -->
+      <div style="
+        border: 6px solid #FF5C00;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        padding: 8px 14px;
+        gap: 2px;
+      ">
+        <span style="
+          font-family: 'Barlow Condensed', sans-serif;
+          font-size: 96px;
+          font-weight: 900;
+          line-height: 1;
+          color: #FF5C00;
+          letter-spacing: -0.04em;
+          -webkit-text-stroke: 0px;
+        ">GV</span>
+      </div>
+    </div>
+    <div class="mono-meta">
+      <div class="mono-name" style="color:#FF5C00">GV Outline</div>
+      <div class="mono-desc">Sin relleno. Solo borde. Funciona perfecto sobre imágenes o fondos con textura.</div>
+    </div>
+  </div>
+
+  <!-- ── MARK 5: G negative — white on black inside yellow frame ── -->
+  <div class="mono-cell" style="background:#181818;">
+    <div class="mono-id">05</div>
+    <div class="mark-wrap">
+      <!-- Yellow outer block, black G cutout feel via color -->
+      <div style="
+        background: #39FF14;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        padding: 12px 20px;
+        position: relative;
+      ">
+        <span style="
+          font-family: 'Barlow Condensed', sans-serif;
+          font-size: 96px;
+          font-weight: 900;
+          line-height: 1;
+          color: #181818;
+          letter-spacing: -0.04em;
+          -webkit-text-stroke: 6px #39FF14;
+          paint-order: stroke fill;
+        ">G</span>
+        <span style="
+          font-family: 'Barlow Condensed', sans-serif;
+          font-size: 96px;
+          font-weight: 900;
+          line-height: 1;
+          color: #181818;
+          letter-spacing: -0.04em;
+          margin-left: -8px;
+        ">V</span>
+      </div>
+    </div>
+    <div class="mono-meta">
+      <div class="mono-name" style="color:#39FF14">GV Neon</div>
+      <div class="mono-desc">Verde neón. Energía de growth hacking. Money vibes. Para clientes que quieren resultados.</div>
+    </div>
+  </div>
+
+  <!-- ── MARK 6: G solo — dark on light, editorial ── -->
+  <div class="mono-cell" style="background:#F0F0F0;">
+    <div class="mono-id">06</div>
+    <div class="mark-wrap">
+      <!-- Dark editorial — like a magazine masthead -->
+      <div style="
+        background: #0D0D0D;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        padding: 10px 18px;
+        gap: 4px;
+      ">
+        <span style="
+          font-family: 'Barlow Condensed', sans-serif;
+          font-size: 96px;
+          font-weight: 900;
+          line-height: 1;
+          color: #D4AF37;
+          letter-spacing: -0.04em;
+        ">G</span>
+        <div style="display:flex;flex-direction:column;justify-content:flex-end;padding-bottom:14px;">
+          <span style="
+            font-family: 'Barlow Condensed', sans-serif;
+            font-size: 32px;
+            font-weight: 900;
+            line-height: 1;
+            color: #fff;
+            letter-spacing: 0.05em;
+          ">RVTY</span>
+          <span style="
+            font-size: 9px;
+            font-weight: 600;
+            letter-spacing: 0.3em;
+            text-transform: uppercase;
+            color: #555;
+            margin-top: 4px;
+          ">INEVITABLE</span>
+        </div>
+      </div>
+    </div>
+    <div class="mono-meta">
+      <div class="mono-name" style="color:#888">Editorial — G Big + RVTY</div>
+      <div class="mono-desc">La G domina en dorado. El resto del nombre en blanco más pequeño. Premium, tipo masthead de revista.</div>
+    </div>
+  </div>
+
+</div>
+
+<!-- ── COLOR COMBOS ── -->
+<div class="combos-section">
+  <div class="combos-label">Same mark · 6 color personalities</div>
+
+  <div style="margin-top:2px" class="combos-grid">
+
+    <!-- Electric Cyan -->
+    <div class="combo-cell" style="background:#181818;">
+      <div style="background:#00E3FF;padding:8px 14px;">
+        <span style="font-family:'Barlow Condensed',sans-serif;font-size:72px;font-weight:900;line-height:1;color:#181818;letter-spacing:-0.04em;">GV</span>
+      </div>
+      <span style="font-family:'Barlow Condensed',sans-serif;font-size:22px;font-weight:900;letter-spacing:0.1em;color:#fff">GRVTY<span style="color:#00E3FF">.</span></span>
+      <div class="combo-label" style="color:#00E3FF">Electric · AI · Tech</div>
+    </div>
+
+    <!-- Yellow / NoGood -->
+    <div class="combo-cell" style="background:#181818;">
+      <div style="background:#FAFA00;padding:8px 14px;">
+        <span style="font-family:'Barlow Condensed',sans-serif;font-size:72px;font-weight:900;line-height:1;color:#181818;letter-spacing:-0.04em;">GV</span>
+      </div>
+      <span style="font-family:'Barlow Condensed',sans-serif;font-size:22px;font-weight:900;letter-spacing:0.1em;color:#fff">GRVTY<span style="color:#FAFA00">.</span></span>
+      <div class="combo-label" style="color:#FAFA00">Irreverent · Bold · NoGood</div>
+    </div>
+
+    <!-- Neon Green -->
+    <div class="combo-cell" style="background:#080808;">
+      <div style="background:#39FF14;padding:8px 14px;">
+        <span style="font-family:'Barlow Condensed',sans-serif;font-size:72px;font-weight:900;line-height:1;color:#080808;letter-spacing:-0.04em;">GV</span>
+      </div>
+      <span style="font-family:'Barlow Condensed',sans-serif;font-size:22px;font-weight:900;letter-spacing:0.1em;color:#fff">GRVTY<span style="color:#39FF14">.</span></span>
+      <div class="combo-label" style="color:#39FF14">Growth · Money · Results</div>
+    </div>
+
+    <!-- Orange -->
+    <div class="combo-cell" style="background:#0F0800;">
+      <div style="background:#FF5C00;padding:8px 14px;">
+        <span style="font-family:'Barlow Condensed',sans-serif;font-size:72px;font-weight:900;line-height:1;color:#0F0800;letter-spacing:-0.04em;">GV</span>
+      </div>
+      <span style="font-family:'Barlow Condensed',sans-serif;font-size:22px;font-weight:900;letter-spacing:0.1em;color:#fff">GRVTY<span style="color:#FF5C00">.</span></span>
+      <div class="combo-label" style="color:#FF5C00">Aggressive · Urgent · Sales</div>
+    </div>
+
+    <!-- Purple -->
+    <div class="combo-cell" style="background:#09060F;">
+      <div style="background:#A855F7;padding:8px 14px;">
+        <span style="font-family:'Barlow Condensed',sans-serif;font-size:72px;font-weight:900;line-height:1;color:#09060F;letter-spacing:-0.04em;">GV</span>
+      </div>
+      <span style="font-family:'Barlow Condensed',sans-serif;font-size:22px;font-weight:900;letter-spacing:0.1em;color:#fff">GRVTY<span style="color:#A855F7">.</span></span>
+      <div class="combo-label" style="color:#A855F7">Premium AI · Luxury · Elite</div>
+    </div>
+
+    <!-- Gold -->
+    <div class="combo-cell" style="background:#0A0800;">
+      <div style="background:#D4AF37;padding:8px 14px;">
+        <span style="font-family:'Barlow Condensed',sans-serif;font-size:72px;font-weight:900;line-height:1;color:#0A0800;letter-spacing:-0.04em;">GV</span>
+      </div>
+      <span style="font-family:'Barlow Condensed',sans-serif;font-size:22px;font-weight:900;letter-spacing:0.1em;color:#fff">GRVTY<span style="color:#D4AF37">.</span></span>
+      <div class="combo-label" style="color:#D4AF37">Authority · High-ticket · Power</div>
+    </div>
+
+  </div>
+
+</div>
+
+</body>
+</html>

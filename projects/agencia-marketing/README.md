@@ -1,5 +1,6 @@
-# Proyecto: Lanzar la Agencia de Marketing Digital
+# Proyecto: Gravity — Agencia de Marketing Digital
 
+**Nombre:** Gravity
 **Estado:** Activo
 **Prioridad:** Top 3
 **Meta:** 2-3 clientes nuevos en 60 días | Escalar a $8,000/mes para dic 2026
@@ -9,7 +10,7 @@
 
 - Martin ya opera como agencia — 2 clientes activos (Memorama, Dra. Aurys Mercedes)
 - Ingresos actuales: ~$2,000/mes
-- No tiene nombre, marca, ni sistemas formales
+- Nombre: **Gravity** | En proceso de formalización de marca y sistemas
 - WordPress básico existe: `martinmercedes100-vhpce.wordpress.com`
 - Propuestas ya generadas para Dr. Welbin Paredes y Dra. Aurys Mercedes
 - Pricing actual: $2,000/proyecto + $97/mes mantenimiento (referencia contrato Dra. Aurys)
@@ -57,7 +58,7 @@ Elegir uno. Criterios: memorable, profesional, funciona en español e inglés, c
 
 ## Fase 1 — Identidad + Paquetes (Semana 1)
 
-- [ ] Elegir nombre de la agencia (de la tabla arriba)
+- [x] Elegir nombre de la agencia → **Gravity**
 - [ ] Definir posicionamiento: "Marketing digital para empresas medianas en RD que quieren crecer"
 - [ ] Validar los 3 paquetes de pricing (ajustar si es necesario)
 - [ ] Definir qué incluye y qué NO incluye cada paquete (cerrar scope)

@@ -1,0 +1,500 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Gravity — Brand Identity</title>
+<link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@400;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+body { background: #0A0A0A; font-family: 'Inter', sans-serif; color: #fff; }
+
+/* ─── TIPOGRAFÍA BASE ─── */
+.eyebrow {
+  font-size: 9px; font-weight: 600;
+  letter-spacing: .45em; text-transform: uppercase; color: #1E1E1E;
+}
+.section-title {
+  font-size: 9px; font-weight: 600;
+  letter-spacing: .4em; text-transform: uppercase; color: #1A1A1A;
+}
+.caption {
+  font-size: 9px; font-weight: 500;
+  letter-spacing: .25em; text-transform: uppercase; color: #222;
+}
+.note {
+  font-size: 10px; font-weight: 400;
+  color: #1C1C1C; line-height: 1.7;
+}
+
+/* ─── WORDMARK ─── */
+.wm {
+  font-family: 'Chakra Petch', sans-serif;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: .12em;
+  line-height: 1;
+  color: #fff;
+}
+.accent { color: #00E3FF; letter-spacing: 0; }
+
+/* ─── ÍCONO ─── */
+.icon-box {
+  background: #141414;
+  border-radius: 16px;
+  display: flex; align-items: center; justify-content: center;
+  flex-shrink: 0;
+}
+.icon-box .g {
+  font-family: 'Chakra Petch', sans-serif;
+  font-weight: 700; color: #fff; line-height: 1; letter-spacing: -.01em;
+}
+.icon-box .dot { color: #00E3FF; }
+
+.icon-cyan { background: #00E3FF; }
+.icon-cyan .g { color: #0A0A0A; }
+.icon-white { background: #fff; }
+.icon-white .g { color: #0A0A0A; }
+.icon-white .dot { color: #007FA8; }
+
+/* ─── DIVIDER ─── */
+.divider { width: 100%; height: 1px; background: #111; }
+.divider-accent { width: 100%; height: 1px; background: linear-gradient(90deg, #00E3FF, transparent); }
+</style>
+</head>
+<body>
+
+<!-- ══════════════════════════════════════════════════
+  PORTADA
+══════════════════════════════════════════════════ -->
+<div style="min-height:100vh;display:flex;flex-direction:column;justify-content:space-between;padding:64px 80px;">
+
+  <!-- Top bar -->
+  <div style="display:flex;justify-content:space-between;align-items:center;">
+    <div class="eyebrow">Gravity — Brand Identity System</div>
+    <div class="eyebrow">2025</div>
+  </div>
+
+  <!-- Centro — el logo grande -->
+  <div style="display:flex;flex-direction:column;align-items:flex-start;gap:32px;">
+    <!-- Ícono + wordmark -->
+    <div style="display:flex;align-items:center;gap:28px;">
+      <div class="icon-box" style="width:88px;height:88px;">
+        <span class="g" style="font-size:56px;">G<span class="dot" style="font-size:42px;vertical-align:middle;line-height:0;">.</span></span>
+      </div>
+      <span class="wm" style="font-size:96px;">GRAVITY<span class="accent">.</span></span>
+    </div>
+    <div class="eyebrow" style="color:#00E3FF;opacity:.5;">Growth Agency · Inevitable.</div>
+  </div>
+
+  <!-- Bottom -->
+  <div style="display:flex;justify-content:space-between;align-items:flex-end;">
+    <div class="note" style="max-width:320px;">
+      Identidad de marca oficial.<br>
+      Wordmark · Brandmark · Íconos · Usos.
+    </div>
+    <div class="eyebrow">Confidencial</div>
+  </div>
+
+</div>
+
+<div class="divider-accent"></div>
+
+
+<!-- ══════════════════════════════════════════════════
+  SECCIÓN 01 — LOGO OFICIAL
+══════════════════════════════════════════════════ -->
+<div style="padding:80px 80px 72px;">
+
+  <div class="section-title" style="margin-bottom:64px;">01 — Logo Oficial</div>
+
+  <!-- El logo a tamaño máximo, centrado, con espacio -->
+  <div style="
+    background:#060606;
+    border:1px solid #141414;
+    border-radius:4px;
+    padding:100px 80px;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+    gap:0;
+    min-height:320px;
+    position:relative;
+  ">
+    <!-- Marca de agua de fondo -->
+    <div style="position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:600px;height:300px;background:radial-gradient(ellipse,rgba(0,227,255,.04) 0%,transparent 65%);pointer-events:none;"></div>
+
+    <span class="wm" style="font-size:128px;position:relative;">GRAVITY<span class="accent">.</span></span>
+  </div>
+
+  <!-- Specs del wordmark -->
+  <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:#111;margin-top:1px;">
+    <div style="background:#0A0A0A;padding:24px 28px;display:flex;flex-direction:column;gap:6px;">
+      <div class="caption">Fuente</div>
+      <div style="font-size:13px;font-weight:500;color:#2A2A2A;margin-top:2px;">Chakra Petch</div>
+    </div>
+    <div style="background:#0A0A0A;padding:24px 28px;display:flex;flex-direction:column;gap:6px;">
+      <div class="caption">Peso</div>
+      <div style="font-size:13px;font-weight:500;color:#2A2A2A;margin-top:2px;">700 · Bold</div>
+    </div>
+    <div style="background:#0A0A0A;padding:24px 28px;display:flex;flex-direction:column;gap:6px;">
+      <div class="caption">Tracking</div>
+      <div style="font-size:13px;font-weight:500;color:#2A2A2A;margin-top:2px;">0.12em</div>
+    </div>
+    <div style="background:#0A0A0A;padding:24px 28px;display:flex;flex-direction:column;gap:6px;">
+      <div class="caption">Colores</div>
+      <div style="display:flex;align-items:center;gap:8px;margin-top:4px;">
+        <div style="width:12px;height:12px;background:#fff;border-radius:2px;"></div>
+        <span style="font-size:11px;color:#2A2A2A;">#FFFFFF</span>
+        <div style="width:12px;height:12px;background:#00E3FF;border-radius:2px;margin-left:8px;"></div>
+        <span style="font-size:11px;color:#2A2A2A;">#00E3FF</span>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<div class="divider"></div>
+
+
+<!-- ══════════════════════════════════════════════════
+  SECCIÓN 02 — BRANDMARK (ÍCONO OFICIAL)
+══════════════════════════════════════════════════ -->
+<div style="padding:80px 80px 72px;">
+
+  <div class="section-title" style="margin-bottom:64px;">02 — Brandmark Oficial</div>
+
+  <div style="display:grid;grid-template-columns:1fr 1fr;gap:1px;background:#111;">
+
+    <!-- El ícono grande — versión principal -->
+    <div style="background:#060606;padding:80px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:32px;min-height:360px;">
+      <div class="icon-box" style="width:160px;height:160px;border-radius:28px;">
+        <span class="g" style="font-size:104px;">G<span class="dot" style="font-size:80px;vertical-align:middle;line-height:0;">.</span></span>
+      </div>
+      <div class="caption" style="color:#00E3FF;">Versión principal · Dark</div>
+    </div>
+
+    <!-- Las 3 variantes -->
+    <div style="background:#0A0A0A;padding:56px;display:flex;flex-direction:column;justify-content:center;gap:40px;">
+
+      <div class="caption" style="margin-bottom:4px;">Variantes oficiales</div>
+
+      <div style="display:flex;align-items:center;gap:24px;">
+        <!-- Dark -->
+        <div class="icon-box" style="width:80px;height:80px;border-radius:14px;">
+          <span class="g" style="font-size:52px;">G<span class="dot" style="font-size:38px;vertical-align:middle;line-height:0;">.</span></span>
+        </div>
+        <div style="display:flex;flex-direction:column;gap:4px;">
+          <div style="font-size:11px;font-weight:600;color:#2A2A2A;">Dark</div>
+          <div style="font-size:10px;color:#1C1C1C;">Uso principal · fondos oscuros</div>
+        </div>
+      </div>
+
+      <div style="display:flex;align-items:center;gap:24px;">
+        <!-- Cyan -->
+        <div class="icon-box icon-cyan" style="width:80px;height:80px;border-radius:14px;">
+          <span class="g" style="font-size:52px;color:#0A0A0A;">G</span>
+        </div>
+        <div style="display:flex;flex-direction:column;gap:4px;">
+          <div style="font-size:11px;font-weight:600;color:#2A2A2A;">Cyan</div>
+          <div style="font-size:10px;color:#1C1C1C;">Acento · momentos de impacto</div>
+        </div>
+      </div>
+
+      <div style="display:flex;align-items:center;gap:24px;">
+        <!-- White -->
+        <div class="icon-box icon-white" style="width:80px;height:80px;border-radius:14px;">
+          <span class="g" style="font-size:52px;color:#0A0A0A;">G<span style="color:#007FA8;font-size:38px;vertical-align:middle;line-height:0;">.</span></span>
+        </div>
+        <div style="display:flex;flex-direction:column;gap:4px;">
+          <div style="font-size:11px;font-weight:600;color:#2A2A2A;">White</div>
+          <div style="font-size:10px;color:#1C1C1C;">Fondos claros · impresión</div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+</div>
+
+<div class="divider"></div>
+
+
+<!-- ══════════════════════════════════════════════════
+  SECCIÓN 03 — ÍCONOS EN TODOS LOS TAMAÑOS
+══════════════════════════════════════════════════ -->
+<div style="padding:80px 80px 72px;">
+
+  <div class="section-title" style="margin-bottom:64px;">03 — Íconos · Todos los tamaños</div>
+
+  <!-- Escala completa -->
+  <div style="background:#060606;border:1px solid #141414;padding:64px;display:flex;align-items:flex-end;gap:40px;flex-wrap:wrap;">
+
+    <!-- 120px -->
+    <div style="display:flex;flex-direction:column;align-items:center;gap:16px;">
+      <div class="icon-box" style="width:120px;height:120px;border-radius:22px;">
+        <span class="g" style="font-size:78px;">G<span class="dot" style="font-size:58px;vertical-align:middle;line-height:0;">.</span></span>
+      </div>
+      <div class="caption">120px</div>
+    </div>
+
+    <!-- 80px -->
+    <div style="display:flex;flex-direction:column;align-items:center;gap:16px;">
+      <div class="icon-box" style="width:80px;height:80px;border-radius:15px;">
+        <span class="g" style="font-size:52px;">G<span class="dot" style="font-size:38px;vertical-align:middle;line-height:0;">.</span></span>
+      </div>
+      <div class="caption">80px</div>
+    </div>
+
+    <!-- 56px -->
+    <div style="display:flex;flex-direction:column;align-items:center;gap:16px;">
+      <div class="icon-box" style="width:56px;height:56px;border-radius:10px;">
+        <span class="g" style="font-size:36px;">G<span class="dot" style="font-size:27px;vertical-align:middle;line-height:0;">.</span></span>
+      </div>
+      <div class="caption">56px</div>
+    </div>
+
+    <!-- 40px -->
+    <div style="display:flex;flex-direction:column;align-items:center;gap:16px;">
+      <div class="icon-box" style="width:40px;height:40px;border-radius:8px;">
+        <span class="g" style="font-size:26px;">G<span class="dot" style="font-size:20px;vertical-align:middle;line-height:0;">.</span></span>
+      </div>
+      <div class="caption">40px</div>
+    </div>
+
+    <!-- 32px -->
+    <div style="display:flex;flex-direction:column;align-items:center;gap:16px;">
+      <div class="icon-box" style="width:32px;height:32px;border-radius:6px;">
+        <span class="g" style="font-size:20px;">G<span class="dot" style="font-size:16px;vertical-align:middle;line-height:0;">.</span></span>
+      </div>
+      <div class="caption">32px</div>
+    </div>
+
+    <!-- 24px -->
+    <div style="display:flex;flex-direction:column;align-items:center;gap:16px;">
+      <div class="icon-box" style="width:24px;height:24px;border-radius:4px;">
+        <span class="g" style="font-size:15px;">G</span>
+      </div>
+      <div class="caption">24px</div>
+    </div>
+
+    <!-- 16px favicon -->
+    <div style="display:flex;flex-direction:column;align-items:center;gap:16px;">
+      <div class="icon-box" style="width:16px;height:16px;border-radius:3px;">
+        <span class="g" style="font-size:10px;">G</span>
+      </div>
+      <div class="caption">16 · fav</div>
+    </div>
+
+  </div>
+
+  <!-- Círculo — perfil / avatar -->
+  <div style="margin-top:1px;background:#060606;border:1px solid #141414;padding:48px 64px;display:flex;align-items:center;gap:40px;flex-wrap:wrap;">
+    <div class="caption" style="width:100%;margin-bottom:8px;">Circular · Redes sociales · WhatsApp · Avatar</div>
+
+    <div style="display:flex;flex-direction:column;align-items:center;gap:12px;">
+      <div style="width:96px;height:96px;background:#141414;border-radius:50%;display:flex;align-items:center;justify-content:center;">
+        <span class="g" style="font-size:60px;">G<span class="dot" style="font-size:44px;vertical-align:middle;line-height:0;">.</span></span>
+      </div>
+      <div class="caption">96px · dark</div>
+    </div>
+
+    <div style="display:flex;flex-direction:column;align-items:center;gap:12px;">
+      <div style="width:96px;height:96px;background:#00E3FF;border-radius:50%;display:flex;align-items:center;justify-content:center;">
+        <span class="g" style="font-size:60px;color:#0A0A0A;">G</span>
+      </div>
+      <div class="caption">96px · cyan</div>
+    </div>
+
+    <div style="display:flex;flex-direction:column;align-items:center;gap:12px;">
+      <div style="width:64px;height:64px;background:#141414;border-radius:50%;display:flex;align-items:center;justify-content:center;">
+        <span class="g" style="font-size:40px;">G<span class="dot" style="font-size:30px;vertical-align:middle;line-height:0;">.</span></span>
+      </div>
+      <div class="caption">64px</div>
+    </div>
+
+    <div style="display:flex;flex-direction:column;align-items:center;gap:12px;">
+      <div style="width:40px;height:40px;background:#141414;border-radius:50%;display:flex;align-items:center;justify-content:center;">
+        <span class="g" style="font-size:25px;">G</span>
+      </div>
+      <div class="caption">40px</div>
+    </div>
+
+  </div>
+
+</div>
+
+<div class="divider"></div>
+
+
+<!-- ══════════════════════════════════════════════════
+  SECCIÓN 04 — LOCKUPS · Ícono + Wordmark
+══════════════════════════════════════════════════ -->
+<div style="padding:80px 80px 72px;">
+
+  <div class="section-title" style="margin-bottom:64px;">04 — Lockups · Ícono + Wordmark</div>
+
+  <div style="display:flex;flex-direction:column;gap:1px;background:#111;">
+
+    <!-- Lockup horizontal grande -->
+    <div style="background:#060606;padding:64px 72px;display:flex;align-items:center;gap:24px;">
+      <div class="icon-box" style="width:72px;height:72px;border-radius:13px;">
+        <span class="g" style="font-size:46px;">G<span class="dot" style="font-size:34px;vertical-align:middle;line-height:0;">.</span></span>
+      </div>
+      <span class="wm" style="font-size:80px;">GRAVITY<span class="accent">.</span></span>
+    </div>
+
+    <!-- Lockup horizontal mediano — navbar -->
+    <div style="background:#0A0A0A;padding:28px 72px;display:flex;align-items:center;justify-content:space-between;">
+      <div style="display:flex;align-items:center;gap:14px;">
+        <div class="icon-box" style="width:36px;height:36px;border-radius:7px;">
+          <span class="g" style="font-size:23px;">G<span class="dot" style="font-size:17px;vertical-align:middle;line-height:0;">.</span></span>
+        </div>
+        <span class="wm" style="font-size:26px;letter-spacing:.1em;">GRAVITY<span class="accent">.</span></span>
+      </div>
+      <div style="display:flex;gap:28px;align-items:center;">
+        <span style="font-size:11px;font-weight:500;color:#252525;letter-spacing:.04em;">Servicios</span>
+        <span style="font-size:11px;font-weight:500;color:#252525;letter-spacing:.04em;">Trabajo</span>
+        <span style="font-size:11px;font-weight:500;color:#252525;letter-spacing:.04em;">Nosotros</span>
+        <span style="font-size:11px;font-weight:700;background:#00E3FF;color:#0A0A0A;padding:8px 20px;letter-spacing:.05em;">Contacto</span>
+      </div>
+    </div>
+
+    <!-- Solo el wordmark — uso más frecuente -->
+    <div style="background:#060606;padding:52px 72px;display:flex;align-items:center;">
+      <span class="wm" style="font-size:80px;">GRAVITY<span class="accent">.</span></span>
+    </div>
+
+  </div>
+
+</div>
+
+<div class="divider"></div>
+
+
+<!-- ══════════════════════════════════════════════════
+  SECCIÓN 05 — USOS REALES
+══════════════════════════════════════════════════ -->
+<div style="padding:80px 80px 72px;">
+
+  <div class="section-title" style="margin-bottom:64px;">05 — Usos reales</div>
+
+  <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:1px;background:#111;">
+
+    <!-- WhatsApp Business -->
+    <div style="background:#0C0C0C;padding:40px;display:flex;flex-direction:column;align-items:center;gap:20px;">
+      <div style="width:80px;height:80px;background:#141414;border-radius:50%;display:flex;align-items:center;justify-content:center;">
+        <span class="g" style="font-size:50px;">G<span class="dot" style="font-size:36px;vertical-align:middle;line-height:0;">.</span></span>
+      </div>
+      <div style="text-align:center;">
+        <div style="font-size:13px;font-weight:600;color:#2A2A2A;">Gravity.</div>
+        <div style="font-size:11px;color:#1A1A1A;margin-top:3px;">Growth Agency</div>
+      </div>
+      <div class="caption">WhatsApp Business</div>
+    </div>
+
+    <!-- Instagram -->
+    <div style="background:#090909;padding:40px;display:flex;flex-direction:column;align-items:center;gap:20px;">
+      <div style="width:80px;height:80px;background:linear-gradient(135deg,#00E3FF,#0099BB);border-radius:50%;border:2px solid #333;display:flex;align-items:center;justify-content:center;">
+        <span class="g" style="font-size:50px;color:#0A0A0A;">G</span>
+      </div>
+      <div style="text-align:center;">
+        <div style="font-size:13px;font-weight:600;color:#2A2A2A;">@gravity.agency</div>
+        <div style="font-size:11px;color:#1A1A1A;margin-top:3px;">Growth Agency</div>
+      </div>
+      <div class="caption">Instagram / TikTok</div>
+    </div>
+
+    <!-- Email firma -->
+    <div style="background:#0A0A0A;padding:40px;display:flex;flex-direction:column;gap:16px;">
+      <div style="border-left:2px solid #00E3FF;padding-left:16px;display:flex;flex-direction:column;gap:8px;">
+        <div style="font-size:12px;font-weight:600;color:#2A2A2A;">Martin Mercedes</div>
+        <div style="font-size:10px;color:#1C1C1C;">CEO · Gravity Growth Agency</div>
+        <div style="font-size:10px;color:#1C1C1C;">gravity.agency</div>
+      </div>
+      <div style="display:flex;align-items:center;gap:10px;margin-top:4px;">
+        <div class="icon-box" style="width:28px;height:28px;border-radius:5px;">
+          <span class="g" style="font-size:18px;">G</span>
+        </div>
+        <span class="wm" style="font-size:18px;letter-spacing:.1em;">GRAVITY<span class="accent">.</span></span>
+      </div>
+      <div class="caption" style="margin-top:4px;">Firma de email</div>
+    </div>
+
+  </div>
+
+</div>
+
+<div class="divider"></div>
+
+
+<!-- ══════════════════════════════════════════════════
+  SECCIÓN 06 — COLOR SYSTEM
+══════════════════════════════════════════════════ -->
+<div style="padding:80px 80px 72px;">
+
+  <div class="section-title" style="margin-bottom:64px;">06 — Colores</div>
+
+  <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:#111;">
+
+    <div style="background:#0A0A0A;padding:0;">
+      <div style="height:160px;background:#0A0A0A;border-bottom:1px solid #141414;"></div>
+      <div style="padding:24px 28px;display:flex;flex-direction:column;gap:4px;">
+        <div style="font-size:11px;font-weight:600;color:#2A2A2A;">Gravity Black</div>
+        <div class="caption">#0A0A0A</div>
+        <div class="note" style="margin-top:6px;">Fondo principal</div>
+      </div>
+    </div>
+
+    <div style="background:#0A0A0A;padding:0;">
+      <div style="height:160px;background:#141414;border-bottom:1px solid #1A1A1A;"></div>
+      <div style="padding:24px 28px;display:flex;flex-direction:column;gap:4px;">
+        <div style="font-size:11px;font-weight:600;color:#2A2A2A;">Icon Dark</div>
+        <div class="caption">#141414</div>
+        <div class="note" style="margin-top:6px;">Fondo del ícono</div>
+      </div>
+    </div>
+
+    <div style="background:#0A0A0A;padding:0;">
+      <div style="height:160px;background:#00E3FF;"></div>
+      <div style="padding:24px 28px;display:flex;flex-direction:column;gap:4px;">
+        <div style="font-size:11px;font-weight:600;color:#2A2A2A;">Gravity Cyan</div>
+        <div class="caption">#00E3FF</div>
+        <div class="note" style="margin-top:6px;">Color de acento · el punto</div>
+      </div>
+    </div>
+
+    <div style="background:#0A0A0A;padding:0;">
+      <div style="height:160px;background:#fff;"></div>
+      <div style="padding:24px 28px;display:flex;flex-direction:column;gap:4px;">
+        <div style="font-size:11px;font-weight:600;color:#2A2A2A;">White</div>
+        <div class="caption">#FFFFFF</div>
+        <div class="note" style="margin-top:6px;">Wordmark principal</div>
+      </div>
+    </div>
+
+  </div>
+
+</div>
+
+<div class="divider-accent"></div>
+
+
+<!-- ══════════════════════════════════════════════════
+  PÁGINA FINAL — Logo en grande
+══════════════════════════════════════════════════ -->
+<div style="min-height:60vh;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:80px;gap:40px;background:#060606;">
+
+  <div style="display:flex;flex-direction:column;align-items:center;gap:24px;">
+    <div class="icon-box" style="width:100px;height:100px;border-radius:18px;">
+      <span class="g" style="font-size:64px;">G<span class="dot" style="font-size:48px;vertical-align:middle;line-height:0;">.</span></span>
+    </div>
+    <span class="wm" style="font-size:96px;">GRAVITY<span class="accent">.</span></span>
+    <div style="font-family:'Inter',sans-serif;font-size:10px;font-weight:400;letter-spacing:.6em;text-transform:uppercase;color:#1C1C1C;">Inevitable.</div>
+  </div>
+
+</div>
+
+</body>
+</html>

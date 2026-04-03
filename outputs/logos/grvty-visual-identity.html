@@ -1,0 +1,791 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>GRVTY™ — Visual Identity Objects</title>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@700;800;900&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  background: #0D0D0D;
+  color: #fff;
+  font-family: 'Inter', sans-serif;
+}
+
+.page-header {
+  padding: 48px 72px 40px;
+  border-bottom: 1px solid #1A1A1A;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+.ph-title { font-size:10px;font-weight:700;letter-spacing:.4em;text-transform:uppercase;color:#252525; }
+.ph-sub   { font-size:10px;color:#1E1E1E;letter-spacing:.15em; }
+
+/* ── SECTION LABEL ── */
+.sec {
+  padding: 56px 72px 0;
+}
+.sec-label {
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 0.35em;
+  text-transform: uppercase;
+  color: #2A2A2A;
+  margin-bottom: 32px;
+}
+
+/* ── OBJECT GRID ── */
+.obj-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 2px;
+  background: #111;
+}
+
+.obj-cell {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 520px;
+  padding: 40px;
+  gap: 28px;
+  position: relative;
+  overflow: hidden;
+}
+
+.obj-name {
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  text-align: center;
+  color: #333;
+}
+
+.obj-desc {
+  font-size: 11px;
+  color: #2A2A2A;
+  text-align: center;
+  max-width: 200px;
+  line-height: 1.6;
+}
+
+/* ── FULL WIDTH SHOWCASE ── */
+.showcase {
+  min-height: 600px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+}
+
+/* ── LOGO LOCKUP ── */
+.logo-lockup {
+  display: flex;
+  align-items: center;
+  gap: 28px;
+}
+
+.wm {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-weight: 900;
+  letter-spacing: -0.01em;
+  line-height: 1;
+  color: #fff;
+}
+</style>
+</head>
+<body>
+
+<div class="page-header">
+  <div class="ph-title">GRVTY™ — Visual Identity Objects · 2026</div>
+  <div class="ph-sub">Original brand objects · Never seen before</div>
+</div>
+
+<!-- ══════════════════════════════════════════
+     OBJECT 01 — GRAVITY FUNNEL 3D WIREFRAME
+══════════════════════════════════════════ -->
+<div class="sec"><div class="sec-label">01 — Gravity Funnel · The primary object</div></div>
+<div class="showcase" style="background:#0D0D0D;">
+  <!-- Radial glow behind -->
+  <div style="position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:700px;height:700px;background:radial-gradient(circle,rgba(0,227,255,0.07) 0%,transparent 60%);pointer-events:none;"></div>
+
+  <canvas id="funnelCanvas" width="900" height="560" style="display:block;"></canvas>
+</div>
+
+<!-- ══════════════════════════════════════════
+     3 OBJECTS GRID
+══════════════════════════════════════════ -->
+<div class="sec" style="padding-top:40px;"><div class="sec-label">02 — Brand Object Library</div></div>
+
+<div class="obj-grid">
+
+  <!-- OBJECT A: Gravity Well — space bending -->
+  <div class="obj-cell" style="background:#0A0A0A;">
+    <canvas id="wellCanvas" width="360" height="360" style="display:block;"></canvas>
+    <div class="obj-name" style="color:#00E3FF;">Gravity Well</div>
+    <div class="obj-desc">The fabric of space bending toward a mass. Used for hero sections and backgrounds.</div>
+  </div>
+
+  <!-- OBJECT B: Particle Pull — dots falling inward -->
+  <div class="obj-cell" style="background:#0D0D0D;">
+    <canvas id="particleCanvas" width="360" height="360" style="display:block;"></canvas>
+    <div class="obj-name" style="color:#00E3FF;">Particle Pull</div>
+    <div class="obj-desc">Particles drawn toward a gravitational center. Animated. Used for loading states and transitions.</div>
+  </div>
+
+  <!-- OBJECT C: Orbital Rings — concentric, angled -->
+  <div class="obj-cell" style="background:#080808;">
+    <canvas id="orbitalCanvas" width="360" height="360" style="display:block;"></canvas>
+    <div class="obj-name" style="color:#00E3FF;">Orbital Rings</div>
+    <div class="obj-desc">Concentric rings in perspective. Like a planet's gravitational field. Used for feature callouts.</div>
+  </div>
+
+</div>
+
+<!-- ══════════════════════════════════════════
+     OBJECT 03 — LOGO MARK IN 3D SPACE
+══════════════════════════════════════════ -->
+<div class="sec" style="padding-top:40px;"><div class="sec-label">03 — Logo mark as 3D object</div></div>
+<div class="showcase" style="background:#060606;min-height:500px;">
+  <div style="position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:600px;height:600px;background:radial-gradient(circle,rgba(0,227,255,0.05) 0%,transparent 60%);pointer-events:none;"></div>
+  <canvas id="mark3DCanvas" width="900" height="480" style="display:block;"></canvas>
+</div>
+
+<!-- ══════════════════════════════════════════
+     COLOR PALETTE APPLIED TO OBJECTS
+══════════════════════════════════════════ -->
+<div class="sec" style="padding-top:40px;"><div class="sec-label">04 — Objects in brand colors</div></div>
+
+<div style="display:grid;grid-template-columns:repeat(4,1fr);gap:2px;margin-top:2px;">
+
+  <div style="min-height:400px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:20px;background:#0D0D0D;padding:40px;">
+    <canvas id="funnel_cyan" width="240" height="240"></canvas>
+    <div style="font-size:9px;font-weight:700;letter-spacing:.3em;text-transform:uppercase;color:#00E3FF;">Cyan · Primary</div>
+  </div>
+
+  <div style="min-height:400px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:20px;background:#181818;padding:40px;">
+    <canvas id="funnel_yellow" width="240" height="240"></canvas>
+    <div style="font-size:9px;font-weight:700;letter-spacing:.3em;text-transform:uppercase;color:#FAFA00;">Yellow · Campaign</div>
+  </div>
+
+  <div style="min-height:400px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:20px;background:#09060F;padding:40px;">
+    <canvas id="funnel_purple" width="240" height="240"></canvas>
+    <div style="font-size:9px;font-weight:700;letter-spacing:.3em;text-transform:uppercase;color:#713DFF;">Purple · AI</div>
+  </div>
+
+  <div style="min-height:400px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:20px;background:#0F0600;padding:40px;">
+    <canvas id="funnel_orange" width="240" height="240"></canvas>
+    <div style="font-size:9px;font-weight:700;letter-spacing:.3em;text-transform:uppercase;color:#F54900;">Orange · Urgency</div>
+  </div>
+
+</div>
+
+<!-- ══════════════════════════════════════════
+     LOGO + OBJECT TOGETHER
+══════════════════════════════════════════ -->
+<div class="sec" style="padding-top:40px;"><div class="sec-label">05 — Logo with visual object</div></div>
+
+<div style="display:grid;grid-template-columns:1fr 1fr;gap:2px;margin-top:2px;">
+
+  <div style="background:#0D0D0D;padding:80px 72px;display:flex;flex-direction:column;gap:40px;position:relative;overflow:hidden;">
+    <div style="position:absolute;bottom:-100px;right:-100px;width:400px;height:400px;background:radial-gradient(circle,rgba(0,227,255,0.06) 0%,transparent 60%);pointer-events:none;"></div>
+    <div class="logo-lockup">
+      <svg width="56" height="56" viewBox="0 0 100 100" fill="none">
+        <polygon points="50,95 2,10 98,10" fill="#00E3FF"/>
+      </svg>
+      <span class="wm" style="font-size:64px;">GRVTY<span style="color:#00E3FF">.</span></span>
+    </div>
+    <div style="font-family:'Barlow Condensed',sans-serif;font-size:72px;font-weight:900;line-height:.9;letter-spacing:-.02em;color:#fff;max-width:500px;">The invisible force pulling customers to you.</div>
+    <div style="font-size:14px;color:#555;line-height:1.7;max-width:380px;">AI-powered funnels and growth systems. Like gravity — you don't see it. You just see the results.</div>
+  </div>
+
+  <div style="background:#060606;display:flex;align-items:center;justify-content:center;position:relative;overflow:hidden;min-height:480px;">
+    <div style="position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:500px;height:500px;background:radial-gradient(circle,rgba(0,227,255,0.08) 0%,transparent 60%);pointer-events:none;"></div>
+    <canvas id="heroFunnel" width="500" height="440" style="display:block;position:relative;"></canvas>
+  </div>
+
+</div>
+
+<script>
+// ═══════════════════════════════════════════════════════
+// UTILITY
+// ═══════════════════════════════════════════════════════
+function hex2rgb(hex) {
+  const r = parseInt(hex.slice(1,3),16);
+  const g = parseInt(hex.slice(3,5),16);
+  const b = parseInt(hex.slice(5,7),16);
+  return {r,g,b};
+}
+
+// ═══════════════════════════════════════════════════════
+// DRAW FUNNEL WIREFRAME
+// cx, cy = tip (apex pointing DOWN = gravity pull)
+// topY = top edge Y
+// topWidth = half-width at top
+// rows, cols = grid density
+// color = hex string
+// alpha = base opacity
+// ═══════════════════════════════════════════════════════
+function drawFunnel(ctx, cx, tipY, topY, topWidth, rows, cols, color, alpha, perspective) {
+  const {r,g,b} = hex2rgb(color);
+  const height = tipY - topY;
+
+  ctx.save();
+  ctx.lineCap = 'round';
+
+  // Draw horizontal ellipses at each row level
+  for (let row = 0; row <= rows; row++) {
+    const t = row / rows; // 0 = top, 1 = tip
+    const y = topY + height * t;
+    // Width narrows as we go to tip
+    const halfW = topWidth * (1 - t);
+    // Ellipse vertical radius — perspective foreshortening
+    const ry = halfW * (perspective || 0.28);
+
+    // Opacity: brighter toward the tip
+    const rowAlpha = alpha * (0.3 + 0.7 * t);
+    ctx.strokeStyle = `rgba(${r},${g},${b},${rowAlpha})`;
+    ctx.lineWidth = 0.8;
+
+    ctx.beginPath();
+    ctx.ellipse(cx, y, halfW, ry, 0, 0, Math.PI * 2);
+    ctx.stroke();
+  }
+
+  // Draw vertical lines (generators of the cone)
+  for (let col = 0; col < cols; col++) {
+    const angle = (col / cols) * Math.PI * 2;
+    const colAlpha = alpha * (0.4 + 0.3 * Math.cos(angle));
+    ctx.strokeStyle = `rgba(${r},${g},${b},${colAlpha})`;
+    ctx.lineWidth = 0.8;
+
+    ctx.beginPath();
+    // Top point on ellipse
+    const topX = cx + topWidth * Math.cos(angle);
+    const topEllipseY = topY + topWidth * 0.28 * Math.sin(angle);
+    ctx.moveTo(topX, topEllipseY);
+    // Converge to tip
+    ctx.lineTo(cx, tipY);
+    ctx.stroke();
+  }
+
+  // Apex dot
+  const {r:ar,g:ag,b:ab} = hex2rgb(color);
+  const grad = ctx.createRadialGradient(cx, tipY, 0, cx, tipY, 12);
+  grad.addColorStop(0, `rgba(${ar},${ag},${ab},${alpha})`);
+  grad.addColorStop(1, `rgba(${ar},${ag},${ab},0)`);
+  ctx.fillStyle = grad;
+  ctx.beginPath();
+  ctx.arc(cx, tipY, 12, 0, Math.PI*2);
+  ctx.fill();
+
+  ctx.restore();
+}
+
+// ═══════════════════════════════════════════════════════
+// 01 — HERO FUNNEL (large)
+// ═══════════════════════════════════════════════════════
+(function() {
+  const canvas = document.getElementById('funnelCanvas');
+  if (!canvas) return;
+  const ctx = canvas.getContext('2d');
+  const W = canvas.width, H = canvas.height;
+
+  ctx.clearRect(0,0,W,H);
+
+  // Main funnel — cyan
+  drawFunnel(ctx, W/2, H*0.82, H*0.06, W*0.44, 20, 36, '#00E3FF', 0.7, 0.22);
+
+  // Inner funnel — brighter, smaller
+  drawFunnel(ctx, W/2, H*0.82, H*0.18, W*0.26, 12, 24, '#00E3FF', 0.5, 0.22);
+
+  // Logo above the funnel
+  ctx.font = "900 " + Math.round(H*0.18) + "px 'Barlow Condensed', sans-serif";
+  ctx.textAlign = 'center';
+  ctx.textBaseline = 'top';
+
+  // GRVTY text — white
+  ctx.fillStyle = 'rgba(255,255,255,0.9)';
+  ctx.fillText('GRVTY', W/2 - 20, H*0.01);
+
+  // Dot — cyan
+  const grvtyW = ctx.measureText('GRVTY').width;
+  ctx.fillStyle = '#00E3FF';
+  ctx.fillText('.', W/2 - 20 + grvtyW/2 + ctx.measureText('GRVTY').width/2 + 8, H*0.01);
+
+  // Tagline
+  ctx.font = "600 13px 'Inter', sans-serif";
+  ctx.fillStyle = 'rgba(0,227,255,0.35)';
+  ctx.letterSpacing = '0.3em';
+  ctx.fillText('I N E V I T A B L E .', W/2, H*0.92);
+})();
+
+// ═══════════════════════════════════════════════════════
+// OBJECT A — GRAVITY WELL (warped grid)
+// ═══════════════════════════════════════════════════════
+(function() {
+  const canvas = document.getElementById('wellCanvas');
+  if (!canvas) return;
+  const ctx = canvas.getContext('2d');
+  const W = canvas.width, H = canvas.height;
+  const cx = W/2, cy = H/2;
+  const strength = 120; // how much the center pulls
+
+  ctx.clearRect(0,0,W,H);
+
+  const gridStep = 22;
+  const cols2 = Math.ceil(W/gridStep)+2;
+  const rows2 = Math.ceil(H/gridStep)+2;
+
+  // Warp function: pull grid points toward center
+  function warp(x, y) {
+    const dx = x - cx;
+    const dy = y - cy;
+    const dist = Math.sqrt(dx*dx + dy*dy);
+    if (dist < 1) return {x, y};
+    // Pull factor: stronger near center
+    const pull = strength / (dist + strength * 0.5);
+    return {
+      x: x - dx * pull * 0.6,
+      y: y - dy * pull * 0.6
+    };
+  }
+
+  const {r,g,b} = hex2rgb('#00E3FF');
+
+  // Draw horizontal lines
+  for (let row = 0; row <= rows2; row++) {
+    const y = row * gridStep - gridStep;
+    const dist_cy = Math.abs(y - cy);
+    const lineAlpha = 0.12 + 0.3 * Math.max(0, 1 - dist_cy/(H*0.5));
+    ctx.strokeStyle = `rgba(${r},${g},${b},${lineAlpha})`;
+    ctx.lineWidth = 0.7;
+    ctx.beginPath();
+    for (let col = 0; col <= cols2; col++) {
+      const x = col * gridStep - gridStep;
+      const p = warp(x, y);
+      col === 0 ? ctx.moveTo(p.x, p.y) : ctx.lineTo(p.x, p.y);
+    }
+    ctx.stroke();
+  }
+
+  // Draw vertical lines
+  for (let col = 0; col <= cols2; col++) {
+    const x = col * gridStep - gridStep;
+    const dist_cx = Math.abs(x - cx);
+    const lineAlpha = 0.12 + 0.3 * Math.max(0, 1 - dist_cx/(W*0.5));
+    ctx.strokeStyle = `rgba(${r},${g},${b},${lineAlpha})`;
+    ctx.lineWidth = 0.7;
+    ctx.beginPath();
+    for (let row = 0; row <= rows2; row++) {
+      const y = row * gridStep - gridStep;
+      const p = warp(x, y);
+      row === 0 ? ctx.moveTo(p.x, p.y) : ctx.lineTo(p.x, p.y);
+    }
+    ctx.stroke();
+  }
+
+  // Center glow
+  const grd = ctx.createRadialGradient(cx,cy,0,cx,cy,60);
+  grd.addColorStop(0,'rgba(0,227,255,0.4)');
+  grd.addColorStop(0.3,'rgba(0,227,255,0.1)');
+  grd.addColorStop(1,'rgba(0,227,255,0)');
+  ctx.fillStyle = grd;
+  ctx.beginPath();
+  ctx.arc(cx, cy, 60, 0, Math.PI*2);
+  ctx.fill();
+
+  // Center dot
+  ctx.fillStyle = '#00E3FF';
+  ctx.beginPath();
+  ctx.arc(cx, cy, 5, 0, Math.PI*2);
+  ctx.fill();
+})();
+
+// ═══════════════════════════════════════════════════════
+// OBJECT B — PARTICLE PULL (static snapshot of animation)
+// ═══════════════════════════════════════════════════════
+(function() {
+  const canvas = document.getElementById('particleCanvas');
+  if (!canvas) return;
+  const ctx = canvas.getContext('2d');
+  const W = canvas.width, H = canvas.height;
+  const cx = W/2, cy = H/2;
+
+  ctx.clearRect(0,0,W,H);
+
+  // Seed-based random for reproducibility
+  function seededRand(seed) {
+    let s = seed;
+    return function() {
+      s = (s * 9301 + 49297) % 233280;
+      return s / 233280;
+    };
+  }
+  const rand = seededRand(42);
+
+  const particles = [];
+  for (let i = 0; i < 80; i++) {
+    const angle = rand() * Math.PI * 2;
+    const dist = 20 + rand() * 150;
+    const x = cx + Math.cos(angle) * dist;
+    const y = cy + Math.sin(angle) * dist;
+    // Trail direction: toward center
+    const trailLen = 8 + rand() * 40 * (1 - dist/180);
+    const tx = x + (cx-x)/dist * trailLen * 0.5;
+    const ty = y + (cy-y)/dist * trailLen * 0.5;
+    const size = 1 + rand() * 2 * (1 - dist/180);
+    const opacity = 0.3 + rand() * 0.7 * (1 - dist/180);
+    particles.push({x, y, tx, ty, size, opacity});
+  }
+
+  const {r,g,b} = hex2rgb('#00E3FF');
+
+  // Draw trails
+  particles.forEach(p => {
+    ctx.strokeStyle = `rgba(${r},${g},${b},${p.opacity * 0.4})`;
+    ctx.lineWidth = p.size * 0.5;
+    ctx.beginPath();
+    ctx.moveTo(p.x, p.y);
+    ctx.lineTo(p.tx, p.ty);
+    ctx.stroke();
+  });
+
+  // Draw dots
+  particles.forEach(p => {
+    const grd = ctx.createRadialGradient(p.x,p.y,0,p.x,p.y,p.size*2);
+    grd.addColorStop(0,`rgba(${r},${g},${b},${p.opacity})`);
+    grd.addColorStop(1,`rgba(${r},${g},${b},0)`);
+    ctx.fillStyle = grd;
+    ctx.beginPath();
+    ctx.arc(p.x, p.y, p.size*2, 0, Math.PI*2);
+    ctx.fill();
+  });
+
+  // Center core glow
+  const cGrd = ctx.createRadialGradient(cx,cy,0,cx,cy,40);
+  cGrd.addColorStop(0,'rgba(0,227,255,0.9)');
+  cGrd.addColorStop(0.2,'rgba(0,227,255,0.4)');
+  cGrd.addColorStop(1,'rgba(0,227,255,0)');
+  ctx.fillStyle = cGrd;
+  ctx.beginPath();
+  ctx.arc(cx,cy,40,0,Math.PI*2);
+  ctx.fill();
+
+  ctx.fillStyle = '#fff';
+  ctx.beginPath();
+  ctx.arc(cx,cy,4,0,Math.PI*2);
+  ctx.fill();
+})();
+
+// ═══════════════════════════════════════════════════════
+// OBJECT C — ORBITAL RINGS (perspective ellipses)
+// ═══════════════════════════════════════════════════════
+(function() {
+  const canvas = document.getElementById('orbitalCanvas');
+  if (!canvas) return;
+  const ctx = canvas.getContext('2d');
+  const W = canvas.width, H = canvas.height;
+  const cx = W/2, cy = H*0.52;
+
+  ctx.clearRect(0,0,W,H);
+
+  const rings = [
+    {rx: 150, ry: 38, alpha: 0.12, lw: 0.6},
+    {rx: 118, ry: 30, alpha: 0.18, lw: 0.8},
+    {rx: 88,  ry: 22, alpha: 0.28, lw: 1.0},
+    {rx: 60,  ry: 15, alpha: 0.45, lw: 1.2},
+    {rx: 34,  ry: 8.5,alpha: 0.65, lw: 1.5},
+  ];
+
+  const {r,g,b} = hex2rgb('#00E3FF');
+
+  rings.forEach(ring => {
+    ctx.strokeStyle = `rgba(${r},${g},${b},${ring.alpha})`;
+    ctx.lineWidth = ring.lw;
+    ctx.beginPath();
+    ctx.ellipse(cx, cy, ring.rx, ring.ry, 0, 0, Math.PI*2);
+    ctx.stroke();
+  });
+
+  // Equatorial tick marks on outermost ring
+  for (let i = 0; i < 24; i++) {
+    const angle = (i/24)*Math.PI*2;
+    const rx = 150, ry = 38;
+    const x1 = cx + rx * Math.cos(angle);
+    const y1 = cy + ry * Math.sin(angle);
+    const x2 = cx + (rx-6) * Math.cos(angle);
+    const y2 = cy + (ry-6*ry/rx) * Math.sin(angle);
+    ctx.strokeStyle = `rgba(${r},${g},${b},0.2)`;
+    ctx.lineWidth = 0.5;
+    ctx.beginPath();
+    ctx.moveTo(x1,y1);
+    ctx.lineTo(x2,y2);
+    ctx.stroke();
+  }
+
+  // Center body glow
+  const cGrd = ctx.createRadialGradient(cx,cy,0,cx,cy,28);
+  cGrd.addColorStop(0,'rgba(0,227,255,0.5)');
+  cGrd.addColorStop(0.5,'rgba(0,227,255,0.15)');
+  cGrd.addColorStop(1,'rgba(0,227,255,0)');
+  ctx.fillStyle = cGrd;
+  ctx.beginPath();
+  ctx.ellipse(cx, cy, 28, 7, 0, 0, Math.PI*2);
+  ctx.fill();
+
+  // Center dot
+  ctx.fillStyle = '#00E3FF';
+  ctx.beginPath();
+  ctx.arc(cx, cy, 4, 0, Math.PI*2);
+  ctx.fill();
+
+  // Orbiting body
+  const bodyAngle = -0.8;
+  const bx = cx + 88 * Math.cos(bodyAngle);
+  const by = cy + 22 * Math.sin(bodyAngle);
+  const bGrd = ctx.createRadialGradient(bx,by,0,bx,by,7);
+  bGrd.addColorStop(0,'rgba(0,227,255,1)');
+  bGrd.addColorStop(1,'rgba(0,227,255,0)');
+  ctx.fillStyle = bGrd;
+  ctx.beginPath();
+  ctx.arc(bx, by, 7, 0, Math.PI*2);
+  ctx.fill();
+})();
+
+// ═══════════════════════════════════════════════════════
+// MARK 3D — Extruded triangle wireframe
+// ═══════════════════════════════════════════════════════
+(function() {
+  const canvas = document.getElementById('mark3DCanvas');
+  if (!canvas) return;
+  const ctx = canvas.getContext('2d');
+  const W = canvas.width, H = canvas.height;
+
+  ctx.clearRect(0,0,W,H);
+
+  // 3D triangle extrusion: front face + back face + edges
+  const cx = W/2, cy = H/2;
+  const scale = 160;
+  const depth = 80; // extrusion depth
+  const tilt = 0.35; // perspective tilt
+
+  // Triangle vertices (pointing down) in local space
+  // Tip at bottom, base at top
+  const verts2D = [
+    {x: 0,      y: -0.85}, // top-left
+    {x: 0,      y: -0.85}, // top-right (will be set)
+    {x: 0,      y:  0.85}, // bottom tip
+  ];
+
+  // Front face triangle (tilted in 3D)
+  const front = [
+    {x: -0.9, y: -0.8},
+    {x:  0.9, y: -0.8},
+    {x:  0,   y:  0.85},
+  ];
+
+  // Back face (offset by depth in perspective)
+  const dz = depth;
+  function project(lx, ly) {
+    // Simple perspective: shift x/y based on depth
+    const px = cx + lx * scale + dz * 0.4;
+    const py = cy + ly * scale * 0.7 - dz * 0.25;
+    return {x: px, y: py};
+  }
+  function projectFront(lx, ly) {
+    const px = cx + lx * scale - dz * 0.2;
+    const py = cy + ly * scale * 0.7 + dz * 0.12;
+    return {x: px, y: py};
+  }
+
+  const backPts  = front.map(v => project(v.x, v.y));
+  const frontPts = front.map(v => projectFront(v.x, v.y));
+
+  const {r,g,b} = hex2rgb('#00E3FF');
+
+  // Fill back face (very dark)
+  ctx.fillStyle = 'rgba(0,227,255,0.03)';
+  ctx.beginPath();
+  backPts.forEach((p,i) => i===0 ? ctx.moveTo(p.x,p.y) : ctx.lineTo(p.x,p.y));
+  ctx.closePath();
+  ctx.fill();
+
+  // Fill side faces
+  // Left side: front[0], back[0], back[2], front[2]
+  const leftGrad = ctx.createLinearGradient(frontPts[0].x, frontPts[0].y, backPts[2].x, backPts[2].y);
+  leftGrad.addColorStop(0, 'rgba(0,227,255,0.06)');
+  leftGrad.addColorStop(1, 'rgba(0,227,255,0.02)');
+  ctx.fillStyle = leftGrad;
+  ctx.beginPath();
+  ctx.moveTo(frontPts[0].x, frontPts[0].y);
+  ctx.lineTo(backPts[0].x,  backPts[0].y);
+  ctx.lineTo(backPts[2].x,  backPts[2].y);
+  ctx.lineTo(frontPts[2].x, frontPts[2].y);
+  ctx.closePath();
+  ctx.fill();
+
+  // Right side
+  const rightGrad = ctx.createLinearGradient(frontPts[1].x, frontPts[1].y, backPts[2].x, backPts[2].y);
+  rightGrad.addColorStop(0, 'rgba(0,227,255,0.04)');
+  rightGrad.addColorStop(1, 'rgba(0,227,255,0.01)');
+  ctx.fillStyle = rightGrad;
+  ctx.beginPath();
+  ctx.moveTo(frontPts[1].x, frontPts[1].y);
+  ctx.lineTo(backPts[1].x,  backPts[1].y);
+  ctx.lineTo(backPts[2].x,  backPts[2].y);
+  ctx.lineTo(frontPts[2].x, frontPts[2].y);
+  ctx.closePath();
+  ctx.fill();
+
+  // Fill front face
+  const frontGrad = ctx.createLinearGradient(frontPts[0].x, frontPts[0].y, frontPts[2].x, frontPts[2].y);
+  frontGrad.addColorStop(0, 'rgba(0,227,255,0.15)');
+  frontGrad.addColorStop(1, 'rgba(0,227,255,0.04)');
+  ctx.fillStyle = frontGrad;
+  ctx.beginPath();
+  frontPts.forEach((p,i) => i===0 ? ctx.moveTo(p.x,p.y) : ctx.lineTo(p.x,p.y));
+  ctx.closePath();
+  ctx.fill();
+
+  // ── WIREFRAME GRID ON FRONT FACE ──
+  // Draw a grid of lines across the front triangle face
+  const gridN = 12;
+  for (let t = 0; t <= gridN; t++) {
+    const frac = t / gridN;
+    // Horizontal line at this fraction from top to tip
+    const leftEdge = {
+      x: frontPts[0].x + (frontPts[2].x - frontPts[0].x) * frac,
+      y: frontPts[0].y + (frontPts[2].y - frontPts[0].y) * frac
+    };
+    const rightEdge = {
+      x: frontPts[1].x + (frontPts[2].x - frontPts[1].x) * frac,
+      y: frontPts[1].y + (frontPts[2].y - frontPts[1].y) * frac
+    };
+    const lineAlpha = 0.15 + 0.5 * frac;
+    ctx.strokeStyle = `rgba(${r},${g},${b},${lineAlpha})`;
+    ctx.lineWidth = 0.7;
+    ctx.beginPath();
+    ctx.moveTo(leftEdge.x, leftEdge.y);
+    ctx.lineTo(rightEdge.x, rightEdge.y);
+    ctx.stroke();
+  }
+
+  // Vertical lines on front face
+  for (let t = 0; t <= gridN; t++) {
+    const frac = t / gridN;
+    // Top edge point
+    const topPt = {
+      x: frontPts[0].x + (frontPts[1].x - frontPts[0].x) * frac,
+      y: frontPts[0].y + (frontPts[1].y - frontPts[0].y) * frac
+    };
+    // Each vertical goes from topPt to tip
+    const lineAlpha = 0.08 + 0.25 * Math.abs(frac - 0.5) * 2;
+    ctx.strokeStyle = `rgba(${r},${g},${b},${lineAlpha})`;
+    ctx.lineWidth = 0.6;
+    ctx.beginPath();
+    ctx.moveTo(topPt.x, topPt.y);
+    ctx.lineTo(frontPts[2].x, frontPts[2].y);
+    ctx.stroke();
+  }
+
+  // ── GRID ON BACK FACE ──
+  for (let t = 0; t <= 8; t++) {
+    const frac = t / 8;
+    const leftEdge = {
+      x: backPts[0].x + (backPts[2].x - backPts[0].x) * frac,
+      y: backPts[0].y + (backPts[2].y - backPts[0].y) * frac
+    };
+    const rightEdge = {
+      x: backPts[1].x + (backPts[2].x - backPts[1].x) * frac,
+      y: backPts[1].y + (backPts[2].y - backPts[1].y) * frac
+    };
+    ctx.strokeStyle = `rgba(${r},${g},${b},${0.06 + 0.12*frac})`;
+    ctx.lineWidth = 0.5;
+    ctx.beginPath();
+    ctx.moveTo(leftEdge.x, leftEdge.y);
+    ctx.lineTo(rightEdge.x, rightEdge.y);
+    ctx.stroke();
+  }
+
+  // ── EDGE OUTLINES ──
+  // Back face outline
+  ctx.strokeStyle = `rgba(${r},${g},${b},0.2)`;
+  ctx.lineWidth = 1;
+  ctx.beginPath();
+  backPts.forEach((p,i) => i===0 ? ctx.moveTo(p.x,p.y) : ctx.lineTo(p.x,p.y));
+  ctx.closePath();
+  ctx.stroke();
+
+  // Connecting edges
+  for (let i = 0; i < 3; i++) {
+    ctx.strokeStyle = `rgba(${r},${g},${b},0.15)`;
+    ctx.lineWidth = 0.8;
+    ctx.beginPath();
+    ctx.moveTo(frontPts[i].x, frontPts[i].y);
+    ctx.lineTo(backPts[i].x,  backPts[i].y);
+    ctx.stroke();
+  }
+
+  // Front face outline — bright
+  ctx.strokeStyle = `rgba(${r},${g},${b},0.8)`;
+  ctx.lineWidth = 1.5;
+  ctx.beginPath();
+  frontPts.forEach((p,i) => i===0 ? ctx.moveTo(p.x,p.y) : ctx.lineTo(p.x,p.y));
+  ctx.closePath();
+  ctx.stroke();
+
+  // Apex glow
+  const apexGrd = ctx.createRadialGradient(frontPts[2].x, frontPts[2].y, 0, frontPts[2].x, frontPts[2].y, 30);
+  apexGrd.addColorStop(0, 'rgba(0,227,255,0.8)');
+  apexGrd.addColorStop(1, 'rgba(0,227,255,0)');
+  ctx.fillStyle = apexGrd;
+  ctx.beginPath();
+  ctx.arc(frontPts[2].x, frontPts[2].y, 30, 0, Math.PI*2);
+  ctx.fill();
+
+  // Label
+  ctx.font = "700 11px 'Inter', sans-serif";
+  ctx.textAlign = 'center';
+  ctx.fillStyle = 'rgba(0,227,255,0.25)';
+  ctx.fillText('MARK · 3D EXTRUSION · WIREFRAME', W/2, H - 20);
+})();
+
+// ═══════════════════════════════════════════════════════
+// HELPER: draw small funnel in color
+// ═══════════════════════════════════════════════════════
+function drawSmallFunnel(canvasId, color) {
+  const canvas = document.getElementById(canvasId);
+  if (!canvas) return;
+  const ctx = canvas.getContext('2d');
+  const W = canvas.width, H = canvas.height;
+  ctx.clearRect(0,0,W,H);
+  drawFunnel(ctx, W/2, H*0.82, H*0.08, W*0.44, 16, 28, color, 0.75, 0.24);
+}
+
+drawSmallFunnel('funnel_cyan',   '#00E3FF');
+drawSmallFunnel('funnel_yellow', '#FAFA00');
+drawSmallFunnel('funnel_purple', '#713DFF');
+drawSmallFunnel('funnel_orange', '#F54900');
+
+// ═══════════════════════════════════════════════════════
+// HERO FUNNEL (section 05)
+// ═══════════════════════════════════════════════════════
+(function() {
+  const canvas = document.getElementById('heroFunnel');
+  if (!canvas) return;
+  const ctx = canvas.getContext('2d');
+  const W = canvas.width, H = canvas.height;
+  ctx.clearRect(0,0,W,H);
+  drawFunnel(ctx, W/2, H*0.85, H*0.05, W*0.46, 18, 32, '#00E3FF', 0.7, 0.23);
+  drawFunnel(ctx, W/2, H*0.85, H*0.2,  W*0.28, 10, 20, '#00E3FF', 0.4, 0.23);
+})();
+</script>
+</body>
+</html>

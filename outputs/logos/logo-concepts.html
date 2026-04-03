@@ -1,0 +1,592 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Logo Concepts — UNFAIR & GRVTY</title>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@300;400;500;600;700;900&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+    background: #0D0D0D;
+    color: #fff;
+    font-family: 'Inter', sans-serif;
+    padding: 60px 40px;
+  }
+
+  .page-title {
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: 0.3em;
+    text-transform: uppercase;
+    color: #555;
+    margin-bottom: 80px;
+  }
+
+  /* ── BRAND SECTION ── */
+  .brand-section {
+    margin-bottom: 120px;
+  }
+
+  .brand-header {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    margin-bottom: 60px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #1E1E1E;
+  }
+
+  .brand-name-label {
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.3em;
+    text-transform: uppercase;
+    color: #555;
+  }
+
+  /* ── LOGO GRID ── */
+  .logo-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2px;
+    margin-bottom: 2px;
+  }
+
+  .logo-cell {
+    background: #1A1A1A;
+    padding: 50px 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    min-height: 260px;
+    gap: 24px;
+  }
+
+  .logo-cell.light {
+    background: #F5F5F5;
+  }
+
+  .cell-label {
+    font-size: 9px;
+    font-weight: 600;
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+    color: #555;
+  }
+
+  .logo-cell.light .cell-label {
+    color: #999;
+  }
+
+  /* ─────────────────────────────────────────────
+     UNFAIR LOGO CONCEPTS
+  ───────────────────────────────────────────── */
+
+  /* Concept U1: Monogram "UF" stacked block */
+  .unfair-u1 {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 16px;
+  }
+
+  .unfair-u1 .mark {
+    width: 64px;
+    height: 64px;
+    flex-shrink: 0;
+  }
+
+  .unfair-u1 .wordmark {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 52px;
+    line-height: 1;
+    letter-spacing: -0.01em;
+    color: #fff;
+  }
+
+  .unfair-u1.on-light .wordmark { color: #0D0D0D; }
+
+  /* Concept U2: Bold "UN" slash mark */
+  .unfair-u2 {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 20px;
+  }
+
+  .unfair-u2 .mark {
+    width: 68px;
+    height: 68px;
+    flex-shrink: 0;
+  }
+
+  .unfair-u2 .wordmark {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 52px;
+    line-height: 1;
+    letter-spacing: -0.01em;
+    color: #fff;
+  }
+
+  .unfair-u2 .wordmark .dot { color: #FAFA00; }
+  .unfair-u2.on-light .wordmark { color: #0D0D0D; }
+  .unfair-u2.on-light .wordmark .dot { color: #0D0D0D; }
+
+  /* Concept U3: Stacked with tagline */
+  .unfair-u3 {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 20px;
+  }
+
+  .unfair-u3 .mark {
+    width: 72px;
+    height: 72px;
+    flex-shrink: 0;
+  }
+
+  .unfair-u3 .text-stack {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+  }
+
+  .unfair-u3 .wordmark {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 52px;
+    line-height: 1;
+    letter-spacing: -0.01em;
+    color: #fff;
+  }
+
+  .unfair-u3 .wordmark .dot { color: #FAFA00; }
+
+  .unfair-u3 .tagline {
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: 0.3em;
+    text-transform: uppercase;
+    color: #888;
+  }
+
+  .unfair-u3.on-light .wordmark { color: #0D0D0D; }
+  .unfair-u3.on-light .wordmark .dot { color: #0D0D0D; }
+  .unfair-u3.on-light .tagline { color: #555; }
+
+  /* ─────────────────────────────────────────────
+     GRVTY LOGO CONCEPTS
+  ───────────────────────────────────────────── */
+
+  .grvty-g1 {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 16px;
+  }
+
+  .grvty-g1 .mark { width: 64px; height: 64px; flex-shrink: 0; }
+
+  .grvty-g1 .wordmark {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 52px;
+    line-height: 1;
+    letter-spacing: 0.06em;
+    color: #fff;
+  }
+
+  .grvty-g1.on-light .wordmark { color: #0D0D0D; }
+
+  .grvty-g2 {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 20px;
+  }
+
+  .grvty-g2 .mark { width: 68px; height: 68px; flex-shrink: 0; }
+
+  .grvty-g2 .wordmark {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 52px;
+    line-height: 1;
+    letter-spacing: 0.06em;
+    color: #fff;
+  }
+
+  .grvty-g2 .wordmark .dot { color: #00E3FF; }
+  .grvty-g2.on-light .wordmark { color: #0D0D0D; }
+  .grvty-g2.on-light .wordmark .dot { color: #0099BB; }
+
+  .grvty-g3 {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 20px;
+  }
+
+  .grvty-g3 .mark { width: 72px; height: 72px; flex-shrink: 0; }
+
+  .grvty-g3 .text-stack {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+  }
+
+  .grvty-g3 .wordmark {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 52px;
+    line-height: 1;
+    letter-spacing: 0.06em;
+    color: #fff;
+  }
+
+  .grvty-g3 .wordmark .dot { color: #00E3FF; }
+
+  .grvty-g3 .tagline {
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: 0.3em;
+    text-transform: uppercase;
+    color: #888;
+  }
+
+  .grvty-g3.on-light .wordmark { color: #0D0D0D; }
+  .grvty-g3.on-light .wordmark .dot { color: #0099BB; }
+  .grvty-g3.on-light .tagline { color: #555; }
+
+  /* ── SIZE STRIP ── */
+  .size-strip {
+    background: #111;
+    padding: 40px;
+    display: flex;
+    align-items: center;
+    gap: 48px;
+    flex-wrap: wrap;
+    border-top: 2px solid #1E1E1E;
+  }
+
+  .size-item { display: flex; flex-direction: column; gap: 10px; align-items: flex-start; }
+
+  .size-lbl {
+    font-size: 9px;
+    font-weight: 600;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: #444;
+  }
+
+  /* ── DIVIDER ── */
+  .divider {
+    height: 1px;
+    background: #1E1E1E;
+    margin: 80px 0;
+  }
+</style>
+</head>
+<body>
+
+<div class="page-title">Logo Concepts · UNFAIR vs GRVTY · 2026</div>
+
+<!-- ═══════════════════════════════════════════
+     BRAND 01: UNFAIR
+══════════════════════════════════════════════ -->
+<div class="brand-section">
+  <div class="brand-header">
+    <div class="brand-name-label">01 — UNFAIR™ &nbsp;·&nbsp; Accent: #FAFA00</div>
+  </div>
+
+  <div class="logo-grid">
+
+    <!-- C1: Negative space "U" block -->
+    <div class="logo-cell">
+      <div class="cell-label">Concept A — Solid Block U</div>
+      <div class="unfair-u1">
+        <svg class="mark" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <!-- Filled square with cutout U shape -->
+          <rect width="64" height="64" fill="#FAFA00"/>
+          <!-- U negative space cutout -->
+          <rect x="12" y="8" width="14" height="36" fill="#0D0D0D"/>
+          <rect x="38" y="8" width="14" height="36" fill="#0D0D0D"/>
+          <rect x="12" y="36" width="40" height="14" fill="#0D0D0D"/>
+          <!-- Bottom bar stays yellow, cut creates U shape -->
+          <rect x="12" y="36" width="40" height="6" fill="#0D0D0D"/>
+        </svg>
+        <span class="wordmark">UNFAIR</span>
+      </div>
+    </div>
+
+    <!-- C2: Slash / arrow mark -->
+    <div class="logo-cell">
+      <div class="cell-label">Concept B — Arrow Mark</div>
+      <div class="unfair-u2">
+        <svg class="mark" viewBox="0 0 68 68" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <!-- Thick diagonal slash = "unfair advantage" arrow -->
+          <polygon points="8,60 8,44 44,8 60,8 60,24 24,60" fill="#FAFA00"/>
+          <!-- Second parallel slash -->
+          <polygon points="28,60 28,52 52,28 60,28 60,36 36,60" fill="#fff" opacity="0.15"/>
+        </svg>
+        <span class="wordmark">UNFAIR<span class="dot">.</span></span>
+      </div>
+    </div>
+
+    <!-- C3: "UN" stacked monogram -->
+    <div class="logo-cell">
+      <div class="cell-label">Concept C — UN Monogram</div>
+      <div class="unfair-u3">
+        <svg class="mark" viewBox="0 0 72 72" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <!-- Square border mark with UN inside -->
+          <rect x="1" y="1" width="70" height="70" stroke="#FAFA00" stroke-width="4" fill="none"/>
+          <!-- U shape -->
+          <rect x="10" y="12" width="8" height="30" fill="#fff"/>
+          <rect x="10" y="36" width="26" height="8" fill="#fff"/>
+          <rect x="28" y="12" width="8" height="30" fill="#fff"/>
+          <!-- N shape -->
+          <rect x="40" y="12" width="8" height="36" fill="#FAFA00"/>
+          <polygon points="40,12 48,12 64,36 64,12" fill="none"/>
+          <polygon points="48,12 64,12 64,48 48,48" fill="#FAFA00"/>
+          <rect x="56" y="12" width="8" height="36" fill="#FAFA00"/>
+        </svg>
+        <div class="text-stack">
+          <span class="wordmark">UNFAIR<span class="dot">.</span></span>
+          <span class="tagline">Unfair Advantage.</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Light versions -->
+    <div class="logo-cell light">
+      <div class="cell-label">Concept A — On White</div>
+      <div class="unfair-u1 on-light">
+        <svg class="mark" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <rect width="64" height="64" fill="#0D0D0D"/>
+          <rect x="12" y="8" width="14" height="36" fill="#F5F5F5"/>
+          <rect x="38" y="8" width="14" height="36" fill="#F5F5F5"/>
+          <rect x="12" y="36" width="40" height="6" fill="#F5F5F5"/>
+        </svg>
+        <span class="wordmark">UNFAIR</span>
+      </div>
+    </div>
+
+    <div class="logo-cell light">
+      <div class="cell-label">Concept B — On White</div>
+      <div class="unfair-u2 on-light">
+        <svg class="mark" viewBox="0 0 68 68" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <polygon points="8,60 8,44 44,8 60,8 60,24 24,60" fill="#0D0D0D"/>
+          <polygon points="28,60 28,52 52,28 60,28 60,36 36,60" fill="#0D0D0D" opacity="0.15"/>
+        </svg>
+        <span class="wordmark">UNFAIR<span class="dot">.</span></span>
+      </div>
+    </div>
+
+    <div class="logo-cell light">
+      <div class="cell-label">Concept C — On White</div>
+      <div class="unfair-u3 on-light">
+        <svg class="mark" viewBox="0 0 72 72" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <rect x="1" y="1" width="70" height="70" stroke="#0D0D0D" stroke-width="4" fill="none"/>
+          <rect x="10" y="12" width="8" height="30" fill="#0D0D0D"/>
+          <rect x="10" y="36" width="26" height="8" fill="#0D0D0D"/>
+          <rect x="28" y="12" width="8" height="30" fill="#0D0D0D"/>
+          <rect x="40" y="12" width="8" height="36" fill="#0D0D0D"/>
+          <rect x="56" y="12" width="8" height="36" fill="#0D0D0D"/>
+          <polygon points="48,12 56,12 48,48 40,48" fill="#0D0D0D"/>
+        </svg>
+        <div class="text-stack">
+          <span class="wordmark">UNFAIR<span class="dot">.</span></span>
+          <span class="tagline">Unfair Advantage.</span>
+        </div>
+      </div>
+    </div>
+
+  </div><!-- /logo-grid UNFAIR -->
+
+  <!-- Size strip UNFAIR -->
+  <div class="size-strip">
+    <div class="size-item">
+      <div class="size-lbl">Hero</div>
+      <div style="display:flex;align-items:center;gap:14px">
+        <svg width="56" height="56" viewBox="0 0 68 68" fill="none"><polygon points="8,60 8,44 44,8 60,8 60,24 24,60" fill="#FAFA00"/></svg>
+        <span style="font-family:'Bebas Neue',sans-serif;font-size:72px;line-height:1;letter-spacing:-0.01em;color:#fff">UNFAIR<span style="color:#FAFA00">.</span></span>
+      </div>
+    </div>
+    <div class="size-item">
+      <div class="size-lbl">Navbar</div>
+      <div style="display:flex;align-items:center;gap:8px">
+        <svg width="24" height="24" viewBox="0 0 68 68" fill="none"><polygon points="8,60 8,44 44,8 60,8 60,24 24,60" fill="#FAFA00"/></svg>
+        <span style="font-family:'Bebas Neue',sans-serif;font-size:22px;line-height:1;letter-spacing:0.04em;color:#fff">UNFAIR<span style="color:#FAFA00">.</span></span>
+      </div>
+    </div>
+    <div class="size-item">
+      <div class="size-lbl">Favicon</div>
+      <svg width="32" height="32" viewBox="0 0 68 68" fill="none"><rect width="68" height="68" fill="#FAFA00"/><polygon points="12,56 12,42 42,12 56,12 56,26 26,56" fill="#0D0D0D"/></svg>
+    </div>
+  </div>
+
+</div><!-- /brand UNFAIR -->
+
+<div class="divider"></div>
+
+<!-- ═══════════════════════════════════════════
+     BRAND 02: GRVTY
+══════════════════════════════════════════════ -->
+<div class="brand-section">
+  <div class="brand-header">
+    <div class="brand-name-label">02 — GRVTY™ &nbsp;·&nbsp; Accent: #00E3FF</div>
+  </div>
+
+  <div class="logo-grid">
+
+    <!-- G1: Downward arrow / gravity drop -->
+    <div class="logo-cell">
+      <div class="cell-label">Concept A — Gravity Drop</div>
+      <div class="grvty-g1">
+        <svg class="mark" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <!-- Downward-pointing triangle = gravity pull -->
+          <polygon points="32,56 4,12 60,12" fill="#00E3FF"/>
+          <!-- Inner hollow -->
+          <polygon points="32,44 14,20 50,20" fill="#0D0D0D"/>
+          <!-- Center dot -->
+          <circle cx="32" cy="38" r="5" fill="#00E3FF"/>
+        </svg>
+        <span class="wordmark">GRVTY</span>
+      </div>
+    </div>
+
+    <!-- G2: Orbit / gravitational field rings -->
+    <div class="logo-cell">
+      <div class="cell-label">Concept B — Orbit Mark</div>
+      <div class="grvty-g2">
+        <svg class="mark" viewBox="0 0 68 68" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <!-- Outer ring -->
+          <circle cx="34" cy="34" r="30" stroke="#00E3FF" stroke-width="3" fill="none"/>
+          <!-- Middle ring -->
+          <circle cx="34" cy="34" r="20" stroke="#00E3FF" stroke-width="2" fill="none" opacity="0.5"/>
+          <!-- Core -->
+          <circle cx="34" cy="34" r="8" fill="#00E3FF"/>
+          <!-- Pull lines -->
+          <line x1="34" y1="4" x2="34" y2="26" stroke="#00E3FF" stroke-width="1.5" opacity="0.4"/>
+          <line x1="34" y1="42" x2="34" y2="64" stroke="#00E3FF" stroke-width="1.5" opacity="0.4"/>
+          <line x1="4" y1="34" x2="26" y2="34" stroke="#00E3FF" stroke-width="1.5" opacity="0.4"/>
+          <line x1="42" y1="34" x2="64" y2="34" stroke="#00E3FF" stroke-width="1.5" opacity="0.4"/>
+        </svg>
+        <span class="wordmark">GRVTY<span class="dot">.</span></span>
+      </div>
+    </div>
+
+    <!-- G3: "G" letterform geometric -->
+    <div class="logo-cell">
+      <div class="cell-label">Concept C — G Letterform</div>
+      <div class="grvty-g3">
+        <svg class="mark" viewBox="0 0 72 72" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <!-- Geometric G built from rectangles — like a logo mark -->
+          <!-- Top bar -->
+          <rect x="16" y="8" width="44" height="12" fill="#00E3FF"/>
+          <!-- Left bar -->
+          <rect x="8" y="8" width="12" height="56" fill="#00E3FF"/>
+          <!-- Bottom bar -->
+          <rect x="16" y="52" width="44" height="12" fill="#00E3FF"/>
+          <!-- Right partial bar (G has a spur) -->
+          <rect x="48" y="34" width="12" height="18" fill="#00E3FF"/>
+          <!-- Inner horizontal spur -->
+          <rect x="36" y="34" width="24" height="10" fill="#00E3FF"/>
+          <!-- Cutout to make it a G not a C -->
+          <rect x="20" y="20" width="28" height="32" fill="#0D0D0D"/>
+        </svg>
+        <div class="text-stack">
+          <span class="wordmark">GRVTY<span class="dot">.</span></span>
+          <span class="tagline">Inevitable.</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Light versions -->
+    <div class="logo-cell light">
+      <div class="cell-label">Concept A — On White</div>
+      <div class="grvty-g1 on-light">
+        <svg class="mark" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <polygon points="32,56 4,12 60,12" fill="#0099BB"/>
+          <polygon points="32,44 14,20 50,20" fill="#F5F5F5"/>
+          <circle cx="32" cy="38" r="5" fill="#0099BB"/>
+        </svg>
+        <span class="wordmark">GRVTY</span>
+      </div>
+    </div>
+
+    <div class="logo-cell light">
+      <div class="cell-label">Concept B — On White</div>
+      <div class="grvty-g2 on-light">
+        <svg class="mark" viewBox="0 0 68 68" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="34" cy="34" r="30" stroke="#0D0D0D" stroke-width="3" fill="none"/>
+          <circle cx="34" cy="34" r="20" stroke="#0D0D0D" stroke-width="2" fill="none" opacity="0.3"/>
+          <circle cx="34" cy="34" r="8" fill="#0D0D0D"/>
+          <line x1="34" y1="4" x2="34" y2="26" stroke="#0D0D0D" stroke-width="1.5" opacity="0.3"/>
+          <line x1="34" y1="42" x2="34" y2="64" stroke="#0D0D0D" stroke-width="1.5" opacity="0.3"/>
+          <line x1="4" y1="34" x2="26" y2="34" stroke="#0D0D0D" stroke-width="1.5" opacity="0.3"/>
+          <line x1="42" y1="34" x2="64" y2="34" stroke="#0D0D0D" stroke-width="1.5" opacity="0.3"/>
+        </svg>
+        <span class="wordmark">GRVTY<span class="dot">.</span></span>
+      </div>
+    </div>
+
+    <div class="logo-cell light">
+      <div class="cell-label">Concept C — On White</div>
+      <div class="grvty-g3 on-light">
+        <svg class="mark" viewBox="0 0 72 72" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <rect x="16" y="8" width="44" height="12" fill="#0D0D0D"/>
+          <rect x="8" y="8" width="12" height="56" fill="#0D0D0D"/>
+          <rect x="16" y="52" width="44" height="12" fill="#0D0D0D"/>
+          <rect x="48" y="34" width="12" height="18" fill="#0D0D0D"/>
+          <rect x="36" y="34" width="24" height="10" fill="#0D0D0D"/>
+          <rect x="20" y="20" width="28" height="32" fill="#F5F5F5"/>
+        </svg>
+        <div class="text-stack">
+          <span class="wordmark">GRVTY<span class="dot">.</span></span>
+          <span class="tagline">Inevitable.</span>
+        </div>
+      </div>
+    </div>
+
+  </div><!-- /logo-grid GRVTY -->
+
+  <!-- Size strip GRVTY -->
+  <div class="size-strip">
+    <div class="size-item">
+      <div class="size-lbl">Hero</div>
+      <div style="display:flex;align-items:center;gap:14px">
+        <svg width="56" height="56" viewBox="0 0 64 64" fill="none">
+          <polygon points="32,56 4,12 60,12" fill="#00E3FF"/>
+          <polygon points="32,44 14,20 50,20" fill="#0D0D0D"/>
+          <circle cx="32" cy="38" r="5" fill="#00E3FF"/>
+        </svg>
+        <span style="font-family:'Bebas Neue',sans-serif;font-size:72px;line-height:1;letter-spacing:0.06em;color:#fff">GRVTY<span style="color:#00E3FF">.</span></span>
+      </div>
+    </div>
+    <div class="size-item">
+      <div class="size-lbl">Navbar</div>
+      <div style="display:flex;align-items:center;gap:8px">
+        <svg width="22" height="22" viewBox="0 0 64 64" fill="none">
+          <polygon points="32,56 4,12 60,12" fill="#00E3FF"/>
+          <polygon points="32,44 14,20 50,20" fill="#0D0D0D"/>
+          <circle cx="32" cy="38" r="5" fill="#00E3FF"/>
+        </svg>
+        <span style="font-family:'Bebas Neue',sans-serif;font-size:22px;line-height:1;letter-spacing:0.08em;color:#fff">GRVTY<span style="color:#00E3FF">.</span></span>
+      </div>
+    </div>
+    <div class="size-item">
+      <div class="size-lbl">Favicon</div>
+      <svg width="32" height="32" viewBox="0 0 64 64" fill="none">
+        <rect width="64" height="64" fill="#0D0D0D"/>
+        <polygon points="32,54 6,14 58,14" fill="#00E3FF"/>
+        <polygon points="32,42 16,22 48,22" fill="#0D0D0D"/>
+        <circle cx="32" cy="37" r="5" fill="#00E3FF"/>
+      </svg>
+    </div>
+  </div>
+
+</div><!-- /brand GRVTY -->
+
+</body>
+</html>

@@ -1,0 +1,742 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Gravity — Brand Kit</title>
+<link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:ital,wght@0,300;0,400;0,600;0,700;1,700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body { background: #0A0A0A; font-family: 'Inter', sans-serif; color: #fff; }
+
+/* ─── TOKENS ─── */
+:root {
+  --black:   #0A0A0A;
+  --dark:    #141414;
+  --border:  #141414;
+  --cyan:    #00E3FF;
+  --cyan-dk: #007FA8;
+  --white:   #FFFFFF;
+  --muted:   #1E1E1E;
+  --label:   #222222;
+}
+
+/* ─── BASE ─── */
+.wm {
+  font-family: 'Chakra Petch', sans-serif;
+  font-weight: 700; text-transform: uppercase;
+  letter-spacing: .12em; line-height: 1; color: var(--white);
+}
+.accent { color: var(--cyan); letter-spacing: 0; }
+.eyebrow { font-size: 9px; font-weight: 600; letter-spacing: .45em; text-transform: uppercase; color: var(--label); }
+.caption { font-size: 8px; font-weight: 700; letter-spacing: .32em; text-transform: uppercase; color: var(--label); }
+.note    { font-size: 10px; color: #1C1C1C; line-height: 1.7; }
+
+/* ─── ICON ─── */
+.icon {
+  background: var(--dark); border-radius: 16px;
+  display: flex; align-items: center; justify-content: center; flex-shrink: 0;
+}
+.icon .g { font-family: 'Chakra Petch', sans-serif; font-weight: 700; color: #fff; line-height: 1; }
+.icon .d { color: var(--cyan); }
+.icon-cy { background: var(--cyan); }
+.icon-cy .g { color: var(--black); }
+.icon-wh { background: #fff; }
+.icon-wh .g { color: var(--black); }
+.icon-wh .d { color: var(--cyan-dk); }
+
+/* ─── SECTION ─── */
+.section { padding: 96px 80px; border-top: 1px solid var(--border); }
+.section-sm { padding: 72px 80px; border-top: 1px solid var(--border); }
+
+/* ─── GRID ─── */
+.grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 1px; background: var(--border); }
+.grid-3 { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 1px; background: var(--border); }
+.grid-4 { display: grid; grid-template-columns: repeat(4,1fr); gap: 1px; background: var(--border); }
+.grid-5 { display: grid; grid-template-columns: repeat(5,1fr); gap: 1px; background: var(--border); }
+.box    { background: var(--black); }
+
+/* ─── DIVIDER ─── */
+.div-accent { width: 100%; height: 1px; background: linear-gradient(90deg,var(--cyan),transparent 70%); }
+</style>
+</head>
+<body>
+
+<!-- ══════════════════════════════════════════
+  PORTADA
+══════════════════════════════════════════ -->
+<div style="min-height:100vh;background:#060606;display:flex;flex-direction:column;justify-content:space-between;padding:64px 80px;">
+  <div style="display:flex;justify-content:space-between;align-items:center;">
+    <div class="eyebrow">Brand Identity Kit</div>
+    <div class="eyebrow">2025 · Confidencial</div>
+  </div>
+
+  <div style="display:flex;flex-direction:column;gap:32px;">
+    <div style="display:flex;align-items:center;gap:28px;">
+      <div class="icon" style="width:96px;height:96px;border-radius:18px;">
+        <span class="g" style="font-size:62px;">G<span class="d" style="font-size:46px;vertical-align:middle;line-height:0;">.</span></span>
+      </div>
+      <span class="wm" style="font-size:112px;">GRAVITY<span class="accent">.</span></span>
+    </div>
+    <div style="display:flex;flex-direction:column;gap:8px;">
+      <div class="eyebrow" style="color:var(--cyan);opacity:.5;">Growth Agency · Inevitable.</div>
+      <div class="note" style="max-width:400px;color:#1A1A1A;">Logo · Brandmark · Colores · Tipografía · Voz · Usos · Do's & Don'ts</div>
+    </div>
+  </div>
+
+  <div class="eyebrow">Gravity Brand Kit — v1.0</div>
+</div>
+
+<div class="div-accent"></div>
+
+<!-- ══════════════════════════════════════════
+  01 · LOGO OFICIAL
+══════════════════════════════════════════ -->
+<div class="section">
+  <div class="eyebrow" style="margin-bottom:12px;">01</div>
+  <div style="font-family:'Chakra Petch',sans-serif;font-size:13px;font-weight:700;letter-spacing:.08em;color:#2A2A2A;margin-bottom:56px;">Logo Oficial</div>
+
+  <!-- Logo sobre fondo oscuro -->
+  <div style="background:#060606;border:1px solid var(--border);padding:100px 80px;display:flex;align-items:center;justify-content:center;position:relative;">
+    <div style="position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:700px;height:300px;background:radial-gradient(ellipse,rgba(0,227,255,.04) 0%,transparent 65%);pointer-events:none;"></div>
+    <span class="wm" style="font-size:128px;position:relative;">GRAVITY<span class="accent">.</span></span>
+  </div>
+
+  <!-- Logo sobre fondo blanco -->
+  <div style="background:#F5F5F5;border:1px solid #E8E8E8;padding:72px 80px;display:flex;align-items:center;justify-content:center;margin-top:1px;">
+    <span class="wm" style="font-size:96px;color:#0A0A0A;">GRAVITY<span style="color:var(--cyan-dk);letter-spacing:0;">.</span></span>
+  </div>
+
+  <!-- Specs -->
+  <div class="grid-4" style="margin-top:1px;">
+    <div class="box" style="padding:24px 28px;display:flex;flex-direction:column;gap:6px;">
+      <div class="caption">Fuente</div>
+      <div style="font-size:12px;font-weight:500;color:#2A2A2A;margin-top:4px;">Chakra Petch</div>
+    </div>
+    <div class="box" style="padding:24px 28px;display:flex;flex-direction:column;gap:6px;">
+      <div class="caption">Peso</div>
+      <div style="font-size:12px;font-weight:500;color:#2A2A2A;margin-top:4px;">700 · Bold</div>
+    </div>
+    <div class="box" style="padding:24px 28px;display:flex;flex-direction:column;gap:6px;">
+      <div class="caption">Tracking</div>
+      <div style="font-size:12px;font-weight:500;color:#2A2A2A;margin-top:4px;">0.12em</div>
+    </div>
+    <div class="box" style="padding:24px 28px;display:flex;flex-direction:column;gap:6px;">
+      <div class="caption">Case</div>
+      <div style="font-size:12px;font-weight:500;color:#2A2A2A;margin-top:4px;">ALL CAPS</div>
+    </div>
+  </div>
+</div>
+
+<!-- ══════════════════════════════════════════
+  02 · BRANDMARK
+══════════════════════════════════════════ -->
+<div class="section">
+  <div class="eyebrow" style="margin-bottom:12px;">02</div>
+  <div style="font-family:'Chakra Petch',sans-serif;font-size:13px;font-weight:700;letter-spacing:.08em;color:#2A2A2A;margin-bottom:56px;">Brandmark · G.</div>
+
+  <div class="grid-2">
+
+    <!-- Ícono principal grande -->
+    <div class="box" style="padding:80px;display:flex;align-items:center;justify-content:center;min-height:320px;">
+      <div class="icon" style="width:180px;height:180px;border-radius:32px;">
+        <span class="g" style="font-size:116px;">G<span class="d" style="font-size:86px;vertical-align:middle;line-height:0;">.</span></span>
+      </div>
+    </div>
+
+    <!-- Las 3 variantes -->
+    <div class="box" style="padding:56px;display:flex;flex-direction:column;justify-content:center;gap:36px;">
+      <div class="caption" style="margin-bottom:4px;">3 variantes oficiales</div>
+
+      <div style="display:flex;align-items:center;gap:20px;">
+        <div class="icon" style="width:80px;height:80px;border-radius:14px;">
+          <span class="g" style="font-size:52px;">G<span class="d" style="font-size:38px;vertical-align:middle;line-height:0;">.</span></span>
+        </div>
+        <div>
+          <div style="font-size:11px;font-weight:600;color:#2A2A2A;">Dark — uso principal</div>
+          <div class="note" style="margin-top:3px;">Fondos oscuros</div>
+        </div>
+      </div>
+
+      <div style="display:flex;align-items:center;gap:20px;">
+        <div class="icon icon-cy" style="width:80px;height:80px;border-radius:14px;">
+          <span class="g" style="font-size:52px;color:#0A0A0A;">G</span>
+        </div>
+        <div>
+          <div style="font-size:11px;font-weight:600;color:#2A2A2A;">Cyan — acento</div>
+          <div class="note" style="margin-top:3px;">Momentos de impacto</div>
+        </div>
+      </div>
+
+      <div style="display:flex;align-items:center;gap:20px;">
+        <div class="icon icon-wh" style="width:80px;height:80px;border-radius:14px;">
+          <span class="g" style="font-size:52px;color:#0A0A0A;">G<span style="color:var(--cyan-dk);font-size:38px;vertical-align:middle;line-height:0;">.</span></span>
+        </div>
+        <div>
+          <div style="font-size:11px;font-weight:600;color:#2A2A2A;">White — fondos claros</div>
+          <div class="note" style="margin-top:3px;">Impresión · papel</div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<!-- ══════════════════════════════════════════
+  03 · LOCKUPS
+══════════════════════════════════════════ -->
+<div class="section">
+  <div class="eyebrow" style="margin-bottom:12px;">03</div>
+  <div style="font-family:'Chakra Petch',sans-serif;font-size:13px;font-weight:700;letter-spacing:.08em;color:#2A2A2A;margin-bottom:56px;">Lockups · Combinaciones</div>
+
+  <div style="display:flex;flex-direction:column;gap:1px;background:var(--border);">
+
+    <!-- Lockup A: ícono + wordmark horizontal -->
+    <div class="box" style="padding:64px 72px;display:flex;align-items:center;justify-content:space-between;">
+      <div style="display:flex;align-items:center;gap:24px;">
+        <div class="icon" style="width:72px;height:72px;border-radius:13px;">
+          <span class="g" style="font-size:46px;">G<span class="d" style="font-size:34px;vertical-align:middle;line-height:0;">.</span></span>
+        </div>
+        <span class="wm" style="font-size:72px;">GRAVITY<span class="accent">.</span></span>
+      </div>
+      <div class="caption">Lockup A · Horizontal</div>
+    </div>
+
+    <!-- Lockup B: solo wordmark -->
+    <div class="box" style="padding:56px 72px;display:flex;align-items:center;justify-content:space-between;">
+      <span class="wm" style="font-size:72px;">GRAVITY<span class="accent">.</span></span>
+      <div class="caption">Lockup B · Solo wordmark · uso más frecuente</div>
+    </div>
+
+    <!-- Lockup C: wordmark + tagline -->
+    <div class="box" style="padding:56px 72px;display:flex;align-items:center;justify-content:space-between;">
+      <div style="display:flex;flex-direction:column;gap:12px;align-items:flex-start;">
+        <span class="wm" style="font-size:72px;">GRAVITY<span class="accent">.</span></span>
+        <div style="display:flex;align-items:center;gap:10px;padding-left:2px;">
+          <div style="width:16px;height:1px;background:var(--cyan);opacity:.4;"></div>
+          <span style="font-size:10px;font-weight:400;letter-spacing:.5em;text-transform:uppercase;color:#1E1E1E;">Growth Agency</span>
+        </div>
+      </div>
+      <div class="caption">Lockup C · Con descriptor</div>
+    </div>
+
+    <!-- Lockup D: navbar real -->
+    <div class="box" style="padding:20px 72px;display:flex;align-items:center;justify-content:space-between;border-top:1px solid #111;">
+      <div style="display:flex;align-items:center;gap:12px;">
+        <div class="icon" style="width:34px;height:34px;border-radius:6px;">
+          <span class="g" style="font-size:22px;">G<span class="d" style="font-size:16px;vertical-align:middle;line-height:0;">.</span></span>
+        </div>
+        <span class="wm" style="font-size:24px;letter-spacing:.1em;">GRAVITY<span class="accent">.</span></span>
+      </div>
+      <div style="display:flex;gap:28px;align-items:center;">
+        <span style="font-size:11px;color:#252525;">Servicios</span>
+        <span style="font-size:11px;color:#252525;">Trabajo</span>
+        <span style="font-size:11px;color:#252525;">Nosotros</span>
+        <span style="font-size:11px;font-weight:700;background:var(--cyan);color:#0A0A0A;padding:8px 20px;">Contacto</span>
+      </div>
+      <div class="caption" style="margin-left:32px;">Lockup D · Navbar</div>
+    </div>
+
+  </div>
+</div>
+
+<!-- ══════════════════════════════════════════
+  04 · ESCALA DE ÍCONOS
+══════════════════════════════════════════ -->
+<div class="section">
+  <div class="eyebrow" style="margin-bottom:12px;">04</div>
+  <div style="font-family:'Chakra Petch',sans-serif;font-size:13px;font-weight:700;letter-spacing:.08em;color:#2A2A2A;margin-bottom:56px;">Íconos · Escala completa</div>
+
+  <!-- Cuadrado -->
+  <div style="background:#060606;border:1px solid var(--border);padding:56px 64px;display:flex;align-items:flex-end;gap:40px;flex-wrap:wrap;">
+    <div class="caption" style="width:100%;margin-bottom:16px;">Cuadrado redondeado</div>
+
+    <div style="display:flex;flex-direction:column;align-items:center;gap:14px;">
+      <div class="icon" style="width:120px;height:120px;border-radius:22px;">
+        <span class="g" style="font-size:78px;">G<span class="d" style="font-size:58px;vertical-align:middle;line-height:0;">.</span></span>
+      </div>
+      <div class="caption">120</div>
+    </div>
+    <div style="display:flex;flex-direction:column;align-items:center;gap:14px;">
+      <div class="icon" style="width:96px;height:96px;border-radius:18px;">
+        <span class="g" style="font-size:62px;">G<span class="d" style="font-size:46px;vertical-align:middle;line-height:0;">.</span></span>
+      </div>
+      <div class="caption">96</div>
+    </div>
+    <div style="display:flex;flex-direction:column;align-items:center;gap:14px;">
+      <div class="icon" style="width:72px;height:72px;border-radius:14px;">
+        <span class="g" style="font-size:46px;">G<span class="d" style="font-size:34px;vertical-align:middle;line-height:0;">.</span></span>
+      </div>
+      <div class="caption">72</div>
+    </div>
+    <div style="display:flex;flex-direction:column;align-items:center;gap:14px;">
+      <div class="icon" style="width:56px;height:56px;border-radius:10px;">
+        <span class="g" style="font-size:36px;">G<span class="d" style="font-size:27px;vertical-align:middle;line-height:0;">.</span></span>
+      </div>
+      <div class="caption">56</div>
+    </div>
+    <div style="display:flex;flex-direction:column;align-items:center;gap:14px;">
+      <div class="icon" style="width:40px;height:40px;border-radius:8px;">
+        <span class="g" style="font-size:26px;">G<span class="d" style="font-size:20px;vertical-align:middle;line-height:0;">.</span></span>
+      </div>
+      <div class="caption">40</div>
+    </div>
+    <div style="display:flex;flex-direction:column;align-items:center;gap:14px;">
+      <div class="icon" style="width:32px;height:32px;border-radius:6px;">
+        <span class="g" style="font-size:20px;">G<span class="d" style="font-size:15px;vertical-align:middle;line-height:0;">.</span></span>
+      </div>
+      <div class="caption">32</div>
+    </div>
+    <div style="display:flex;flex-direction:column;align-items:center;gap:14px;">
+      <div class="icon" style="width:24px;height:24px;border-radius:4px;">
+        <span class="g" style="font-size:15px;">G</span>
+      </div>
+      <div class="caption">24</div>
+    </div>
+    <div style="display:flex;flex-direction:column;align-items:center;gap:14px;">
+      <div class="icon" style="width:16px;height:16px;border-radius:3px;">
+        <span class="g" style="font-size:10px;">G</span>
+      </div>
+      <div class="caption">16</div>
+    </div>
+  </div>
+
+
+</div>
+
+<!-- ══════════════════════════════════════════
+  05 · COLORES
+══════════════════════════════════════════ -->
+<div class="section">
+  <div class="eyebrow" style="margin-bottom:12px;">05</div>
+  <div style="font-family:'Chakra Petch',sans-serif;font-size:13px;font-weight:700;letter-spacing:.08em;color:#2A2A2A;margin-bottom:56px;">Sistema de Color</div>
+
+  <!-- Paleta principal -->
+  <div class="grid-4">
+    <div class="box" style="padding:0;">
+      <div style="height:180px;background:#0A0A0A;border-bottom:1px solid #1A1A1A;"></div>
+      <div style="padding:24px 28px;">
+        <div style="font-size:12px;font-weight:600;color:#2A2A2A;margin-bottom:6px;">Gravity Black</div>
+        <div class="caption" style="margin-bottom:3px;">#0A0A0A</div>
+        <div class="caption" style="margin-bottom:3px;">RGB 10, 10, 10</div>
+        <div class="note" style="margin-top:8px;">Fondo principal</div>
+      </div>
+    </div>
+    <div class="box" style="padding:0;">
+      <div style="height:180px;background:#00E3FF;"></div>
+      <div style="padding:24px 28px;">
+        <div style="font-size:12px;font-weight:600;color:#2A2A2A;margin-bottom:6px;">Gravity Cyan</div>
+        <div class="caption" style="margin-bottom:3px;">#00E3FF</div>
+        <div class="caption" style="margin-bottom:3px;">RGB 0, 227, 255</div>
+        <div class="note" style="margin-top:8px;">Color de acento · el punto</div>
+      </div>
+    </div>
+    <div class="box" style="padding:0;">
+      <div style="height:180px;background:#FFFFFF;border-bottom:1px solid #1A1A1A;"></div>
+      <div style="padding:24px 28px;">
+        <div style="font-size:12px;font-weight:600;color:#2A2A2A;margin-bottom:6px;">White</div>
+        <div class="caption" style="margin-bottom:3px;">#FFFFFF</div>
+        <div class="caption" style="margin-bottom:3px;">RGB 255, 255, 255</div>
+        <div class="note" style="margin-top:8px;">Wordmark · texto principal</div>
+      </div>
+    </div>
+    <div class="box" style="padding:0;">
+      <div style="height:180px;background:#141414;border-bottom:1px solid #1C1C1C;"></div>
+      <div style="padding:24px 28px;">
+        <div style="font-size:12px;font-weight:600;color:#2A2A2A;margin-bottom:6px;">Icon Dark</div>
+        <div class="caption" style="margin-bottom:3px;">#141414</div>
+        <div class="caption" style="margin-bottom:3px;">RGB 20, 20, 20</div>
+        <div class="note" style="margin-top:8px;">Fondo del brandmark</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Combinaciones de color -->
+  <div style="margin-top:1px;">
+    <div class="grid-3">
+      <div class="box" style="padding:32px 36px;display:flex;align-items:center;gap:16px;">
+        <div style="width:48px;height:48px;background:#0A0A0A;border-radius:8px;display:flex;align-items:center;justify-content:center;border:1px solid #1A1A1A;">
+          <span style="font-family:'Chakra Petch',sans-serif;font-size:28px;font-weight:700;color:#fff;">G<span style="color:#00E3FF;font-size:21px;vertical-align:middle;line-height:0;">.</span></span>
+        </div>
+        <div>
+          <div style="font-size:11px;font-weight:600;color:#2A2A2A;">Dark + Cyan</div>
+          <div class="note">Uso principal</div>
+        </div>
+      </div>
+      <div class="box" style="padding:32px 36px;display:flex;align-items:center;gap:16px;background:#F5F5F5;">
+        <div style="width:48px;height:48px;background:#fff;border-radius:8px;display:flex;align-items:center;justify-content:center;border:1px solid #E0E0E0;">
+          <span style="font-family:'Chakra Petch',sans-serif;font-size:28px;font-weight:700;color:#0A0A0A;">G<span style="color:#007FA8;font-size:21px;vertical-align:middle;line-height:0;">.</span></span>
+        </div>
+        <div>
+          <div style="font-size:11px;font-weight:600;color:#888;">White + Cyan Dark</div>
+          <div style="font-size:10px;color:#aaa;margin-top:2px;">Fondos claros</div>
+        </div>
+      </div>
+      <div class="box" style="padding:32px 36px;display:flex;align-items:center;gap:16px;background:#00E3FF;">
+        <div style="width:48px;height:48px;background:#0A0A0A;border-radius:8px;display:flex;align-items:center;justify-content:center;">
+          <span style="font-family:'Chakra Petch',sans-serif;font-size:28px;font-weight:700;color:#fff;">G</span>
+        </div>
+        <div>
+          <div style="font-size:11px;font-weight:600;color:rgba(0,0,0,.5);">Cyan + Dark</div>
+          <div style="font-size:10px;color:rgba(0,0,0,.35);margin-top:2px;">Inversión · impacto</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<!-- ══════════════════════════════════════════
+  06 · TIPOGRAFÍA
+══════════════════════════════════════════ -->
+<div class="section">
+  <div class="eyebrow" style="margin-bottom:12px;">06</div>
+  <div style="font-family:'Chakra Petch',sans-serif;font-size:13px;font-weight:700;letter-spacing:.08em;color:#2A2A2A;margin-bottom:56px;">Tipografía</div>
+
+  <div class="grid-2">
+
+    <!-- Display / Logo -->
+    <div class="box" style="padding:48px;">
+      <div class="caption" style="margin-bottom:28px;">Display · Logo · Títulos</div>
+      <div style="font-family:'Chakra Petch',sans-serif;font-weight:700;font-size:64px;line-height:1;letter-spacing:.08em;color:#fff;text-transform:uppercase;">Chakra<br>Petch.</div>
+      <div style="margin-top:28px;display:flex;flex-direction:column;gap:10px;">
+        <div style="font-family:'Chakra Petch',sans-serif;font-size:32px;font-weight:700;color:#fff;">H1 · 700 · 32px</div>
+        <div style="font-family:'Chakra Petch',sans-serif;font-size:24px;font-weight:600;color:#fff;">H2 · 600 · 24px</div>
+        <div style="font-family:'Chakra Petch',sans-serif;font-size:18px;font-weight:600;color:#fff;">H3 · 600 · 18px</div>
+      </div>
+      <div style="margin-top:24px;font-size:10px;color:#1A1A1A;line-height:1.6;">
+        Google Fonts · Libre · Web + Desktop<br>
+        Usar solo en mayúsculas para logo y headers
+      </div>
+    </div>
+
+    <!-- Body -->
+    <div class="box" style="padding:48px;background:#090909;">
+      <div class="caption" style="margin-bottom:28px;">Cuerpo · UI · Texto</div>
+      <div style="font-family:'Inter',sans-serif;font-weight:700;font-size:56px;line-height:1;color:#fff;">Inter.</div>
+      <div style="margin-top:28px;display:flex;flex-direction:column;gap:10px;">
+        <div style="font-family:'Inter',sans-serif;font-size:16px;font-weight:600;color:#fff;">Body Large · 600 · 16px</div>
+        <div style="font-family:'Inter',sans-serif;font-size:14px;font-weight:400;color:#666;">Body Regular · 400 · 14px</div>
+        <div style="font-family:'Inter',sans-serif;font-size:12px;font-weight:400;color:#444;">Small · 400 · 12px</div>
+        <div style="font-family:'Inter',sans-serif;font-size:9px;font-weight:600;letter-spacing:.35em;text-transform:uppercase;color:#333;">EYEBROW · 600 · 9px · 0.35em</div>
+      </div>
+      <div style="margin-top:24px;font-size:10px;color:#1A1A1A;line-height:1.6;">
+        Google Fonts · Libre · Web + Desktop<br>
+        Para párrafos, UI, botones, labels
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Escala tipográfica -->
+  <div class="box" style="padding:48px;margin-top:1px;display:flex;flex-direction:column;gap:20px;">
+    <div class="caption" style="margin-bottom:8px;">Escala · En uso real</div>
+    <div style="font-family:'Chakra Petch',sans-serif;font-weight:700;font-size:72px;line-height:.95;letter-spacing:.08em;text-transform:uppercase;color:#fff;">Hacemos que<br>el crecimiento<br><span style="color:var(--cyan);">sea inevitable.</span></div>
+    <div style="font-family:'Inter',sans-serif;font-size:16px;font-weight:400;color:#333;line-height:1.6;max-width:520px;margin-top:8px;">Somos una agencia de growth marketing que combina estrategia, datos y ejecución para hacer crecer tu negocio de forma sostenible.</div>
+    <div style="display:flex;gap:12px;margin-top:8px;">
+      <span style="font-family:'Inter',sans-serif;font-size:13px;font-weight:700;background:var(--cyan);color:#0A0A0A;padding:12px 28px;">Empieza ahora</span>
+      <span style="font-family:'Inter',sans-serif;font-size:13px;font-weight:500;border:1px solid #222;color:#333;padding:12px 28px;">Ver trabajo</span>
+    </div>
+  </div>
+
+</div>
+
+<!-- ══════════════════════════════════════════
+  07 · VOZ DE MARCA
+══════════════════════════════════════════ -->
+<div class="section">
+  <div class="eyebrow" style="margin-bottom:12px;">07</div>
+  <div style="font-family:'Chakra Petch',sans-serif;font-size:13px;font-weight:700;letter-spacing:.08em;color:#2A2A2A;margin-bottom:56px;">Voz de Marca</div>
+
+  <div class="grid-2">
+
+    <div class="box" style="padding:48px;display:flex;flex-direction:column;gap:28px;">
+      <div class="caption">Gravity es</div>
+      <div style="display:flex;flex-direction:column;gap:14px;">
+        <div style="display:flex;align-items:flex-start;gap:12px;">
+          <div style="width:4px;height:4px;background:var(--cyan);border-radius:50%;margin-top:6px;flex-shrink:0;"></div>
+          <div>
+            <div style="font-size:12px;font-weight:600;color:#2A2A2A;margin-bottom:3px;">Directo</div>
+            <div class="note">Sin rodeos. Dice lo que hace y hace lo que dice.</div>
+          </div>
+        </div>
+        <div style="display:flex;align-items:flex-start;gap:12px;">
+          <div style="width:4px;height:4px;background:var(--cyan);border-radius:50%;margin-top:6px;flex-shrink:0;"></div>
+          <div>
+            <div style="font-size:12px;font-weight:600;color:#2A2A2A;margin-bottom:3px;">Confiado</div>
+            <div class="note">No pide permiso. Los resultados hablan.</div>
+          </div>
+        </div>
+        <div style="display:flex;align-items:flex-start;gap:12px;">
+          <div style="width:4px;height:4px;background:var(--cyan);border-radius:50%;margin-top:6px;flex-shrink:0;"></div>
+          <div>
+            <div style="font-size:12px;font-weight:600;color:#2A2A2A;margin-bottom:3px;">Inteligente</div>
+            <div class="note">Habla de negocios, no de marketing vacío.</div>
+          </div>
+        </div>
+        <div style="display:flex;align-items:flex-start;gap:12px;">
+          <div style="width:4px;height:4px;background:var(--cyan);border-radius:50%;margin-top:6px;flex-shrink:0;"></div>
+          <div>
+            <div style="font-size:12px;font-weight:600;color:#2A2A2A;margin-bottom:3px;">Inevitable</div>
+            <div class="note">El crecimiento no es una opción. Es una consecuencia.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="box" style="padding:48px;display:flex;flex-direction:column;gap:28px;background:#090909;">
+      <div class="caption">Gravity NO es</div>
+      <div style="display:flex;flex-direction:column;gap:14px;">
+        <div style="display:flex;align-items:flex-start;gap:12px;">
+          <div style="width:4px;height:4px;background:#333;border-radius:50%;margin-top:6px;flex-shrink:0;"></div>
+          <div>
+            <div style="font-size:12px;font-weight:600;color:#1C1C1C;margin-bottom:3px;">Promesas vacías</div>
+            <div class="note" style="color:#161616;">❌ "Llevamos tu marca al siguiente nivel"</div>
+          </div>
+        </div>
+        <div style="display:flex;align-items:flex-start;gap:12px;">
+          <div style="width:4px;height:4px;background:#333;border-radius:50%;margin-top:6px;flex-shrink:0;"></div>
+          <div>
+            <div style="font-size:12px;font-weight:600;color:#1C1C1C;margin-bottom:3px;">Lenguaje corporativo</div>
+            <div class="note" style="color:#161616;">❌ "Soluciones integrales de comunicación"</div>
+          </div>
+        </div>
+        <div style="display:flex;align-items:flex-start;gap:12px;">
+          <div style="width:4px;height:4px;background:#333;border-radius:50%;margin-top:6px;flex-shrink:0;"></div>
+          <div>
+            <div style="font-size:12px;font-weight:600;color:#1C1C1C;margin-bottom:3px;">Excusas</div>
+            <div class="note" style="color:#161616;">❌ Justificaciones sin resultados</div>
+          </div>
+        </div>
+        <div style="margin-top:8px;padding:16px;background:#0A0A0A;border-left:2px solid var(--cyan);">
+          <div class="note" style="color:#1E1E1E;">✓ "Tus ventas subieron 40% en 90 días. Eso es Gravity."</div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<!-- ══════════════════════════════════════════
+  08 · DO'S & DON'TS
+══════════════════════════════════════════ -->
+<div class="section">
+  <div class="eyebrow" style="margin-bottom:12px;">08</div>
+  <div style="font-family:'Chakra Petch',sans-serif;font-size:13px;font-weight:700;letter-spacing:.08em;color:#2A2A2A;margin-bottom:56px;">Do's &amp; Don'ts</div>
+
+  <div class="grid-3">
+
+    <!-- ✓ 1 -->
+    <div class="box" style="padding:40px;display:flex;flex-direction:column;gap:20px;border-top:2px solid #00E3FF;">
+      <div style="font-size:10px;font-weight:700;color:#00E3FF;letter-spacing:.3em;">✓ CORRECTO</div>
+      <div style="background:#060606;padding:32px;display:flex;align-items:center;justify-content:center;">
+        <span class="wm" style="font-size:48px;">GRAVITY<span class="accent">.</span></span>
+      </div>
+      <div class="note">Logo sobre fondo oscuro con punto cian.</div>
+    </div>
+
+    <!-- ✓ 2 -->
+    <div class="box" style="padding:40px;display:flex;flex-direction:column;gap:20px;border-top:2px solid #00E3FF;">
+      <div style="font-size:10px;font-weight:700;color:#00E3FF;letter-spacing:.3em;">✓ CORRECTO</div>
+      <div style="background:#F5F5F5;padding:32px;display:flex;align-items:center;justify-content:center;">
+        <span class="wm" style="font-size:48px;color:#0A0A0A;">GRAVITY<span style="color:#007FA8;letter-spacing:0;">.</span></span>
+      </div>
+      <div class="note">Logo sobre fondo claro — texto oscuro.</div>
+    </div>
+
+    <!-- ✓ 3 -->
+    <div class="box" style="padding:40px;display:flex;flex-direction:column;gap:20px;border-top:2px solid #00E3FF;">
+      <div style="font-size:10px;font-weight:700;color:#00E3FF;letter-spacing:.3em;">✓ CORRECTO</div>
+      <div style="background:#00E3FF;padding:32px;display:flex;align-items:center;justify-content:center;">
+        <span class="wm" style="font-size:48px;color:#0A0A0A;">GRAVITY</span>
+      </div>
+      <div class="note">Logo invertido sobre cian.</div>
+    </div>
+
+    <!-- ✗ 1 -->
+    <div class="box" style="padding:40px;display:flex;flex-direction:column;gap:20px;border-top:2px solid #FF3B3B;">
+      <div style="font-size:10px;font-weight:700;color:#FF3B3B;letter-spacing:.3em;">✗ INCORRECTO</div>
+      <div style="background:#060606;padding:32px;display:flex;align-items:center;justify-content:center;">
+        <span style="font-family:'Inter',sans-serif;font-size:48px;font-weight:900;color:#fff;letter-spacing:.12em;">GRAVITY.</span>
+      </div>
+      <div class="note" style="color:#1A1A1A;">No cambiar la fuente. Solo Chakra Petch.</div>
+    </div>
+
+    <!-- ✗ 2 -->
+    <div class="box" style="padding:40px;display:flex;flex-direction:column;gap:20px;border-top:2px solid #FF3B3B;">
+      <div style="font-size:10px;font-weight:700;color:#FF3B3B;letter-spacing:.3em;">✗ INCORRECTO</div>
+      <div style="background:#060606;padding:32px;display:flex;align-items:center;justify-content:center;">
+        <span class="wm" style="font-size:48px;color:#FF3B3B;">GRAVITY<span style="color:#FF3B3B;letter-spacing:0;">.</span></span>
+      </div>
+      <div class="note" style="color:#1A1A1A;">No usar colores distintos al sistema.</div>
+    </div>
+
+    <!-- ✗ 3 -->
+    <div class="box" style="padding:40px;display:flex;flex-direction:column;gap:20px;border-top:2px solid #FF3B3B;">
+      <div style="font-size:10px;font-weight:700;color:#FF3B3B;letter-spacing:.3em;">✗ INCORRECTO</div>
+      <div style="background:#060606;padding:32px;display:flex;align-items:center;justify-content:center;">
+        <span class="wm" style="font-size:48px;opacity:.3;">GRAVITY<span class="accent">.</span></span>
+      </div>
+      <div class="note" style="color:#1A1A1A;">No reducir opacidad del logo.</div>
+    </div>
+
+  </div>
+</div>
+
+<!-- ══════════════════════════════════════════
+  09 · USOS REALES
+══════════════════════════════════════════ -->
+<div class="section">
+  <div class="eyebrow" style="margin-bottom:12px;">09</div>
+  <div style="font-family:'Chakra Petch',sans-serif;font-size:13px;font-weight:700;letter-spacing:.08em;color:#2A2A2A;margin-bottom:56px;">Usos Reales</div>
+
+  <div class="grid-3">
+
+    <!-- Tarjeta de presentación -->
+    <div class="box" style="padding:40px;display:flex;flex-direction:column;gap:20px;">
+      <div class="caption">Tarjeta de presentación</div>
+      <div style="background:#0D0D0D;border:1px solid #181818;border-radius:6px;padding:28px 24px;aspect-ratio:1.75;display:flex;flex-direction:column;justify-content:space-between;">
+        <span class="wm" style="font-size:18px;letter-spacing:.1em;">GRAVITY<span class="accent">.</span></span>
+        <div>
+          <div style="font-family:'Inter',sans-serif;font-size:11px;font-weight:600;color:#fff;">Martin Mercedes</div>
+          <div style="font-family:'Inter',sans-serif;font-size:9px;color:#333;margin-top:2px;">CEO · Growth Agency</div>
+          <div style="font-family:'Inter',sans-serif;font-size:9px;color:#222;margin-top:6px;">gravity.agency</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Email firma -->
+    <div class="box" style="padding:40px;display:flex;flex-direction:column;gap:20px;">
+      <div class="caption">Firma de email</div>
+      <div style="display:flex;flex-direction:column;gap:12px;">
+        <div style="border-left:2px solid var(--cyan);padding-left:14px;display:flex;flex-direction:column;gap:5px;">
+          <div style="font-size:12px;font-weight:600;color:#2A2A2A;">Martin Mercedes</div>
+          <div style="font-size:10px;color:#1C1C1C;">CEO · Gravity Growth Agency</div>
+          <div style="font-size:10px;color:#1C1C1C;">+1 (809) 000-0000</div>
+          <div style="font-size:10px;color:#1C1C1C;">gravity.agency</div>
+        </div>
+        <div style="display:flex;align-items:center;gap:8px;margin-top:4px;">
+          <div class="icon" style="width:26px;height:26px;border-radius:4px;">
+            <span class="g" style="font-size:16px;">G</span>
+          </div>
+          <span class="wm" style="font-size:16px;letter-spacing:.1em;">GRAVITY<span class="accent">.</span></span>
+        </div>
+      </div>
+    </div>
+
+    <!-- WhatsApp / Redes -->
+    <div class="box" style="padding:40px;display:flex;flex-direction:column;gap:20px;">
+      <div class="caption">WhatsApp · Instagram · Redes</div>
+      <div style="display:flex;gap:16px;align-items:flex-end;flex-wrap:wrap;">
+        <div style="display:flex;flex-direction:column;align-items:center;gap:8px;">
+          <div style="width:64px;height:64px;background:var(--dark);border-radius:12px;display:flex;align-items:center;justify-content:center;">
+            <span class="g" style="font-size:40px;">G<span class="d" style="font-size:29px;vertical-align:middle;line-height:0;">.</span></span>
+          </div>
+          <div class="caption">WA</div>
+        </div>
+        <div style="display:flex;flex-direction:column;align-items:center;gap:8px;">
+          <div style="width:64px;height:64px;background:linear-gradient(135deg,var(--cyan),var(--cyan-dk));border-radius:14px;display:flex;align-items:center;justify-content:center;">
+            <span class="g" style="font-size:40px;color:#0A0A0A;">G</span>
+          </div>
+          <div class="caption">IG</div>
+        </div>
+        <div style="display:flex;flex-direction:column;align-items:center;gap:8px;">
+          <div style="width:64px;height:64px;background:#0A0A0A;border:1px solid #1A1A1A;border-radius:8px;display:flex;align-items:center;justify-content:center;">
+            <span class="g" style="font-size:40px;">G<span class="d" style="font-size:29px;vertical-align:middle;line-height:0;">.</span></span>
+          </div>
+          <div class="caption">LI</div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Propuesta comercial header -->
+  <div style="margin-top:1px;background:#060606;border:1px solid var(--border);padding:40px 56px;display:flex;justify-content:space-between;align-items:center;">
+    <div style="display:flex;align-items:center;gap:16px;">
+      <div class="icon" style="width:44px;height:44px;border-radius:8px;">
+        <span class="g" style="font-size:28px;">G<span class="d" style="font-size:21px;vertical-align:middle;line-height:0;">.</span></span>
+      </div>
+      <span class="wm" style="font-size:28px;letter-spacing:.1em;">GRAVITY<span class="accent">.</span></span>
+    </div>
+    <div style="text-align:right;">
+      <div style="font-family:'Inter',sans-serif;font-size:9px;font-weight:600;letter-spacing:.3em;text-transform:uppercase;color:#222;">Propuesta Comercial</div>
+      <div style="font-family:'Inter',sans-serif;font-size:9px;color:#1A1A1A;margin-top:3px;">Confidencial · 2025</div>
+    </div>
+    <div class="caption" style="margin-left:40px;font-size:8px;">Header documento</div>
+  </div>
+
+</div>
+
+<!-- ══════════════════════════════════════════
+  10 · TAGLINE
+══════════════════════════════════════════ -->
+<div class="section-sm">
+  <div class="eyebrow" style="margin-bottom:12px;">10</div>
+  <div style="font-family:'Chakra Petch',sans-serif;font-size:13px;font-weight:700;letter-spacing:.08em;color:#2A2A2A;margin-bottom:48px;">Tagline · Mensajes clave</div>
+
+  <div class="grid-2">
+    <div class="box" style="padding:48px;display:flex;flex-direction:column;gap:20px;">
+      <div class="caption">Tagline principal</div>
+      <div style="font-family:'Chakra Petch',sans-serif;font-size:48px;font-weight:700;line-height:1;letter-spacing:.04em;text-transform:uppercase;color:#fff;">Inevitable<span style="color:var(--cyan);">.</span></div>
+      <div class="note" style="max-width:320px;">Una sola palabra. El crecimiento de tu negocio no es suerte — es la consecuencia inevitable de trabajar con Gravity.</div>
+    </div>
+    <div class="box" style="padding:48px;display:flex;flex-direction:column;gap:16px;background:#090909;">
+      <div class="caption">Mensajes de soporte</div>
+      <div style="display:flex;flex-direction:column;gap:12px;margin-top:8px;">
+        <div style="padding:14px 18px;border-left:1px solid var(--cyan);display:flex;flex-direction:column;gap:3px;">
+          <div style="font-size:12px;font-weight:600;color:#2A2A2A;">"Hacemos que el crecimiento sea inevitable."</div>
+          <div class="note">Hero principal</div>
+        </div>
+        <div style="padding:14px 18px;border-left:1px solid #222;display:flex;flex-direction:column;gap:3px;">
+          <div style="font-size:12px;font-weight:600;color:#1E1E1E;">"No vendemos marketing. Vendemos resultados."</div>
+          <div class="note" style="color:#161616;">Propuestas</div>
+        </div>
+        <div style="padding:14px 18px;border-left:1px solid #222;display:flex;flex-direction:column;gap:3px;">
+          <div style="font-size:12px;font-weight:600;color:#1E1E1E;">"La gravedad no se puede ignorar."</div>
+          <div class="note" style="color:#161616;">Redes sociales</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="div-accent"></div>
+
+<!-- ══════════════════════════════════════════
+  CIERRE
+══════════════════════════════════════════ -->
+<div style="min-height:50vh;background:#050505;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:80px;gap:40px;">
+
+  <div style="display:flex;flex-direction:column;align-items:center;gap:20px;">
+    <div class="icon" style="width:96px;height:96px;border-radius:18px;">
+      <span class="g" style="font-size:62px;">G<span class="d" style="font-size:46px;vertical-align:middle;line-height:0;">.</span></span>
+    </div>
+    <span class="wm" style="font-size:88px;">GRAVITY<span class="accent">.</span></span>
+    <div style="font-family:'Inter',sans-serif;font-size:10px;font-weight:400;letter-spacing:.6em;text-transform:uppercase;color:#1C1C1C;">Inevitable.</div>
+  </div>
+
+  <div style="display:flex;gap:56px;margin-top:20px;">
+    <div style="display:flex;flex-direction:column;gap:4px;align-items:center;">
+      <div class="caption">Fuente</div>
+      <div style="font-size:10px;color:#1A1A1A;margin-top:2px;">Chakra Petch 700</div>
+    </div>
+    <div style="display:flex;flex-direction:column;gap:4px;align-items:center;">
+      <div class="caption">Color principal</div>
+      <div style="font-size:10px;color:#1A1A1A;margin-top:2px;">#00E3FF</div>
+    </div>
+    <div style="display:flex;flex-direction:column;gap:4px;align-items:center;">
+      <div class="caption">Tagline</div>
+      <div style="font-size:10px;color:#1A1A1A;margin-top:2px;">Inevitable.</div>
+    </div>
+    <div style="display:flex;flex-direction:column;gap:4px;align-items:center;">
+      <div class="caption">Versión</div>
+      <div style="font-size:10px;color:#1A1A1A;margin-top:2px;">1.0 · 2025</div>
+    </div>
+  </div>
+
+</div>
+
+</body>
+</html>

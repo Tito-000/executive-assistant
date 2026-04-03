@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="800" height="800">
+  <defs>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display&amp;display=swap');
+    </style>
+  </defs>
+  <rect width="200" height="200" fill="#EDE8E0"/>
+  <circle cx="100" cy="100" r="85" fill="none" stroke="#6B8868" stroke-width="2"/>
+  <text x="100" y="118"
+    font-family="'DM Serif Display', Georgia, serif"
+    font-size="82"
+    fill="#1A1F2E"
+    text-anchor="middle"
+    letter-spacing="-3">AM</text>
+</svg>

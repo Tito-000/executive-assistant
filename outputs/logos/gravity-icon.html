@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Gravity — Ícono</title>
+<link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+body { background: #0A0A0A; font-family: 'Inter', sans-serif; }
+
+.hdr {
+  padding: 44px 80px 36px;
+  border-bottom: 1px solid #111;
+  display: flex; justify-content: space-between; align-items: flex-end;
+}
+.hdr-t { font-size:9px;font-weight:600;letter-spacing:.4em;text-transform:uppercase;color:#1A1A1A; }
+.hdr-s { font-size:9px;color:#141414;letter-spacing:.12em; }
+
+.grid { display:grid; grid-template-columns:1fr 1fr 1fr; gap:1px; background:#111; }
+
+.cell {
+  min-height: 360px;
+  display:flex; flex-direction:column; align-items:center; justify-content:center;
+  padding:56px 40px; gap:28px;
+  position:relative; background:#0A0A0A;
+}
+.n   { position:absolute;top:22px;left:26px;font-size:8px;font-weight:600;letter-spacing:.28em;color:#181818;text-transform:uppercase; }
+.lbl { font-size:8px;font-weight:700;letter-spacing:.3em;text-transform:uppercase;color:#00E3FF;text-align:center; }
+.sub { font-size:10px;color:#1C1C1C;text-align:center;max-width:200px;line-height:1.65; }
+
+@keyframes spin-slow { from{transform:rotate(0deg)} to{transform:rotate(360deg)} }
+@keyframes spin-rev  { from{transform:rotate(360deg)} to{transform:rotate(0deg)} }
+@keyframes pulse     { 0%,100%{opacity:.5;transform:scale(1)} 50%{opacity:1;transform:scale(1.12)} }
+@keyframes breathe   { 0%,100%{filter:drop-shadow(0 0 6px rgba(0,227,255,.3))} 50%{filter:drop-shadow(0 0 18px rgba(0,227,255,.7))} }
+</style>
+</head>
+<body>
+
+<div class="hdr">
+  <div class="hdr-t">Gravity — Íconos · 10 conceptos</div>
+  <div class="hdr-s">El símbolo solo · sin el nombre</div>
+</div>
+
+<div class="grid">
+
+  <!-- 01 · PUNTO + ANILLOS — gravedad como campo de fuerza -->
+  <!-- Un punto central cian rodeado de anillos concéntricos. -->
+  <!-- Como las líneas de campo gravitacional. Simple, científico. -->
+  <div class="cell" style="background:#0C0C0C;">
+    <div class="n">01</div>
+    <svg width="140" height="140" viewBox="0 0 140 140">
+      <!-- Anillos exteriores — más tenues -->
+      <circle cx="70" cy="70" r="64" fill="none" stroke="#00E3FF" stroke-width="1" opacity=".12"/>
+      <circle cx="70" cy="70" r="50" fill="none" stroke="#00E3FF" stroke-width="1" opacity=".2"/>
+      <circle cx="70" cy="70" r="36" fill="none" stroke="#00E3FF" stroke-width="1.5" opacity=".35"/>
+      <circle cx="70" cy="70" r="22" fill="none" stroke="#00E3FF" stroke-width="2" opacity=".6"/>
+      <!-- El punto central — la masa -->
+      <circle cx="70" cy="70" r="10" fill="#00E3FF"/>
+      <circle cx="70" cy="70" r="16" fill="#00E3FF" opacity=".15"/>
+    </svg>
+    <div class="lbl">Campo Gravitacional</div>
+    <div class="sub">Punto central + anillos concéntricos. El campo de fuerza. Científico y limpio.</div>
+  </div>
+
+  <!-- 02 · G MINIMALISTA — la inicial como símbolo -->
+  <!-- Una G construida con geometría pura. Sin serif. -->
+  <!-- Solo el arco y el brazo horizontal. -->
+  <div class="cell" style="background:#090909;">
+    <div class="n">02</div>
+    <svg width="130" height="130" viewBox="0 0 130 130" style="animation:breathe 4s ease-in-out infinite;">
+      <defs>
+        <filter id="g-glow">
+          <feGaussianBlur stdDeviation="2" result="b"/>
+          <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+        </filter>
+      </defs>
+      <!-- G construida con paths -->
+      <!-- Arco exterior -->
+      <path d="M 110 42 A 54 54 0 1 0 110 88" fill="none" stroke="#fff" stroke-width="10" stroke-linecap="round" filter="url(#g-glow)"/>
+      <!-- Brazo horizontal cian -->
+      <line x1="65" y1="65" x2="110" y2="65" stroke="#00E3FF" stroke-width="10" stroke-linecap="round" filter="url(#g-glow)"/>
+    </svg>
+    <div class="lbl">G Geométrica</div>
+    <div class="sub">La G construida con geometría pura. La inicial como símbolo permanente.</div>
+  </div>
+
+  <!-- 03 · FLECHA HACIA ABAJO — gravedad literal -->
+  <!-- Una flecha apuntando hacia abajo, construida con un solo trazo. -->
+  <!-- Minimal. Directa. La gravedad es una fuerza hacia abajo. -->
+  <div class="cell" style="background:#080808;">
+    <div class="n">03</div>
+    <svg width="100" height="130" viewBox="0 0 100 130">
+      <defs>
+        <filter id="arr-glow">
+          <feGaussianBlur stdDeviation="2.5" result="b"/>
+          <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+        </filter>
+      </defs>
+      <!-- Línea vertical -->
+      <line x1="50" y1="8" x2="50" y2="95" stroke="#00E3FF" stroke-width="6" stroke-linecap="round" filter="url(#arr-glow)"/>
+      <!-- Cabeza de flecha -->
+      <polyline points="18,68 50,105 82,68" fill="none" stroke="#00E3FF" stroke-width="6" stroke-linecap="round" stroke-linejoin="round" filter="url(#arr-glow)"/>
+      <!-- Punto base -->
+      <circle cx="50" cy="118" r="5" fill="#fff" opacity=".3"/>
+    </svg>
+    <div class="lbl">Arrow Down</div>
+    <div class="sub">Una flecha. La dirección de la gravedad. Imposible de malinterpretar.</div>
+  </div>
+
+  <!-- 04 · PUNTO QUE CAE — trayectoria parabólica -->
+  <!-- Un punto con una curva detrás — como la trayectoria -->
+  <!-- de un objeto siendo atraído. Motion trail. -->
+  <div class="cell" style="background:#0A0A0A;">
+    <div class="n">04</div>
+    <svg width="140" height="140" viewBox="0 0 140 140">
+      <defs>
+        <filter id="dot-glow">
+          <feGaussianBlur stdDeviation="3" result="b"/>
+          <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+        </filter>
+      </defs>
+      <!-- Trayectoria curva — arco de caída -->
+      <path d="M 20 20 Q 20 110 110 120" fill="none" stroke="#00E3FF" stroke-width="2" opacity=".3" stroke-dasharray="4,6"/>
+      <!-- Trail del punto -->
+      <circle cx="80" cy="88" r="6" fill="#00E3FF" opacity=".15"/>
+      <circle cx="60" cy="65" r="4" fill="#00E3FF" opacity=".1"/>
+      <circle cx="40" cy="42" r="3" fill="#00E3FF" opacity=".08"/>
+      <!-- El punto principal — donde está ahora -->
+      <circle cx="110" cy="120" r="14" fill="#00E3FF" filter="url(#dot-glow)"/>
+      <circle cx="110" cy="120" r="22" fill="#00E3FF" opacity=".12"/>
+    </svg>
+    <div class="lbl">Trayectoria</div>
+    <div class="sub">El objeto sigue la curva y llega. Como un lead que se convierte. Inevitable.</div>
+  </div>
+
+  <!-- 05 · TRIÁNGULO HACIA ABAJO — el embudo -->
+  <!-- El triángulo apuntando abajo = embudo = gravedad. -->
+  <!-- Chakra Petch tiene ángulos geométricos — el triángulo los refleja. -->
+  <div class="cell" style="background:#060606;">
+    <div class="n">05</div>
+    <svg width="130" height="120" viewBox="0 0 130 120" style="animation:breathe 4s ease-in-out infinite;">
+      <defs>
+        <linearGradient id="tri-grad" x1="65" y1="8" x2="65" y2="112" gradientUnits="userSpaceOnUse">
+          <stop offset="0%" stop-color="#80F8FF"/>
+          <stop offset="50%" stop-color="#00E3FF"/>
+          <stop offset="100%" stop-color="#007FA8"/>
+        </linearGradient>
+        <filter id="tri-glow">
+          <feGaussianBlur stdDeviation="3" result="b"/>
+          <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+        </filter>
+      </defs>
+      <!-- Glow exterior -->
+      <polygon points="65,112 4,8 126,8" fill="#00E3FF" opacity=".1" filter="url(#tri-glow)" transform="scale(1.06) translate(-3.9,-3)"/>
+      <!-- Triángulo principal -->
+      <polygon points="65,112 4,8 126,8" fill="url(#tri-grad)" filter="url(#tri-glow)"/>
+    </svg>
+    <div class="lbl">Triángulo · El Embudo</div>
+    <div class="sub">Todo converge en un punto. El embudo de marketing. La gravedad que atrae y concentra.</div>
+  </div>
+
+  <!-- 06 · ÓRBITA — planeta + punto central -->
+  <!-- Un punto central con un cuerpo orbitando. -->
+  <!-- La masa atrae. Los clientes orbitan. -->
+  <div class="cell" style="background:#090909;">
+    <div class="n">06</div>
+    <div style="position:relative;width:130px;height:130px;">
+      <!-- Anillo de órbita — rotando -->
+      <svg width="130" height="130" viewBox="0 0 130 130" style="position:absolute;top:0;left:0;animation:spin-slow 6s linear infinite;">
+        <circle cx="65" cy="65" r="54" fill="none" stroke="#00E3FF" stroke-width="1.2" stroke-dasharray="5,8" opacity=".35"/>
+        <!-- El cuerpo orbitante -->
+        <circle cx="65" cy="11" r="8" fill="#00E3FF"/>
+        <circle cx="65" cy="11" r="14" fill="#00E3FF" opacity=".15"/>
+      </svg>
+      <!-- Masa central — estática -->
+      <svg width="130" height="130" viewBox="0 0 130 130" style="position:absolute;top:0;left:0;">
+        <circle cx="65" cy="65" r="18" fill="#fff"/>
+        <circle cx="65" cy="65" r="26" fill="#fff" opacity=".06"/>
+      </svg>
+    </div>
+    <div class="lbl">Órbita</div>
+    <div class="sub">La masa central atrae. El cuerpo orbita. Tus clientes en tu campo de gravedad.</div>
+  </div>
+
+  <!-- 07 · LETRA G + PUNTO CIAN INTEGRADO -->
+  <!-- La G de Chakra Petch como ícono — -->
+  <!-- con el punto cian en el centro del arco, como parte del diseño -->
+  <div class="cell" style="background:#0C0C0C;">
+    <div class="n">07</div>
+    <div style="position:relative;display:inline-block;">
+      <span style="
+        font-family:'Chakra Petch',sans-serif;
+        font-weight:700; font-size:140px; line-height:1;
+        color:#fff; display:block;
+      ">G</span>
+      <!-- Punto cian en el hueco interior de la G -->
+      <div style="
+        position:absolute; top:50%; left:58%;
+        transform:translate(-50%,-50%);
+        width:18px; height:18px;
+        background:#00E3FF; border-radius:50%;
+        box-shadow:0 0 16px rgba(0,227,255,.6);
+      "></div>
+    </div>
+    <div class="lbl">G + Punto Interior</div>
+    <div class="sub">La letra G como símbolo. El punto cian dentro de su arco — la masa atrapada en el campo.</div>
+  </div>
+
+  <!-- 08 · LÍNEAS DE ATRACCIÓN — campo vectorial -->
+  <!-- Varias líneas curvas convergiendo en un punto central. -->
+  <!-- Como un campo vectorial gravitacional. -->
+  <div class="cell" style="background:#070707;">
+    <div class="n">08</div>
+    <svg width="140" height="140" viewBox="0 0 140 140">
+      <defs>
+        <filter id="vec-glow">
+          <feGaussianBlur stdDeviation="1.5" result="b"/>
+          <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+        </filter>
+      </defs>
+      <!-- Líneas convergentes desde los bordes al centro -->
+      <!-- Desde arriba -->
+      <path d="M 70 10 Q 70 40 70 70" fill="none" stroke="#00E3FF" stroke-width="1.5" opacity=".5" filter="url(#vec-glow)"/>
+      <!-- Desde arriba-derecha -->
+      <path d="M 120 20 Q 100 40 70 70" fill="none" stroke="#00E3FF" stroke-width="1.5" opacity=".4"/>
+      <!-- Desde derecha -->
+      <path d="M 130 70 Q 105 70 70 70" fill="none" stroke="#00E3FF" stroke-width="1.5" opacity=".5"/>
+      <!-- Desde abajo-derecha -->
+      <path d="M 120 120 Q 100 100 70 70" fill="none" stroke="#00E3FF" stroke-width="1.5" opacity=".4"/>
+      <!-- Desde abajo -->
+      <path d="M 70 130 Q 70 105 70 70" fill="none" stroke="#00E3FF" stroke-width="1.5" opacity=".5"/>
+      <!-- Desde abajo-izquierda -->
+      <path d="M 20 120 Q 40 100 70 70" fill="none" stroke="#00E3FF" stroke-width="1.5" opacity=".4"/>
+      <!-- Desde izquierda -->
+      <path d="M 10 70 Q 35 70 70 70" fill="none" stroke="#00E3FF" stroke-width="1.5" opacity=".5"/>
+      <!-- Desde arriba-izquierda -->
+      <path d="M 20 20 Q 40 40 70 70" fill="none" stroke="#00E3FF" stroke-width="1.5" opacity=".4"/>
+      <!-- Punto central -->
+      <circle cx="70" cy="70" r="10" fill="#00E3FF" filter="url(#vec-glow)"/>
+      <circle cx="70" cy="70" r="18" fill="#00E3FF" opacity=".12"/>
+    </svg>
+    <div class="lbl">Campo Vectorial</div>
+    <div class="sub">Todo converge al centro. Ocho direcciones, un destino. Tu agencia como el punto de atracción.</div>
+  </div>
+
+  <!-- 09 · PUNTO + ONDA — impacto gravitacional -->
+  <!-- Un punto que emite ondas expansivas — -->
+  <!-- como el impacto de una masa cayendo en agua -->
+  <div class="cell" style="background:#080808;">
+    <div class="n">09</div>
+    <svg width="140" height="140" viewBox="0 0 140 140">
+      <!-- Ondas expandiéndose -->
+      <circle cx="70" cy="70" r="58" fill="none" stroke="#00E3FF" stroke-width="1" opacity=".1"/>
+      <circle cx="70" cy="70" r="46" fill="none" stroke="#00E3FF" stroke-width="1.2" opacity=".18"/>
+      <circle cx="70" cy="70" r="34" fill="none" stroke="#00E3FF" stroke-width="1.5" opacity=".3"/>
+      <circle cx="70" cy="70" r="22" fill="none" stroke="#00E3FF" stroke-width="2" opacity=".5"/>
+      <!-- Punto de impacto -->
+      <circle cx="70" cy="70" r="10" fill="#fff"/>
+      <circle cx="70" cy="70" r="6" fill="#00E3FF"/>
+    </svg>
+    <div class="lbl">Impacto / Onda</div>
+    <div class="sub">El punto de impacto y sus ondas. El efecto de Gravity en el mercado de tu cliente.</div>
+  </div>
+
+  <!-- 10 · LOGO COMPLETO — ícono + nombre juntos -->
+  <div class="cell" style="background:#0A0A0A;grid-column:span 1;">
+    <div class="n">10</div>
+    <!-- El triángulo (favorito visual) + el nombre -->
+    <div style="display:flex;align-items:center;gap:22px;">
+      <svg width="52" height="52" viewBox="0 0 130 120">
+        <defs>
+          <linearGradient id="icon-grad" x1="65" y1="8" x2="65" y2="112" gradientUnits="userSpaceOnUse">
+            <stop offset="0%" stop-color="#80F8FF"/>
+            <stop offset="100%" stop-color="#007FA8"/>
+          </linearGradient>
+          <filter id="icon-glow">
+            <feGaussianBlur stdDeviation="2.5" result="b"/>
+            <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+          </filter>
+        </defs>
+        <polygon points="65,112 4,8 126,8" fill="url(#icon-grad)" filter="url(#icon-glow)"/>
+      </svg>
+      <span style="font-family:'Chakra Petch',sans-serif;font-weight:700;font-size:52px;line-height:1;letter-spacing:.1em;text-transform:uppercase;color:#fff;">GRAVITY<span style="color:#00E3FF;letter-spacing:0;">.</span></span>
+    </div>
+    <div class="lbl">Ícono + Wordmark</div>
+    <div class="sub">El triángulo como ícono junto al nombre. El sistema completo.</div>
+  </div>
+
+</div>
+
+<!-- ESCALA — el ícono ganador en todos los tamaños -->
+<div style="background:#060606;border-top:1px solid #0F0F0F;padding:56px 80px;">
+  <div style="font-size:8px;font-weight:600;letter-spacing:.35em;text-transform:uppercase;color:#151515;margin-bottom:40px;">Íconos a escala — favicon · app · avatar · hero</div>
+  <div style="display:flex;align-items:center;gap:48px;flex-wrap:wrap;">
+
+    <!-- Grande -->
+    <svg width="80" height="80" viewBox="0 0 140 140"><circle cx="70" cy="70" r="64" fill="none" stroke="#00E3FF" stroke-width="1" opacity=".12"/><circle cx="70" cy="70" r="50" fill="none" stroke="#00E3FF" stroke-width="1" opacity=".2"/><circle cx="70" cy="70" r="36" fill="none" stroke="#00E3FF" stroke-width="1.5" opacity=".35"/><circle cx="70" cy="70" r="22" fill="none" stroke="#00E3FF" stroke-width="2" opacity=".6"/><circle cx="70" cy="70" r="10" fill="#00E3FF"/></svg>
+
+    <svg width="56" height="56" viewBox="0 0 130 120"><polygon points="65,112 4,8 126,8" fill="#00E3FF"/></svg>
+
+    <div style="position:relative;display:inline-block;">
+      <span style="font-family:'Chakra Petch',sans-serif;font-weight:700;font-size:80px;line-height:1;color:#fff;">G</span>
+      <div style="position:absolute;top:50%;left:58%;transform:translate(-50%,-50%);width:12px;height:12px;background:#00E3FF;border-radius:50%;"></div>
+    </div>
+
+    <!-- Mediano -->
+    <svg width="40" height="40" viewBox="0 0 130 120"><polygon points="65,112 4,8 126,8" fill="#00E3FF"/></svg>
+
+    <!-- Pequeño -->
+    <svg width="24" height="24" viewBox="0 0 130 120"><polygon points="65,112 4,8 126,8" fill="#00E3FF"/></svg>
+
+    <!-- Favicon -->
+    <svg width="16" height="16" viewBox="0 0 130 120"><polygon points="65,112 4,8 126,8" fill="#00E3FF"/></svg>
+
+    <!-- En cuadrado negro — como app icon -->
+    <div style="width:56px;height:56px;background:#0A0A0A;border-radius:12px;display:flex;align-items:center;justify-content:center;">
+      <svg width="36" height="34" viewBox="0 0 130 120"><polygon points="65,112 4,8 126,8" fill="#00E3FF"/></svg>
+    </div>
+
+    <!-- En cuadrado cian — versión invertida app -->
+    <div style="width:56px;height:56px;background:#00E3FF;border-radius:12px;display:flex;align-items:center;justify-content:center;">
+      <svg width="36" height="34" viewBox="0 0 130 120"><polygon points="65,112 4,8 126,8" fill="#0A0A0A"/></svg>
+    </div>
+
+  </div>
+</div>
+
+</body>
+</html>

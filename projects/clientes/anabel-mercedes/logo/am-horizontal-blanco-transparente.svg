@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 440 100" width="1760" height="400">
+  <defs>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display&amp;family=Montserrat:wght@300;400&amp;display=swap');
+    </style>
+  </defs>
+  <circle cx="50" cy="50" r="40" fill="none" stroke="#6B8868" stroke-width="1.5"/>
+  <text x="50" y="60"
+    font-family="'DM Serif Display', Georgia, serif"
+    font-size="38"
+    fill="#FFFFFF"
+    text-anchor="middle"
+    letter-spacing="-1.5">AM</text>
+  <text x="110" y="42"
+    font-family="'Montserrat', Arial, sans-serif"
+    font-size="15"
+    font-weight="300"
+    fill="#FFFFFF"
+    letter-spacing="4"
+    text-anchor="start">ANABEL</text>
+  <text x="110" y="62"
+    font-family="'Montserrat', Arial, sans-serif"
+    font-size="15"
+    font-weight="300"
+    fill="#FFFFFF"
+    letter-spacing="4"
+    text-anchor="start">MERCEDES</text>
+</svg>

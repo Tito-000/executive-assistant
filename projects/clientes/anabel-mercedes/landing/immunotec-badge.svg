@@ -1,0 +1,87 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" width="400" height="400">
+  <defs>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&amp;display=swap');
+    </style>
+  </defs>
+
+  <!-- Outer ring -->
+  <circle cx="200" cy="200" r="192" fill="none" stroke="#1A1F2E" stroke-width="1.5"/>
+  <!-- Middle decorative ring -->
+  <circle cx="200" cy="200" r="185" fill="none" stroke="#1A1F2E" stroke-width="0.4"/>
+  <!-- Inner ring -->
+  <circle cx="200" cy="200" r="178" fill="none" stroke="#1A1F2E" stroke-width="0.4"/>
+
+  <!-- Background fill -->
+  <circle cx="200" cy="200" r="177" fill="#FAFAF8"/>
+
+  <!-- Curved text top: CONSULTORA OFICIAL -->
+  <path id="topArc" d="M 55 200 A 145 145 0 0 1 345 200" fill="none"/>
+  <text>
+    <textPath href="#topArc" startOffset="50%" text-anchor="middle"
+      font-family="'Montserrat', sans-serif"
+      font-size="10.5"
+      font-weight="700"
+      fill="#6B8868"
+      letter-spacing="4.5">CONSULTORA OFICIAL</textPath>
+  </text>
+
+  <!-- Immunotec Y antibody icon — faithful to original -->
+  <!-- The Y shape: two arms diverging up from center, with angular tips -->
+  <g transform="translate(200, 155)" stroke="#1A1F2E" stroke-width="7" stroke-linecap="round" stroke-linejoin="round" fill="none">
+    <!-- Left upper arm (angled out then tip angles further out) -->
+    <polyline points="-42,-48 -30,-35 0,0"/>
+    <!-- Right upper arm -->
+    <polyline points="42,-48 30,-35 0,0"/>
+    <!-- Stem down -->
+    <line x1="0" y1="0" x2="0" y2="40"/>
+  </g>
+
+  <!-- IMMUNOTEC text -->
+  <text x="200" y="228"
+    font-family="'Montserrat', sans-serif"
+    font-size="24"
+    font-weight="700"
+    fill="#1A1F2E"
+    text-anchor="middle"
+    letter-spacing="4">IMMUNOTEC</text>
+
+  <!-- Registered trademark -->
+  <text x="302" y="220"
+    font-family="'Montserrat', sans-serif"
+    font-size="8"
+    font-weight="400"
+    fill="#1A1F2E"
+    text-anchor="middle">&#174;</text>
+
+  <!-- Decorative sage line -->
+  <line x1="145" y1="242" x2="255" y2="242" stroke="#6B8868" stroke-width="1"/>
+
+  <!-- Tagline -->
+  <text x="200" y="260"
+    font-family="'Montserrat', sans-serif"
+    font-size="8"
+    font-weight="600"
+    fill="#7A7A7A"
+    text-anchor="middle"
+    letter-spacing="3.5">CIENCIA &amp; BIENESTAR</text>
+
+  <!-- Curved text bottom: DESDE 1996 -->
+  <path id="bottomArc" d="M 75 210 A 130 130 0 0 0 325 210" fill="none"/>
+  <text>
+    <textPath href="#bottomArc" startOffset="50%" text-anchor="middle"
+      font-family="'Montserrat', sans-serif"
+      font-size="9.5"
+      font-weight="600"
+      fill="#7A5C44"
+      letter-spacing="5">DESDE 1996</textPath>
+  </text>
+
+  <!-- Decorative dots at 3 and 9 o'clock -->
+  <circle cx="76" cy="200" r="2" fill="#6B8868"/>
+  <circle cx="324" cy="200" r="2" fill="#6B8868"/>
+
+  <!-- Small stars between rings -->
+  <text x="200" y="30" font-family="'Montserrat', sans-serif" font-size="7" fill="#6B8868" text-anchor="middle">&#10022;</text>
+  <text x="200" y="390" font-family="'Montserrat', sans-serif" font-size="7" fill="#6B8868" text-anchor="middle">&#10022;</text>
+</svg>
