@@ -38,10 +38,11 @@ Los proyectos viven en `projects/`. Cada uno tiene su propio `README.md` con est
 - `projects/agencia-marketing/` — formalización de la agencia de marketing digital (identidad, web, sistemas, adquisición)
 
 **Clientes:**
-- `projects/clientes/anabel-mercedes/` — marca personal + contenido + ManyChat + landing, deadline 5 abr 2026
-- `projects/clientes/memorama/` — cliente activo, deadline 23 mar 2026
-- `projects/clientes/dra-aurys-mercedes/` — página web + embudos, en progreso
-- `projects/clientes/beatriz-5k-funnel/` — funnel $5k para Beatriz
+Los clientes activos viven en `projects/clientes/activos/`. Los inactivos se archivan en `archives/clientes-inactivos/`.
+- `projects/clientes/activos/anabel-mercedes/` — marca personal + contenido + ManyChat + landing, deadline 5 abr 2026
+- `projects/clientes/activos/memorama/` — cliente activo, deadline 23 mar 2026
+- `projects/clientes/activos/dra-aurys-mercedes/` — página web + embudos, en progreso
+- `projects/clientes/activos/beatriz-5k-funnel/` — funnel $5k para Beatriz
 
 **Immunotec:**
 - `projects/immunotec/fase-4-cierre-diamante/` — cierre Diamante, deadline 2 may 2026
@@ -51,10 +52,14 @@ Los proyectos viven en `projects/`. Cada uno tiene su propio `README.md` con est
 - `projects/immunotec/immuno-consultor/` — materiales y research del consultor
 - `projects/immunotec/club-de-la-libertad/` — atracción de prospectos (en desarrollo)
 
-**Outputs generados (imágenes, diagramas):**
+**Outputs generados (imágenes, diagramas, research):**
 - `outputs/excalidraw-visuals/` — PNGs generados con excalidraw-visuals skill
 - `outputs/nano-banana-images/` — imágenes generadas con nano-banana-images skill
-- `outputs/alianza-agencia/` — materiales de alianza estratégica agencia
+- `outputs/research/` — research suelto (TPAs, análisis, MKR/WWP docs)
+- `outputs/briefings/` — briefings de clientes
+- `outputs/propuestas/` — propuestas comerciales
+
+Los logos de MM Agency viven en `projects/agencia-marketing/branding/logo/` (no en outputs/).
 
 ---
 
@@ -120,7 +125,11 @@ Claude Code mantiene memoria persistente entre conversaciones. Guarda patrones, 
 
 `scripts/` — scripts de generación de imágenes y automatizaciones.
 - `scripts/excalidraw-visuals/` — genera PNGs con estilo excalidraw
-- `scripts/nano-banana-images/` — genera imágenes con Gemini
+- `scripts/nano-banana-images/` — genera imágenes con Gemini, organizado por cliente:
+  - `_python/` — scripts .py (generate_kie, remove_bg, etc.)
+  - `mm-agency/{logo-v7,hero-3d,brand-guidelines,moodboard}/`
+  - `anabel-mercedes/{logo-v4,immunotec-badge}/`
+  - `immunotec/{productos,immuno-consult}/`
 - `scripts/immunotec/` — scripts específicos de Immunotec
 - `scripts/landing-fixes/` — scripts de corrección de landing pages
 
@@ -133,6 +142,18 @@ Claude Code mantiene memoria persistente entre conversaciones. Guarda patrones, 
 `brand-assets/` — recursos de marca reutilizables.
 - `excalidraw-style-reference.png` — referencia visual para el skill excalidraw-visuals
 
+## Udaloop Sunday
+
+`udaloop-sunday/` — recuento semanal de Martin (patrones + sesiones).
+
 ## Archivos viejos
 
-No borrar — archivar en `archives/`.
+No borrar — archivar en `archives/`. Subcarpetas actuales:
+- `archives/mm-logos-descartados/` — versiones v2-v6 y concepts de logo MM Agency
+- `archives/anabel-logos-descartados/` — versiones v1-v3 de logo Anabel
+- `archives/old-brand-chakra-petch/` — brand viejo descartado
+- `archives/old-hero-3d-shapes/` — hero 3D descartados
+- `archives/immunotec-landing-drafts/` — drafts viejos Immunotec
+- `archives/wordpress-borradores/` — borradores WordPress
+- `archives/skills/` — skills archivadas
+- `archives/clientes-inactivos/` — clientes que ya no están activos
