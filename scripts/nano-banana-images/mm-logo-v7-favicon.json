@@ -1,0 +1,4 @@
+{
+  "prompt": "Minimal favicon icon design on pure black background. A perfect circle with a thick yellow (#FAFA00) border ring. Inside the circle is solid black. In the center, the letters 'MM' in bold white uppercase, very large relative to the circle — the letters almost touch the edges. CRITICAL: The typeface must be a bold, blocky, geometric extended sans-serif like Microgramma Extended Bold — wide letterforms, thick rectangular strokes, sharp 90-degree corners. This is designed to be legible at very small sizes (32x32 pixels). Maximum simplicity. No text except MM. Clean vector quality, sharp edges, flat design, perfectly centered.",
+  "negative_prompt": "gradient, shadow, glow, neon, 3D, complex, busy, decorative, serif font, script font, thin lines, rounded font, small text, agency text, tagline, extra text, realistic photo, photography, human, blur, low quality, pixelated, grunge, noise, texture"
+}

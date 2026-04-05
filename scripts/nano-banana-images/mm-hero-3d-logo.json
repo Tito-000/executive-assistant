@@ -1,0 +1,9 @@
+{
+  "prompt": "3D chrome metallic text logo that reads exactly 'MM AGENCY' in uppercase bold extended sans-serif Orbitron-style font, thick extruded 3D letters with polished silver chrome and dark gunmetal reflections, subtle yellow rim light (#FAFA00) catching the edges, letters slightly tilted in isometric perspective floating in empty space, pure black background, cinematic studio lighting with sharp specular highlights, premium brand mark aesthetic, high detail, sharp focus, editorial product rendering, centered composition with generous negative space, 3D render style",
+  "negative_prompt": "flat design, 2D, cartoon, illustration, text watermark, multiple logos, other words, wrong letters, blurry, low quality, colorful, rainbow, neon, different font, cursive, serif, thin letters, bright background",
+  "api_parameters": {
+    "aspect_ratio": "16:9",
+    "resolution": "1K",
+    "output_format": "png"
+  }
+}

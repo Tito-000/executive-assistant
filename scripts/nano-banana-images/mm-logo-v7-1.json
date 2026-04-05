@@ -1,0 +1,4 @@
+{
+  "prompt": "Logo design on pure black background. A perfect circle with a thick yellow (#FAFA00) border ring (about 5% of diameter thickness). Inside the circle is solid black. In the center, the letters 'MM' in bold white uppercase. CRITICAL: The typeface must be a bold, blocky, geometric extended sans-serif like Microgramma Extended Bold or Eurostile Bold Extended — wide letterforms, thick rectangular strokes, sharp 90-degree corners, minimal counter space. This is the SAME typeface used across all logo variants. No other text, no tagline. Just the yellow ring circle with blocky MM in white inside. Clean vector quality, perfectly centered, razor sharp edges, flat design.",
+  "negative_prompt": "gradient, shadow, glow, neon, 3D, complex, busy, decorative, serif font, script font, thin lines, rounded font, soft font, realistic photo, photography, human, blur, low quality, pixelated, tagline, extra text, grunge, noise, texture, multiple fonts, mixed typefaces"
+}

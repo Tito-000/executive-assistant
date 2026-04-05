@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>MM AGENCY. — Brand Guidelines</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@300;400;600;700&family=DM+Mono:wght@400;500&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+  :root {
+    --primary: #FAFA00;
+    --secondary: #713DFF;
+    --orange: #F54900;
+    --light-blue: #00E3FF;
+    --pink: #FCA8FF;
+    --green: #008500;
+    --bg: #181818;
+    --bg-card: #202020;
+    --border: #353535;
+    --space-grey: #707070;
+    --light-grey: #C9C9C9;
+    --light: #FAFAFA;
+    --white: #FFFFFF;
+    --black: #000000;
+    --font-h: 'Chakra Petch', sans-serif;
+    --font-b: 'DM Sans', sans-serif;
+    --font-m: 'DM Mono', monospace;
+  }
+
+  body { background: var(--bg); color: var(--white); font-family: var(--font-b); -webkit-font-smoothing: antialiased; }
+
+  /* NAV */
+  nav {
+    position: fixed; top: 0; width: 100%; z-index: 100;
+    background: rgba(24,24,24,.88); backdrop-filter: blur(3rem); -webkit-backdrop-filter: blur(3rem);
+    border-bottom: .5px solid var(--border);
+    display: flex; align-items: center; justify-content: space-between;
+    padding: 1.1rem 3rem;
+  }
+  .nav-logo { height: 22px; }
+  .nav-right { display: flex; align-items: center; gap: 2rem; }
+  .nav-link { font-family: var(--font-b); font-size: .7rem; color: var(--space-grey); text-transform: uppercase; letter-spacing: .1em; text-decoration: none; transition: color .2s; cursor: pointer; }
+  .nav-link:hover { color: var(--white); }
+
+  /* SECTIONS */
+  main { padding-top: 4.5rem; }
+  .s { padding: 5rem 3.5rem; border-bottom: .5px solid var(--border); opacity: 0; transform: translateY(25px); transition: opacity .6s ease, transform .6s ease; }
+  .s.vis { opacity: 1; transform: translateY(0); }
+  .s-num { font-family: var(--font-m); font-size: .6rem; letter-spacing: .5em; text-transform: uppercase; color: var(--space-grey); margin-bottom: .8rem; }
+  .s-title { font-family: var(--font-h); font-weight: 700; font-size: 1.8rem; letter-spacing: -.01em; margin-bottom: 1rem; }
+  .s-desc { font-family: var(--font-b); font-size: .85rem; color: var(--light-grey); line-height: 1.7; max-width: 640px; margin-bottom: 3rem; }
+  .divider { height: .5px; background: var(--border); margin: 3rem 0; }
+
+  /* HERO */
+  .hero { display: flex; flex-direction: column; align-items: center; justify-content: center; min-height: 80vh; text-align: center; padding: 10rem 3rem 6rem; border-bottom: .5px solid var(--border); }
+  .hero-logo { max-width: 700px; width: 80%; margin-bottom: 2rem; }
+  .hero-sub { font-family: var(--font-m); font-size: .75rem; color: var(--space-grey); letter-spacing: .3em; text-transform: uppercase; }
+  .hero-line { width: 60px; height: 2px; background: var(--primary); margin-top: 2.5rem; }
+
+  /* LOGO IMAGE GRIDS */
+  .logo-grid { display: grid; gap: 1px; background: var(--border); }
+  .logo-grid.g2 { grid-template-columns: 1fr 1fr; }
+  .logo-grid.g3 { grid-template-columns: repeat(3, 1fr); }
+  .logo-cell { background: var(--bg); padding: 2rem; display: flex; flex-direction: column; align-items: center; justify-content: center; min-height: 240px; transition: background .2s; }
+  .logo-cell:hover { background: var(--bg-card); }
+  .logo-cell img { max-width: 100%; max-height: 200px; object-fit: contain; }
+  .logo-cell.hero-img img { max-height: 280px; }
+  .logo-cell.wide { grid-column: span 2; }
+  .logo-cell.full { grid-column: 1 / -1; }
+  .cell-lbl { font-family: var(--font-m); font-size: .55rem; letter-spacing: .3em; text-transform: uppercase; color: var(--space-grey); margin-top: 1.2rem; text-align: center; }
+
+  /* COLORS */
+  .color-grid { display: grid; grid-template-columns: repeat(6, 1fr); gap: 1px; background: var(--border); }
+  .color-card { background: var(--bg); }
+  .color-card:hover .color-sw { transform: scaleY(1.05); transform-origin: top; }
+  .color-sw { height: 140px; width: 100%; transition: transform .2s; }
+  .color-info { padding: 1rem; }
+  .color-nm { font-family: var(--font-h); font-weight: 700; font-size: .7rem; letter-spacing: .06em; text-transform: uppercase; margin-bottom: .25rem; }
+  .color-hex { font-family: var(--font-m); font-size: .6rem; color: var(--space-grey); margin-bottom: .15rem; }
+  .color-role { font-family: var(--font-m); font-size: .5rem; color: var(--space-grey); letter-spacing: .1em; text-transform: uppercase; }
+
+  /* TYPOGRAPHY */
+  .type-row { display: flex; align-items: baseline; gap: 2rem; padding: 2rem 0; border-bottom: .5px solid var(--border); }
+  .type-row:last-child { border-bottom: none; }
+  .type-meta { min-width: 150px; flex-shrink: 0; }
+  .type-meta-name { font-family: var(--font-m); font-size: .6rem; color: var(--space-grey); letter-spacing: .2em; text-transform: uppercase; margin-bottom: .3rem; }
+  .type-meta-detail { font-family: var(--font-m); font-size: .5rem; color: var(--border); }
+
+  /* APPLICATIONS */
+  .app-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1px; background: var(--border); }
+  .app-card { background: var(--bg); padding: 2.5rem; min-height: 280px; display: flex; flex-direction: column; transition: background .2s; }
+  .app-card:hover { background: var(--bg-card); }
+  .app-lbl { font-family: var(--font-m); font-size: .6rem; letter-spacing: .3em; text-transform: uppercase; color: var(--space-grey); margin-bottom: 1.5rem; }
+
+  /* Mock navbar */
+  .mk-nav { background: rgba(24,24,24,.85); backdrop-filter: blur(1rem); border: .5px solid var(--border); border-radius: 10px; padding: .8rem 1.5rem; display: flex; align-items: center; justify-content: space-between; }
+  .mk-nav .mk-logo { height: 18px; }
+  .mk-nav .mk-links { display: flex; gap: 1.2rem; align-items: center; }
+  .mk-nav .mk-link { font-family: var(--font-b); font-size: .65rem; color: var(--space-grey); text-transform: uppercase; letter-spacing: .06em; }
+  .mk-btn { display: inline-flex; align-items: center; justify-content: center; padding: .4rem 1rem; border-radius: .5rem; border: 1px solid var(--white); font-family: var(--font-b); font-size: .6rem; font-weight: 700; text-transform: uppercase; color: var(--white); background: transparent; cursor: pointer; position: relative; overflow: hidden; transition: color .4s; }
+  .mk-btn::before { content: ''; position: absolute; left: 0; top: 0; width: 0; height: 100%; background: var(--white); transition: width .4s cubic-bezier(.42,0,.58,1); z-index: 0; }
+  .mk-btn:hover::before { width: 100%; }
+  .mk-btn:hover { color: var(--bg); }
+  .mk-btn span { position: relative; z-index: 1; }
+
+  /* Mock business card */
+  .mk-bcard { background: var(--bg-card); border: .5px solid var(--border); border-radius: 10px; padding: 1.8rem; max-width: 360px; display: flex; flex-direction: column; gap: 1.2rem; }
+  .mk-bcard .bcard-logo { height: 18px; }
+  .mk-bcard .bcard-div { width: 35px; height: 1.5px; background: var(--primary); }
+  .mk-bcard .bcard-nm { font-family: var(--font-b); font-size: .85rem; font-weight: 700; }
+  .mk-bcard .bcard-role { font-family: var(--font-m); font-size: .6rem; color: var(--space-grey); letter-spacing: .1em; text-transform: uppercase; margin-top: .15rem; }
+  .mk-bcard .bcard-ct { font-family: var(--font-m); font-size: .6rem; color: var(--light-grey); line-height: 1.8; }
+
+  /* Mock email sig */
+  .mk-sig { border-top: 2px solid var(--primary); padding-top: 1rem; max-width: 380px; }
+  .mk-sig .sig-row { display: flex; align-items: center; gap: .8rem; margin-bottom: .6rem; }
+  .mk-sig .sig-icon { width: 44px; height: 44px; flex-shrink: 0; }
+  .mk-sig .sig-icon img { width: 100%; height: 100%; object-fit: contain; border-radius: 50%; }
+  .mk-sig .sig-nm { font-family: var(--font-b); font-size: .8rem; font-weight: 700; }
+  .mk-sig .sig-role { font-family: var(--font-m); font-size: .55rem; color: var(--space-grey); letter-spacing: .1em; text-transform: uppercase; margin-top: .1rem; }
+  .mk-sig .sig-ct { font-family: var(--font-m); font-size: .55rem; color: var(--light-grey); line-height: 1.8; }
+  .mk-sig .sig-ct .y { color: var(--primary); }
+
+  /* Avatars */
+  .av-row { display: flex; align-items: center; gap: 1.5rem; flex-wrap: wrap; }
+  .av-item { display: flex; flex-direction: column; align-items: center; gap: .6rem; }
+  .av-item img { border-radius: 50%; object-fit: contain; }
+  .av-item img.sq { border-radius: 14px; }
+  .av-lbl { font-family: var(--font-m); font-size: .5rem; color: var(--space-grey); text-align: center; }
+
+  /* USAGE RULES */
+  .rules-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; }
+  .rule-card { background: var(--bg-card); border: .5px solid var(--border); border-radius: 10px; padding: 2rem; }
+  .rule-card.do { border-color: var(--green); }
+  .rule-card.dont { border-color: var(--orange); }
+  .rule-tag { font-family: var(--font-m); font-size: .55rem; letter-spacing: .3em; text-transform: uppercase; margin-bottom: 1rem; }
+  .rule-tag.do { color: var(--green); }
+  .rule-tag.dont { color: var(--orange); }
+  .rule-list { list-style: none; }
+  .rule-list li { font-family: var(--font-b); font-size: .8rem; color: var(--light-grey); line-height: 1.6; padding: .4rem 0; border-bottom: .5px solid var(--border); }
+  .rule-list li:last-child { border-bottom: none; }
+
+  /* FOOTER */
+  footer { border-top: .5px solid var(--border); padding: 4rem 3rem; text-align: center; display: flex; flex-direction: column; align-items: center; gap: 1rem; }
+  .ft-logo { height: 24px; }
+  .ft-copy { font-family: var(--font-m); font-size: .55rem; color: var(--space-grey); letter-spacing: .15em; text-transform: uppercase; }
+
+  /* RESPONSIVE */
+  @media (max-width: 768px) {
+    nav { padding: 1rem 1.5rem; }
+    .nav-right { display: none; }
+    .s { padding: 3rem 1.5rem; }
+    .hero { padding: 6rem 1.5rem 3rem; min-height: 55vh; }
+    .hero-logo { width: 90%; }
+    .logo-grid.g2, .logo-grid.g3 { grid-template-columns: 1fr; }
+    .logo-cell.wide, .logo-cell.full { grid-column: auto; }
+    .color-grid { grid-template-columns: repeat(2, 1fr); }
+    .app-grid { grid-template-columns: 1fr; }
+    .rules-grid { grid-template-columns: 1fr; }
+    .type-row { flex-direction: column; gap: .8rem; }
+    .mk-nav .mk-links { display: none; }
+    footer { padding: 3rem 1.5rem; }
+  }
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <img class="nav-logo" src="mm-v7-wordmark-gray.jpg" alt="MM AGENCY.">
+  <div class="nav-right">
+    <a class="nav-link" href="#logos">Logos</a>
+    <a class="nav-link" href="#colors">Colors</a>
+    <a class="nav-link" href="#typography">Type</a>
+    <a class="nav-link" href="#brandmarks">Marks</a>
+    <a class="nav-link" href="#apps">Apps</a>
+    <a class="nav-link" href="#rules">Rules</a>
+  </div>
+</nav>
+
+<main>
+
+<!-- HERO -->
+<section class="hero s">
+  <img class="hero-logo" src="mm-v7-wordmark-white.jpg" alt="MM AGENCY.">
+  <div class="hero-sub">Brand Guidelines &mdash; v1.0</div>
+  <div class="hero-line"></div>
+</section>
+
+<!-- 01 PRIMARY LOGOS -->
+<section class="s" id="logos">
+  <div class="s-num">01</div>
+  <div class="s-title">Primary Logos</div>
+  <div class="s-desc">Tres versiones del wordmark para diferentes contextos. Todos usan la misma tipografía blocky geométrica. El punto (.) siempre va en Primary Yellow.</div>
+
+  <div class="logo-grid g2">
+    <div class="logo-cell hero-img wide">
+      <img src="mm-v7-wordmark-white.jpg" alt="Wordmark White">
+      <div class="cell-lbl">Wordmark &mdash; White (Hero / Principal)</div>
+    </div>
+    <div class="logo-cell">
+      <img src="mm-v7-wordmark-yellow.jpg" alt="Wordmark Yellow">
+      <div class="cell-lbl">Wordmark &mdash; Yellow (Destacado)</div>
+    </div>
+    <div class="logo-cell">
+      <img src="mm-v7-wordmark-gray.jpg" alt="Wordmark Gray">
+      <div class="cell-lbl">Wordmark &mdash; Gray (Navbar / Sutil)</div>
+    </div>
+  </div>
+</section>
+
+<!-- 02 BRANDMARKS -->
+<section class="s" id="brandmarks">
+  <div class="s-num">02</div>
+  <div class="s-title">Brandmarks</div>
+  <div class="s-desc">Variantes del ícono para avatars, favicons y espacios reducidos. El círculo con ring amarillo es la firma visual principal.</div>
+
+  <div class="logo-grid g3">
+    <div class="logo-cell">
+      <img src="mm-v7-circle-ring.jpg" alt="Circle Ring" style="max-height:180px;">
+      <div class="cell-lbl">Circle Ring &mdash; Primary</div>
+    </div>
+    <div class="logo-cell">
+      <img src="mm-v7-circle-stacked.jpg" alt="Circle Stacked" style="max-height:180px;">
+      <div class="cell-lbl">Circle &mdash; Stacked</div>
+    </div>
+    <div class="logo-cell">
+      <img src="mm-v7-rect-box.jpg" alt="Rect Box" style="max-height:180px;">
+      <div class="cell-lbl">Rect &mdash; Box</div>
+    </div>
+  </div>
+</section>
+
+<!-- 03 COLORS -->
+<section class="s" id="colors">
+  <div class="s-num">03</div>
+  <div class="s-title">Color System</div>
+  <div class="s-desc">Paleta completa. Yellow es el color primario de la marca. Violet y Orange son acentos secundarios.</div>
+
+  <div class="color-grid">
+    <div class="color-card"><div class="color-sw" style="background:#FAFA00;"></div><div class="color-info"><div class="color-nm">Primary Yellow</div><div class="color-hex">#FAFA00</div><div class="color-role">CTAs &middot; Accents</div></div></div>
+    <div class="color-card"><div class="color-sw" style="background:#713DFF;"></div><div class="color-info"><div class="color-nm">Violet</div><div class="color-hex">#713DFF</div><div class="color-role">Secondary</div></div></div>
+    <div class="color-card"><div class="color-sw" style="background:#F54900;"></div><div class="color-info"><div class="color-nm">Orange</div><div class="color-hex">#F54900</div><div class="color-role">Alerts</div></div></div>
+    <div class="color-card"><div class="color-sw" style="background:#00E3FF;"></div><div class="color-info"><div class="color-nm">Light Blue</div><div class="color-hex">#00E3FF</div><div class="color-role">Links &middot; Info</div></div></div>
+    <div class="color-card"><div class="color-sw" style="background:#FCA8FF;"></div><div class="color-info"><div class="color-nm">Pink</div><div class="color-hex">#FCA8FF</div><div class="color-role">Highlights</div></div></div>
+    <div class="color-card"><div class="color-sw" style="background:#008500;"></div><div class="color-info"><div class="color-nm">Green</div><div class="color-hex">#008500</div><div class="color-role">Success</div></div></div>
+  </div>
+
+  <div class="divider"></div>
+  <div class="s-num" style="margin-bottom:1.5rem;">NEUTRALS</div>
+
+  <div class="color-grid">
+    <div class="color-card"><div class="color-sw" style="background:#FAFAFA;"></div><div class="color-info"><div class="color-nm">Light</div><div class="color-hex">#FAFAFA</div><div class="color-role">Light BG</div></div></div>
+    <div class="color-card"><div class="color-sw" style="background:#C9C9C9;"></div><div class="color-info"><div class="color-nm">Light Grey</div><div class="color-hex">#C9C9C9</div><div class="color-role">Body Text</div></div></div>
+    <div class="color-card"><div class="color-sw" style="background:#707070;"></div><div class="color-info"><div class="color-nm">Space Grey</div><div class="color-hex">#707070</div><div class="color-role">Muted</div></div></div>
+    <div class="color-card"><div class="color-sw" style="background:#353535;"></div><div class="color-info"><div class="color-nm">Dark Grey</div><div class="color-hex">#353535</div><div class="color-role">Borders</div></div></div>
+    <div class="color-card"><div class="color-sw" style="background:#202020;"></div><div class="color-info"><div class="color-nm">Dark Grey 2</div><div class="color-hex">#202020</div><div class="color-role">Cards</div></div></div>
+    <div class="color-card"><div class="color-sw" style="background:#181818;"></div><div class="color-info"><div class="color-nm">Dark</div><div class="color-hex">#181818</div><div class="color-role">Canvas</div></div></div>
+  </div>
+</section>
+
+<!-- 04 TYPOGRAPHY -->
+<section class="s" id="typography">
+  <div class="s-num">04</div>
+  <div class="s-title">Typography</div>
+  <div class="s-desc">Tres familias: Chakra Petch para headlines, DM Sans para cuerpo, DM Mono para labels técnicos.</div>
+
+  <div class="type-row">
+    <div class="type-meta"><div class="type-meta-name">Logo / H1</div><div class="type-meta-detail">Chakra Petch 700<br>.08em tracking</div></div>
+    <div style="font-family:var(--font-h);font-weight:700;font-size:2.8rem;letter-spacing:.08em;text-transform:uppercase;line-height:1;">MM AGENCY<span style="color:var(--primary);">.</span></div>
+  </div>
+  <div class="type-row">
+    <div class="type-meta"><div class="type-meta-name">H2</div><div class="type-meta-detail">Chakra Petch 700<br>-.02em tracking</div></div>
+    <div style="font-family:var(--font-h);font-weight:700;font-size:2rem;letter-spacing:-.02em;">Growth That Scales</div>
+  </div>
+  <div class="type-row">
+    <div class="type-meta"><div class="type-meta-name">Body</div><div class="type-meta-detail">DM Sans 400<br>1rem / 1.7 lh</div></div>
+    <div style="font-family:var(--font-b);font-size:1rem;color:var(--light-grey);line-height:1.7;max-width:500px;">Somos una agencia de growth marketing enfocada en resultados medibles. Combinamos estrategia, creatividad y datos para escalar negocios.</div>
+  </div>
+  <div class="type-row">
+    <div class="type-meta"><div class="type-meta-name">Mono</div><div class="type-meta-detail">DM Mono 400<br>.75rem / .15em</div></div>
+    <div style="font-family:var(--font-m);font-size:.8rem;color:var(--space-grey);letter-spacing:.15em;text-transform:uppercase;">01 &mdash; Services &nbsp;&nbsp; 02 &mdash; Case Studies &nbsp;&nbsp; 03 &mdash; About</div>
+  </div>
+</section>
+
+<!-- 05 APPLICATIONS -->
+<section class="s" id="apps">
+  <div class="s-num">05</div>
+  <div class="s-title">Applications</div>
+  <div class="s-desc">El logo en contexto real: navbar, tarjeta, firma de email y avatars.</div>
+
+  <div class="app-grid">
+    <div class="app-card">
+      <div class="app-lbl">Navbar</div>
+      <div class="mk-nav">
+        <img class="mk-logo" src="mm-v7-wordmark-gray.jpg" alt="MM AGENCY." style="height:16px;">
+        <div class="mk-links">
+          <span class="mk-link">Services</span>
+          <span class="mk-link">Work</span>
+          <span class="mk-link">About</span>
+          <button class="mk-btn"><span>Contact</span></button>
+        </div>
+      </div>
+    </div>
+
+    <div class="app-card">
+      <div class="app-lbl">Business Card</div>
+      <div class="mk-bcard">
+        <img class="bcard-logo" src="mm-v7-wordmark-white.jpg" alt="MM AGENCY." style="height:16px;align-self:flex-start;">
+        <div class="bcard-div"></div>
+        <div><div class="bcard-nm">Martin Mercedes</div><div class="bcard-role">Founder & Growth Strategist</div></div>
+        <div class="bcard-ct">martin@mmagency.com<br>+1 (809) 555-0100<br>mmagency.com</div>
+      </div>
+    </div>
+
+    <div class="app-card">
+      <div class="app-lbl">Email Signature</div>
+      <div class="mk-sig">
+        <div class="sig-row">
+          <div class="sig-icon"><img src="mm-v7-circle-ring.jpg" alt="MM" style="width:100%;height:100%;object-fit:cover;border-radius:50%;"></div>
+          <div><div class="sig-nm">Martin Mercedes</div><div class="sig-role">Founder &mdash; MM Agency</div></div>
+        </div>
+        <div class="sig-ct"><span class="y">&#9679;</span> martin@mmagency.com<br><span class="y">&#9679;</span> +1 (809) 555-0100<br><span class="y">&#9679;</span> mmagency.com</div>
+      </div>
+    </div>
+
+    <div class="app-card">
+      <div class="app-lbl">Social Avatars</div>
+      <div class="av-row">
+        <div class="av-item"><img src="mm-v7-circle-ring.jpg" alt="MM" style="width:72px;height:72px;border-radius:50%;"><div class="av-lbl">Profile</div></div>
+        <div class="av-item"><img src="mm-v7-circle-ring.jpg" alt="MM" style="width:72px;height:72px;border-radius:14px;" class="sq"><div class="av-lbl">App Icon</div></div>
+        <div class="av-item"><img src="mm-v7-circle-ring.jpg" alt="MM" style="width:48px;height:48px;border-radius:50%;"><div class="av-lbl">Comment</div></div>
+        <div class="av-item"><img src="mm-v7-circle-stacked.jpg" alt="MM" style="width:48px;height:48px;border-radius:50%;"><div class="av-lbl">Alt</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 06 USAGE RULES -->
+<section class="s" id="rules">
+  <div class="s-num">06</div>
+  <div class="s-title">Usage Rules</div>
+  <div class="s-desc">Reglas para mantener la consistencia de la marca.</div>
+
+  <div class="rules-grid">
+    <div class="rule-card do">
+      <div class="rule-tag do">&#10003; Do</div>
+      <ul class="rule-list">
+        <li>Usar las imágenes de logo oficiales (v7) sin modificar</li>
+        <li>Mantener el punto (.) siempre en Primary Yellow #FAFA00</li>
+        <li>Usar sobre fondos oscuros (#181818, #202020, #000)</li>
+        <li>Mantener espacio libre alrededor del logo</li>
+        <li>Usar circle-ring para avatars de redes sociales</li>
+        <li>Escribir siempre "MM AGENCY." con punto al final</li>
+      </ul>
+    </div>
+    <div class="rule-card dont">
+      <div class="rule-tag dont">&#10005; Don't</div>
+      <ul class="rule-list">
+        <li>Nunca recrear el logo con otra tipografía</li>
+        <li>Nunca cambiar el color del punto amarillo</li>
+        <li>Nunca usar sobre fondos con poco contraste</li>
+        <li>Nunca estirar, rotar o distorsionar</li>
+        <li>Nunca mezclar variantes (ej: wordmark yellow con circle dark)</li>
+        <li>Nunca omitir el punto al final</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- FOOTER -->
+<footer>
+  <img class="ft-logo" src="mm-v7-wordmark-white.jpg" alt="MM AGENCY.">
+  <div class="ft-copy">&copy; 2026 MM AGENCY. All rights reserved.</div>
+</footer>
+
+<script>
+  const obs = new IntersectionObserver(entries => {
+    entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('vis'); });
+  }, { threshold: 0.08 });
+  document.querySelectorAll('.s').forEach(s => obs.observe(s));
+  document.querySelectorAll('.nav-link').forEach(a => {
+    a.addEventListener('click', e => {
+      e.preventDefault();
+      document.querySelector(a.getAttribute('href'))?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    });
+  });
+</script>
+
+</body>
+</html>

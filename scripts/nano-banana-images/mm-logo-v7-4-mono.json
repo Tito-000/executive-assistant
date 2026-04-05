@@ -1,0 +1,7 @@
+{
+  "prompt": "Monochromatic logo wordmark on pure black background. The text 'MM AGENCY.' in a single horizontal line, all uppercase, all in solid pure white (#FFFFFF) including the period dot. CRITICAL: The ENTIRE text uses ONE SINGLE typeface — a bold, blocky, geometric extended sans-serif like Microgramma Extended Bold. Every letter is the SAME font, same weight, same style. Wide rectangular letterforms, thick strokes, sharp 90-degree corners. Everything is pure white on black — no yellow, no gray, no color at all. Monochromatic. No icon, no symbol. Pure heavy typography centered on black. Vector quality, crisp edges, completely flat.",
+  "negative_prompt": "yellow, color, colored, yellow dot, icon, symbol, graphic, 3D, gradient, shadow, glow, neon, complex, busy, decorative, serif, script, handwritten, thin lines, light weight, different fonts for different words, mixed typefaces, rounded font, realistic photo, photography, human, blur, low quality, pixelated, noise, grunge",
+  "api_parameters": {
+    "aspect_ratio": "16:9"
+  }
+}

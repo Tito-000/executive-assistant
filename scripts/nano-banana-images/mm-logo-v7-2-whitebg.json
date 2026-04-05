@@ -1,0 +1,4 @@
+{
+  "prompt": "Logo design on pure white (#FFFFFF) background. A perfect circle with a thick yellow (#FAFA00) border ring. Inside the circle is white. In the center, two lines of text stacked: 'MM' on top line and 'AGENCY' on bottom line, both in bold black (#000000) uppercase. CRITICAL: Both lines use the EXACT SAME typeface — a bold, blocky, geometric extended sans-serif like Microgramma Extended Bold. Same weight, same style, same letterform construction for both words. Wide rectangular letterforms, sharp corners. No mixing of fonts. The text fills about 60% of the circle. Clean vector quality, flat design, perfectly centered on white background.",
+  "negative_prompt": "black background, dark background, gradient, shadow, glow, neon, 3D, complex, busy, decorative, serif, script, thin lines, lowercase, rounded font, different fonts for different words, mixed typefaces, realistic photo, photography, human, blur, low quality, pixelated, grunge, noise, texture"
+}

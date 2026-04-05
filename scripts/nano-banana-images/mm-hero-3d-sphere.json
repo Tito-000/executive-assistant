@@ -1,0 +1,9 @@
+{
+  "prompt": "3D wireframe sphere globe shape, thin bright yellow glowing lines (#FAFA00) on pure black background, latitude and longitude grid lines forming a geodesic mesh, subtle yellow neon glow emanating from the lines, technical blueprint aesthetic, minimalist futuristic design, no fill, only wireframe grid, crisp sharp edges, high contrast, editorial quality, centered composition with negative space around the shape",
+  "negative_prompt": "solid fill, shading, text, labels, realistic photography, clutter, multiple objects, human figures, cartoon, illustration, thick lines, rainbow colors, low quality, blurry, noise, earth continents",
+  "api_parameters": {
+    "aspect_ratio": "1:1",
+    "resolution": "1K",
+    "output_format": "png"
+  }
+}

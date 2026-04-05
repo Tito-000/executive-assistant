@@ -1,0 +1,4 @@
+{
+  "prompt": "Logo design on pure black background. A rectangle with a thick yellow (#FAFA00) border outline (3-4px), sharp corners. Inside is solid black. In the center, two lines of text stacked: 'MM' on top and 'AGENCY' below, both in bold white uppercase. CRITICAL: Both words use the EXACT SAME typeface — a bold, blocky, geometric extended sans-serif like Microgramma Extended Bold. Same weight, same style for every letter. Wide rectangular strokes, sharp 90-degree corners. No rounded edges on letters or rectangle. Clean vector quality, flat design, centered on black canvas.",
+  "negative_prompt": "gradient, shadow, glow, neon, 3D, complex, busy, decorative, serif, script, thin lines, lowercase, rounded corners, rounded font, different fonts, mixed typefaces, realistic photo, photography, human, blur, low quality, pixelated, grunge, noise, texture"
+}

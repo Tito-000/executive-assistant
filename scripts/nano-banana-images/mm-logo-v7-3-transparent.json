@@ -1,0 +1,8 @@
+{
+  "prompt": "Logo design on transparent background with NO background color at all. A rectangle with a thick yellow (#FAFA00) border outline (3-4px), sharp corners. Inside is transparent/empty. In the center, two lines of text stacked: 'MM' on top and 'AGENCY' below, both in bold white uppercase. CRITICAL: Both words use the EXACT SAME typeface — a bold, blocky, geometric extended sans-serif like Microgramma Extended Bold. Same weight, same style for every letter. Wide rectangular strokes, sharp 90-degree corners. No rounded edges on letters or rectangle. Clean vector quality, flat design, centered. PNG with alpha transparency, no background whatsoever.",
+  "negative_prompt": "background color, solid background, black background, white background, gradient, shadow, glow, neon, 3D, complex, busy, decorative, serif, script, thin lines, lowercase, rounded corners, rounded font, different fonts, mixed typefaces, realistic photo, photography, human, blur, low quality, pixelated, grunge, noise, texture",
+  "api_parameters": {
+    "output_format": "png",
+    "resolution": "2K"
+  }
+}

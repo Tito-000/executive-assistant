@@ -1,0 +1,4 @@
+{
+  "prompt": "Logo design on pure black background. A perfect circle with a thick yellow (#FAFA00) border/ring (approximately 5% of circle diameter). Inside the circle is solid black. In the center of the circle, the letters 'MM' in bold white blocky geometric uppercase typeface — heavy weight, tight letter-spacing, modern industrial style. The MM letters are large, filling about 60% of the circle width. No other text, no tagline, no decorative elements. Just the yellow ring circle with MM in white inside. Clean vector quality, perfectly centered, razor sharp edges. Flat design, no shadows, no gradients, no 3D effects. Professional brand identity mark.",
+  "negative_prompt": "gradient, shadow, glow, neon, 3D, complex, busy, decorative, ornamental, serif font, script font, thin lines, realistic photo, photography, human, blur, low quality, pixelated, text outside circle, tagline, extra text, multiple colors, grunge, noise, texture"
+}

@@ -1,0 +1,4 @@
+{
+  "prompt": "Logo design on pure black background. A perfect circle with a thick yellow (#FAFA00) border/ring. Inside the circle is solid black. In the center, two lines of lowercase white bold text: 'mm' on top and 'agency' below, both in a clean modern rounded sans-serif typeface like Nunito or Gotham Rounded Bold. The text is large and fills most of the circle area. No period, no dot, no extra elements. Just the yellow ring circle with 'mm agency' stacked in white lowercase inside. Clean vector quality, perfectly centered, flat design, no shadows, no gradients.",
+  "negative_prompt": "gradient, shadow, glow, neon, 3D, complex, busy, decorative, ornamental, serif font, script font, thin lines, uppercase, realistic photo, photography, human, blur, low quality, pixelated, tagline, extra text, period, dot, grunge, noise, texture"
+}

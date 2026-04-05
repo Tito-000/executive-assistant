@@ -3,8 +3,27 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Anabel Mercedes — Construí la vida que quería</title>
-<meta name="description" content="Emprendedora. Consultora Immunotec. Viajera. Desde República Dominicana, en mis propios términos.">
+<title>Anabel Mercedes — Genera ingresos reales sin renunciar a tu vida</title>
+<meta name="description" content="Anabel Mercedes es Diamante Ejecutivo Immunotec con más de 5,000 personas en su equipo. Descubre cómo genera ingresos reales sin perseguir a nadie, desde República Dominicana.">
+<meta name="keywords" content="Anabel Mercedes, Immunotec, network marketing, ingresos desde casa, emprendedora, República Dominicana, Diamante Ejecutivo, oportunidad de negocio">
+<meta name="author" content="Anabel Mercedes">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://anabelmercedes.com/">
+<!-- Open Graph -->
+<meta property="og:title" content="Anabel Mercedes — Genera ingresos reales sin renunciar a tu vida">
+<meta property="og:description" content="De la más tímida del salón a liderar más de 5,000 personas. Conoce cómo funciona.">
+<meta property="og:image" content="https://anabelmercedes.com/og-image.jpg?v=2">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:url" content="https://anabelmercedes.com">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="es_DO">
+<meta property="og:site_name" content="Anabel Mercedes">
+<!-- Twitter -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Anabel Mercedes — Genera ingresos reales sin renunciar a tu vida">
+<meta name="twitter:description" content="De la más tímida del salón a liderar más de 5,000 personas. Conoce cómo funciona.">
+<meta name="twitter:image" content="https://anabelmercedes.com/og-image.jpg?v=2">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Montserrat:wght@300;400;500;600;700;800&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,400;1,500&display=swap" rel="stylesheet">
@@ -355,21 +374,16 @@ ul { list-style: none; }
   background: #6B8868;
 }
 
-/* La foto: PNG transparente, llena la columna completa */
+/* La foto hero — llena la columna completa */
 .hero__photo-img {
   position: absolute;
   inset: 0;
-  width: 95%;
+  width: 100%;
   height: 100%;
-  margin: auto;
-  object-fit: contain;
-  object-position: center bottom;
+  object-fit: cover;
+  object-position: center top;
   display: block;
   z-index: 1;
-  bottom: 0;
-  top: auto;
-  left: 50%;
-  transform: translateX(-50%);
 }
 
 /* Arco decorativo — detrás de la foto */
@@ -1100,6 +1114,89 @@ ul { list-style: none; }
 .instagram__cta { text-align: center; }
 /* Instagram responsive — see unified block at bottom */
 
+/* ====== OPTIN — estilo Elise Darma ====== */
+.optin {
+  background: var(--cream-deep);
+  overflow: hidden;
+}
+.optin__inner {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto;
+  min-height: 600px;
+}
+/* Desktop: foto ocupa toda la columna izquierda, header+body la derecha */
+.optin__photo {
+  position: relative;
+  overflow: hidden;
+  grid-column: 1;
+  grid-row: 1 / 3;
+}
+.optin__photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top center;
+  display: block;
+  filter: grayscale(100%);
+  transition: filter 0.6s var(--ease);
+}
+.optin__photo:hover img {
+  filter: grayscale(60%);
+}
+.optin__header {
+  grid-column: 2;
+  grid-row: 1;
+  padding: clamp(48px, 6vw, 80px) clamp(32px, 5vw, 80px) 0;
+  background: var(--cream-deep);
+}
+.optin__body {
+  grid-column: 2;
+  grid-row: 2;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  padding: 0 clamp(32px, 5vw, 80px) clamp(48px, 6vw, 80px);
+  background: var(--cream-deep);
+}
+.optin__signature {
+  font-family: 'DM Serif Display', serif;
+  font-style: italic;
+  font-size: clamp(2.8rem, 2rem + 3vw, 4.5rem);
+  color: var(--sage);
+  opacity: 1;
+  line-height: 1.1;
+  margin-bottom: 28px;
+}
+.optin__headline {
+  font-family: 'Montserrat', sans-serif;
+  font-size: clamp(0.7rem, 0.65rem + 0.2vw, 0.82rem);
+  font-weight: 800;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: var(--navy);
+  line-height: 1.8;
+  margin-bottom: 28px;
+}
+.optin__text {
+  font-size: clamp(0.95rem, 0.9rem + 0.2vw, 1.05rem);
+  color: var(--text-body);
+  line-height: 1.85;
+  margin-bottom: 36px;
+  border-left: 3px solid var(--sage);
+  padding-left: 20px;
+}
+.optin__text strong {
+  color: var(--navy);
+  font-weight: 700;
+}
+.optin__note {
+  margin-top: 16px;
+  font-size: 0.7rem;
+  color: var(--text-light);
+  letter-spacing: 0.3px;
+}
+
 /* ====== CTA FINAL ====== */
 .cta-final {
   padding: var(--section-py) 0;
@@ -1150,16 +1247,94 @@ ul { list-style: none; }
   margin: 0 auto 40px;
 }
 
-/* ====== FOOTER ====== */
+/* ====== FOOTER — estilo Elise Darma ====== */
 .footer {
-  padding: 28px 0;
+  background: #2A3A28;
+  color: rgba(255,255,255,0.5);
+  position: relative;
+  overflow: visible;
+  border-top: 3px solid var(--sage);
+}
+/* Star on the border line */
+.footer__border-star {
+  position: absolute;
+  top: -1.5px;
+  left: 50%;
+  translate: -50% -50%;
+  width: 56px;
+  height: 56px;
+  z-index: 3;
+  filter: drop-shadow(0 0 8px rgba(196,164,74,0.5)) drop-shadow(0 0 20px rgba(196,164,74,0.25));
+  animation: starSpin 8s linear infinite, starPulse 3s ease-in-out infinite;
+}
+.footer__inner {
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  gap: 0 clamp(32px, 5vw, 60px);
+  max-width: 900px;
+  margin: 0 auto;
+  padding: clamp(48px, 6vw, 72px) clamp(24px, 5vw, 60px);
+  align-items: center;
+}
+.footer__col {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+.footer__link {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.75rem;
+  font-weight: 500;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.55);
+  transition: color 0.25s var(--ease);
+  display: block;
+}
+.footer__link:hover {
+  color: var(--cream);
+}
+.footer__logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: clamp(100px, 12vw, 150px);
+  height: clamp(100px, 12vw, 150px);
+  border-radius: 50%;
+  border: 2.5px solid var(--sage);
+  flex-shrink: 0;
+}
+.footer__logo-text {
+  font-family: 'DM Serif Display', serif;
+  font-size: clamp(2.4rem, 1.8rem + 2vw, 3.5rem);
+  color: var(--cream);
+  letter-spacing: -3px;
+  line-height: 1;
+}
+@keyframes starSpin {
+  from { rotate: 0deg; }
+  to { rotate: 360deg; }
+}
+@keyframes starPulse {
+  0%, 100% { scale: 1; filter: drop-shadow(0 0 8px rgba(196,164,74,0.5)) drop-shadow(0 0 20px rgba(196,164,74,0.25)); }
+  50% { scale: 1.2; filter: drop-shadow(0 0 14px rgba(196,164,74,0.7)) drop-shadow(0 0 30px rgba(196,164,74,0.4)); }
+}
+.footer__bottom {
+  border-top: 1px solid rgba(255,255,255,0.08);
+  padding: 20px clamp(24px, 5vw, 80px);
   text-align: center;
-  background: var(--navy);
-  font-size: 0.7rem;
-  color: rgba(255,255,255,0.25);
+  font-size: 0.6rem;
+  color: rgba(255,255,255,0.2);
   letter-spacing: 1px;
   text-transform: uppercase;
   font-weight: 600;
+}
+.footer__bottom a {
+  color: rgba(255,255,255,0.25);
+  transition: color 0.2s;
+}
+.footer__bottom a:hover {
+  color: var(--cream);
 }
 
 /* ====== SCROLL ANIMATIONS ====== */
@@ -1321,97 +1496,168 @@ ul { list-style: none; }
     gap: 12px;
   }
 
-  /* — CTA FINAL — */
-  .cta-final h2 {
-    font-size: clamp(2.2rem, 1.6rem + 3.5vw, 4.5rem);
+  /* — OPTIN — */
+  .optin__inner {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
   }
+  .optin__header {
+    grid-column: 1;
+    grid-row: 1;
+    order: 1;
+    padding: 48px clamp(24px, 6vw, 48px) 24px;
+    text-align: center;
+  }
+  .optin__photo {
+    grid-column: 1;
+    grid-row: 2;
+    order: 2;
+    min-height: auto;
+    max-height: none;
+    padding: 0 32px 32px;
+    background: var(--cream-deep);
+  }
+  .optin__photo img {
+    width: 100%;
+    height: auto;
+    max-height: 420px;
+    object-fit: cover;
+    box-shadow: 6px 6px 0 var(--navy);
+  }
+  .optin__body {
+    grid-column: 1;
+    grid-row: 3;
+    order: 3;
+    padding: 32px clamp(24px, 6vw, 48px) 56px;
+    align-items: center;
+    text-align: center;
+  }
+  .optin__signature { text-align: center; }
+  .optin__headline { text-align: center; }
+  .optin__text {
+    border-left: none;
+    padding-left: 0;
+    border-top: 3px solid var(--sage);
+    padding-top: 20px;
+    max-width: 540px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .optin__body .hero__cta { margin-left: auto; margin-right: auto; }
 }
 
 /* ====== LARGE PHONE — 600px ====== */
 @media (max-width: 600px) {
   :root {
-    --section-py: clamp(48px, 6vw, 80px);
+    --section-py: clamp(56px, 8vw, 80px);
   }
 
   .container, .container--narrow {
-    padding: 0 20px;
+    padding: 0 24px;
   }
 
   /* — NAV — */
   .nav__inner { height: 56px; }
-  .nav__mobile { top: 56px; padding: 20px 24px; }
+  .nav__mobile { top: 56px; padding: 24px 28px; gap: 8px; }
+  .nav__mobile .nav__link { font-size: 0.85rem; padding: 12px 0; }
   .nav__logo-wrap { padding: 0 16px; }
   .nav__logo-wrap .logo-am img,
-  .nav__logo-wrap img { height: 42px !important; }
+  .nav__logo-wrap img { height: 38px !important; }
 
   /* — HERO — */
   .hero { padding-top: 56px; }
   .hero__photo-col {
-    min-height: 80vw;
-    max-height: 440px;
+    min-height: 85vw;
+    max-height: 480px;
   }
   .hero__text-col {
-    padding: 32px 20px 48px;
+    padding: 40px 24px 56px;
+    gap: 0;
   }
   .hero__name {
-    font-size: clamp(3rem, 12vw, 4.5rem);
+    font-size: clamp(2.8rem, 10vw, 4.2rem);
     margin-bottom: 20px;
+    line-height: 0.95;
   }
   .hero__desc {
-    font-size: 0.78rem;
-    letter-spacing: 1.5px;
-    margin-bottom: 32px;
-    line-height: 1.8;
+    font-size: 0.88rem;
+    letter-spacing: 1px;
+    margin-bottom: 36px;
+    line-height: 1.9;
   }
-  /* Botones full-width en mobile */
+  /* Botones en mobile — más compactos, no full-width */
   .hero__cta {
-    width: 100%;
+    width: auto;
+    max-width: 85%;
+    margin-left: auto;
+    margin-right: auto;
     justify-content: center;
-    padding: 16px 24px;
-    font-size: 0.68rem;
+    padding: 20px 32px;
+    font-size: 0.7rem;
+    letter-spacing: 1.8px;
   }
+
+  /* — MARQUEES — */
+  .marquee-band { padding: 12px 0; }
+  .marquee-item { font-size: 0.85rem; padding: 0 20px; }
+
+  /* — LABELS — */
+  .label { font-size: 0.6rem; letter-spacing: 3px; margin-bottom: 12px; }
 
   /* — HISTORIA — */
   .historia__photo {
-    height: 65vw;
-    min-height: 250px;
-    max-height: 380px;
+    height: 70vw;
+    min-height: 260px;
+    max-height: 400px;
   }
   .historia__content {
-    padding: 36px 20px 48px;
+    padding: 40px 24px 56px;
   }
   .historia__eyebrow {
-    font-size: clamp(1.6rem, 1.2rem + 2vw, 2.5rem);
+    font-size: clamp(1.5rem, 1.1rem + 2vw, 2.2rem);
+    margin-bottom: 8px;
   }
   .historia__headline {
-    font-size: clamp(2rem, 1.5rem + 2.5vw, 3.5rem);
+    font-size: clamp(1.8rem, 1.3rem + 2.5vw, 3rem);
+    margin-bottom: 20px;
   }
   .historia__content p {
-    font-size: 0.9rem;
-    line-height: 1.8;
+    font-size: 0.95rem;
+    line-height: 1.85;
+    margin-bottom: 16px;
+  }
+  .historia__quote {
+    margin-top: 8px;
+    margin-bottom: 24px;
   }
   .historia__quote p {
-    font-size: 1.05rem;
+    font-size: 1.1rem;
+    line-height: 1.7;
   }
   .historia__content .hero__cta {
-    width: 100%;
-    justify-content: center;
+    margin-top: 8px;
   }
 
   /* — IMMUNOTEC — */
-  .immunotec__inner { padding: 0 20px; }
+  .immunotec { padding: var(--section-py) 0; }
+  .immunotec__inner { padding: 0 24px; }
+  .immunotec__header { margin-bottom: 24px; }
   .immunotec__header h2 {
-    font-size: clamp(1.6rem, 1.3rem + 1.5vw, 2.4rem);
+    font-size: clamp(1.5rem, 1.1rem + 2vw, 2.2rem);
+    line-height: 1.3;
   }
-  .immunotec__header { margin-bottom: 20px; }
-  .immunotec__visual { margin-bottom: 24px; }
-  .immunotec__body p { font-size: 0.92rem; }
-  .immunotec__stats { gap: 10px; }
-  .immunotec__stat { padding: 18px 16px; }
-  .immunotec__stat-num { font-size: clamp(1.5rem, 1.3rem + 0.8vw, 2rem); }
-  .immunotec__stat-label { font-size: 0.62rem; }
-  .immunotec__body .hero__cta { width: 100%; justify-content: center; }
-  .immunotec__moodboard { max-width: 340px; }
+  .immunotec__visual { margin-bottom: 28px; }
+  .immunotec__body p {
+    font-size: 0.95rem;
+    line-height: 1.85;
+    margin-bottom: 24px;
+  }
+  .immunotec__stats { gap: 12px; margin-bottom: 28px; }
+  .immunotec__stat { padding: 20px 16px; }
+  .immunotec__stat-num { font-size: clamp(1.6rem, 1.3rem + 1vw, 2.2rem); }
+  .immunotec__stat-label { font-size: 0.62rem; letter-spacing: 2px; }
+  .immunotec__body .hero__cta { }
+  .immunotec__moodboard { max-width: 320px; }
   .immunotec__mood-card { padding: 4px; }
   .immunotec__sello {
     width: 60px;
@@ -1422,108 +1668,182 @@ ul { list-style: none; }
 
   /* — CLUB — */
   .club__header-mobile {
-    padding: var(--section-py) 20px 20px;
+    padding: var(--section-py) 24px 24px;
   }
   .club__header-mobile .club__title {
-    font-size: clamp(1.5rem, 1.2rem + 1.5vw, 2.2rem);
+    font-size: clamp(1.4rem, 1.1rem + 1.5vw, 2rem);
+    line-height: 1.3;
   }
   .club__photo {
     min-height: 60vw;
     max-height: 380px;
   }
   .club__sello {
-    width: 90px;
-    height: 90px;
+    width: 80px;
+    height: 80px;
     top: 12px;
     right: 12px;
     padding: 6px;
   }
   .club__content {
-    padding: 36px 20px 48px;
+    padding: 40px 24px 56px;
   }
   .club__hero-num {
-    font-size: clamp(3.5rem, 2.5rem + 4vw, 5.5rem);
+    font-size: clamp(3.2rem, 2.2rem + 4vw, 5rem);
+    margin-bottom: 4px;
   }
   .club__hero-label {
-    font-size: 0.65rem;
-    letter-spacing: 2px;
+    font-size: 0.68rem;
+    letter-spacing: 2.5px;
+    margin-bottom: 20px;
   }
   .club__desc {
-    font-size: 0.92rem;
+    font-size: 0.95rem;
+    line-height: 1.85;
+    margin-bottom: 28px;
   }
-  .club__content .hero__cta { width: 100%; justify-content: center; }
+  .club__content .hero__cta { }
 
   /* — INSTAGRAM — */
-  .instagram__grid {
-    padding: 0 20px;
-    gap: 10px;
-  }
+  .instagram { padding: var(--section-py) 0; }
+  .instagram__header { padding: 0 24px; margin-bottom: 28px; }
   .instagram__header h2 {
-    font-size: clamp(1.5rem, 1.2rem + 1.5vw, 2.2rem);
+    font-size: clamp(1.5rem, 1.1rem + 2vw, 2.2rem);
+    margin-bottom: 8px;
+  }
+  .instagram__handle { font-size: 0.7rem; }
+  .instagram__grid {
+    padding: 0 24px;
+    gap: 10px;
   }
   .instagram__post {
     box-shadow: 3px 3px 0 var(--navy);
   }
-  .instagram__cta { padding: 0 20px; }
-  .instagram__cta .hero__cta { width: 100%; justify-content: center; }
+  .instagram__cta { padding: 28px 24px 0; }
+  .instagram__cta .hero__cta { }
 
-  /* — CTA FINAL — */
-  .cta-final__inner { padding: 0 20px; }
-  .cta-final h2 {
-    font-size: clamp(2rem, 1.4rem + 3vw, 3.5rem);
+  /* — OPTIN — */
+  .optin__photo {
+    padding: 0 24px 28px;
   }
-  .cta-final__sub {
-    font-size: 0.78rem;
-    letter-spacing: 1.5px;
-    margin-bottom: 36px;
+  .optin__header {
+    padding: 40px 24px 20px;
   }
-  .cta-final .hero__cta { width: 100%; justify-content: center; }
+  .optin__body {
+    padding: 24px 24px 48px;
+  }
+  .optin__signature {
+    font-size: clamp(2.6rem, 2rem + 3vw, 3.8rem);
+    margin-bottom: 20px;
+  }
+  .optin__headline {
+    font-size: 0.72rem;
+    letter-spacing: 2px;
+    line-height: 2.2;
+    margin-bottom: 24px;
+  }
+  .optin__text {
+    font-size: 0.95rem;
+    line-height: 1.85;
+  }
+  .optin__note {
+    font-size: 0.7rem;
+    margin-top: 16px;
+  }
+  .optin__content .hero__cta { }
+
+  /* — FOOTER — */
+  .footer__inner {
+    grid-template-columns: 1fr auto 1fr;
+    gap: 0 16px;
+    padding: 44px 24px 28px;
+  }
+  .footer__border-star { width: 32px; height: 32px; }
+  .footer__col { gap: 16px; }
+  .footer__link { font-size: 0.65rem; letter-spacing: 2px; }
+  .footer__logo { width: 72px; height: 72px; }
+  .footer__logo-text { font-size: 1.6rem; letter-spacing: -1px; }
+  .footer__bottom { padding: 16px 24px; font-size: 0.5rem; }
 }
 
 /* ====== SMALL PHONE — 480px ====== */
 @media (max-width: 480px) {
+  :root {
+    --section-py: clamp(48px, 7vw, 64px);
+  }
+
   /* — HERO — */
   .hero__photo-col {
-    min-height: 90vw;
-    max-height: 400px;
+    min-height: 95vw;
+    max-height: 420px;
+  }
+  .hero__text-col {
+    padding: 36px 20px 48px;
   }
   .hero__name {
-    font-size: clamp(2.6rem, 10vw, 3.8rem);
+    font-size: clamp(2.4rem, 9vw, 3.4rem);
     margin-bottom: 16px;
   }
   .hero__desc {
-    font-size: 0.72rem;
-    letter-spacing: 1px;
+    font-size: 0.82rem;
     margin-bottom: 28px;
+  }
+  .hero__cta {
+    padding: 18px 28px;
+    font-size: 0.65rem;
+    max-width: 90%;
   }
 
   /* — HISTORIA — */
   .historia__photo {
-    height: 75vw;
+    height: 80vw;
     max-height: 340px;
   }
+  .historia__content {
+    padding: 32px 20px 44px;
+  }
   .historia__headline {
-    font-size: clamp(1.8rem, 1.4rem + 2vw, 2.8rem);
+    font-size: clamp(1.6rem, 1.2rem + 2vw, 2.4rem);
   }
   .historia__circle {
-    width: 100px;
-    height: 100px;
+    width: 90px;
+    height: 90px;
+  }
+  .historia__content p {
+    font-size: 0.9rem;
+  }
+  .historia__quote p {
+    font-size: 1rem;
   }
 
   /* — IMMUNOTEC — */
+  .immunotec__inner { padding: 0 20px; }
+  .immunotec__header h2 {
+    font-size: clamp(1.3rem, 1rem + 1.5vw, 1.9rem);
+  }
+  .immunotec__body p { font-size: 0.9rem; }
   .immunotec__stats {
     grid-template-columns: 1fr;
-    max-width: 280px;
+    max-width: 260px;
   }
-  .immunotec__moodboard { max-width: 280px; }
+  .immunotec__moodboard { max-width: 260px; }
   .immunotec__mood-card--1 { width: 60%; }
   .immunotec__mood-card--2 { width: 58%; }
   .immunotec__mood-card--3 { width: 52%; }
 
   /* — CLUB — */
+  .club__header-mobile {
+    padding: var(--section-py) 20px 20px;
+  }
+  .club__header-mobile .club__title {
+    font-size: clamp(1.3rem, 1rem + 1.5vw, 1.8rem);
+  }
+  .club__content {
+    padding: 32px 20px 44px;
+  }
   .club__sello {
-    width: 70px;
-    height: 70px;
+    width: 65px;
+    height: 65px;
     top: 10px;
     right: 10px;
     padding: 5px;
@@ -1531,33 +1851,51 @@ ul { list-style: none; }
     box-shadow: 3px 3px 0 var(--navy);
   }
   .club__hero-num {
-    font-size: clamp(3rem, 2rem + 3.5vw, 4.5rem);
+    font-size: clamp(2.8rem, 2rem + 3vw, 4rem);
   }
+  .club__desc { font-size: 0.9rem; }
 
-  /* — INSTAGRAM — grid se mantiene en 2 columnas */
+  /* — INSTAGRAM — */
   .instagram__grid {
     grid-template-columns: repeat(2, 1fr);
     gap: 8px;
+    padding: 0 20px;
   }
+  .instagram__header { padding: 0 20px; }
   .instagram__post {
     border-width: 1.5px;
     box-shadow: 2px 2px 0 var(--navy);
   }
+  .instagram__cta { padding: 24px 20px 0; }
 
-  /* — CTA FINAL — */
-  .cta-final h2 {
-    font-size: clamp(1.8rem, 1.3rem + 2.5vw, 3rem);
-    letter-spacing: 0;
+  /* — OPTIN — */
+  .optin__photo {
+    padding: 0 20px 24px;
   }
-  .cta-final__note {
-    font-size: 0.65rem;
+  .optin__header {
+    padding: 32px 20px 16px;
   }
+  .optin__body {
+    padding: 20px 20px 44px;
+  }
+  .optin__signature {
+    font-size: clamp(2.2rem, 1.8rem + 2vw, 3.2rem);
+  }
+  .optin__headline { font-size: 0.65rem; }
+  .optin__text { font-size: 0.9rem; }
 
   /* — FOOTER — */
-  .footer {
-    font-size: 0.6rem;
-    padding: 20px 16px;
+  .footer__inner {
+    grid-template-columns: 1fr auto 1fr;
+    gap: 0 14px;
+    padding: 36px 20px 24px;
   }
+  .footer__border-star { width: 28px; height: 28px; }
+  .footer__col { gap: 14px; }
+  .footer__link { font-size: 0.6rem; letter-spacing: 1.5px; }
+  .footer__logo { width: 64px; height: 64px; }
+  .footer__logo-text { font-size: 1.5rem; letter-spacing: -1px; }
+  .footer__bottom { padding: 14px 20px; font-size: 0.48rem; }
 }
 
 /* ====== TOUCH DEVICE OPTIMIZATIONS ====== */
@@ -1582,7 +1920,7 @@ ul { list-style: none; }
     <!-- Logo -->
     <div class="nav__logo-wrap">
       <a href="#" class="logo-am">
-        <img src="logo-am.svg" alt="Anabel Mercedes" style="height:52px;width:auto;display:block;">
+        <img src="logo-am.svg" alt="Anabel Mercedes" style="height:44px;width:auto;display:block;">
       </a>
     </div>
 
@@ -1609,10 +1947,10 @@ ul { list-style: none; }
           <circle cx="17.5" cy="6.5" r="1" fill="#1A1F2E" stroke="none"/>
         </svg>
       </a>
-      <!-- Facebook -->
-      <a href="#" target="_blank" class="nav__social-btn" aria-label="Facebook">
+      <!-- WhatsApp -->
+      <a href="https://wa.me/18292812978?text=Hola%20Anabel%2C%20vi%20tu%20p%C3%A1gina%20y%20me%20interesa%20saber%20m%C3%A1s%20sobre%20tu%20proyecto.%20%C2%BFC%C3%B3mo%20funciona%3F" target="_blank" class="nav__social-btn" aria-label="WhatsApp">
         <svg viewBox="0 0 24 24" fill="none" stroke="#1A1F2E" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
-          <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/>
+          <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/>
         </svg>
       </a>
     </div>
@@ -1638,10 +1976,8 @@ ul { list-style: none; }
           <circle cx="17.5" cy="6.5" r="1" fill="#1A1F2E" stroke="none"/>
         </svg>
       </a>
-      <a href="#" target="_blank" class="nav__social-btn" aria-label="Facebook">
-        <svg viewBox="0 0 24 24" fill="none" stroke="#1A1F2E" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
-          <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/>
-        </svg>
+      <a href="https://www.immunotec.com" target="_blank" class="nav__social-btn" aria-label="Immunotec">
+        <img src="immunotec-logo.png" alt="Immunotec" style="width:20px;height:20px;object-fit:contain;">
       </a>
     </div>
   </div>
@@ -1657,7 +1993,7 @@ ul { list-style: none; }
     <!-- FOTO HERO: cuando tengas la foto de Anabel, reemplaza esta línea con:
          <img class="hero__photo-img" src="foto-anabel-hero.jpg" alt="Anabel Mercedes">
          La foto debe ser: cuerpo entero o 3/4, actitud segura, outfit elegante, fondo con textura o neutral -->
-    <img class="hero__photo-img" src="anabel-hero2.png" alt="Anabel Mercedes" onerror="this.style.display='none';this.nextElementSibling.style.display='flex';">
+    <img class="hero__photo-img" src="anabel-hero3.png" alt="Anabel Mercedes" onerror="this.style.display='none';this.nextElementSibling.style.display='flex';">
     <div class="hero__photo-placeholder" style="display:none;">
       <div class="ph-icon">📸</div>
       <strong>Foto de Anabel</strong>
@@ -1685,7 +2021,7 @@ ul { list-style: none; }
       sin renunciar a tu carrera,<br>
       tu tiempo ni tu estilo de vida.
     </p>
-    <a href="#cta" class="hero__cta">
+    <a href="https://wa.me/18292812978?text=Hola%20Anabel%2C%20vi%20tu%20p%C3%A1gina%20y%20me%20interesa%20saber%20m%C3%A1s%20sobre%20tu%20proyecto.%20%C2%BFC%C3%B3mo%20funciona%3F" target="_blank" class="hero__cta">
       Conoce la oportunidad
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
         <path d="M5 12h14M12 5l7 7-7 7"/>
@@ -1721,13 +2057,14 @@ ul { list-style: none; }
         <div class="historia__circle" id="historia-circle"></div>
         <h2 class="historia__headline">Soy<br>Anabel<br>Mercedes</h2>
       </div>
-      <p>A los 19 años entré al mundo de las redes de mercadeo con un solo sueño: generar ingresos con libertad. El problema era que yo era una chica tímida, sin experiencia, y sin ninguna garantía de que funcionaría.</p>
-      <p>Decidí apostar por mí. Desarrollé mis habilidades, crecí como persona y aprendí a liderar. Paso a paso, transformé cada miedo en una fortaleza.</p>
-      <div class="historia__quote">
-        <p>"No importa cómo empiezas — lo que importa es en quién decides convertirte."</p>
-      </div>
-      <p>Hoy soy una networker profesional, liderando un equipo de más de 4,000 personas. Mi historia es la prueba de que se puede. Y si yo pude, tú también puedes.</p>
-      <a href="#cta" class="hero__cta" style="margin-top:36px;opacity:1;animation:none;">
+      <p>A los 19 años descubrí el mundo de las Redes de Mercadeo… y también descubrí algo más: mis miedos.</p>
+      <p>No era la candidata ideal. Era tímida, sin experiencia, con un círculo pequeño… cero garantías de éxito.</p>
+      <p>Pero aún así, decidí apostar por mí.</p>
+      <p>Empecé con más miedo que vergüenza, pero con una decisión clara: construir mi libertad. Y en el camino, esta industria no solo cambió mis resultados… me transformó a mí.</p>
+      <p>Trabajé en mis debilidades, desarrollé habilidades, aprendí a liderar y convertí cada inseguridad en fortaleza.</p>
+      <p>Hoy lidero una comunidad de más de 5,000 personas, y sigo creciendo cada día, porque tengo claro algo: cuando crees que ya llegaste, dejas de avanzar.</p>
+      <p><strong>"De la más tímida del salón a liderar miles.<br>La diferencia fue una sola decisión."</strong></p>
+      <a href="https://wa.me/18292812978?text=Hola%20Anabel%2C%20vi%20tu%20p%C3%A1gina%20y%20me%20interesa%20saber%20m%C3%A1s%20sobre%20tu%20proyecto.%20%C2%BFC%C3%B3mo%20funciona%3F" target="_blank" class="hero__cta" style="margin-top:36px;opacity:1;animation:none;">
         Quiero saber más
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
       </a>
@@ -1735,7 +2072,7 @@ ul { list-style: none; }
 
     <!-- RIGHT: photo — fills column edge-to-edge -->
     <div class="historia__photo">
-      <img class="historia__photo-img" src="anabel-historia.png" alt="Anabel Mercedes">
+      <img class="historia__photo-img" src="anabel-historia2.png" alt="Anabel Mercedes">
     </div>
 
   </div>
@@ -1798,7 +2135,7 @@ ul { list-style: none; }
           <div class="immunotec__stat-label">Patentes registradas</div>
         </div>
       </div>
-      <a href="#cta" class="hero__cta" style="opacity:1;animation:none;">
+      <a href="https://wa.me/18292812978?text=Hola%20Anabel%2C%20vi%20tu%20p%C3%A1gina%20y%20me%20interesa%20saber%20m%C3%A1s%20sobre%20tu%20proyecto.%20%C2%BFC%C3%B3mo%20funciona%3F" target="_blank" class="hero__cta" style="opacity:1;animation:none;">
         Conoce la oportunidad
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
       </a>
@@ -1844,7 +2181,7 @@ ul { list-style: none; }
       <div class="club__hero-num">+5,000</div>
       <div class="club__hero-label">personas en la organización</div>
       <p class="club__desc">No construí esto sola. Detrás hay un equipo real — profesionales, madres, emprendedores — que tomaron la misma decisión y hoy crecen juntos. Aquí nadie camina solo.</p>
-      <a href="#cta" class="hero__cta" style="opacity:1;animation:none;">
+      <a href="https://wa.me/18292812978?text=Hola%20Anabel%2C%20vi%20tu%20p%C3%A1gina%20y%20me%20interesa%20saber%20m%C3%A1s%20sobre%20tu%20proyecto.%20%C2%BFC%C3%B3mo%20funciona%3F" target="_blank" class="hero__cta" style="opacity:1;animation:none;">
         Quiero ser parte
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
       </a>
@@ -1895,26 +2232,62 @@ ul { list-style: none; }
   </div>
 </section>
 
-<!-- ============ CTA FINAL ============ -->
-<section class="cta-final" id="cta">
-  <div class="cta-final__inner">
-    <div class="label label--sage fade-up">El Siguiente Paso</div>
-    <div class="cta-final__divider fade-up"></div>
-    <h2 class="fade-up">¿Sientes que<br><em>esto es para ti?</em></h2>
-    <p class="cta-final__sub fade-up">Sin compromiso. Sin presión.<br>Quiero conocerte y contarte cómo funciona.</p>
-    <a href="#" class="hero__cta fade-up" style="opacity:1;animation:none;margin:0 auto;">
-      Conoce la oportunidad
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-        <path d="M5 12h14M12 5l7 7-7 7"/>
-      </svg>
-    </a>
-    <div class="cta-final__note fade-up">Respondo personalmente · @anabelmercedes en Instagram</div>
+<!-- ============ CTA FINAL — estilo Elise Darma ============ -->
+<section class="optin" id="cta">
+  <div class="optin__inner">
+    <div class="optin__header fade-up">
+      <div class="optin__signature">El momento es ahora.<br>La decisión es tuya.</div>
+      <div class="optin__headline">
+        No te contacté. No te mandé un mensaje frío.<br>
+        Tú llegaste aquí sola.
+      </div>
+    </div>
+    <div class="optin__photo fade-up">
+      <img src="anabel-cta.png" alt="Anabel Mercedes">
+    </div>
+    <div class="optin__body fade-up">
+      <p class="optin__text">
+        Ya conoces mi historia. Sabes que era la más tímida del salón y que hoy lidero a más de 5,000 personas. <strong>No te voy a pedir que creas en el modelo — te voy a mostrar cómo funciona.</strong> Pero solo si tú das el paso.
+      </p>
+      <p class="optin__text" style="border:none;padding-left:0;margin-bottom:40px;">
+        Yo no persigo a nadie. La gente que trabaja conmigo llega porque decide llegar.
+      </p>
+      <a href="https://wa.me/18292812978?text=Hola%20Anabel%2C%20vi%20tu%20p%C3%A1gina%20y%20me%20interesa%20saber%20m%C3%A1s%20sobre%20tu%20proyecto.%20%C2%BFC%C3%B3mo%20funciona%3F" target="_blank" class="hero__cta" style="opacity:1;animation:none;">
+        Quiero ver cómo funciona
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+      </a>
+      <div class="optin__note">Sin pitch. Sin presión. Solo la verdad de cómo se construye esto.</div>
+    </div>
   </div>
 </section>
 
-<!-- ============ FOOTER ============ -->
+
+<!-- ============ FOOTER — estilo Elise Darma ============ -->
 <footer class="footer">
-  <p>© Anabel Mercedes 2026 &nbsp;·&nbsp; <a href="https://www.instagram.com/anabelmercedes/" target="_blank" style="color:rgba(255,255,255,0.3);">@anabelmercedes</a></p>
+  <!-- Animated star on the border line -->
+  <svg class="footer__border-star" viewBox="0 0 40 40" fill="none">
+    <!-- 8-point star -->
+    <path d="M20 0 L22.5 14 L28.3 4.3 L24 16 L35.7 11.7 L26 18 L40 20 L26 22 L35.7 28.3 L24 24 L28.3 35.7 L22.5 26 L20 40 L17.5 26 L11.7 35.7 L16 24 L4.3 28.3 L14 22 L0 20 L14 18 L4.3 11.7 L16 16 L11.7 4.3 L17.5 14 Z" fill="#C4A44A"/>
+  </svg>
+  <div class="footer__inner">
+    <div class="footer__col">
+      <a href="#hero" class="footer__link">Inicio</a>
+      <a href="#historia" class="footer__link">Mi Historia</a>
+      <a href="#immunotec" class="footer__link">Mi Negocio</a>
+      <a href="#club" class="footer__link">Mi Equipo</a>
+    </div>
+    <div class="footer__logo">
+      <span class="footer__logo-text">AM</span>
+    </div>
+    <div class="footer__col" style="align-items:flex-end;text-align:right;">
+      <a href="https://www.instagram.com/anabelmercedes/" target="_blank" class="footer__link">Instagram</a>
+      <a href="https://wa.me/18292812978?text=Hola%20Anabel%2C%20vi%20tu%20p%C3%A1gina%20y%20me%20interesa%20saber%20m%C3%A1s%20sobre%20tu%20proyecto.%20%C2%BFC%C3%B3mo%20funciona%3F" target="_blank" class="footer__link">WhatsApp</a>
+      <a href="#cta" class="footer__link">Contacto</a>
+    </div>
+  </div>
+  <div class="footer__bottom">
+    <p>&copy; Anabel Mercedes 2026 &nbsp;&middot;&nbsp; <a href="https://www.instagram.com/anabelmercedes/" target="_blank">@anabelmercedes</a></p>
+  </div>
 </footer>
 
 <!-- ============ JS ============ -->

@@ -1,0 +1,4 @@
+{
+  "prompt": "Logo design on pure black background. A rectangle with a thick yellow (#FAFA00) border/outline (3-4px). Inside the rectangle is solid black. In the center of the rectangle, two lines of lowercase white bold text: 'mm' on top and 'agency' below, in a clean modern bold sans-serif typeface. The text fills most of the rectangle area. The rectangle has sharp corners, no rounded edges. No extra elements, no decorative details. Just the yellow-bordered rectangle with 'mm agency' stacked in white lowercase inside. Clean vector quality, centered on black canvas, flat design, no shadows, no gradients.",
+  "negative_prompt": "gradient, shadow, glow, neon, 3D, complex, busy, decorative, ornamental, serif font, script font, thin lines, uppercase, rounded corners, realistic photo, photography, human, blur, low quality, pixelated, tagline, extra text, grunge, noise, texture"
+}

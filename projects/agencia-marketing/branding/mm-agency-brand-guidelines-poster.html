@@ -1,0 +1,842 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>MM AGENCY. — Brand Guidelines</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800;900&family=DM+Mono:wght@400&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  /* ── Reset ── */
+  *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+  /* ── Variables ── */
+  :root {
+    --yellow: #FAFA00;
+    --violet: #713DFF;
+    --orange: #F54900;
+    --cyan: #00E3FF;
+    --pink: #FCA8FF;
+    --green: #008500;
+    --light: #FAFAFA;
+    --light-grey: #C9C9C9;
+    --space-grey: #707070;
+    --dark-grey: #353535;
+    --card: #202020;
+    --dark: #181818;
+    --bg: #0A0A0C;
+    --border: #1A1A1E;
+    --font-head: 'Orbitron', sans-serif;
+    --font-body: 'Inter', sans-serif;
+    --font-mono: 'DM Mono', monospace;
+  }
+
+  body {
+    background: var(--bg);
+    color: var(--light);
+    font-family: var(--font-body);
+    -webkit-font-smoothing: antialiased;
+  }
+
+  /* ── Poster Container ── */
+  .poster {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 0;
+    position: relative;
+    overflow: hidden;
+  }
+
+  /* ── Header ── */
+  .header {
+    position: relative;
+    padding: 56px 48px 48px;
+    overflow: hidden;
+    border-bottom: 1px solid var(--border);
+  }
+  .header::before {
+    content: '';
+    position: absolute;
+    top: -80px;
+    right: -60px;
+    width: 420px;
+    height: 420px;
+    background: radial-gradient(ellipse at center, rgba(250,250,0,0.06) 0%, transparent 70%);
+    border-radius: 50%;
+    pointer-events: none;
+  }
+  .header::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background:
+      repeating-conic-gradient(from 0deg at 50% 50%, transparent 0deg, rgba(250,250,0,0.008) 2deg, transparent 4deg) 100% 0 / 600px 600px no-repeat;
+    pointer-events: none;
+  }
+  .header-inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    position: relative;
+    z-index: 1;
+  }
+  .header h1 {
+    font-family: var(--font-head);
+    font-weight: 700;
+    font-size: 42px;
+    line-height: 1;
+    letter-spacing: 0.04em;
+    color: var(--light);
+  }
+  .header h1 span {
+    display: block;
+    font-weight: 400;
+    color: var(--space-grey);
+    font-size: 42px;
+    letter-spacing: 0.04em;
+  }
+  .header-logo {
+    height: 36px;
+    opacity: 0.9;
+    margin-top: 6px;
+  }
+
+  /* ── Grid Body ── */
+  .grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    border-bottom: 1px solid var(--border);
+  }
+  .grid > * {
+    border-bottom: 1px solid var(--border);
+    padding: 36px 40px;
+  }
+  /* vertical dividers */
+  .grid > *:nth-child(odd) {
+    border-right: 1px solid var(--border);
+  }
+
+  /* ── Section Label (bullet + title) ── */
+  .section-label {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 24px;
+  }
+  .section-label .dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: var(--yellow);
+    flex-shrink: 0;
+  }
+  .section-label h2 {
+    font-family: var(--font-head);
+    font-weight: 700;
+    font-size: 13px;
+    letter-spacing: 0.35em;
+    text-transform: uppercase;
+    color: var(--light);
+  }
+
+  /* ── Company Logo Section ── */
+  .company-logo {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+  .company-logo .logo-display {
+    background: var(--dark);
+    border-radius: 6px;
+    padding: 32px 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .company-logo .logo-display img {
+    width: 280px;
+    height: auto;
+  }
+  .logo-meta {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+  }
+  .logo-meta .font-name {
+    font-family: var(--font-mono);
+    font-size: 10px;
+    color: var(--yellow);
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+  }
+  .logo-meta .font-detail {
+    font-family: var(--font-mono);
+    font-size: 9px;
+    color: var(--space-grey);
+    letter-spacing: 0.04em;
+  }
+
+  /* ── Logo Variations ── */
+  .logo-variations {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+  .variations-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 10px;
+  }
+  .variation-card {
+    border-radius: 6px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+  }
+  .variation-card .var-preview {
+    padding: 16px 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 64px;
+  }
+  .variation-card .var-preview.dark-bg {
+    background: var(--dark);
+  }
+  .variation-card .var-preview.light-bg {
+    background: #F2F2F2;
+  }
+  .variation-card .var-preview.yellow-bg {
+    background: var(--dark);
+  }
+  .variation-card .var-preview img {
+    height: 28px;
+    width: auto;
+  }
+  .variation-card .var-label {
+    background: var(--card);
+    font-family: var(--font-mono);
+    font-size: 8px;
+    color: var(--space-grey);
+    text-align: center;
+    padding: 6px 4px;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+  }
+
+  /* ── Logo Clearspace ── */
+  .clearspace-section {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+  .clearspace-diagram {
+    position: relative;
+    background: var(--dark);
+    border-radius: 6px;
+    padding: 40px 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .clearspace-inner {
+    position: relative;
+    display: inline-block;
+  }
+  .clearspace-inner img {
+    height: 44px;
+    width: auto;
+    display: block;
+  }
+  /* Dashed clearspace lines */
+  .clearspace-inner::before {
+    content: '';
+    position: absolute;
+    inset: -20px -28px;
+    border: 1.5px dashed rgba(250,250,0,0.35);
+    pointer-events: none;
+  }
+  /* Corner marks */
+  .cs-corner {
+    position: absolute;
+    width: 8px;
+    height: 8px;
+    border-color: var(--yellow);
+    border-style: solid;
+    border-width: 0;
+    opacity: 0.6;
+  }
+  .cs-corner.tl { top: -20px; left: -28px; border-top-width: 1.5px; border-left-width: 1.5px; }
+  .cs-corner.tr { top: -20px; right: -28px; border-top-width: 1.5px; border-right-width: 1.5px; }
+  .cs-corner.bl { bottom: -20px; left: -28px; border-bottom-width: 1.5px; border-left-width: 1.5px; }
+  .cs-corner.br { bottom: -20px; right: -28px; border-bottom-width: 1.5px; border-right-width: 1.5px; }
+  /* Arrow annotation */
+  .cs-arrow {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+  }
+  .cs-arrow.left {
+    left: -28px;
+    top: 50%;
+    transform: translate(-100%, -50%) translateX(-8px);
+    flex-direction: row;
+  }
+  .cs-arrow .cs-line {
+    width: 18px;
+    height: 1px;
+    background: rgba(250,250,0,0.4);
+  }
+  .cs-arrow .cs-label {
+    font-family: var(--font-mono);
+    font-size: 7px;
+    color: var(--yellow);
+    white-space: nowrap;
+    letter-spacing: 0.04em;
+    opacity: 0.7;
+  }
+  .clearspace-note {
+    font-family: var(--font-mono);
+    font-size: 9px;
+    color: var(--space-grey);
+    line-height: 1.5;
+  }
+  .clearspace-note strong {
+    color: var(--light-grey);
+    font-weight: 500;
+  }
+
+  /* ── Brand Palette ── */
+  .palette-section {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+  .palette-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px 20px;
+  }
+  .swatch {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+  .swatch-circle {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    flex-shrink: 0;
+    border: 1px solid rgba(255,255,255,0.06);
+  }
+  .swatch-info {
+    display: flex;
+    flex-direction: column;
+    gap: 1px;
+  }
+  .swatch-name {
+    font-family: var(--font-head);
+    font-size: 10px;
+    font-weight: 700;
+    color: var(--light);
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+  }
+  .swatch-hex {
+    font-family: var(--font-mono);
+    font-size: 9px;
+    color: var(--space-grey);
+    letter-spacing: 0.04em;
+  }
+  .swatch-rgb {
+    font-family: var(--font-mono);
+    font-size: 8px;
+    color: var(--dark-grey);
+    letter-spacing: 0.02em;
+  }
+
+  /* ── Typography ── */
+  .typography-section {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  .type-specimen {
+    display: flex;
+    align-items: flex-start;
+    gap: 16px;
+    padding-bottom: 18px;
+    border-bottom: 1px solid var(--border);
+  }
+  .type-specimen:last-child {
+    border-bottom: none;
+    padding-bottom: 0;
+  }
+  .type-big {
+    font-size: 48px;
+    line-height: 1;
+    color: var(--light);
+    flex-shrink: 0;
+    width: 72px;
+  }
+  .type-big.chakra { font-family: var(--font-head); font-weight: 700; }
+  .type-big.dm-sans { font-family: var(--font-body); font-weight: 400; }
+  .type-big.dm-mono { font-family: var(--font-mono); font-weight: 400; font-size: 40px; }
+  .type-details {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    padding-top: 4px;
+  }
+  .type-name {
+    font-family: var(--font-head);
+    font-size: 13px;
+    font-weight: 700;
+    color: var(--light);
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+  }
+  .type-weight {
+    font-family: var(--font-mono);
+    font-size: 9px;
+    color: var(--yellow);
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+  }
+  .type-alphabet {
+    font-size: 10px;
+    color: var(--space-grey);
+    letter-spacing: 0.04em;
+    line-height: 1.6;
+  }
+  .type-alphabet.chakra-font { font-family: var(--font-head); font-weight: 700; }
+  .type-alphabet.dm-sans-font { font-family: var(--font-body); }
+  .type-alphabet.dm-mono-font { font-family: var(--font-mono); }
+
+  /* ── Iconography ── */
+  .icons-section {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+  .icons-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+  }
+  .icon-cell {
+    aspect-ratio: 1;
+    background: var(--card);
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid var(--border);
+    transition: border-color 0.2s;
+  }
+  .icon-cell:hover {
+    border-color: var(--yellow);
+  }
+  .icon-cell svg {
+    width: 22px;
+    height: 22px;
+    stroke: var(--light-grey);
+    stroke-width: 1.5;
+    fill: none;
+  }
+
+  /* ── Button Style ── */
+  .buttons-section {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+  .buttons-row {
+    display: flex;
+    gap: 14px;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+  .btn {
+    font-family: var(--font-head);
+    font-weight: 700;
+    font-size: 11px;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    padding: 12px 28px;
+    border-radius: 4px;
+    border: none;
+    cursor: pointer;
+    transition: all 0.2s;
+  }
+  .btn-primary {
+    background: var(--yellow);
+    color: #000;
+  }
+  .btn-primary:hover {
+    background: #E0E000;
+  }
+  .btn-secondary {
+    background: transparent;
+    color: var(--light);
+    border: 1.5px solid var(--light);
+  }
+  .btn-secondary:hover {
+    background: rgba(255,255,255,0.05);
+  }
+  .btn-ghost {
+    background: transparent;
+    color: var(--space-grey);
+    border: 1.5px solid var(--dark-grey);
+  }
+  .btn-ghost:hover {
+    border-color: var(--space-grey);
+    color: var(--light-grey);
+  }
+  .btn-label {
+    font-family: var(--font-mono);
+    font-size: 8px;
+    color: var(--dark-grey);
+    letter-spacing: 0.04em;
+    text-align: center;
+    margin-top: 6px;
+  }
+  .btn-col {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  /* ── Footer ── */
+  .footer {
+    padding: 28px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 1px solid var(--border);
+  }
+  .footer-left {
+    font-family: var(--font-mono);
+    font-size: 9px;
+    color: var(--dark-grey);
+    letter-spacing: 0.06em;
+  }
+  .footer-logo {
+    height: 16px;
+    opacity: 0.3;
+  }
+
+  /* ── Print / Screenshot optimization ── */
+  @media print {
+    body { background: var(--bg); -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+    .poster { max-width: 100%; }
+  }
+</style>
+</head>
+<body>
+
+<div class="poster">
+
+  <!-- ━━ HEADER ━━ -->
+  <div class="header">
+    <div class="header-inner">
+      <h1>BRAND<span>GUIDELINES</span></h1>
+      <img src="logo/transparent/mm-v7-rect-box-from-original.png" alt="MM AGENCY." class="header-logo">
+    </div>
+  </div>
+
+  <!-- ━━ GRID BODY ━━ -->
+  <div class="grid">
+
+    <!-- ── COL LEFT: Company Logo ── -->
+    <div>
+      <div class="company-logo">
+        <div class="section-label">
+          <span class="dot"></span>
+          <h2>Company Logo</h2>
+        </div>
+        <div class="logo-display">
+          <img src="logo/transparent/mm-v7-rect-box-from-original.png" alt="MM AGENCY.">
+        </div>
+        <div class="logo-meta">
+          <span class="font-name">Box Mark · Primary Logo</span>
+          <span class="font-detail">Yellow frame: #FAFA00<br>Orbitron Bold · Stacked layout<br>Use on dark backgrounds as primary mark</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- ── COL RIGHT: Logo Variations ── -->
+    <div>
+      <div class="logo-variations">
+        <div class="section-label">
+          <span class="dot"></span>
+          <h2>Logo Variations</h2>
+        </div>
+        <div class="variations-grid">
+          <div class="variation-card">
+            <div class="var-preview dark-bg">
+              <img src="logo/transparent/mm-v7-rect-box-from-original.png" alt="Dark bg">
+            </div>
+            <div class="var-label">Dark Background</div>
+          </div>
+          <div class="variation-card">
+            <div class="var-preview light-bg">
+              <img src="logo/transparent/mm-v7-wordmark-gray-from-original.png" alt="Light bg">
+            </div>
+            <div class="var-label">Light Background</div>
+          </div>
+          <div class="variation-card">
+            <div class="var-preview yellow-bg">
+              <img src="logo/transparent/mm-v7-wordmark-white-from-original.png" alt="Yellow">
+            </div>
+            <div class="var-label">Yellow Accent</div>
+          </div>
+        </div>
+        <!-- Brandmarks row -->
+        <div class="variations-grid" style="margin-top: 4px;">
+          <div class="variation-card">
+            <div class="var-preview dark-bg">
+              <img src="logo/transparent/mm-v7-circle-ring-from-original.png" alt="Circle Ring" style="height: 48px;">
+            </div>
+            <div class="var-label">Brandmark</div>
+          </div>
+          <div class="variation-card">
+            <div class="var-preview dark-bg">
+              <img src="logo/transparent/mm-v7-circle-stacked-from-original.png" alt="Circle Stacked" style="height: 48px;">
+            </div>
+            <div class="var-label">Stacked</div>
+          </div>
+          <div class="variation-card">
+            <div class="var-preview dark-bg">
+              <img src="logo/transparent/mm-v7-wordmark-white-from-original.png" alt="Wordmark" style="height: 48px;">
+            </div>
+            <div class="var-label">Wordmark</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ── COL LEFT: Logo Clearspace ── -->
+    <div>
+      <div class="clearspace-section">
+        <div class="section-label">
+          <span class="dot"></span>
+          <h2>Logo Clearspace</h2>
+        </div>
+        <div class="clearspace-diagram">
+          <div class="clearspace-inner">
+            <img src="logo/transparent/mm-v7-rect-box-from-original.png" alt="Clearspace">
+            <span class="cs-corner tl"></span>
+            <span class="cs-corner tr"></span>
+            <span class="cs-corner bl"></span>
+            <span class="cs-corner br"></span>
+            <div class="cs-arrow left">
+              <span class="cs-label">X</span>
+              <span class="cs-line"></span>
+            </div>
+          </div>
+        </div>
+        <p class="clearspace-note"><strong>CAUTION:</strong> Always leave a minimum of X clearspace around the logo. X equals the cap-height of the letter M. Do not place any visual element within this exclusion zone.</p>
+      </div>
+    </div>
+
+    <!-- ── COL RIGHT: Brand Palette ── -->
+    <div>
+      <div class="palette-section">
+        <div class="section-label">
+          <span class="dot"></span>
+          <h2>Brand Palette</h2>
+        </div>
+        <div class="palette-grid">
+          <!-- Primary -->
+          <div class="swatch">
+            <div class="swatch-circle" style="background: #FAFA00;"></div>
+            <div class="swatch-info">
+              <span class="swatch-name">Yellow</span>
+              <span class="swatch-hex">HEX #FAFA00</span>
+              <span class="swatch-rgb">RGB 250, 250, 0</span>
+            </div>
+          </div>
+          <div class="swatch">
+            <div class="swatch-circle" style="background: #FAFAFA;"></div>
+            <div class="swatch-info">
+              <span class="swatch-name">White</span>
+              <span class="swatch-hex">HEX #FAFAFA</span>
+              <span class="swatch-rgb">RGB 250, 250, 250</span>
+            </div>
+          </div>
+          <!-- Secondary -->
+          <div class="swatch">
+            <div class="swatch-circle" style="background: #713DFF;"></div>
+            <div class="swatch-info">
+              <span class="swatch-name">Violet</span>
+              <span class="swatch-hex">HEX #713DFF</span>
+              <span class="swatch-rgb">RGB 113, 61, 255</span>
+            </div>
+          </div>
+          <div class="swatch">
+            <div class="swatch-circle" style="background: #F54900;"></div>
+            <div class="swatch-info">
+              <span class="swatch-name">Orange</span>
+              <span class="swatch-hex">HEX #F54900</span>
+              <span class="swatch-rgb">RGB 245, 73, 0</span>
+            </div>
+          </div>
+          <!-- Accent -->
+          <div class="swatch">
+            <div class="swatch-circle" style="background: #00E3FF;"></div>
+            <div class="swatch-info">
+              <span class="swatch-name">Cyan</span>
+              <span class="swatch-hex">HEX #00E3FF</span>
+              <span class="swatch-rgb">RGB 0, 227, 255</span>
+            </div>
+          </div>
+          <div class="swatch">
+            <div class="swatch-circle" style="background: #FCA8FF;"></div>
+            <div class="swatch-info">
+              <span class="swatch-name">Pink</span>
+              <span class="swatch-hex">HEX #FCA8FF</span>
+              <span class="swatch-rgb">RGB 252, 168, 255</span>
+            </div>
+          </div>
+          <!-- Neutrals -->
+          <div class="swatch">
+            <div class="swatch-circle" style="background: #707070;"></div>
+            <div class="swatch-info">
+              <span class="swatch-name">Grey</span>
+              <span class="swatch-hex">HEX #707070</span>
+              <span class="swatch-rgb">RGB 112, 112, 112</span>
+            </div>
+          </div>
+          <div class="swatch">
+            <div class="swatch-circle" style="background: #181818; border-color: rgba(255,255,255,0.15);"></div>
+            <div class="swatch-info">
+              <span class="swatch-name">Dark</span>
+              <span class="swatch-hex">HEX #181818</span>
+              <span class="swatch-rgb">RGB 24, 24, 24</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ── COL LEFT: Typography ── -->
+    <div>
+      <div class="typography-section">
+        <div class="section-label">
+          <span class="dot"></span>
+          <h2>Typography</h2>
+        </div>
+
+        <div class="type-specimen">
+          <div class="type-big chakra">Ab</div>
+          <div class="type-details">
+            <span class="type-name">Orbitron</span>
+            <span class="type-weight">Bold (700)</span>
+            <span class="type-alphabet chakra-font">ABCDEFGHIJKLMN<br>OPQRSTUVWXYZ<br>abcdefghijklmn<br>opqrstuvwxyz</span>
+          </div>
+        </div>
+
+        <div class="type-specimen">
+          <div class="type-big dm-sans">Ab</div>
+          <div class="type-details">
+            <span class="type-name">Inter</span>
+            <span class="type-weight">Regular (400)</span>
+            <span class="type-alphabet dm-sans-font">ABCDEFGHIJKLMN<br>OPQRSTUVWXYZ<br>abcdefghijklmn<br>opqrstuvwxyz</span>
+          </div>
+        </div>
+
+        <div class="type-specimen">
+          <div class="type-big dm-mono">Ab</div>
+          <div class="type-details">
+            <span class="type-name">DM Mono</span>
+            <span class="type-weight">Regular (400)</span>
+            <span class="type-alphabet dm-mono-font">ABCDEFGHIJKLMN<br>OPQRSTUVWXYZ<br>0123456789</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ── COL RIGHT: Iconography + Buttons ── -->
+    <div>
+      <!-- Iconography -->
+      <div class="icons-section">
+        <div class="section-label">
+          <span class="dot"></span>
+          <h2>Iconography Style</h2>
+        </div>
+        <div class="icons-grid">
+          <!-- Bar Chart -->
+          <div class="icon-cell">
+            <svg viewBox="0 0 24 24"><path d="M18 20V10M12 20V4M6 20v-6"/></svg>
+          </div>
+          <!-- Target -->
+          <div class="icon-cell">
+            <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/></svg>
+          </div>
+          <!-- Globe -->
+          <div class="icon-cell">
+            <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+          </div>
+          <!-- Smartphone -->
+          <div class="icon-cell">
+            <svg viewBox="0 0 24 24"><rect x="5" y="2" width="14" height="20" rx="2" ry="2"/><path d="M12 18h.01"/></svg>
+          </div>
+          <!-- Zap -->
+          <div class="icon-cell">
+            <svg viewBox="0 0 24 24"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
+          </div>
+          <!-- Users -->
+          <div class="icon-cell">
+            <svg viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+          </div>
+          <!-- Mail -->
+          <div class="icon-cell">
+            <svg viewBox="0 0 24 24"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+          </div>
+          <!-- Trending Up -->
+          <div class="icon-cell">
+            <svg viewBox="0 0 24 24"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"/><polyline points="17 6 23 6 23 12"/></svg>
+          </div>
+        </div>
+      </div>
+
+      <!-- Buttons -->
+      <div class="buttons-section" style="margin-top: 28px;">
+        <div class="section-label">
+          <span class="dot"></span>
+          <h2>Button Style</h2>
+        </div>
+        <div class="buttons-row">
+          <div class="btn-col">
+            <button class="btn btn-primary">GET STARTED</button>
+            <span class="btn-label">Primary</span>
+          </div>
+          <div class="btn-col">
+            <button class="btn btn-secondary">LEARN MORE</button>
+            <span class="btn-label">Secondary</span>
+          </div>
+          <div class="btn-col">
+            <button class="btn btn-ghost">CONTACT</button>
+            <span class="btn-label">Ghost</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div><!-- /grid -->
+
+  <!-- ━━ FOOTER ━━ -->
+  <div class="footer">
+    <span class="footer-left">MM AGENCY. &copy; 2026 &middot; ALL RIGHTS RESERVED</span>
+    <img src="logo/transparent/mm-v7-wordmark-gray-from-original.png" alt="MM AGENCY." class="footer-logo">
+  </div>
+
+</div><!-- /poster -->
+
+</body>
+</html>

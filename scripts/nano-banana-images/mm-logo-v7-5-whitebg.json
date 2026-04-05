@@ -1,0 +1,7 @@
+{
+  "prompt": "Logo wordmark on pure white (#FFFFFF) background. The text 'MM AGENCY.' in a single horizontal line, all uppercase. All text is medium gray (#8A8A8A) except the period dot at the end which is bright yellow (#FAFA00). CRITICAL: The ENTIRE text uses ONE SINGLE typeface — a bold, blocky, geometric extended sans-serif like Microgramma Extended Bold. Same font for 'MM' and 'AGENCY' — no mixing. Wide rectangular letterforms, thick strokes, sharp corners. This is the subtle navbar version on white background. No icon, no symbol. Pure typography centered on white. Vector quality, flat design.",
+  "negative_prompt": "black background, dark background, icon, symbol, graphic, 3D, gradient, shadow, glow, neon, complex, busy, decorative, serif, script, handwritten, thin lines, light weight, different fonts, mixed typefaces, rounded font, realistic photo, photography, human, blur, low quality, pixelated, noise, grunge",
+  "api_parameters": {
+    "aspect_ratio": "16:9"
+  }
+}

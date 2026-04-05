@@ -1,0 +1,9 @@
+{
+  "prompt": "Abstract radar target shape with concentric circles, bright orange (#F54900) and yellow (#FAFA00) thin glowing lines on pure black background, bullseye pattern with 4 concentric rings and a center dot, subtle neon glow, technical blueprint aesthetic, minimalist futuristic design, no fill, only stroke circles, crisp sharp edges, high contrast, editorial quality, centered composition with negative space around the shape",
+  "negative_prompt": "solid fill, shading, text, labels, realistic photography, clutter, multiple objects, human figures, cartoon, illustration, thick lines, rainbow colors, low quality, blurry, noise, scan lines, radar sweep",
+  "api_parameters": {
+    "aspect_ratio": "1:1",
+    "resolution": "1K",
+    "output_format": "png"
+  }
+}

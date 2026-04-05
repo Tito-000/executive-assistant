@@ -1,0 +1,9 @@
+{
+  "prompt": "3D wireframe cube shape, thin bright yellow glowing lines (#FAFA00) on pure black background, isometric geometric wireframe mesh with visible edges forming a hexagonal silhouette, subtle yellow neon glow emanating from the lines, technical blueprint aesthetic, minimalist futuristic design, no fill, only wireframe edges and diagonals, crisp sharp lines, high contrast, editorial quality, centered composition with negative space around the shape",
+  "negative_prompt": "solid fill, shading, text, labels, realistic photography, clutter, multiple objects, human figures, cartoon, illustration, thick lines, rainbow colors, low quality, blurry, noise",
+  "api_parameters": {
+    "aspect_ratio": "1:1",
+    "resolution": "1K",
+    "output_format": "png"
+  }
+}

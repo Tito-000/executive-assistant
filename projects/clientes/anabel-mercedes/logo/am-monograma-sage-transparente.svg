@@ -1,14 +1,14 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="800" height="800">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" width="800" height="800">
   <defs>
     <style>
       @import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display&amp;display=swap');
     </style>
   </defs>
-  <circle cx="100" cy="100" r="85" fill="none" stroke="#6B8868" stroke-width="2"/>
-  <text x="100" y="118"
+  <circle cx="200" cy="200" r="170" fill="none" stroke="#6B8868" stroke-width="2.5"/>
+  <text x="200" y="235"
     font-family="'DM Serif Display', Georgia, serif"
-    font-size="82"
+    font-size="160"
     fill="#6B8868"
     text-anchor="middle"
-    letter-spacing="-3">AM</text>
+    letter-spacing="-8">AM</text>
 </svg>

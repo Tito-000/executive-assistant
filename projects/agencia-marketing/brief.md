@@ -1,11 +1,11 @@
-# Brief — Gravity (Cliente interno)
+# Brief — MM Agency (Cliente interno)
 
 **Fecha:** 2026-04-01
 **Tipo:** Cliente interno / proyecto de posicionamiento propio
 
 ---
 
-1. **Cliente:** Gravity — agencia de marketing digital de Martin Mercedes
+1. **Cliente:** MM Agency — agencia de marketing digital de Martin Mercedes
 2. **Nicho / industria:** Marketing digital para empresas medianas en República Dominicana
 3. **Target audience:** Dueños de empresas medianas en RD (30-55 años) con presencia digital débil o resultados pobres con su agencia actual. No tienen tiempo para aprender marketing. Quieren crecer online pero no saben cómo ni en quién confiar.
 4. **Meta principal:** Posicionarse como la agencia de referencia para empresas medianas en RD — cerrar 2-3 clientes nuevos en 60 días, escalar a $8,000/mes para dic 2026

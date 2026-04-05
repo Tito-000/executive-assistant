@@ -1,0 +1,4 @@
+{
+  "prompt": "Logo wordmark on pure black background. The text 'MM AGENCY.' in a single horizontal line, all uppercase, all in solid bright yellow (#FAFA00). CRITICAL: The ENTIRE text uses ONE SINGLE typeface — a bold, blocky, geometric extended sans-serif like Microgramma Extended Bold. Every letter — M, A, G, E, N, C, Y — is the SAME font, same weight, same style. Wide rectangular letterforms, thick strokes, sharp 90-degree corners, minimal counter space. Tight letter-spacing. The period dot is also yellow. No icon, no symbol. Pure heavy typography centered on black. Vector quality, crisp edges, completely flat.",
+  "negative_prompt": "icon, symbol, graphic, 3D, gradient, shadow, glow, neon, complex, busy, decorative, serif, script, handwritten, thin lines, light weight, white text, gray text, different fonts for different words, mixed typefaces, rounded font, realistic photo, photography, human, blur, low quality, pixelated, noise, grunge"
+}

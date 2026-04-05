@@ -1,10 +1,10 @@
 # Work & Business
 
 ## Negocio
-Agencia de marketing digital **Gravity** + consultoría independiente Immunotec.
+Agencia de marketing digital **MM Agency** + consultoría independiente Immunotec.
 
 ## Fuentes de ingreso
-- **Gravity (Agencia de marketing digital)** — servicios de marketing para clientes (Meta Ads, Google Ads, funnels, CRM, páginas web)
+- **MM Agency (Agencia de marketing digital)** — servicios de marketing para clientes (Meta Ads, Google Ads, funnels, CRM, páginas web)
 - **Consultor Immunotec** — red de distribución, objetivo actual: llegar a rango Diamante
 
 **Ingresos combinados:** ~$2,000/mes

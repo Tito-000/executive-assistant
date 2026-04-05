@@ -1,6 +1,6 @@
-# Proyecto: Gravity — Agencia de Marketing Digital
+# Proyecto: MM Agency — Agencia de Marketing Digital
 
-**Nombre:** Gravity
+**Nombre:** MM Agency
 **Estado:** Activo
 **Prioridad:** Top 3
 **Meta:** 2-3 clientes nuevos en 60 días | Escalar a $8,000/mes para dic 2026
@@ -10,7 +10,7 @@
 
 - Martin ya opera como agencia — 2 clientes activos (Memorama, Dra. Aurys Mercedes)
 - Ingresos actuales: ~$2,000/mes
-- Nombre: **Gravity** | En proceso de formalización de marca y sistemas
+- Nombre: **MM Agency** | En proceso de formalización de marca y sistemas
 - WordPress básico existe: `martinmercedes100-vhpce.wordpress.com`
 - Propuestas ya generadas para Dr. Welbin Paredes y Dra. Aurys Mercedes
 - Pricing actual: $2,000/proyecto + $97/mes mantenimiento (referencia contrato Dra. Aurys)
@@ -58,7 +58,7 @@ Elegir uno. Criterios: memorable, profesional, funciona en español e inglés, c
 
 ## Fase 1 — Identidad + Paquetes (Semana 1)
 
-- [x] Elegir nombre de la agencia → **Gravity**
+- [x] Elegir nombre de la agencia → **MM Agency**
 - [ ] Definir posicionamiento: "Marketing digital para empresas medianas en RD que quieren crecer"
 - [ ] Validar los 3 paquetes de pricing (ajustar si es necesario)
 - [ ] Definir qué incluye y qué NO incluye cada paquete (cerrar scope)
@@ -163,3 +163,13 @@ Elegir uno. Criterios: memorable, profesional, funciona en español e inglés, c
 - Contenido y web (Fase 3) se pueden empezar mientras se hace outreach
 - Templates de propuesta y contrato ya existen en `outputs/propuestas/` — usarlos como base
 - Todo el outreach se trackea en Koomo, no en la cabeza ni en notas sueltas
+
+---
+
+## Documentos de estrategia
+
+- [WWP-mm-agency.md](WWP/WWP-mm-agency.md) — Winner's Writing Process **Inbound** (landing → agenda llamada)
+- [WWP-mm-agency-outbound.md](WWP/WWP-mm-agency-outbound.md) — Winner's Writing Process **Outbound** (cold outreach a clínicas de salud y estética en RD por IG DM / WhatsApp / LinkedIn / Email)
+- [MKR-mm-agency.md](market-research/MKR-mm-agency.md) — Market Research
+- [TPA-mm-agency.md](top-player-analysis/TPA-mm-agency.md) — Top Player Analysis
+- [landing/estructura.md](landing/estructura.md) — Estructura de la landing principal (10 secciones estilo NoGood.io, dark, con formulario de calificación completa)
