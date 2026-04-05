@@ -158,4 +158,98 @@
     });
   }
 
+  // ---------- SQUADS GLOBE — gradient colors shift with mouse (círculo fijo) ----------
+  const squadsStage = document.querySelector('.squads-stage');
+  const glowGradient = document.getElementById('sqGlow');
+  if (squadsStage && glowGradient) {
+    const stops = glowGradient.querySelectorAll('stop');
+    // Paletas base (colores por defecto del gradient)
+    const basePalettes = [
+      // [core, mid1, mid2, deep]
+      ['#F54900', '#E0348E', '#7A2DC0', '#2E1A6B'], // default: naranja → magenta → morado
+      ['#FF6B1A', '#D13A7E', '#6B2AB8', '#251560'], // un poco más rojo
+      ['#E83E7A', '#A82DB0', '#5A2DC0', '#2B1A6B'], // magenta dominante
+      ['#8A2BE2', '#6A2DC0', '#4A2AA0', '#201555'], // morado dominante
+      ['#F54900', '#F06A1A', '#9A2DC0', '#2E1A6B'], // naranja dominante
+    ];
+
+    // Interpola entre dos hex
+    const lerpColor = (a, b, t) => {
+      const ah = parseInt(a.slice(1), 16);
+      const bh = parseInt(b.slice(1), 16);
+      const ar = (ah >> 16) & 255, ag = (ah >> 8) & 255, ab = ah & 255;
+      const br = (bh >> 16) & 255, bg = (bh >> 8) & 255, bb = bh & 255;
+      const r = Math.round(ar + (br - ar) * t);
+      const g = Math.round(ag + (bg - ag) * t);
+      const b2 = Math.round(ab + (bb - ab) * t);
+      return 'rgb(' + r + ',' + g + ',' + b2 + ')';
+    };
+
+    let targetT = 0;        // posición objetivo en el ciclo de paletas (0..basePalettes.length-1)
+    let currentT = 0;       // posición interpolada actual
+    // Centro del glow (en %) — se mueve un poquito con el mouse
+    const BASE_CX = 50;
+    const BASE_CY = 50;
+    const MAX_OFFSET = 8;   // máximo desplazamiento desde el centro (en %)
+    let targetCX = BASE_CX, targetCY = BASE_CY;
+    let currentCX = BASE_CX, currentCY = BASE_CY;
+    let rafId = null;
+    let active = false;
+
+    const applyPalette = (t) => {
+      const n = basePalettes.length;
+      const i = Math.floor(t) % n;
+      const j = (i + 1) % n;
+      const f = t - Math.floor(t);
+      const a = basePalettes[i];
+      const b = basePalettes[j];
+      stops[0].setAttribute('stop-color', lerpColor(a[0], b[0], f));
+      stops[1].setAttribute('stop-color', lerpColor(a[1], b[1], f));
+      stops[2].setAttribute('stop-color', lerpColor(a[2], b[2], f));
+      stops[3].setAttribute('stop-color', lerpColor(a[3], b[3], f));
+    };
+
+    const animate = () => {
+      currentT += (targetT - currentT) * 0.06; // lerp lento → cambio de color sutil
+      currentCX += (targetCX - currentCX) * 0.08;
+      currentCY += (targetCY - currentCY) * 0.08;
+      applyPalette(currentT);
+      glowGradient.setAttribute('cx', currentCX + '%');
+      glowGradient.setAttribute('cy', currentCY + '%');
+      glowGradient.setAttribute('fx', currentCX + '%');
+      glowGradient.setAttribute('fy', currentCY + '%');
+      if (
+        Math.abs(targetT - currentT) > 0.002 ||
+        Math.abs(targetCX - currentCX) > 0.05 ||
+        Math.abs(targetCY - currentCY) > 0.05 ||
+        active
+      ) {
+        rafId = requestAnimationFrame(animate);
+      } else {
+        rafId = null;
+      }
+    };
+
+    squadsStage.addEventListener('mousemove', (e) => {
+      const rect = squadsStage.getBoundingClientRect();
+      const nx = (e.clientX - rect.left) / rect.width;   // 0..1
+      const ny = (e.clientY - rect.top) / rect.height;   // 0..1
+      // Paletas cambian según la posición
+      targetT = (nx * 0.6 + ny * 0.4) * (basePalettes.length - 1);
+      // El centro del glow se desplaza un poquito hacia el mouse (±MAX_OFFSET %)
+      targetCX = BASE_CX + (nx - 0.5) * 2 * MAX_OFFSET;
+      targetCY = BASE_CY + (ny - 0.5) * 2 * MAX_OFFSET;
+      active = true;
+      if (!rafId) rafId = requestAnimationFrame(animate);
+    });
+
+    squadsStage.addEventListener('mouseleave', () => {
+      targetT = 0;
+      targetCX = BASE_CX;
+      targetCY = BASE_CY;
+      active = false;
+      if (!rafId) rafId = requestAnimationFrame(animate);
+    });
+  }
+
 })();

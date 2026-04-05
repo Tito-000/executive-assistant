@@ -26,7 +26,7 @@
 <!-- ============================================= -->
 <nav class="nav" id="nav">
   <a href="#" class="nav-logo-link" aria-label="MM Agency">
-    <img src="assets/logos/mm-box-mark.png" alt="MM Agency" class="nav-logo">
+    <img src="assets/logos/mm-wordmark-white.png" alt="MM Agency" class="nav-logo">
   </a>
   <div class="nav-menu">
     <a href="#servicios" class="nav-link">Servicios</a>
@@ -105,7 +105,7 @@
 <!-- ============================================= -->
 <section class="clients-section reveal">
   <div class="container">
-    <p class="clients-label">Negocios reales en RD que ya confían en MM Agency</p>
+    <p class="clients-label">Negocios reales que ya confían en MM Agency</p>
   </div>
   <div class="clients-marquee" aria-hidden="true">
     <div class="clients-track">
@@ -135,57 +135,136 @@
 <!-- ============================================= -->
 <!-- 3. WHAT WE DO — DATA-DRIVEN GROWTH               -->
 <!-- ============================================= -->
-<section class="what-we-do reveal" id="proceso">
+<section class="squads reveal" id="proceso">
   <div class="container">
-    <div class="what-grid">
-      <div class="what-visual">
-        <!-- Gráfico de línea con gradient amarillo→naranja como en el brand poster -->
-        <svg class="graph-svg" viewBox="0 0 600 340" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <defs>
-            <linearGradient id="lineGrad" x1="0%" y1="0%" x2="100%" y2="0%">
-              <stop offset="0%" stop-color="#FAFA00"/>
-              <stop offset="50%" stop-color="#FFB800"/>
-              <stop offset="100%" stop-color="#F54900"/>
-            </linearGradient>
-            <linearGradient id="areaGrad" x1="0%" y1="0%" x2="0%" y2="100%">
-              <stop offset="0%" stop-color="#FAFA00" stop-opacity="0.25"/>
-              <stop offset="100%" stop-color="#F54900" stop-opacity="0"/>
-            </linearGradient>
-          </defs>
-          <!-- Grid lines -->
-          <g stroke="#353535" stroke-width="0.5">
-            <line x1="0" y1="60" x2="600" y2="60"/>
-            <line x1="0" y1="130" x2="600" y2="130"/>
-            <line x1="0" y1="200" x2="600" y2="200"/>
-            <line x1="0" y1="270" x2="600" y2="270"/>
-            <line x1="100" y1="0" x2="100" y2="340"/>
-            <line x1="200" y1="0" x2="200" y2="340"/>
-            <line x1="300" y1="0" x2="300" y2="340"/>
-            <line x1="400" y1="0" x2="400" y2="340"/>
-            <line x1="500" y1="0" x2="500" y2="340"/>
-          </g>
-          <!-- Area fill -->
-          <path d="M20 280 C 80 260, 120 220, 180 230 C 240 240, 280 180, 340 160 C 400 140, 440 100, 500 80 L 580 50 L 580 340 L 20 340 Z" fill="url(#areaGrad)"/>
-          <!-- Line -->
-          <path class="graph-line" d="M20 280 C 80 260, 120 220, 180 230 C 240 240, 280 180, 340 160 C 400 140, 440 100, 500 80 L 580 50" stroke="url(#lineGrad)" stroke-width="3" stroke-linecap="round" fill="none"/>
-          <!-- Dots -->
-          <circle cx="20" cy="280" r="5" fill="#FAFA00"/>
-          <circle cx="180" cy="230" r="5" fill="#FAFA00"/>
-          <circle cx="340" cy="160" r="5" fill="#FFB800"/>
-          <circle cx="500" cy="80" r="5" fill="#F54900"/>
-          <circle cx="580" cy="50" r="6" fill="#F54900"/>
-        </svg>
-      </div>
-      <div class="what-text">
-        <div class="section-label">01 / Posicionamiento</div>
-        <h2 class="section-title-xl">Tu equipo especialista en adquisición con publicidad digital.</h2>
-        <p class="section-body">
-          En un mercado lleno de agencias que hacen de todo un poco, MM Agency hace una sola cosa: traerte clientes nuevos con Meta Ads y Google Ads. Nada de manejo de redes sociales. Nada de SEO. Nada de branding.
-        </p>
-        <p class="section-body-accent">
-          Solo pauta que mueve la aguja.
-        </p>
-      </div>
+    <div class="squads-label">
+      <span class="squads-label-icon">◉</span>
+      <span>EL EQUIPO</span>
+    </div>
+
+    <div class="squads-header">
+      <h2 class="squads-title">Tu squad de<br>adquisición con ADS.</h2>
+      <p class="squads-intro">
+        Orquestamos la máquina completa de clientes nuevos: estrategia que convierte, creativos que paran el scroll, pauta que escala y tracking que mide lo que de verdad importa — cierres, no likes.
+      </p>
+    </div>
+
+    <div class="squads-stage">
+      <!-- SVG único: globo 3D (proyección real con tilt 22°) + glow + labels -->
+      <svg class="squads-svg" viewBox="-320 -360 2040 1400" xmlns="http://www.w3.org/2000/svg" aria-hidden="false" preserveAspectRatio="xMidYMid meet">
+        <defs>
+          <radialGradient id="sqGlow" cx="50%" cy="50%" r="55%" fx="50%" fy="50%">
+            <stop offset="0%"   stop-color="#F54900" stop-opacity="1"/>
+            <stop offset="18%"  stop-color="#E0348E" stop-opacity="0.92"/>
+            <stop offset="42%"  stop-color="#7A2DC0" stop-opacity="0.78"/>
+            <stop offset="72%"  stop-color="#2E1A6B" stop-opacity="0.45"/>
+            <stop offset="100%" stop-color="#000" stop-opacity="0"/>
+          </radialGradient>
+          <!-- ClipPath = disco completo del globo (ecuador en y=560, radio 360) -->
+          <clipPath id="sqGlobeClip">
+            <circle cx="700" cy="560" r="360"/>
+          </clipPath>
+          <!-- Clip = disco completo del globo (hemisferio superior + inferior) -->
+          <clipPath id="sqUpperHalf">
+            <circle cx="700" cy="560" r="360"/>
+          </clipPath>
+          <!-- Mask de fade: la parte inferior se difumina para fundirse con el card gris -->
+          <linearGradient id="sqFadeBottom" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0%"   stop-color="#fff" stop-opacity="1"/>
+            <stop offset="55%"  stop-color="#fff" stop-opacity="1"/>
+            <stop offset="82%"  stop-color="#fff" stop-opacity="0.55"/>
+            <stop offset="100%" stop-color="#fff" stop-opacity="0"/>
+          </linearGradient>
+          <mask id="sqFadeMask">
+            <rect x="-320" y="-360" width="2040" height="1400" fill="url(#sqFadeBottom)"/>
+          </mask>
+        </defs>
+
+        <!-- Grupo globo completo con scale desde el centro + mask de fade al fondo -->
+        <g mask="url(#sqFadeMask)">
+
+        <!-- Glow ambiental grande detrás (NO escalado, se queda difuso de fondo) -->
+        <ellipse class="sq-glow-ambient" cx="700" cy="560" rx="820" ry="540" fill="url(#sqGlow)" opacity="0.75"/>
+
+        <g transform="translate(700 560) scale(1.78) translate(-700 -560)">
+
+        <!-- Glow interior clippeado al disco del globo (brillo desde dentro) -->
+        <g class="sq-glow-inner" clip-path="url(#sqGlobeClip)">
+          <circle cx="700" cy="560" r="360" fill="url(#sqGlow)"/>
+        </g>
+
+        <!-- Wireframe 3D real: proyección de esfera con tilt 22° (solo hemisferio superior) -->
+        <g class="sq-wireframe" stroke="#FFFFFF" stroke-width="1.25" fill="none" clip-path="url(#sqUpperHalf)">
+          <!-- Silueta exterior (círculo completo, parte superior visible) -->
+          <circle cx="700" cy="560" r="360"/>
+
+          <!-- PARALELOS hemisferio superior -->
+          <ellipse cx="700" cy="530.9" rx="358.6" ry="134.3"/>
+          <ellipse cx="700" cy="473.6" rx="347.7" ry="130.3"/>
+          <ellipse cx="700" cy="418.9" rx="326.3" ry="122.2"/>
+          <ellipse cx="700" cy="368.5" rx="294.9" ry="110.5"/>
+          <ellipse cx="700" cy="324.0" rx="254.6" ry="95.4"/>
+          <ellipse cx="700" cy="286.6" rx="206.5" ry="77.4"/>
+          <ellipse cx="700" cy="257.5" rx="152.1" ry="57.0"/>
+          <ellipse cx="700" cy="237.6" rx="93.2" ry="34.9"/>
+          <ellipse cx="700" cy="227.5" rx="31.4" ry="11.8"/>
+          <!-- PARALELOS hemisferio inferior (espejo del superior) -->
+          <ellipse cx="700" cy="589.1" rx="358.6" ry="134.3"/>
+          <ellipse cx="700" cy="646.4" rx="347.7" ry="130.3"/>
+          <ellipse cx="700" cy="701.1" rx="326.3" ry="122.2"/>
+          <ellipse cx="700" cy="751.5" rx="294.9" ry="110.5"/>
+          <ellipse cx="700" cy="796.0" rx="254.6" ry="95.4"/>
+          <ellipse cx="700" cy="833.4" rx="206.5" ry="77.4"/>
+          <ellipse cx="700" cy="862.5" rx="152.1" ry="57.0"/>
+          <ellipse cx="700" cy="882.4" rx="93.2" ry="34.9"/>
+          <ellipse cx="700" cy="892.5" rx="31.4" ry="11.8"/>
+
+          <!-- MERIDIANOS (elipses verticales altas, todas pasan por ambos polos) -->
+          <ellipse cx="700" cy="560" rx="360.0" ry="333.8"/>
+          <ellipse cx="700" cy="560" rx="347.7" ry="333.8"/>
+          <ellipse cx="700" cy="560" rx="311.8" ry="333.8"/>
+          <ellipse cx="700" cy="560" rx="254.6" ry="333.8"/>
+          <ellipse cx="700" cy="560" rx="180.0" ry="333.8"/>
+          <ellipse cx="700" cy="560" rx="93.2"  ry="333.8"/>
+          <!-- Eje polar frontal (meridiano 0°) -->
+          <line x1="700" y1="226.2" x2="700" y2="893.8"/>
+        </g>
+
+        <!-- Ecuador completo (elipse frontal del ecuador, dibujada sobre todo) -->
+        <ellipse cx="700" cy="560" rx="360" ry="134.9" fill="none" stroke="#FFFFFF" stroke-width="1.25" opacity="0.95"/>
+
+        </g><!-- /scale group -->
+        </g><!-- /mask group -->
+
+        <!-- LABELS como texto SVG — arco semicircular alrededor del globo (estilo NoGood) -->
+        <!-- Globo centrado en (700, 560), radio 360. Labels en arco de radio ~500 -->
+        <!-- GRAN ARCO PUNTEADO semicircular que envuelve el globo -->
+        <!-- Centro (700, 560), radio 760. Va de (-60, 560) por arriba hasta (1460, 560). -->
+        <path class="sq-big-arc"
+              d="M -60 560 A 760 760 0 0 1 1460 560"
+              fill="none"
+              stroke="rgba(255,255,255,0.45)"
+              stroke-width="1.6"
+              stroke-dasharray="4 8"/>
+
+        <!-- LABELS FUERA del arco (radio ~830), distribuidos cada ~36° -->
+        <g class="sq-labels" font-family="Inter, system-ui, sans-serif" font-weight="600" fill="#FFFFFF">
+          <!-- 0° polo norte -->
+          <text x="700" y="-295" font-size="34" text-anchor="middle">Estrategia</text>
+          <!-- -36° -->
+          <text x="212" y="-125" font-size="32" text-anchor="middle">Creativos</text>
+          <!-- -72° -->
+          <text x="-240" y="310" font-size="32" text-anchor="start">Landing Pages</text>
+          <!-- -90° (izq ecuador, fuera del arco) -->
+          <text x="-130" y="690" font-size="32" text-anchor="start">Tracking</text>
+          <!-- +36° -->
+          <text x="1188" y="-125" font-size="32" text-anchor="middle">Meta Ads</text>
+          <!-- +72° -->
+          <text x="1640" y="310" font-size="32" text-anchor="end">Google Ads</text>
+          <!-- +90° (der ecuador, fuera del arco) -->
+          <text x="1530" y="690" font-size="32" text-anchor="end">CRM</text>
+        </g>
+      </svg>
     </div>
   </div>
 </section>
@@ -194,78 +273,38 @@
 <!-- 4. SERVICES LIST (3 CARDS)                       -->
 <!-- ============================================= -->
 <section class="services reveal" id="servicios">
-  <div class="container">
-    <div class="section-head">
-      <div class="section-label">02 / Servicios</div>
-      <h2 class="section-title">Lo único que hacemos. Y lo hacemos bien.</h2>
+  <div class="services-card">
+    <div class="services-label">
+      <span class="services-label-icon">◉</span>
+      <span>SERVICIOS</span>
     </div>
+    <h2 class="services-title">Solo pauta. Sin relleno.<br>Resultados medibles.</h2>
 
     <div class="services-grid">
       <article class="service-card">
-        <div class="service-icon-wrap">
-          <svg viewBox="0 0 60 60" fill="none">
-            <circle cx="30" cy="30" r="28" stroke="#FAFA00" stroke-width="1.5" opacity="0.3"/>
-            <circle cx="30" cy="30" r="14" fill="#FAFA00"/>
-            <text x="30" y="36" text-anchor="middle" font-family="Orbitron" font-weight="700" font-size="16" fill="#181818">M</text>
-          </svg>
-        </div>
         <h3 class="service-title">Meta Ads</h3>
         <p class="service-body">
-          Campañas en Facebook e Instagram diseñadas para traer clientes nuevos. No likes. No seguidores. Clientes.
+          Campañas en Facebook e Instagram diseñadas para traer clientes nuevos. No likes. No seguidores. Clientes. Segmentación quirúrgica, creativos que paran el scroll y métricas que miden lo único que importa.
         </p>
-        <ul class="service-list">
-          <li>Segmentación quirúrgica</li>
-          <li>Creativos que paran el scroll</li>
-          <li>Optimización de conversión</li>
-          <li>Retargeting de audiencias</li>
-        </ul>
-      </article>
-
-      <article class="service-card service-card-featured">
-        <div class="service-badge">Recomendado</div>
-        <div class="service-icon-wrap">
-          <svg viewBox="0 0 60 60" fill="none">
-            <circle cx="22" cy="30" r="16" fill="#FAFA00" opacity="0.9"/>
-            <circle cx="38" cy="30" r="16" fill="#713DFF" opacity="0.9"/>
-            <text x="30" y="36" text-anchor="middle" font-family="Orbitron" font-weight="700" font-size="14" fill="#FFFFFF">M+G</text>
-          </svg>
-        </div>
-        <h3 class="service-title">Combo Meta + Google</h3>
-        <p class="service-body">
-          Cobertura completa del funnel. Descubrimiento en redes + intención de compra en búsqueda. El stack completo de adquisición.
-        </p>
-        <ul class="service-list">
-          <li>Meta Ads + Google Ads integrados</li>
-          <li>Full funnel tracking</li>
-          <li>Reportes unificados semanales</li>
-          <li>Optimización cross-channel</li>
-        </ul>
+        <a href="#formulario" class="service-more">Read More <span aria-hidden="true">→</span></a>
       </article>
 
       <article class="service-card">
-        <div class="service-icon-wrap">
-          <svg viewBox="0 0 60 60" fill="none">
-            <circle cx="30" cy="30" r="28" stroke="#713DFF" stroke-width="1.5" opacity="0.4"/>
-            <circle cx="30" cy="30" r="14" fill="#713DFF"/>
-            <text x="30" y="36" text-anchor="middle" font-family="Orbitron" font-weight="700" font-size="16" fill="#FFFFFF">G</text>
-          </svg>
-        </div>
+        <h3 class="service-title">Combo Meta + Google</h3>
+        <p class="service-body">
+          El stack completo. Meta descubre a tu cliente antes de que sepa que te necesita. Google lo captura en el segundo exacto en que decide comprar. Cobertura completa del funnel, de arriba a abajo.
+        </p>
+        <a href="#formulario" class="service-more">Read More <span aria-hidden="true">→</span></a>
+      </article>
+
+      <article class="service-card">
         <h3 class="service-title">Google Ads</h3>
         <p class="service-body">
-          Aparece en el momento exacto en que alguien busca lo que tú vendes. Convierte intención de compra en clientes reales.
+          Aparece en el momento exacto en que alguien busca lo que tú vendes. Search, Performance Max y YouTube configurados para capturar intención de compra real — no clics baratos que nunca se convierten.
         </p>
-        <ul class="service-list">
-          <li>Search campaigns</li>
-          <li>Performance Max</li>
-          <li>YouTube Ads</li>
-          <li>Shopping + Display</li>
-        </ul>
+        <a href="#formulario" class="service-more">Read More <span aria-hidden="true">→</span></a>
       </article>
     </div>
-
-    <p class="services-footer">
-      El canal exacto para tu negocio lo definimos juntos en el diagnóstico gratuito. →
-    </p>
   </div>
 </section>
 
