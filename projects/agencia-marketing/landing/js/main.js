@@ -252,4 +252,111 @@
     });
   }
 
+  // ---------- PILLARS SLIDER (differentiated approach) ----------
+  const pillarsTrack = document.querySelector('.pillars-track');
+  const pillarsViewport = document.querySelector('.pillars-viewport');
+  const pillarsArrows = document.querySelectorAll('.pillars-arrow');
+  if (pillarsTrack && pillarsViewport && pillarsArrows.length) {
+    const slides = Array.from(pillarsTrack.querySelectorAll('.pillar-slide'));
+    let index = 0;
+    let currentTx = 0;
+
+    const getStep = () => {
+      if (slides.length < 2) return 0;
+      const a = slides[0].getBoundingClientRect().left;
+      const b = slides[1].getBoundingClientRect().left;
+      return b - a;
+    };
+
+    const getMaxIndex = () => {
+      const step = getStep();
+      if (!step) return 0;
+      const viewportW = pillarsViewport.clientWidth;
+      const slideW = slides[0].offsetWidth;
+      return Math.max(0, slides.length - 1 - Math.floor((viewportW - slideW) / step));
+    };
+
+    const setTransform = (tx, animate) => {
+      if (!animate) pillarsTrack.classList.add('is-dragging');
+      else pillarsTrack.classList.remove('is-dragging');
+      pillarsTrack.style.transform = 'translate3d(' + tx + 'px, 0, 0)';
+      currentTx = tx;
+    };
+
+    const update = (animate = true) => {
+      const step = getStep();
+      const max = getMaxIndex();
+      if (index > max) index = max;
+      if (index < 0) index = 0;
+      setTransform(-index * step, animate);
+      slides.forEach((s, i) => {
+        s.classList.toggle('is-active', i === index);
+      });
+      pillarsArrows.forEach(btn => {
+        const dir = btn.dataset.dir;
+        if (dir === 'prev') btn.disabled = index <= 0;
+        if (dir === 'next') btn.disabled = index >= max;
+      });
+    };
+
+    pillarsArrows.forEach(btn => {
+      btn.addEventListener('click', () => {
+        const dir = btn.dataset.dir;
+        if (dir === 'next') index++;
+        else index--;
+        update(true);
+      });
+    });
+
+    // ---- Drag / swipe ----
+    let dragging = false;
+    let startX = 0;
+    let startTx = 0;
+    let moved = 0;
+
+    const onDown = (e) => {
+      dragging = true;
+      moved = 0;
+      startX = (e.touches ? e.touches[0].clientX : e.clientX);
+      startTx = currentTx;
+      pillarsTrack.classList.add('is-dragging');
+    };
+    const onMove = (e) => {
+      if (!dragging) return;
+      const x = (e.touches ? e.touches[0].clientX : e.clientX);
+      moved = x - startX;
+      setTransform(startTx + moved, false);
+    };
+    const onUp = () => {
+      if (!dragging) return;
+      dragging = false;
+      const step = getStep() || 1;
+      const threshold = step * 0.18;
+      if (moved < -threshold) index++;
+      else if (moved > threshold) index--;
+      update(true);
+    };
+
+    pillarsTrack.addEventListener('mousedown', onDown);
+    window.addEventListener('mousemove', onMove);
+    window.addEventListener('mouseup', onUp);
+    pillarsTrack.addEventListener('touchstart', onDown, { passive: true });
+    pillarsTrack.addEventListener('touchmove', onMove, { passive: true });
+    pillarsTrack.addEventListener('touchend', onUp);
+
+    // Prevent text selection while dragging
+    pillarsTrack.addEventListener('dragstart', (e) => e.preventDefault());
+
+    // Keyboard nav
+    window.addEventListener('keydown', (e) => {
+      const rect = pillarsViewport.getBoundingClientRect();
+      if (rect.top > window.innerHeight || rect.bottom < 0) return;
+      if (e.key === 'ArrowRight') { index++; update(true); }
+      if (e.key === 'ArrowLeft')  { index--; update(true); }
+    });
+
+    window.addEventListener('resize', () => update(false), { passive: true });
+    requestAnimationFrame(() => update(true));
+  }
+
 })();

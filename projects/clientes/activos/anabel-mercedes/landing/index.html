@@ -937,20 +937,76 @@ ul { list-style: none; }
   grid-column: 2;
   grid-row: 2;
 }
-/* Foto — ocupa toda la columna izquierda, edge to edge */
+/* Foto moodboard — columna izquierda */
 .club__photo {
   overflow: hidden;
   position: relative;
+  background: var(--cream-warm);
+  padding: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
-.club__photo img {
+.club__moodboard {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 3/4;
+}
+.club__mood-card {
+  position: absolute;
+  overflow: hidden;
+  border: 2px solid var(--navy);
+  box-shadow: 4px 4px 0 var(--navy);
+  background: var(--white);
+  padding: 5px;
+  transition: transform 0.45s var(--ease), box-shadow 0.45s var(--ease), z-index 0s;
+}
+.club__mood-card img {
   width: 100%;
   height: 100%;
   object-fit: cover;
   display: block;
-  transition: transform 0.6s var(--ease);
 }
-.club__photo:hover img {
-  transform: scale(1.03);
+.club__mood-card:hover {
+  transform: rotate(0deg) scale(1.05) translateY(-6px) !important;
+  box-shadow: 8px 8px 0 var(--navy);
+  z-index: 10;
+}
+/* Card 1: equipo grande — top-left */
+.club__mood-card--1 {
+  width: 60%;
+  aspect-ratio: 4/3;
+  top: 0;
+  left: 0;
+  transform: rotate(-2deg);
+  z-index: 3;
+}
+/* Card 2: crucero — top-right */
+.club__mood-card--2 {
+  width: 52%;
+  aspect-ratio: 4/3;
+  top: 5%;
+  right: 0;
+  transform: rotate(2.5deg);
+  z-index: 4;
+}
+/* Card 3: piscina — bottom-left */
+.club__mood-card--3 {
+  width: 58%;
+  aspect-ratio: 3/2;
+  bottom: 0;
+  left: 0;
+  transform: rotate(1.5deg);
+  z-index: 2;
+}
+/* Card 4: evento — bottom-right */
+.club__mood-card--4 {
+  width: 50%;
+  aspect-ratio: 4/3;
+  bottom: 5%;
+  right: 2%;
+  transform: rotate(-1.8deg);
+  z-index: 5;
 }
 /* Sello Club sobre la foto */
 .club__sello {
@@ -1489,6 +1545,7 @@ ul { list-style: none; }
     margin-right: auto;
   }
   .club__content .hero__cta { margin-left: auto; margin-right: auto; }
+  .club__mood-card { box-shadow: 3px 3px 0 var(--navy); padding: 4px; }
 
   /* — INSTAGRAM — */
   .instagram__grid {
@@ -1703,6 +1760,7 @@ ul { list-style: none; }
     margin-bottom: 28px;
   }
   .club__content .hero__cta { }
+  .club__mood-card { box-shadow: 2px 2px 0 var(--navy); padding: 3px; }
 
   /* — INSTAGRAM — */
   .instagram { padding: var(--section-py) 0; }
@@ -1854,6 +1912,7 @@ ul { list-style: none; }
     font-size: clamp(2.8rem, 2rem + 3vw, 4rem);
   }
   .club__desc { font-size: 0.9rem; }
+  .club__mood-card { box-shadow: 2px 2px 0 var(--navy); padding: 2px; border-width: 1.5px; }
 
   /* — INSTAGRAM — */
   .instagram__grid {
@@ -2102,7 +2161,7 @@ ul { list-style: none; }
     <!-- Header: label + headline (order 1 on mobile) -->
     <div class="immunotec__header fade-up">
       <div class="label label--sage">Mi Negocio</div>
-      <h2>No creé un producto con 30 años de ciencia. Solo decidí vivir de recomendarlo.</h2>
+      <h2>No creé un producto con 45 años de ciencia. Solo decidí vivir de recomendarlo.</h2>
     </div>
     <!-- Visual: moodboard (order 2 on mobile) -->
     <div class="immunotec__visual fade-up">
@@ -2123,11 +2182,11 @@ ul { list-style: none; }
     </div>
     <!-- Body: copy + stats + CTA (order 3 on mobile) -->
     <div class="immunotec__body fade-up">
-      <p>Immunotec lleva más de 30 años en el mercado con un producto respaldado por 79 patentes. No es una moda — es ciencia aplicada a la salud que la gente necesita y vuelve a pedir.</p>
+      <p>Immunotec lleva más de 45 años en el mercado con un producto respaldado por 79 patentes. No es una moda — es ciencia aplicada a la salud que la gente necesita y vuelve a pedir.</p>
       <p>Mi trabajo es recomendar algo en lo que genuinamente creo. Sin inventario, sin local, sin jefe. Solo yo, mi teléfono y las personas correctas.</p>
       <div class="immunotec__stats">
         <div class="immunotec__stat">
-          <div class="immunotec__stat-num">30+</div>
+          <div class="immunotec__stat-num">45+</div>
           <div class="immunotec__stat-label">Años en el mercado</div>
         </div>
         <div class="immunotec__stat">
@@ -2169,9 +2228,22 @@ ul { list-style: none; }
       <div class="label label--sage">El Equipo</div>
       <h2 class="club__title">Detrás de cada logro hay un equipo real.</h2>
     </div>
-    <!-- Photo (order 2 on mobile) -->
+    <!-- Photo moodboard (order 2 on mobile) -->
     <div class="club__photo fade-up">
-      <img src="anabel-equipo.png" alt="Equipo Club de la Libertad — Immunotec">
+      <div class="club__moodboard">
+        <div class="club__mood-card club__mood-card--1">
+          <img src="anabel-equipo.png" alt="Equipo Club de la Libertad — Immunotec">
+        </div>
+        <div class="club__mood-card club__mood-card--2">
+          <img src="equipo-crucero.jpg" alt="Equipo en crucero">
+        </div>
+        <div class="club__mood-card club__mood-card--3">
+          <img src="equipo-piscina.jpg" alt="Equipo en pool party">
+        </div>
+        <div class="club__mood-card club__mood-card--4">
+          <img src="equipo-evento.jpg" alt="Equipo en evento">
+        </div>
+      </div>
       <div class="club__sello">
         <img src="club-libertad-sello.png" alt="Club de la Libertad">
       </div>

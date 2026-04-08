@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 520 120" width="520" height="120">
+  <g transform="translate(10,10) scale(0.195)">
+    <path d="M149.3 112.8V221c0 12.1 8.4 18.9 17.2 18.9 8.2 0 17.2-5.7 17.2-18.9V113.6c0-11.1-8.2-18-17.2-18s-17.2 7.6-17.2 17.2" fill="#f8ab00"/>
+    <path d="M104.2 167.7V221c0 12.1 8.4 18.9 17.2 18.9 8.2 0 17.2-5.7 17.2-18.9v-52.5c0-11.1-8.2-18-17.2-18s-17.2 7.7-17.2 17.2" fill="#e37300"/>
+    <path d="M93.6 222.7c0 9.5-7.7 17.2-17.2 17.2s-17.2-7.7-17.2-17.2 7.7-17.2 17.2-17.2 17.2 7.6 17.2 17.2" fill="#e37300"/>
+  </g>
+  <text x="80" y="62" font-family="'Inter','Product Sans','Helvetica Neue',Arial,sans-serif" font-weight="500" font-size="28" fill="#FFFFFF" letter-spacing="-0.3">Google</text>
+  <text x="80" y="96" font-family="'Inter','Product Sans','Helvetica Neue',Arial,sans-serif" font-weight="400" font-size="28" fill="#FFFFFF" letter-spacing="-0.3">Analytics</text>
+</svg>

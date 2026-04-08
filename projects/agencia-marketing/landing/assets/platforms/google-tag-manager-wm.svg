@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 120" width="560" height="120">
+  <!-- Icono GTM simplificado en blanco -->
+  <g transform="translate(10,10)">
+    <rect x="18" y="22" width="36" height="36" rx="4" fill="none" stroke="#FFFFFF" stroke-width="4" transform="rotate(45 36 40)"/>
+    <circle cx="36" cy="40" r="8" fill="#FFFFFF"/>
+    <circle cx="36" cy="72" r="6" fill="#FFFFFF" opacity="0.6"/>
+  </g>
+  <!-- Wordmark -->
+  <text x="100" y="55" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-weight="500" font-size="28" fill="#FFFFFF" letter-spacing="-0.3">Google Tag</text>
+  <text x="100" y="88" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-weight="500" font-size="28" fill="#FFFFFF" letter-spacing="-0.3">Manager</text>
+</svg>
