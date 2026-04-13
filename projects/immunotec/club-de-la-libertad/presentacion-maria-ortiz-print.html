@@ -1,0 +1,486 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>Maria Ortiz · Diamante Ejecutivo — Print</title>
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Montserrat:wght@300;400;500;600;700;900&family=Roboto+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  @page { size: 1600px 900px; margin: 0; }
+
+  :root {
+    --orange: #F47920;
+    --orange-light: #FFAB00;
+    --orange-dark: #E8600A;
+    --bg: #06101E;
+    --bg-2: #0B1728;
+    --bg-3: #0E1D30;
+    --line: rgba(244,121,32,0.25);
+    --line-soft: rgba(255,255,255,0.08);
+    --text: #FFFFFF;
+    --text-dim: #7A8A9E;
+    --text-mid: #A8B6C8;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+
+  html, body {
+    background: #000;
+    color: var(--text);
+    font-family: 'Montserrat', sans-serif;
+  }
+
+  .slide {
+    position: relative;
+    width: 1600px;
+    height: 900px;
+    background: var(--bg);
+    display: flex;
+    overflow: hidden;
+    page-break-after: always;
+    break-after: page;
+  }
+  .slide:last-child { page-break-after: auto; break-after: auto; }
+
+  .slide::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background:
+      radial-gradient(900px 600px at 85% -5%, rgba(244,121,32,0.15), transparent 60%),
+      radial-gradient(800px 600px at 10% 100%, rgba(255,171,0,0.08), transparent 60%);
+    pointer-events: none;
+  }
+
+  .slide::after {
+    content: "";
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    height: 3px;
+    background: linear-gradient(90deg, var(--orange-light), var(--orange), var(--orange-dark));
+    z-index: 3;
+  }
+
+  .slide-content {
+    position: relative;
+    z-index: 2;
+    width: 100%;
+    height: 100%;
+    padding: 80px 90px 90px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .chrome-top {
+    position: absolute;
+    top: 30px;
+    left: 90px;
+    right: 90px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: 'Roboto Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 0.2em;
+    color: var(--text-dim);
+    text-transform: uppercase;
+    z-index: 4;
+  }
+  .chrome-top .brand { display: flex; align-items: center; gap: 14px; }
+  .chrome-top .brand img {
+    height: 44px;
+    width: auto;
+    filter: drop-shadow(0 0 12px rgba(244,121,32,0.45));
+  }
+
+  .chrome-bottom {
+    position: absolute;
+    bottom: 30px;
+    left: 90px;
+    right: 90px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: 'Roboto Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 0.2em;
+    color: var(--text-dim);
+    text-transform: uppercase;
+    z-index: 4;
+  }
+
+  .watermark {
+    position: absolute;
+    bottom: 65px;
+    right: 60px;
+    width: 120px;
+    height: auto;
+    opacity: 0.12;
+    z-index: 1;
+    pointer-events: none;
+  }
+  .s1 .watermark { display: none; }
+
+  .section-label {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    font-family: 'Roboto Mono', monospace;
+    font-size: 11px;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: var(--orange);
+    font-weight: 500;
+    margin-bottom: 24px;
+  }
+  .section-label::before {
+    content: "";
+    width: 28px;
+    height: 1px;
+    background: var(--orange);
+  }
+
+  h1.big {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 900;
+    font-size: 120px;
+    line-height: 0.9;
+    letter-spacing: -2px;
+  }
+  h1.big .orange { color: var(--orange); }
+
+  h2.title {
+    font-family: 'Oswald', sans-serif;
+    font-weight: 600;
+    font-size: 72px;
+    line-height: 0.95;
+    letter-spacing: -0.5px;
+    text-transform: uppercase;
+    margin-bottom: 30px;
+  }
+  h2.title .orange { color: var(--orange); }
+
+  p.body {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 1.65;
+    color: var(--text-mid);
+    max-width: 780px;
+    margin-bottom: 14px;
+  }
+  p.body strong { color: var(--text); font-weight: 600; }
+
+  .bullet-list { list-style: none; margin: 16px 0; }
+  .bullet-list li {
+    position: relative;
+    padding-left: 32px;
+    margin-bottom: 16px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 22px;
+    line-height: 1.5;
+    color: var(--text);
+    font-weight: 500;
+  }
+  .bullet-list li::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 17px;
+    width: 18px;
+    height: 2px;
+    background: var(--orange);
+  }
+
+  .pre-title {
+    font-family: 'Montserrat', sans-serif;
+    font-style: italic;
+    font-weight: 400;
+    font-size: 22px;
+    color: var(--text-mid);
+    margin-bottom: 18px;
+    max-width: 700px;
+  }
+
+  /* SLIDE 1 - PORTADA */
+  .s1 { padding: 0; }
+  .s1 .left {
+    flex: 0 0 45%;
+    position: relative;
+    background: #0A1626;
+    overflow: hidden;
+  }
+  .s1 .left img {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center top;
+  }
+  .s1 .left::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(90deg, transparent 65%, var(--bg) 100%);
+    pointer-events: none;
+  }
+  .s1 .right {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0 90px;
+    position: relative;
+  }
+  .s1 .right .s1-logo {
+    width: 140px;
+    height: auto;
+    margin-bottom: 28px;
+    filter: drop-shadow(0 0 25px rgba(244,121,32,0.5));
+  }
+  .s1 .right .rank {
+    font-family: 'Oswald', sans-serif;
+    font-size: 38px;
+    font-weight: 500;
+    margin-top: 18px;
+    letter-spacing: 0.12em;
+    color: var(--text-mid);
+    text-transform: uppercase;
+  }
+  .s1 .right .rank .orange { color: var(--orange); }
+  .s1 .right .deco { display: none; }
+
+  /* SLIDE 2 */
+  .s2 .slide-content { padding: 0; flex-direction: row; }
+  .s2 .copy {
+    flex: 0 0 44%;
+    padding: 100px 70px 90px 90px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+    z-index: 3;
+  }
+  .s2 .photo {
+    flex: 1;
+    position: relative;
+    overflow: hidden;
+    border-left: 1px solid var(--line-soft);
+  }
+  .s2 .photo img {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    object-position: center;
+  }
+  .s2 .photo::before { display: none; }
+
+  /* SLIDE 3 */
+  .s3 .slide-content {
+    padding: 70px 50px 60px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+  }
+  .s3 .copy { text-align: center; margin-bottom: 12px; flex-shrink: 0; }
+  .s3 h2 { font-size: 42px; margin-bottom: 0; line-height: 1; }
+  .s3 .photo {
+    flex: 1;
+    width: 100%;
+    min-height: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .s3 .photo img {
+    max-width: 100%;
+    max-height: 100%;
+    width: auto;
+    height: auto;
+    object-fit: contain;
+  }
+
+  /* SLIDE 4 */
+  .s4 .slide-content { padding: 0; flex-direction: row; }
+  .s4 .copy {
+    flex: 0 0 55%;
+    padding: 100px 60px 90px 90px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .s4 .photo {
+    flex: 1;
+    position: relative;
+    overflow: hidden;
+    border-left: 1px solid var(--line-soft);
+  }
+  .s4 .photo img {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    object-position: center;
+  }
+  .s4 .photo::before { display: none; }
+  .s4 h2 { font-size: 60px; line-height: 1; }
+
+  /* SLIDE 5 */
+  .s5 .slide-content { padding: 0; flex-direction: row; }
+  .s5 .copy {
+    flex: 0 0 55%;
+    padding: 100px 60px 90px 90px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .s5 .photo {
+    flex: 1;
+    position: relative;
+    overflow: hidden;
+    border-left: 1px solid var(--line-soft);
+  }
+  .s5 .photo img {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    object-position: center;
+  }
+  .s5 .photo::before { display: none; }
+  .s5 h2 { font-size: 68px; }
+  .s5 .quote {
+    margin-top: 30px;
+    font-family: 'Oswald', sans-serif;
+    font-size: 36px;
+    font-weight: 500;
+    line-height: 1.15;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    max-width: 600px;
+  }
+  .s5 .quote .orange { color: var(--orange); }
+</style>
+</head>
+<body>
+
+<!-- SLIDE 1 — PORTADA -->
+<section class="slide s1">
+  <div class="chrome-top">
+    <div class="brand"><img src="assets/logo-horizontal-white.png" alt="El Club de la Libertad"></div>
+    <div>Historia · Maria Ortiz</div>
+  </div>
+  <div class="left">
+    <img src="assets/maria-ortiz/p1-img1.png" alt="Maria Ortiz">
+  </div>
+  <div class="right">
+    <img src="assets/logo-vertical-white.png" alt="El Club de la Libertad" class="s1-logo">
+    <h1 class="big">Maria<br><span class="orange">Ortiz</span></h1>
+    <div class="rank"><span class="orange">Diamante</span> Ejecutivo</div>
+  </div>
+  <div class="chrome-bottom">
+    <div>01 · Portada</div>
+    <div>Immunotec · 2026</div>
+  </div>
+</section>
+
+<!-- SLIDE 2 -->
+<section class="slide s2">
+  <div class="chrome-top">
+    <div class="brand"><img src="assets/logo-horizontal-white.png" alt="El Club de la Libertad"></div>
+    <div>02 / 05</div>
+  </div>
+  <div class="slide-content">
+    <div class="copy">
+      <h2 class="title">Trae <span class="orange">sangre nueva</span><br>a tu equipo<br>todos los meses</h2>
+    </div>
+    <div class="photo">
+      <img src="assets/maria-ortiz/p2-img1.png" alt="Equipo de Maria Ortiz">
+    </div>
+  </div>
+  <div class="chrome-bottom">
+    <div>Sangre Nueva · Equipo</div>
+    <div>El Club de la Libertad</div>
+  </div>
+  <img src="assets/logo-vertical-white.png" alt="" class="watermark">
+</section>
+
+<!-- SLIDE 3 -->
+<section class="slide s3">
+  <div class="chrome-top">
+    <div class="brand"><img src="assets/logo-horizontal-white.png" alt="El Club de la Libertad"></div>
+    <div>03 / 05</div>
+  </div>
+  <div class="slide-content">
+    <div class="copy">
+      <h2 class="title">Agrega gente nueva <span class="orange">intencionalmente</span><br>todos los días a tu lista</h2>
+    </div>
+    <div class="photo">
+      <img src="assets/maria-ortiz/slide3-collage.png" alt="Collage de eventos Immunotec">
+    </div>
+  </div>
+  <div class="chrome-bottom">
+    <div>Intención · Prospección</div>
+    <div>El Club de la Libertad</div>
+  </div>
+  <img src="assets/logo-vertical-white.png" alt="" class="watermark">
+</section>
+
+<!-- SLIDE 4 -->
+<section class="slide s4">
+  <div class="chrome-top">
+    <div class="brand"><img src="assets/logo-horizontal-white.png" alt="El Club de la Libertad"></div>
+    <div>04 / 05</div>
+  </div>
+  <div class="slide-content">
+    <div class="copy">
+      <h2 class="title">Sé atrevido<br><span class="orange">pierde la vergüenza</span></h2>
+      <p class="pre-title">Atrae a los mejores líderes a tu equipo:</p>
+      <ul class="bullet-list">
+        <li>Dinámicos</li>
+        <li>Productivos</li>
+        <li>Positivos</li>
+        <li>Con iniciativa</li>
+        <li>Con experiencia</li>
+        <li>Independientes</li>
+      </ul>
+    </div>
+    <div class="photo">
+      <img src="assets/maria-ortiz/slide4-collage.png" alt="Maria Ortiz con líderes">
+    </div>
+  </div>
+  <div class="chrome-bottom">
+    <div>Atrévete · Liderazgo</div>
+    <div>El Club de la Libertad</div>
+  </div>
+  <img src="assets/logo-vertical-white.png" alt="" class="watermark">
+</section>
+
+<!-- SLIDE 5 -->
+<section class="slide s5">
+  <div class="chrome-top">
+    <div class="brand"><img src="assets/logo-horizontal-white.png" alt="El Club de la Libertad"></div>
+    <div>05 / 05</div>
+  </div>
+  <div class="slide-content">
+    <div class="copy">
+      <h2 class="title">Mantente con una<br><span class="orange">energía positiva</span><br>y radiante</h2>
+      <div class="quote">La felicidad es la <span class="orange">libertad</span><br>de poder ser tú.</div>
+    </div>
+    <div class="photo">
+      <img src="assets/maria-ortiz/p5-img1.png" alt="Maria Ortiz - Own Your Joy">
+    </div>
+  </div>
+  <div class="chrome-bottom">
+    <div>Energía · Libertad</div>
+    <div>El Club de la Libertad · Immunotec</div>
+  </div>
+  <img src="assets/logo-vertical-white.png" alt="" class="watermark">
+</section>
+
+</body>
+</html>

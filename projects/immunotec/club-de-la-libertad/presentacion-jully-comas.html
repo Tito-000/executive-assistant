@@ -1,0 +1,744 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Jully Comas · Diamante — El Club de la Libertad</title>
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Montserrat:wght@300;400;500;600;700;900&family=Roboto+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --orange: #F47920;
+    --orange-light: #FFAB00;
+    --orange-dark: #E8600A;
+    --bg: #06101E;
+    --bg-2: #0B1728;
+    --bg-3: #0E1D30;
+    --line: rgba(244,121,32,0.25);
+    --line-soft: rgba(255,255,255,0.08);
+    --text: #FFFFFF;
+    --text-dim: #7A8A9E;
+    --text-mid: #A8B6C8;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  html, body {
+    background: #000;
+    color: var(--text);
+    font-family: 'Montserrat', sans-serif;
+    overflow: hidden;
+    height: 100vh;
+    width: 100vw;
+  }
+
+  .deck { width: 100vw; height: 100vh; position: relative; overflow: hidden; }
+
+  .slide {
+    position: absolute;
+    inset: 0;
+    background: var(--bg);
+    display: flex;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.6s ease;
+    overflow: hidden;
+  }
+  .slide.active { opacity: 1; pointer-events: auto; }
+
+  .slide::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background:
+      radial-gradient(900px 600px at 85% -5%, rgba(244,121,32,0.15), transparent 60%),
+      radial-gradient(800px 600px at 10% 100%, rgba(255,171,0,0.08), transparent 60%);
+    pointer-events: none;
+  }
+
+  .slide::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: linear-gradient(90deg, var(--orange-light), var(--orange), var(--orange-dark));
+    z-index: 3;
+  }
+
+  .slide-content {
+    position: relative;
+    z-index: 2;
+    width: 100%;
+    height: 100%;
+    padding: 80px 90px 90px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .chrome-top {
+    position: absolute;
+    top: 30px;
+    left: 90px;
+    right: 90px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: 'Roboto Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 0.2em;
+    color: var(--text-dim);
+    text-transform: uppercase;
+    z-index: 4;
+  }
+  .chrome-top .brand { display: flex; align-items: center; gap: 14px; }
+  .chrome-top .brand img {
+    height: 28px;
+    width: auto;
+    filter: drop-shadow(0 0 10px rgba(244,121,32,0.35));
+  }
+  .chrome-top .brand-dot {
+    width: 8px;
+    height: 8px;
+    background: var(--orange);
+    border-radius: 50%;
+    box-shadow: 0 0 12px var(--orange);
+  }
+
+  /* Logo marca de agua (esquina inferior derecha) */
+  .watermark {
+    position: absolute;
+    bottom: 65px;
+    right: 60px;
+    width: 120px;
+    height: auto;
+    opacity: 0.12;
+    z-index: 1;
+    pointer-events: none;
+  }
+  .s1 .watermark { display: none; }
+
+  .chrome-bottom {
+    position: absolute;
+    bottom: 30px;
+    left: 90px;
+    right: 90px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: 'Roboto Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 0.2em;
+    color: var(--text-dim);
+    text-transform: uppercase;
+    z-index: 4;
+  }
+
+  .section-label {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    font-family: 'Roboto Mono', monospace;
+    font-size: 11px;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: var(--orange);
+    font-weight: 500;
+    margin-bottom: 24px;
+  }
+  .section-label::before {
+    content: "";
+    width: 28px;
+    height: 1px;
+    background: var(--orange);
+  }
+
+  h1.big {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 900;
+    font-size: clamp(72px, 8vw, 140px);
+    line-height: 0.88;
+    letter-spacing: -2px;
+  }
+  h1.big .orange { color: var(--orange); }
+
+  h2.title {
+    font-family: 'Oswald', sans-serif;
+    font-weight: 600;
+    font-size: clamp(42px, 4.8vw, 76px);
+    line-height: 0.95;
+    letter-spacing: -0.5px;
+    text-transform: uppercase;
+    margin-bottom: 30px;
+  }
+  h2.title .orange { color: var(--orange); }
+
+  p.body {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 1.65;
+    color: var(--text-mid);
+    max-width: 780px;
+    margin-bottom: 14px;
+  }
+  p.body strong { color: var(--text); font-weight: 600; }
+
+  .bullet-list {
+    list-style: none;
+    margin: 20px 0;
+  }
+  .bullet-list li {
+    position: relative;
+    padding-left: 28px;
+    margin-bottom: 18px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 21px;
+    line-height: 1.55;
+    color: var(--text-mid);
+    max-width: 900px;
+  }
+  .bullet-list li::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 16px;
+    width: 16px;
+    height: 2px;
+    background: var(--orange);
+  }
+  .bullet-list li strong { color: var(--text); font-weight: 700; }
+
+  .emph-box {
+    margin-top: 30px;
+    padding: 26px 34px;
+    background: linear-gradient(135deg, rgba(244,121,32,0.15), rgba(244,121,32,0.05));
+    border-left: 4px solid var(--orange);
+    border-radius: 4px 12px 12px 4px;
+    font-family: 'Oswald', sans-serif;
+    font-size: 30px;
+    font-weight: 600;
+    line-height: 1.2;
+    text-transform: uppercase;
+    max-width: 1000px;
+  }
+  .emph-box .orange { color: var(--orange); }
+
+  /* ═══════ SLIDE 1 — PORTADA ═══════ */
+  .s1 { align-items: stretch; padding: 0; }
+  .s1 .left {
+    flex: 0 0 45%;
+    position: relative;
+    background: #0A1626;
+    overflow: hidden;
+  }
+  .s1 .left img {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center top;
+  }
+  .s1 .left::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(90deg, transparent 65%, var(--bg) 100%);
+    pointer-events: none;
+  }
+  .s1 .right {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0 90px;
+    position: relative;
+  }
+  .s1 .right .s1-logo {
+    width: 140px;
+    height: auto;
+    margin-bottom: 28px;
+    filter: drop-shadow(0 0 25px rgba(244,121,32,0.5));
+  }
+  .s1 .right .rank {
+    font-family: 'Oswald', sans-serif;
+    font-size: 42px;
+    font-weight: 500;
+    margin-top: 20px;
+    letter-spacing: 0.15em;
+    color: var(--text-mid);
+    text-transform: uppercase;
+  }
+  .s1 .right .deco { display: none; }
+
+  /* ═══════ SLIDE 2 — TEXTO CENTRADO ═══════ */
+  .s2 .slide-content { justify-content: center; }
+  .s2 h2 { max-width: 1300px; }
+
+  /* ═══════ SLIDE 3 — TRAYECTORIA (2 imgs izq + texto der) ═══════ */
+  .s3 .grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    align-items: center;
+    flex: 1;
+  }
+  .s3 .photos {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    max-width: 520px;
+  }
+  .s3 .photos img {
+    width: 100%;
+    border-radius: 12px;
+    border: 1px solid var(--line-soft);
+    box-shadow: 0 30px 60px rgba(0,0,0,0.5);
+    object-fit: cover;
+  }
+  .s3 .photos img:nth-child(1) { aspect-ratio: 3/2; }
+  .s3 .photos img:nth-child(2) { aspect-ratio: 3/2; }
+
+  /* ═══════ SLIDE 4 — 3 LOGOS EMPRESAS ═══════ */
+  .s4 .slide-content { justify-content: center; align-items: center; }
+  .s4 h2 { text-align: center; max-width: 1200px; margin: 0 auto 60px; }
+  .s4 .section-label { justify-content: center; }
+  .s4 .companies {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    width: 100%;
+    max-width: 1300px;
+    margin: 0 auto;
+  }
+  .s4 .company {
+    aspect-ratio: 1;
+    background: var(--bg-2);
+    border: 1px solid var(--line-soft);
+    border-radius: 16px;
+    padding: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+  }
+  .s4 .company::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, var(--orange), transparent);
+  }
+  .s4 .company img {
+    max-width: 85%;
+    max-height: 85%;
+    object-fit: contain;
+    filter: drop-shadow(0 10px 20px rgba(0,0,0,0.4));
+  }
+
+  /* ═══════ SLIDE 5 — HERRAMIENTAS (2 imgs) ═══════ */
+  .s5 .slide-content { justify-content: center; align-items: center; }
+  .s5 h2 { text-align: center; max-width: 1300px; margin: 0 auto 50px; }
+  .s5 .section-label { justify-content: center; }
+  .s5 .tools {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
+    max-width: 1100px;
+    width: 100%;
+    margin: 0 auto;
+  }
+  .s5 .tool {
+    background: var(--bg-2);
+    border: 1px solid var(--line-soft);
+    border-radius: 16px;
+    padding: 30px;
+    border-top: 3px solid var(--orange);
+  }
+  .s5 .tool img {
+    width: 100%;
+    aspect-ratio: 4/3;
+    object-fit: contain;
+    background: #FFF;
+    border-radius: 10px;
+  }
+
+  /* ═══════ SLIDE 6 — BATALLA (3 imgs + titulo) ═══════ */
+  .s6 .slide-content { justify-content: center; align-items: center; }
+  .s6 h2 { text-align: center; max-width: 1300px; margin: 0 auto 40px; }
+  .s6 .section-label { justify-content: center; }
+  .s6 .photos {
+    display: grid;
+    grid-template-columns: 1.35fr 1fr 1.35fr;
+    gap: 30px;
+    max-width: 1300px;
+    width: 100%;
+    margin: 0 auto;
+    align-items: center;
+  }
+  .s6 .photos img {
+    width: 100%;
+    border-radius: 14px;
+    border: 1px solid var(--line-soft);
+    box-shadow: 0 30px 60px rgba(0,0,0,0.5);
+    object-fit: cover;
+  }
+  .s6 .photos img.horizontal {
+    aspect-ratio: 4/3;
+  }
+  .s6 .photos img.vertical {
+    aspect-ratio: 3/4;
+    transform: scale(1.08);
+    z-index: 2;
+    box-shadow: 0 40px 80px rgba(0,0,0,0.65);
+    border: 2px solid var(--orange);
+  }
+
+  /* ═══════ SLIDE 7 — HIJOS (2 imgs + titulo) ═══════ */
+  .s7 .slide-content { justify-content: center; align-items: center; }
+  .s7 .section-label { justify-content: center; }
+  .s7 h2 { text-align: center; max-width: 1300px; margin: 0 auto 40px; font-size: clamp(34px, 3.6vw, 56px); }
+  .s7 .photos {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 36px;
+    max-width: 780px;
+    width: 100%;
+    margin: 0 auto;
+  }
+  .s7 .photos img {
+    width: 100%;
+    aspect-ratio: 4/3;
+    object-fit: cover;
+    border-radius: 14px;
+    border: 1px solid var(--line-soft);
+    box-shadow: 0 30px 60px rgba(0,0,0,0.5);
+  }
+
+  /* ═══════ SLIDE 8 — CIERRE ═══════ */
+  .s8 .slide-content { justify-content: center; }
+  .s8 h2 { max-width: 1200px; }
+  .s8 .final {
+    display: inline-block;
+    margin-top: 30px;
+    font-family: 'Oswald', sans-serif;
+    font-size: clamp(48px, 5vw, 80px);
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    background: linear-gradient(135deg, var(--orange-light), var(--orange));
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  /* ═══════ NAV ═══════ */
+  .nav {
+    position: fixed;
+    bottom: 24px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    background: rgba(11,23,40,0.9);
+    backdrop-filter: blur(14px);
+    border: 1px solid var(--line-soft);
+    padding: 10px 18px;
+    border-radius: 999px;
+    z-index: 100;
+  }
+  .nav button {
+    background: transparent;
+    border: 1px solid var(--line-soft);
+    color: var(--text);
+    width: 34px;
+    height: 34px;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.2s;
+  }
+  .nav button:hover {
+    background: var(--orange);
+    border-color: var(--orange);
+    color: #06101E;
+  }
+  .nav .counter {
+    font-family: 'Roboto Mono', monospace;
+    font-size: 12px;
+    color: var(--text-mid);
+    letter-spacing: 0.15em;
+    min-width: 50px;
+    text-align: center;
+  }
+  .nav .counter .current { color: var(--orange); font-weight: 600; }
+
+  .progress-bar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 3px;
+    background: linear-gradient(90deg, var(--orange-light), var(--orange));
+    z-index: 200;
+    transition: width 0.5s ease;
+  }
+
+  .hint {
+    position: fixed;
+    bottom: 90px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-family: 'Roboto Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 0.2em;
+    color: var(--text-dim);
+    text-transform: uppercase;
+    z-index: 99;
+    opacity: 0.5;
+  }
+</style>
+</head>
+<body>
+
+<div class="progress-bar" id="progress"></div>
+
+<div class="deck" id="deck">
+
+  <!-- ═══ SLIDE 1 — PORTADA ═══ -->
+  <section class="slide s1 active">
+    <div class="chrome-top">
+      <div class="brand"><img src="assets/logo-horizontal-white.png" alt="El Club de la Libertad"></div>
+      <div>Historia · Jully Comas</div>
+    </div>
+    <div class="left">
+      <img src="assets/presentacion/p1-img1.png" alt="Jully Comas">
+    </div>
+    <div class="right">
+      <img src="assets/logo-vertical-white.png" alt="El Club de la Libertad" class="s1-logo">
+      <div class="section-label">Historia Diamante</div>
+      <h1 class="big">Jully<br><span class="orange">Comas</span></h1>
+      <div class="rank">— Diamante</div>
+      <div class="deco"></div>
+    </div>
+    <div class="chrome-bottom">
+      <div>01 · Portada</div>
+      <div>Immunotec · 2026</div>
+    </div>
+  </section>
+
+  <!-- ═══ SLIDE 2 — DIMENSIÓN DE IMMUNOTEC ═══ -->
+  <section class="slide s2">
+    <div class="chrome-top">
+      <div class="brand"><img src="assets/logo-horizontal-white.png" alt="El Club de la Libertad"></div>
+      <div>02 / 08</div>
+    </div>
+    <div class="slide-content">
+      <div class="section-label">Contexto</div>
+      <h2 class="title">Entiende la dimensión de <span class="orange">Immunotec</span></h2>
+
+      <ul class="bullet-list">
+        <li>El <strong>80% de los empleados</strong> ganan promedio <strong>RD$30,000 pesos</strong> mensuales equivalentes a <strong>US$500 dólares</strong>.</li>
+        <li>Sólo el <strong>3%</strong> tiene ingresos de <strong>RD$300,000 pesos</strong> equivalentes a <strong>US$5,000 dólares</strong> mensuales.</li>
+      </ul>
+
+      <div class="emph-box">
+        Solo en <span class="orange">4 meses</span> estoy en el 3% de la población dominicana.
+      </div>
+    </div>
+    <div class="chrome-bottom">
+      <div>Dimensión · Immunotec</div>
+      <div>El Club de la Libertad</div>
+    </div>
+    <img src="assets/logo-vertical-white.png" alt="" class="watermark">
+  </section>
+
+  <!-- ═══ SLIDE 3 — TRAYECTORIA PROFESIONAL ═══ -->
+  <section class="slide s3">
+    <div class="chrome-top">
+      <div class="brand"><img src="assets/logo-horizontal-white.png" alt="El Club de la Libertad"></div>
+      <div>03 / 08</div>
+    </div>
+    <div class="slide-content">
+      <div class="grid">
+        <div class="photos">
+          <img src="assets/presentacion/p3-img1.png" alt="Trayectoria Jully Comas 1">
+          <img src="assets/presentacion/p3-img2.png" alt="Trayectoria Jully Comas 2">
+        </div>
+        <div>
+          <div class="section-label">Trayectoria Profesional</div>
+          <h2 class="title"><span class="orange">Trayectoria</span><br>Profesional</h2>
+          <p class="body">
+            Durante <strong>20 años</strong>, formé parte de un prestigioso grupo empresarial en la República Dominicana, donde percibía ingresos mensuales de <strong>RD$125,000</strong> (aproximadamente <strong>US$2,000</strong>).
+          </p>
+        </div>
+      </div>
+    </div>
+    <div class="chrome-bottom">
+      <div>Trayectoria Profesional</div>
+      <div>El Club de la Libertad</div>
+    </div>
+    <img src="assets/logo-vertical-white.png" alt="" class="watermark">
+  </section>
+
+  <!-- ═══ SLIDE 4 — POTENCIAL / EMPRESAS ═══ -->
+  <section class="slide s4">
+    <div class="chrome-top">
+      <div class="brand"><img src="assets/logo-horizontal-white.png" alt="El Club de la Libertad"></div>
+      <div>04 / 08</div>
+    </div>
+    <div class="slide-content">
+      <div class="section-label">Descubrimiento</div>
+      <h2 class="title">Cuando descubres el potencial de lo que tienes,<br>el tiempo <span class="orange">deja de faltar</span></h2>
+      <div class="companies">
+        <div class="company"><img src="assets/presentacion/p4-img1.png" alt="JAM Inversiones"></div>
+        <div class="company"><img src="assets/presentacion/p4-img2.png" alt="GHP Auto Export"></div>
+        <div class="company"><img src="assets/presentacion/p4-img3.png" alt="Arianny Auto Import"></div>
+      </div>
+    </div>
+    <div class="chrome-bottom">
+      <div>Potencial · Diversificación</div>
+      <div>El Club de la Libertad</div>
+    </div>
+    <img src="assets/logo-vertical-white.png" alt="" class="watermark">
+  </section>
+
+  <!-- ═══ SLIDE 5 — HERRAMIENTAS ═══ -->
+  <section class="slide s5">
+    <div class="chrome-top">
+      <div class="brand"><img src="assets/logo-horizontal-white.png" alt="El Club de la Libertad"></div>
+      <div>05 / 08</div>
+    </div>
+    <div class="slide-content">
+      <div class="section-label">Duplicación</div>
+      <h2 class="title">El poder de la <span class="orange">duplicación</span><br>a través de las herramientas</h2>
+      <div class="tools">
+        <div class="tool"><img src="assets/presentacion/p5-img1.png" alt="La Revolución del Bienestar"></div>
+        <div class="tool"><img src="assets/presentacion/p5-img2.png" alt="Descubre Immunotec"></div>
+      </div>
+    </div>
+    <div class="chrome-bottom">
+      <div>Herramientas · Duplicación</div>
+      <div>El Club de la Libertad</div>
+    </div>
+    <img src="assets/logo-vertical-white.png" alt="" class="watermark">
+  </section>
+
+  <!-- ═══ SLIDE 6 — BATALLA ═══ -->
+  <section class="slide s6">
+    <div class="chrome-top">
+      <div class="brand"><img src="assets/logo-horizontal-white.png" alt="El Club de la Libertad"></div>
+      <div>06 / 08</div>
+    </div>
+    <div class="slide-content">
+      <div class="section-label">Acción</div>
+      <h2 class="title">Lánzate al terreno de batalla…<br>porque los rangos <span class="orange">no los regalan</span></h2>
+      <div class="photos">
+        <img src="assets/presentacion/p6-img1.png" alt="Reunión de equipo" class="horizontal">
+        <img src="assets/presentacion/p6-img3.jpg" alt="Jully con equipo en consulta" class="vertical">
+        <img src="assets/presentacion/p6-img2.png" alt="Equipo celebrando" class="horizontal">
+      </div>
+    </div>
+    <div class="chrome-bottom">
+      <div>Terreno de Batalla</div>
+      <div>El Club de la Libertad</div>
+    </div>
+    <img src="assets/logo-vertical-white.png" alt="" class="watermark">
+  </section>
+
+  <!-- ═══ SLIDE 7 — HIJOS ═══ -->
+  <section class="slide s7">
+    <div class="chrome-top">
+      <div class="brand"><img src="assets/logo-horizontal-white.png" alt="El Club de la Libertad"></div>
+      <div>07 / 08</div>
+    </div>
+    <div class="slide-content">
+      <div class="section-label">Legado</div>
+      <h2 class="title">Enséñales a tus hijos, con el ejemplo,<br>a <span class="orange">trabajar</span> cada día por sus sueños</h2>
+      <div class="photos">
+        <img src="assets/presentacion/p7-img1.png" alt="Hijo trabajando 1">
+        <img src="assets/presentacion/p7-img2.png" alt="Hijo trabajando 2">
+      </div>
+    </div>
+    <div class="chrome-bottom">
+      <div>Legado · Ejemplo</div>
+      <div>El Club de la Libertad</div>
+    </div>
+    <img src="assets/logo-vertical-white.png" alt="" class="watermark">
+  </section>
+
+  <!-- ═══ SLIDE 8 — CIERRE ═══ -->
+  <section class="slide s8">
+    <div class="chrome-top">
+      <div class="brand"><img src="assets/logo-horizontal-white.png" alt="El Club de la Libertad"></div>
+      <div>08 / 08</div>
+    </div>
+    <div class="slide-content">
+      <div class="section-label">Mentalidad</div>
+      <h2 class="title">Quien teme perder, ya está <span class="orange">derrotado</span>.<br>Porque el miedo no te protege… te limita.</h2>
+      <p class="body">Muchos no pierden por falta de capacidad, pierden porque dudan antes de actuar.</p>
+      <p class="body">Como dice <strong>Sun Tzu</strong>: <em>"El miedo no es defensa, es una barrera invisible que te frena antes de empezar."</em></p>
+      <p class="body">Cuando dejas de temer, empiezas a avanzar y ahí es donde la mayoría se queda atrás.</p>
+      <div class="final">Si lo crees, lo creas.</div>
+    </div>
+    <div class="chrome-bottom">
+      <div>Cierre · Mentalidad</div>
+      <div>El Club de la Libertad · Immunotec</div>
+    </div>
+    <img src="assets/logo-vertical-white.png" alt="" class="watermark">
+  </section>
+
+</div>
+
+<div class="hint">← → · Espacio · Click para navegar</div>
+
+<div class="nav">
+  <button id="prev" title="Anterior">‹</button>
+  <div class="counter"><span class="current" id="curr">01</span> / <span id="total">08</span></div>
+  <button id="next" title="Siguiente">›</button>
+</div>
+
+<script>
+  const slides = document.querySelectorAll('.slide');
+  const total = slides.length;
+  let idx = 0;
+  const currEl = document.getElementById('curr');
+  const totalEl = document.getElementById('total');
+  const progress = document.getElementById('progress');
+
+  totalEl.textContent = String(total).padStart(2, '0');
+
+  function show(i) {
+    idx = (i + total) % total;
+    slides.forEach((s, n) => s.classList.toggle('active', n === idx));
+    currEl.textContent = String(idx + 1).padStart(2, '0');
+    progress.style.width = ((idx + 1) / total * 100) + '%';
+  }
+
+  document.getElementById('next').addEventListener('click', (e) => { e.stopPropagation(); show(idx + 1); });
+  document.getElementById('prev').addEventListener('click', (e) => { e.stopPropagation(); show(idx - 1); });
+
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'ArrowRight' || e.key === ' ' || e.key === 'PageDown') { e.preventDefault(); show(idx + 1); }
+    if (e.key === 'ArrowLeft' || e.key === 'PageUp') { e.preventDefault(); show(idx - 1); }
+    if (e.key === 'Home') show(0);
+    if (e.key === 'End') show(total - 1);
+  });
+
+  document.addEventListener('click', (e) => {
+    if (e.target.closest('.nav') || e.target.closest('a') || e.target.closest('button')) return;
+    show(idx + 1);
+  });
+
+  show(0);
+</script>
+
+</body>
+</html>
