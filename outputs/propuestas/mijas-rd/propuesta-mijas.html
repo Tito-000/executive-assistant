@@ -1,0 +1,1137 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>MM AGENCY. — Propuesta Mijas RD</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800;900&family=DM+Mono:wght@400;500&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+  :root {
+    --primary: #FAFA00;
+    --secondary: #713DFF;
+    --orange: #F54900;
+    --light-blue: #00E3FF;
+    --green: #008500;
+    --bg: #181818;
+    --bg-card: #202020;
+    --border: #353535;
+    --space-grey: #707070;
+    --light-grey: #C9C9C9;
+    --white: #FFFFFF;
+    --font-h: 'Orbitron', sans-serif;
+    --font-b: 'Inter', sans-serif;
+    --font-m: 'DM Mono', monospace;
+  }
+
+  @page {
+    size: A4;
+    margin: 0;
+  }
+
+  html, body {
+    background: var(--bg);
+    color: var(--white);
+    font-family: var(--font-b);
+    -webkit-font-smoothing: antialiased;
+    font-size: 11pt;
+    line-height: 1.55;
+  }
+
+  .page {
+    width: 210mm;
+    min-height: 297mm;
+    padding: 18mm 18mm 16mm 18mm;
+    background: var(--bg);
+    position: relative;
+    page-break-after: always;
+    overflow: hidden;
+  }
+  .page:last-child { page-break-after: auto; }
+
+  /* Background accents */
+  .bg-grid {
+    position: absolute;
+    inset: 0;
+    background-image:
+      linear-gradient(rgba(53,53,53,.35) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(53,53,53,.35) 1px, transparent 1px);
+    background-size: 40px 40px;
+    opacity: .5;
+    pointer-events: none;
+  }
+  .bg-glow {
+    position: absolute;
+    width: 520px; height: 520px;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(113,61,255,.22), transparent 65%);
+    filter: blur(10px);
+    pointer-events: none;
+  }
+  .bg-glow-2 {
+    position: absolute;
+    width: 420px; height: 420px;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(250,250,0,.08), transparent 65%);
+    filter: blur(10px);
+    pointer-events: none;
+  }
+
+  .inner { position: relative; z-index: 2; }
+
+  /* Page header */
+  .p-head {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-bottom: 14px;
+    border-bottom: .5px solid var(--border);
+    margin-bottom: 28px;
+  }
+  .p-head-logo { height: 18px; }
+  .p-head-meta {
+    font-family: var(--font-m);
+    font-size: 7pt;
+    color: var(--space-grey);
+    letter-spacing: .22em;
+    text-transform: uppercase;
+  }
+
+  /* Section tag */
+  .s-num {
+    font-family: var(--font-m);
+    font-size: 7pt;
+    letter-spacing: .4em;
+    text-transform: uppercase;
+    color: var(--primary);
+    margin-bottom: 10px;
+  }
+  .s-title {
+    font-family: var(--font-h);
+    font-weight: 700;
+    font-size: 22pt;
+    letter-spacing: -.01em;
+    margin-bottom: 14px;
+    line-height: 1.1;
+  }
+  .s-desc {
+    font-family: var(--font-b);
+    font-size: 10pt;
+    color: var(--light-grey);
+    line-height: 1.7;
+    max-width: 155mm;
+    margin-bottom: 26px;
+  }
+
+  .dot { color: var(--primary); }
+
+  /* Footer */
+  .p-foot {
+    position: absolute;
+    bottom: 12mm;
+    left: 18mm;
+    right: 18mm;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 10px;
+    border-top: .5px solid var(--border);
+    font-family: var(--font-m);
+    font-size: 6.5pt;
+    color: var(--space-grey);
+    letter-spacing: .2em;
+    text-transform: uppercase;
+  }
+
+  /* ===== PAGE 1 — COVER ===== */
+  .cover {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 261mm;
+    position: relative;
+  }
+  .cover-top { display: flex; justify-content: space-between; align-items: flex-start; }
+  .cover-logo { height: 22px; }
+  .cover-meta-top {
+    font-family: var(--font-m);
+    font-size: 7pt;
+    color: var(--space-grey);
+    letter-spacing: .3em;
+    text-transform: uppercase;
+    text-align: right;
+    line-height: 1.9;
+  }
+  .cover-meta-top .y { color: var(--primary); }
+
+  .cover-mid { padding: 40mm 0 0 0; }
+  .cover-tag {
+    font-family: var(--font-m);
+    font-size: 8pt;
+    letter-spacing: .5em;
+    text-transform: uppercase;
+    color: var(--primary);
+    margin-bottom: 18px;
+  }
+  .cover-title {
+    font-family: var(--font-h);
+    font-weight: 800;
+    font-size: 44pt;
+    line-height: 1;
+    letter-spacing: -.02em;
+    margin-bottom: 22px;
+  }
+  .cover-title .line2 { display: block; color: var(--primary); }
+  .cover-sub {
+    font-family: var(--font-b);
+    font-size: 13pt;
+    color: var(--light-grey);
+    max-width: 150mm;
+    line-height: 1.55;
+    font-weight: 400;
+  }
+  .cover-line {
+    width: 72px;
+    height: 3px;
+    background: var(--primary);
+    margin: 28px 0;
+  }
+
+  .cover-client {
+    background: var(--bg-card);
+    border: .5px solid var(--border);
+    border-left: 3px solid var(--primary);
+    padding: 18px 22px;
+    max-width: 150mm;
+    margin-top: 20px;
+  }
+  .cover-client-lbl {
+    font-family: var(--font-m);
+    font-size: 6.5pt;
+    letter-spacing: .35em;
+    text-transform: uppercase;
+    color: var(--space-grey);
+    margin-bottom: 6px;
+  }
+  .cover-client-nm {
+    font-family: var(--font-h);
+    font-weight: 700;
+    font-size: 16pt;
+    color: var(--white);
+    letter-spacing: -.01em;
+  }
+  .cover-client-nm .handle {
+    font-family: var(--font-m);
+    font-weight: 400;
+    font-size: 10pt;
+    color: var(--space-grey);
+    letter-spacing: .05em;
+    margin-left: 10px;
+  }
+
+  .cover-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    padding-top: 18px;
+    border-top: .5px solid var(--border);
+  }
+  .cover-bottom-col .lbl {
+    font-family: var(--font-m);
+    font-size: 6pt;
+    letter-spacing: .3em;
+    text-transform: uppercase;
+    color: var(--space-grey);
+    margin-bottom: 4px;
+    display: block;
+  }
+  .cover-bottom-col .val {
+    font-family: var(--font-b);
+    font-size: 9pt;
+    color: var(--white);
+    font-weight: 500;
+  }
+  .cover-bottom-col .val .y { color: var(--primary); }
+
+  /* ===== DIAGNOSTIC CARDS ===== */
+  .diag-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 14px;
+    margin-bottom: 20px;
+  }
+  .diag-card {
+    background: var(--bg-card);
+    border: .5px solid var(--border);
+    padding: 18px 20px;
+  }
+  .diag-card .lbl {
+    font-family: var(--font-m);
+    font-size: 6.5pt;
+    letter-spacing: .3em;
+    text-transform: uppercase;
+    color: var(--space-grey);
+    margin-bottom: 8px;
+  }
+  .diag-card .big {
+    font-family: var(--font-h);
+    font-weight: 700;
+    font-size: 26pt;
+    color: var(--primary);
+    line-height: 1;
+    margin-bottom: 6px;
+  }
+  .diag-card .desc {
+    font-family: var(--font-b);
+    font-size: 8pt;
+    color: var(--light-grey);
+    line-height: 1.5;
+  }
+  .diag-card.bad .big { color: var(--orange); }
+
+  .diag-insight {
+    background: var(--bg-card);
+    border-left: 3px solid var(--primary);
+    padding: 16px 20px;
+    margin-top: 6px;
+    margin-bottom: 20px;
+  }
+  .diag-insight .lbl {
+    font-family: var(--font-m);
+    font-size: 6.5pt;
+    letter-spacing: .3em;
+    text-transform: uppercase;
+    color: var(--primary);
+    margin-bottom: 8px;
+  }
+  .diag-insight p {
+    font-family: var(--font-b);
+    font-size: 9.5pt;
+    color: var(--light-grey);
+    line-height: 1.65;
+  }
+
+  .diag-pillars { margin-top: 10px; }
+  .diag-pillar-title {
+    font-family: var(--font-m);
+    font-size: 7pt;
+    letter-spacing: .3em;
+    text-transform: uppercase;
+    color: var(--space-grey);
+    margin-bottom: 14px;
+  }
+  .pillars {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12px;
+  }
+  .pillar {
+    border: .5px solid var(--border);
+    padding: 14px 16px;
+    background: var(--bg);
+  }
+  .pillar .num {
+    font-family: var(--font-m);
+    font-size: 6.5pt;
+    color: var(--primary);
+    letter-spacing: .3em;
+    margin-bottom: 6px;
+  }
+  .pillar .ttl {
+    font-family: var(--font-h);
+    font-weight: 700;
+    font-size: 10pt;
+    color: var(--white);
+    margin-bottom: 6px;
+    letter-spacing: -.005em;
+  }
+  .pillar .txt {
+    font-family: var(--font-b);
+    font-size: 8pt;
+    color: var(--light-grey);
+    line-height: 1.55;
+  }
+
+  /* ===== PRICING PLANS ===== */
+  .plan-stack { display: flex; flex-direction: column; gap: 14px; }
+
+  .plan {
+    background: var(--bg-card);
+    border: .5px solid var(--border);
+    padding: 20px 22px;
+    display: grid;
+    grid-template-columns: 1fr 1.2fr;
+    gap: 22px;
+    position: relative;
+  }
+  .plan.featured {
+    border: 1px solid var(--primary);
+    background: linear-gradient(135deg, #1e1d0a 0%, var(--bg-card) 60%);
+  }
+  .plan-badge {
+    position: absolute;
+    top: -9px;
+    left: 22px;
+    background: var(--primary);
+    color: var(--bg);
+    font-family: var(--font-m);
+    font-size: 6.5pt;
+    font-weight: 700;
+    letter-spacing: .25em;
+    text-transform: uppercase;
+    padding: 4px 10px;
+  }
+  .plan-head .tag {
+    font-family: var(--font-m);
+    font-size: 6.5pt;
+    letter-spacing: .3em;
+    text-transform: uppercase;
+    color: var(--space-grey);
+    margin-bottom: 6px;
+  }
+  .plan-head .name {
+    font-family: var(--font-h);
+    font-weight: 700;
+    font-size: 17pt;
+    color: var(--white);
+    letter-spacing: -.01em;
+    line-height: 1.05;
+    margin-bottom: 4px;
+  }
+  .plan.featured .plan-head .name { color: var(--primary); }
+  .plan-head .dur {
+    font-family: var(--font-m);
+    font-size: 7pt;
+    letter-spacing: .18em;
+    text-transform: uppercase;
+    color: var(--space-grey);
+    margin-bottom: 14px;
+  }
+  .plan-head .price {
+    font-family: var(--font-h);
+    font-weight: 800;
+    font-size: 24pt;
+    color: var(--white);
+    line-height: 1;
+    margin-bottom: 2px;
+    letter-spacing: -.02em;
+  }
+  .plan-head .price .cur {
+    font-family: var(--font-m);
+    font-size: 9pt;
+    color: var(--space-grey);
+    font-weight: 500;
+    letter-spacing: .12em;
+    vertical-align: super;
+    margin-right: 4px;
+  }
+  .plan-head .price-sub {
+    font-family: var(--font-m);
+    font-size: 7pt;
+    color: var(--space-grey);
+    letter-spacing: .12em;
+    text-transform: uppercase;
+    margin-bottom: 8px;
+  }
+  .plan-head .save {
+    display: inline-block;
+    font-family: var(--font-m);
+    font-size: 6.5pt;
+    letter-spacing: .2em;
+    text-transform: uppercase;
+    color: var(--primary);
+    background: rgba(250,250,0,.08);
+    padding: 4px 8px;
+    border: .5px solid rgba(250,250,0,.35);
+  }
+
+  .plan-body {
+    border-left: .5px solid var(--border);
+    padding-left: 22px;
+  }
+  .plan-body .inc-lbl {
+    font-family: var(--font-m);
+    font-size: 6.5pt;
+    letter-spacing: .3em;
+    text-transform: uppercase;
+    color: var(--primary);
+    margin-bottom: 10px;
+  }
+  .plan-body ul { list-style: none; }
+  .plan-body li {
+    font-family: var(--font-b);
+    font-size: 8.5pt;
+    color: var(--light-grey);
+    padding: 4px 0 4px 16px;
+    position: relative;
+    line-height: 1.5;
+  }
+  .plan-body li::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 11px;
+    width: 6px;
+    height: 1.5px;
+    background: var(--primary);
+  }
+
+  /* ===== EVENTS ===== */
+  .events-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 14px;
+    margin-bottom: 18px;
+  }
+  .event-card {
+    background: var(--bg-card);
+    border: .5px solid var(--border);
+    padding: 18px 20px;
+  }
+  .event-card .tag {
+    font-family: var(--font-m);
+    font-size: 6.5pt;
+    letter-spacing: .3em;
+    text-transform: uppercase;
+    color: var(--space-grey);
+    margin-bottom: 6px;
+  }
+  .event-card .name {
+    font-family: var(--font-h);
+    font-weight: 700;
+    font-size: 13pt;
+    color: var(--white);
+    margin-bottom: 10px;
+  }
+  .event-card .price {
+    font-family: var(--font-h);
+    font-weight: 800;
+    font-size: 18pt;
+    color: var(--primary);
+    line-height: 1;
+    margin-bottom: 4px;
+  }
+  .event-card .price .cur {
+    font-family: var(--font-m);
+    font-size: 8pt;
+    color: var(--space-grey);
+    letter-spacing: .12em;
+    vertical-align: super;
+    margin-right: 3px;
+  }
+  .event-card .sub {
+    font-family: var(--font-m);
+    font-size: 6.5pt;
+    letter-spacing: .18em;
+    text-transform: uppercase;
+    color: var(--space-grey);
+    margin-bottom: 12px;
+  }
+  .event-card ul { list-style: none; }
+  .event-card li {
+    font-family: var(--font-b);
+    font-size: 8pt;
+    color: var(--light-grey);
+    padding: 3px 0 3px 12px;
+    position: relative;
+    line-height: 1.5;
+  }
+  .event-card li::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 10px;
+    width: 5px;
+    height: 1.5px;
+    background: var(--primary);
+  }
+
+  .event-note {
+    background: var(--bg-card);
+    border: .5px solid var(--border);
+    padding: 14px 18px;
+    font-family: var(--font-b);
+    font-size: 8.5pt;
+    color: var(--light-grey);
+    line-height: 1.6;
+  }
+  .event-note strong { color: var(--primary); font-weight: 700; }
+
+  /* ===== PROCESS ===== */
+  .process {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 12px;
+    margin-bottom: 24px;
+  }
+  .step {
+    background: var(--bg-card);
+    border: .5px solid var(--border);
+    padding: 16px 16px 18px;
+    position: relative;
+  }
+  .step .num {
+    font-family: var(--font-h);
+    font-weight: 800;
+    font-size: 28pt;
+    color: var(--primary);
+    line-height: 1;
+    opacity: .25;
+    position: absolute;
+    top: 8px;
+    right: 12px;
+  }
+  .step .lbl {
+    font-family: var(--font-m);
+    font-size: 6pt;
+    letter-spacing: .3em;
+    text-transform: uppercase;
+    color: var(--primary);
+    margin-bottom: 8px;
+    position: relative;
+  }
+  .step .ttl {
+    font-family: var(--font-h);
+    font-weight: 700;
+    font-size: 10pt;
+    color: var(--white);
+    margin-bottom: 8px;
+    position: relative;
+  }
+  .step .txt {
+    font-family: var(--font-b);
+    font-size: 7.5pt;
+    color: var(--light-grey);
+    line-height: 1.55;
+    position: relative;
+  }
+
+  /* ===== TERMS ===== */
+  .terms {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 14px;
+    margin-bottom: 20px;
+  }
+  .term-card {
+    background: var(--bg-card);
+    border: .5px solid var(--border);
+    padding: 18px 20px;
+  }
+  .term-card .tag {
+    font-family: var(--font-m);
+    font-size: 6.5pt;
+    letter-spacing: .3em;
+    text-transform: uppercase;
+    color: var(--primary);
+    margin-bottom: 10px;
+  }
+  .term-card .ttl {
+    font-family: var(--font-h);
+    font-weight: 700;
+    font-size: 11pt;
+    color: var(--white);
+    margin-bottom: 8px;
+  }
+  .term-card p {
+    font-family: var(--font-b);
+    font-size: 8.5pt;
+    color: var(--light-grey);
+    line-height: 1.6;
+  }
+
+  /* ===== CTA ===== */
+  .cta {
+    background: linear-gradient(135deg, #1e1d0a 0%, var(--bg-card) 70%);
+    border: 1px solid var(--primary);
+    padding: 30px 32px;
+    text-align: center;
+    margin-top: 4px;
+  }
+  .cta-tag {
+    font-family: var(--font-m);
+    font-size: 7pt;
+    letter-spacing: .4em;
+    text-transform: uppercase;
+    color: var(--primary);
+    margin-bottom: 12px;
+  }
+  .cta-title {
+    font-family: var(--font-h);
+    font-weight: 800;
+    font-size: 22pt;
+    color: var(--white);
+    line-height: 1.1;
+    letter-spacing: -.01em;
+    margin-bottom: 14px;
+  }
+  .cta-title .y { color: var(--primary); }
+  .cta-sub {
+    font-family: var(--font-b);
+    font-size: 10pt;
+    color: var(--light-grey);
+    max-width: 140mm;
+    margin: 0 auto 22px;
+    line-height: 1.6;
+  }
+  .cta-contact {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    padding-top: 18px;
+    border-top: .5px solid var(--border);
+    flex-wrap: wrap;
+  }
+  .cta-contact-item {
+    text-align: left;
+  }
+  .cta-contact-item .lbl {
+    font-family: var(--font-m);
+    font-size: 6pt;
+    letter-spacing: .3em;
+    text-transform: uppercase;
+    color: var(--space-grey);
+    margin-bottom: 3px;
+    display: block;
+  }
+  .cta-contact-item .val {
+    font-family: var(--font-b);
+    font-size: 9pt;
+    color: var(--white);
+    font-weight: 600;
+  }
+
+  .legal {
+    text-align: center;
+    font-family: var(--font-m);
+    font-size: 6.5pt;
+    color: var(--space-grey);
+    letter-spacing: .18em;
+    line-height: 1.7;
+    margin-top: 22px;
+  }
+
+</style>
+</head>
+<body>
+
+<!-- ============ PAGE 1 — COVER ============ -->
+<section class="page">
+  <div class="bg-grid"></div>
+  <div class="bg-glow" style="top:-150px;right:-150px;"></div>
+  <div class="bg-glow-2" style="bottom:-120px;left:-100px;"></div>
+
+  <div class="inner cover">
+    <div class="cover-top">
+      <div style="font-family:var(--font-h);font-weight:800;font-size:16pt;letter-spacing:.06em;">MM AGENCY<span class="dot">.</span></div>
+      <div class="cover-meta-top">
+        <span class="y">&#9679;</span> Propuesta Comercial<br>
+        Abril 2026 &mdash; v1.0<br>
+        Documento Confidencial
+      </div>
+    </div>
+
+    <div class="cover-mid">
+      <div class="cover-tag">&mdash; Estrategia y Producción de Contenido</div>
+      <h1 class="cover-title">
+        Contenido que<br>
+        <span class="line2">convierte seguidores</span>
+        en clientes<span class="dot">.</span>
+      </h1>
+      <div class="cover-line"></div>
+      <p class="cover-sub">
+        Plan estratégico de contenido mensual y cobertura de eventos
+        diseñado para reactivar la presencia digital del restaurante
+        y convertir audiencia en reservaciones reales.
+      </p>
+
+      <div class="cover-client">
+        <div class="cover-client-lbl">Preparado para</div>
+        <div class="cover-client-nm">MIJAS RESTAURANTE<span class="handle">@mijasrd</span></div>
+      </div>
+    </div>
+
+    <div class="cover-bottom">
+      <div class="cover-bottom-col">
+        <span class="lbl">Agencia</span>
+        <span class="val">MM Agency<span class="y">.</span></span>
+      </div>
+      <div class="cover-bottom-col">
+        <span class="lbl">Contacto</span>
+        <span class="val">Martin Mercedes</span>
+      </div>
+      <div class="cover-bottom-col">
+        <span class="lbl">Fecha</span>
+        <span class="val">10 · ABR · 2026</span>
+      </div>
+      <div class="cover-bottom-col">
+        <span class="lbl">Validez</span>
+        <span class="val">15 días</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ PAGE 2 — DIAGNÓSTICO ============ -->
+<section class="page">
+  <div class="bg-grid"></div>
+  <div class="inner">
+    <div class="p-head">
+      <div style="font-family:var(--font-h);font-weight:800;font-size:11pt;letter-spacing:.06em;">MM AGENCY<span class="dot">.</span></div>
+      <div class="p-head-meta">01 &mdash; Diagnóstico</div>
+    </div>
+
+    <div class="s-num">01 &mdash; Situación Actual</div>
+    <h2 class="s-title">El problema no es falta de<br>audiencia. Es falta de estrategia<span class="dot">.</span></h2>
+    <p class="s-desc">
+      Mijas tiene una base sólida de seguidores, pero el contenido actual no está
+      generando engagement ni convirtiendo esa audiencia en clientes. Antes de
+      proponer solución, dejamos los números sobre la mesa.
+    </p>
+
+    <div class="diag-grid">
+      <div class="diag-card">
+        <div class="lbl">Seguidores</div>
+        <div class="big">11.2K</div>
+        <div class="desc">Base de audiencia saludable para un restaurante en RD. Potencial de activación alto.</div>
+      </div>
+      <div class="diag-card bad">
+        <div class="lbl">Engagement promedio</div>
+        <div class="big">~6</div>
+        <div class="desc">Likes promedio por post. Ratio de engagement por debajo del 0.1% &mdash; cuenta dormida.</div>
+      </div>
+      <div class="diag-card bad">
+        <div class="lbl">Views en Reels</div>
+        <div class="big">Bajo</div>
+        <div class="desc">Los reels no están alcanzando a audiencia nueva. Sin estrategia de formato ni hook.</div>
+      </div>
+      <div class="diag-card">
+        <div class="lbl">Oportunidad</div>
+        <div class="big">ALTA</div>
+        <div class="desc">Sector gastronómico en RD con alta demanda de contenido visual. Upside inmediato.</div>
+      </div>
+    </div>
+
+    <div class="diag-insight">
+      <div class="lbl">&rsaquo;&rsaquo; Insight clave</div>
+      <p>
+        En restaurantes, el contenido que más convierte no es el más "producido",
+        sino el que muestra <strong style="color:var(--white);">gente real comiendo, ambiente y detalles del menú</strong>.
+        Los top players del sector en RD están priorizando producción orgánica con talento en cámara,
+        no catálogos de platos. Esa es la palanca que falta activar.
+      </p>
+    </div>
+
+    <div class="diag-pillars">
+      <div class="diag-pillar-title">Pilares de nuestra solución</div>
+      <div class="pillars">
+        <div class="pillar">
+          <div class="num">&mdash; 01</div>
+          <div class="ttl">Estrategia</div>
+          <div class="txt">Ejes de contenido definidos por objetivos de negocio: reservas, walk-ins, awareness.</div>
+        </div>
+        <div class="pillar">
+          <div class="num">&mdash; 02</div>
+          <div class="ttl">Producción</div>
+          <div class="txt">Mezcla de contenido producido + orgánico nativo. Formatos probados para el sector.</div>
+        </div>
+        <div class="pillar">
+          <div class="num">&mdash; 03</div>
+          <div class="ttl">Consistencia</div>
+          <div class="txt">Calendario editorial ejecutado sin fallas. Publicaciones con criterio, no por cumplir.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="p-foot">
+    <span>MM Agency<span class="dot">.</span> &mdash; Propuesta Mijas RD</span>
+    <span>&mdash; 02 &mdash;</span>
+  </div>
+</section>
+
+<!-- ============ PAGE 3 — PLANES ============ -->
+<section class="page">
+  <div class="bg-grid"></div>
+  <div class="bg-glow" style="top:-180px;left:-180px;"></div>
+  <div class="inner">
+    <div class="p-head">
+      <div style="font-family:var(--font-h);font-weight:800;font-size:11pt;letter-spacing:.06em;">MM AGENCY<span class="dot">.</span></div>
+      <div class="p-head-meta">02 &mdash; Planes</div>
+    </div>
+
+    <div class="s-num">02 &mdash; Inversión</div>
+    <h2 class="s-title">Planes de contenido mensual<span class="dot">.</span></h2>
+    <p class="s-desc">
+      Tres opciones diseñadas para escalar con el restaurante. Los planes de
+      mayor duración ofrecen mejor precio mensual y beneficios adicionales.
+    </p>
+
+    <div class="plan-stack">
+
+      <!-- PLAN 1 -->
+      <div class="plan">
+        <div class="plan-head">
+          <div class="tag">&mdash; Plan 01</div>
+          <div class="name">Mensual</div>
+          <div class="dur">1 mes &middot; Sin compromiso</div>
+          <div class="price"><span class="cur">RD$</span>45,000</div>
+          <div class="price-sub">100% al firmar</div>
+        </div>
+        <div class="plan-body">
+          <div class="inc-lbl">&rsaquo;&rsaquo; Incluye</div>
+          <ul>
+            <li>15 posts estáticos al mes (fotos de platos, ambiente, detalles)</li>
+            <li>8 videos / reels al mes (mezcla de producidos + orgánicos)</li>
+            <li>12 historias al mes</li>
+            <li>1 sesión de grabación en sitio</li>
+            <li>Calendario de publicación entregado el día 1 del mes</li>
+            <li>Reporte mensual de cierre</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- PLAN 2 -->
+      <div class="plan">
+        <div class="plan-head">
+          <div class="tag">&mdash; Plan 02</div>
+          <div class="name">Trimestral</div>
+          <div class="dur">3 meses</div>
+          <div class="price"><span class="cur">RD$</span>114,000</div>
+          <div class="price-sub">Pago único &middot; equivale a RD$38,000/mes</div>
+          <div class="price-sub" style="margin-top:-4px;">o RD$120,000 en 2 cuotas (RD$40,000/mes)</div>
+          <span class="save">Ahorras RD$6,000 pagando único</span>
+        </div>
+        <div class="plan-body">
+          <div class="inc-lbl">&rsaquo;&rsaquo; Todo lo del Plan 01, más</div>
+          <ul>
+            <li>Reunión estratégica al inicio del trimestre</li>
+            <li>Definición de ejes de contenido, campañas y fechas clave</li>
+            <li>Reporte de desempeño al cierre del trimestre con recomendaciones</li>
+            <li>Prioridad en agenda para coberturas de eventos</li>
+            <li><strong style="color:var(--primary);">Bonus:</strong> 1 cobertura de evento estándar incluida <span style="color:var(--space-grey);">(valor RD$27,000)</span></li>
+            <li>5% de descuento en coberturas de eventos adicionales</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- PLAN 3 -->
+      <div class="plan featured">
+        <div class="plan-badge">&rsaquo; Recomendado</div>
+        <div class="plan-head">
+          <div class="tag">&mdash; Plan 03</div>
+          <div class="name">Semestral</div>
+          <div class="dur">6 meses</div>
+          <div class="price"><span class="cur">RD$</span>198,720</div>
+          <div class="price-sub">Pago único &middot; equivale a RD$33,120/mes</div>
+          <div class="price-sub" style="margin-top:-4px;">o RD$216,000 en 3 cuotas (RD$36,000/mes)</div>
+          <span class="save">Ahorras RD$17,280 pagando único</span>
+        </div>
+        <div class="plan-body">
+          <div class="inc-lbl">&rsaquo;&rsaquo; Todo lo del Plan 02, más</div>
+          <ul>
+            <li>Estrategia de contenido semestral completa</li>
+            <li>Campañas estacionales, días especiales y lanzamientos</li>
+            <li>Reunión estratégica mensual (30 min) para ajustar dirección</li>
+            <li>Reporte de desempeño mensual con métricas clave</li>
+            <li><strong style="color:var(--primary);">Bonus:</strong> 2 coberturas de eventos estándar incluidas <span style="color:var(--space-grey);">(valor RD$54,000)</span></li>
+            <li><strong style="color:var(--primary);">10% de descuento</strong> en coberturas de eventos adicionales</li>
+          </ul>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="p-foot">
+    <span>MM Agency<span class="dot">.</span> &mdash; Propuesta Mijas RD</span>
+    <span>&mdash; 03 &mdash;</span>
+  </div>
+</section>
+
+<!-- ============ PAGE 4 — EVENTOS + PROCESO ============ -->
+<section class="page">
+  <div class="bg-grid"></div>
+  <div class="bg-glow-2" style="top:-100px;right:-100px;"></div>
+  <div class="inner">
+    <div class="p-head">
+      <div style="font-family:var(--font-h);font-weight:800;font-size:11pt;letter-spacing:.06em;">MM AGENCY<span class="dot">.</span></div>
+      <div class="p-head-meta">03 &mdash; Eventos &amp; Proceso</div>
+    </div>
+
+    <div class="s-num">03 &mdash; Cobertura de Eventos</div>
+    <h2 class="s-title">Eventos especiales<span class="dot">.</span></h2>
+    <p class="s-desc">
+      Cobertura profesional para noches temáticas, aperturas, lanzamientos de menú,
+      fiestas y cualquier evento que merezca contenido propio. Se cotiza por separado
+      de los planes mensuales.
+    </p>
+
+    <div class="events-grid">
+      <div class="event-card">
+        <div class="tag">&mdash; Opción A</div>
+        <div class="name">Evento Estándar</div>
+        <div class="price"><span class="cur">RD$</span>27,000</div>
+        <div class="sub">Hasta 4 horas en sitio</div>
+        <ul>
+          <li>1 reel resumen del evento (entrega 48-72h)</li>
+          <li>10-15 fotos editadas en alta calidad</li>
+          <li>Stories en vivo durante el evento</li>
+          <li>1 post estático del evento</li>
+        </ul>
+      </div>
+      <div class="event-card">
+        <div class="tag">&mdash; Opción B</div>
+        <div class="name">Evento Extendido</div>
+        <div class="price"><span class="cur">RD$</span>38,000</div>
+        <div class="sub">Hasta 6-7 horas en sitio</div>
+        <ul>
+          <li>2 reels (resumen + highlight)</li>
+          <li>20-25 fotos editadas en alta calidad</li>
+          <li>Stories en vivo durante el evento</li>
+          <li>2 posts estáticos del evento</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="event-note">
+      <strong>&rsaquo;&rsaquo; Beneficios por plan:</strong>
+      Plan Trimestral incluye <span style="color:var(--white);">5% de descuento</span> en coberturas adicionales.
+      Plan Semestral incluye <span style="color:var(--white);">2 coberturas estándar gratis</span> durante el semestre
+      <em>+</em> <span style="color:var(--white);">10% de descuento</span> en coberturas adicionales. Hora adicional: RD$3,000/h.
+    </div>
+
+    <div style="height:20px;"></div>
+
+    <div class="s-num">04 &mdash; Cómo trabajamos</div>
+    <h2 class="s-title" style="font-size:18pt;margin-bottom:20px;">Proceso mensual<span class="dot">.</span></h2>
+
+    <div class="process">
+      <div class="step">
+        <div class="num">01</div>
+        <div class="lbl">&mdash; Paso 01</div>
+        <div class="ttl">Estrategia</div>
+        <div class="txt">Definimos ejes, campañas y calendario del mes. Alineación con el negocio.</div>
+      </div>
+      <div class="step">
+        <div class="num">02</div>
+        <div class="lbl">&mdash; Paso 02</div>
+        <div class="ttl">Producción</div>
+        <div class="txt">Sesión de grabación en sitio. Capturamos material suficiente para todo el mes.</div>
+      </div>
+      <div class="step">
+        <div class="num">03</div>
+        <div class="lbl">&mdash; Paso 03</div>
+        <div class="ttl">Edición</div>
+        <div class="txt">Edición profesional de videos, fotos y copys. Entrega para aprobación.</div>
+      </div>
+      <div class="step">
+        <div class="num">04</div>
+        <div class="lbl">&mdash; Paso 04</div>
+        <div class="ttl">Publicación</div>
+        <div class="txt">Publicación según calendario. Stories en tiempo real. Reporte al cierre.</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="p-foot">
+    <span>MM Agency<span class="dot">.</span> &mdash; Propuesta Mijas RD</span>
+    <span>&mdash; 04 &mdash;</span>
+  </div>
+</section>
+
+<!-- ============ PAGE 5 — TÉRMINOS + CTA ============ -->
+<section class="page">
+  <div class="bg-grid"></div>
+  <div class="bg-glow" style="bottom:-200px;right:-150px;"></div>
+  <div class="inner">
+    <div class="p-head">
+      <div style="font-family:var(--font-h);font-weight:800;font-size:11pt;letter-spacing:.06em;">MM AGENCY<span class="dot">.</span></div>
+      <div class="p-head-meta">05 &mdash; Términos</div>
+    </div>
+
+    <div class="s-num">05 &mdash; Condiciones</div>
+    <h2 class="s-title">Términos y forma<br>de pago<span class="dot">.</span></h2>
+    <p class="s-desc">
+      Estructura estándar de MM Agency para garantizar arranque limpio y
+      previsibilidad para ambas partes.
+    </p>
+
+    <div class="terms">
+      <div class="term-card">
+        <div class="tag">&mdash; 01</div>
+        <div class="ttl">Forma de pago</div>
+        <p>
+          <strong style="color:var(--white);">Plan Mensual:</strong> 100% al firmar.<br>
+          <strong style="color:var(--white);">Trimestral:</strong> pago único con 5% de descuento o 2 cuotas bimensuales.<br>
+          <strong style="color:var(--white);">Semestral:</strong> pago único con 8% de descuento o 3 cuotas bimensuales.
+        </p>
+      </div>
+      <div class="term-card">
+        <div class="tag">&mdash; 02</div>
+        <div class="ttl">Revisiones</div>
+        <p>
+          Hasta 2 rondas de revisión incluidas por entregable. Cambios
+          adicionales se cotizan por separado. Aprobación vía WhatsApp o correo.
+        </p>
+      </div>
+      <div class="term-card">
+        <div class="tag">&mdash; 03</div>
+        <div class="ttl">Logística</div>
+        <p>
+          El restaurante facilita acceso, platos para grabación y coordinación
+          de horarios. Sesión de grabación se agenda con 5 días de anticipación.
+        </p>
+      </div>
+      <div class="term-card">
+        <div class="tag">&mdash; 04</div>
+        <div class="ttl">Validez</div>
+        <p>
+          Esta propuesta es válida por 15 días desde la fecha de emisión.
+          Precios en pesos dominicanos (RD$), no incluyen ITBIS si aplica.
+        </p>
+      </div>
+    </div>
+
+    <div class="cta">
+      <div class="cta-tag">&rsaquo;&rsaquo; Siguiente paso</div>
+      <h2 class="cta-title">
+        Listos para activar<br>
+        la cuenta<span class="y">.</span>
+      </h2>
+      <p class="cta-sub">
+        Confirma el plan que mejor se ajusta y arrancamos con la reunión de
+        estrategia esta misma semana. El primer mes de contenido puede estar
+        listo para publicar en 14 días desde la firma.
+      </p>
+      <div class="cta-contact">
+        <div class="cta-contact-item">
+          <span class="lbl">Contacto</span>
+          <span class="val">Martin Mercedes</span>
+        </div>
+        <div class="cta-contact-item">
+          <span class="lbl">WhatsApp</span>
+          <span class="val">+1 (809) 962-3868</span>
+        </div>
+        <div class="cta-contact-item">
+          <span class="lbl">Email</span>
+          <span class="val">martin@mmagency.com</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="legal">
+      &copy; 2026 MM AGENCY<span class="dot">.</span> &middot; Propuesta Confidencial &middot; Santo Domingo, RD
+    </div>
+  </div>
+
+  <div class="p-foot">
+    <span>MM Agency<span class="dot">.</span> &mdash; Propuesta Mijas RD</span>
+    <span>&mdash; 05 &mdash;</span>
+  </div>
+</section>
+
+</body>
+</html>

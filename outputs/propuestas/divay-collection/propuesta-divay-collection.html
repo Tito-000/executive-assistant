@@ -1,0 +1,1144 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>MM AGENCY. — Propuesta Divay Collection</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800;900&family=DM+Mono:wght@400;500&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+  :root {
+    --primary: #FAFA00;
+    --secondary: #713DFF;
+    --orange: #F54900;
+    --light-blue: #00E3FF;
+    --green: #008500;
+    --bg: #181818;
+    --bg-card: #202020;
+    --border: #353535;
+    --space-grey: #707070;
+    --light-grey: #C9C9C9;
+    --white: #FFFFFF;
+    --font-h: 'Orbitron', sans-serif;
+    --font-b: 'Inter', sans-serif;
+    --font-m: 'DM Mono', monospace;
+  }
+
+  @page {
+    size: A4;
+    margin: 0;
+  }
+
+  html, body {
+    background: var(--bg);
+    color: var(--white);
+    font-family: var(--font-b);
+    -webkit-font-smoothing: antialiased;
+    font-size: 11pt;
+    line-height: 1.55;
+  }
+
+  .page {
+    width: 210mm;
+    min-height: 297mm;
+    padding: 18mm 18mm 16mm 18mm;
+    background: var(--bg);
+    position: relative;
+    page-break-after: always;
+    overflow: hidden;
+  }
+  .page:last-child { page-break-after: auto; }
+
+  .bg-grid {
+    position: absolute;
+    inset: 0;
+    background-image:
+      linear-gradient(rgba(53,53,53,.35) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(53,53,53,.35) 1px, transparent 1px);
+    background-size: 40px 40px;
+    opacity: .5;
+    pointer-events: none;
+  }
+  .bg-glow {
+    position: absolute;
+    width: 520px; height: 520px;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(113,61,255,.22), transparent 65%);
+    filter: blur(10px);
+    pointer-events: none;
+  }
+  .bg-glow-2 {
+    position: absolute;
+    width: 420px; height: 420px;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(250,250,0,.08), transparent 65%);
+    filter: blur(10px);
+    pointer-events: none;
+  }
+
+  .inner { position: relative; z-index: 2; }
+
+  .p-head {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-bottom: 14px;
+    border-bottom: .5px solid var(--border);
+    margin-bottom: 28px;
+  }
+  .p-head-meta {
+    font-family: var(--font-m);
+    font-size: 7pt;
+    color: var(--space-grey);
+    letter-spacing: .22em;
+    text-transform: uppercase;
+  }
+
+  .s-num {
+    font-family: var(--font-m);
+    font-size: 7pt;
+    letter-spacing: .4em;
+    text-transform: uppercase;
+    color: var(--primary);
+    margin-bottom: 10px;
+  }
+  .s-title {
+    font-family: var(--font-h);
+    font-weight: 700;
+    font-size: 22pt;
+    letter-spacing: -.01em;
+    margin-bottom: 14px;
+    line-height: 1.1;
+  }
+  .s-desc {
+    font-family: var(--font-b);
+    font-size: 10pt;
+    color: var(--light-grey);
+    line-height: 1.7;
+    max-width: 155mm;
+    margin-bottom: 26px;
+  }
+
+  .dot { color: var(--primary); }
+
+  .p-foot {
+    position: absolute;
+    bottom: 12mm;
+    left: 18mm;
+    right: 18mm;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 10px;
+    border-top: .5px solid var(--border);
+    font-family: var(--font-m);
+    font-size: 6.5pt;
+    color: var(--space-grey);
+    letter-spacing: .2em;
+    text-transform: uppercase;
+  }
+
+  /* ===== PAGE 1 — COVER ===== */
+  .cover {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 261mm;
+    position: relative;
+  }
+  .cover-top { display: flex; justify-content: space-between; align-items: flex-start; }
+  .cover-meta-top {
+    font-family: var(--font-m);
+    font-size: 7pt;
+    color: var(--space-grey);
+    letter-spacing: .3em;
+    text-transform: uppercase;
+    text-align: right;
+    line-height: 1.9;
+  }
+  .cover-meta-top .y { color: var(--primary); }
+
+  .cover-mid { padding: 40mm 0 0 0; }
+  .cover-tag {
+    font-family: var(--font-m);
+    font-size: 8pt;
+    letter-spacing: .5em;
+    text-transform: uppercase;
+    color: var(--primary);
+    margin-bottom: 18px;
+  }
+  .cover-title {
+    font-family: var(--font-h);
+    font-weight: 800;
+    font-size: 44pt;
+    line-height: 1;
+    letter-spacing: -.02em;
+    margin-bottom: 22px;
+  }
+  .cover-title .line2 { display: block; color: var(--primary); }
+  .cover-sub {
+    font-family: var(--font-b);
+    font-size: 13pt;
+    color: var(--light-grey);
+    max-width: 150mm;
+    line-height: 1.55;
+    font-weight: 400;
+  }
+  .cover-line {
+    width: 72px;
+    height: 3px;
+    background: var(--primary);
+    margin: 28px 0;
+  }
+
+  .cover-client {
+    background: var(--bg-card);
+    border: .5px solid var(--border);
+    border-left: 3px solid var(--primary);
+    padding: 18px 22px;
+    max-width: 150mm;
+    margin-top: 20px;
+  }
+  .cover-client-lbl {
+    font-family: var(--font-m);
+    font-size: 6.5pt;
+    letter-spacing: .35em;
+    text-transform: uppercase;
+    color: var(--space-grey);
+    margin-bottom: 6px;
+  }
+  .cover-client-nm {
+    font-family: var(--font-h);
+    font-weight: 700;
+    font-size: 16pt;
+    color: var(--white);
+    letter-spacing: -.01em;
+  }
+  .cover-client-nm .handle {
+    font-family: var(--font-m);
+    font-weight: 400;
+    font-size: 10pt;
+    color: var(--space-grey);
+    letter-spacing: .05em;
+    margin-left: 10px;
+  }
+
+  .cover-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    padding-top: 18px;
+    border-top: .5px solid var(--border);
+  }
+  .cover-bottom-col .lbl {
+    font-family: var(--font-m);
+    font-size: 6pt;
+    letter-spacing: .3em;
+    text-transform: uppercase;
+    color: var(--space-grey);
+    margin-bottom: 4px;
+    display: block;
+  }
+  .cover-bottom-col .val {
+    font-family: var(--font-b);
+    font-size: 9pt;
+    color: var(--white);
+    font-weight: 500;
+  }
+  .cover-bottom-col .val .y { color: var(--primary); }
+
+  /* ===== DIAGNOSTIC CARDS ===== */
+  .diag-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 14px;
+    margin-bottom: 20px;
+  }
+  .diag-card {
+    background: var(--bg-card);
+    border: .5px solid var(--border);
+    padding: 18px 20px;
+  }
+  .diag-card .lbl {
+    font-family: var(--font-m);
+    font-size: 6.5pt;
+    letter-spacing: .3em;
+    text-transform: uppercase;
+    color: var(--space-grey);
+    margin-bottom: 8px;
+  }
+  .diag-card .big {
+    font-family: var(--font-h);
+    font-weight: 700;
+    font-size: 22pt;
+    color: var(--primary);
+    line-height: 1;
+    margin-bottom: 6px;
+  }
+  .diag-card .desc {
+    font-family: var(--font-b);
+    font-size: 8pt;
+    color: var(--light-grey);
+    line-height: 1.5;
+  }
+  .diag-card.bad .big { color: var(--orange); }
+  .diag-card.good .big { color: var(--green); }
+
+  .diag-insight {
+    background: var(--bg-card);
+    border-left: 3px solid var(--primary);
+    padding: 16px 20px;
+    margin-top: 6px;
+    margin-bottom: 20px;
+  }
+  .diag-insight .lbl {
+    font-family: var(--font-m);
+    font-size: 6.5pt;
+    letter-spacing: .3em;
+    text-transform: uppercase;
+    color: var(--primary);
+    margin-bottom: 8px;
+  }
+  .diag-insight p {
+    font-family: var(--font-b);
+    font-size: 9.5pt;
+    color: var(--light-grey);
+    line-height: 1.65;
+  }
+
+  .diag-pillars { margin-top: 10px; }
+  .diag-pillar-title {
+    font-family: var(--font-m);
+    font-size: 7pt;
+    letter-spacing: .3em;
+    text-transform: uppercase;
+    color: var(--space-grey);
+    margin-bottom: 14px;
+  }
+  .pillars {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12px;
+  }
+  .pillar {
+    border: .5px solid var(--border);
+    padding: 14px 16px;
+    background: var(--bg);
+  }
+  .pillar .num {
+    font-family: var(--font-m);
+    font-size: 6.5pt;
+    color: var(--primary);
+    letter-spacing: .3em;
+    margin-bottom: 6px;
+  }
+  .pillar .ttl {
+    font-family: var(--font-h);
+    font-weight: 700;
+    font-size: 10pt;
+    color: var(--white);
+    margin-bottom: 6px;
+    letter-spacing: -.005em;
+  }
+  .pillar .txt {
+    font-family: var(--font-b);
+    font-size: 8pt;
+    color: var(--light-grey);
+    line-height: 1.55;
+  }
+
+  /* ===== PRICING PLANS ===== */
+  .plan-stack { display: flex; flex-direction: column; gap: 14px; }
+
+  .plan {
+    background: var(--bg-card);
+    border: .5px solid var(--border);
+    padding: 20px 22px;
+    display: grid;
+    grid-template-columns: 1fr 1.2fr;
+    gap: 22px;
+    position: relative;
+  }
+  .plan.featured {
+    border: 1px solid var(--primary);
+    background: linear-gradient(135deg, #1e1d0a 0%, var(--bg-card) 60%);
+  }
+  .plan-badge {
+    position: absolute;
+    top: -9px;
+    left: 22px;
+    background: var(--primary);
+    color: var(--bg);
+    font-family: var(--font-m);
+    font-size: 6.5pt;
+    font-weight: 700;
+    letter-spacing: .25em;
+    text-transform: uppercase;
+    padding: 4px 10px;
+  }
+  .plan-head .tag {
+    font-family: var(--font-m);
+    font-size: 6.5pt;
+    letter-spacing: .3em;
+    text-transform: uppercase;
+    color: var(--space-grey);
+    margin-bottom: 6px;
+  }
+  .plan-head .name {
+    font-family: var(--font-h);
+    font-weight: 700;
+    font-size: 17pt;
+    color: var(--white);
+    letter-spacing: -.01em;
+    line-height: 1.05;
+    margin-bottom: 4px;
+  }
+  .plan.featured .plan-head .name { color: var(--primary); }
+  .plan-head .dur {
+    font-family: var(--font-m);
+    font-size: 7pt;
+    letter-spacing: .18em;
+    text-transform: uppercase;
+    color: var(--space-grey);
+    margin-bottom: 14px;
+  }
+  .plan-head .price {
+    font-family: var(--font-h);
+    font-weight: 800;
+    font-size: 24pt;
+    color: var(--white);
+    line-height: 1;
+    margin-bottom: 2px;
+    letter-spacing: -.02em;
+  }
+  .plan-head .price .cur {
+    font-family: var(--font-m);
+    font-size: 9pt;
+    color: var(--space-grey);
+    font-weight: 500;
+    letter-spacing: .12em;
+    vertical-align: super;
+    margin-right: 4px;
+  }
+  .plan-head .price-sub {
+    font-family: var(--font-m);
+    font-size: 7pt;
+    color: var(--space-grey);
+    letter-spacing: .12em;
+    text-transform: uppercase;
+    margin-bottom: 4px;
+  }
+  .plan-head .monthly {
+    display: inline-block;
+    font-family: var(--font-m);
+    font-size: 7pt;
+    letter-spacing: .15em;
+    text-transform: uppercase;
+    color: var(--primary);
+    background: rgba(250,250,0,.08);
+    padding: 5px 10px;
+    border: .5px solid rgba(250,250,0,.35);
+    margin-top: 8px;
+  }
+  .plan-head .monthly strong { color: var(--white); font-weight: 700; }
+
+  .plan-body {
+    border-left: .5px solid var(--border);
+    padding-left: 22px;
+  }
+  .plan-body .inc-lbl {
+    font-family: var(--font-m);
+    font-size: 6.5pt;
+    letter-spacing: .3em;
+    text-transform: uppercase;
+    color: var(--primary);
+    margin-bottom: 10px;
+  }
+  .plan-body ul { list-style: none; }
+  .plan-body li {
+    font-family: var(--font-b);
+    font-size: 8pt;
+    color: var(--light-grey);
+    padding: 4px 0 4px 16px;
+    position: relative;
+    line-height: 1.5;
+  }
+  .plan-body li::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 11px;
+    width: 6px;
+    height: 1.5px;
+    background: var(--primary);
+  }
+
+  /* ===== PROCESS ===== */
+  .process {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 12px;
+    margin-bottom: 24px;
+  }
+  .step {
+    background: var(--bg-card);
+    border: .5px solid var(--border);
+    padding: 16px 16px 18px;
+    position: relative;
+  }
+  .step .num {
+    font-family: var(--font-h);
+    font-weight: 800;
+    font-size: 28pt;
+    color: var(--primary);
+    line-height: 1;
+    opacity: .25;
+    position: absolute;
+    top: 8px;
+    right: 12px;
+  }
+  .step .lbl {
+    font-family: var(--font-m);
+    font-size: 6pt;
+    letter-spacing: .3em;
+    text-transform: uppercase;
+    color: var(--primary);
+    margin-bottom: 8px;
+    position: relative;
+  }
+  .step .ttl {
+    font-family: var(--font-h);
+    font-weight: 700;
+    font-size: 10pt;
+    color: var(--white);
+    margin-bottom: 8px;
+    position: relative;
+  }
+  .step .txt {
+    font-family: var(--font-b);
+    font-size: 7.5pt;
+    color: var(--light-grey);
+    line-height: 1.55;
+    position: relative;
+  }
+
+  /* ===== NEEDS (material + accesos) ===== */
+  .needs-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 14px;
+    margin-bottom: 18px;
+  }
+  .need-card {
+    background: var(--bg-card);
+    border: .5px solid var(--border);
+    padding: 18px 20px;
+  }
+  .need-card .tag {
+    font-family: var(--font-m);
+    font-size: 6.5pt;
+    letter-spacing: .3em;
+    text-transform: uppercase;
+    color: var(--primary);
+    margin-bottom: 6px;
+  }
+  .need-card .name {
+    font-family: var(--font-h);
+    font-weight: 700;
+    font-size: 12pt;
+    color: var(--white);
+    margin-bottom: 10px;
+  }
+  .need-card ul { list-style: none; }
+  .need-card li {
+    font-family: var(--font-b);
+    font-size: 8pt;
+    color: var(--light-grey);
+    padding: 3px 0 3px 12px;
+    position: relative;
+    line-height: 1.5;
+  }
+  .need-card li::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 10px;
+    width: 5px;
+    height: 1.5px;
+    background: var(--primary);
+  }
+
+  /* ===== TERMS ===== */
+  .terms {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 14px;
+    margin-bottom: 20px;
+  }
+  .term-card {
+    background: var(--bg-card);
+    border: .5px solid var(--border);
+    padding: 18px 20px;
+  }
+  .term-card .tag {
+    font-family: var(--font-m);
+    font-size: 6.5pt;
+    letter-spacing: .3em;
+    text-transform: uppercase;
+    color: var(--primary);
+    margin-bottom: 10px;
+  }
+  .term-card .ttl {
+    font-family: var(--font-h);
+    font-weight: 700;
+    font-size: 11pt;
+    color: var(--white);
+    margin-bottom: 8px;
+  }
+  .term-card p {
+    font-family: var(--font-b);
+    font-size: 8.5pt;
+    color: var(--light-grey);
+    line-height: 1.6;
+  }
+
+  .ads-note {
+    background: var(--bg-card);
+    border: .5px dashed var(--orange);
+    padding: 14px 18px;
+    font-family: var(--font-b);
+    font-size: 8.5pt;
+    color: var(--light-grey);
+    line-height: 1.6;
+    margin-bottom: 20px;
+  }
+  .ads-note strong { color: var(--orange); font-weight: 700; }
+  .ads-note .amt { color: var(--white); font-weight: 700; }
+
+  /* ===== CTA ===== */
+  .cta {
+    background: linear-gradient(135deg, #1e1d0a 0%, var(--bg-card) 70%);
+    border: 1px solid var(--primary);
+    padding: 30px 32px;
+    text-align: center;
+    margin-top: 4px;
+  }
+  .cta-tag {
+    font-family: var(--font-m);
+    font-size: 7pt;
+    letter-spacing: .4em;
+    text-transform: uppercase;
+    color: var(--primary);
+    margin-bottom: 12px;
+  }
+  .cta-title {
+    font-family: var(--font-h);
+    font-weight: 800;
+    font-size: 22pt;
+    color: var(--white);
+    line-height: 1.1;
+    letter-spacing: -.01em;
+    margin-bottom: 14px;
+  }
+  .cta-title .y { color: var(--primary); }
+  .cta-sub {
+    font-family: var(--font-b);
+    font-size: 10pt;
+    color: var(--light-grey);
+    max-width: 140mm;
+    margin: 0 auto 22px;
+    line-height: 1.6;
+  }
+  .cta-contact {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    padding-top: 18px;
+    border-top: .5px solid var(--border);
+    flex-wrap: wrap;
+  }
+  .cta-contact-item {
+    text-align: left;
+  }
+  .cta-contact-item .lbl {
+    font-family: var(--font-m);
+    font-size: 6pt;
+    letter-spacing: .3em;
+    text-transform: uppercase;
+    color: var(--space-grey);
+    margin-bottom: 3px;
+    display: block;
+  }
+  .cta-contact-item .val {
+    font-family: var(--font-b);
+    font-size: 9pt;
+    color: var(--white);
+    font-weight: 600;
+  }
+
+  .legal {
+    text-align: center;
+    font-family: var(--font-m);
+    font-size: 6.5pt;
+    color: var(--space-grey);
+    letter-spacing: .18em;
+    line-height: 1.7;
+    margin-top: 22px;
+  }
+
+</style>
+</head>
+<body>
+
+<!-- ============ PAGE 1 — COVER ============ -->
+<section class="page">
+  <div class="bg-grid"></div>
+  <div class="bg-glow" style="top:-150px;right:-150px;"></div>
+  <div class="bg-glow-2" style="bottom:-120px;left:-100px;"></div>
+
+  <div class="inner cover">
+    <div class="cover-top">
+      <div style="font-family:var(--font-h);font-weight:800;font-size:16pt;letter-spacing:.06em;">MM AGENCY<span class="dot">.</span></div>
+      <div class="cover-meta-top">
+        <span class="y">&#9679;</span> Propuesta Comercial<br>
+        Abril 2026 &mdash; v1.0<br>
+        Documento Confidencial
+      </div>
+    </div>
+
+    <div class="cover-mid">
+      <div class="cover-tag">&mdash; Página Web + Sistema de Anuncios Meta</div>
+      <h1 class="cover-title">
+        Carteras premium<br>
+        <span class="line2">que se venden</span>
+        solas<span class="dot">.</span>
+      </h1>
+      <div class="cover-line"></div>
+      <p class="cover-sub">
+        Página web nueva con diseño acorde a marca de lujo, sistema de anuncios
+        en Meta listos para escalar y WhatsApp conectado para convertir
+        visitantes en clientas desde el primer día.
+      </p>
+
+      <div class="cover-client">
+        <div class="cover-client-lbl">Preparado para</div>
+        <div class="cover-client-nm">DIVAY COLLECTION<span class="handle">@divaycollection</span></div>
+      </div>
+    </div>
+
+    <div class="cover-bottom">
+      <div class="cover-bottom-col">
+        <span class="lbl">Agencia</span>
+        <span class="val">MM Agency<span class="y">.</span></span>
+      </div>
+      <div class="cover-bottom-col">
+        <span class="lbl">Contacto</span>
+        <span class="val">Martin Mercedes</span>
+      </div>
+      <div class="cover-bottom-col">
+        <span class="lbl">Fecha</span>
+        <span class="val">10 · ABR · 2026</span>
+      </div>
+      <div class="cover-bottom-col">
+        <span class="lbl">Validez</span>
+        <span class="val">15 días</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ PAGE 2 — DIAGNÓSTICO ============ -->
+<section class="page">
+  <div class="bg-grid"></div>
+  <div class="inner">
+    <div class="p-head">
+      <div style="font-family:var(--font-h);font-weight:800;font-size:11pt;letter-spacing:.06em;">MM AGENCY<span class="dot">.</span></div>
+      <div class="p-head-meta">01 &mdash; Diagnóstico</div>
+    </div>
+
+    <div class="s-num">01 &mdash; Situación Actual</div>
+    <h2 class="s-title">Tienes el producto.<br>Te falta el escaparate digital<span class="dot">.</span></h2>
+    <p class="s-desc">
+      Divay Collection importa marcas que venden solas — Coach, Tory Burch, Guess,
+      Marc Jacobs. El problema no está en el inventario, está en cómo la marca se
+      presenta y en que no hay un motor de captación trayendo clientas nuevas cada día.
+    </p>
+
+    <div class="diag-grid">
+      <div class="diag-card good">
+        <div class="lbl">Producto</div>
+        <div class="big">PREMIUM</div>
+        <div class="desc">Coach, Tory Burch, Guess, Marc Jacobs. Marcas reconocidas, ticket alto, margen sano.</div>
+      </div>
+      <div class="diag-card bad">
+        <div class="lbl">Página web actual</div>
+        <div class="big">No vende</div>
+        <div class="desc">Productos sin nombres reales, precios inconsistentes, diseño que no refleja la marca.</div>
+      </div>
+      <div class="diag-card bad">
+        <div class="lbl">Sistema de anuncios</div>
+        <div class="big">Inexistente</div>
+        <div class="desc">Sin Meta Pixel, sin campañas activas, sin flujo de clientas nuevas predecible.</div>
+      </div>
+      <div class="diag-card good">
+        <div class="lbl">Oportunidad</div>
+        <div class="big">ALTA</div>
+        <div class="desc">Mercado dominicano con alta demanda de marcas premium. Upside inmediato con tráfico pago.</div>
+      </div>
+    </div>
+
+    <div class="diag-insight">
+      <div class="lbl">&rsaquo;&rsaquo; Insight clave</div>
+      <p>
+        El problema no es tu producto. Es que <strong style="color:var(--white);">la gente no te encuentra</strong>
+        &mdash; y cuando te encuentra, la página no las enamora. Las marcas premium de carteras en RD
+        que están facturando fuerte tienen lo mismo en común: <strong style="color:var(--white);">página que convierte
+        + anuncios que traen clientas nuevas cada día + WhatsApp que cierra la venta</strong>.
+        Esa es la palanca que vamos a activar.
+      </p>
+    </div>
+
+    <div class="diag-pillars">
+      <div class="diag-pillar-title">Pilares de nuestra solución</div>
+      <div class="pillars">
+        <div class="pillar">
+          <div class="num">&mdash; 01</div>
+          <div class="ttl">Presencia</div>
+          <div class="txt">Página web nueva con diseño acorde a marca premium. Profesional, rápida y mobile-first.</div>
+        </div>
+        <div class="pillar">
+          <div class="num">&mdash; 02</div>
+          <div class="ttl">Captación</div>
+          <div class="txt">Campañas de Meta Ads (Facebook + Instagram) para traer clientas nuevas cada día.</div>
+        </div>
+        <div class="pillar">
+          <div class="num">&mdash; 03</div>
+          <div class="ttl">Conversión</div>
+          <div class="txt">WhatsApp Business conectado con catálogo y respuestas rápidas para cerrar ventas.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="p-foot">
+    <span>MM Agency<span class="dot">.</span> &mdash; Propuesta Divay Collection</span>
+    <span>&mdash; 02 &mdash;</span>
+  </div>
+</section>
+
+<!-- ============ PAGE 3 — PLANES ============ -->
+<section class="page">
+  <div class="bg-grid"></div>
+  <div class="bg-glow" style="top:-180px;left:-180px;"></div>
+  <div class="inner">
+    <div class="p-head">
+      <div style="font-family:var(--font-h);font-weight:800;font-size:11pt;letter-spacing:.06em;">MM AGENCY<span class="dot">.</span></div>
+      <div class="p-head-meta">02 &mdash; Planes</div>
+    </div>
+
+    <div class="s-num">02 &mdash; Inversión</div>
+    <h2 class="s-title">Tres planes, uno completo<span class="dot">.</span></h2>
+    <p class="s-desc">
+      El Plan Go ya incluye todo lo esencial para empezar a vender desde el día uno:
+      página, WhatsApp, 2 campañas y gestión mensual. Los planes Pro y Elite son
+      para escalar más rápido con identidad profesional, automatización y contenido.
+    </p>
+
+    <div class="plan-stack">
+
+      <!-- PLAN 1 — GO (BASE COMPLETO) -->
+      <div class="plan">
+        <div class="plan-head">
+          <div class="tag">&mdash; Plan 01 &middot; Base completo</div>
+          <div class="name">Divay Go</div>
+          <div class="dur">Listo para vender desde el día 1</div>
+          <div class="price"><span class="cur">US$</span>400</div>
+          <div class="price-sub">Pago único &middot; Setup completo</div>
+          <span class="monthly">+ <strong>US$100</strong> / mes de gestión</span>
+        </div>
+        <div class="plan-body">
+          <div class="inc-lbl">&rsaquo;&rsaquo; Setup incluye</div>
+          <ul>
+            <li>Página web one-page completa con diseño premium de marca de lujo</li>
+            <li>Catálogo integrado con botón de WhatsApp en cada producto</li>
+            <li>Botón flotante de WhatsApp en toda la página</li>
+            <li>WhatsApp Business configurado + catálogo de productos</li>
+            <li>Meta Pixel instalado + eventos de conversión</li>
+            <li><strong style="color:var(--primary);">2 campañas</strong> Meta Ads (Tráfico a web + Click-to-WhatsApp)</li>
+            <li><strong style="color:var(--primary);">5 creatividades</strong> iniciales editadas (3 imágenes + 2 videos)</li>
+          </ul>
+          <div class="inc-lbl" style="margin-top:10px;">&rsaquo;&rsaquo; Mensual incluye</div>
+          <ul>
+            <li>Gestión activa de las 2 campañas Meta Ads</li>
+            <li>4 creatividades nuevas al mes (edición profesional)</li>
+            <li>Optimización semanal de audiencias y pujas</li>
+            <li>Reporte mensual de resultados</li>
+          </ul>
+          <div style="margin-top:12px;padding:8px 12px;border:.5px dashed var(--space-grey);font-family:var(--font-m);font-size:6.5pt;color:var(--space-grey);letter-spacing:.12em;text-transform:uppercase;line-height:1.6;">
+            &rsaquo; Material crudo (fotos y videos) provisto por Divay. MM Agency edita y produce las piezas finales.
+          </div>
+        </div>
+      </div>
+
+      <!-- PLAN 2 — PRO (FEATURED) -->
+      <div class="plan featured">
+        <div class="plan-badge">&rsaquo; Recomendado</div>
+        <div class="plan-head">
+          <div class="tag">&mdash; Plan 02 &middot; Escala con identidad</div>
+          <div class="name">Divay Pro</div>
+          <div class="dur">Identidad + automatización</div>
+          <div class="price"><span class="cur">US$</span>600</div>
+          <div class="price-sub">Pago único &middot; Setup ampliado</div>
+          <span class="monthly">+ <strong>US$150</strong> / mes de gestión</span>
+        </div>
+        <div class="plan-body">
+          <div class="inc-lbl">&rsaquo;&rsaquo; Todo lo del Plan Go, más</div>
+          <ul>
+            <li><strong style="color:var(--primary);">Logo + identidad visual</strong> profesional completa</li>
+            <li><strong style="color:var(--primary);">2-3 landing pages</strong> dedicadas para productos estrella o campañas</li>
+            <li><strong style="color:var(--primary);">Automatización de DMs con ManyChat</strong> (flujos listos para Instagram)</li>
+            <li><strong style="color:var(--primary);">Email marketing</strong> setup (bienvenida + recuperación de carrito)</li>
+            <li>Integración con CRM automático de leads</li>
+            <li>10 creatividades iniciales editadas (6 imágenes + 4 videos)</li>
+            <li>3 variaciones de copy por campaña (A/B testing)</li>
+          </ul>
+          <div class="inc-lbl" style="margin-top:10px;">&rsaquo;&rsaquo; Mensual incluye</div>
+          <ul>
+            <li>Gestión activa de las 2 campañas Meta Ads</li>
+            <li>6 creatividades nuevas al mes (rotación anti-fatiga)</li>
+            <li>Optimización semanal + reporte quincenal</li>
+            <li>ManyChat y email se autogestionan tras el setup</li>
+          </ul>
+          <div style="margin-top:12px;padding:8px 12px;border:.5px dashed var(--space-grey);font-family:var(--font-m);font-size:6.5pt;color:var(--space-grey);letter-spacing:.12em;text-transform:uppercase;line-height:1.6;">
+            &rsaquo; Material crudo provisto por Divay. MM Agency edita y produce.
+          </div>
+        </div>
+      </div>
+
+      <!-- PLAN 3 — ELITE -->
+      <div class="plan">
+        <div class="plan-head">
+          <div class="tag">&mdash; Plan 03 &middot; Todo incluido</div>
+          <div class="name">Divay Elite</div>
+          <div class="dur">Marketing + contenido completo</div>
+          <div class="price"><span class="cur">US$</span>900</div>
+          <div class="price-sub">Pago único &middot; Setup premium</div>
+          <span class="monthly">+ <strong>US$500</strong> / mes de gestión</span>
+        </div>
+        <div class="plan-body">
+          <div class="inc-lbl">&rsaquo;&rsaquo; Todo lo del Plan Pro, más</div>
+          <ul>
+            <li><strong style="color:var(--primary);">Contenido orgánico Instagram</strong> (8-10 posts/mes producidos por MM Agency)</li>
+            <li><strong style="color:var(--primary);">Producción de contenido</strong> &mdash; ya no necesitas mandar material</li>
+            <li>Setup de remarketing para visitantes que no compraron</li>
+            <li>15 creatividades iniciales editadas (10 imágenes + 5 videos)</li>
+            <li>Mensajes de seguimiento avanzados en WhatsApp Business</li>
+          </ul>
+          <div class="inc-lbl" style="margin-top:10px;">&rsaquo;&rsaquo; Mensual incluye</div>
+          <ul>
+            <li>Gestión de campañas Meta Ads + remarketing</li>
+            <li>8-10 posts orgánicos de Instagram/mes producidos por MM Agency</li>
+            <li>Producción y edición profesional de todo el contenido</li>
+            <li><strong style="color:var(--primary);">Llamada semanal de estrategia</strong> (30 min)</li>
+            <li>Reporte semanal detallado con KPIs completos</li>
+          </ul>
+          <div style="margin-top:12px;padding:8px 12px;border:.5px dashed var(--primary);font-family:var(--font-m);font-size:6.5pt;color:var(--primary);letter-spacing:.12em;text-transform:uppercase;line-height:1.6;">
+            &rsaquo; Sin dependencia de material &mdash; MM Agency produce todo el contenido.
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="p-foot">
+    <span>MM Agency<span class="dot">.</span> &mdash; Propuesta Divay Collection</span>
+    <span>&mdash; 03 &mdash;</span>
+  </div>
+</section>
+
+<!-- ============ PAGE 4 — PROCESO + NECESIDADES ============ -->
+<section class="page">
+  <div class="bg-grid"></div>
+  <div class="bg-glow-2" style="top:-100px;right:-100px;"></div>
+  <div class="inner">
+    <div class="p-head">
+      <div style="font-family:var(--font-h);font-weight:800;font-size:11pt;letter-spacing:.06em;">MM AGENCY<span class="dot">.</span></div>
+      <div class="p-head-meta">03 &mdash; Proceso</div>
+    </div>
+
+    <div class="s-num">03 &mdash; Cómo trabajamos</div>
+    <h2 class="s-title">De cero a vendiendo en 14 días<span class="dot">.</span></h2>
+    <p class="s-desc">
+      Proceso ejecutivo dividido en 4 etapas claras. Desde el día que firmamos
+      hasta que los anuncios están corriendo, máximo 2 semanas.
+    </p>
+
+    <div class="process">
+      <div class="step">
+        <div class="num">01</div>
+        <div class="lbl">&mdash; Día 1-3</div>
+        <div class="ttl">Diagnóstico &amp; Diseño</div>
+        <div class="txt">Recopilamos material, definimos diseño de página y estructura visual.</div>
+      </div>
+      <div class="step">
+        <div class="num">02</div>
+        <div class="lbl">&mdash; Día 4-8</div>
+        <div class="ttl">Construcción Web</div>
+        <div class="txt">Construimos la página nueva. Entrega de preview para aprobación.</div>
+      </div>
+      <div class="step">
+        <div class="num">03</div>
+        <div class="lbl">&mdash; Día 9-12</div>
+        <div class="ttl">Setup Ads &amp; WhatsApp</div>
+        <div class="txt">Pixel, WhatsApp Business, catálogo, campañas listas, creatividades finales.</div>
+      </div>
+      <div class="step">
+        <div class="num">04</div>
+        <div class="lbl">&mdash; Día 13-14</div>
+        <div class="ttl">Lanzamiento</div>
+        <div class="txt">Encendemos las campañas. Monitoreo inicial y primeras optimizaciones.</div>
+      </div>
+    </div>
+
+    <div style="height:14px;"></div>
+
+    <div class="s-num">04 &mdash; Qué necesitamos de Divay</div>
+    <h2 class="s-title" style="font-size:18pt;margin-bottom:20px;">Para arrancar bien<span class="dot">.</span></h2>
+
+    <div class="needs-grid">
+      <div class="need-card">
+        <div class="tag">&mdash; 01 &middot; Planes Go y Pro</div>
+        <div class="name">Material crudo</div>
+        <ul>
+          <li>Fotos de productos en buena calidad (iPhone reciente funciona)</li>
+          <li>Videos cortos de productos y detalles</li>
+          <li>Lista de productos con nombres reales y precios</li>
+          <li>Logo actual si lo tiene (en Plan Pro creamos uno nuevo)</li>
+        </ul>
+      </div>
+      <div class="need-card">
+        <div class="tag">&mdash; 02 &middot; Todos los planes</div>
+        <div class="name">Accesos</div>
+        <ul>
+          <li>Meta Business Manager (o lo creamos juntas)</li>
+          <li>Instagram @divaycollection</li>
+          <li>Número de WhatsApp para Business</li>
+          <li>Dominio actual (divaycollection.com) si se conserva</li>
+        </ul>
+      </div>
+    </div>
+
+    <div style="background:var(--bg-card);border-left:3px solid var(--primary);padding:12px 16px;margin-top:4px;font-family:var(--font-b);font-size:8.5pt;color:var(--light-grey);line-height:1.6;">
+      <strong style="color:var(--primary);">&rsaquo;&rsaquo; Plan Elite:</strong>
+      MM Agency produce <strong style="color:var(--white);">todo el contenido</strong> (fotos, videos y posts).
+      No necesitas enviar material — solo acceso a los productos para el día de producción.
+    </div>
+  </div>
+
+  <div class="p-foot">
+    <span>MM Agency<span class="dot">.</span> &mdash; Propuesta Divay Collection</span>
+    <span>&mdash; 04 &mdash;</span>
+  </div>
+</section>
+
+<!-- ============ PAGE 5 — TÉRMINOS + CTA ============ -->
+<section class="page">
+  <div class="bg-grid"></div>
+  <div class="bg-glow" style="bottom:-200px;right:-150px;"></div>
+  <div class="inner">
+    <div class="p-head">
+      <div style="font-family:var(--font-h);font-weight:800;font-size:11pt;letter-spacing:.06em;">MM AGENCY<span class="dot">.</span></div>
+      <div class="p-head-meta">05 &mdash; Términos</div>
+    </div>
+
+    <div class="s-num">05 &mdash; Condiciones</div>
+    <h2 class="s-title">Términos y forma<br>de pago<span class="dot">.</span></h2>
+    <p class="s-desc">
+      Estructura estándar de MM Agency para garantizar arranque limpio y
+      previsibilidad para ambas partes.
+    </p>
+
+    <div class="terms">
+      <div class="term-card">
+        <div class="tag">&mdash; 01</div>
+        <div class="ttl">Forma de pago</div>
+        <p>
+          <strong style="color:var(--white);">Setup:</strong> 50% al firmar + 50% a la entrega de la página.<br>
+          <strong style="color:var(--white);">Mensual:</strong> pago por adelantado al inicio de cada mes.
+        </p>
+      </div>
+      <div class="term-card">
+        <div class="tag">&mdash; 02</div>
+        <div class="ttl">Revisiones</div>
+        <p>
+          Hasta 2 rondas de revisión incluidas en el diseño de la página.
+          Cambios adicionales se cotizan aparte. Aprobación vía WhatsApp o correo.
+        </p>
+      </div>
+      <div class="term-card">
+        <div class="tag">&mdash; 03</div>
+        <div class="ttl">Compromiso</div>
+        <p>
+          Sin contrato de permanencia. El mensual puede pausarse con 15 días
+          de aviso. La página entregada en el setup queda para Divay Collection.
+        </p>
+      </div>
+      <div class="term-card">
+        <div class="tag">&mdash; 04</div>
+        <div class="ttl">Validez</div>
+        <p>
+          Esta propuesta es válida por 15 días desde la fecha de emisión.
+          Precios en dólares (US$), no incluyen ITBIS si aplica.
+        </p>
+      </div>
+    </div>
+
+    <div class="ads-note">
+      <strong>&rsaquo;&rsaquo; Inversión en anuncios — aparte:</strong>
+      La pauta de Meta Ads <span class="amt">NO está incluida</span> en estos precios. Va
+      directo a Meta desde la tarjeta de Divay Collection. Mínimo recomendado para validar:
+      <span class="amt">US$200/mes</span> (aprox. US$7/día). Escalable según resultados.
+    </div>
+
+    <div class="cta">
+      <div class="cta-tag">&rsaquo;&rsaquo; Siguiente paso</div>
+      <h2 class="cta-title">
+        Listas para lanzar<br>
+        Divay<span class="y">.</span>
+      </h2>
+      <p class="cta-sub">
+        Confirma el plan que mejor se ajusta y arrancamos esta misma semana.
+        En 14 días tienes página nueva, WhatsApp conectado y anuncios corriendo.
+      </p>
+      <div class="cta-contact">
+        <div class="cta-contact-item">
+          <span class="lbl">Contacto</span>
+          <span class="val">Martin Mercedes</span>
+        </div>
+        <div class="cta-contact-item">
+          <span class="lbl">WhatsApp</span>
+          <span class="val">+1 (809) 962-3868</span>
+        </div>
+        <div class="cta-contact-item">
+          <span class="lbl">Email</span>
+          <span class="val">martin@mmagency.com</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="legal">
+      &copy; 2026 MM AGENCY<span class="dot">.</span> &middot; Propuesta Confidencial &middot; Santo Domingo, RD
+    </div>
+  </div>
+
+  <div class="p-foot">
+    <span>MM Agency<span class="dot">.</span> &mdash; Propuesta Divay Collection</span>
+    <span>&mdash; 05 &mdash;</span>
+  </div>
+</section>
+
+</body>
+</html>
