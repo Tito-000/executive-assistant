@@ -1,0 +1,588 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Vamos a Conectar — Anabel Mercedes</title>
+<meta name="description" content="15 minutos donde te cuento cómo funciona. Sin compromiso. Si tiene sentido, seguimos.">
+<link rel="icon" type="image/svg+xml" href="favicon.svg">
+<meta property="og:title" content="Vamos a Conectar — Anabel Mercedes">
+<meta property="og:description" content="15 minutos donde te cuento cómo funciona. Sin compromiso. Si tiene sentido, hablamos.">
+<meta property="og:image" content="https://anabelmercedes.com/og-image.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Montserrat:wght@300;400;500;600;700;800&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,400;1,500&display=swap" rel="stylesheet">
+<style>
+:root {
+  --navy: #1A1F2E;
+  --sage: #6B8868;
+  --sage-light: #A8C4A5;
+  --sage-muted: rgba(107,136,104,0.1);
+  --cream: #EDE8E0;
+  --cream-warm: #F5F2ED;
+  --cream-deep: #E5DED4;
+  --white: #FAFAF8;
+  --text-body: #4A4A4A;
+  --text-light: #7A7A7A;
+  --ease: cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+html { -webkit-font-smoothing: antialiased; scroll-behavior: smooth; }
+body { font-family: 'Montserrat', sans-serif; background: var(--cream-warm); color: var(--navy); overflow-x: hidden; }
+img { max-width: 100%; display: block; }
+a { text-decoration: none; color: inherit; }
+
+/* ====== FULL VIEWPORT — 2 columns (DESKTOP) ====== */
+.page {
+  display: grid;
+  grid-template-columns: 55% 45%;
+  min-height: 100vh;
+}
+
+/* ====== LEFT: PHOTO ====== */
+.col-photo {
+  position: relative;
+  overflow: hidden;
+  background: var(--sage);
+}
+.col-photo img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center top;
+}
+
+/* ====== RIGHT: CONTENT ====== */
+.col-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: clamp(40px, 6vh, 80px) clamp(36px, 4vw, 72px);
+  background: var(--cream-warm);
+}
+.logo { margin-bottom: clamp(32px, 5vh, 56px); }
+.logo img { height: 38px; width: auto; }
+.label {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.6rem;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  font-weight: 700;
+  color: var(--sage);
+  margin-bottom: 24px;
+}
+.headline {
+  font-family: 'DM Serif Display', serif;
+  font-size: clamp(2.2rem, 1.6rem + 2.5vw, 3.8rem);
+  line-height: 1.05;
+  color: var(--navy);
+  margin-bottom: 24px;
+  letter-spacing: -1px;
+}
+.headline em {
+  font-style: italic;
+  color: var(--sage);
+  display: block;
+}
+.sub {
+  font-size: clamp(0.9rem, 0.85rem + 0.2vw, 1.02rem);
+  color: var(--text-body);
+  line-height: 1.85;
+  max-width: 480px;
+  margin-bottom: 40px;
+}
+.sub strong { color: var(--navy); font-weight: 700; }
+
+/* CTA button */
+.cta-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.72rem;
+  font-weight: 800;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--navy);
+  background: transparent;
+  border: 2px solid var(--navy);
+  padding: 18px 36px;
+  box-shadow: 4px 4px 0 var(--navy);
+  cursor: pointer;
+  transition: background 0.25s var(--ease), color 0.25s var(--ease),
+              box-shadow 0.25s var(--ease), transform 0.25s var(--ease);
+  width: fit-content;
+}
+.cta-btn:hover {
+  background: var(--navy);
+  color: #fff;
+  box-shadow: 4px 4px 0 var(--sage);
+  transform: translate(-2px, -2px);
+}
+.cta-btn:active {
+  background: var(--sage);
+  border-color: var(--sage);
+  color: #fff;
+  box-shadow: 2px 2px 0 var(--navy);
+  transform: translate(2px, 2px);
+}
+.cta-btn svg {
+  width: 15px; height: 15px; flex-shrink: 0;
+  transition: transform 0.25s var(--ease);
+}
+.cta-btn:hover svg { transform: translateX(5px); }
+
+.note {
+  margin-top: 20px;
+  font-size: 0.7rem;
+  color: var(--text-light);
+  letter-spacing: 0.3px;
+}
+
+/* ====== INLINE FORM SECTION (mobile only) ====== */
+.form-section {
+  display: none;
+}
+.form-section__inner {
+  max-width: 500px;
+  margin: 0 auto;
+}
+.form-section__title {
+  font-family: 'DM Serif Display', serif;
+  font-size: 1.6rem;
+  color: var(--navy);
+  margin-bottom: 8px;
+  line-height: 1.15;
+}
+.form-section__sub {
+  font-size: 0.85rem;
+  color: var(--text-light);
+  margin-bottom: 28px;
+  line-height: 1.5;
+}
+
+/* ====== MODAL OVERLAY (desktop only) ====== */
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(26,31,46,0.6);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.35s var(--ease);
+}
+.modal-overlay.active {
+  opacity: 1;
+  pointer-events: all;
+}
+
+/* ====== MODAL CARD ====== */
+.modal {
+  background: var(--white);
+  border: 2px solid var(--navy);
+  box-shadow: 8px 8px 0 var(--navy);
+  width: 100%;
+  max-width: 440px;
+  padding: clamp(32px, 4vw, 48px);
+  position: relative;
+  transform: translateY(20px) scale(0.97);
+  transition: transform 0.35s var(--ease);
+}
+.modal-overlay.active .modal {
+  transform: translateY(0) scale(1);
+}
+.modal__close {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  width: 36px;
+  height: 36px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--text-light);
+  transition: color 0.2s;
+}
+.modal__close:hover { color: var(--navy); }
+.modal__close svg { width: 20px; height: 20px; }
+.modal__title {
+  font-family: 'DM Serif Display', serif;
+  font-size: clamp(1.5rem, 1.2rem + 1vw, 2rem);
+  color: var(--navy);
+  margin-bottom: 8px;
+  line-height: 1.15;
+}
+.modal__sub {
+  font-size: 0.85rem;
+  color: var(--text-light);
+  margin-bottom: clamp(24px, 3vh, 32px);
+  line-height: 1.5;
+}
+
+/* ====== SHARED FORM STYLES ====== */
+.form-group {
+  margin-bottom: 20px;
+}
+.form-group label {
+  display: block;
+  font-size: 0.62rem;
+  font-weight: 700;
+  letter-spacing: 2.5px;
+  text-transform: uppercase;
+  color: var(--navy);
+  margin-bottom: 8px;
+}
+.form-group input,
+.form-group select {
+  width: 100%;
+  padding: 14px 16px;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.9rem;
+  color: var(--navy);
+  background: var(--white);
+  border: 2px solid var(--cream-deep);
+  outline: none;
+  transition: border-color 0.25s var(--ease), box-shadow 0.25s var(--ease);
+  -webkit-appearance: none;
+  appearance: none;
+  border-radius: 0;
+}
+.form-group input::placeholder { color: var(--text-light); }
+.form-group input:focus,
+.form-group select:focus {
+  border-color: var(--sage);
+  box-shadow: 0 0 0 3px var(--sage-muted);
+}
+.form-group select {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='7'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%231A1F2E' stroke-width='1.5' fill='none' stroke-linecap='round'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 16px center;
+  padding-right: 40px;
+  cursor: pointer;
+}
+.form-group .error-msg {
+  display: none;
+  font-size: 0.68rem;
+  color: #C44A4A;
+  margin-top: 6px;
+  font-weight: 600;
+}
+.form-group.has-error input,
+.form-group.has-error select { border-color: #C44A4A; }
+.form-group.has-error .error-msg { display: block; }
+
+.form-submit {
+  width: 100%;
+  padding: 16px 28px;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.7rem;
+  font-weight: 800;
+  letter-spacing: 2.5px;
+  text-transform: uppercase;
+  color: #fff;
+  background: var(--sage);
+  border: 2px solid var(--sage);
+  box-shadow: 4px 4px 0 var(--navy);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  transition: background 0.25s var(--ease), box-shadow 0.25s var(--ease), transform 0.25s var(--ease);
+  border-radius: 0;
+}
+.form-submit:hover {
+  background: var(--navy);
+  border-color: var(--navy);
+  box-shadow: 4px 4px 0 var(--sage);
+  transform: translate(-2px, -2px);
+}
+.form-submit:active {
+  transform: translate(2px, 2px);
+  box-shadow: 2px 2px 0 var(--sage);
+}
+.form-submit svg {
+  width: 14px; height: 14px; flex-shrink: 0;
+  transition: transform 0.25s var(--ease);
+}
+.form-submit:hover svg { transform: translateX(4px); }
+.form-note {
+  text-align: center;
+  margin-top: 14px;
+  font-size: 0.65rem;
+  color: var(--text-light);
+  line-height: 1.5;
+}
+
+/* ====== TABLET (900px) ====== */
+@media (max-width: 900px) {
+  .page {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto;
+    min-height: auto;
+  }
+  .col-photo {
+    position: relative;
+    height: 44vh;
+    height: 44dvh;
+  }
+  .col-content {
+    padding: 36px 28px 44px;
+    align-items: flex-start;
+    text-align: left;
+    justify-content: flex-start;
+    background: var(--cream-warm);
+  }
+  .logo { margin-bottom: 20px; }
+  .sub { max-width: 520px; }
+  .cta-btn {
+    width: 100%;
+    justify-content: center;
+  }
+  .note { text-align: center; width: 100%; }
+
+  /* Show inline form section */
+  .form-section {
+    display: block;
+    padding: 56px 28px 64px;
+    background: var(--cream-deep);
+  }
+
+  /* Hide modal on mobile */
+  .modal-overlay { display: none !important; }
+}
+
+/* ====== PHONE (600px) ====== */
+@media (max-width: 600px) {
+  .col-photo {
+    height: 38vh;
+    height: 38dvh;
+  }
+  .col-content {
+    padding: 28px 24px 36px;
+  }
+  .logo { margin-bottom: 14px; }
+  .logo img { height: 30px; }
+  .label {
+    font-size: 0.55rem;
+    letter-spacing: 3px;
+    margin-bottom: 14px;
+  }
+  .headline {
+    font-size: 1.65rem;
+    margin-bottom: 12px;
+  }
+  .headline em { display: inline; }
+  .sub {
+    font-size: 0.86rem;
+    line-height: 1.7;
+    margin-bottom: 24px;
+  }
+  .cta-btn {
+    font-size: 0.62rem;
+    padding: 16px 28px;
+    letter-spacing: 1.8px;
+  }
+  .note { margin-top: 12px; font-size: 0.65rem; }
+
+  .form-section { padding: 44px 24px 56px; }
+  .form-section__title { font-size: 1.45rem; }
+  .form-section__sub { font-size: 0.82rem; margin-bottom: 24px; }
+  .form-group { margin-bottom: 16px; }
+  .form-group input,
+  .form-group select { padding: 13px 14px; font-size: 16px; }
+  .form-submit { padding: 15px 24px; font-size: 0.65rem; }
+  .form-note { font-size: 0.6rem; }
+}
+
+/* ====== SMALL PHONE (480px) ====== */
+@media (max-width: 480px) {
+  .col-photo { height: 34vh; height: 34dvh; }
+  .col-content { padding: 24px 20px 32px; }
+  .logo { margin-bottom: 10px; }
+  .logo img { height: 26px; }
+  .label { font-size: 0.5rem; margin-bottom: 10px; }
+  .headline { font-size: 1.5rem; margin-bottom: 10px; }
+  .sub { font-size: 0.83rem; margin-bottom: 20px; }
+  .form-section { padding: 36px 20px 44px; }
+}
+
+/* ====== TOUCH ====== */
+@media (hover: none) {
+  .cta-btn:hover, .form-submit:hover { transform: none; }
+}
+</style>
+</head>
+<body>
+
+<!-- ====== PAGE ====== -->
+<div class="page">
+  <!-- Photo -->
+  <div class="col-photo">
+    <img src="anabel-cta.png" alt="Anabel Mercedes" width="1200" height="800">
+  </div>
+
+  <!-- Content -->
+  <div class="col-content">
+    <div class="logo">
+      <a href="https://anabelmercedes.com"><img src="logo-am.svg" alt="Anabel Mercedes"></a>
+    </div>
+    <div class="label">Sesión gratuita · 15 minutos · 1:1</div>
+    <h1 class="headline">15 minutos que pueden <em>cambiarte la perspectiva.</em></h1>
+    <p class="sub">Si sientes que los días pasan y sigues en el mismo lugar… que trabajas duro pero no avanzas… que quieres algo tuyo pero <strong>no sabes por dónde empezar</strong> — yo estuve exactamente ahí.<br><br>Sin experiencia, sin contactos, sin garantías. Hoy genero ingresos todos los meses y tengo <strong>libertad de tiempo.</strong><br><br>En 15 minutos te cuento qué hice diferente. Sin compromiso — si tiene sentido, seguimos. Si no, todo bien.</p>
+    <button class="cta-btn" id="open-modal">
+      Quiero que hablemos
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+    </button>
+    <p class="note">Sin compromiso. Solo una conversación real.</p>
+  </div>
+</div>
+
+<!-- ====== INLINE FORM (mobile — shown below hero on scroll) ====== -->
+<section class="form-section" id="reserva">
+  <div class="form-section__inner">
+    <h2 class="form-section__title">Vamos a Hablar</h2>
+    <p class="form-section__sub">Déjame tus datos y te escribo por WhatsApp para coordinar.</p>
+    <form id="capture-form-mobile" novalidate>
+      <div class="form-group" id="m-group-nombre">
+        <label for="m-nombre">Tu nombre</label>
+        <input type="text" id="m-nombre" placeholder="Tu nombre" required autocomplete="name">
+        <div class="error-msg">Ingresa tu nombre.</div>
+      </div>
+      <div class="form-group" id="m-group-whatsapp">
+        <label for="m-whatsapp">WhatsApp</label>
+        <input type="tel" id="m-whatsapp" placeholder="+1 809 000 0000" required autocomplete="tel">
+        <div class="error-msg">Número válido (mínimo 10 dígitos).</div>
+      </div>
+      <div class="form-group" id="m-group-interes">
+        <label for="m-interes">¿Qué te interesa?</label>
+        <select id="m-interes" required>
+          <option value="" disabled selected>Selecciona una opción</option>
+          <option value="Quiero saber sobre la oportunidad de negocio">La oportunidad de negocio</option>
+          <option value="Me interesan los productos de salud">Productos de salud</option>
+          <option value="Solo quiero informarme">Solo quiero informarme</option>
+        </select>
+        <div class="error-msg">Selecciona qué te interesa.</div>
+      </div>
+      <button type="submit" class="form-submit">
+        Confirmar Mi Sesión
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+      </button>
+      <p class="form-note">Te redirijo a WhatsApp para confirmar tu cita.</p>
+    </form>
+  </div>
+</section>
+
+<!-- ====== MODAL (desktop only) ====== -->
+<div class="modal-overlay" id="modal-overlay">
+  <div class="modal">
+    <button class="modal__close" id="close-modal">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6L6 18M6 6l12 12"/></svg>
+    </button>
+    <h2 class="modal__title">Vamos a Hablar</h2>
+    <p class="modal__sub">Déjame tus datos y te escribo por WhatsApp para coordinar.</p>
+    <form id="capture-form-desktop" novalidate>
+      <div class="form-group" id="d-group-nombre">
+        <label for="d-nombre">Tu nombre</label>
+        <input type="text" id="d-nombre" placeholder="Tu nombre" required autocomplete="name">
+        <div class="error-msg">Ingresa tu nombre.</div>
+      </div>
+      <div class="form-group" id="d-group-whatsapp">
+        <label for="d-whatsapp">WhatsApp</label>
+        <input type="tel" id="d-whatsapp" placeholder="+1 809 000 0000" required autocomplete="tel">
+        <div class="error-msg">Número válido (mínimo 10 dígitos).</div>
+      </div>
+      <div class="form-group" id="d-group-interes">
+        <label for="d-interes">¿Qué te interesa?</label>
+        <select id="d-interes" required>
+          <option value="" disabled selected>Selecciona una opción</option>
+          <option value="Quiero saber sobre la oportunidad de negocio">La oportunidad de negocio</option>
+          <option value="Me interesan los productos de salud">Productos de salud</option>
+          <option value="Solo quiero informarme">Solo quiero informarme</option>
+        </select>
+        <div class="error-msg">Selecciona qué te interesa.</div>
+      </div>
+      <button type="submit" class="form-submit">
+        Confirmar Mi Sesión
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+      </button>
+      <p class="form-note">Te redirijo a WhatsApp para confirmar tu cita.</p>
+    </form>
+  </div>
+</div>
+
+<script>
+// Modal open/close (desktop only)
+const overlay = document.getElementById('modal-overlay');
+const openBtn = document.getElementById('open-modal');
+const closeBtn = document.getElementById('close-modal');
+const isMobile = () => window.innerWidth <= 900;
+
+openBtn.addEventListener('click', () => {
+  if (isMobile()) {
+    document.getElementById('reserva').scrollIntoView({ behavior: 'smooth' });
+  } else {
+    overlay.classList.add('active');
+    document.getElementById('d-nombre').focus();
+  }
+});
+closeBtn.addEventListener('click', () => overlay.classList.remove('active'));
+overlay.addEventListener('click', (e) => {
+  if (e.target === overlay) overlay.classList.remove('active');
+});
+document.addEventListener('keydown', (e) => {
+  if (e.key === 'Escape') overlay.classList.remove('active');
+});
+
+// Form handler — reusable
+function handleFormSubmit(formId, prefix) {
+  document.getElementById(formId).addEventListener('submit', function(e) {
+    e.preventDefault();
+    const nombre = document.getElementById(prefix + '-nombre');
+    const whatsapp = document.getElementById(prefix + '-whatsapp');
+    const interes = document.getElementById(prefix + '-interes');
+    let valid = true;
+
+    [prefix + '-group-nombre', prefix + '-group-whatsapp', prefix + '-group-interes'].forEach(id => {
+      const el = document.getElementById(id);
+      if (el) el.classList.remove('has-error');
+    });
+
+    if (!nombre.value.trim()) {
+      document.getElementById(prefix + '-group-nombre').classList.add('has-error');
+      valid = false;
+    }
+    if (whatsapp.value.replace(/\D/g, '').length < 10) {
+      document.getElementById(prefix + '-group-whatsapp').classList.add('has-error');
+      valid = false;
+    }
+    if (!interes.value) {
+      document.getElementById(prefix + '-group-interes').classList.add('has-error');
+      valid = false;
+    }
+    if (!valid) return;
+
+    const text = encodeURIComponent(
+      `Hola Anabel, soy ${nombre.value.trim()}. Vi tu Sesión Descubre y quiero agendar. Mi WhatsApp es ${whatsapp.value.trim()}. Me interesa: ${interes.value}.`
+    );
+    window.location.href = `https://wa.me/18292812978?text=${text}`;
+  });
+}
+
+handleFormSubmit('capture-form-mobile', 'm');
+handleFormSubmit('capture-form-desktop', 'd');
+</script>
+
+</body>
+</html>

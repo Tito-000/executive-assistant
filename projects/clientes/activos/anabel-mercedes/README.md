@@ -1,14 +1,14 @@
-# Anabel Mercedes — Marca Personal + Contenido
+# Anabel Mercedes — Contenido + Ventas
 
 **Estado:** Activo
 **Deadline:** 5 de abril 2026
 **Precio:** RD$32,000 | RD$12,000 al creador de contenido/admin IG | RD$20,000 para Martin
-**Progreso:** 0/25 tareas (0%)
+**Progreso:** 16/25 tareas (64%)
 
 ## Contexto
 
 - Anabel es hermana de Martin, network marketer de Immunotec
-- Quiere posicionarse como marca personal (no solo como consultora Immunotec)
+- Quiere generar ingresos con Immunotec atrayendo gente por Instagram (productos + oportunidad de negocio)
 - Plataforma principal: Instagram
 
 ## Entregables
@@ -16,7 +16,8 @@
 - 8 videos (4 producción + 4 orgánicos)
 - 20 posts (equipo de diseño subcontratado)
 - Automatización ManyChat (DMs, comentarios, historias)
-- Landing page de aterrizaje para su marca personal
+- Landing page de aterrizaje
+- Landing page de captura "Sesión Descubre" (lead magnet)
 - Guiones de los 8 videos
 - Calendario de publicación del mes
 
@@ -42,10 +43,10 @@ _MKR → TPA → CIA → WWP_
 
 | # | Tarea | Tiempo | Fecha límite |
 |---|-------|--------|-------------|
-| 1 | Market Research: investigar mercado de marca personal + network marketing en RD (qué contenido funciona, qué audiencia tiene, qué dolor resuelve) | 2 horas | 27 mar |
-| 2 | Top Player Analysis: analizar 5 cuentas top de network marketers con marca personal exitosa (qué publican, cómo enganchan, qué funnels usan) | 3 horas | 28 mar |
-| 3 | CIA Method: hablar con Anabel — entender su audiencia, qué le preguntan, qué objeciones tiene, qué resultados ha tenido | 1.5 horas | 28 mar |
-| 4 | Winner's Writing Process: definir messaging, tono, hooks y ángulos de contenido basado en MKR, TPA y CIA | 2 horas | 29 mar |
+| 1 | ~~Market Research~~ | 2 horas | 27 mar | DONE |
+| 2 | ~~Top Player Analysis~~ | 3 horas | 28 mar | DONE |
+| 3 | CIA Method: hablar con Anabel | 1.5 horas | 28 mar | PENDIENTE |
+| 4 | ~~Winner's Writing Process~~ | 2 horas | 29 mar | DONE |
 
 ---
 
@@ -53,11 +54,11 @@ _MKR → TPA → CIA → WWP_
 
 | # | Tarea | Tiempo | Fecha límite |
 |---|-------|--------|-------------|
-| 5 | Escribir guiones de 4 videos de producción (basados en WWP) | 3 horas | 30 mar |
-| 6 | Escribir guiones/outlines de 4 videos orgánicos | 2 horas | 30 mar |
-| 7 | Definir los 20 posts (temas, copy, CTA de cada uno) | 2.5 horas | 31 mar |
-| 8 | Crear calendario de publicación del mes (qué se publica cuándo y dónde) | 1 hora | 31 mar |
-| 9 | Entregar guiones + brief al creador de contenido/admin IG | 30 min | 31 mar |
+| 5 | ~~Guiones 4 videos producción~~ | 3 horas | 30 mar | DONE |
+| 6 | ~~Guiones 4 videos orgánicos~~ | 2 horas | 30 mar | DONE |
+| 7 | Definir los 20 posts | 2.5 horas | 31 mar | PENDIENTE |
+| 8 | Crear calendario de publicación | 1 hora | 31 mar | PENDIENTE |
+| 9 | Entregar guiones + brief al creador | 30 min | 31 mar | PENDIENTE |
 
 ---
 
@@ -65,13 +66,16 @@ _MKR → TPA → CIA → WWP_
 
 | # | Tarea | Tiempo | Fecha límite |
 |---|-------|--------|-------------|
-| 10 | Definir estructura de la landing page (secciones, copy, CTA) | 1 hora | 31 mar |
-| 11 | Crear landing page de aterrizaje para marca personal de Anabel | 4 horas | 2 abr |
-| 12 | Configurar automatización ManyChat: respuesta a DMs con keyword | 2 horas | 2 abr |
-| 13 | Configurar automatización ManyChat: respuesta a comentarios en videos/reels | 1.5 horas | 3 abr |
-| 14 | Configurar automatización ManyChat: respuesta a menciones en historias | 1 hora | 3 abr |
-| 15 | Conectar ManyChat con landing page (el flow lleva a la landing) | 1 hora | 3 abr |
-| 16 | Testear todo el flujo completo (DM → ManyChat → landing) | 1 hora | 3 abr |
+| 10 | ~~Definir estructura landing page~~ | 1 hora | 31 mar | DONE |
+| 11 | ~~Crear landing page~~ | 4 horas | 2 abr | DONE |
+| 11b | ~~Crear landing captura "Sesión Descubre"~~ | 2 horas | 7 abr | DONE |
+| 11c | ~~Documentar copy ManyChat (flujos-copy.md)~~ | 1 hora | 7 abr | DONE |
+| 11d | ~~Crear guía setup ManyChat (README.md)~~ | 30 min | 7 abr | DONE |
+| 12 | Configurar ManyChat: DMs con keyword | 2 horas | — | PENDIENTE (requiere acceso IG) |
+| 13 | Configurar ManyChat: comentarios en reels | 1.5 horas | — | PENDIENTE (requiere acceso IG) |
+| 14 | Configurar ManyChat: menciones en historias | 1 hora | — | PENDIENTE (requiere acceso IG) |
+| 15 | Conectar ManyChat con landing page | 1 hora | — | PENDIENTE |
+| 16 | Testear flujo completo | 1 hora | — | PENDIENTE |
 
 ---
 

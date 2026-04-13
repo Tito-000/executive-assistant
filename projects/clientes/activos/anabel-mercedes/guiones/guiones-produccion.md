@@ -1,6 +1,7 @@
 # Guiones de Producción — Anabel Mercedes
 
-> Metodología: Skill `/guion-viral` (5 pasos de Victor, Erasmedia)
+> Metodología: Skill `/guion-viral` (Victor + Ramiro fusionados)
+> Victor = estructura narrativa y formatos. Ramiro = APSPA para conversión (insight + QUÉ sin CÓMO + prueba social dura + CTA con 4 componentes).
 > Principio Binario aplicado: la realidad de cada video SUPERA la expectativa del gancho.
 >
 > **NARRATIVA CENTRAL:** Anabel genera ingresos con network marketing real — equipo, liderazgo, volumen. El contenido es el vehículo de atracción que estamos implementando ahora. Los guiones reflejan su realidad.
@@ -87,35 +88,35 @@
 
 **🔁 Re-entry point:** "Y ahí fue cuando aprendí algo que lo cambió todo."
 
-**Punto 3 — Lo que descubrió** (28-40 seg)
+**Punto 3 — El insight (perspectiva nueva)** (28-38 seg)
 
-> "Y ahí aprendí algo que cambió todo: en este negocio no gana el más carismático — gana el más consistente. Yo no convencía con discursos. Yo convencía con ejemplo. Aparecía todos los días. Escuchaba a mi equipo. Aprendía, fallaba, y volvía a intentar. Y poco a poco, persona por persona, construí un equipo real."
+> "Y ahí descubrí algo que nadie te dice: en este negocio el carisma es una ventaja los primeros 30 días. Después es una trampa — porque los carismáticos confían en su carisma y dejan de aparecer. Los tímidos no tenemos esa muleta. No nos queda otra que aparecer todos los días. Y eso, con el tiempo, es lo que construye algo real."
 
-**Texto en pantalla:** "No gana el más carismático. Gana el más consistente."
+**Texto en pantalla:** "El carisma es ventaja 30 días. Después es trampa."
 
-*Elementos narrativos: acciones (aparecer cada día), pensamiento (el insight sobre consistencia), diálogo implícito (liderazgo con su equipo)*
+*Elementos narrativos: pensamiento (el insight sobre carisma vs consistencia), acciones (aparecer cada día)*
 
-**🔁 Re-entry point:** "¿Y sabes a dónde me llevó eso?"
+**🔁 Re-entry point:** "¿Y sabes qué pasó cuando hice eso una semana tras otra?"
 
-**Punto 4 — La prueba** (40-45 seg)
+**Punto 4 — Prueba social dura** (38-45 seg)
 
-> "Hoy genero más de $10,000 al mes. No porque sea especial — porque fui constante cuando todo me decía que me rindiera."
+> "Hoy lidero un equipo de más de 50 personas. El mes pasado 4 de ellas alcanzaron su primer rango. Ninguna es extrovertida. Ninguna tenía experiencia en ventas. Lo único que hicieron fue seguir una estructura concreta y aparecer."
 
-**Texto en pantalla:** "+$10K/mes | Disciplina > Carisma"
+**Texto en pantalla:** "50+ personas | 4 nuevos rangos el mes pasado | 0 extrovertidas"
 
 ---
 
 ### PASO 5 — OUTRO (45-55 seg)
 
 **Moral:**
-> "No te cuento esto para impresionarte. Te lo cuento porque si yo pude siendo la persona más tímida que conocías, la que no sabía hablar con nadie... ¿qué te dice eso de lo que TÚ puedes lograr si te lo propones de verdad?"
+> "No te cuento esto para impresionarte. Te lo cuento porque si yo pude siendo la persona más tímida que conocías, la que no sabía hablar con nadie... ¿qué te dice eso de lo que TÚ puedes lograr?"
 
-**CTA nativo:**
-> "Si quieres saber cómo empecé y qué hice diferente para construir esto, escribe CÓMO en los comentarios — y te cuento."
+**CTA nativo (4 componentes Ramiro):**
+> "Comenta CÓMO y te mando la estructura semanal que sigo — son 3 hábitos concretos que se hacen en 20 minutos al día, sin tener que hablar con nadie nuevo."
 
-**Texto en pantalla:** "Escribe CÓMO"
+**Texto en pantalla:** "Comenta CÓMO → estructura semanal gratis"
 
-**¿El CTA fluye con el contenido?** Sí — viene directo de la pregunta retórica. El espectador que se identifica QUIERE saber cómo.
+**Componentes CTA:** ✅ Entregable (estructura semanal + 3 hábitos) ✅ Resultado (construir sin hablar con nadie nuevo) ✅ Tiempo (20 min/día) ✅ Esfuerzo (sin tener que hablar con nadie nuevo)
 
 ---
 
@@ -221,21 +222,21 @@
 
 **🔁 Re-entry point:** "Pero entonces, ¿qué hacen diferente los que SÍ construyen algo?"
 
-**Punto 2 — El diferenciador** (22-36 seg)
+**Punto 2 — El diferenciador (QUÉ sin CÓMO)** (22-36 seg)
 
-> "Ahora, los que SÍ lo hacen diferente — los que buscan mentoría, los que aprenden un sistema, los que tratan esto como un negocio real y no como un hobby — esos construyen algo. Yo lo vi en mi propia red: las personas que siguen un sistema, que son consistentes, que se dejan guiar... son las que en 12, 18 meses están generando ingresos reales."
+> "Ahora, los que SÍ lo hacen diferente no trabajan más — trabajan con una estructura que el 75% ni siquiera sabe que existe. Es una sola cosa que cambia todo: dejan de improvisar y siguen un mapa. No voy a entrar en detalles ahora, pero cuando ves a alguien que en 12, 18 meses ya está generando ingresos reales, no es suerte — es que alguien le pasó el mapa correcto."
 
-**Texto en pantalla:** "Sistema + Mentoría + Disciplina = Resultados"
+**Texto en pantalla:** "No trabajan más. Siguen un mapa."
 
-*Elementos narrativos: acciones (lo que hacen los exitosos), diálogo implícito (mentoría, guía)*
+*Elementos narrativos: pensamiento (la distinción entre improvisar vs seguir estructura)*
 
-**🔁 Re-entry point:** "Y te lo digo por experiencia propia."
+**🔁 Re-entry point:** "¿Y cómo lo sé? Porque yo estuve de los dos lados."
 
-**Punto 3 — La prueba personal** (36-48 seg)
+**Punto 3 — Prueba social dura** (36-48 seg)
 
-> "Yo era la persona menos probable de lograr algo en redes de mercadeo. Tímida, sin experiencia en ventas, sin contactos. Me dijeron que no más veces de las que puedo contar. Pero me tomé esto en serio. Busqué quien me enseñara. Seguí un sistema. Y trabajé con disciplina todos los días — no cuando me sentía motivada, sino TODOS los días. Eso hizo toda la diferencia."
+> "Yo era la persona menos probable de lograr algo aquí. Tímida, sin experiencia en ventas, sin contactos. Los primeros 6 meses no pasó casi nada. Pero seguí el mapa. Y hoy genero más de $10,000 al mes. En mi red, 7 personas que entraron conmigo en los últimos 18 meses ya están generando entre $2,000 y $8,000 al mes. Las 7 siguen la misma estructura."
 
-**Texto en pantalla:** "Tímida. Sin experiencia. Sin contactos. → +$10K/mes"
+**Texto en pantalla:** "7 personas | 18 meses | $2K–$8K/mes cada una"
 
 *Elementos narrativos: emociones (frustración del rechazo), acciones (disciplina diaria), pensamiento (la decisión de tomárselo en serio)*
 
@@ -246,12 +247,12 @@
 **Moral:**
 > "La estadística dice que el 75% no gana nada. Pero la estadística no te dice quiénes son el otro 25% — y qué hicieron diferente. Esa es la pregunta que importa."
 
-**CTA nativo:**
-> "Si quieres saber qué sistema es el que hace la diferencia, escribe SISTEMA en los comentarios."
+**CTA nativo (4 componentes Ramiro):**
+> "Comenta SISTEMA y te mando el mapa de 1 página con la estructura exacta que sigue el 25%. Lo lees en 5 minutos y decides si te hace sentido."
 
-**Texto en pantalla:** "Escribe SISTEMA"
+**Texto en pantalla:** "Comenta SISTEMA → mapa de 1 página gratis"
 
-**¿El CTA fluye?** Sí — responde directamente a la pregunta que plantea la moral.
+**Componentes CTA:** ✅ Entregable (mapa de 1 página) ✅ Resultado (ver la estructura del 25%) ✅ Tiempo (5 minutos) ✅ Esfuerzo (solo leer y decidir)
 
 ---
 
@@ -359,23 +360,29 @@
 
 **🔁 Re-entry point:** "Pero hay algo que la mayoría no distingue — y es lo más importante."
 
-**Punto 2 — La distinción** (20-30 seg)
+**Punto 2 — El insight (causa raíz)** (20-30 seg)
 
-> "Pero lo que yo descubrí es que eso no es el negocio — son personas que no saben hacerlo. Es como decir que todos los restaurantes son malos porque comiste en uno pésimo. El modelo es simple: un producto real que ayuda a la gente, un equipo de personas que lo comparte, y un sistema donde creces ayudando a otros a crecer."
+> "Esas personas que te presionaron no son malas personas. Están siguiendo un manual que les enseñaron en los 90s — cuando Instagram no existía. Hacen exactamente lo que les dijeron que hicieran: hacer lista de contactos, presionar, perseguir. El problema no es la persona. Es el manual. Y hay un manual completamente diferente que nadie te mostró."
 
-**Texto en pantalla:** "Producto real → Equipo → Crecimiento mutuo"
+**Texto en pantalla:** "El problema no es la persona. Es el manual."
 
-*Elementos narrativos: pensamiento (la analogía del restaurante que reencuadra), acciones (cómo funciona realmente)*
+*Elementos narrativos: pensamiento (reencuadre de culpa de la persona al sistema), acciones (lo que les enseñaron a hacer)*
 
-**🔁 Re-entry point:** "Entonces, ¿cómo se ve cuando se hace bien?"
+**🔁 Re-entry point:** "¿Y cómo se ve cuando se hace con el manual correcto?"
 
-**Punto 3 — Cómo lo hace diferente** (30-40 seg)
+**Punto 3 — La alternativa (QUÉ sin CÓMO)** (30-38 seg)
 
-> "Yo no persigo a nadie. No presiono. No le escribo a gente que no me habló primero. No invento un estilo de vida que no tengo. Simplemente construyo con personas que realmente quieren construir. Y te soy honesta: funciona mucho mejor que cualquier mensaje frío."
+> "Yo hago algo completamente opuesto. Tengo un sistema que me trae personas que ya me buscaron a mí. No al revés. No persigo a nadie. No presiono. No le escribo a gente que no me habló primero. Las personas llegan solas porque algo en mi contenido les resonó."
 
-**Texto en pantalla:** "Sin perseguir. Sin presionar. Sin fingir."
+**Texto en pantalla:** "Ellas me buscan a mí. No al revés."
 
 *Elementos narrativos: acciones (lo que ella hace diferente), pensamiento (la decisión consciente de no perseguir)*
+
+**Punto 4 — Prueba social dura** (38-42 seg)
+
+> "El mes pasado hablé con 23 personas interesadas en mi negocio. A ninguna le escribí yo primero. Las 23 me escribieron a mí."
+
+**Texto en pantalla:** "23 conversaciones | 0 mensajes fríos"
 
 ---
 
@@ -384,12 +391,12 @@
 **Moral:**
 > "No te estoy diciendo que esto es para todos. Te estoy diciendo que probablemente no te lo presentaron como debían — y eso no es justo ni para ti ni para el modelo."
 
-**CTA nativo:**
-> "Si quieres saber cómo funciona realmente cuando se hace bien, escribe INFO en los comentarios. Sin compromiso, sin presión — exactamente como debería ser."
+**CTA nativo (4 componentes Ramiro):**
+> "Comenta INFO y te mando las 3 diferencias entre el manual viejo y el nuevo — lo lees en 3 minutos y vas a entender por qué tu experiencia anterior fue tan mala. Sin compromiso, sin presión."
 
-**Texto en pantalla:** "Escribe INFO — sin compromiso"
+**Texto en pantalla:** "Comenta INFO → 3 diferencias en 3 minutos"
 
-**¿El CTA fluye?** Sí — la frase "sin compromiso, sin presión" refuerza exactamente lo que el video acaba de prometer.
+**Componentes CTA:** ✅ Entregable (las 3 diferencias entre manual viejo y nuevo) ✅ Resultado (entender por qué tu experiencia fue mala) ✅ Tiempo (3 minutos) ✅ Esfuerzo (solo leer, sin compromiso)
 
 ---
 
@@ -440,12 +447,12 @@
 **Gancho visual:** B-roll — Anabel despertando tranquila, luz de mañana entrando por la ventana. Sin alarma. Se estira, agarra su café. Se siente real, no posado.
 
 **Gancho hablado (voiceover):**
-> "No renuncié a nada para hacer esto. Lo construí paso a paso, con mi vida normal — mientras todavía tenía un trabajo, mientras todavía tenía dudas."
+> "No renuncié a nada para hacer esto. Y eso no fue suerte — fue la decisión más inteligente que tomé. Porque las personas que dejan todo para meterse en esto son exactamente las que fracasan primero."
 
-**Texto en pantalla:** "NO RENUNCIÉ A NADA. LO CONSTRUÍ PASO A PASO."
+**Texto en pantalla:** "NO RENUNCIÉ A NADA. Y ESO FUE LO MÁS INTELIGENTE."
 
-**Técnica de gancho:** Negación directa — destruye la narrativa de "dejé todo por mi sueño" que es cliché en NM.
-**Expectativa creada:** "¿Cómo construyó algo real sin dejarlo todo?" — la historia es más impresionante de lo que imagina.
+**Técnica de gancho:** Negación directa + INSIGHT Ramiro — destruye la narrativa "dejé todo por mi sueño" Y explica por qué dejarlo todo es un error (causa raíz).
+**Expectativa creada:** "¿Por qué fracasan los que dejan todo?" — el insight la va a sorprender.
 
 ---
 
@@ -467,27 +474,27 @@
 
 ---
 
-### PASO 3 — INTRO (3-10 seg)
+### PASO 3 — INTRO con INSIGHT (3-12 seg)
 
 *B-roll: Anabel revisando su teléfono en su sala, con café. Normal.*
 
-> "Cuando empecé, no dejé todo para meterme en esto. Seguía con mi vida. Pero dedicaba tiempo todos los días — a aprender, a hablar con personas, a construir relaciones. No era glamuroso. No había atajos."
+> "Cuando dejás todo para meterte en algo nuevo, le ponés presión financiera a algo que necesita crecer sin presión. Empezás a cerrar ventas por desesperación — y la gente lo huele a kilómetros. Yo hice lo opuesto: lo construí con mi vida normal, dedicando tiempo todos los días sin dejar nada."
 
-**Texto en pantalla:** "Sin atajos. Sin glamour."
+**Texto en pantalla:** "Presión financiera = desesperación = rechazo"
 
 ---
 
 ### PASO 4 — CUERPO / NARRATIVA (10-45 seg)
 
-**Punto 1 — El proceso real** (10-22 seg)
+**Punto 1 — El proceso real (QUÉ sin CÓMO)** (12-22 seg)
 
 *B-roll: Anabel en una videollamada con su equipo. Anabel tomando notas. Anabel en un evento.*
 
-> "Fui aprendiendo a liderar. No en un curso — en la vida real. Escuchando a personas que tenían miedo igual que yo. Enseñándoles lo que yo estaba aprendiendo. Construí mi equipo persona por persona. No de la noche a la mañana — mes a mes. Y cada persona que se sumaba y empezaba a crecer, me confirmaba que esto valía cada hora invertida."
+> "Lo construí persona por persona. Mes a mes. Hay una estructura específica que te permite hacer esto en 90 minutos al día sin dejar lo que ya estás haciendo. No voy a entrar en detalles ahora — pero esa estructura es lo que separa a la gente que construye algo real de la gente que lo intenta 3 meses y lo deja."
 
-**Texto en pantalla:** "Persona por persona. Mes a mes."
+**Texto en pantalla:** "90 minutos al día. Sin dejar tu vida."
 
-*Elementos narrativos: ubicación (eventos, llamadas, reuniones), acciones (escuchar, enseñar, construir), pensamiento (la confirmación interna de que vale la pena), emociones (la satisfacción de ver a otros crecer), diálogo implícito (las conversaciones con su equipo)*
+*Elementos narrativos: ubicación (eventos, llamadas, reuniones), acciones (el proceso), pensamiento (la estructura como concepto)*
 
 **🔁 Re-entry point:** "Y eso, con el tiempo, se convirtió en algo que no esperaba."
 
@@ -503,15 +510,15 @@
 
 **🔁 Re-entry point:** "Pero lo que más quiero que entiendas es esto."
 
-**Punto 3 — El mensaje directo** (38-45 seg)
+**Punto 3 — Prueba social dura + mensaje directo** (38-45 seg)
 
 *Anabel a cámara por primera vez en el video. Primer plano. Directa.*
 
-> "No necesitas ser extrovertida. No necesitas ser experta. No necesitas dejarlo todo. Solo necesitas estar dispuesta a trabajar por algo que vale la pena — y tener a alguien que te guíe."
+> "En mi equipo tengo una contadora que construyó esto en 6 meses sin dejar su trabajo. Una mamá que lo hace en 90 minutos al día mientras sus hijos están en la escuela. Y yo, que lo arranqué con un empleo de tiempo completo y sin ninguna experiencia. Las tres seguimos la misma estructura."
 
-**Texto en pantalla:** "Solo necesitas estar dispuesta."
+**Texto en pantalla:** "Contadora. Mamá. Empleada. La misma estructura."
 
-*Elementos narrativos: diálogo directo (hablándole a la cámara/espectador)*
+*Elementos narrativos: diálogo directo (hablándole a la cámara/espectador), prueba social con 3 perfiles reales*
 
 ---
 
@@ -520,12 +527,12 @@
 **Moral:**
 > "La libertad no se encuentra. Se construye. Y se construye un día a la vez."
 
-**CTA nativo:**
-> "Si quieres saber cómo empecé y qué haría diferente si empezara hoy, escribe QUIERO en los comentarios."
+**CTA nativo (4 componentes Ramiro):**
+> "Comenta QUIERO y te mando el plan de 90 minutos diarios que usamos — el mismo que siguió la contadora, la mamá y yo. Lo implementas desde mañana sin dejar nada de lo que ya estás haciendo."
 
-**Texto en pantalla:** "Escribe QUIERO"
+**Texto en pantalla:** "Comenta QUIERO → plan de 90 min/día gratis"
 
-**¿El CTA fluye?** Sí — después de ver el proceso y el resultado, el espectador que resonó quiere saber cómo empezar.
+**Componentes CTA:** ✅ Entregable (plan de 90 minutos diarios) ✅ Resultado (construir sin dejar tu vida actual) ✅ Tiempo (90 minutos al día, desde mañana) ✅ Esfuerzo (sin dejar nada de lo que ya haces)
 
 ---
 

@@ -1,0 +1,862 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Guía de Historias de Instagram</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root {
+  --navy: #1A1F2E;
+  --sage: #6B8868;
+  --sage-light: #A8C4A5;
+  --cream: #FAFAF8;
+  --cream-warm: #F5F2ED;
+  --text: #333;
+  --text-light: #666;
+  --blue: #a5d8ff;
+  --yellow: #ffec99;
+  --green: #b2f2bb;
+  --coral: #ffa8a8;
+  --purple: #d0bfff;
+}
+
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  color: var(--text);
+  background: var(--cream);
+  line-height: 1.7;
+  -webkit-font-smoothing: antialiased;
+}
+
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+.header {
+  background: var(--navy);
+  color: white;
+  padding: 60px 0 50px;
+  text-align: center;
+}
+.header h1 {
+  font-family: 'DM Serif Display', serif;
+  font-size: clamp(28px, 5vw, 42px);
+  font-weight: 400;
+  margin-bottom: 8px;
+}
+.header p {
+  font-size: 15px;
+  opacity: 0.7;
+  font-weight: 300;
+}
+
+.section {
+  padding: 50px 0;
+  border-bottom: 1px solid #e5e0d8;
+}
+.section:last-child { border-bottom: none; }
+
+.section h2 {
+  font-family: 'DM Serif Display', serif;
+  font-size: clamp(22px, 3.5vw, 30px);
+  font-weight: 400;
+  color: var(--navy);
+  margin-bottom: 6px;
+}
+.section .subtitle {
+  font-size: 14px;
+  color: var(--text-light);
+  margin-bottom: 28px;
+  font-weight: 400;
+}
+.section h3 {
+  font-size: 17px;
+  font-weight: 600;
+  color: var(--navy);
+  margin: 30px 0 12px;
+}
+.section p, .section li {
+  font-size: 15px;
+  line-height: 1.8;
+  color: var(--text);
+}
+.section ul, .section ol {
+  padding-left: 20px;
+  margin-bottom: 16px;
+}
+.section li { margin-bottom: 6px; }
+
+.visual {
+  background: white;
+  border-radius: 12px;
+  padding: 16px;
+  margin: 24px 0;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+}
+.visual img {
+  width: 100%;
+  border-radius: 8px;
+  display: block;
+}
+.visual .caption {
+  font-size: 13px;
+  color: var(--text-light);
+  text-align: center;
+  margin-top: 10px;
+  font-style: italic;
+}
+
+.rule {
+  background: white;
+  border-left: 4px solid var(--sage);
+  border-radius: 0 8px 8px 0;
+  padding: 20px 24px;
+  margin: 20px 0;
+}
+.rule strong { color: var(--navy); }
+
+.step {
+  display: flex;
+  gap: 16px;
+  margin: 20px 0;
+  align-items: flex-start;
+}
+.step-num {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 16px;
+  color: white;
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+.step-content { flex: 1; }
+.step-content strong { display: block; margin-bottom: 4px; color: var(--navy); }
+
+.cal-table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0 6px;
+  margin: 16px 0;
+}
+.cal-table td {
+  padding: 12px 16px;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 500;
+}
+.cal-table .day { width: 50px; font-weight: 700; color: var(--navy); }
+.cal-table .type { width: 70px; font-weight: 600; text-align: center; border-radius: 20px; font-size: 12px; text-transform: uppercase; letter-spacing: 0.5px; }
+.bg-green { background: var(--green); }
+.bg-yellow { background: var(--yellow); }
+.bg-purple { background: var(--purple); }
+.bg-blue { background: var(--blue); }
+.bg-coral { background: var(--coral); }
+
+.example {
+  background: var(--cream-warm);
+  border-radius: 10px;
+  padding: 20px 24px;
+  margin: 16px 0;
+  border: 1px solid #e5e0d8;
+}
+.example .label {
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: var(--sage);
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+.example .story {
+  background: white;
+  border-radius: 8px;
+  padding: 14px 18px;
+  margin: 8px 0;
+  font-size: 14px;
+  line-height: 1.6;
+  border-left: 3px solid var(--sage-light);
+}
+.example .story .tag {
+  font-size: 11px;
+  font-weight: 700;
+  color: var(--sage);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-bottom: 4px;
+}
+
+.metrics {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 16px;
+  margin: 20px 0;
+}
+.metric {
+  background: white;
+  border-radius: 10px;
+  padding: 20px;
+  text-align: center;
+}
+.metric .num {
+  font-family: 'DM Serif Display', serif;
+  font-size: 28px;
+  color: var(--navy);
+}
+.metric .label {
+  font-size: 13px;
+  color: var(--text-light);
+  margin-top: 4px;
+}
+
+.checklist { list-style: none; padding: 0; }
+.checklist li {
+  padding: 8px 0 8px 28px;
+  position: relative;
+  font-size: 14px;
+}
+.checklist li::before {
+  content: '\2610';
+  position: absolute;
+  left: 0;
+  font-size: 16px;
+}
+
+.footer {
+  background: var(--navy);
+  color: white;
+  text-align: center;
+  padding: 40px 0;
+  font-size: 13px;
+  opacity: 0.6;
+}
+
+@media (max-width: 600px) {
+  .metrics { grid-template-columns: 1fr; }
+  .step { flex-direction: column; gap: 8px; }
+}
+</style>
+</head>
+<body>
+
+<div class="header">
+  <div class="container">
+    <h1>Guia de Historias de Instagram</h1>
+    <p>Estrategia de Stories — Semanas 1 y 2</p>
+  </div>
+</div>
+
+<div class="container">
+
+<!-- ============================================ -->
+<!-- SECCION 1: CONCEPTO CENTRAL -->
+<!-- ============================================ -->
+<div class="section">
+  <h2>1. El concepto central</h2>
+  <p class="subtitle">Esto es lo mas importante que debes entender</p>
+
+  <div class="visual">
+    <img src="02-reels-vs-stories.png" alt="Reels vs Stories">
+    <div class="caption">Los Reels atraen gente nueva. Las Stories convierten esa gente en clientes.</div>
+  </div>
+
+  <div class="rule">
+    <strong>Regla #1:</strong> Los Reels y los posts son para que gente nueva te descubra. Las historias son para que la gente que ya te sigue te compre. El 80% de las ventas ocurren en las historias, no en los Reels.
+  </div>
+
+  <p>Esto significa que tus historias son tu herramienta mas importante para generar ingresos. No son para contenido pulido ni para impresionar — son para mostrarte real, cercana, y guiar a la gente al siguiente paso.</p>
+</div>
+
+<!-- ============================================ -->
+<!-- SECCION 2: TIMING DIARIO -->
+<!-- ============================================ -->
+<div class="section">
+  <h2>2. Tu rutina diaria de historias</h2>
+  <p class="subtitle">El horario importa mas de lo que crees</p>
+
+  <div class="visual">
+    <img src="03-timing-diario.png" alt="Timing Diario">
+    <div class="caption">Tres momentos del dia: borrar, hook, secuencia.</div>
+  </div>
+
+  <div class="step">
+    <div class="step-num" style="background: var(--coral);">1</div>
+    <div class="step-content">
+      <strong>12:00 - 1:00 PM — Borrar historias del dia anterior</strong>
+      Borra todas las historias que quedaron de ayer. No te preocupes, Instagram no te penaliza por borrar historias. Lo importante es que cuando subas tu primera historia del dia, no haya nada antes.
+    </div>
+  </div>
+
+  <div class="step">
+    <div class="step-num" style="background: #e6b800;">2</div>
+    <div class="step-content">
+      <strong>2:00 PM — Subir el Hook (la primera historia del dia)</strong>
+      Esta es la historia mas importante. Su unico objetivo es generar vistas e interacciones para que el algoritmo le muestre el resto de tus historias a mas gente. No tiene que ver con negocio ni con productos — es algo casual, gracioso o cotidiano.
+    </div>
+  </div>
+
+  <div class="step">
+    <div class="step-num" style="background: var(--sage);">3</div>
+    <div class="step-content">
+      <strong>3:00 - 4:00 PM — Subir la secuencia principal (3-4 historias)</strong>
+      Una hora despues del hook, subes la secuencia principal. Maximo 3-4 historias. Mas de eso y la gente se aburre y pasa al siguiente.
+    </div>
+  </div>
+
+  <div class="rule">
+    <strong>Por que este horario?</strong> Si subes muy tarde (8-9pm), la gente te responde de noche, los agarras al dia siguiente y esos leads ya estan frios. Entre 2-4pm es el horario ideal para generar respuestas que puedas atender el mismo dia.
+  </div>
+</div>
+
+<!-- ============================================ -->
+<!-- SECCION 3: EL HOOK -->
+<!-- ============================================ -->
+<div class="section">
+  <h2>3. La Historia Hook (Gancho)</h2>
+  <p class="subtitle">La primera historia del dia determina el exito de todo lo demas</p>
+
+  <div class="visual">
+    <img src="04-historia-hook.png" alt="Historia Hook">
+    <div class="caption">Un buen hook puede duplicar o triplicar tus vistas del dia.</div>
+  </div>
+
+  <p>La primera historia del dia es la mas importante. Si es aburrida, vas a tener pocas vistas todo el dia. Si es buena, puede duplicar o triplicar la cantidad de personas que ven tu secuencia completa.</p>
+
+  <h3>Reglas del Hook</h3>
+  <ul>
+    <li><strong>Subir sin nada antes</strong> — por eso borramos las de ayer</li>
+    <li><strong>No tiene que ver con la secuencia</strong> — puede ser algo completamente random</li>
+    <li><strong>Objetivo: generar vistas</strong> — no vender, no educar, solo que la gente vea</li>
+    <li><strong>Dejarlo correr 1-2 horas</strong> antes de subir la secuencia principal</li>
+  </ul>
+
+  <h3>4 Tecnicas de Hook</h3>
+
+  <div class="visual">
+    <img src="05-hook-techniques.png" alt="4 Tecnicas de Hook">
+  </div>
+
+  <div class="example">
+    <div class="label">Tecnica 1: Open Loop (Bucle Abierto)</div>
+    <p>Dices algo incompleto que obliga a la gente a seguir viendo.</p>
+    <div class="story">
+      <div class="tag">Ejemplo</div>
+      "Algo me paso hoy que no le he contado a nadie..." (video a camara, cara de sorpresa — no dices que paso)
+    </div>
+    <div class="story">
+      <div class="tag">Ejemplo</div>
+      "Acabo de recibir un mensaje que me dejo sin palabras" (foto del celular boca abajo, sin mostrar)
+    </div>
+    <div class="story">
+      <div class="tag">Ejemplo</div>
+      "Nunca pense que iba a decir esto publicamente pero..." (video cortado justo antes de decir que)
+    </div>
+  </div>
+
+  <div class="example">
+    <div class="label">Tecnica 2: Pattern Break (Romper el Patron)</div>
+    <p>Algo inesperado que rompe el scroll automatico.</p>
+    <div class="story">
+      <div class="tag">Ejemplo</div>
+      Zoom extremo a un objeto random de tu casa — "Adivina que es esto?" (con sticker de encuesta)
+    </div>
+    <div class="story">
+      <div class="tag">Ejemplo</div>
+      Foto borrosa a proposito — "La proxima historia se ve mejor, te lo prometo"
+    </div>
+    <div class="story">
+      <div class="tag">Ejemplo</div>
+      Video empezando en silencio total, 3 segundos, y despues dices algo inesperado
+    </div>
+  </div>
+
+  <div class="example">
+    <div class="label">Tecnica 3: Curiosity Gap (Vacio de Curiosidad)</div>
+    <p>La diferencia entre lo que sabes y lo que quieres saber.</p>
+    <div class="story">
+      <div class="tag">Ejemplo</div>
+      "3 cosas que deje de hacer y mi vida cambio" (sin decir cuales — eso va en la secuencia)
+    </div>
+    <div class="story">
+      <div class="tag">Ejemplo</div>
+      "Esto es lo que tomo todas las mananas antes que cualquier cosa" (foto del vaso tapado o de espaldas)
+    </div>
+    <div class="story">
+      <div class="tag">Ejemplo</div>
+      "Una cosa que aprendi este ano que ojala me hubieran dicho antes"
+    </div>
+  </div>
+
+  <div class="example">
+    <div class="label">Tecnica 4: Polarizar (Opinion Fuerte)</div>
+    <p>Una opinion que genera reaccion — la gente responde, y eso le dice al algoritmo que muestre mas.</p>
+    <div class="story">
+      <div class="tag">Ejemplo</div>
+      "No todo el mundo esta hecho para emprender. Y esta bien."
+    </div>
+    <div class="story">
+      <div class="tag">Ejemplo</div>
+      "La gente que dice 'no tengo tiempo' en realidad no tiene prioridades"
+    </div>
+    <div class="story">
+      <div class="tag">Ejemplo</div>
+      "Dejen de pedirle permiso a todo el mundo para vivir su vida"
+    </div>
+  </div>
+
+  <div class="rule">
+    <strong>Regla de oro:</strong> El hook NUNCA cierra el loop en la misma historia. El cierre esta en la historia 2 o 3. Si cierras en la misma historia, la gente no pasa a la siguiente y pierdes las vistas.
+  </div>
+</div>
+
+<!-- ============================================ -->
+<!-- SECCION 4: TIPOS DE SECUENCIA -->
+<!-- ============================================ -->
+<div class="section">
+  <h2>4. Los tipos de secuencia</h2>
+  <p class="subtitle">En estas primeras 2 semanas usamos solo CTA y Awareness</p>
+
+  <div class="visual">
+    <img src="06-tipos-secuencia.png" alt="3 Tipos de Secuencia">
+    <div class="caption">Hand Raiser se activa despues cuando tengamos recursos de valor listos.</div>
+  </div>
+
+  <h3>CTA Directo — Para que te pregunten</h3>
+  <p>Es una secuencia de cosecha. Buscas que la gente te escriba pidiendo informacion.</p>
+  <div class="rule">
+    <strong>Estructura:</strong> Clientes &rarr; Conciencia &rarr; CTA<br><br>
+    <strong>1. Clientes:</strong> Mostrar tu trabajo con personas reales. Fotos de calls, chats (con permiso), o hablar de las conversaciones que tuviste.<br>
+    <strong>2. Conciencia:</strong> Explicar que haces con esas personas. Como las ayudas, que sistema usas.<br>
+    <strong>3. CTA:</strong> "Si quieres saber mas, escribeme [KEYWORD]"
+  </div>
+
+  <h3>Awareness — Para nutrir y sembrar</h3>
+  <p>Es una secuencia de siembra. No pides nada. Solo generas conexion y cercania.</p>
+  <div class="rule">
+    <strong>Estructura:</strong> Clientes &rarr; Conciencia (sin CTA)<br><br>
+    Igual que el CTA Directo pero <strong>sin pedir nada al final</strong>. Mostrar tu vida real, detras de camaras, momentos con la familia, reflexiones. La gente te va conociendo sin sentirse presionada.
+  </div>
+
+  <h3>Hand Raiser — Para generar conversaciones (proximamente)</h3>
+  <p>Se activa cuando tengamos recursos gratuitos de valor listos. La estructura es: Resultado &rarr; Vehiculo &rarr; CTA. Ofreces un recurso irresistible a cambio de que la persona te escriba un keyword.</p>
+  <div class="rule">
+    <strong>Un recurso irresistible es:</strong> Una herramienta especifica que te permite conseguir un resultado especifico en el menor tiempo posible con el menor esfuerzo posible. No es un video de 5 minutos — es algo tangible y concreto (un checklist, una guia, un template, un test).
+  </div>
+</div>
+
+<!-- ============================================ -->
+<!-- SECCION 5: LOS 3 ANGULOS -->
+<!-- ============================================ -->
+<div class="section">
+  <h2>5. Tus 3 angulos ganadores</h2>
+  <p class="subtitle">De estos temas hablas — no de cualquier cosa</p>
+
+  <div class="visual">
+    <img src="08-angulos-ganadores.png" alt="3 Angulos Ganadores">
+  </div>
+
+  <p>Un angulo ganador es un tema o punto de dolor que dispara intencion de compra. Cada vez que hablas de eso, la gente te responde, te agenda y te compra. Estos son tus 3 angulos principales:</p>
+
+  <div class="step">
+    <div class="step-num" style="background: #e07070;">1</div>
+    <div class="step-content">
+      <strong>Angulo de Identidad</strong>
+      Tu historia personal de transformacion. Quien eras antes vs quien eres ahora. Cuando tu audiencia se identifica contigo, la objecion de "yo no puedo" se destruye sola.
+    </div>
+  </div>
+
+  <div class="step">
+    <div class="step-num" style="background: #5b9bd5;">2</div>
+    <div class="step-content">
+      <strong>Angulo Anti-Metodo Tradicional</strong>
+      Lo que haces diferente. El metodo que usas que no requiere perseguir a nadie, molestar a familiares, ni hacer cosas incomodas. Te posicionas como la alternativa moderna.
+    </div>
+  </div>
+
+  <div class="step">
+    <div class="step-num" style="background: var(--sage);">3</div>
+    <div class="step-content">
+      <strong>Angulo de Prueba / Resultados</strong>
+      Testimonios y resultados reales de personas que trabajan contigo o usan tus productos. No teoria — historias de gente normal con cambios visibles.
+    </div>
+  </div>
+
+  <div class="rule">
+    <strong>Como saber cual angulo funciona mas?</strong> Con el sistema de etiquetas de ManyChat. Cada keyword tiene un tag. Despues de 2-3 semanas, revisas cual keyword tiene mas respuestas y cual convierte mas a sesiones. Ese angulo se prioriza.
+  </div>
+</div>
+
+<!-- ============================================ -->
+<!-- SECCION 6: CALENDARIO -->
+<!-- ============================================ -->
+<div class="section">
+  <h2>6. Calendario semanal</h2>
+  <p class="subtitle">Semanas 1 y 2 — Solo CTA + Awareness</p>
+
+  <div class="visual">
+    <img src="07-calendario-semanal.png" alt="Calendario Semanal">
+  </div>
+
+  <table class="cal-table">
+    <tr>
+      <td class="day">Lun</td>
+      <td class="type bg-green">CTA</td>
+      <td>Angulo Anti-Metodo Tradicional</td>
+    </tr>
+    <tr>
+      <td class="day">Mar</td>
+      <td class="type bg-yellow">AWR</td>
+      <td>Vida real</td>
+    </tr>
+    <tr>
+      <td class="day">Mie</td>
+      <td class="type bg-green">CTA</td>
+      <td>Angulo de Identidad</td>
+    </tr>
+    <tr>
+      <td class="day">Jue</td>
+      <td class="type bg-yellow">AWR</td>
+      <td>Detras de camaras</td>
+    </tr>
+    <tr>
+      <td class="day">Vie</td>
+      <td class="type bg-green">CTA</td>
+      <td>Angulo de Prueba / Resultados</td>
+    </tr>
+    <tr>
+      <td class="day">Sab</td>
+      <td class="type bg-yellow">AWR</td>
+      <td>Familia / reflexion</td>
+    </tr>
+    <tr>
+      <td class="day">Dom</td>
+      <td class="type bg-purple">AWR</td>
+      <td>Descanso / vida normal</td>
+    </tr>
+  </table>
+
+  <div class="rule">
+    <strong>3 CTA + 4 Awareness por semana.</strong> Los CTA siempre terminan con un keyword de ManyChat. Los Awareness nunca piden nada.
+  </div>
+</div>
+
+<!-- ============================================ -->
+<!-- SECCION 7: EJEMPLOS COMPLETOS -->
+<!-- ============================================ -->
+<div class="section">
+  <h2>7. Ejemplos completos por dia</h2>
+  <p class="subtitle">Copia estas secuencias y adaptalas a tu semana</p>
+
+  <h3>Lunes — CTA (Anti-Metodo Tradicional)</h3>
+  <div class="example">
+    <div class="label">Secuencia completa</div>
+    <div class="story">
+      <div class="tag">2:00 PM — Hook</div>
+      Video casual — llegando a algun lugar, haciendo algo cotidiano. Nada de negocio.
+    </div>
+    <div class="story">
+      <div class="tag">3-4 PM — Historia 2: Clientes</div>
+      "Esta semana hable con 3 personas que me escribieron por Instagram preguntandome como hago lo que hago. Yo no les escribi a ellas — ellas me buscaron."
+    </div>
+    <div class="story">
+      <div class="tag">Historia 3: Conciencia</div>
+      "No mando mensajes frios. No persigo a nadie. Tengo un metodo simple donde la gente me encuentra y me escribe. Desde mi celular, desde mi casa."
+    </div>
+    <div class="story">
+      <div class="tag">Historia 4: CTA</div>
+      "Si quieres saber como funciona, escribeme <strong>[KEYWORD]</strong> y te cuento en 15 minutos. Sin compromiso."
+    </div>
+  </div>
+
+  <h3>Martes — Awareness (Vida real)</h3>
+  <div class="example">
+    <div class="label">Secuencia completa</div>
+    <div class="story">
+      <div class="tag">2:00 PM — Hook</div>
+      Algo gracioso o cotidiano — preparando desayuno, algo con los ninos.
+    </div>
+    <div class="story">
+      <div class="tag">3-4 PM — Historia 2: Mostrar</div>
+      Momento real de tu dia — trabajando desde tu casa, organizando tu semana, algo normal.
+    </div>
+    <div class="story">
+      <div class="tag">Historia 3: Reflexion</div>
+      "Todavia me cuesta creer que puedo trabajar desde mi casa en algo que me gusta. No siempre fue asi."
+    </div>
+  </div>
+
+  <h3>Miercoles — CTA (Identidad)</h3>
+  <div class="example">
+    <div class="label">Secuencia completa</div>
+    <div class="story">
+      <div class="tag">2:00 PM — Hook</div>
+      Encuesta divertida: "Cafe o te por la manana?" (sticker encuesta)
+    </div>
+    <div class="story">
+      <div class="tag">3-4 PM — Historia 2: Clientes</div>
+      "Les presento a [nombre]. Nunca habia hecho nada parecido. Hace 2 meses empezo conmigo y ya genero su primer ingreso." (foto o screenshot con permiso)
+    </div>
+    <div class="story">
+      <div class="tag">Historia 3: Conciencia</div>
+      "Lo que hago: ayudo a personas normales a generar ingresos extra desde su casa con un sistema sencillo. Sin experiencia previa. Sin tener que exponerse. Sin perseguir a nadie."
+    </div>
+    <div class="story">
+      <div class="tag">Historia 4: CTA</div>
+      "Si te interesa saber si esto es para ti, escribeme <strong>[KEYWORD]</strong>. Hablamos 15 minutos y si no es para ti, todo bien."
+    </div>
+  </div>
+
+  <h3>Jueves — Awareness (Detras de camaras)</h3>
+  <div class="example">
+    <div class="label">Secuencia completa</div>
+    <div class="story">
+      <div class="tag">2:00 PM — Hook</div>
+      Algo cotidiano — en el carro, llegando a algun lado, algo espontaneo.
+    </div>
+    <div class="story">
+      <div class="tag">3-4 PM — Historia 2: Mostrar</div>
+      En un evento, en una llamada con tu equipo, preparando contenido. El proceso real, sin filtros.
+    </div>
+    <div class="story">
+      <div class="tag">Historia 3: Reflexion</div>
+      "Esto es lo que se ve detras. No es glamoroso, no es perfecto. Pero es real y es mio."
+    </div>
+  </div>
+
+  <h3>Viernes — CTA (Resultados / Prueba)</h3>
+  <div class="example">
+    <div class="label">Secuencia completa</div>
+    <div class="story">
+      <div class="tag">2:00 PM — Hook</div>
+      Viernes — algo de celebracion, mood de fin de semana.
+    </div>
+    <div class="story">
+      <div class="tag">3-4 PM — Historia 2: Clientes</div>
+      Testimonio real de un cliente o persona de tu equipo. Un resultado concreto, visible, con nombre (con permiso).
+    </div>
+    <div class="story">
+      <div class="tag">Historia 3: Conciencia</div>
+      Explicar brevemente como se logro ese resultado. Que hicieron, que sistema usaron, por que funciono.
+    </div>
+    <div class="story">
+      <div class="tag">Historia 4: CTA</div>
+      "Si quieres saber como funciona esto, escribeme <strong>[KEYWORD]</strong> y te oriento."
+    </div>
+  </div>
+
+  <h3>Sabado — Awareness (Familia)</h3>
+  <div class="example">
+    <div class="label">Secuencia completa</div>
+    <div class="story">
+      <div class="tag">2:00 PM — Hook</div>
+      Fin de semana en familia — algo tierno o gracioso.
+    </div>
+    <div class="story">
+      <div class="tag">3-4 PM — Historia 2: Mostrar</div>
+      Momento con la familia, disfrutando el sabado.
+    </div>
+    <div class="story">
+      <div class="tag">Historia 3: Reflexion</div>
+      "Antes trabajaba para tener tiempo libre. Ahora trabajo en mi tiempo libre porque me gusta lo que hago."
+    </div>
+  </div>
+
+  <h3>Domingo — Awareness (Descanso)</h3>
+  <div class="example">
+    <div class="label">Secuencia completa</div>
+    <div class="story">
+      <div class="tag">2:00 PM — Hook</div>
+      Domingo tranquilo — iglesia, cocina, descanso.
+    </div>
+    <div class="story">
+      <div class="tag">3-4 PM — Historia 2: Mostrar</div>
+      Algo personal y humano. Sin negocio.
+    </div>
+    <div class="story">
+      <div class="tag">Historia 3: Reflexion</div>
+      "Construir algo propio no es facil. Pero la libertad de decidir como paso mi domingo con mi familia no tiene precio."
+    </div>
+  </div>
+</div>
+
+<!-- ============================================ -->
+<!-- SECCION 8: SEMANA 2 -->
+<!-- ============================================ -->
+<div class="section">
+  <h2>8. Semana 2 — Variaciones</h2>
+  <p class="subtitle">Misma estructura, diferente contenido</p>
+
+  <p>La semana 2 sigue el mismo calendario exacto. Lo que cambia es el contenido de cada historia:</p>
+
+  <div class="example">
+    <div class="label">Lunes CTA — Anti-Metodo (variacion)</div>
+    <div class="story">Diferente historia de alguien que te escribio. Mostrar el chat (borrando nombre). "Miren lo que me escribieron ayer. Yo no busque a esta persona."</div>
+  </div>
+
+  <div class="example">
+    <div class="label">Miercoles CTA — Identidad (variacion)</div>
+    <div class="story">Tu propia historia: "Yo era [como eras antes]. Me daba miedo [que te daba miedo]. Hoy genero ingresos hablando con gente que me busca."</div>
+  </div>
+
+  <div class="example">
+    <div class="label">Viernes CTA — Resultados (variacion)</div>
+    <div class="story">Diferente testimonio. Otro caso real. Diferente resultado concreto.</div>
+  </div>
+
+  <div class="rule">
+    <strong>Rota las tecnicas de hook:</strong> Si la semana 1 usaste Open Loop el lunes, la semana 2 usa Curiosity Gap. Asi la audiencia no se acostumbra a un solo patron.
+  </div>
+</div>
+
+<!-- ============================================ -->
+<!-- SECCION 9: FLUJO COMPLETO -->
+<!-- ============================================ -->
+<div class="section">
+  <h2>9. El flujo completo</h2>
+  <p class="subtitle">Desde la historia hasta la venta</p>
+
+  <div class="visual">
+    <img src="10-flujo-completo.png" alt="Flujo Completo">
+    <div class="caption">Hook &rarr; Secuencia &rarr; Keyword &rarr; ManyChat &rarr; Sesion &rarr; Cierre</div>
+  </div>
+
+  <p>Asi funciona el sistema completo:</p>
+
+  <ol>
+    <li><strong>2pm:</strong> Subes el hook — genera vistas</li>
+    <li><strong>3-4pm:</strong> Subes la secuencia (3-4 historias)</li>
+    <li><strong>CTA:</strong> La ultima historia invita a escribir un keyword</li>
+    <li><strong>ManyChat:</strong> Responde automaticamente, califica al prospecto</li>
+    <li><strong>Sesion:</strong> Si quiere saber mas, agenda una sesion de 15 min</li>
+    <li><strong>Cierre:</strong> Tu cierras la conversacion personalmente por WhatsApp o llamada</li>
+  </ol>
+</div>
+
+<!-- ============================================ -->
+<!-- SECCION 10: METRICAS -->
+<!-- ============================================ -->
+<div class="section">
+  <h2>10. Que medir cada semana</h2>
+  <p class="subtitle">Estos numeros te dicen si vas bien</p>
+
+  <div class="visual">
+    <img src="09-metricas.png" alt="Metricas Clave">
+  </div>
+
+  <div class="metrics">
+    <div class="metric">
+      <div class="num">10-40%</div>
+      <div class="label">de tus seguidores deben ver tus historias</div>
+    </div>
+    <div class="metric">
+      <div class="num">1-2%</div>
+      <div class="label">tasa de respuesta en CTA</div>
+    </div>
+    <div class="metric">
+      <div class="num">3-5</div>
+      <div class="label">sesiones agendadas por semana</div>
+    </div>
+  </div>
+
+  <h3>Al final de la semana 2, revisa:</h3>
+  <ul class="checklist">
+    <li>Cuantas vistas promedio tengo por historia?</li>
+    <li>Cuantas respuestas genero cada CTA?</li>
+    <li>Que keyword respondieron mas?</li>
+    <li>Que hook tuvo mas vistas?</li>
+    <li>Cuantas sesiones se agendaron?</li>
+  </ul>
+
+  <div class="rule">
+    <strong>Con estos datos decidimos:</strong> que angulo priorizar, que tipo de hook repetir, y si ya podemos crear el primer recurso gratuito (Hand Raiser) para las semanas 3-4.
+  </div>
+</div>
+
+<!-- ============================================ -->
+<!-- SECCION 11: REGLAS RAPIDAS -->
+<!-- ============================================ -->
+<div class="section">
+  <h2>11. Reglas rapidas</h2>
+  <p class="subtitle">Tenlas siempre presentes</p>
+
+  <ul class="checklist">
+    <li>Maximo 3-4 historias por dia</li>
+    <li>Siempre borrar las de ayer antes de subir</li>
+    <li>Hook a las 2pm, secuencia a las 3-4pm</li>
+    <li>El hook nunca es de negocio — es casual y cotidiano</li>
+    <li>Poco texto en pantalla — si necesitas explicar, habla a camara</li>
+    <li>Fotos y videos casuales — nada pulido, todo desde el celular</li>
+    <li>Responder TODOS los DMs que lleguen</li>
+    <li>Los CTA siempre terminan en keyword</li>
+    <li>Los Awareness nunca piden nada</li>
+    <li>No subir mas de 4-5 historias en un dia</li>
+  </ul>
+</div>
+
+<!-- ============================================ -->
+<!-- ERRORES COMUNES -->
+<!-- ============================================ -->
+<div class="section">
+  <h2>12. Errores que matan tus historias</h2>
+  <p class="subtitle">Evita estos a toda costa</p>
+
+  <div class="step">
+    <div class="step-num" style="background: var(--coral);">&#10005;</div>
+    <div class="step-content">
+      <strong>Mucho texto en pantalla</strong>
+      La gente no lee parrafos en historias. Usa fotos, videos cortos, y si necesitas explicar algo, habla a camara.
+    </div>
+  </div>
+
+  <div class="step">
+    <div class="step-num" style="background: var(--coral);">&#10005;</div>
+    <div class="step-content">
+      <strong>Historias sin coherencia</strong>
+      No saltes de un tema a otro. Cada dia tiene un angulo especifico — respetalo.
+    </div>
+  </div>
+
+  <div class="step">
+    <div class="step-num" style="background: var(--coral);">&#10005;</div>
+    <div class="step-content">
+      <strong>No responder DMs</strong>
+      Si alguien te escribe y no respondes, Instagram mata tu engagement. Responde siempre.
+    </div>
+  </div>
+
+  <div class="step">
+    <div class="step-num" style="background: var(--coral);">&#10005;</div>
+    <div class="step-content">
+      <strong>Subir 10+ historias seguidas</strong>
+      La gente se aburre y pasa al siguiente. Maximo 4-5.
+    </div>
+  </div>
+
+  <div class="step">
+    <div class="step-num" style="background: var(--coral);">&#10005;</div>
+    <div class="step-content">
+      <strong>Mal audio o mala calidad</strong>
+      No tiene que ser perfecto, pero se tiene que ver y escuchar bien. Sin eco, sin musica fuerte.
+    </div>
+  </div>
+</div>
+
+</div>
+
+<div class="footer">
+  <p>Estrategia preparada por MM Agency — Abril 2026</p>
+</div>
+
+</body>
+</html>

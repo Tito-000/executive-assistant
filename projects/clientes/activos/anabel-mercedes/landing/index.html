@@ -12,7 +12,7 @@
 <!-- Open Graph -->
 <meta property="og:title" content="Anabel Mercedes — Genera ingresos reales sin renunciar a tu vida">
 <meta property="og:description" content="De la más tímida del salón a liderar más de 5,000 personas. Conoce cómo funciona.">
-<meta property="og:image" content="https://anabelmercedes.com/og-image.jpg?v=2">
+<meta property="og:image" content="https://anabelmercedes.com/og-image.jpg">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta property="og:url" content="https://anabelmercedes.com">
@@ -23,10 +23,12 @@
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Anabel Mercedes — Genera ingresos reales sin renunciar a tu vida">
 <meta name="twitter:description" content="De la más tímida del salón a liderar más de 5,000 personas. Conoce cómo funciona.">
-<meta name="twitter:image" content="https://anabelmercedes.com/og-image.jpg?v=2">
+<meta name="twitter:image" content="https://anabelmercedes.com/og-image.jpg">
+<link rel="icon" type="image/svg+xml" href="favicon.svg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Montserrat:wght@300;400;500;600;700;800&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,400;1,500&display=swap" rel="stylesheet">
+<link rel="preload" as="image" href="anabel-hero3.jpg">
 <style>
 :root {
   --navy: #1A1F2E;
@@ -458,6 +460,15 @@ ul { list-style: none; }
   color: var(--navy);
 }
 
+.hero__subtitle {
+  font-family: 'Montserrat', sans-serif;
+  font-size: clamp(0.7rem, 0.6rem + 0.3vw, 0.85rem);
+  font-weight: 500;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: var(--sage);
+  margin-bottom: 24px;
+}
 .hero__desc {
   font-family: 'Montserrat', sans-serif;
   font-size: clamp(0.82rem, 0.75rem + 0.35vw, 1rem);
@@ -752,6 +763,40 @@ ul { list-style: none; }
   text-transform: uppercase;
   font-weight: 600;
 }
+.immunotec__benefits {
+  list-style: none;
+  padding: 0;
+  margin: 36px 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+}
+.immunotec__benefits li {
+  padding: 20px 16px;
+  background: var(--white);
+  border: 2px solid var(--navy);
+  box-shadow: 3px 3px 0 var(--navy);
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: var(--navy);
+  letter-spacing: 0.3px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 10px;
+  width: calc(33.33% - 8px);
+}
+.immunotec__benefits li svg {
+  width: 28px;
+  height: 28px;
+  stroke: var(--sage);
+  stroke-width: 1.8;
+  fill: none;
+  flex-shrink: 0;
+}
 .immunotec__visual {
   position: relative;
   display: flex;
@@ -939,27 +984,27 @@ ul { list-style: none; }
 }
 /* Foto moodboard — columna izquierda */
 .club__photo {
-  overflow: hidden;
   position: relative;
   background: var(--cream-warm);
-  padding: 24px;
+  padding: 20px;
   display: flex;
   align-items: center;
   justify-content: center;
 }
 .club__moodboard {
-  position: relative;
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  grid-template-rows: auto auto;
+  gap: 8px;
   width: 100%;
-  aspect-ratio: 3/4;
 }
 .club__mood-card {
-  position: absolute;
   overflow: hidden;
   border: 2px solid var(--navy);
   box-shadow: 4px 4px 0 var(--navy);
   background: var(--white);
-  padding: 5px;
-  transition: transform 0.45s var(--ease), box-shadow 0.45s var(--ease), z-index 0s;
+  padding: 4px;
+  transition: transform 0.45s var(--ease), box-shadow 0.45s var(--ease);
 }
 .club__mood-card img {
   width: 100%;
@@ -968,63 +1013,45 @@ ul { list-style: none; }
   display: block;
 }
 .club__mood-card:hover {
-  transform: rotate(0deg) scale(1.05) translateY(-6px) !important;
+  transform: scale(1.03) translateY(-4px) !important;
   box-shadow: 8px 8px 0 var(--navy);
   z-index: 10;
 }
-/* Card 1: equipo grande — top-left */
+/* Card 1: equipo grande — tall left */
 .club__mood-card--1 {
-  width: 60%;
-  aspect-ratio: 4/3;
-  top: 0;
-  left: 0;
-  transform: rotate(-2deg);
-  z-index: 3;
+  grid-row: 1 / 3;
+  transform: rotate(-1.2deg);
 }
-/* Card 2: crucero — top-right */
-.club__mood-card--2 {
-  width: 52%;
-  aspect-ratio: 4/3;
-  top: 5%;
-  right: 0;
-  transform: rotate(2.5deg);
-  z-index: 4;
-}
-/* Card 3: piscina — bottom-left */
-.club__mood-card--3 {
-  width: 58%;
-  aspect-ratio: 3/2;
-  bottom: 0;
-  left: 0;
-  transform: rotate(1.5deg);
-  z-index: 2;
-}
-/* Card 4: evento — bottom-right */
+.club__mood-card--1 img { aspect-ratio: 2/3; }
+/* Card 2: crucero — top right */
+.club__mood-card--2 { transform: rotate(1.5deg); }
+.club__mood-card--2 img { aspect-ratio: 4/3; }
+/* Card 3: piscina — bottom right top */
+.club__mood-card--3 { transform: rotate(-0.8deg); }
+.club__mood-card--3 img { aspect-ratio: 4/3; }
+/* Card 4: evento — hidden on desktop grid, shown after */
 .club__mood-card--4 {
-  width: 50%;
-  aspect-ratio: 4/3;
-  bottom: 5%;
-  right: 2%;
-  transform: rotate(-1.8deg);
-  z-index: 5;
+  grid-column: 1 / -1;
+  transform: rotate(0.5deg);
 }
-/* Sello Club sobre la foto */
+.club__mood-card--4 img { aspect-ratio: 3/1; }
+/* Sello Club de la Libertad — circular, fondo blanco, logo vertical */
 .club__sello {
   position: absolute;
-  top: 20px;
-  right: 20px;
+  top: -24px;
+  right: -16px;
   width: 130px;
   height: 130px;
   border-radius: 50%;
   overflow: hidden;
   border: 3px solid var(--navy);
-  box-shadow: 4px 4px 0 var(--navy);
-  z-index: 10;
-  background: #F5941E;
+  box-shadow: 3px 3px 0 var(--navy);
+  background: var(--white);
+  z-index: 20;
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 8px;
+  padding: 20px;
   transition: transform 0.4s var(--ease);
 }
 .club__sello:hover {
@@ -1032,11 +1059,10 @@ ul { list-style: none; }
 }
 .club__sello img {
   width: 100%;
-  height: 100%;
+  height: auto;
   object-fit: contain;
   display: block;
 }
-/* Club sello responsive — see unified block at bottom */
 /* Contenido derecha */
 .club__content {
   padding: clamp(48px, 6vw, 80px) clamp(32px, 5vw, 80px);
@@ -1524,8 +1550,10 @@ ul { list-style: none; }
   .club__photo {
     grid-column: 1;
     grid-row: 2;
-    min-height: 55vw;
-    max-height: 450px;
+    min-height: auto;
+    max-height: none;
+    height: auto;
+    padding: 20px;
   }
   .club__content {
     grid-column: 1;
@@ -1732,15 +1760,16 @@ ul { list-style: none; }
     line-height: 1.3;
   }
   .club__photo {
-    min-height: 60vw;
-    max-height: 380px;
+    min-height: auto;
+    max-height: none;
+    padding: 16px;
   }
   .club__sello {
-    width: 80px;
-    height: 80px;
-    top: 12px;
-    right: 12px;
-    padding: 6px;
+    width: 100px;
+    height: 100px;
+    top: -16px;
+    right: 4px;
+    padding: 10px;
   }
   .club__content {
     padding: 40px 24px 56px;
@@ -1900,13 +1929,13 @@ ul { list-style: none; }
     padding: 32px 20px 44px;
   }
   .club__sello {
-    width: 65px;
-    height: 65px;
-    top: 10px;
-    right: 10px;
-    padding: 5px;
-    border-width: 2px;
-    box-shadow: 3px 3px 0 var(--navy);
+    width: 85px;
+    height: 85px;
+    top: -10px;
+    right: 4px;
+    padding: 8px;
+    border-width: 2.5px;
+    box-shadow: 2px 2px 0 var(--navy);
   }
   .club__hero-num {
     font-size: clamp(2.8rem, 2rem + 3vw, 4rem);
@@ -2052,7 +2081,7 @@ ul { list-style: none; }
     <!-- FOTO HERO: cuando tengas la foto de Anabel, reemplaza esta línea con:
          <img class="hero__photo-img" src="foto-anabel-hero.jpg" alt="Anabel Mercedes">
          La foto debe ser: cuerpo entero o 3/4, actitud segura, outfit elegante, fondo con textura o neutral -->
-    <img class="hero__photo-img" src="anabel-hero3.png" alt="Anabel Mercedes" onerror="this.style.display='none';this.nextElementSibling.style.display='flex';">
+    <img class="hero__photo-img" src="anabel-hero3.jpg" alt="Anabel Mercedes" width="1200" height="1500" onerror="this.style.display='none';this.nextElementSibling.style.display='flex';">
     <div class="hero__photo-placeholder" style="display:none;">
       <div class="ph-icon">📸</div>
       <strong>Foto de Anabel</strong>
@@ -2075,10 +2104,10 @@ ul { list-style: none; }
       Anabel<br>
       <em>Mercedes</em>
     </h1>
+    <p class="hero__subtitle">Network Marketer · Diamante Ejecutivo · +5,000 personas en su red</p>
     <p class="hero__desc">
-      Genera un ingreso real y significativo<br>
-      sin renunciar a tu carrera,<br>
-      tu tiempo ni tu estilo de vida.
+      Para quienes quieren más<br>
+      y están dispuestos a construirlo.
     </p>
     <a href="https://wa.me/18292812978?text=Hola%20Anabel%2C%20vi%20tu%20p%C3%A1gina%20y%20me%20interesa%20saber%20m%C3%A1s%20sobre%20tu%20proyecto.%20%C2%BFC%C3%B3mo%20funciona%3F" target="_blank" class="hero__cta">
       Conoce la oportunidad
@@ -2095,12 +2124,12 @@ ul { list-style: none; }
     <span class="marquee-item">¿Y si pudieras generar ingresos desde casa? <span class="sep">✦</span></span>
     <span class="marquee-item">¿Y si pudieras viajar y trabajar al mismo tiempo? <span class="sep">✦</span></span>
     <span class="marquee-item">¿Y si el tiempo libre no fuera un lujo? <span class="sep">✦</span></span>
-    <span class="marquee-item">¿Y si pudieras construir algo propio desde RD? <span class="sep">✦</span></span>
+    <span class="marquee-item">¿Y si pudieras construir algo propio? <span class="sep">✦</span></span>
     <span class="marquee-item">¿Y si no tuvieras que escoger entre familia y trabajo? <span class="sep">✦</span></span>
     <span class="marquee-item">¿Y si pudieras generar ingresos desde casa? <span class="sep">✦</span></span>
     <span class="marquee-item">¿Y si pudieras viajar y trabajar al mismo tiempo? <span class="sep">✦</span></span>
     <span class="marquee-item">¿Y si el tiempo libre no fuera un lujo? <span class="sep">✦</span></span>
-    <span class="marquee-item">¿Y si pudieras construir algo propio desde RD? <span class="sep">✦</span></span>
+    <span class="marquee-item">¿Y si pudieras construir algo propio? <span class="sep">✦</span></span>
     <span class="marquee-item">¿Y si no tuvieras que escoger entre familia y trabajo? <span class="sep">✦</span></span>
   </div>
 </div>
@@ -2116,12 +2145,12 @@ ul { list-style: none; }
         <div class="historia__circle" id="historia-circle"></div>
         <h2 class="historia__headline">Soy<br>Anabel<br>Mercedes</h2>
       </div>
-      <p>A los 19 años descubrí el mundo de las Redes de Mercadeo… y también descubrí algo más: mis miedos.</p>
-      <p>No era la candidata ideal. Era tímida, sin experiencia, con un círculo pequeño… cero garantías de éxito.</p>
-      <p>Pero aún así, decidí apostar por mí.</p>
-      <p>Empecé con más miedo que vergüenza, pero con una decisión clara: construir mi libertad. Y en el camino, esta industria no solo cambió mis resultados… me transformó a mí.</p>
-      <p>Trabajé en mis debilidades, desarrollé habilidades, aprendí a liderar y convertí cada inseguridad en fortaleza.</p>
-      <p>Hoy lidero una comunidad de más de 5,000 personas, y sigo creciendo cada día, porque tengo claro algo: cuando crees que ya llegaste, dejas de avanzar.</p>
+      <p>A los 19 años descubrí el mundo de las Redes de Mercadeo… y también descubrí algo más: <strong>mis miedos.</strong></p>
+      <p>No era la candidata ideal. Era tímida, sin experiencia, con un círculo pequeño… <strong>cero garantías de éxito.</strong></p>
+      <p>Pero aún así, <strong>decidí apostar por mí.</strong></p>
+      <p>Empecé con más miedo que vergüenza, pero con una decisión clara: <strong>construir mi libertad.</strong> Y en el camino, esta industria no solo cambió mis resultados… <strong>me transformó a mí.</strong></p>
+      <p>Trabajé en mis debilidades, desarrollé habilidades, aprendí a liderar y <strong>convertí cada inseguridad en fortaleza.</strong></p>
+      <p>Hoy lidero una comunidad de <strong>más de 5,000 personas</strong>, y sigo creciendo cada día, porque tengo claro algo: <strong>cuando crees que ya llegaste, dejas de avanzar.</strong></p>
       <p><strong>"De la más tímida del salón a liderar miles.<br>La diferencia fue una sola decisión."</strong></p>
       <a href="https://wa.me/18292812978?text=Hola%20Anabel%2C%20vi%20tu%20p%C3%A1gina%20y%20me%20interesa%20saber%20m%C3%A1s%20sobre%20tu%20proyecto.%20%C2%BFC%C3%B3mo%20funciona%3F" target="_blank" class="hero__cta" style="margin-top:36px;opacity:1;animation:none;">
         Quiero saber más
@@ -2131,7 +2160,7 @@ ul { list-style: none; }
 
     <!-- RIGHT: photo — fills column edge-to-edge -->
     <div class="historia__photo">
-      <img class="historia__photo-img" src="anabel-historia2.png" alt="Anabel Mercedes">
+      <img class="historia__photo-img" src="anabel-historia2.png" alt="Anabel Mercedes" width="1200" height="800" loading="lazy">
     </div>
 
   </div>
@@ -2167,37 +2196,38 @@ ul { list-style: none; }
     <div class="immunotec__visual fade-up">
       <div class="immunotec__moodboard">
         <div class="immunotec__sello">
-          <img src="immunotec-sello.png" alt="Immunotec">
+          <img src="immunotec-sello.png" alt="Immunotec" width="225" height="225" loading="lazy">
         </div>
         <div class="immunotec__mood-card immunotec__mood-card--1">
-          <img src="anabel-evento.png" alt="Anabel Mercedes en evento Immunotec">
+          <img src="anabel-evento.png" alt="Anabel Mercedes en evento Immunotec" width="1200" height="800" loading="lazy">
         </div>
         <div class="immunotec__mood-card immunotec__mood-card--2">
-          <img src="anabel-producto.png" alt="Anabel con Immunocal y Immunocal Platinum">
+          <img src="anabel-producto.png" alt="Anabel con Immunocal y Immunocal Platinum" width="1200" height="798" loading="lazy">
         </div>
         <div class="immunotec__mood-card immunotec__mood-card--3">
-          <img src="anabel-captura.png" alt="Anabel Mercedes">
+          <img src="anabel-captura.png" alt="Anabel Mercedes" width="1200" height="798" loading="lazy">
         </div>
       </div>
     </div>
     <!-- Body: copy + stats + CTA (order 3 on mobile) -->
     <div class="immunotec__body fade-up">
-      <p>Immunotec lleva más de 45 años en el mercado con un producto respaldado por 79 patentes. No es una moda — es ciencia aplicada a la salud que la gente necesita y vuelve a pedir.</p>
-      <p>Mi trabajo es recomendar algo en lo que genuinamente creo. Sin inventario, sin local, sin jefe. Solo yo, mi teléfono y las personas correctas.</p>
-      <div class="immunotec__stats">
-        <div class="immunotec__stat">
-          <div class="immunotec__stat-num">45+</div>
-          <div class="immunotec__stat-label">Años en el mercado</div>
-        </div>
-        <div class="immunotec__stat">
-          <div class="immunotec__stat-num">79</div>
-          <div class="immunotec__stat-label">Patentes registradas</div>
-        </div>
+      <p>Cuando conocí Immunotec, entendí algo: esto se iba a dar a conocer conmigo o sin mí… y <strong>decidí ser parte.</strong></p>
+      <p><strong>Más de 45 años de ciencia</strong>, miles de testimonios y <strong>79 patentes</strong> respaldando su producto estrella, Immunocal. No es moda — <strong>es ciencia que la gente usa y recomienda.</strong></p>
+      <p>Hoy construyo ingresos recomendando algo en lo que creo… y <strong>desarrollando un equipo que también crece conmigo.</strong></p>
+      <p><strong>Sin jefe, sin local…</strong> solo yo, un sistema y las personas correctas.</p>
+      <ul class="immunotec__benefits">
+        <li><svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>7 formas de generar ingresos</li>
+        <li><svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/><polyline points="3.27 6.96 12 12.01 20.73 6.96"/><line x1="12" y1="22.08" x2="12" y2="12"/></svg>+10 productos</li>
+        <li><svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>Viajes de incentivos</li>
+        <li><svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>Ingresos de equipo</li>
+        <li><svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"/><polyline points="17 6 23 6 23 12"/></svg>Bonos por ascenso</li>
+      </ul>
+      <div style="text-align:center;margin-top:8px;">
+        <a href="https://wa.me/18292812978?text=Hola%20Anabel%2C%20vi%20tu%20p%C3%A1gina%20y%20me%20interesa%20saber%20m%C3%A1s%20sobre%20tu%20proyecto.%20%C2%BFC%C3%B3mo%20funciona%3F" target="_blank" class="hero__cta" style="opacity:1;animation:none;">
+          Conoce la oportunidad
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </a>
       </div>
-      <a href="https://wa.me/18292812978?text=Hola%20Anabel%2C%20vi%20tu%20p%C3%A1gina%20y%20me%20interesa%20saber%20m%C3%A1s%20sobre%20tu%20proyecto.%20%C2%BFC%C3%B3mo%20funciona%3F" target="_blank" class="hero__cta" style="opacity:1;animation:none;">
-        Conoce la oportunidad
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-      </a>
     </div>
   </div>
 </section>
@@ -2232,27 +2262,27 @@ ul { list-style: none; }
     <div class="club__photo fade-up">
       <div class="club__moodboard">
         <div class="club__mood-card club__mood-card--1">
-          <img src="anabel-equipo.png" alt="Equipo Club de la Libertad — Immunotec">
+          <img src="anabel-equipo.jpg" alt="Equipo Club de la Libertad — Immunotec" width="1200" height="835" loading="lazy">
         </div>
         <div class="club__mood-card club__mood-card--2">
-          <img src="equipo-crucero.jpg" alt="Equipo en crucero">
+          <img src="equipo-crucero.jpg" alt="Equipo en crucero" width="1280" height="960" loading="lazy">
         </div>
         <div class="club__mood-card club__mood-card--3">
-          <img src="equipo-piscina.jpg" alt="Equipo en pool party">
+          <img src="equipo-piscina.jpg" alt="Equipo en pool party" width="1200" height="800" loading="lazy">
         </div>
         <div class="club__mood-card club__mood-card--4">
-          <img src="equipo-evento.jpg" alt="Equipo en evento">
+          <img src="equipo-evento.jpg" alt="Equipo en evento" width="1200" height="900" loading="lazy">
         </div>
       </div>
       <div class="club__sello">
-        <img src="club-libertad-sello.png" alt="Club de la Libertad">
+        <img src="club-libertad-vertical.png" alt="Club de la Libertad" width="349" height="400" loading="lazy">
       </div>
     </div>
     <!-- Body: stats + copy + CTA (order 3 on mobile) -->
     <div class="club__content fade-up">
       <div class="club__hero-num">+5,000</div>
       <div class="club__hero-label">personas en la organización</div>
-      <p class="club__desc">No construí esto sola. Detrás hay un equipo real — profesionales, madres, emprendedores — que tomaron la misma decisión y hoy crecen juntos. Aquí nadie camina solo.</p>
+      <p class="club__desc"><strong>No construí esto sola.</strong> Detrás hay un equipo real — profesionales, madres, emprendedores — que tomaron la misma decisión y <strong>hoy crecen juntos.</strong> Aquí nadie camina solo.</p>
       <a href="https://wa.me/18292812978?text=Hola%20Anabel%2C%20vi%20tu%20p%C3%A1gina%20y%20me%20interesa%20saber%20m%C3%A1s%20sobre%20tu%20proyecto.%20%C2%BFC%C3%B3mo%20funciona%3F" target="_blank" class="hero__cta" style="opacity:1;animation:none;">
         Quiero ser parte
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
@@ -2271,27 +2301,27 @@ ul { list-style: none; }
 
   <div class="instagram__grid">
     <a href="https://www.instagram.com/p/DWoVzQ_uC2_/" target="_blank" class="instagram__post fade-up">
-      <img src="ig-1.jpg" alt="Post Instagram Anabel Mercedes">
+      <img src="ig-1.jpg" alt="Post Instagram Anabel Mercedes" loading="lazy">
       <div class="instagram__overlay"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><circle cx="12" cy="12" r="5.5"/><circle cx="17.5" cy="6.5" r="1.5" fill="#fff" stroke="none"/></svg></div>
     </a>
     <a href="https://www.instagram.com/p/DJUj1K-Pvpg/" target="_blank" class="instagram__post fade-up">
-      <img src="ig-2.jpg" alt="Post Instagram Anabel Mercedes">
+      <img src="ig-2.jpg" alt="Post Instagram Anabel Mercedes" loading="lazy">
       <div class="instagram__overlay"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><circle cx="12" cy="12" r="5.5"/><circle cx="17.5" cy="6.5" r="1.5" fill="#fff" stroke="none"/></svg></div>
     </a>
-    <a href="https://www.instagram.com/p/DCooPOPO2LK/" target="_blank" class="instagram__post fade-up">
-      <img src="ig-3.jpg" alt="Post Instagram Anabel Mercedes">
+    <a href="https://www.instagram.com/p/DW4Cw6ZDlSv/" target="_blank" class="instagram__post fade-up">
+      <img src="ig-3.jpg" alt="Post Instagram Anabel Mercedes" loading="lazy">
       <div class="instagram__overlay"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><circle cx="12" cy="12" r="5.5"/><circle cx="17.5" cy="6.5" r="1.5" fill="#fff" stroke="none"/></svg></div>
     </a>
     <a href="https://www.instagram.com/p/DV8do66iCtr/" target="_blank" class="instagram__post fade-up">
-      <img src="ig-4.jpg" alt="Post Instagram Anabel Mercedes">
+      <img src="ig-4.jpg" alt="Post Instagram Anabel Mercedes" loading="lazy">
       <div class="instagram__overlay"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><circle cx="12" cy="12" r="5.5"/><circle cx="17.5" cy="6.5" r="1.5" fill="#fff" stroke="none"/></svg></div>
     </a>
-    <a href="https://www.instagram.com/p/DVVBEDbje5O/" target="_blank" class="instagram__post fade-up">
-      <img src="ig-5.jpg" alt="Post Instagram Anabel Mercedes">
+    <a href="https://www.instagram.com/p/DWtsf8Uhhft/" target="_blank" class="instagram__post fade-up">
+      <img src="ig-5.jpg" alt="Post Instagram Anabel Mercedes" loading="lazy">
       <div class="instagram__overlay"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><circle cx="12" cy="12" r="5.5"/><circle cx="17.5" cy="6.5" r="1.5" fill="#fff" stroke="none"/></svg></div>
     </a>
     <a href="https://www.instagram.com/p/DVKdAkDDCtI/" target="_blank" class="instagram__post fade-up">
-      <img src="ig-6.jpg" alt="Post Instagram Anabel Mercedes">
+      <img src="ig-6.jpg" alt="Post Instagram Anabel Mercedes" loading="lazy">
       <div class="instagram__overlay"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><circle cx="12" cy="12" r="5.5"/><circle cx="17.5" cy="6.5" r="1.5" fill="#fff" stroke="none"/></svg></div>
     </a>
   </div>
@@ -2308,27 +2338,27 @@ ul { list-style: none; }
 <section class="optin" id="cta">
   <div class="optin__inner">
     <div class="optin__header fade-up">
-      <div class="optin__signature">El momento es ahora.<br>La decisión es tuya.</div>
+      <div class="optin__signature">Vamos a<br>conocernos.</div>
       <div class="optin__headline">
-        No te contacté. No te mandé un mensaje frío.<br>
-        Tú llegaste aquí sola.
+        Si llegaste hasta aquí, algo te llamó la atención.<br>
+        Hablemos.
       </div>
     </div>
     <div class="optin__photo fade-up">
-      <img src="anabel-cta.png" alt="Anabel Mercedes">
+      <img src="anabel-cta.png" alt="Anabel Mercedes" width="1200" height="800" loading="lazy">
     </div>
     <div class="optin__body fade-up">
       <p class="optin__text">
-        Ya conoces mi historia. Sabes que era la más tímida del salón y que hoy lidero a más de 5,000 personas. <strong>No te voy a pedir que creas en el modelo — te voy a mostrar cómo funciona.</strong> Pero solo si tú das el paso.
+        No necesitas tener todo claro. No necesitas estar lista. Solo necesitas curiosidad y ganas de escuchar. <strong>Yo te cuento cómo funciona, tú decides si es para ti.</strong>
       </p>
       <p class="optin__text" style="border:none;padding-left:0;margin-bottom:40px;">
-        Yo no persigo a nadie. La gente que trabaja conmigo llega porque decide llegar.
+        <strong>Sin presión, sin compromiso.</strong> Una conversación real entre dos personas.
       </p>
-      <a href="https://wa.me/18292812978?text=Hola%20Anabel%2C%20vi%20tu%20p%C3%A1gina%20y%20me%20interesa%20saber%20m%C3%A1s%20sobre%20tu%20proyecto.%20%C2%BFC%C3%B3mo%20funciona%3F" target="_blank" class="hero__cta" style="opacity:1;animation:none;">
-        Quiero ver cómo funciona
+      <a href="https://wa.me/18292812978?text=Hola%20Anabel%2C%20vi%20tu%20p%C3%A1gina%20y%20quiero%20saber%20m%C3%A1s.%20%C2%BFPodemos%20hablar%3F" target="_blank" class="hero__cta" style="opacity:1;animation:none;">
+        Quiero que hablemos
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
       </a>
-      <div class="optin__note">Sin pitch. Sin presión. Solo la verdad de cómo se construye esto.</div>
+      <div class="optin__note">Una conversación. Sin pitch. Sin presión. Solo conectar.</div>
     </div>
   </div>
 </section>
