@@ -1,0 +1,9 @@
+{
+  "prompt": "Low fidelity website wireframe mockup, black and white line art, clean minimal grid layout, desktop resolution. Product detail page wireframe for FARMACIA CAROL pharmacy website. White background with thin black borders and placeholder gray boxes with X marks. TOP: Header bar with FARMACIA CAROL logo, navigation menu, search bar, user icon, cart icon. BELOW HEADER: Breadcrumbs text 'Inicio > Productos > Medicamentos > Analgesicos > Acetaminofen 500mg'. MAIN SECTION split in 2 columns. LEFT COLUMN 60% width: Large product image placeholder square with X, 4 small thumbnail squares below it, red label tag on top that says 'REQUIERE RECETA'. RIGHT COLUMN 40% width: Product title lines, row of 5 stars, crossed out old price and new big price with discount badge '20% OFF', quantity selector with minus plus buttons, large dark button 'AGREGAR AL CARRITO', secondary button 'COMPRAR AHORA', box labeled 'Disponibilidad por sucursal' with list of 3 branches, share buttons for WhatsApp, Facebook, Email. BELOW THE 2 COLUMNS: Tabs row with 4 tabs: Descripcion, Modo de Uso, Ingredientes, FAQ. NEXT SECTION: 'Productos Relacionados' title with 4 product cards. BOTTOM: Reviews section with stars and comment boxes. FOOTER at the end. Annotations with arrows pointing to key elements, handwritten style notes. Pure wireframe blueprint style, only black white and gray, clean sans serif typography, technical documentation look.",
+  "negative_prompt": "photorealistic, colors, real images, 3D, gradients, shadows, real product photos, people",
+  "api_parameters": {
+    "aspect_ratio": "3:4",
+    "resolution": "1K",
+    "output_format": "jpg"
+  }
+}

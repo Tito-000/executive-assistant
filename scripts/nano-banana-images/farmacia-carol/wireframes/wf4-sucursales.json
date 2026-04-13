@@ -1,0 +1,9 @@
+{
+  "prompt": "Low fidelity website wireframe mockup, black and white line art, clean minimal grid layout, desktop resolution. Store locator page wireframe for FARMACIA CAROL pharmacy website. White background with thin black borders and gray placeholder boxes. TOP: Header bar with FARMACIA CAROL logo, navigation menu, search bar, icons. Breadcrumbs 'Inicio > Sucursales'. Large title 'NUESTRAS SUCURSALES' with subtitle 'Encuentra la farmacia mas cerca de ti'. BELOW TITLE: Full width search bar with 3 elements: text input 'Buscar por ciudad', dropdown 'Provincia', dropdown 'Servicio (24 horas, Delivery, Pick-up)', and a button on the right 'Usar mi ubicacion' with location pin icon. MAIN SECTION split in 2 columns. LEFT COLUMN 35% width labeled 'LISTADO DE SUCURSALES': 5 branch cards stacked vertically. Each card contains: branch name in bold, address line, distance text '2.3 km', current status badge 'Abierta ahora' in green or 'Cerrada' in red, horario text, row of small service icons (24h, delivery, farmaceutico, pickup), and 2 buttons at bottom 'Llamar' and 'WhatsApp'. RIGHT COLUMN 65% width: Large full interactive map placeholder of Dominican Republic with multiple pin markers scattered across it, one pin with popup bubble showing branch info. At the top right corner of map: zoom in and zoom out buttons. Footer at bottom. Annotations with arrows pointing to search filters and map pins, handwritten style notes. Pure wireframe blueprint style, only black white gray, clean sans serif typography.",
+  "negative_prompt": "photorealistic, colors, real images, 3D, gradients, shadows, real map imagery, people",
+  "api_parameters": {
+    "aspect_ratio": "3:4",
+    "resolution": "1K",
+    "output_format": "jpg"
+  }
+}

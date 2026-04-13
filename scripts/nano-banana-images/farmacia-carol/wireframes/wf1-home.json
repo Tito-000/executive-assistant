@@ -1,0 +1,9 @@
+{
+  "prompt": "Low fidelity website wireframe mockup, black and white line art, clean minimal grid layout, desktop resolution. Website home page wireframe for a pharmacy chain named FARMACIA CAROL. Vertical layout on white background with thin black borders and placeholder gray boxes. TOP: Header bar with 'FARMACIA CAROL' logo text on left, navigation menu items: Productos, Sucursales, Servicios, Caroleal, Blog, Contacto, search bar, and 3 icons on right (user, cart, whatsapp). BELOW HEADER: Large hero banner rectangle with X marks inside and text 'HERO BANNER - Promociones rotativas'. NEXT SECTION: Horizontal row of 6 category cards each with icon placeholder and labels: Medicamentos, Salud, Dermocosmetica, Cuidado Personal, Bebe, Minimarket. NEXT SECTION: Title 'MAS VENDIDOS' with grid of 8 product cards, each showing image placeholder, product name lines, price, and Add to cart button. NEXT SECTION: 3 large service blocks side by side labeled 'BUSCAR DOCTOR', 'CONSULTA AL FARMACEUTICO', 'AYUDAMED' each with icon and CTA button. NEXT SECTION: Store locator with map placeholder on left and 3 branch cards on right. BOTTOM: Footer with 3 columns showing logo, links and contact info. Annotations with arrows and handwritten notes pointing to elements. Pure wireframe style, no colors except black, white and gray fills, technical blueprint look, clean sans serif font like Helvetica, minimal design documentation style.",
+  "negative_prompt": "photorealistic, colors, real images, 3D, gradients, shadows, decorations, people, products photos",
+  "api_parameters": {
+    "aspect_ratio": "3:4",
+    "resolution": "1K",
+    "output_format": "jpg"
+  }
+}

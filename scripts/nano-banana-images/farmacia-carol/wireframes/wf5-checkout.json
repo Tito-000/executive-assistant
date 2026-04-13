@@ -1,0 +1,9 @@
+{
+  "prompt": "Low fidelity website wireframe mockup, black and white line art, clean minimal grid layout, desktop resolution. Checkout page wireframe for FARMACIA CAROL pharmacy website. White background with thin black borders and gray placeholder boxes. TOP: Header bar with FARMACIA CAROL logo only, minimal navigation. BELOW HEADER: Progress bar with 3 steps shown as circles connected by lines: 1 CARRITO checked, 2 DATOS DE ENTREGA highlighted with dark circle, 3 PAGO empty circle. Step 2 label shown in bold. MAIN SECTION split in 2 columns with large gap. LEFT COLUMN 65% width labeled 'DATOS DE ENTREGA': Radio buttons at top 'Delivery a domicilio' selected and 'Retiro en sucursal'. Form fields stacked: Nombre completo input, Telefono input, Direccion input long, Sector input, Ciudad dropdown, Referencias textarea. Below form: Textarea labeled 'Notas especiales al pedido'. Checkbox 'Acepto terminos y condiciones'. RIGHT COLUMN 35% width is a sticky box labeled 'RESUMEN DEL PEDIDO' with border: 3 product rows each with small image thumbnail square, name, quantity, price. Divider line. Rows for Subtotal, Delivery, Descuento Caroleal, TOTAL in bold and bigger. Large dark button at bottom 'CONTINUAR AL PAGO'. Footer minimal at bottom. Annotations with arrows pointing to progress bar and sticky order summary, handwritten style notes. Pure wireframe blueprint style, only black white gray, clean sans serif typography, technical UX documentation look.",
+  "negative_prompt": "photorealistic, colors, real images, 3D, gradients, shadows, real product photos, people",
+  "api_parameters": {
+    "aspect_ratio": "3:4",
+    "resolution": "1K",
+    "output_format": "jpg"
+  }
+}

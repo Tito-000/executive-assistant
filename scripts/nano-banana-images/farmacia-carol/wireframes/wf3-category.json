@@ -1,0 +1,9 @@
+{
+  "prompt": "Low fidelity website wireframe mockup, black and white line art, clean minimal grid layout, desktop resolution. Product category listing page wireframe for FARMACIA CAROL pharmacy website. White background with thin black borders and gray placeholder boxes with X marks. TOP: Header bar with FARMACIA CAROL logo, navigation menu, search bar, icons. Below header: Breadcrumbs 'Inicio > Productos > Medicamentos'. Banner strip with category title 'MEDICAMENTOS' and short description line. MAIN SECTION split in 2 columns. LEFT COLUMN 25% width sidebar labeled 'FILTROS' with sections: Subcategorias with checkboxes and counters, Marcas with checkboxes and numbers, Precio with slider bar, Forma farmaceutica with checkboxes (Tabletas, Jarabe, Capsulas, Crema), Disponibilidad checkboxes, Con o sin receta checkboxes. RIGHT COLUMN 75% width: Top bar with text '4856 productos encontrados', dropdown 'Ordenar por: Relevancia', toggle icons for grid and list view. BELOW: Grid of 12 product cards in 4 columns. Each card shows image placeholder square with X, product name 2 lines, price, small Add to cart button. BOTTOM: Pagination with page numbers 1 2 3 4 5. Footer at the very bottom. Annotations with arrows pointing to filter section and product cards, handwritten notes. Pure wireframe blueprint style, only black white gray, clean sans serif typography, technical UX documentation look.",
+  "negative_prompt": "photorealistic, colors, real images, 3D, gradients, shadows, real product photos, people",
+  "api_parameters": {
+    "aspect_ratio": "3:4",
+    "resolution": "1K",
+    "output_format": "jpg"
+  }
+}
