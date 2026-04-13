@@ -1,0 +1,16 @@
+{
+  "prompt": "A vertical 3D sales funnel structure on pure black background (#000000). The structure is centered horizontally in the image, occupying approximately 50% of canvas width and 95% of canvas height. Aspect ratio 9:16 portrait (tall vertical).\n\nFrom top to bottom:\n\n1. TUBE + SPHERES (top 0% to 55%):\nA SOLID OPAQUE vertical rectangular column. Dark blue color (#0D0D3A) with subtle lighter edges (#1A1A6B). Straight, solid, rectangular — NOT glass, NOT transparent. Width approximately 25% of canvas.\n\nIn front of the tube, exactly 4 SOLID glossy spheres centered on the vertical axis. ALL spheres are the SAME rich royal blue (#2050CC to #1040AA). Each has white specular highlight upper-left, darker shading lower-right — like polished billiard balls.\n\nCRITICAL: Spheres DECREASE IN SIZE from top to bottom:\n- Sphere 1 (top): LARGEST, approximately 22% canvas width\n- Sphere 2: slightly smaller, approximately 19% canvas width\n- Sphere 3: smaller, approximately 16% canvas width\n- Sphere 4: SMALLEST, approximately 13% canvas width\nEvenly spaced vertically within the tube.\n\n2. FUNNEL CONE (55% to 78% height):\nA solid 3D inverted cone/funnel. Same rich blue (#2050CC to #0D0D3A). Wide opening at top (~55% canvas width), narrowing to small exit at bottom (~8%). Simple elliptical rim at top showing 3D perspective. Solid material with subtle shading.\n\n3. DOWNWARD ARROW (80% to 96% height):\nA LARGE solid downward-pointing arrow. Rectangular shaft (~12% canvas width) + triangular arrowhead (~30% canvas width). Same blue (#1040AA to #0D0D3A). Big and prominent.\n\nNO TEXT. NO LABELS. NO ARROWS. NO LINES. ONLY the 3D funnel structure on pure black.\n\nLighting: Simple studio light from upper-left. Each sphere has clear specular highlight. Subtle rim light on right edges for separation from black background.\n\nStyle: Clean 3D infographic element — like a premium Keynote/PowerPoint asset. Solid, polished, professional. NOT photorealistic, NOT abstract art.",
+  "negative_prompt": "text, typography, letters, words, labels, arrows, lines, annotations, watermarks, transparent spheres, glass, frosted, translucent, colored backgrounds, white background, gradient backgrounds, multiple funnels, scattered elements, photorealistic scene, room, abstract art, cartoon, low resolution, noise, watermarks, rainbow colors, multicolored spheres, purple spheres, violet spheres, orange spheres, cyan spheres, yellow spheres, green spheres, human figures",
+  "api_parameters": {
+    "resolution": "2K",
+    "output_format": "png"
+  },
+  "settings": {
+    "resolution": "2K",
+    "style": "clean 3D infographic asset on pure black",
+    "lighting": "studio light upper-left, rim light right",
+    "camera_angle": "straight-on front view",
+    "depth_of_field": "everything sharp",
+    "quality": "solid 3D shapes, clean edges, no text"
+  }
+}

@@ -39,7 +39,7 @@ Los proyectos viven en `projects/`. Cada uno tiene su propio `README.md` con est
 
 **Clientes:**
 Los clientes activos viven en `projects/clientes/activos/`. Los inactivos se archivan en `archives/clientes-inactivos/`.
-- `projects/clientes/activos/anabel-mercedes/` — marca personal + contenido + ManyChat + landing, deadline 5 abr 2026
+- `projects/clientes/activos/anabel-mercedes/` — contenido + ManyChat + landing, deadline 5 abr 2026
 - `projects/clientes/activos/memorama/` — cliente activo, deadline 23 mar 2026
 - `projects/clientes/activos/dra-aurys-mercedes/` — página web + embudos, en progreso
 - `projects/clientes/activos/beatriz-5k-funnel/` — funnel $5k para Beatriz

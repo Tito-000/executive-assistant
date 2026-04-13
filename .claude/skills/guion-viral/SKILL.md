@@ -1,14 +1,31 @@
 # Skill: Guión Viral
 
-Crea guiones de video virales para contenido corto (Reels, TikTok, Shorts) usando la metodología de los 5 pasos de Victor (Erasmedia).
+Crea guiones de video para contenido corto (Reels, TikTok, Shorts) usando DOS metodologías complementarias:
+
+1. **Método Victor (Erasmedia)** — 5 pasos para guiones narrativos / virales / contenido educativo largo
+2. **Método Ramiro Cubria** — Estructura APSPA para guiones TOF de Instagram con objetivo de VENTA (no viralización)
 
 ## Cuándo usar este skill
 
-Cuando Martin pida crear guiones de video para cualquier proyecto o cliente. Aplica para contenido corto (15-90 seg) y también para contenido largo (YouTube).
+Cuando Martin pida crear guiones de video para cualquier proyecto o cliente.
+
+### Cuál método elegir
+
+| Objetivo del video | Método a usar |
+|--------------------|---------------|
+| Viralizar, construir audiencia, educar, contar historia personal | **Victor (5 pasos)** |
+| Atraer leads calificados para vender un servicio / curso / mentoría | **Ramiro (APSPA)** |
+| Video TOF de Instagram con CTA a recurso gratuito por comentario | **Ramiro (APSPA)** |
+| Storytime, momento vulnerable, before/after, lifestyle | **Victor (5 pasos)** |
+| Myth busting / respuesta a objeción con fin educativo puro | **Victor (5 pasos)** |
+| Myth busting / respuesta a objeción con fin de generar DMs de venta | **Ramiro (APSPA)** |
+
+**Principio:** Victor optimiza para retención y percepción de valor. Ramiro optimiza para conversión directa a conversación de venta. No son opuestos — son herramientas distintas para objetivos distintos.
 
 ## Fuente
 
-Metodología extraída del video "Cómo Convertirte en un Maestro del Guión" de Victor (Erasmedia). Transcripción completa en `/tmp/transcripcion-guion-viral.txt`.
+- **Victor:** Video "Cómo Convertirte en un Maestro del Guión" (Erasmedia). Transcripción en `/tmp/transcripcion-guion-viral.txt`.
+- **Ramiro Cubria:** Video "Cómo crear guiones tan Persuasivos que no paren de Comprarte". Ramiro factura >$400k/mes y atribuye sus resultados a esta estructura.
 
 ---
 
@@ -299,12 +316,382 @@ No tienes que inventar todo desde cero. Busca ideas, citas, videos que ya existe
 
 ---
 
-## Reglas de oro
+---
+
+# MÉTODO RAMIRO CUBRIA — APSPA para guiones TOF que venden
+
+Esta sección aplica cuando el objetivo del video NO es viralizar sino **atraer leads calificados que terminen comprando un servicio, curso o mentoría**. Es una estructura distinta a la de Victor y optimiza para conversión, no para retención pura.
+
+## Principio central de Ramiro
+
+> "No vendés una mierda con tu contenido no tiene nada que ver con el algoritmo, con la edición, con la cantidad de seguidores. Tiene que ver con que no sabés guionar los videos."
+
+Hay una combinación exacta de palabras que puede traer una catarata de leads calificados. Tu falta de conocimiento de cómo ordenar esas palabras es lo único que te impide atraer gente que sí te puede pagar — no gente cualquiera, gente calificada.
+
+**Métrica de éxito de un guion Ramiro:** no son las visualizaciones ni los likes. Es la cantidad de personas que escriben por DM pidiendo el recurso del CTA con intención real de compra.
+
+---
+
+## Parte 1 — Ángulos Ganadores (el 50% del video ES la idea)
+
+Antes de tocar una sola palabra del guion, tenés que tener definidos los **ángulos ganadores**.
+
+### La regla de oro del contenido que vende
+
+**En tu contenido tenés que hablar SIEMPRE de lo mismo.** Siempre. Los mismos 5-7 temas, una y otra y otra y otra vez.
+
+> "La gente no quiere que le digas algo nuevo todo el tiempo. Quiere que le pegues en el dolor, y le escarbes, y le pinches donde le duele. Le tocás el dolor, le tocás el dolor, le tocás el dolor... hasta que un día dicen: 'Okay, trabajemos juntos'."
+
+Los clientes ideales no tienen demasiados dolores — tienen entre **5, 6 o 7 dolores muy marcados**. Esos son tus ángulos ganadores. Todo tu contenido gira alrededor de esos dolores con ideas diferentes cada vez.
+
+### Tema vs Idea — distinción crítica
+
+Esta confusión es la #1 que mata cuentas:
+
+| Tema (ángulo ganador) | Idea (video concreto) |
+|----------------------|----------------------|
+| ManyChat | "Las 5 secuencias de ManyChat que uso para hacer $100k/mes" |
+| ManyChat | "Este flujo de ManyChat reemplaza a tu appointment setter" |
+| ManyChat | "Este árbol de ManyChat filtra leads podridos y agenda el triple de llamadas" |
+
+Los tres videos tocan el **mismo tema** (ManyChat) pero son **ideas distintas**. El tema no cambia. Las ideas varían desde diferentes perspectivas, variables o ángulos.
+
+### "¿Pero la gente no se cansa?"
+
+No. Razones:
+
+1. **El tráfico de Instagram se renueva constantemente.** Siempre hay gente nueva viendo el contenido por primera vez.
+2. **Las personas aprenden por repetición**, no por información nueva todo el tiempo.
+3. **Si alguien te viene consumiendo hace 1-2 años y no te compró, probablemente no te compre nunca.** Dalos por perdidos y enfócate en tráfico nuevo.
+4. **La gente que sí te gusta no te deja de seguir** aunque repitas los mismos temas.
+
+### Cómo identificar tus ángulos ganadores
+
+- ¿Cuáles son los 5-7 dolores más grandes de tu cliente ideal?
+- ¿De qué se queja constantemente?
+- ¿Qué creencias falsas tiene que le bloquean avanzar?
+- ¿Qué intentó y no le funcionó?
+- ¿Qué no sabe que no sabe (insight)?
+
+Para el proyecto **MM Agency**, los ángulos ganadores probables son: funnel que no convierte, tráfico frío sin sistema, leads no calificados, dependencia de referidos, Meta Ads sin ROI medible, WhatsApp caótico sin CRM, marca personal débil.
+
+Para el proyecto **Anabel**, los ángulos ganadores son los definidos en el WWP: belief de que "esto es pirámide", trust de que "nadie normal logra resultados", modelo de trabajo incompatible con vida real, miedo a exponerse.
+
+---
+
+## Parte 2 — Embudo TOF / MOF / BOF de Instagram
+
+Ramiro segmenta todo el contenido en 3 capas de embudo. Cada capa tiene estructura distinta:
+
+| Capa | Qué hace | Target | Estructura |
+|------|----------|--------|------------|
+| **TOF** (Top of Funnel) | Hablar de **problemas** del cliente ideal | Extraños → seguidores calificados | **APSPA** (lo que cubre este skill) |
+| **MOF** (Middle of Funnel) | Nutrir y explicar **cómo se resuelven** los problemas | Seguidores → potenciales clientes | Estructura educativa diferente |
+| **BOF** (Bottom of Funnel) | **Salta objeciones** y presenta casos de éxito | Potenciales clientes → clientes | Estructura de conversión diferente |
+
+**Este skill cubre SOLO la estructura TOF de Ramiro.** MOF y BOF son otras estructuras. Si Martin pide un video MOF o BOF explícito, avisar que APSPA no aplica y pedir más contexto.
+
+**Regla práctica:** ~60-70% del contenido de una cuenta que quiere vender debería ser TOF (atraer), 20-30% MOF (nutrir), 10-20% BOF (cerrar).
+
+---
+
+## Parte 3 — La Estructura APSPA (5 pasos de un guion TOF)
+
+**A** — Atención (Gancho)
+**P** — Problema (con Insight)
+**S** — Solución (Qué, no Cómo)
+**P** — Prueba Social
+**A** — Acción (CTA a recurso gratuito)
+
+### PASO A — ATENCIÓN (El gancho, primeros 3 segundos)
+
+> "Si los primeros tres segundos de tu video son una verga, todo tu video automáticamente es una verga."
+
+Esta es la parte más importante de CUALQUIER video. La gente le da muy poca chance al contenido. El gancho tiene que ser lo suficientemente fuerte para **frenar el dedo scrolleando** — romper la inercia de scroll, romper el patrón.
+
+**Los 4 componentes del gancho Ramiro:**
+
+| Componente | Pregunta clave |
+|-----------|----------------|
+| **1. ¿Qué digo?** | ¿La oración en sí — las palabras literales? |
+| **2. ¿Cómo lo digo?** | ¿Con qué tono, energía, pausa, intensidad? |
+| **3. ¿Qué encuadre / contexto?** | ¿Qué fondo, escenario, plano? ¿Es el mismo de siempre o es diferente? |
+| **4. ¿Qué elemento visual?** | ¿Qué objeto, texto en pantalla, acción visible distingue este gancho? |
+
+**Regla del encuadre:** la gente necesita ver **fondos diferentes** todo el tiempo. Si ven constantemente el mismo fondo, asumen que ya saben lo que vas a decir y te scrollean. Rotar ubicaciones, outfits, iluminaciones.
+
+**La primera oración tiene que generar UNA emoción.** Las tres emociones que Ramiro usa:
+
+1. **Risa** — algo inesperado o absurdo
+2. **Rechazo** — una afirmación dura o controversial
+3. **Curiosidad extrema** — una promesa imposible de ignorar
+
+Si la primera oración no genera ninguna de estas 3 emociones, el gancho está mal.
+
+**Ejemplos de ganchos Ramiro-style:**
+- *"No vendés una verga porque tu contenido tiene demasiado olor a venta."* (rechazo)
+- *"Este flujo de ManyChat reemplaza a tu appointment setter."* (curiosidad extrema)
+- *"El 95% de los creadores hace guiones de mierda — y no es su culpa."* (rechazo + curiosidad)
+
+### PASO P — PROBLEMA (Insight, no descripción)
+
+**Este es el paso que más se confunde y el que más vende bien cuando se hace correctamente.**
+
+> "La clave de un buen guion que vende NO es explicarle a la gente cómo resolver su problema. La clave es explicarles POR QUÉ tienen los problemas que tienen."
+
+**Regla binaria:**
+- ❌ **MAL:** Describir el problema ("te está pasando que tus ads no convierten")
+- ✅ **BIEN:** Explicar la **causa raíz** del problema con un insight que nunca habían escuchado ("tus ads no convierten porque estás midiendo el ROAS del ad set cuando deberías medirlo a nivel de creativo — ahí está el 80% de tu fuga de dinero")
+
+**El concepto clave: INSIGHT.**
+
+Un insight es una **perspectiva nueva sobre un problema que el cliente ya sabe que tiene pero nunca entendió por qué**. Cuando una persona siente que vos entendés su problema **mejor de lo que ella misma lo entiende**, ahí es cuando te perciben como autoridad. Y a las autoridades se les paga.
+
+**La prueba del insight:** si la persona que ve el video piensa "la puta madre, esto es exactamente lo que me pasa y nunca lo había podido explicar así", tenés insight. Si piensa "sí, ya sé que me pasa eso", no tenés insight — estás describiendo.
+
+**Cómo construir el problema con insight:**
+1. Identificá el dolor visible (lo que el cliente sabe que le pasa)
+2. Preguntate: ¿por qué REALMENTE le pasa eso? (causa raíz)
+3. ¿Esa causa raíz es algo que nadie más está diciendo en el nicho?
+4. Si la respuesta es sí → tenés insight
+5. Si la respuesta es no → seguí buscando más profundo
+
+### PASO S — SOLUCIÓN (El QUÉ, nunca el CÓMO)
+
+> "Ofrecer una solución NO es decirle cómo hacerlo paso a paso. Es decirle qué tiene que hacer, pero le decís el 'qué' y no el 'cómo'."
+
+**Regla binaria:**
+- ❌ **MAL (Cómo):** "Entrá a Ads Manager, andá a configuración, cambiá la columna a ROAS por creative, y analizá cada 72 horas" → la persona ya tiene toda la info, no te necesita
+- ✅ **BIEN (Qué):** "Tenés que medir el ROAS a nivel de creativo, no a nivel de ad set. Eso solo te va a dar visibilidad del 80% de tu presupuesto que se está fugando" → decís qué hacer pero no cómo, generás curiosidad
+
+**Por qué funciona esta regla:** la curiosidad es la que dispara la acción de **seguirte o comentarte**. Si le das el cómo completo, la curiosidad muere y el CTA no funciona. Si le das el qué sin el cómo, el cliente piensa "uf, necesito saber cómo se hace eso exactamente" → comenta el keyword → entra al DM.
+
+**El "qué" debe ser específico y accionable en concepto, pero opaco en ejecución.** Tiene que sonar a algo que funciona, no a algo vago.
+
+**Ejemplos:**
+- ❌ Vago: "Mejorá tu tracking" (no dice qué)
+- ❌ Cómo completo: "Usá UTMs con formato `source=meta&medium=cpc&campaign={{campaign.name}}_{{adset.name}}` en cada link" (dice cómo)
+- ✅ Qué: "Metele UTMs específicos a nivel de creativo con el nombre del ad set y el campaign, así cada lead que entra al CRM ya viene etiquetado" (dice qué, no cómo)
+
+### PASO P — PRUEBA SOCIAL
+
+> "Sin prueba social sos un tipo más opinando en internet."
+
+En **algún momento del guion** (no necesariamente al final) tenés que meter un elemento de prueba social. Responde a la pregunta implícita del espectador: **"¿Qué te avala a vos para decir lo que estás diciendo?"**
+
+**Tipos de prueba social:**
+
+1. **Resultado propio** — "Esto me hizo pasar de $5k a $30k/mes en 4 meses"
+2. **Resultado de cliente** — "Mi cliente Joseph usó esta misma estructura y pasó de $25k a $85k/mes"
+3. **Dato masivo** — "Esta estructura la usé para facturar más de 6 millones de dólares en ventas"
+4. **Logro verificable** — "Con esto conseguí 21,000 comentarios en un solo carrusel"
+
+**Dónde meter la prueba social:** Ramiro la mete casi siempre **entre la Solución y el CTA**, como puente de credibilidad. También puede ir al principio como parte del gancho ("Esto me hizo facturar 6M en ventas" → gancho + prueba + contenido).
+
+**Regla:** sin prueba social, el video no cierra. Si no tenés una, usá una del cliente. Si no tenés de cliente, usá una anecdótica específica ("el mes pasado hice X"). Pero siempre meté algo concreto y verificable.
+
+**Para proyectos que NO pueden mencionar prueba social directa** (como Anabel con Immunotec): usar prueba social genérica del nicho ("conozco a 3 personas que pasaron por esto", "el 70% de los que intentan esto fracasan por X"), o prueba social del método sin mencionar la marca.
+
+### PASO A — ACCIÓN (CTA a recurso gratuito)
+
+**El CTA para videos TOF es SIEMPRE a un recurso gratuito.** No a una llamada de venta. No a un "seguime para más". A un recurso gratuito específico que el usuario recibe comentando una keyword.
+
+**Los 4 componentes de un CTA Ramiro:**
+
+| Componente | Descripción |
+|-----------|-------------|
+| **1. Entregable específico** | ¿Qué recibe exactamente? (GPT, template, PDF, audio, video, checklist) |
+| **2. Resultado específico** | ¿Qué va a lograr con eso? (agendar llamadas, escribir guiones, convertir leads) |
+| **3. Menor tiempo posible** | ¿En cuánto tiempo lo va a lograr? (en 1 hora, en 3 días, en una semana) |
+| **4. Menor esfuerzo posible** | ¿Qué tan fácil es? (sin experiencia, en piloto automático, sin escribir nada) |
+
+**Fórmula completa:** `Comentá [KEYWORD] y te mando [ENTREGABLE ESPECÍFICO] que te permite [RESULTADO ESPECÍFICO] en [MENOR TIEMPO] con [MENOR ESFUERZO].`
+
+**Ejemplos:**
+
+- ❌ **MAL:** "Comentá CLASE y te mando información"
+- ❌ **MAL:** "Seguime para más contenido como este"
+- ❌ **MAL:** "Link en bio"
+- ✅ **BIEN:** "Comentá IA y te mando mi GPT que te redacta 40 guiones en 1 hora sin que tengas que escribir nada"
+- ✅ **BIEN:** "Comentá CURSO y te mando este curso de 10 horas para replicar mi estructura y triplicar tus agendas"
+- ✅ **BIEN:** "Comentá SISTEMA y te mando el árbol de ManyChat que uso para filtrar leads calificados en piloto automático"
+
+**Regla del CTA:** si le sacás cualquiera de los 4 componentes (especificidad, resultado, tiempo, esfuerzo), el CTA pierde fuerza. Los 4 componentes son obligatorios.
+
+---
+
+## Parte 4 — Ejemplo completo de guion APSPA (de Ramiro)
+
+Este es el ejemplo literal que Ramiro da en el video, para el tema "hacer guiones que vendan":
+
+```
+A — GANCHO:
+"No vendés una verga porque tu contenido tiene demasiado olor a venta."
+
+P — PROBLEMA (con insight):
+"Si constantemente hablás de tu negocio, tus servicios y lo que ofrecés,
+parecés un infomercial y generás rechazo automático. La gente no compra
+de quien le vende — compra de quien le resuelve un problema."
+
+S — SOLUCIÓN (qué, no cómo):
+"En vez de promocionar tu modelo, hablá de los problemas que tiene tu
+cliente ideal y ofrecé recursos gratuitos. Así dejás de ser un vendedor
+y te convertís en una autoridad que resuelve dolores."
+
+P — PRUEBA SOCIAL:
+"Esta estructura la usé para facturar más de 6 millones de dólares en
+ventas con mi cuenta de Instagram."
+
+A — CTA:
+"Comentá CURSO y te mando este curso de 10 horas para replicar mi
+estructura exacta y triplicar la cantidad de llamadas que agendás."
+```
+
+Observá cómo cada paso está en una o dos oraciones. Un guion TOF de Ramiro es **corto** — 30-45 segundos. No es un storytime largo. Es una píldora de valor comprimida con un CTA imposible de ignorar.
+
+---
+
+## Parte 5 — Template APSPA listo para pegar
+
+```
+## [NOMBRE DEL VIDEO]
+
+**Ángulo ganador (tema):** [Uno de los 5-7 temas fijos de la cuenta]
+**Idea específica:** [La idea concreta dentro del tema]
+**Dolor atacado:** [Qué dolor específico del cliente ideal]
+**Duración:** 30-45 segundos
+**Plataforma:** Instagram Reel
+**Objetivo:** Atraer leads calificados al DM con keyword
+**Keyword:** [KEYWORD]
+
+---
+
+### A — ATENCIÓN (0-3 seg)
+
+**Qué digo:** "[Primera oración exacta — genera risa, rechazo o curiosidad extrema]"
+**Cómo lo digo:** [Tono, intensidad, pausa]
+**Encuadre/contexto:** [Fondo específico, diferente al de los últimos videos]
+**Elemento visual:** [Objeto, texto en pantalla, gesto, acción visible]
+
+---
+
+### P — PROBLEMA con INSIGHT (3-12 seg)
+
+**Dolor visible:** [Lo que el cliente sabe que le pasa]
+**Insight (causa raíz):** [La perspectiva nueva que nadie más está dando]
+
+**Texto del guion:**
+> "[Explicación del problema con insight — 2-3 oraciones que hagan decir 'esto es exactamente lo que me pasa']"
+
+---
+
+### S — SOLUCIÓN (12-22 seg)
+
+**El QUÉ:** [Qué tiene que hacer — concepto, no ejecución]
+**Lo que NO digo:** [El cómo detallado que se guarda para el DM / recurso]
+
+**Texto del guion:**
+> "[Solución en formato 'tenés que hacer X' sin explicar cómo se implementa]"
+
+---
+
+### P — PRUEBA SOCIAL (22-30 seg)
+
+**Tipo:** [Propia / cliente / dato masivo / logro verificable]
+**Texto del guion:**
+> "[Prueba social específica, con número o nombre]"
+
+---
+
+### A — CTA (30-40 seg)
+
+**Entregable específico:** [Qué recibe]
+**Resultado específico:** [Qué va a lograr]
+**Menor tiempo:** [En cuánto]
+**Menor esfuerzo:** [Qué tan fácil]
+
+**Texto del CTA:**
+> "Comentá **[KEYWORD]** y te mando [ENTREGABLE] que te permite [RESULTADO] en [TIEMPO] [ESFUERZO]."
+
+---
+
+### NOTAS DE PRODUCCIÓN
+- **Setting:** [Dónde se graba — debe ser DIFERENTE al de los últimos 2-3 videos]
+- **Vestuario:** [Qué lleva puesto]
+- **Cámara:** [Plano]
+- **Música:** [Tipo de música o sin música]
+```
+
+---
+
+## Checklist APSPA — validación antes de grabar
+
+### Ángulo ganador
+- [ ] ¿El video ataca uno de los 5-7 ángulos ganadores definidos para la cuenta?
+- [ ] ¿La idea concreta es nueva aunque el tema se repita?
+
+### Atención
+- [ ] ¿El gancho genera risa, rechazo o curiosidad extrema en la primera oración?
+- [ ] ¿Los 4 componentes están pensados (qué digo, cómo, encuadre, visual)?
+- [ ] ¿El encuadre es diferente al de los últimos 2-3 videos?
+- [ ] ¿El gancho rompe la inercia de scroll?
+
+### Problema
+- [ ] ¿Explica POR QUÉ, no describe el qué?
+- [ ] ¿Tiene insight (perspectiva nueva que nadie más está dando)?
+- [ ] ¿La persona que lo ve diría "esto es exactamente lo que me pasa"?
+- [ ] ¿Posiciona al presentador como alguien que entiende el problema mejor que el cliente mismo?
+
+### Solución
+- [ ] ¿Da el QUÉ sin dar el CÓMO?
+- [ ] ¿Genera curiosidad en vez de saciarla?
+- [ ] ¿El espectador queda con ganas de saber cómo se implementa exactamente?
+
+### Prueba Social
+- [ ] ¿Hay un elemento de prueba social específico (número, nombre, dato verificable)?
+- [ ] ¿Está metido en algún punto del guion (no ausente)?
+
+### Acción
+- [ ] ¿El CTA tiene los 4 componentes (entregable específico + resultado + tiempo + esfuerzo)?
+- [ ] ¿La keyword es simple y memorable?
+- [ ] ¿El entregable es un recurso gratuito (no una llamada de venta)?
+- [ ] ¿Se entiende exactamente qué van a recibir?
+
+---
+
+## Reglas de oro de Ramiro (síntesis)
+
+1. **La idea es el 50% del video.** Buena estructura + idea mala = video mierda.
+2. **Hablá siempre de lo mismo.** 5-7 ángulos ganadores, repetidos desde ángulos distintos.
+3. **La gente aprende por repetición, no por novedad.** No tengas miedo de repetir temas.
+4. **Los primeros 3 segundos son todo.** Si el gancho es débil, el video muere.
+5. **Fondos diferentes siempre.** Mismo fondo = asumen que ya saben y scrollean.
+6. **Explicá POR QUÉ, no CÓMO.** Insight > descripción.
+7. **Decí el QUÉ, guardá el CÓMO.** El cómo se revela en el DM / recurso.
+8. **Sin prueba social, sos un opinión más en internet.**
+9. **CTA a recurso gratuito, no a llamada de venta.** TOF nutre, no vende directo.
+10. **Los 4 componentes del CTA son obligatorios:** entregable + resultado + tiempo + esfuerzo.
+
+---
+
+## Cuando Victor y Ramiro se contradicen — qué ganar
+
+1. **Victor dice "estructura QUÉ/POR QUÉ/CÓMO".** Ramiro dice "NUNCA des el CÓMO". → Si el video es TOF-venta, gana Ramiro (no dar cómo). Si el video es educativo puro para viralizar, gana Victor (dar cómo completo).
+
+2. **Victor dice "3-5 puntos con re-entry points".** Ramiro dice "5 pasos APSPA, corto, 30-45 seg". → Si el objetivo es venta, gana Ramiro (corto, directo). Si el objetivo es retención + viralidad, gana Victor (desarrollo narrativo).
+
+3. **Victor dice "cuenta historias, 5 elementos narrativos".** Ramiro dice "gancho + insight + qué + prueba + CTA". → Victor para storytime, Ramiro para educativo-venta.
+
+**Regla de decisión:** antes de escribir, preguntale a Martin cuál es el objetivo. Si el objetivo es "generar DMs calificados que comenten el keyword", usá Ramiro APSPA. Si el objetivo es "construir audiencia y posicionar marca", usá Victor 5 pasos.
+
+---
+
+# Reglas de oro (ambos métodos)
 
 1. **Publica MENOS, no más.** 2 videos por semana bien hechos > 5 videos mediocres al día.
-2. **La idea es el 80%.** Si la idea no es ganadora, el mejor guión del mundo no la salva.
+2. **La idea es el 50-80%.** Si la idea no es ganadora, el mejor guión del mundo no la salva.
 3. **Nunca empieces sin esquema.** Folio en blanco = guión malo.
-4. **Si no explicas POR QUÉ importa, nadie se queda para el CÓMO.**
-5. **Un video viral sin CTA = tiempo perdido.**
-6. **Curación > invención.** Busca lo que ya funciona y dale tu vuelta.
-7. **El principio binario siempre:** ¿La realidad supera la expectativa? Si no, reescribe.
+4. **Un video sin CTA = tiempo perdido.**
+5. **Curación > invención.** Busca lo que ya funciona y dale tu vuelta.
+6. **El principio binario siempre:** ¿La realidad supera la expectativa? Si no, reescribe.
+7. **Elegí el método según el objetivo.** Victor para viralizar/construir, Ramiro para vender.

@@ -1,0 +1,16 @@
+{
+  "prompt": "A single 3D sales funnel rendered as a clean modern graphic design element on pure black background (#000000). Aspect ratio 9:16 portrait.\n\nThe funnel is centered in the canvas, occupying approximately 70% of canvas width and 80% of canvas height. It is a SINGLE OBJECT — one classic funnel shape, viewed from a slight 3/4 angle to show dimensionality.\n\nFUNNEL SHAPE:\n- Wide circular/elliptical opening at the top (showing the inside rim with depth)\n- Smooth conical taper downward\n- Narrow cylindrical spout at the bottom\n- Solid 3D form with visible thickness on the rim\n- Classic kitchen-funnel proportions but stylized for graphic design\n\nCOLOR PALETTE — MM Agency brand, use as a smooth vertical gradient on the funnel surface:\n- Top rim / upper section: vibrant violet (#713DFF) with light violet highlights (#C8A4FF)\n- Middle section: deep violet (#2E1A6B)\n- Lower section / spout: accent orange (#F54900) as a subtle bottom glow/gradient — like the funnel is heating toward the output\n- Interior of the funnel (visible through the top opening): slightly darker violet with a soft inner shadow\n\nMATERIAL & FINISH:\n- Glossy matte plastic finish — NOT metallic, NOT glass, NOT transparent\n- Smooth polished surface with soft specular highlights\n- Clean studio lighting from upper-left creating a subtle highlight on the left side of the cone\n- Soft shadow/rim light on the right edge for separation from black background\n- The orange glow at the bottom spout is subtle and integrated, not a separate light source\n\nSTYLE:\n- Clean 3D graphic design element\n- Think premium SaaS marketing asset (Stripe, Linear, Vercel)\n- Simple, iconic, bold\n- NOT photorealistic kitchen funnel\n- NOT abstract art\n- Proportions slightly exaggerated for visual impact (wider top, more graceful taper)\n\nNO spheres, NO tubes above, NO arrows, NO labels, NO text, NO liquid inside. Just the single funnel object floating on pure black.",
+  "negative_prompt": "text, typography, letters, words, labels, arrows, lines, annotations, watermarks, spheres, balls, orbs, tubes above funnel, liquid, droplets, pouring, multiple funnels, scattered elements, transparent, glass, crystal, metallic chrome, photorealistic kitchen scene, room, hands, people, cartoon, flat design, 2D illustration, low resolution, noise, rainbow colors, blue, cyan, green, yellow, pink, red, gradient background, white background, gray background, colored background",
+  "api_parameters": {
+    "resolution": "2K",
+    "output_format": "png"
+  },
+  "settings": {
+    "resolution": "2K",
+    "style": "clean 3D graphic design funnel in MM Agency violet with orange accent",
+    "lighting": "studio light upper-left, soft rim light right",
+    "camera_angle": "slight 3/4 angle showing top rim depth",
+    "depth_of_field": "everything sharp",
+    "quality": "solid 3D shape, polished matte plastic, clean edges"
+  }
+}

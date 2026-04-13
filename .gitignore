@@ -9,5 +9,8 @@ node_modules/
 # Netlify build artifacts
 .netlify/
 
+# Cloudflare Wrangler cache
+.wrangler/
+
 # API keys (seguridad)
 recursos-ia/api-keys/
