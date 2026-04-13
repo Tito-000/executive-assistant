@@ -1,0 +1,16 @@
+<svg viewBox="0 0 140 100" xmlns="http://www.w3.org/2000/svg">
+  <!-- Laurel izquierdo -->
+  <g fill="none" stroke="#1d1d1f" stroke-width="1.5">
+    <path d="M35,80 C25,70 28,60 30,55 C22,58 20,48 24,42 C16,43 16,34 20,28 C14,26 15,18 22,14 C18,8 24,2 32,2"/>
+    <path d="M32,75 C24,67 26,58 28,53 C21,55 20,46 23,41 C17,41 17,34 20,29"/>
+  </g>
+  <!-- Laurel derecho -->
+  <g fill="none" stroke="#1d1d1f" stroke-width="1.5">
+    <path d="M105,80 C115,70 112,60 110,55 C118,58 120,48 116,42 C124,43 124,34 120,28 C126,26 125,18 118,14 C122,8 116,2 108,2"/>
+    <path d="M108,75 C116,67 114,58 112,53 C119,55 120,46 117,41 C123,41 123,34 120,29"/>
+  </g>
+  <text x="70" y="48" font-family="Arial,Helvetica,sans-serif" font-size="46" font-weight="900" fill="#1d1d1f" text-anchor="middle">#1</text>
+  <text x="70" y="65" font-family="Arial,Helvetica,sans-serif" font-size="6.5" font-weight="700" fill="#1d1d1f" text-anchor="middle" letter-spacing="0.5">EN INVESTIGACION</text>
+  <text x="70" y="75" font-family="Arial,Helvetica,sans-serif" font-size="6.5" font-weight="700" fill="#1d1d1f" text-anchor="middle" letter-spacing="0.5">DE SUPLEMENTOS</text>
+  <text x="70" y="85" font-family="Arial,Helvetica,sans-serif" font-size="6.5" font-weight="700" fill="#1d1d1f" text-anchor="middle" letter-spacing="0.5">DE GLUTATION</text>
+</svg>
