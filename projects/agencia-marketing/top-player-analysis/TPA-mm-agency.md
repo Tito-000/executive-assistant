@@ -574,8 +574,8 @@ Estas son las promesas que todos hacen — el mínimo para ser considerado:
 | Precio | No publicado, cotización | No publicado / $50K+ mínimo | Publicar rangos orientativos — eliminar fricción |
 | Mensaje/Copy | Credibilidad por años + logos de clientes | Resultados cuantificados + tecnología | Combinar ambos: resultados reales locales + proceso transparente |
 | Canal | SEO + WhatsApp + redes sociales | SEO masivo + directorios + content | Instagram + WhatsApp + referidos — con casos de éxito reales |
-| Oferta | Servicios integrales custom, sin paquetes claros | Custom enterprise, mínimos altos | Paquetes transparentes con entregables claros por nivel |
-| Mecanismo/Diferenciador | Certificaciones + años en el mercado | Tecnología propia + squad model | Atención directa del fundador + resultados documentados |
+| Oferta | Servicios integrales custom, sin paquetes claros | Custom enterprise, mínimos altos | Embudo de venta completo como un solo producto (landing + tráfico + CRM + seguimiento) — 3 configuraciones según punto de partida |
+| Mecanismo/Diferenciador | Certificaciones + años en el mercado | Tecnología propia + squad model | Sistema completo de embudo bajo un solo responsable + atención directa del fundador + resultados documentados |
 | Prueba social | Logos de clientes, sin métricas | Métricas masivas, sin contexto local | Casos de éxito locales (Memorama, Dra. Aurys) con números reales |
 | Contratos | No comunicado — percepción de trampa | Proyectos de largo plazo | Sin permanencia / sin contratos trampa — comunicado explícitamente |
 | Proceso de onboarding | Invisible — caja negra | Invisible | Mostrar los primeros 30 días trabajando juntos |
@@ -587,9 +587,9 @@ Estas son las promesas que todos hacen — el mínimo para ser considerado:
 
 ### Ángulo ganador
 
-> **"La primera agencia en RD que te muestra los resultados antes de contratarla, te dice lo que cuesta desde el día uno, y te atiende directamente — sin intermediarios, sin contratos trampa, con casos de éxito reales en tu mercado."**
+> **"La primera agencia en RD que te arma el embudo de venta completo — landing + tráfico pagado + CRM + seguimiento — bajo un solo responsable, con precios claros desde el día uno, atención directa del fundador y casos de éxito reales en tu mercado."**
 
-Este ángulo combina los tres gaps más grandes del mercado local: transparencia de precios, prueba social con métricas reales, y atención personalizada documentada — ninguno de los 5 competidores los ejecuta los tres al mismo tiempo.
+Este ángulo combina los gaps más grandes del mercado local: **oferta completa bajo un solo responsable** (vs. servicios sueltos), transparencia de precios, prueba social con métricas reales, y atención personalizada — ninguno de los 5 competidores los ejecuta a la vez, y ninguno vende el embudo entero como un solo producto.
 
 ### Qué debe tener el funnel de MM Agency que la competencia no tiene
 

@@ -438,7 +438,7 @@ Estrategia: **mobile-first** con media queries `min-width`. Estilos base = mobil
 }
 ```
 
-**Primer item destacado (Google Ads Certified):** mismo componente con `font-weight: 700` + logo oficial Google Partner como prefijo en lugar del check.
+**Primer item destacado ("Sistema completo, no pedazos sueltos"):** mismo componente con `font-weight: 700` + dot luminoso como prefijo en lugar del check.
 
 ### 3.10 Nav sticky
 
@@ -592,9 +592,10 @@ EmblaCarousel(emblaNode, {
 - Plus/close (FAQ): `lucide:plus`
 - Arrow-right (CTAs): `lucide:arrow-right`
 - External link (cases): `lucide:arrow-up-right`
-- Meta Ads card: logo real de Meta (monocromo blanco)
-- Google Ads card: logo real de Google Ads (monocromo blanco)
-- Combo card: composición de ambos logos en círculos overlapping
+- Landing de conversión card: icono de cursor + formulario (lineart blanco)
+- Tráfico pagado card: logos monocromos de Meta + Google Ads superpuestos
+- CRM + automatización card: icono de flow/nodes conectados (lineart)
+- Optimización continua card: icono de gráfico ascendente (lineart)
 
 ---
 
@@ -686,8 +687,8 @@ Lista de recursos que deben existir antes de empezar el HTML:
 - [ ] `prefers-reduced-motion` desactiva marquees y reveals
 - [ ] Focus states visibles en todo elemento interactivo
 - [ ] OG image + favicon + meta tags básicos configurados
-- [ ] Trust bar del hero tiene el check + "Certificados por Google Ads" como primer item
-- [ ] El badge Google Partner del marquee #2 está visualmente dominante
+- [ ] Trust bar del hero tiene el dot luminoso + "Sistema completo, no pedazos sueltos" como primer item
+- [ ] El marquee #2 muestra el stack del embudo completo (landing tools + ad platforms + CRM + analytics)
 
 ---
 

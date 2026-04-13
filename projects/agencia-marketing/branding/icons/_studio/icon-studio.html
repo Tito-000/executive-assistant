@@ -1,0 +1,779 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<title>MM Agency — Icon Studio 3D</title>
+<style>
+  :root {
+    --bg: #0A0A0A;
+    --panel: #161616;
+    --border: #262626;
+    --text: #FFFFFF;
+    --muted: #9A9A9A;
+    --yellow: #FAFA00;
+    --violet: #713DFF;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html, body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: 'Inter', system-ui, sans-serif;
+    overflow: hidden;
+    height: 100%;
+  }
+  #app { display: flex; height: 100vh; }
+
+  /* Canvas area */
+  #canvas-wrap {
+    flex: 1;
+    position: relative;
+    background: radial-gradient(ellipse at 50% 40%, #15093A 0%, #0A0A0A 70%);
+  }
+  #canvas-wrap canvas { display: block; }
+  #overlay {
+    position: absolute;
+    top: 1.5rem;
+    left: 1.5rem;
+    font-family: 'DM Mono', ui-monospace, monospace;
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    color: var(--muted);
+    pointer-events: none;
+  }
+  #overlay strong { color: var(--yellow); }
+
+  /* Sidebar */
+  aside {
+    width: 320px;
+    background: var(--panel);
+    border-left: 1px solid var(--border);
+    padding: 2rem 1.5rem;
+    overflow-y: auto;
+  }
+  aside h1 {
+    font-family: 'Orbitron', system-ui, sans-serif;
+    font-size: 1.1rem;
+    font-weight: 700;
+    letter-spacing: -0.01em;
+    margin-bottom: 0.25rem;
+  }
+  aside h1 span { color: var(--yellow); }
+  aside p.lede {
+    font-size: 0.75rem;
+    color: var(--muted);
+    margin-bottom: 1.75rem;
+    line-height: 1.5;
+  }
+
+  .control-group {
+    margin-bottom: 1.25rem;
+    padding-bottom: 1.25rem;
+    border-bottom: 1px solid var(--border);
+  }
+  .control-group:last-of-type { border-bottom: none; }
+
+  .section-label {
+    font-family: 'DM Mono', ui-monospace, monospace;
+    font-size: 0.65rem;
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    color: var(--yellow);
+    margin-bottom: 0.75rem;
+  }
+
+  label {
+    display: block;
+    font-size: 0.72rem;
+    color: var(--muted);
+    margin-bottom: 0.35rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+  }
+  label .val {
+    float: right;
+    color: var(--text);
+    font-family: 'DM Mono', ui-monospace, monospace;
+  }
+  input[type="range"] {
+    width: 100%;
+    margin-bottom: 0.85rem;
+    accent-color: var(--yellow);
+  }
+  select, input[type="color"] {
+    width: 100%;
+    background: #0A0A0A;
+    color: var(--text);
+    border: 1px solid var(--border);
+    padding: 0.5rem;
+    font-family: inherit;
+    font-size: 0.8rem;
+    margin-bottom: 0.85rem;
+  }
+  input[type="color"] { height: 34px; padding: 0; }
+
+  .row { display: flex; gap: 0.5rem; }
+  .row > * { flex: 1; }
+
+  button {
+    width: 100%;
+    background: var(--yellow);
+    color: #000;
+    border: none;
+    padding: 0.85rem;
+    font-family: 'Orbitron', system-ui, sans-serif;
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: all 0.2s;
+  }
+  button:hover { background: var(--text); }
+  button.secondary {
+    background: transparent;
+    color: var(--muted);
+    border: 1px solid var(--border);
+  }
+  button.secondary:hover { color: var(--text); border-color: var(--yellow); }
+
+  .button-row { display: flex; flex-direction: column; gap: 0.5rem; }
+
+  .swatch-row { display: grid; grid-template-columns: repeat(4, 1fr); gap: 0.4rem; margin-bottom: 0.85rem; }
+  .swatch {
+    aspect-ratio: 1;
+    border: 1px solid var(--border);
+    cursor: pointer;
+    border-radius: 2px;
+    transition: transform 0.15s;
+  }
+  .swatch:hover { transform: scale(1.08); }
+
+  /* hint */
+  .hint {
+    font-size: 0.65rem;
+    color: #5A5A5A;
+    line-height: 1.55;
+    margin-top: 0.5rem;
+    font-family: 'DM Mono', ui-monospace, monospace;
+  }
+</style>
+<script type="importmap">
+{
+  "imports": {
+    "three": "https://unpkg.com/three@0.160.0/build/three.module.js",
+    "three/addons/": "https://unpkg.com/three@0.160.0/examples/jsm/"
+  }
+}
+</script>
+</head>
+<body>
+<div id="app">
+  <div id="canvas-wrap">
+    <div id="overlay">◉ MM Agency · <strong>Icon Studio 3D</strong> · drag to rotate · scroll to zoom</div>
+  </div>
+
+  <aside>
+    <h1>MM<span>.</span> Icon Studio</h1>
+    <p class="lede">Three.js 3D real. Ajusta, rota, exporta PNG transparente.</p>
+
+    <div class="control-group">
+      <div class="section-label">◉ Shape</div>
+      <select id="shape">
+        <option value="torus">Torus (donut)</option>
+        <option value="sphere">Sphere</option>
+        <option value="cube">Cube</option>
+        <option value="cylinder">Cylinder</option>
+        <option value="cone">Cone</option>
+        <option value="icosahedron">Icosahedron</option>
+        <option value="torusKnot">Torus Knot</option>
+      </select>
+    </div>
+
+    <div class="control-group">
+      <div class="section-label">◉ Geometry</div>
+      <label>Tube radius <span class="val" id="v-tube">0.38</span></label>
+      <input type="range" id="tube" min="0.1" max="0.6" step="0.01" value="0.38">
+
+      <label>Detail <span class="val" id="v-detail">48</span></label>
+      <input type="range" id="detail" min="8" max="96" step="2" value="48">
+
+      <label>Scale <span class="val" id="v-scale">1.0</span></label>
+      <input type="range" id="scale" min="0.5" max="2" step="0.05" value="1.0">
+    </div>
+
+    <div class="control-group">
+      <div class="section-label">◉ MM Agency Palette</div>
+      <label>Quick preset</label>
+      <select id="palette-preset">
+        <option value="violet">Violet · #713DFF (signature)</option>
+        <option value="yellow">Yellow · #FAFA00 (primary CTA)</option>
+        <option value="yellow-soft">Yellow Soft · #FFF25E</option>
+        <option value="orange">Orange · #F54900</option>
+        <option value="pink">Pink · #FCA8FF</option>
+        <option value="green">Green · #008500</option>
+        <option value="white">White · #FFFFFF</option>
+        <option value="text-muted">Muted Gray · #9A9A9A</option>
+        <option value="custom">Custom (usa color picker)</option>
+      </select>
+
+      <label>Base color</label>
+      <input type="color" id="color" value="#713DFF">
+      <div class="swatch-row">
+        <div class="swatch" data-color="#713DFF" style="background:#713DFF" title="Violet"></div>
+        <div class="swatch" data-color="#FAFA00" style="background:#FAFA00" title="Yellow"></div>
+        <div class="swatch" data-color="#F54900" style="background:#F54900" title="Orange"></div>
+        <div class="swatch" data-color="#FCA8FF" style="background:#FCA8FF" title="Pink"></div>
+      </div>
+
+      <label><input type="checkbox" id="gradient-on" checked style="width:auto;margin-right:0.5rem;vertical-align:middle;"> Gradient enabled</label>
+      <label>Gradient color B</label>
+      <input type="color" id="color2" value="#C8A4FF">
+      <div class="swatch-row">
+        <div class="swatch" data-color2="#C8A4FF" style="background:#C8A4FF" title="Lila light"></div>
+        <div class="swatch" data-color2="#FFF25E" style="background:#FFF25E" title="Yellow soft"></div>
+        <div class="swatch" data-color2="#00D9FF" style="background:#00D9FF" title="Cyan"></div>
+        <div class="swatch" data-color2="#FFFFFF" style="background:#FFFFFF" title="White"></div>
+      </div>
+
+      <label>Roughness <span class="val" id="v-rough">0.35</span></label>
+      <input type="range" id="rough" min="0" max="1" step="0.02" value="0.35">
+
+      <label>Metalness <span class="val" id="v-metal">0.1</span></label>
+      <input type="range" id="metal" min="0" max="1" step="0.02" value="0.1">
+    </div>
+
+    <div class="control-group">
+      <div class="section-label">◉ Wireframe</div>
+      <label>Style</label>
+      <select id="wire-style">
+        <option value="natural">Natural (sigue la geometría)</option>
+        <option value="grid">Grid (malla cuadriculada uniforme)</option>
+        <option value="off">Off (sin wireframe)</option>
+      </select>
+
+      <label>Grid density <span class="val" id="v-griddensity">24</span></label>
+      <input type="range" id="griddensity" min="6" max="60" step="2" value="24">
+
+      <label>Wireframe opacity <span class="val" id="v-wire">0.55</span></label>
+      <input type="range" id="wire" min="0" max="1" step="0.02" value="0.55">
+
+      <label>Wireframe color</label>
+      <input type="color" id="wirecolor" value="#FFFFFF">
+    </div>
+
+    <div class="control-group">
+      <div class="section-label">◉ Lighting</div>
+      <label>Intensity <span class="val" id="v-light">1.8</span></label>
+      <input type="range" id="light" min="0" max="4" step="0.1" value="1.8">
+
+      <label>Ambient <span class="val" id="v-amb">0.35</span></label>
+      <input type="range" id="amb" min="0" max="1" step="0.02" value="0.35">
+    </div>
+
+    <div class="control-group">
+      <div class="section-label">◉ Export</div>
+      <label>Filename</label>
+      <select id="filename-preset">
+        <option value="torus-violet">torus-violet</option>
+        <option value="sphere-violet">sphere-violet</option>
+        <option value="cube-violet">cube-violet</option>
+        <option value="cylinder-violet">cylinder-violet</option>
+        <option value="cone-violet">cone-violet</option>
+        <option value="icosahedron-violet">icosahedron-violet</option>
+        <option value="torusknot-violet">torusknot-violet</option>
+      </select>
+
+      <label>Resolution</label>
+      <select id="resolution">
+        <option value="1024">1K · 1024×1024 · web, iconos</option>
+        <option value="2048" selected>2K · 2048×2048 · hero, IG, ads</option>
+        <option value="4096">4K · 4096×4096 · impresión, YT</option>
+      </select>
+
+      <div class="button-row">
+        <button id="export">Download PNG (transparent)</button>
+        <button id="export-bg" class="secondary">Download PNG (with bg)</button>
+        <button id="export-svg" class="secondary">Download SVG (wireframe only)</button>
+        <button id="reset" class="secondary">Reset camera</button>
+      </div>
+
+      <p class="hint">Arrastra el mouse para rotar. Scroll para zoom. Cuando te guste el ángulo, elige resolución y exporta.</p>
+    </div>
+  </aside>
+</div>
+
+<script type="module">
+import * as THREE from 'three';
+import { OrbitControls } from 'three/addons/controls/OrbitControls.js';
+
+const wrap = document.getElementById('canvas-wrap');
+
+// Scene setup
+const scene = new THREE.Scene();
+scene.background = null; // transparent for export
+
+// Camera — apunta al origen (0,0,0) donde vive el torus
+const camera = new THREE.PerspectiveCamera(35, 1, 0.1, 100);
+camera.position.set(0, 1.8, 5.2);
+camera.lookAt(0, 0, 0);
+
+// Renderer (transparent canvas, we draw the bg via CSS radial gradient)
+const renderer = new THREE.WebGLRenderer({ antialias: true, alpha: true, preserveDrawingBuffer: true });
+renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
+renderer.toneMapping = THREE.ACESFilmicToneMapping;
+renderer.toneMappingExposure = 1.1;
+renderer.outputColorSpace = THREE.SRGBColorSpace;
+wrap.appendChild(renderer.domElement);
+
+// Controls — fija el target en el origen para que el icono quede centrado en el canvas
+const controls = new OrbitControls(camera, renderer.domElement);
+controls.enableDamping = true;
+controls.dampingFactor = 0.08;
+controls.target.set(0, 0, 0);
+controls.update();
+
+// Lights: three-point setup
+const ambient = new THREE.AmbientLight(0xffffff, 0.35);
+scene.add(ambient);
+
+const key = new THREE.DirectionalLight(0xffffff, 1.8);
+key.position.set(-3, 4, 3);
+scene.add(key);
+
+const fill = new THREE.DirectionalLight(0xB9A6FF, 0.6);
+fill.position.set(4, 1, 2);
+scene.add(fill);
+
+const rim = new THREE.DirectionalLight(0xE4D4FF, 0.8);
+rim.position.set(0, 2, -4);
+scene.add(rim);
+
+// Materials
+// Custom shader: PBR-ish lighting + vertical gradient between colorA and colorB.
+// Truco: usamos MeshStandardMaterial pero le inyectamos el gradient via onBeforeCompile.
+const material = new THREE.MeshStandardMaterial({
+  color: 0xFFFFFF, // se multiplica por el gradient en el shader
+  roughness: 0.35,
+  metalness: 0.1,
+});
+
+const gradientUniforms = {
+  uColorA: { value: new THREE.Color(0x713DFF) }, // abajo
+  uColorB: { value: new THREE.Color(0xC8A4FF) }, // arriba
+  uGradientOn: { value: 1.0 },
+};
+
+material.onBeforeCompile = (shader) => {
+  shader.uniforms.uColorA = gradientUniforms.uColorA;
+  shader.uniforms.uColorB = gradientUniforms.uColorB;
+  shader.uniforms.uGradientOn = gradientUniforms.uGradientOn;
+
+  // Pasar la posicion local del vertex al fragment
+  shader.vertexShader = shader.vertexShader.replace(
+    '#include <common>',
+    `#include <common>
+     varying vec3 vLocalPos;`
+  );
+  shader.vertexShader = shader.vertexShader.replace(
+    '#include <begin_vertex>',
+    `#include <begin_vertex>
+     vLocalPos = position;`
+  );
+
+  // En el fragment, reemplazar diffuse color con mix(A, B, t) basado en Y local
+  shader.fragmentShader = shader.fragmentShader.replace(
+    '#include <common>',
+    `#include <common>
+     uniform vec3 uColorA;
+     uniform vec3 uColorB;
+     uniform float uGradientOn;
+     varying vec3 vLocalPos;`
+  );
+  shader.fragmentShader = shader.fragmentShader.replace(
+    'vec4 diffuseColor = vec4( diffuse, opacity );',
+    `float gradT = clamp((vLocalPos.y + 1.2) / 2.4, 0.0, 1.0);
+     vec3 gradCol = mix(uColorA, uColorB, gradT);
+     vec3 finalDiffuse = mix(diffuse, gradCol, uGradientOn);
+     vec4 diffuseColor = vec4( finalDiffuse, opacity );`
+  );
+};
+
+const wireMaterial = new THREE.LineBasicMaterial({
+  color: 0xFFFFFF,
+  transparent: true,
+  opacity: 0.55,
+});
+
+// Current mesh + wire
+let mesh = null;
+let wire = null;
+let container = new THREE.Group();
+container.position.set(0, 0, 0);
+scene.add(container);
+
+// Shape builders
+function buildShape(kind, tube, detail) {
+  let geo;
+  switch (kind) {
+    case 'torus':
+      geo = new THREE.TorusGeometry(1, tube, Math.max(16, detail/2), detail);
+      break;
+    case 'sphere':
+      geo = new THREE.SphereGeometry(1, detail, Math.max(8, detail/2));
+      break;
+    case 'cube':
+      geo = new THREE.BoxGeometry(1.6, 1.6, 1.6, Math.round(detail/6), Math.round(detail/6), Math.round(detail/6));
+      break;
+    case 'cylinder':
+      geo = new THREE.CylinderGeometry(0.9, 0.9, 1.6, detail, Math.max(2, Math.round(detail/8)));
+      break;
+    case 'cone':
+      geo = new THREE.ConeGeometry(1, 1.8, detail, Math.max(2, Math.round(detail/8)));
+      break;
+    case 'icosahedron':
+      geo = new THREE.IcosahedronGeometry(1.1, Math.max(0, Math.round(detail/16)));
+      break;
+    case 'torusKnot':
+      geo = new THREE.TorusKnotGeometry(0.9, tube * 0.85, Math.max(32, detail*2), Math.max(8, Math.round(detail/3)));
+      break;
+  }
+  return geo;
+}
+
+// Construye una geometria "grid" — mesh con densidad uniforme para wireframe cuadriculado
+function buildGridGeo(kind, tube, density) {
+  switch (kind) {
+    case 'torus':
+      return new THREE.TorusGeometry(1, tube, density, density * 2);
+    case 'sphere':
+      return new THREE.SphereGeometry(1, density * 2, density);
+    case 'cube':
+      return new THREE.BoxGeometry(1.6, 1.6, 1.6, density, density, density);
+    case 'cylinder':
+      return new THREE.CylinderGeometry(0.9, 0.9, 1.6, density * 2, density);
+    case 'cone':
+      return new THREE.ConeGeometry(1, 1.8, density * 2, density);
+    case 'icosahedron':
+      return new THREE.IcosahedronGeometry(1.1, Math.max(1, Math.round(density/8)));
+    case 'torusKnot':
+      return new THREE.TorusKnotGeometry(0.9, tube * 0.85, density * 4, density);
+  }
+}
+
+function rebuild() {
+  if (mesh) { container.remove(mesh); mesh.geometry.dispose(); }
+  if (wire) { container.remove(wire); wire.geometry.dispose(); }
+
+  const kind = document.getElementById('shape').value;
+  const tube = parseFloat(document.getElementById('tube').value);
+  const detail = parseInt(document.getElementById('detail').value);
+  const scale = parseFloat(document.getElementById('scale').value);
+  const wireStyle = document.getElementById('wire-style').value;
+  const gridDensity = parseInt(document.getElementById('griddensity').value);
+
+  // Mesh surface: usa geometria suave basada en detail
+  const geo = buildShape(kind, tube, detail);
+  mesh = new THREE.Mesh(geo, material);
+  container.add(mesh);
+
+  // Wireframe
+  if (wireStyle !== 'off') {
+    let wireGeo;
+    if (wireStyle === 'grid') {
+      // Usa geometria con density uniforme — esto crea la malla cuadriculada estilo "cubo grid"
+      const gridGeo = buildGridGeo(kind, tube, gridDensity);
+      if (kind === 'cube' || kind === 'icosahedron') {
+        // Para cube con segmentos, WireframeGeometry da el grid cuadrado real
+        wireGeo = new THREE.WireframeGeometry(gridGeo);
+      } else {
+        wireGeo = new THREE.WireframeGeometry(gridGeo);
+      }
+      gridGeo.dispose();
+    } else {
+      // natural: sigue la densidad de la mesh de superficie
+      if (kind === 'cube' || kind === 'icosahedron') {
+        wireGeo = new THREE.EdgesGeometry(geo, 15);
+      } else {
+        wireGeo = new THREE.WireframeGeometry(geo);
+      }
+    }
+    wire = new THREE.LineSegments(wireGeo, wireMaterial);
+    // Offset minusculo para que no z-fight con la superficie
+    wire.scale.setScalar(1.002);
+    container.add(wire);
+  } else {
+    wire = null;
+  }
+
+  container.scale.setScalar(scale);
+
+  // Reset rotation per shape for a nice default pose
+  container.rotation.set(0.55, 0.4, 0);
+}
+
+// Controls wiring
+function bindRange(id, cb) {
+  const el = document.getElementById(id);
+  const val = document.getElementById('v-' + id.replace(/[A-Z]/, m => m.toLowerCase()));
+  el.addEventListener('input', () => {
+    if (val) val.textContent = el.value;
+    cb(parseFloat(el.value));
+  });
+}
+
+document.getElementById('shape').addEventListener('change', (e) => {
+  rebuild();
+  // update filename preset suggestion
+  const preset = document.getElementById('filename-preset');
+  const map = { torus:'torus-violet', sphere:'sphere-violet', cube:'cube-violet',
+                cylinder:'cylinder-violet', cone:'cone-violet', icosahedron:'icosahedron-violet', torusKnot:'torusknot-violet' };
+  preset.value = map[e.target.value] || 'shape-violet';
+});
+
+document.getElementById('tube').addEventListener('input', (e) => {
+  document.getElementById('v-tube').textContent = parseFloat(e.target.value).toFixed(2);
+  rebuild();
+});
+document.getElementById('detail').addEventListener('input', (e) => {
+  document.getElementById('v-detail').textContent = e.target.value;
+  rebuild();
+});
+document.getElementById('scale').addEventListener('input', (e) => {
+  document.getElementById('v-scale').textContent = parseFloat(e.target.value).toFixed(2);
+  container.scale.setScalar(parseFloat(e.target.value));
+});
+
+document.getElementById('color').addEventListener('input', (e) => {
+  gradientUniforms.uColorA.value.set(e.target.value);
+  material.color.set(e.target.value); // fallback si gradient off
+  document.getElementById('palette-preset').value = 'custom';
+});
+document.getElementById('color2').addEventListener('input', (e) => {
+  gradientUniforms.uColorB.value.set(e.target.value);
+});
+document.getElementById('gradient-on').addEventListener('change', (e) => {
+  gradientUniforms.uGradientOn.value = e.target.checked ? 1.0 : 0.0;
+});
+document.getElementById('wire-style').addEventListener('change', rebuild);
+document.getElementById('griddensity').addEventListener('input', (e) => {
+  document.getElementById('v-griddensity').textContent = e.target.value;
+  rebuild();
+});
+document.getElementById('wirecolor').addEventListener('input', (e) => {
+  wireMaterial.color.set(e.target.value);
+});
+
+// MM Agency palette presets
+const paletteColors = {
+  'violet': '#713DFF',
+  'yellow': '#FAFA00',
+  'yellow-soft': '#FFF25E',
+  'orange': '#F54900',
+  'pink': '#FCA8FF',
+  'green': '#008500',
+  'white': '#FFFFFF',
+  'text-muted': '#9A9A9A',
+};
+document.getElementById('palette-preset').addEventListener('change', (e) => {
+  const hex = paletteColors[e.target.value];
+  if (hex) {
+    gradientUniforms.uColorA.value.set(hex);
+    material.color.set(hex);
+    document.getElementById('color').value = hex;
+  }
+});
+
+document.querySelectorAll('.swatch[data-color]').forEach(sw => {
+  sw.addEventListener('click', () => {
+    const c = sw.dataset.color;
+    document.getElementById('color').value = c;
+    gradientUniforms.uColorA.value.set(c);
+    material.color.set(c);
+    const match = Object.entries(paletteColors).find(([k, v]) => v.toUpperCase() === c.toUpperCase());
+    document.getElementById('palette-preset').value = match ? match[0] : 'custom';
+  });
+});
+
+document.querySelectorAll('.swatch[data-color2]').forEach(sw => {
+  sw.addEventListener('click', () => {
+    const c = sw.dataset.color2;
+    document.getElementById('color2').value = c;
+    gradientUniforms.uColorB.value.set(c);
+  });
+});
+document.getElementById('rough').addEventListener('input', (e) => {
+  document.getElementById('v-rough').textContent = parseFloat(e.target.value).toFixed(2);
+  material.roughness = parseFloat(e.target.value);
+});
+document.getElementById('metal').addEventListener('input', (e) => {
+  document.getElementById('v-metal').textContent = parseFloat(e.target.value).toFixed(2);
+  material.metalness = parseFloat(e.target.value);
+});
+document.getElementById('wire').addEventListener('input', (e) => {
+  document.getElementById('v-wire').textContent = parseFloat(e.target.value).toFixed(2);
+  wireMaterial.opacity = parseFloat(e.target.value);
+});
+document.getElementById('light').addEventListener('input', (e) => {
+  document.getElementById('v-light').textContent = parseFloat(e.target.value).toFixed(1);
+  key.intensity = parseFloat(e.target.value);
+});
+document.getElementById('amb').addEventListener('input', (e) => {
+  document.getElementById('v-amb').textContent = parseFloat(e.target.value).toFixed(2);
+  ambient.intensity = parseFloat(e.target.value);
+});
+
+// Reset camera — vuelve al centro
+document.getElementById('reset').addEventListener('click', () => {
+  camera.position.set(0, 1.8, 5.2);
+  controls.target.set(0, 0, 0);
+  controls.update();
+  container.position.set(0, 0, 0);
+  container.rotation.set(0.55, 0.4, 0);
+});
+
+// Export PNG hi-res: renderiza a un canvas offscreen del tamano elegido
+// (1K, 2K, 4K) sin depender del tamano del canvas visible.
+function exportPNG(withBg) {
+  const name = document.getElementById('filename-preset').value || 'shape-violet';
+  const size = parseInt(document.getElementById('resolution').value);
+  const suffix = size === 1024 ? '1k' : size === 2048 ? '2k' : '4k';
+
+  // Guardar estado actual
+  const oldSize = new THREE.Vector2();
+  renderer.getSize(oldSize);
+  const oldPixelRatio = renderer.getPixelRatio();
+  const oldAspect = camera.aspect;
+  const oldBg = scene.background;
+
+  // Render a tamano cuadrado fijo (size x size)
+  renderer.setPixelRatio(1);
+  renderer.setSize(size, size, false);
+  camera.aspect = 1;
+  camera.updateProjectionMatrix();
+
+  // Fondo
+  if (withBg) {
+    const c = document.createElement('canvas');
+    c.width = c.height = size;
+    const ctx = c.getContext('2d');
+    const g = ctx.createRadialGradient(size/2, size*0.4, 0, size/2, size*0.4, size*0.7);
+    g.addColorStop(0, '#15093A');
+    g.addColorStop(1, '#0A0A0A');
+    ctx.fillStyle = g;
+    ctx.fillRect(0, 0, size, size);
+    const tex = new THREE.CanvasTexture(c);
+    scene.background = tex;
+  } else {
+    scene.background = null;
+  }
+
+  // Render
+  renderer.render(scene, camera);
+  const data = renderer.domElement.toDataURL('image/png');
+
+  // Restaurar
+  scene.background = oldBg;
+  renderer.setPixelRatio(oldPixelRatio);
+  renderer.setSize(oldSize.x, oldSize.y, false);
+  camera.aspect = oldAspect;
+  camera.updateProjectionMatrix();
+
+  // Descargar
+  const a = document.createElement('a');
+  a.href = data;
+  a.download = `${name}-${suffix}${withBg ? '-bg' : ''}.png`;
+  document.body.appendChild(a);
+  a.click();
+  document.body.removeChild(a);
+}
+
+// Export SVG wireframe: proyecta las lineas del wire 3D a 2D usando la camara actual
+// y escribe un SVG vectorial escalable. Solo wireframe (sin sombreado de superficie).
+function exportSVG() {
+  const name = document.getElementById('filename-preset').value || 'shape-violet';
+  const size = parseInt(document.getElementById('resolution').value);
+
+  if (!wire) { alert('No wireframe mesh'); return; }
+
+  // Actualizar matrices
+  scene.updateMatrixWorld(true);
+  camera.updateMatrixWorld(true);
+
+  const pos = wire.geometry.attributes.position;
+  const mat = wire.matrixWorld;
+  const v = new THREE.Vector3();
+  const halfSize = size / 2;
+  const lines = [];
+
+  // Cada par de vertices en LineSegments es un segmento independiente
+  for (let i = 0; i < pos.count; i += 2) {
+    v.fromBufferAttribute(pos, i).applyMatrix4(mat).project(camera);
+    const x1 = (v.x * 0.5 + 0.5) * size;
+    const y1 = (-v.y * 0.5 + 0.5) * size;
+    const z1 = v.z;
+
+    v.fromBufferAttribute(pos, i + 1).applyMatrix4(mat).project(camera);
+    const x2 = (v.x * 0.5 + 0.5) * size;
+    const y2 = (-v.y * 0.5 + 0.5) * size;
+    const z2 = v.z;
+
+    // Clip basico: si ambos puntos estan fuera del frustum, skip
+    if (z1 < -1 || z1 > 1 || z2 < -1 || z2 > 1) continue;
+
+    lines.push(`<line x1="${x1.toFixed(2)}" y1="${y1.toFixed(2)}" x2="${x2.toFixed(2)}" y2="${y2.toFixed(2)}"/>`);
+  }
+
+  const strokeColor = '#' + wireMaterial.color.getHexString().toUpperCase();
+  const opacity = wireMaterial.opacity;
+  const strokeWidth = Math.max(0.5, size / 1024);
+
+  const svg = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 ${size} ${size}" width="${size}" height="${size}">
+  <g fill="none" stroke="${strokeColor}" stroke-opacity="${opacity}" stroke-width="${strokeWidth}" stroke-linecap="round" stroke-linejoin="round">
+    ${lines.join('\n    ')}
+  </g>
+</svg>`;
+
+  const blob = new Blob([svg], { type: 'image/svg+xml' });
+  const url = URL.createObjectURL(blob);
+  const a = document.createElement('a');
+  a.href = url;
+  a.download = `${name}-wireframe.svg`;
+  document.body.appendChild(a);
+  a.click();
+  document.body.removeChild(a);
+  URL.revokeObjectURL(url);
+}
+
+document.getElementById('export').addEventListener('click', () => exportPNG(false));
+document.getElementById('export-bg').addEventListener('click', () => exportPNG(true));
+document.getElementById('export-svg').addEventListener('click', exportSVG);
+
+// Resize — garantiza que el canvas ocupe exactamente el area del wrap (descontando sidebar)
+function resize() {
+  const rect = wrap.getBoundingClientRect();
+  const w = Math.max(1, Math.floor(rect.width));
+  const h = Math.max(1, Math.floor(rect.height));
+  camera.aspect = w / h;
+  camera.updateProjectionMatrix();
+  renderer.setSize(w, h, false);
+  renderer.domElement.style.width = w + 'px';
+  renderer.domElement.style.height = h + 'px';
+}
+window.addEventListener('resize', resize);
+// Doble resize para asegurar que el layout flex ya se acomodo
+resize();
+requestAnimationFrame(resize);
+
+rebuild();
+
+// Animate
+function animate() {
+  requestAnimationFrame(animate);
+  controls.update();
+  renderer.render(scene, camera);
+}
+animate();
+</script>
+</body>
+</html>

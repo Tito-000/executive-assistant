@@ -1,9 +1,9 @@
 # Winner's Writing Process (WWP) — MM Agency
 
 **Proyecto:** MM Agency — Agencia de Marketing Digital (cliente interno)
-**Business Type:** Especialista en adquisición de clientes con publicidad digital para negocios en crecimiento en República Dominicana
-**Business Objective:** Cerrar 2–3 clientes nuevos en 60 días con servicios de Meta Ads y Google Ads. Escalar a $8,000/mes para diciembre 2026.
-**Funnel:** Instagram/Facebook Ad o post orgánico → Landing page (captura atención y agenda llamada) → Llamada/WhatsApp con Martin → Diagnóstico → Propuesta personalizada → Cierre → Onboarding → Resultados → Upsell back-end → Referido
+**Business Type:** Agencia que arma embudos de venta completos (landing + tráfico pagado + CRM + seguimiento) para negocios en crecimiento en República Dominicana
+**Business Objective:** Cerrar 2–3 clientes nuevos en 60 días con el servicio de embudo de venta completo. Escalar a $8,000/mes para diciembre 2026.
+**Funnel:** Instagram/Facebook Ad o post orgánico → Landing page (captura atención y agenda llamada) → Llamada/WhatsApp con Martin → Diagnóstico del embudo → Propuesta personalizada → Cierre → Onboarding → Setup del embudo → Resultados → Upsell back-end → Referido
 
 **Objetivo del marketing público:** Meter al prospecto en la conversación. Nada más. La landing no vende — agenda la llamada. Los precios, paquetes, detalles y cierre ocurren dentro de la conversación con Martin, no en la página pública.
 
@@ -11,18 +11,18 @@
 
 ## Posicionamiento Central
 
-> **MM Agency — Adquisición de clientes para negocios en crecimiento con publicidad digital.**
+> **MM Agency — Embudos de venta completos para negocios en crecimiento.**
 
-**Ángulo único:** Especialista en adquisición, no agencia generalista. Meta Ads y Google Ads son el vehículo; el producto son clientes nuevos entrando al negocio del cliente.
+**Ángulo único:** No vendemos "solo pauta". Armamos el sistema entero que convierte visitas en clientes — landing de conversión, tráfico pagado (Meta Ads + Google Ads), CRM con automatización y seguimiento, y optimización continua. El producto no es Meta Ads; el producto es un embudo que funciona.
 
 **Qué vende el marketing público:** Una conversación con Martin. Solo eso.
 
 **Qué se revela solo dentro de la conversación:**
-- Paquetes específicos (Meta Ads, Google Ads, Combo)
+- Paquetes específicos (Embudo completo, Landing + tráfico, Solo tráfico, add-ons)
 - Precios exactos y rangos
-- Setup fees
+- Setup fees del embudo
 - Duración del contrato
-- Servicios back-end (landing pages, web, WhatsApp Business, CRM/Koomo, automatizaciones, creativos)
+- Detalles de cada pieza del sistema (landing, tráfico, CRM/Koomo, automatizaciones, WhatsApp Business, creativos)
 - Propuesta personalizada
 
 **Audiencia:** Negocios en crecimiento — pequeños y medianos negocios dominicanos que ya venden pero quieren escalar. Multi-nicho (clínicas, restaurantes, tiendas, servicios B2B, e-commerce).
@@ -33,9 +33,9 @@
 
 **Nivel 3 de 4 — Solution Aware (conocen la publicidad digital, no confían en que alguien se la ejecute bien)**
 
-El dueño de negocio en crecimiento en RD ya sabe que Meta Ads y Google Ads existen. Ha visto competidores anunciarse. Probablemente ya probó "impulsar publicación" desde su propio teléfono o pagó a alguien que no entregó resultados. El problema no es que no sepa que la publicidad digital funciona — el problema es que no sabe distinguir quién puede ejecutarla bien y quién le va a quemar el dinero.
+El dueño de negocio en crecimiento en RD ya sabe que Meta Ads y Google Ads existen. Ha visto competidores anunciarse. Probablemente ya probó "impulsar publicación" desde su propio teléfono o pagó a alguien que le activó campañas pero no trajo clientes. El problema no es que no sepa que la publicidad digital funciona — el problema es que la pauta sola no convierte cuando el resto del embudo (landing, CRM, seguimiento) está roto o no existe.
 
-**Jugada:** No educar sobre qué es Meta Ads o Google Ads. Empezar desde el dolor conocido — "pagaste pauta y no llegaron clientes" — y probar con especialización y números concretos que MM Agency entrega lo que los demás no entregaron.
+**Jugada:** No educar sobre qué es Meta Ads o Google Ads. Empezar desde el dolor conocido — "pagaste pauta y no llegaron clientes" — y reframe al insight correcto: la pauta no funciona sola, necesita el embudo entero detrás. MM Agency arma el sistema completo, no solo una pieza.
 
 ---
 
@@ -43,9 +43,9 @@ El dueño de negocio en crecimiento en RD ya sabe que Meta Ads y Google Ads exis
 
 **Etapa 3–4 de 5 — Mercado saturado de generalistas que ofrecen "de todo un poco"**
 
-Todos los competidores en RD dicen lo mismo: "manejamos redes sociales, hacemos páginas web, ponemos anuncios, creamos contenido". Es el menú del chino — todo para todos, especialistas de nada. El mercado ya aprendió que quien promete todo no es experto en nada.
+Todos los competidores en RD dicen lo mismo: "manejamos redes sociales, hacemos páginas web, ponemos anuncios, creamos contenido". Es el menú del chino — todo para todos, especialistas de nada. Y los que se especializan en "pauta" venden una pieza suelta que no funciona sin el resto del embudo. El mercado ya aprendió que ni el full-service genérico ni la pauta suelta entregan clientes.
 
-**Jugada:** La diferenciación viene de la especialización. MM Agency no ofrece 10 servicios — ofrece uno: clientes nuevos vía publicidad. Eso es lo que vende en su marketing. Todo lo demás se ofrece dentro de la conversación, como complemento, pero nunca como promesa pública. El mecanismo de prueba es la claridad: un solo enfoque, precios visibles, cuentas del cliente, sin contratos.
+**Jugada:** La diferenciación viene del framing: MM Agency no vende servicios sueltos, vende un sistema. Un embudo completo que convierte visitas en clientes: landing + tráfico + CRM + seguimiento. No 10 servicios disconectados, tampoco una sola pieza aislada — el sistema entero. Eso es lo que vende en su marketing. El mecanismo de prueba es la claridad del sistema: 4 piezas nombradas, cuentas del cliente, sin contratos, resultados medibles en cada pieza.
 
 ---
 
@@ -136,11 +136,11 @@ Sabe que necesita publicidad digital. Ve competidores anunciándose y ganando te
 
 ### Market Awareness
 
-**Nivel 3/4 — Solution Aware.** Conocen Meta Ads y Google Ads. No hay que educar qué es. Hay que probar quién lo ejecuta bien.
+**Nivel 3/4 — Solution Aware.** Conocen Meta Ads y Google Ads. No hay que educar qué es. Lo que no saben es que la pauta sola no funciona sin el embudo completo detrás. El reframe es el insight.
 
 ### Market Sophistication
 
-**Etapa 3–4/5 — Saturación de generalistas.** El diferenciador ganador es la especialización clara, no una promesa más grande.
+**Etapa 3–4/5 — Saturación de generalistas + pauta suelta.** El diferenciador ganador es el sistema completo: landing + tráfico + CRM + seguimiento armado por un solo responsable, no pedazos sueltos ni menú de 10 servicios.
 
 ---
 
@@ -277,20 +277,25 @@ Un paso pequeño y reversible. "Solo voy a escuchar qué me dice, no me comprome
 - ¿Cuánto vale para ti un cliente nuevo promedio?
 - ¿Cuánto puedes invertir mensualmente sin que afecte la operación?
 
-**Minuto 15–20 — Diagnóstico y recomendación:**
-Martin conecta las respuestas y recomienda el canal:
-- B2C con visual fuerte (clínica, restaurante, moda, estética) → **Meta Ads**
-- B2B o servicios con demanda activa (legal, ingeniería, profesionales) → **Google Ads**
-- Negocio con ambos (e-commerce, educación, salud) → **Combo**
+**Minuto 15–20 — Diagnóstico del embudo y recomendación:**
+Martin conecta las respuestas y diagnostica qué piezas del embudo ya tiene, cuáles están rotas y cuáles faltan. Luego recomienda la configuración:
+- Negocio sin nada armado → **Embudo completo** (landing + tráfico + CRM + seguimiento desde cero)
+- Negocio con landing/web pero sin tráfico → **Activación del embudo** (reusamos la landing si funciona, añadimos tráfico + CRM + seguimiento)
+- Negocio con pauta corriendo pero sin conversión → **Reparación del embudo** (auditoría + rebuild de landing + CRM + seguimiento)
 
-Explica POR QUÉ recomienda ese canal con la lógica del negocio del prospecto — no genérico.
+Dentro del tráfico recomienda la mezcla específica:
+- B2C con visual fuerte (clínica, restaurante, moda, estética) → peso en **Meta Ads**
+- B2B o servicios con demanda activa (legal, ingeniería, profesionales) → peso en **Google Ads**
+- Negocio con ambos (e-commerce, educación, salud) → mezcla balanceada
+
+Explica POR QUÉ cada pieza del embudo hace falta y qué pasa si se salta alguna — no genérico.
 
 **Minuto 20–28 — Presentación de la oferta:**
 Aquí es donde se revelan por primera vez:
-- El paquete recomendado específico (Meta, Google o Combo)
+- El paquete recomendado (Embudo completo, Activación o Reparación)
 - El rango de inversión mensual (fee + pauta recomendada)
-- Qué pasa en los primeros 30 días
-- Las condiciones que son diferenciadores: cuentas a nombre del cliente, sin permanencia, atención directa
+- Qué pasa en los primeros 30 días por pieza del embudo
+- Las condiciones que son diferenciadores: cuentas a nombre del cliente, sin permanencia, atención directa, sistema completo bajo un solo responsable
 
 **Minuto 28–30 — Cierre suave:**
 > "Te voy a enviar la propuesta específica por WhatsApp en las próximas 24 horas. Léela con calma. Si tienes preguntas, me escribes. Si no, no hay presión."
@@ -626,13 +631,13 @@ En conversación:
 
 ## Resumen Ejecutivo para el Copywriter
 
-**El prospecto central** es un dueño de negocio en crecimiento en RD, 35–48 años, facturando entre RD$5M–50M al año. Ya sabe que la publicidad digital funciona — lo que no sabe es a quién confiarle la ejecución. Filtra por referido, por especialización clara, y por transparencia en precios y condiciones.
+**El prospecto central** es un dueño de negocio en crecimiento en RD, 35–48 años, facturando entre RD$5M–50M al año. Ya sabe que la publicidad digital funciona — lo que no sabe es por qué le ha quemado el dinero (spoiler: porque tenía pauta pero no embudo). Filtra por referido, por claridad del sistema, y por transparencia en precios y condiciones.
 
-**Nivel de awareness: 3/4 — Solution Aware.** No eduques sobre qué es Meta o Google Ads. Empieza desde el dolor ("pagaste pauta, no llegaron clientes") y prueba con enfoque y números.
+**Nivel de awareness: 3/4 — Solution Aware.** No eduques sobre qué es Meta o Google Ads. Empieza desde el dolor ("pagaste pauta, no llegaron clientes") y reframe al insight correcto: la pauta sola no convierte — necesita landing + CRM + seguimiento detrás.
 
-**Nivel de sofisticación: 3–4/5 — saturación de generalistas.** El diferenciador ganador es la especialización declarada: "solo hacemos Meta Ads y Google Ads". Nadie más en RD lo declara con esa claridad.
+**Nivel de sofisticación: 3–4/5 — saturación de generalistas y pauta suelta.** El diferenciador ganador es el sistema completo declarado: "armamos el embudo entero — landing + tráfico + CRM + seguimiento — bajo un solo responsable". Nadie más en RD lo declara con esa claridad ni esa integración.
 
-**El ángulo ganador:** Especialista en adquisición de clientes con publicidad, no agencia de todo un poco. Los servicios back-end (landing, web, CRM, automatizaciones) NUNCA aparecen en el marketing público — solo se ofrecen dentro de la conversación cuando tiene sentido técnico.
+**El ángulo ganador:** MM Agency no vende pauta suelta ni un menú de 10 servicios. Vende un sistema completo: el embudo de venta armado, conectado y operando bajo un solo responsable. Las 4 piezas (landing, tráfico pagado, CRM + automatización, optimización continua) aparecen explícitamente en el marketing público porque el framing es la propuesta de valor.
 
 **El canal de cierre es la llamada de diagnóstico de 20 minutos.** La landing tiene UN solo objetivo: que el prospecto agende la llamada. No vende servicios, no muestra precios, no lista paquetes. Todo el cierre ocurre en la conversación con Martin.
 

@@ -33,33 +33,36 @@ Elegir uno. Criterios: memorable, profesional, funciona en español e inglés, c
 
 ---
 
-## Paquetes de servicios
+## Oferta principal — Embudos de venta completos
 
-| | Starter | Growth | Scale |
-|---|---------|--------|-------|
-| **Precio** | $800–1,200/mes | $1,500–2,500/mes | $3,000–5,000/mes |
-| Página web profesional | ✅ | ✅ | ✅ |
-| SEO básico | ✅ | ✅ | ✅ |
-| 1 red social (gestión) | ✅ | ✅ | ✅ |
-| CRM setup (GHL/Koomo) | — | ✅ | ✅ |
-| Meta Ads management | — | ✅ | ✅ |
-| Google Ads management | — | — | ✅ |
-| Embudo de ventas | — | ✅ | ✅ |
-| Estrategia mensual | — | — | ✅ |
-| Reportes mensuales | — | Básico | Detallado |
-| Contenido (videos/posts) | — | — | ✅ |
-| Reunión mensual | — | 1x/mes | 2x/mes |
+MM Agency no vende servicios sueltos. Vende **un sistema completo** que convierte visitas en clientes. Las 4 piezas del embudo siempre van juntas bajo un solo responsable:
 
-**Setup inicial:** $500–2,000 one-time (según complejidad)
+| Pieza | Qué incluye |
+|---|---|
+| **1. Landing de conversión** | Diseño + copy + hosting + formulario conectado al CRM |
+| **2. Tráfico pagado** | Setup y operación de Meta Ads + Google Ads (según fit del negocio) |
+| **3. CRM + automatización** | GHL/Koomo, etiquetado de leads, envío automático por WhatsApp |
+| **4. Optimización continua** | Reportes mensuales, ajustes semanales en creativos/copy/segmentación |
 
-**No incluye:** Pauta publicitaria (eso lo paga el cliente directo a Meta/Google), fotografía profesional, producción audiovisual avanzada.
+### Paquetes
+
+| | Embudo completo | Activación del embudo | Reparación del embudo |
+|---|---|---|---|
+| **Para quién** | Negocio desde cero | Ya tiene landing o web pero sin tráfico | Tiene pauta corriendo pero no convierte |
+| **Incluye** | Las 4 piezas desde cero | Tráfico + CRM + seguimiento (reusa la landing si funciona) | Auditoría + rebuild de la pieza rota |
+| **Setup inicial** | $2,000 (rango) | $1,000–1,500 | $800–1,500 |
+| **Fee mensual** | $600+/mes | $600+/mes | $600+/mes |
+
+**No incluye:** Pauta publicitaria (el cliente paga directo a Meta/Google desde sus propias cuentas), fotografía profesional, producción audiovisual avanzada.
+
+**Reglas de descuento:** ver `memory/mm_agency_pricing.md` para amigos/referidos.
 
 ---
 
 ## Fase 1 — Identidad + Paquetes (Semana 1)
 
 - [x] Elegir nombre de la agencia → **MM Agency**
-- [ ] Definir posicionamiento: "Marketing digital para empresas medianas en RD que quieren crecer"
+- [ ] Definir posicionamiento: "Embudos de venta completos para negocios medianos en RD — landing + tráfico + CRM + seguimiento, bajo un solo responsable"
 - [ ] Validar los 3 paquetes de pricing (ajustar si es necesario)
 - [ ] Definir qué incluye y qué NO incluye cada paquete (cerrar scope)
 - [ ] Crear logo y paleta de colores básica
@@ -105,7 +108,7 @@ Elegir uno. Criterios: memorable, profesional, funciona en español e inglés, c
   - Tema 1: Por qué tu negocio necesita marketing digital (no es opcional)
   - Tema 2: El error #1 que cometen las empresas en redes sociales
   - Tema 3: Cómo saber si tu agencia de marketing te está robando
-  - Tema 4: Meta Ads para principiantes — qué esperar realistamente
+  - Tema 4: Por qué la pauta sola no funciona — necesitas el embudo completo detrás
   - Tema 5: Tu página web NO es suficiente (necesitas un embudo)
   - Tema 6: Caso de éxito: cómo ayudamos a [cliente] a conseguir [resultado]
   - Tema 7: 3 señales de que estás perdiendo clientes online
@@ -135,7 +138,7 @@ Elegir uno. Criterios: memorable, profesional, funciona en español e inglés, c
 ## Fase 4 — Motor de Ventas (Semana 5-6+)
 
 - [ ] Crear embudo de captación en GHL: landing → formulario → secuencia automática de emails/WhatsApp
-- [ ] Lanzar campaña de Meta Ads para la agencia ($5-10/día, targeting empresarios RD)
+- [ ] Lanzar tráfico pagado (Meta + Google Ads) hacia la landing de MM Agency ($5-10/día, targeting empresarios RD) — la propia agencia usando su propio embudo como dogfooding
 - [ ] Activar programa de referidos: ofrecer a Memorama y Dra. Aurys un incentivo por cada referido que cierre
 - [ ] Evaluar resultados de outreach (tasa de respuesta, meetings agendados, propuestas enviadas)
 - [ ] Ajustar scripts y approach según lo que funcione

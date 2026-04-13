@@ -6,15 +6,15 @@
 ---
 
 1. **Cliente:** MM Agency — agencia de marketing digital de Martin Mercedes
-2. **Nicho / industria:** Marketing digital para empresas medianas en República Dominicana
-3. **Target audience:** Dueños de empresas medianas en RD (30-55 años) con presencia digital débil o resultados pobres con su agencia actual. No tienen tiempo para aprender marketing. Quieren crecer online pero no saben cómo ni en quién confiar.
-4. **Meta principal:** Posicionarse como la agencia de referencia para empresas medianas en RD — cerrar 2-3 clientes nuevos en 60 días, escalar a $8,000/mes para dic 2026
-5. **Oferta principal:** 3 paquetes de servicios:
-   - Starter: $800–1,200/mes (web + SEO + 1 red social)
-   - Growth: $1,500–2,500/mes + Meta Ads + CRM + embudo
-   - Scale: $3,000–5,000/mes + Google Ads + estrategia + contenido
-   - Setup inicial: $500–2,000 one-time
-6. **Budget (pauta propia):** $5–10/día Meta Ads cuando esté lista la campaña de la agencia
+2. **Nicho / industria:** Embudos de venta completos para negocios medianos en República Dominicana
+3. **Target audience:** Dueños de negocios medianos en RD (30-55 años) que ya probaron pauta sola y no vieron resultados, o que tienen pedazos sueltos del marketing (landing por un lado, campañas por otro, CRM abandonado) y no saben conectarlos. No tienen tiempo para aprender marketing. Quieren un sistema que funcione sin tener que orquestar 5 proveedores.
+4. **Meta principal:** Posicionarse como la agencia de referencia en embudos de venta completos para negocios medianos en RD — cerrar 2-3 clientes nuevos en 60 días, escalar a $8,000/mes para dic 2026
+5. **Oferta principal:** Embudo de venta completo — un solo producto, 3 configuraciones según punto de partida del cliente:
+   - **Embudo completo** (desde cero): $2,000 setup + $600+/mes — las 4 piezas armadas (landing + tráfico + CRM + seguimiento)
+   - **Activación del embudo** (ya tiene landing/web): $1,000–1,500 setup + $600+/mes — añade tráfico + CRM + seguimiento, reusa la landing si funciona
+   - **Reparación del embudo** (ya tiene pauta pero no convierte): $800–1,500 setup + $600+/mes — auditoría + rebuild de la pieza rota
+   - **Pauta publicitaria:** separada, paga directo a Meta/Google desde la cuenta del cliente
+6. **Budget (pauta propia / dogfooding):** $5–10/día en Meta + Google Ads hacia la landing de MM Agency usando su propio embudo
 7. **Deadline Phase 1:** Lo antes posible — prioridad activa
 8. **Assets existentes:**
    - Logo: `outputs/logos/grvty-objects-v2.html`

@@ -2,11 +2,11 @@
 
 ## Context
 
-MM Agency necesita su landing principal corporativa. Hoy solo existe un WordPress básico que no sirve. Sin esta landing, ni el inbound (Meta/Google Ads → landing) ni el outbound (firma de emails, link de credibilidad) pueden correr.
+MM Agency necesita su landing principal corporativa. Hoy solo existe un WordPress básico que no sirve. Sin esta landing, ni el inbound (embudos → landing) ni el outbound (firma de emails, link de credibilidad) pueden correr.
 
 **Decisiones del usuario (esta sesión):**
 - **Modelo de referencia:** Estructura y estética de **nogood.io** replicada sección por sección
-- **Enfoque:** SOLO Meta Ads + Google Ads (NoGood ofrece 6 servicios; MM Agency ofrece 2)
+- **Enfoque:** **Embudos de venta completos** — sistema landing + tráfico + CRM + seguimiento. NO "solo pauta". Meta Ads + Google Ads son UNA pieza del embudo, no el producto principal.
 - **Objetivo único:** Llenar formulario de calificación completa (no agendar calendly directo)
 - **Martin NO aparece al inicio** — la landing es 100% corporativa
 - **Precios:** NO mostrar
@@ -74,25 +74,24 @@ MM Agency necesita su landing principal corporativa. Hoy solo existe un WordPres
 
 ### Sección 1 — Hero Dark (equivalente a "The growth squad behind…")
 
-**Objetivo:** Declarar la especialización en los primeros 3 segundos con impacto visual tipo NoGood.
+**Objetivo:** Declarar la propuesta del embudo completo en los primeros 3 segundos con impacto visual tipo NoGood.
 
 **Elementos:**
-- **H1 masivo (tipografía display):** *"Clientes nuevos con Meta Ads y Google Ads."*
+- **H1 masivo (tipografía display):** *"Embudos de venta para negocios que sí quieren crecer."*
   - Tamaño: clamp(64px, 10vw, 120px)
   - Peso bold, mayúsculas o sentence case, tracking amplio
   - Animación text reveal al cargar (fade-up palabra por palabra)
-- **Sub-headline (opcional, más pequeña):** Solo si el H1 necesita contexto. Preferible omitirlo — NoGood no lo usa.
+- **Sub-headline:** *"Diseñamos el sistema completo — landing, tráfico, CRM y seguimiento — para que dejes de pagar ads sin ver resultados."*
 - **Media 16:9 al costado o debajo del H1:**
-  - Video loopable corto (campaña real, dashboard animado, o B-roll de trabajo)
-  - Si no hay video disponible → animación abstracta con gráficos de Meta/Google Ads
+  - Video loopable del embudo en acción (landing → ad creative → WhatsApp entrando)
+  - Si no hay video disponible → animación abstracta del flujo de conversión
   - **NO usar foto de Martin** (decisión explícita del usuario)
 - **CTA implícito:** el H1 entero linkea al formulario, o botón sutil debajo del media
-- **Trust bar debajo del hero (bandera de credibilidad):** *"Certificados por Google Ads"* · *"Atención directa del fundador"* · *"Sin contratos trampa"* · *"Cuentas a tu nombre"*
-  - El badge "Certificados por Google Ads" con el logo oficial de Google Partner / Google Ads Certified es el elemento de mayor impacto de confianza en el hero — va primero en la línea
+- **Trust bar debajo del hero (bandera de credibilidad):** *"Sistema completo, no servicios sueltos"* · *"Atención directa del fundador"* · *"Sin contratos trampa"* · *"Cuentas a tu nombre"*
 - **Fondo:** dark con radial gradient oscuro, z-index de profundidad
 - **Padding vertical grande** (`c-py-10` equivalente)
 
-**Por qué funciona:** Replica el impacto del hero de NoGood. El H1 masivo declara la especialización en una frase corta. "Nada más" está implícito en la brevedad.
+**Por qué funciona:** Replica el impacto del hero de NoGood. El H1 masivo declara la propuesta en una frase. El sub-headline confirma que es un sistema completo, no un servicio suelto.
 
 ---
 
@@ -121,41 +120,46 @@ MM Agency necesita su landing principal corporativa. Hoy solo existe un WordPres
 **Objetivo:** Equivalente a "Your AI native growth squad" — declaración de posicionamiento en 1 frase + párrafo.
 
 **Elementos:**
-- **H2 (grande, text-left):** *"Tu equipo especialista en adquisición con publicidad digital."*
-- **P (body grande):** *"En un mercado lleno de agencias que hacen de todo un poco, MM Agency hace una sola cosa: traerte clientes nuevos con Meta Ads y Google Ads. Nada de redes sociales. Nada de SEO. Nada de branding. Solo pauta que mueve la aguja."*
+- **H2 (grande, text-left):** *"Armamos el sistema completo. Tú cuentas las ventas."*
+- **P (body grande):** *"En un mercado lleno de agencias que te venden pauta suelta, MM Agency hace algo distinto: diseñamos el embudo completo que convierte visitas en clientes. Landing page que captura. Tráfico pagado que califica. CRM que organiza. Seguimiento automático que cierra. Todo conectado, todo medido, todo optimizado mes a mes. No pedazos sueltos — el sistema entero."*
 - Alineación izquierda, padding vertical top grande, sin imagen
 - Fondo dark con shapes animadas sutiles de fondo (overflow hidden)
 
-**Por qué funciona:** Replica exactamente el bloque de NoGood pero con el posicionamiento de MM Agency. La declaración "Nada de X. Solo Y." es la firma diferenciadora.
+**Por qué funciona:** Replica exactamente el bloque de NoGood pero con el posicionamiento de MM Agency. La declaración "todo conectado, todo medido, todo optimizado" es la firma diferenciadora del sistema completo vs servicios sueltos.
 
 ---
 
-### Sección 4 — Services List (2 servicios, no 6)
+### Sección 4 — Services List (4 piezas del embudo)
 
-**Objetivo:** Mostrar los servicios especializados. NoGood tiene 6 cards en grid 3×2; **MM Agency tiene 2 + 1 combo = 3 cards en grid 3×1**.
+**Objetivo:** Mostrar los 4 componentes del embudo como un sistema único. NoGood tiene 6 cards en grid 3×2; **MM Agency tiene 4 piezas = grid 2×2 o 4×1**.
 
 **Elementos:**
 - **Card container grande** con `rounded-40` y border sutil "flotando" sobre fondo radial dark
-- **H2 dentro de la card:** *"Lo único que hacemos. Y lo hacemos bien."*
-- **Grid 3 columnas** (`col-lg-4` equivalente):
+- **H2 dentro de la card:** *"Las 4 piezas del embudo. Funcionan juntas."*
+- **Grid 4 columnas** (`col-lg-3` equivalente):
 
-  **Card 1 — Meta Ads**
-  - Icono/ilustración animada de Meta (Facebook + Instagram)
-  - **H3:** "Meta Ads"
-  - **P:** "Campañas en Facebook e Instagram diseñadas para traer clientes nuevos, no likes. Segmentación quirúrgica, creativos que paran el scroll, y métricas que miden lo único que importa: el cliente que entra a tu negocio."
+  **Card 1 — Landing de conversión**
+  - Icono/ilustración de página/layout
+  - **H3:** "Landing de conversión"
+  - **P:** "La página donde entra todo el tráfico. Copy que enganchaba al tipo de cliente correcto, diseño rápido y móvil, formulario que no espanta. Optimizada con data real de cada visita — no con plantillas genéricas. Es la puerta de entrada al embudo."
 
-  **Card 2 — Google Ads**
-  - Icono/ilustración animada de Google Ads
-  - **H3:** "Google Ads"
-  - **P:** "Aparece en el momento exacto en que alguien busca lo que tú vendes. Campañas en Search, Performance Max y YouTube que convierten intención en clientes reales."
+  **Card 2 — Tráfico pagado**
+  - Icono/ilustración de audiencia/target
+  - **H3:** "Tráfico pagado"
+  - **P:** "Meta Ads y Google Ads para llevar a la persona correcta a tu landing en el momento correcto. Segmentación quirúrgica, creativos que paran el scroll, y campañas de intención de compra en Search. La pauta no es el producto — es el combustible del sistema."
 
-  **Card 3 — Meta + Google (Combo)**
-  - Icono combinando ambos
-  - **H3:** "Combo Meta + Google"
-  - **P:** "Cobertura completa del embudo: descubrimiento en redes sociales + intención de compra en búsqueda. El stack completo de adquisición para negocios que están listos para escalar."
+  **Card 3 — CRM + automatización**
+  - Icono/ilustración de nodos conectados
+  - **H3:** "CRM + automatización"
+  - **P:** "Cada lead que entra cae en tu CRM organizado y dispara automáticamente mensajes de WhatsApp, emails de seguimiento y recordatorios al equipo. El 80% de las ventas se pierden porque nadie da seguimiento en las primeras 2 horas. Automatizado, eso no pasa."
+
+  **Card 4 — Optimización continua**
+  - Icono/ilustración de gráfica ascendente
+  - **H3:** "Optimización continua"
+  - **P:** "Mes a mes ajustamos landing, creativos, audiencias y secuencias con data real. Cada mes el embudo cierra más barato y más rápido. No es 'prender campañas y olvidarse' — es un sistema vivo que mejora con cada lead que entra."
 
 - **Microanimaciones en hover** sobre cada card
-- Debajo del grid: frase pequeña que ancla al formulario: *"El canal exacto para tu negocio lo definimos juntos en el diagnóstico gratuito."*
+- Debajo del grid: frase pequeña que ancla al formulario: *"Los 4 juntos son el embudo. Los 4 juntos es lo que contratas. En el diagnóstico gratuito definimos cómo se arma para tu negocio."*
 
 ---
 
@@ -164,8 +168,7 @@ MM Agency necesita su landing principal corporativa. Hoy solo existe un WordPres
 **Objetivo:** Replicar la jugada más icónica de NoGood: slider de testimoniales con **números enormes dentro de cada card**.
 
 **Elementos:**
-- **H2:** *"Negocios que ya están adquiriendo clientes con MM Agency"*
-  - (Alternativa wordplay opcional: *"Esto dicen nuestros clientes"*)
+- **H2:** *"Negocios que ya están cerrando ventas con el embudo de MM Agency"*
 - **Slider horizontal** estilo `tiny-slider` con drag (no dots tradicionales)
 - **Cards rounded-20 con `bg-dark-grey` y border sutil**, padding grande
 - **Estructura de cada card:**
@@ -181,21 +184,21 @@ MM Agency necesita su landing principal corporativa. Hoy solo existe un WordPres
   **Card 1 — Clínica médica (caso anónimo — activo diferenciador)**
   - Logo: placeholder anónimo o "Clínica médica · RD"
   - Número enorme: **"85"**
-  - Subtítulo del número: "pacientes interesados en 60 días con Google Ads"
+  - Subtítulo del número: "pacientes calificados en 60 días con el embudo completo"
   - Quote: *"El formulario no paraba de llenarse."*
-  - Párrafo: contexto de la campaña (sin revelar nombre/especialidad/monto)
+  - Párrafo: contexto del embudo completo (landing + tráfico + automatización de WhatsApp + CRM), sin revelar nombre/especialidad/monto
 
   **Card 2 — Memorama (con permiso)**
   - Logo: Memorama
-  - Número enorme: [métrica concreta a confirmar con Martin — ej. ROAS, leads, revenue]
+  - Número enorme: [métrica concreta a confirmar con Martin]
   - Quote: corta del dueño
-  - Párrafo: resultado concreto
+  - Párrafo: resultado concreto del embudo armado
 
   **Card 3 — Dra. Aurys Mercedes (con permiso)**
   - Logo/foto: Dra. Aurys
   - Número enorme: [métrica concreta a confirmar]
   - Quote: corta
-  - Párrafo: resultado concreto
+  - Párrafo: resultado concreto del embudo armado
 
 **Nota crítica:** Martin debe confirmar permiso + métricas reales antes de publicar.
 
@@ -209,53 +212,53 @@ MM Agency necesita su landing principal corporativa. Hoy solo existe un WordPres
 
 **Elementos:**
 - **H2:** *"Por qué MM Agency es diferente al resto de agencias en RD."*
-- **Sub P:** *"No somos una agencia más. Aquí está lo que nos hace distintos:"*
+- **Sub P:** *"No vendemos servicios sueltos. Diseñamos el sistema completo que convierte visitas en clientes."*
 - **Slider horizontal** con 5 cards (drag, sin dots) — misma mecánica que NoGood
 
 - **Los 5 pilares exactos:**
 
-  **Pilar 1 — Especialización real**
+  **Pilar 1 — Sistema completo, no pedazos sueltos**
   - Ilustración/icono
-  - **H3:** "Solo pauta. Nada más."
-  - **P:** "Mientras otras agencias hacen 10 servicios a medias, nosotros hacemos dos bien: Meta Ads y Google Ads. Esa especialización es lo que nos permite entregar resultados reales donde otros fallan."
+  - **H3:** "El embudo entero. No pedazos."
+  - **P:** "Mientras otras agencias te venden 'manejo de Meta Ads' suelto, nosotros armamos el sistema completo: landing + tráfico + CRM + seguimiento. Porque una buena campaña sin embudo detrás es dinero tirado. Esa es la razón por la que los números cierran donde otros fallan."
 
   **Pilar 2 — Atención directa del fundador**
   - **H3:** "El que vende es el que ejecuta."
-  - **P:** "Cuando contratas MM Agency, Martin Mercedes es quien atiende tu cuenta directamente. No hay equipo de vendedores que te pasa a un junior después de firmar. Hablas con la persona que ejecuta."
+  - **P:** "Cuando contratas MM Agency, Martin Mercedes es quien atiende tu cuenta directamente. No hay equipo de vendedores que te pasa a un junior después de firmar. Hablas con la persona que diseña y ejecuta el embudo."
 
   **Pilar 3 — Cuentas a tu nombre**
-  - **H3:** "Tu pauta, tu dinero, tus cuentas."
-  - **P:** "La pauta se paga desde tus propias cuentas de Meta Business Manager y Google Ads. Tú eres el dueño. Si un día decides irte, te vas con todo — nada de quedarte atado a una agencia que controla tus activos."
+  - **H3:** "Tu embudo, tu dinero, tus cuentas."
+  - **P:** "La pauta se paga desde tus propias cuentas de Meta Business Manager y Google Ads. La landing vive en tu dominio. El CRM es tuyo. Tú eres el dueño del sistema completo — si un día decides irte, te vas con todo y el embudo sigue funcionando sin nosotros."
 
   **Pilar 4 — Sin contratos trampa**
   - **H3:** "Sin permanencia mínima."
-  - **P:** "No creemos en atarte con contratos largos. Te quedas con nosotros porque funciona, no porque tienes que."
+  - **P:** "No creemos en atarte con contratos largos. Te quedas con nosotros porque el embudo funciona, no porque tienes que."
 
   **Pilar 5 — Reportes de clientes, no de vanity metrics**
   - **H3:** "Reportes que miden lo que importa."
-  - **P:** "Cada semana recibes un reporte claro que muestra cuántos clientes nuevos entraron, cuánto costó cada uno, y qué ajustes estamos haciendo. Nada de reportes llenos de likes y alcance."
+  - **P:** "Cada semana recibes un reporte claro que muestra cuántos leads entraron al embudo, cuántos cerraron, cuánto costó cada uno, y qué estamos ajustando. Nada de reportes llenos de likes y alcance."
 
-**Por qué funciona:** Esta sección neutraliza las 5 objeciones principales del avatar (quemaduras previas, trato impersonal, miedo al contrato, pérdida de control, reportes falsos) convirtiéndolas en pilares de diferenciación.
+**Por qué funciona:** Esta sección neutraliza las 5 objeciones principales del avatar (quemaduras previas con pauta suelta, trato impersonal, miedo al contrato, pérdida de control, reportes falsos) convirtiéndolas en pilares de diferenciación.
 
 ---
 
-### Sección 7 — Marquee #2: Credenciales / Herramientas
+### Sección 7 — Marquee #2: Stack del Embudo
 
-**Objetivo:** Segundo marquee estilo NoGood. NoGood usa logos de VCs/investors. MM Agency no tiene VCs → usar **certificaciones, plataformas y herramientas** que dan credibilidad.
+**Objetivo:** Segundo marquee estilo NoGood. NoGood usa logos de VCs/investors. MM Agency no tiene VCs → usar **las plataformas y herramientas con las que armamos el embudo**.
 
 **Elementos:**
-- **H2 centrado:** *"Certificados por Google Ads y trabajando con las plataformas líderes de la industria."*
-- **Destaque especial arriba del marquee:** badge grande con el logo oficial de **Google Ads Certified / Google Partner** + texto: *"MM Agency está oficialmente certificada por Google Ads — garantía de ejecución profesional según los estándares de Google."*
+- **H2 centrado:** *"El stack con el que armamos tu embudo."*
+- **Destaque especial arriba del marquee:** badge grande con el logo oficial de **Google Ads Certified / Google Partner** + texto: *"MM Agency está oficialmente certificada por Google Ads. No es un adorno — es el estándar que exige Google para ejecutar tráfico pagado profesional. Una de las piezas del embudo, con las credenciales que la plataforma exige."*
 - **Marquee infinito** con logos en blanco de:
   - **Google Ads Certified / Google Partner** (destacado como primer logo del marquee)
-  - Meta Business Partner / Facebook Ads
-  - Google Ads
+  - Meta Business Partner
   - GoHighLevel (GHL)
   - Koomo CRM
   - Shopify
   - Google Analytics 4
   - Google Tag Manager
   - WhatsApp Business API
+  - ManyChat
 - **Fondo:** `bg-dark-grey-2` con borders sutiles
 - Mismo comportamiento de scroll automático
 
@@ -270,37 +273,37 @@ MM Agency necesita su landing principal corporativa. Hoy solo existe un WordPres
 **Elementos:**
 - **H2:** *"Preguntas que todos hacen antes de contactarnos."*
 - **Fondo:** radial dark con círculos decorativos (`bg-img-dark-radial-circles` equivalente)
-- **Accordeón con 9 preguntas** (imitando la longitud de NoGood por SEO):
+- **Accordeón con 10 preguntas** (imitando la longitud de NoGood por SEO):
 
   1. **¿Qué servicios ofrece MM Agency?**
-     *Solo Meta Ads y Google Ads. No hacemos manejo de redes sociales, SEO, branding ni content marketing. Nos especializamos en pauta paga porque es lo que genera clientes medibles.*
+     *Embudos de venta completos. No vendemos pauta suelta. No hacemos manejo de redes sociales. No hacemos SEO. No hacemos branding. Lo que hacemos es diseñar y operar el sistema completo que convierte visitas en clientes: landing de conversión, tráfico pagado (Meta Ads + Google Ads), CRM con automatización, y optimización continua. Si buscas contratar "un community manager" o "alguien que te maneje Facebook", no somos nosotros. Si quieres un sistema que traiga clientes nuevos de forma medible y automatizada, sí.*
 
   2. **¿Para qué tipo de negocios trabajan?**
-     *Negocios en crecimiento en República Dominicana que facturan entre RD$5M y RD$50M al año y están listos para invertir en adquisición de clientes nuevos. Trabajamos con clínicas, restaurantes, retail, servicios B2B y e-commerce.*
+     *Negocios en crecimiento en República Dominicana que facturan entre RD$5M y RD$50M al año y están listos para invertir en un sistema de adquisición de clientes real. Trabajamos con clínicas, restaurantes, retail, servicios B2B y e-commerce.*
 
-  3. **¿Cuánto cuesta trabajar con MM Agency?**
-     *Depende del canal (Meta, Google o ambos), la industria y los objetivos. Por eso existe el diagnóstico gratuito de 20 minutos: te damos un rango realista sin compromiso. Importante: el presupuesto de pauta (lo que pagas a Meta/Google) es separado del fee de agencia y siempre lo controlas tú.*
+  3. **¿Cuánto cuesta armar un embudo con MM Agency?**
+     *Depende del tamaño del negocio, la industria y qué piezas del embudo ya tienes armadas (algunos clientes ya tienen landing o CRM y solo necesitan el resto). Por eso existe el diagnóstico gratuito de 20 minutos: te damos un rango realista sin compromiso. Importante: el presupuesto de pauta (lo que pagas a Meta/Google) es separado del fee de agencia y siempre lo controlas tú.*
 
   4. **¿Cuánto debo invertir en pauta además del fee de la agencia?**
-     *Eso se define en el diagnóstico según tu industria y objetivos. El presupuesto de pauta siempre lo decides tú y se paga directamente desde tu cuenta de Meta/Google — nosotros solo ejecutamos.*
+     *Eso se define en el diagnóstico según tu industria y objetivos. El presupuesto de pauta siempre lo decides tú y se paga directamente desde tu cuenta de Meta/Google — nosotros ejecutamos el embudo completo.*
 
   5. **¿Cuánto tiempo toma ver resultados?**
-     *Las primeras campañas están activas en 5–10 días después de firmar. Los primeros resultados medibles se ven entre semana 2 y 4. Los resultados estables y optimizados llegan entre el mes 2 y 3.*
+     *El embudo se arma en 2–3 semanas. Las campañas entran en aire entre la semana 3 y 4. Los primeros resultados medibles se ven entre la semana 4 y 6. Los resultados estables y optimizados llegan entre el mes 2 y 3.*
 
   6. **¿Tengo que firmar un contrato de permanencia?**
-     *No. Sin permanencia mínima. Si después de los primeros meses decides irte, te vas con tus cuentas de Meta y Google intactas. Nos quedamos contigo porque funciona, no porque tienes que.*
+     *No. Sin permanencia mínima. Si después de los primeros meses decides irte, te vas con el embudo completo funcionando a tu nombre — tus cuentas, tu landing, tu CRM, todo el historial. Nos quedamos contigo porque funciona, no porque tienes que.*
 
-  7. **¿Quién va a manejar mis campañas realmente?**
-     *Martin Mercedes, el fundador, maneja directamente la cuenta. No hay equipo de junior. Si contratas MM Agency, Martin ejecuta.*
+  7. **¿Quién va a manejar mi embudo realmente?**
+     *Martin Mercedes, el fundador, diseña y opera directamente el embudo. No hay equipo de junior. Si contratas MM Agency, Martin ejecuta.*
 
-  8. **¿Qué pasa si las campañas no dan resultados?**
-     *Si después de 60 días no hay resultados medibles, te lo decimos directo y ajustamos o cerramos el contrato. Sin letra chica, sin excusas.*
+  8. **¿Qué pasa si el embudo no da resultados?**
+     *Si después de 60 días no hay resultados medibles, te lo decimos directo y ajustamos la pieza que está fallando, o cerramos el contrato. Sin letra chica, sin excusas.*
 
   9. **¿Cómo empezamos a trabajar juntos?**
-     *Llenas el formulario abajo → Martin te contacta en menos de 24 horas laborables → Agendamos el diagnóstico gratuito de 20 minutos → Propuesta personalizada en 48 horas → Si hay fit, empezamos.*
+     *Llenas el formulario abajo → Martin te contacta en menos de 24 horas laborables → Agendamos el diagnóstico gratuito de 20 minutos → Propuesta personalizada en 48 horas → Si hay fit, empezamos a armar el embudo.*
 
   10. **¿Están certificados oficialmente por Google?**
-      *Sí. MM Agency está certificada por Google Ads — lo que significa que cumplimos con los estándares oficiales de Google para ejecutar campañas de publicidad. Esta certificación no es un adorno: es un requisito que Google exige con exámenes y métricas de rendimiento reales. Es una capa extra de garantía de que tu inversión está en manos profesionales.*
+      *Sí. MM Agency está certificada por Google Ads, que es una de las 4 piezas del embudo que armamos. Esta certificación no es un adorno: es un requisito que Google exige con exámenes oficiales y métricas reales de rendimiento. Es una capa extra de garantía de que la parte de tráfico pagado del embudo está en manos profesionales.*
 
 **Por qué funciona:** Responde las objeciones en la página (fricción más baja para el formulario) + genera contenido indexable en Google (SEO orgánico a largo plazo).
 
@@ -311,7 +314,7 @@ MM Agency necesita su landing principal corporativa. Hoy solo existe un WordPres
 **Objetivo:** Este es **EL ÚNICO objetivo real de la landing**. Es donde NoGood pone su blog teaser; aquí MM Agency pone el formulario completo porque es el objetivo único.
 
 **Elementos visuales:**
-- **Headline enorme estilo CTA de NoGood:** *"Listo para traer clientes nuevos a tu negocio."*
+- **Headline enorme estilo CTA de NoGood:** *"Listo para armar el embudo de tu negocio."*
   - Tamaño display grande (64–96px)
   - Tipografía heading display
 - **Sub-headline:** *"Cuéntanos de tu negocio. Martin revisa cada formulario personalmente y responde en menos de 24 horas laborables."*
@@ -336,11 +339,12 @@ MM Agency necesita su landing principal corporativa. Hoy solo existe un WordPres
    - 6–20 empleados
    - 21–50 empleados
    - 50+ empleados
-7. **¿Ya has invertido en pauta digital antes?** — dropdown:
-   - Nunca
-   - Sí, pero sin resultados claros
-   - Sí, con resultados regulares
-   - Sí, con buenos resultados (queremos escalar)
+7. **¿Qué piezas del embudo ya tienes armadas?** — dropdown:
+   - Nada — empezamos desde cero
+   - Tengo landing pero sin tráfico
+   - Tengo campañas pero sin landing ni seguimiento
+   - Tengo todo pero los números no cuadran
+   - Todavía explorando
 8. **¿Cuál es tu presupuesto mensual aproximado para pauta (separado del fee de agencia)?** — dropdown:
    - Menos de RD$15k
    - RD$15k – RD$50k
@@ -363,6 +367,7 @@ MM Agency necesita su landing principal corporativa. Hoy solo existe un WordPres
 **Por qué funciona:**
 - 10 campos califica automáticamente (curiosos se filtran solos)
 - Dropdowns reducen fricción vs. texto libre
+- El campo 7 (qué tienes armado) permite a Martin dimensionar el alcance del embudo antes de la llamada
 - Los campos 5–8 dan a Martin contexto antes de la llamada → llamada 10x más útil
 - El campo 10 detecta urgencia → priorización automática de leads
 
@@ -376,9 +381,10 @@ MM Agency necesita su landing principal corporativa. Hoy solo existe un WordPres
 - **Top del footer:** bloque con border y `bg-img-dark-radial`
 - **Columnas:**
   - **MM Agency** — sobre, filosofía, contacto
-  - **Servicios** — Meta Ads, Google Ads, Combo
+  - **Servicios** — Embudo completo, Landing de conversión, Tráfico pagado, CRM + automatización
   - **Recursos** — FAQ, blog (futuro), casos de éxito
   - **Contacto** — WhatsApp, email
+- **Filosofía (bloque principal):** *"Embudos de venta completos para negocios en crecimiento en República Dominicana. Landing, tráfico, CRM, seguimiento — el sistema entero."*
 - **Headquarters:** *"Basados en Santo Domingo, República Dominicana"* (equivalente al "NYC + Miami + LA + Dubai" de NoGood pero con una sola ciudad — honesto a la realidad de MM Agency hoy)
 - **Video decorativo fullwidth opcional** al fondo (loop silencioso, estilo NoGood) — se puede omitir en v1
 - **Bottom del footer:**
@@ -397,17 +403,17 @@ MM Agency necesita su landing principal corporativa. Hoy solo existe un WordPres
    ↓
 2. MARQUEE #1 (logos clientes infinitos)
    ↓
-3. WHAT WE DO (posicionamiento en 1 frase)
+3. WHAT WE DO (posicionamiento embudo completo)
    ↓
-4. SERVICES LIST (3 cards rounded-40)
+4. SERVICES LIST (4 piezas del embudo en grid)
    ↓
 5. TESTIMONIALS SLIDER (con números enormes)
    ↓
 6. HOW WE DO IT (5 pilares en slider)
    ↓
-7. MARQUEE #2 (plataformas/herramientas)
+7. MARQUEE #2 (stack del embudo)
    ↓
-8. FAQ ACCORDION (9 preguntas largas)
+8. FAQ ACCORDION (10 preguntas largas)
    ↓
 9. FORMULARIO DE CALIFICACIÓN  ← objetivo único de toda la landing
    ↓
@@ -420,10 +426,10 @@ MM Agency necesita su landing principal corporativa. Hoy solo existe un WordPres
 
 | Sección | NoGood | MM Agency |
 |---|---|---|
-| Hero | Video loopable de brand reel | Video de campaña real o animación abstracta (sin foto de Martin) |
-| Servicios | 6 servicios (grid 3×2) | 3 opciones: Meta, Google, Combo (grid 3×1) |
+| Hero | Video loopable de brand reel | Video del embudo en acción (sin foto de Martin) |
+| Servicios | 6 servicios (grid 3×2) | 4 piezas del embudo (grid 4×1 o 2×2) |
 | Pilares | 6 pilares en slider | 5 pilares en slider |
-| Marquee #2 | Logos de VCs/investors | Logos de plataformas/herramientas |
+| Marquee #2 | Logos de VCs/investors | Stack del embudo (plataformas/herramientas) |
 | CTA final | Blog teaser + newsletter | **Formulario de calificación completo** |
 | Footer | 4 ciudades (NYC, Miami, LA, Dubai) | 1 ciudad (Santo Domingo) |
 | Wordplay | "Deemed SoGood" / "Ready to get up to NoGood?" | Opcional — explorar wordplay con "MM" o "Mercedes" en fase de copy |
@@ -436,7 +442,7 @@ MM Agency necesita su landing principal corporativa. Hoy solo existe un WordPres
 - **Notificación automática a Martin por WhatsApp** al recibir formulario
 - **Email de confirmación al prospecto** con lo que sigue
 - **Lead calificado** → Martin agenda llamada de 20 min por WhatsApp → diagnóstico → propuesta → cierre
-- **Posicionamiento consistente** con WWP inbound + WWP outbound (especialista, no generalista, solo Meta + Google)
+- **Posicionamiento consistente** con WWP inbound + WWP outbound (especialista en embudos completos, no en servicios sueltos)
 
 ---
 
@@ -468,13 +474,14 @@ MM Agency necesita su landing principal corporativa. Hoy solo existe un WordPres
 
 - ¿Las 10 secciones están en el mismo orden que NoGood.io?
 - ¿El hero tiene H1 masivo en tipografía display sobre fondo dark SIN foto de Martin?
-- ¿Hay 2 marquees infinitos de logos (clientes arriba, plataformas abajo)?
+- ¿El H1 habla de "embudos" / "sistema completo", NO de "solo pauta" o "Meta Ads y Google Ads" como producto principal?
+- ¿Hay 2 marquees infinitos de logos (clientes arriba, stack abajo)?
 - ¿Los testimoniales tienen números enormes dentro de cada card (estilo "85", "879%")?
-- ¿Las 3 cards de servicios están en container rounded-40 con border sutil?
-- ¿Los 5 pilares diferenciadores neutralizan las objeciones del avatar?
-- ¿El FAQ tiene 9 preguntas largas (play SEO + neutralización previa al formulario)?
-- ¿El formulario tiene los 10 campos de calificación completa?
+- ¿Las 4 cards de las piezas del embudo están en container rounded-40 con border sutil?
+- ¿Los 5 pilares diferenciadores neutralizan las objeciones del avatar (especialmente la de "me vendieron pauta suelta y no funcionó")?
+- ¿El FAQ tiene 10 preguntas largas (play SEO + neutralización previa al formulario)?
+- ¿El formulario tiene los 10 campos de calificación completa (incluyendo el nuevo campo 7 sobre qué piezas del embudo ya tiene)?
 - ¿No aparecen precios en ninguna parte?
 - ¿Martin NO aparece en el hero?
-- ¿El badge "Certificados por Google Ads" aparece en el hero (trust bar) + marquee #2 (destacado) + FAQ (pregunta 10)?
+- ¿Meta Ads + Google Ads se mencionan SOLO como parte de "Tráfico pagado" (pieza 2 del embudo), nunca como propuesta de valor principal?
 - ¿La estética dark + tipografía display + cards rounded + acento quirúrgico se siente coherente con NoGood?

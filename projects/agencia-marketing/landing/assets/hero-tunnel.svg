@@ -1,0 +1,194 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" preserveAspectRatio="xMidYMid slice">
+  <!--
+    NoGood-style box room — versión correcta.
+
+    Concepto: una HABITACIÓN cúbica vista desde dentro, sin pared frontal.
+    Tú (la cámara) estás dentro de la caja. Ves:
+      - El piso (abajo, trapezoide)
+      - El techo (arriba, trapezoide)
+      - La pared izquierda (izq, trapezoide)
+      - La pared derecha (der, trapezoide)
+      - La pared del fondo (al centro, rectángulo)
+
+    Todas las paredes tienen la misma cuadrícula cuadrada (10x10 losetas).
+    Cuando se proyectan en perspectiva desde la cámara, las losetas del piso
+    y techo se ven como trapecios que se achican hacia el fondo.
+
+    Geometría:
+    - Viewport: 1600 x 900
+    - Frame frontal (boca de la caja): todo el viewport (0,0 → 1600,900)
+    - Frame trasero (pared del fondo): (500, 225) → (1100, 675)
+      [ancho 600, alto 450 — proporción 4:3 para cuadrícula de cuadrados]
+    - Punto de fuga implícito: (800, 450)
+
+    Cuadrícula: 10 columnas x 10 filas en cada pared.
+  -->
+
+  <rect width="1600" height="900" fill="#000"/>
+
+  <!--
+    Líneas MUY finas, casi imperceptibles (como NoGood).
+    stroke 0.5px, opacity 0.22
+  -->
+  <g stroke="#ffffff" stroke-width="0.5" fill="none" opacity="0.22">
+
+    <!-- === PARED DEL FONDO: cuadrícula 10x10 de (500,225) a (1100,675) === -->
+    <!-- Verticales -->
+    <line x1="500"  y1="225" x2="500"  y2="675"/>
+    <line x1="560"  y1="225" x2="560"  y2="675"/>
+    <line x1="620"  y1="225" x2="620"  y2="675"/>
+    <line x1="680"  y1="225" x2="680"  y2="675"/>
+    <line x1="740"  y1="225" x2="740"  y2="675"/>
+    <line x1="800"  y1="225" x2="800"  y2="675"/>
+    <line x1="860"  y1="225" x2="860"  y2="675"/>
+    <line x1="920"  y1="225" x2="920"  y2="675"/>
+    <line x1="980"  y1="225" x2="980"  y2="675"/>
+    <line x1="1040" y1="225" x2="1040" y2="675"/>
+    <line x1="1100" y1="225" x2="1100" y2="675"/>
+    <!-- Horizontales -->
+    <line x1="500" y1="225" x2="1100" y2="225"/>
+    <line x1="500" y1="270" x2="1100" y2="270"/>
+    <line x1="500" y1="315" x2="1100" y2="315"/>
+    <line x1="500" y1="360" x2="1100" y2="360"/>
+    <line x1="500" y1="405" x2="1100" y2="405"/>
+    <line x1="500" y1="450" x2="1100" y2="450"/>
+    <line x1="500" y1="495" x2="1100" y2="495"/>
+    <line x1="500" y1="540" x2="1100" y2="540"/>
+    <line x1="500" y1="585" x2="1100" y2="585"/>
+    <line x1="500" y1="630" x2="1100" y2="630"/>
+    <line x1="500" y1="675" x2="1100" y2="675"/>
+
+    <!-- === PISO: trapezoide (0,900)→(1600,900)→(1100,675)→(500,675) === -->
+    <!--
+      Divisiones longitudinales (11 líneas desde el borde frontal hacia el fondo).
+      Cada línea va de (x_f, 900) a (x_b, 675) donde:
+        x_f = 0 + i*(1600/10)  para i=0..10
+        x_b = 500 + i*(600/10)  para i=0..10
+    -->
+    <line x1="0"    y1="900" x2="500"  y2="675"/>
+    <line x1="160"  y1="900" x2="560"  y2="675"/>
+    <line x1="320"  y1="900" x2="620"  y2="675"/>
+    <line x1="480"  y1="900" x2="680"  y2="675"/>
+    <line x1="640"  y1="900" x2="740"  y2="675"/>
+    <line x1="800"  y1="900" x2="800"  y2="675"/>
+    <line x1="960"  y1="900" x2="860"  y2="675"/>
+    <line x1="1120" y1="900" x2="920"  y2="675"/>
+    <line x1="1280" y1="900" x2="980"  y2="675"/>
+    <line x1="1440" y1="900" x2="1040" y2="675"/>
+    <line x1="1600" y1="900" x2="1100" y2="675"/>
+
+    <!--
+      Divisiones transversales (10 líneas horizontales que cruzan el piso).
+      La línea i (i=1..9) interpola entre el borde frontal y trasero usando
+      proyección en perspectiva REAL (no lineal).
+      Fórmula: t_i = i / (i + (10-i)*k)  donde k es factor de perspectiva
+      Para losetas cuadradas con profundidad moderada, k ~ 0.55.
+
+      Los valores calculados dan las posiciones Y y las posiciones X de cada
+      extremo sobre las aristas del trapezoide del piso.
+      Arista izq: de (0,900) a (500,675). Arista der: de (1600,900) a (1100,675).
+    -->
+    <!-- línea 0 = borde frontal -->
+    <line x1="0.0"    y1="900.0" x2="1600.0" y2="900.0"/>
+    <!-- i=1: t=0.167 -->
+    <line x1="83.5"   y1="862.4" x2="1516.5" y2="862.4"/>
+    <!-- i=2: t=0.313 -->
+    <line x1="156.5"  y1="829.6" x2="1443.5" y2="829.6"/>
+    <!-- i=3: t=0.441 -->
+    <line x1="220.5"  y1="800.8" x2="1379.5" y2="800.8"/>
+    <!-- i=4: t=0.555 -->
+    <line x1="277.5"  y1="775.1" x2="1322.5" y2="775.1"/>
+    <!-- i=5: t=0.655 -->
+    <line x1="327.5"  y1="752.6" x2="1272.5" y2="752.6"/>
+    <!-- i=6: t=0.744 -->
+    <line x1="372.0"  y1="732.6" x2="1228.0" y2="732.6"/>
+    <!-- i=7: t=0.823 -->
+    <line x1="411.5"  y1="714.8" x2="1188.5" y2="714.8"/>
+    <!-- i=8: t=0.893 -->
+    <line x1="446.5"  y1="699.1" x2="1153.5" y2="699.1"/>
+    <!-- i=9: t=0.955 -->
+    <line x1="477.5"  y1="685.1" x2="1122.5" y2="685.1"/>
+    <!-- línea 10 = borde trasero del piso -->
+    <line x1="500.0"  y1="675.0" x2="1100.0" y2="675.0"/>
+
+    <!-- === TECHO: trapezoide (0,0)→(1600,0)→(1100,225)→(500,225) === -->
+    <!-- Longitudinales -->
+    <line x1="0"    y1="0" x2="500"  y2="225"/>
+    <line x1="160"  y1="0" x2="560"  y2="225"/>
+    <line x1="320"  y1="0" x2="620"  y2="225"/>
+    <line x1="480"  y1="0" x2="680"  y2="225"/>
+    <line x1="640"  y1="0" x2="740"  y2="225"/>
+    <line x1="800"  y1="0" x2="800"  y2="225"/>
+    <line x1="960"  y1="0" x2="860"  y2="225"/>
+    <line x1="1120" y1="0" x2="920"  y2="225"/>
+    <line x1="1280" y1="0" x2="980"  y2="225"/>
+    <line x1="1440" y1="0" x2="1040" y2="225"/>
+    <line x1="1600" y1="0" x2="1100" y2="225"/>
+
+    <!-- Transversales (espejo del piso, flip vertical alrededor de y=450) -->
+    <line x1="0.0"    y1="0.0"   x2="1600.0" y2="0.0"/>
+    <line x1="83.5"   y1="37.6"  x2="1516.5" y2="37.6"/>
+    <line x1="156.5"  y1="70.4"  x2="1443.5" y2="70.4"/>
+    <line x1="220.5"  y1="99.2"  x2="1379.5" y2="99.2"/>
+    <line x1="277.5"  y1="124.9" x2="1322.5" y2="124.9"/>
+    <line x1="327.5"  y1="147.4" x2="1272.5" y2="147.4"/>
+    <line x1="372.0"  y1="167.4" x2="1228.0" y2="167.4"/>
+    <line x1="411.5"  y1="185.2" x2="1188.5" y2="185.2"/>
+    <line x1="446.5"  y1="200.9" x2="1153.5" y2="200.9"/>
+    <line x1="477.5"  y1="214.9" x2="1122.5" y2="214.9"/>
+    <line x1="500.0"  y1="225.0" x2="1100.0" y2="225.0"/>
+
+    <!-- === PARED IZQUIERDA: trapezoide (0,0)→(500,225)→(500,675)→(0,900) === -->
+    <!-- Longitudinales (horizontales que entran al fondo) -->
+    <line x1="0" y1="0"   x2="500" y2="225"/>
+    <line x1="0" y1="90"  x2="500" y2="270"/>
+    <line x1="0" y1="180" x2="500" y2="315"/>
+    <line x1="0" y1="270" x2="500" y2="360"/>
+    <line x1="0" y1="360" x2="500" y2="405"/>
+    <line x1="0" y1="450" x2="500" y2="450"/>
+    <line x1="0" y1="540" x2="500" y2="495"/>
+    <line x1="0" y1="630" x2="500" y2="540"/>
+    <line x1="0" y1="720" x2="500" y2="585"/>
+    <line x1="0" y1="810" x2="500" y2="630"/>
+    <line x1="0" y1="900" x2="500" y2="675"/>
+
+    <!-- Transversales (verticales en profundidad — coinciden con las del piso/techo) -->
+    <line x1="0.0"   y1="0.0"   x2="0.0"   y2="900.0"/>
+    <line x1="83.5"  y1="37.6"  x2="83.5"  y2="862.4"/>
+    <line x1="156.5" y1="70.4"  x2="156.5" y2="829.6"/>
+    <line x1="220.5" y1="99.2"  x2="220.5" y2="800.8"/>
+    <line x1="277.5" y1="124.9" x2="277.5" y2="775.1"/>
+    <line x1="327.5" y1="147.4" x2="327.5" y2="752.6"/>
+    <line x1="372.0" y1="167.4" x2="372.0" y2="732.6"/>
+    <line x1="411.5" y1="185.2" x2="411.5" y2="714.8"/>
+    <line x1="446.5" y1="200.9" x2="446.5" y2="699.1"/>
+    <line x1="477.5" y1="214.9" x2="477.5" y2="685.1"/>
+
+    <!-- === PARED DERECHA: trapezoide (1600,0)→(1100,225)→(1100,675)→(1600,900) === -->
+    <!-- Longitudinales -->
+    <line x1="1600" y1="0"   x2="1100" y2="225"/>
+    <line x1="1600" y1="90"  x2="1100" y2="270"/>
+    <line x1="1600" y1="180" x2="1100" y2="315"/>
+    <line x1="1600" y1="270" x2="1100" y2="360"/>
+    <line x1="1600" y1="360" x2="1100" y2="405"/>
+    <line x1="1600" y1="450" x2="1100" y2="450"/>
+    <line x1="1600" y1="540" x2="1100" y2="495"/>
+    <line x1="1600" y1="630" x2="1100" y2="540"/>
+    <line x1="1600" y1="720" x2="1100" y2="585"/>
+    <line x1="1600" y1="810" x2="1100" y2="630"/>
+    <line x1="1600" y1="900" x2="1100" y2="675"/>
+
+    <!-- Transversales (verticales en profundidad) -->
+    <line x1="1600.0" y1="0.0"   x2="1600.0" y2="900.0"/>
+    <line x1="1516.5" y1="37.6"  x2="1516.5" y2="862.4"/>
+    <line x1="1443.5" y1="70.4"  x2="1443.5" y2="829.6"/>
+    <line x1="1379.5" y1="99.2"  x2="1379.5" y2="800.8"/>
+    <line x1="1322.5" y1="124.9" x2="1322.5" y2="775.1"/>
+    <line x1="1272.5" y1="147.4" x2="1272.5" y2="752.6"/>
+    <line x1="1228.0" y1="167.4" x2="1228.0" y2="732.6"/>
+    <line x1="1188.5" y1="185.2" x2="1188.5" y2="714.8"/>
+    <line x1="1153.5" y1="200.9" x2="1153.5" y2="699.1"/>
+    <line x1="1122.5" y1="214.9" x2="1122.5" y2="685.1"/>
+
+  </g>
+</svg>

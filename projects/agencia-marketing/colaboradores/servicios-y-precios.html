@@ -1,0 +1,682 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>MM Agency — Servicios & Precios (Colaboradores)</title>
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800;900&family=Inter:wght@300;400;500;600;700&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #181818;
+    --bg-card: #202020;
+    --bg-elevated: #262626;
+    --border: #353535;
+    --yellow: #FAFA00;
+    --violet: #713DFF;
+    --white: #FFFFFF;
+    --light: #FAFAFA;
+    --light-grey: #C9C9C9;
+    --space-grey: #707070;
+    --black: #000000;
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  html, body {
+    background: var(--bg);
+    color: var(--white);
+    font-family: 'Inter', sans-serif;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+
+  @page {
+    size: A4;
+    margin: 0;
+  }
+
+  .page {
+    width: 210mm;
+    height: 297mm;
+    padding: 18mm 16mm;
+    background: var(--bg);
+    position: relative;
+    page-break-after: always;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .page:last-child { page-break-after: auto; }
+
+  /* Watermark logo en esquina */
+  .watermark {
+    position: absolute;
+    bottom: 12mm;
+    right: 16mm;
+    font-family: 'DM Mono', monospace;
+    font-size: 8pt;
+    color: var(--space-grey);
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+  }
+
+  .page-number {
+    position: absolute;
+    bottom: 12mm;
+    left: 16mm;
+    font-family: 'DM Mono', monospace;
+    font-size: 8pt;
+    color: var(--space-grey);
+    letter-spacing: 0.15em;
+  }
+
+  .label {
+    font-family: 'DM Mono', monospace;
+    font-size: 8pt;
+    color: var(--accent, var(--yellow));
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+    margin-bottom: 8mm;
+  }
+
+  /* Acento por sección */
+  .page.accent-yellow    { --accent: #FAFA00; }
+  .page.accent-pink      { --accent: #FCA8FF; }
+  .page.accent-orange    { --accent: #F54900; }
+  .page.accent-violet    { --accent: #713DFF; }
+  .page.accent-blue      { --accent: #00E3FF; }
+  .page.accent-green     { --accent: #00C950; }
+
+  h1, h2, h3 {
+    font-family: 'Orbitron', sans-serif;
+    font-weight: 700;
+    color: var(--white);
+    letter-spacing: -0.01em;
+  }
+
+  h1 { font-size: 42pt; line-height: 1; }
+  h2 {
+    font-size: 28pt;
+    line-height: 1.1;
+    margin-bottom: 8mm;
+    display: inline-block;
+    border-bottom: 3px solid var(--accent, var(--yellow));
+    padding-bottom: 3mm;
+  }
+  h3 { font-size: 14pt; line-height: 1.2; }
+
+  p { font-size: 11pt; line-height: 1.6; color: var(--light-grey); }
+
+  /* ===== PORTADA ===== */
+  .cover {
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+    background:
+      radial-gradient(ellipse at center, rgba(250,250,0,0.1), transparent 60%),
+      radial-gradient(ellipse at top left, rgba(250,250,0,0.05), transparent 50%),
+      radial-gradient(ellipse at bottom right, rgba(113,61,255,0.06), transparent 50%),
+      var(--bg);
+  }
+
+  .cover-center {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 18mm;
+  }
+
+  .cover-logo-big {
+    width: 120mm;
+    height: auto;
+  }
+
+  .cover-tagline {
+    font-family: 'DM Mono', monospace;
+    font-size: 11pt;
+    color: var(--light-grey);
+    letter-spacing: 0.45em;
+    text-transform: uppercase;
+  }
+
+  /* ===== CÓMO FUNCIONA ===== */
+  .how-block {
+    background: var(--bg-card);
+    border: 0.5px solid var(--border);
+    border-radius: 4mm;
+    padding: 10mm;
+    margin-bottom: 6mm;
+    position: relative;
+  }
+
+  .how-block .num {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 11pt;
+    font-weight: 700;
+    color: var(--yellow);
+    letter-spacing: 0.1em;
+    margin-bottom: 3mm;
+  }
+
+  .how-block h3 {
+    font-size: 16pt;
+    margin-bottom: 3mm;
+  }
+
+  .how-block p {
+    font-size: 10.5pt;
+    line-height: 1.55;
+  }
+
+  .footnote {
+    margin-top: 6mm;
+    padding: 6mm 8mm;
+    border-left: 2px solid var(--yellow);
+    background: rgba(250,250,0,0.03);
+  }
+
+  .footnote p {
+    font-size: 9.5pt;
+    color: var(--light);
+    font-style: italic;
+  }
+
+  /* ===== TABLAS DE SERVICIOS ===== */
+  .services-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 6mm;
+  }
+
+  .services-table thead th {
+    font-family: 'DM Mono', monospace;
+    font-size: 8pt;
+    font-weight: 500;
+    color: var(--space-grey);
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+    text-align: left;
+    padding: 5mm 4mm;
+    border-bottom: 0.5px solid var(--border);
+  }
+
+  .services-table thead th:last-child {
+    text-align: right;
+  }
+
+  .services-table tbody td {
+    padding: 6mm 4mm;
+    border-bottom: 0.5px solid var(--border);
+    font-size: 11pt;
+    color: var(--white);
+    vertical-align: middle;
+  }
+
+  .services-table tbody td:last-child {
+    text-align: right;
+    font-family: 'Orbitron', sans-serif;
+    font-weight: 700;
+    color: var(--accent, var(--yellow));
+    font-size: 13pt;
+    letter-spacing: -0.01em;
+    white-space: nowrap;
+  }
+
+  .services-table tbody tr:last-child td {
+    border-bottom: none;
+  }
+
+  .section-note {
+    margin-top: 6mm;
+    padding: 5mm 6mm;
+    background: var(--bg-card);
+    border-left: 2px solid var(--accent, var(--violet));
+    border-radius: 0 2mm 2mm 0;
+  }
+
+  .section-note p {
+    font-size: 9.5pt;
+    color: var(--light-grey);
+    font-style: italic;
+  }
+
+  /* ===== REGLAS DEL JUEGO ===== */
+  .rules-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 5mm;
+    margin-top: 6mm;
+  }
+
+  .rule-item {
+    display: flex;
+    gap: 6mm;
+    padding: 6mm 7mm;
+    background: var(--bg-card);
+    border: 0.5px solid var(--border);
+    border-radius: 3mm;
+  }
+
+  .rule-item .dot {
+    width: 6mm;
+    height: 6mm;
+    min-width: 6mm;
+    border-radius: 50%;
+    background: var(--yellow);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Orbitron', sans-serif;
+    font-size: 9pt;
+    font-weight: 700;
+    color: var(--black);
+  }
+
+  .rule-item p {
+    font-size: 10.5pt;
+    color: var(--white);
+    line-height: 1.5;
+  }
+
+  .rule-item p strong {
+    color: var(--yellow);
+    font-weight: 600;
+  }
+
+  /* ===== CONTACTO ===== */
+  .contact-page {
+    justify-content: space-between;
+    background:
+      radial-gradient(ellipse at bottom left, rgba(250,250,0,0.1), transparent 55%),
+      var(--bg);
+  }
+
+  .contact-top .label {
+    margin-bottom: 4mm;
+  }
+
+  .contact-name {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 56pt;
+    font-weight: 800;
+    line-height: 0.95;
+    letter-spacing: -0.02em;
+    color: var(--white);
+    margin-bottom: 4mm;
+  }
+
+  .contact-role {
+    font-family: 'DM Mono', monospace;
+    font-size: 10pt;
+    color: var(--yellow);
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+  }
+
+  .contact-details {
+    margin-top: 20mm;
+    display: flex;
+    flex-direction: column;
+    gap: 6mm;
+  }
+
+  .contact-row {
+    display: flex;
+    gap: 8mm;
+    align-items: baseline;
+    padding-bottom: 5mm;
+    border-bottom: 0.5px solid var(--border);
+  }
+
+  .contact-row .field {
+    font-family: 'DM Mono', monospace;
+    font-size: 8pt;
+    color: var(--space-grey);
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    min-width: 30mm;
+  }
+
+  .contact-row .value {
+    font-family: 'Inter', sans-serif;
+    font-size: 14pt;
+    color: var(--white);
+    font-weight: 500;
+  }
+
+  .contact-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    padding-top: 8mm;
+    border-top: 0.5px solid var(--border);
+  }
+
+  .contact-footer-logo {
+    width: 50mm;
+    height: auto;
+    opacity: 0.9;
+  }
+
+  .contact-footer-text {
+    font-family: 'DM Mono', monospace;
+    font-size: 7.5pt;
+    color: var(--space-grey);
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    text-align: right;
+    line-height: 1.8;
+  }
+
+  /* Layout header genérico de slide */
+  .slide-header {
+    margin-bottom: 6mm;
+  }
+</style>
+</head>
+<body>
+
+<!-- ============ PÁGINA 1: PORTADA ============ -->
+<section class="page cover">
+  <div class="cover-center">
+    <img src="../branding/logo/transparent/mm-v7-rect-box-clean-transparent.png" alt="MM Agency" class="cover-logo-big">
+    <div class="cover-tagline">Servicios &amp; Precios</div>
+  </div>
+</section>
+
+<!-- ============ PÁGINA 2: EMBUDO DE VENTA COMPLETO (PRODUCTO ESTRELLA) ============ -->
+<section class="page accent-yellow">
+  <div class="slide-header">
+    <div class="label">// 01 — Producto estrella</div>
+    <h2>Embudo de Venta Completo</h2>
+    <p>El sistema entero bajo un solo responsable — landing + tráfico pagado + CRM + seguimiento. No vendemos piezas sueltas.</p>
+  </div>
+
+  <table class="services-table">
+    <thead>
+      <tr>
+        <th>Configuración</th>
+        <th>Para quién</th>
+        <th>Setup</th>
+        <th>Fee mensual</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr><td><strong>Embudo completo</strong></td><td>Desde cero — no tiene nada armado</td><td>$2,000</td><td>$600+/mes</td></tr>
+      <tr><td><strong>Activación del embudo</strong></td><td>Ya tiene landing/web — falta tráfico + CRM</td><td>$1,000–1,500</td><td>$600+/mes</td></tr>
+      <tr><td><strong>Reparación del embudo</strong></td><td>Tiene pauta corriendo pero no convierte</td><td>$800–1,500</td><td>$600+/mes</td></tr>
+    </tbody>
+  </table>
+
+  <div class="section-note">
+    <p><strong>Las 4 piezas siempre van juntas:</strong> 1) Landing de conversión · 2) Tráfico pagado (Meta Ads + Google Ads) · 3) CRM + automatización (GHL/Koomo + WhatsApp) · 4) Optimización continua.<br>
+    <strong>Importante:</strong> la pauta publicitaria la paga el cliente directo a Meta/Google. El fee mensual cubre manejo, creativos y ajustes, no el presupuesto de anuncios.</p>
+  </div>
+
+  <div class="page-number">P.01</div>
+  <div class="watermark">MM Agency</div>
+</section>
+
+<!-- ============ PÁGINA 3: DISEÑO & WEB ============ -->
+<section class="page accent-yellow">
+  <div class="slide-header">
+    <div class="label">// 02 — Diseño & Web</div>
+    <h2>Diseño &amp; Web</h2>
+    <p>Piezas sueltas cuando el cliente solo necesita una parte del embudo.</p>
+  </div>
+
+  <table class="services-table">
+    <thead>
+      <tr>
+        <th>Servicio</th>
+        <th>Precio</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr><td>Landing page (1 sección)</td><td>$500</td></tr>
+      <tr><td>Página web completa (multi-página)</td><td>$1,500</td></tr>
+      <tr><td>Embudo de ventas (landing + thank you + email + CRM)</td><td>$2,000</td></tr>
+      <tr><td>Tienda online (Shopify / WooCommerce)</td><td>$2,500</td></tr>
+      <tr><td>Rediseño / optimización web existente</td><td>$900</td></tr>
+      <tr><td>Mantenimiento web mensual</td><td>$120/mes</td></tr>
+    </tbody>
+  </table>
+
+  <div class="page-number">P.02</div>
+  <div class="watermark">MM Agency</div>
+</section>
+
+<!-- ============ PÁGINA 3: BRANDING ============ -->
+<section class="page accent-pink">
+  <div class="slide-header">
+    <div class="label">// 03 — Branding</div>
+    <h2>Branding</h2>
+    <p>Identidad visual de cero o kits digitales listos para usar.</p>
+  </div>
+
+  <table class="services-table">
+    <thead>
+      <tr>
+        <th>Servicio</th>
+        <th>Precio</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr><td>Diseño de logo</td><td>$350</td></tr>
+      <tr><td>Identidad visual completa (logo + colores + tipografía + manual)</td><td>$900</td></tr>
+      <tr><td>Brand kit digital (plantillas redes + presentaciones)</td><td>$500</td></tr>
+    </tbody>
+  </table>
+
+  <div class="page-number">P.03</div>
+  <div class="watermark">MM Agency</div>
+</section>
+
+<!-- ============ PÁGINA 4: PUBLICIDAD PAGADA ============ -->
+<section class="page accent-orange">
+  <div class="slide-header">
+    <div class="label">// 04 — Tráfico pagado</div>
+    <h2>Tráfico Pagado</h2>
+    <p>Pieza #2 del embudo — Meta Ads y Google Ads para traer la gente correcta a la landing. Se vende suelto solo si el cliente ya tiene embudo armado.</p>
+  </div>
+
+  <table class="services-table">
+    <thead>
+      <tr>
+        <th>Servicio</th>
+        <th>Precio</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr><td>Setup Meta Ads</td><td>$400</td></tr>
+      <tr><td>Manejo mensual Meta Ads</td><td>$300/mes</td></tr>
+      <tr><td>Setup Google Ads</td><td>$500</td></tr>
+      <tr><td>Manejo mensual Google Ads</td><td>$400/mes</td></tr>
+      <tr><td>Creativos para ads (pack 5 piezas)</td><td>$300</td></tr>
+    </tbody>
+  </table>
+
+  <div class="section-note">
+    <p>Importante: la pauta publicitaria la paga el cliente directo a Meta / Google. Estos precios cubren el servicio de manejo, no el presupuesto de anuncios.</p>
+  </div>
+
+  <div class="page-number">P.04</div>
+  <div class="watermark">MM Agency</div>
+</section>
+
+<!-- ============ PÁGINA 5: CRM, AUTOMATIZACIÓN & LEAD GEN ============ -->
+<section class="page accent-violet">
+  <div class="slide-header">
+    <div class="label">// 05 — CRM, Automatización &amp; Lead Gen</div>
+    <h2>CRM &amp; Lead Generation</h2>
+    <p>Sistemas que capturan, nutren y convierten leads.</p>
+  </div>
+
+  <table class="services-table">
+    <thead>
+      <tr>
+        <th>Servicio</th>
+        <th>Precio</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr><td>Setup de CRM (GHL / Koomo)</td><td>$700</td></tr>
+      <tr><td>Automatizaciones de WhatsApp</td><td>$450</td></tr>
+      <tr><td>Integración formularios + pixel + eventos</td><td>$250</td></tr>
+      <tr><td>Embudo de captación de leads</td><td>$1,500</td></tr>
+      <tr><td>Chatbot WhatsApp / Instagram (ManyChat)</td><td>$550</td></tr>
+      <tr><td>Cold outreach setup (email frío / DMs)</td><td>$700</td></tr>
+      <tr><td>Base de datos segmentada + scraping</td><td>$300</td></tr>
+    </tbody>
+  </table>
+
+  <div class="page-number">P.05</div>
+  <div class="watermark">MM Agency</div>
+</section>
+
+<!-- ============ PÁGINA 6: EMAIL MARKETING ============ -->
+<section class="page accent-blue">
+  <div class="slide-header">
+    <div class="label">// 06 — Email Marketing</div>
+    <h2>Email Marketing</h2>
+    <p>Desde el setup de la plataforma hasta secuencias que venden.</p>
+  </div>
+
+  <table class="services-table">
+    <thead>
+      <tr>
+        <th>Servicio</th>
+        <th>Precio</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr><td>Setup de plataforma (GHL, Mailchimp)</td><td>$300</td></tr>
+      <tr><td>Diseño de templates de email (pack 3)</td><td>$250</td></tr>
+      <tr><td>Secuencias automatizadas (bienvenida, nurture, ventas)</td><td>$600</td></tr>
+      <tr><td>Newsletters mensuales</td><td>$350/mes</td></tr>
+    </tbody>
+  </table>
+
+  <div class="page-number">P.06</div>
+  <div class="watermark">MM Agency</div>
+</section>
+
+<!-- ============ PÁGINA 7: TRACKING & ANALÍTICA ============ -->
+<section class="page accent-green">
+  <div class="slide-header">
+    <div class="label">// 07 — Tracking &amp; Analítica</div>
+    <h2>Tracking &amp; Analítica</h2>
+    <p>Medir bien es la diferencia entre optimizar y adivinar.</p>
+  </div>
+
+  <table class="services-table">
+    <thead>
+      <tr>
+        <th>Servicio</th>
+        <th>Precio</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr><td>Instalación Google Tag Manager</td><td>$150</td></tr>
+      <tr><td>Instalación y configuración GA4</td><td>$200</td></tr>
+      <tr><td>Configuración Meta Pixel + eventos</td><td>$200</td></tr>
+      <tr><td>Dashboard de reportes mensuales</td><td>$250/mes</td></tr>
+    </tbody>
+  </table>
+
+  <div class="page-number">P.07</div>
+  <div class="watermark">MM Agency</div>
+</section>
+
+<!-- ============ PÁGINA 8: CONTENIDO ============ -->
+<section class="page accent-pink">
+  <div class="slide-header">
+    <div class="label">// 08 — Contenido</div>
+    <h2>Contenido</h2>
+    <p>Creatividad y copy que mueven la aguja.</p>
+  </div>
+
+  <table class="services-table">
+    <thead>
+      <tr>
+        <th>Servicio</th>
+        <th>Precio</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr><td>Creación de contenido redes (12 piezas/mes)</td><td>$600/mes</td></tr>
+      <tr><td>Calendario editorial mensual</td><td>$200/mes</td></tr>
+      <tr><td>Copywriting web (página completa)</td><td>$450</td></tr>
+      <tr><td>Copywriting ads (pack 5 ads)</td><td>$250</td></tr>
+      <tr><td>Guiones para video (pack 4)</td><td>$300</td></tr>
+    </tbody>
+  </table>
+
+  <div class="page-number">P.08</div>
+  <div class="watermark">MM Agency</div>
+</section>
+
+<!-- ============ PÁGINA 9: ESTRATEGIA, CONSULTORÍA & SEO ============ -->
+<section class="page accent-orange">
+  <div class="slide-header">
+    <div class="label">// 09 — Estrategia, Consultoría &amp; SEO</div>
+    <h2>Estrategia &amp; SEO</h2>
+    <p>Auditorías, planes de 90 días y posicionamiento orgánico.</p>
+  </div>
+
+  <table class="services-table">
+    <thead>
+      <tr>
+        <th>Servicio</th>
+        <th>Precio</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr><td>Auditoría de marketing digital</td><td>$400</td></tr>
+      <tr><td>Estrategia de marketing (plan 90 días)</td><td>$1,000</td></tr>
+      <tr><td>Consultoría 1-a-1 por hora</td><td>$100/hora</td></tr>
+      <tr><td>Auditoría SEO</td><td>$350</td></tr>
+      <tr><td>SEO on-page (optimización web)</td><td>$700</td></tr>
+      <tr><td>SEO local (Google Business Profile)</td><td>$350 + $150/mes</td></tr>
+    </tbody>
+  </table>
+
+  <div class="page-number">P.09</div>
+  <div class="watermark">MM Agency</div>
+</section>
+
+<!-- ============ PÁGINA 10: CONTACTO ============ -->
+<section class="page contact-page">
+  <div class="contact-top">
+    <div class="label">// 11 — Contacto</div>
+    <h1 class="contact-name">Martin<br>Mercedes.</h1>
+    <div class="contact-role">Founder · MM Agency</div>
+  </div>
+
+  <div class="contact-details">
+    <div class="contact-row">
+      <div class="field">WhatsApp</div>
+      <div class="value">+1 809 962 3868</div>
+    </div>
+    <div class="contact-row">
+      <div class="field">Email</div>
+      <div class="value">martinmercedes100@gmail.com</div>
+    </div>
+    <div class="contact-row">
+      <div class="field">Ubicación</div>
+      <div class="value">Santo Domingo, República Dominicana</div>
+    </div>
+  </div>
+
+  <div class="contact-footer">
+    <img src="../branding/logo/transparent/mm-v7-rect-box-clean-transparent.png" alt="MM Agency" class="contact-footer-logo">
+    <div class="contact-footer-text">
+      Santo Domingo<br>
+      República Dominicana
+    </div>
+  </div>
+</section>
+
+</body>
+</html>

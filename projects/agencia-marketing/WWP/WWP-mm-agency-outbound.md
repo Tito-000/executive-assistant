@@ -12,11 +12,11 @@
 
 ## Posicionamiento Adaptado al Outbound
 
-> **MM Agency — Adquisición de pacientes nuevos para clínicas de salud y estética con publicidad digital.**
+> **MM Agency — Embudos de venta completos para clínicas de salud y estética que quieren crecer.**
 
-**Diferencia clave con el inbound:** En el inbound el prospecto ya está buscando. En el outbound Martin interrumpe — el mensaje tiene que ganarse los primeros 5 segundos de atención en un canal saturado de spam. El gancho principal ya no es "especialista vs generalista" (muy abstracto), sino **números reales del gremio**: "generé 85 pacientes interesados en 60 días para una clínica médica en RD con Google Ads".
+**Diferencia clave con el inbound:** En el inbound el prospecto ya está buscando. En el outbound Martin interrumpe — el mensaje tiene que ganarse los primeros 5 segundos de atención en un canal saturado de spam. El gancho principal ya no es "especialista vs generalista" (muy abstracto), sino **números reales del gremio**: "armé un embudo completo para una clínica médica en RD y en 60 días generó 85 pacientes interesados".
 
-**Activo diferenciador clave (anónimo):** En una clínica médica en RD que manejo actualmente con Google Ads, en los últimos 60 días se generaron **85 pacientes interesados** que llenaron el formulario de la landing page. Este número es oro en el outbound — es concreto, es real, es del mismo gremio, y no requiere revelar nombres de clientes.
+**Activo diferenciador clave (anónimo):** En una clínica médica en RD que manejo actualmente, armé el embudo completo (landing + tráfico con Google Ads + CRM + seguimiento por WhatsApp) y en los últimos 60 días se generaron **85 pacientes interesados** que llenaron el formulario de la landing page. Este número es oro en el outbound — es concreto, es real, es del mismo gremio, y no requiere revelar nombres de clientes.
 
 **Regla de uso del caso:** NUNCA mencionar el nombre de la clínica, la especialidad médica, ni el monto de inversión. Solo el número y el plazo: "85 pacientes interesados en 60 días". Mantener el anonimato protege al cliente y además funciona mejor — el prospecto asume que podría ser su misma especialidad.
 
@@ -30,7 +30,7 @@
 
 A diferencia del inbound (donde el prospecto ya llega buscando), la mayoría de doctores dueños de clínicas en RD **no están buscando agencia de marketing**. Saben que su clínica "podría crecer más", pero no asocian ese deseo con publicidad digital específicamente. Muchos piensan que "Instagram orgánico es suficiente" o que "los pacientes llegan por referidos, siempre ha sido así".
 
-**Jugada:** En outbound hay que despertar conciencia del problema antes de proponer la solución. El mensaje no puede asumir que el prospecto sabe qué es un funnel, ni que tiene claro por qué Meta Ads supera a "impulsar publicación". La apertura debe nombrar una observación concreta de SU clínica que lo haga pensar "mmm, tiene razón".
+**Jugada:** En outbound hay que despertar conciencia del problema antes de proponer la solución. El mensaje no puede asumir que el prospecto sabe qué es un embudo de venta, ni que tiene claro por qué armar un sistema completo supera a "impulsar publicación". La apertura debe nombrar una observación concreta de SU clínica que lo haga pensar "mmm, tiene razón".
 
 ---
 
@@ -46,12 +46,12 @@ El nicho clínicas en RD está **menos expuesto** a agencias digitales que los c
 
 ## Core Mechanism (adaptado al outbound)
 
-**"Especialista en pacientes, no en redes sociales genéricas — con números reales del gremio médico."**
+**"Sistema completo de adquisición de pacientes para clínicas — embudo armado bajo un solo responsable, con números reales del gremio médico."**
 
 Descomposición para el outbound:
 
-1. **Especialización de nicho** — no solo "publicidad digital", sino "publicidad digital para clínicas médicas". La diferencia es crítica en el primer mensaje.
-2. **Números reales del gremio** — "85 pacientes interesados en 60 días con Google Ads en una clínica médica en RD que manejo" hace más por la confianza que cualquier credencial abstracta. Los doctores confían en números concretos de su mismo gremio.
+1. **Especialización de nicho + sistema completo** — no solo "publicidad digital para clínicas", sino "el embudo entero (landing + tráfico + CRM + seguimiento) armado para clínicas médicas". La diferencia es crítica en el primer mensaje.
+2. **Números reales del gremio** — "85 pacientes interesados en 60 días con un embudo completo armado para una clínica médica en RD" hace más por la confianza que cualquier credencial abstracta. Los doctores confían en números concretos de su mismo gremio.
 3. **Observación concreta del prospecto** — mencionar algo real de SU clínica (un post, un servicio, una mención) demuestra que Martin no está enviando plantilla.
 4. **Oferta reversible sin costo** — diagnóstico gratuito de 20 min elimina la fricción de compromiso. El prospecto no arriesga nada.
 5. **Atención directa del fundador** — Martin escribe, Martin responde, Martin llama. En outbound esto es diferenciador inmediato frente al "equipo comercial" de agencias grandes.
@@ -144,7 +144,7 @@ Si pasa ese filtro de 2 segundos, lee las siguientes 4 líneas. Ahí el mensaje 
 
 ### Market Awareness
 
-**Nivel 1–2/4 — Unaware / Problem Aware.** No educar sobre qué es Meta Ads (eso se hace en la llamada). En outbound el objetivo es despertar el problema con una observación concreta y ofrecer la conversación.
+**Nivel 1–2/4 — Unaware / Problem Aware.** No educar sobre qué es un embudo de venta (eso se hace en la llamada). En outbound el objetivo es despertar el problema con una observación concreta y ofrecer la conversación.
 
 ### Market Sophistication
 
@@ -200,15 +200,15 @@ Ven el nombre de Martin y las primeras 2 líneas del mensaje en el preview. Esas
 Hola Dra. [Nombre], vi su post de [tratamiento/caso específico real] — los
 resultados se ven increíbles, especialmente [detalle concreto].
 
-Soy Martin Mercedes. Manejo publicidad digital para clínicas médicas en RD.
-En una clínica que manejo actualmente, en los últimos 60 días generamos
-85 pacientes interesados con Google Ads. Noté que su Instagram tiene buena
-presencia orgánica pero no veo campañas pagadas activas para atraer
-pacientes nuevos.
+Soy Martin Mercedes. Armo embudos de venta completos para clínicas médicas
+en RD (landing + tráfico + CRM + seguimiento). En una clínica que manejo
+actualmente, el embudo generó 85 pacientes interesados en 60 días. Noté
+que su Instagram tiene buena presencia orgánica pero no veo un sistema
+armado para convertir visitas en pacientes nuevos.
 
 ¿Le interesaría una llamada de 20 minutos? Sin venderle nada — le muestro
-exactamente qué está dejando sobre la mesa y qué se podría hacer. Si no hay
-fit, se lo digo directo.
+exactamente qué está dejando sobre la mesa y cómo se vería el embudo para
+su clínica. Si no hay fit, se lo digo directo.
 
 Mi agenda: [calendly]
 ```
@@ -246,10 +246,11 @@ Soy Martin Mercedes, fundador de MM Agency. Obtuve su contacto a través de
 [fuente real: su Instagram / Google / referencia]. Le escribo porque vi
 [detalle real y específico de su clínica].
 
-Me especializo en una sola cosa: conseguir pacientes nuevos para clínicas
-médicas en RD con publicidad digital (Google Ads + Meta Ads). En una
-clínica que manejo actualmente, en los últimos 60 días generamos 85
-pacientes interesados con Google Ads.
+Me especializo en una sola cosa: armar embudos de venta completos para
+clínicas médicas en RD — landing, tráfico pagado (Google Ads + Meta Ads),
+CRM y seguimiento automatizado por WhatsApp, todo conectado. En una
+clínica que manejo actualmente, el embudo generó 85 pacientes interesados
+en los últimos 60 días.
 
 Le quería ofrecer un diagnóstico gratuito de 20 minutos donde le muestro
 qué oportunidades veo específicamente para su clínica. Sin compromiso — si
@@ -285,10 +286,10 @@ LinkedIn es el canal profesional. Cuando la Dra. entra a LinkedIn, está en modo
 **Paso A — Solicitud de conexión con nota corta (máximo 300 caracteres):**
 
 ```
-Dra. [Nombre], buenos días. Soy Martin Mercedes, especialista en
-adquisición de pacientes con publicidad digital para clínicas médicas en
-RD. En una clínica que manejo generamos 85 pacientes interesados en 60
-días con Google Ads. Me gustaría conectar. Saludos cordiales.
+Dra. [Nombre], buenos días. Soy Martin Mercedes. Armo embudos de venta
+completos para clínicas médicas en RD (landing + tráfico + CRM +
+seguimiento). En una clínica que manejo, el embudo generó 85 pacientes
+interesados en 60 días. Me gustaría conectar. Saludos cordiales.
 ```
 
 **Paso B — Mensaje completo al aceptar la conexión:**
@@ -296,12 +297,12 @@ días con Google Ads. Me gustaría conectar. Saludos cordiales.
 ```
 Dra. [Nombre], muchas gracias por aceptar la conexión.
 
-Como mencioné, me especializo en adquisición de pacientes con publicidad
-digital (Google Ads + Meta Ads) para clínicas médicas en República
-Dominicana. Para darle un dato concreto: en una de las clínicas que
-manejo actualmente, en los últimos 60 días generamos 85 pacientes
-interesados que llenaron el formulario de la landing — solo con Google
-Ads.
+Como mencioné, me especializo en armar embudos de venta completos
+(landing + tráfico pagado con Google Ads + Meta Ads + CRM + seguimiento
+automatizado) para clínicas médicas en República Dominicana. Para darle
+un dato concreto: en una de las clínicas que manejo actualmente, el
+embudo completo que armé generó 85 pacientes interesados en los últimos
+60 días — pacientes reales que llenaron el formulario de la landing.
 
 Vi su perfil y específicamente [detalle real: su trayectoria, una
 publicación, su clínica, un servicio]. Creo que hay oportunidad concreta
@@ -343,7 +344,7 @@ Email es el canal más formal. La Dra. revisa email 1–2 veces al día, general
 1. `Dra. [Apellido] — 85 pacientes interesados en 60 días`
 2. `[Nombre de la Clínica] + adquisición de pacientes: una observación`
 3. `Dra. [Apellido], 20 minutos sobre pacientes nuevos`
-4. `Google Ads para [Nombre Clínica] — un dato concreto`
+4. `Embudo de pacientes para [Nombre Clínica] — un dato concreto`
 
 **Plantilla Email completo:**
 
@@ -353,19 +354,20 @@ Subject: Dra. [Apellido] — 85 pacientes interesados en 60 días
 Estimada Dra. [Nombre Completo],
 
 Mi nombre es Martin Mercedes, fundador de MM Agency. Me especializo en
-una sola cosa: conseguir pacientes nuevos para clínicas médicas en
-República Dominicana a través de publicidad digital (Google Ads + Meta
-Ads).
+una sola cosa: armar embudos de venta completos para clínicas médicas en
+República Dominicana — landing de conversión, tráfico pagado (Google Ads
++ Meta Ads), CRM con automatización y seguimiento por WhatsApp, todo
+bajo un solo responsable.
 
 Le escribo porque vi [detalle real y específico: su clínica en [zona], un
 servicio que ofrece, un reconocimiento reciente, una publicación]. Me
 pareció que su modelo tiene un fit claro con lo que trabajo.
 
 Para darle un dato concreto de lo que hago: en una de las clínicas
-médicas que manejo actualmente en RD, en los últimos 60 días generamos
-85 pacientes interesados que llenaron el formulario de la landing —
-únicamente con Google Ads. Resultados del mismo perfil son replicables
-en clínicas con su modelo.
+médicas que manejo actualmente en RD, el embudo completo que armé
+generó 85 pacientes interesados en los últimos 60 días — pacientes
+reales que llenaron el formulario de la landing. Resultados del mismo
+perfil son replicables en clínicas con su modelo.
 
 No quiero venderle nada por correo — lo que le ofrezco es un diagnóstico
 gratuito de 20 minutos donde le muestro:
@@ -389,7 +391,7 @@ Saludos cordiales,
 
 Martin Mercedes
 Fundador, MM Agency
-Adquisición de pacientes con publicidad digital
+Embudos de venta completos para clínicas médicas
 WhatsApp: [número]
 Instagram: [@usuario]
 Agenda: [calendly]
@@ -496,11 +498,11 @@ DRA: "Sí, no lo he visto / no, no me llegó / sí, lo vi"
 MARTIN: "Perfecto. Le cuento rápido en 20 segundos y si le
 interesa seguimos, si no, no le quito más tiempo.
 
-Me especializo en adquisición de pacientes nuevos para clínicas
-médicas en RD con publicidad digital. Para darle un número
-concreto: en una clínica médica que manejo actualmente, en los
-últimos 60 días generamos 85 pacientes interesados solo con
-Google Ads.
+Me especializo en armar embudos de venta completos para
+clínicas médicas en RD — landing, tráfico, CRM y seguimiento
+automatizado. Para darle un número concreto: en una clínica
+médica que manejo actualmente, el embudo completo generó 85
+pacientes interesados en los últimos 60 días.
 
 La llamé porque vi [detalle real de su clínica] y pensé que
 podía haber un fit. Lo que le quiero proponer es una llamada
@@ -662,7 +664,7 @@ Cinco ángulos distintos de apertura. Elegir 1 según el canal, el contexto del 
 
 **Hook 2 — Los números reales del gremio (todos los canales) — HOOK PRINCIPAL**
 
-> "En una clínica médica en RD que manejo actualmente, en los últimos 60 días generamos 85 pacientes interesados con Google Ads."
+> "En una clínica médica en RD que manejo actualmente, el embudo completo que armé generó 85 pacientes interesados en los últimos 60 días."
 
 *Por qué funciona:* Prueba social dura y concreta. Un número específico con un plazo específico es 10x más convincente que cualquier credencial abstracta. Al mantener la clínica anónima, el prospecto asume que podría ser de su mismo sub-nicho médico. Es el hook más poderoso del outbound y debe estar presente en todos los canales.
 
@@ -670,7 +672,7 @@ Cinco ángulos distintos de apertura. Elegir 1 según el canal, el contexto del 
 
 **Hook 3 — La observación profesional (IG / LinkedIn / Email)**
 
-> "Noté que su Instagram tiene buena presencia orgánica pero no veo campañas pagadas activas para atraer pacientes nuevos."
+> "Noté que su Instagram tiene buena presencia orgánica pero no veo un sistema armado para convertir esas visitas en pacientes nuevos."
 
 *Por qué funciona:* Nombra un gap real y específico sin juzgar. Activa curiosidad ("¿será que necesito eso?") en vez de defensa ("me están diciendo que hago algo mal").
 
@@ -771,13 +773,14 @@ Cuando la Dra. responde pero no agenda inmediatamente, cómo manejar las 4 objec
 
 **Respuesta:**
 ```
-Totalmente válido preguntar, Doctora. El precio depende del canal que
-tiene más sentido para su clínica — Meta Ads, Google Ads o ambos — y eso
-solo lo sabemos después de entender su modelo en 4–5 preguntas.
+Totalmente válido preguntar, Doctora. El precio del embudo completo
+depende de qué piezas ya tiene armadas (landing, CRM, campañas) y qué
+hay que construir desde cero. Eso solo lo sabemos después de entender
+su modelo en 4–5 preguntas.
 
 Por eso la llamada de 20 minutos: le pregunto lo necesario, le recomiendo
-exactamente qué canal y le digo el rango de inversión. Sin sorpresas y
-sin presión de contratar.
+exactamente qué piezas del embudo tiene sentido armar primero y le digo
+el rango de inversión. Sin sorpresas y sin presión de contratar.
 
 ¿Le agendo en mi calendly o prefiere que le proponga 2–3 horarios esta
 semana?
@@ -859,8 +862,8 @@ El outbound y el inbound tienen **un solo destino**: la llamada de diagnóstico 
 - **Un solo calendly** — mismo link en ads, landing, DMs, WhatsApp, LinkedIn, email, firmas
 - **Un solo script de llamada** — el del WWP inbound (Paso 4 del journey)
 - **Un solo flujo post-llamada** — propuesta en 48h, contrato simple, onboarding
-- **El mismo activo diferenciador** — "85 pacientes interesados en 60 días con Google Ads en una clínica médica en RD" es oro puro y funciona en inbound y outbound
-- **El mismo posicionamiento** — "especialista en adquisición, no generalista"
+- **El mismo activo diferenciador** — "85 pacientes interesados en 60 días con un embudo completo armado para una clínica médica en RD" es oro puro y funciona en inbound y outbound
+- **El mismo posicionamiento** — "embudos de venta completos, no pedazos sueltos"
 
 **La diferencia** está solo en el origen del prospecto:
 - Inbound: el prospecto te busca (ad → landing → calendly)
@@ -904,7 +907,7 @@ Ajustar las plantillas cada 4 semanas basándose en los datos reales.
 
 **Oferta gancho:** Diagnóstico gratuito de 20 minutos (mismo que inbound)
 
-**Activo diferenciador clave:** "85 pacientes interesados en 60 días con Google Ads en una clínica médica en RD" — caso anónimo real, activo actualmente, sin revelar nombre ni especialidad ni monto de inversión
+**Activo diferenciador clave:** "85 pacientes interesados en 60 días con un embudo completo armado (landing + tráfico + CRM + seguimiento) para una clínica médica en RD" — caso anónimo real, activo actualmente, sin revelar nombre ni especialidad ni monto de inversión
 
 **Destino único:** Calendly de 20 minutos con Martin
 
@@ -932,7 +935,7 @@ Ajustar las plantillas cada 4 semanas basándose en los datos reales.
 - Usar el término "PyMEs" o lenguaje de e-commerce
 - Prometer "mejorar engagement" o "aumentar seguidores" (el doctor no quiere seguidores, quiere pacientes)
 
-**La credencial central en outbound:** Especialización de nicho médico + número real concreto ("85 pacientes interesados en 60 días con Google Ads") + atención directa del fundador + oferta reversible gratuita + **llamada telefónica personal 24h después del mensaje**. Los 5 elementos juntos son lo que convierte un contacto frío en una reunión agendada.
+**La credencial central en outbound:** Especialización de nicho médico + sistema completo (embudo armado, no pauta suelta) + número real concreto ("85 pacientes interesados en 60 días con el embudo completo") + atención directa del fundador + oferta reversible gratuita + **llamada telefónica personal 24h después del mensaje**. Los 6 elementos juntos son lo que convierte un contacto frío en una reunión agendada.
 
 **La jugada ganadora del outbound de MM Agency:** El mensaje NO vende — crea el rastro. La **llamada telefónica con la excusa del mensaje previo** es el verdadero motor de conversión. Por eso el volumen es: 15–20 mensajes + 15–20 llamadas por semana. Nunca enviar mensaje sin planear llamar al día siguiente.
 
