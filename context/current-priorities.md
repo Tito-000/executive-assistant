@@ -1,13 +1,15 @@
 # Prioridades Actuales
 
-_Última actualización: 2026-03-27_
+_Última actualización: 2026-04-13_
 
-## Top 4 ahora mismo
+## Top 3 ahora mismo
 
-1. **Proyecto Anabel Mercedes** — contenido + ManyChat + landing. Deadline: 5 abr 2026
-2. **Terminar la página web de la Dra. Aurys Mercedes** — cliente activo, entrega pendiente (11% completado)
-3. **Formalizar y lanzar la agencia de marketing** — identidad, paquetes, outreach, contenido. Meta: 2-3 clientes en 60 días
-4. **Terminar los embudos de Immunotec** — crítico para el avance hacia rango Diamante
+1. **Proyecto Anabel Mercedes** — contenido + ManyChat + landing. Deadline original: 5 abr 2026 (vencido — revisar estado)
+2. **Formalizar y lanzar la agencia de marketing** — identidad, paquetes, outreach, contenido. Meta: 2-3 clientes en 60 días
+3. **Terminar los embudos de Immunotec** — crítico para el avance hacia rango Diamante
+
+## Completado recientemente
+- ✅ **Página web Dra. Aurys Mercedes** — entregada (2026-04-13)
 
 ## Secundario
 - **Resolver tasks vencidos del Memorama** — 8 tasks PAST_DUE (GTM, GA4, Meta Pixel). Se atiende cuando haya espacio

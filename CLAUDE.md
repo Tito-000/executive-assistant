@@ -71,6 +71,9 @@ Los skills viven en `.claude/skills/`. Cada skill tiene su carpeta con un `SKILL
 
 Los skills se construyen cuando Martin nota que repite la misma solicitud varias veces. No crear skills anticipadamente.
 
+### Skills destacados
+- `/blog-post [keyword]` — Genera un artículo de blog completo para MM Agency: keyword research, artículo 3,000-4,000 palabras, infografías HTML con brand colors, imágenes IA, SEO completo, listo para publicar. Estilo NoGood.
+
 ### Backlog de skills a construir
 Ver `references/skills-backlog.md`.
 

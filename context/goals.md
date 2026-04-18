@@ -17,5 +17,5 @@ Aumentar ingresos mensuales por encima de $2,000/mes.
 
 ## Metas en curso (clientes)
 
-- [ ] **Terminar página Dra. Aurys Mercedes** — en progreso
+- [x] **Terminar página Dra. Aurys Mercedes** — completada 2026-04-13
 - [ ] **Completar setup Memorama** — Fases 5–9 pendientes, deadline 23 de marzo 2026
