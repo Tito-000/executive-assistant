@@ -1,0 +1,658 @@
+/* =========================================================
+   BLOG PAGE — MM Agency
+   Estructura NoGood: hero → tabs → featured → all → CTA → newsletter → footer
+   ========================================================= */
+
+/* ============================================= */
+/* 1. NEWSLETTER HERO                              */
+/* ============================================= */
+.blog-hero {
+  position: relative;
+  padding: clamp(140px, 16vw, 240px) 0 clamp(60px, 8vw, 100px);
+  background: #1A1A1E;
+  text-align: center;
+  overflow: hidden;
+}
+
+.blog-hero-glow {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 1200px;
+  height: 800px;
+  border-radius: 50%;
+  background: radial-gradient(ellipse, rgba(113, 61, 255, 0.35) 0%, rgba(113, 61, 255, 0.15) 30%, rgba(113, 61, 255, 0.05) 55%, transparent 75%);
+  filter: blur(40px);
+  pointer-events: none;
+  z-index: 0;
+}
+
+.blog-hero-inner {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0 24px;
+}
+
+.blog-hero-title {
+  font-family: 'Orbitron', system-ui, sans-serif;
+  font-size: clamp(34px, 5vw, 68px);
+  font-weight: 800;
+  line-height: 1.08;
+  letter-spacing: -0.035em;
+  color: #fff;
+  margin: 0 0 48px;
+  max-width: 820px;
+}
+
+/* Hero search */
+.blog-hero-search {
+  position: relative;
+  max-width: 480px;
+  width: 100%;
+}
+
+.blog-hero-search-icon {
+  position: absolute;
+  left: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: rgba(255, 255, 255, 0.35);
+  pointer-events: none;
+}
+
+.blog-hero-input {
+  width: 100%;
+  font-family: 'Inter', sans-serif;
+  font-size: 15px;
+  color: #fff;
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 8px;
+  padding: 16px 24px 16px 52px;
+  outline: none;
+  transition: border-color 0.2s ease;
+}
+
+.blog-hero-input::placeholder {
+  color: rgba(255, 255, 255, 0.35);
+}
+
+.blog-hero-input:focus {
+  border-color: rgba(255, 255, 255, 0.4);
+}
+
+/* ============================================= */
+/* 2. CATEGORY TABS                                */
+/* ============================================= */
+.blog-tabs-wrap {
+  background: #121214;
+  padding: 0 0 clamp(32px, 4vw, 48px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.blog-tabs {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  overflow-x: auto;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+  padding: clamp(20px, 3vw, 32px) 0;
+}
+
+.blog-tabs::-webkit-scrollbar {
+  display: none;
+}
+
+.blog-tab {
+  flex-shrink: 0;
+  padding: 10px 22px;
+  font-family: 'Inter', sans-serif;
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  color: rgba(255, 255, 255, 0.5);
+  background: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  white-space: nowrap;
+}
+
+.blog-tab:hover {
+  color: rgba(255, 255, 255, 0.8);
+  border-color: rgba(255, 255, 255, 0.25);
+}
+
+.blog-tab--active {
+  color: #121214;
+  background: #fff;
+  border-color: #fff;
+}
+
+.blog-tab--active:hover {
+  color: #121214;
+  background: #e8e8e8;
+}
+
+/* ============================================= */
+/* 3. SHARED: container + grid                     */
+/* ============================================= */
+.blog-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+.blog-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+/* ============================================= */
+/* 4. FEATURED ARTICLES — horizontal track         */
+/* ============================================= */
+.blog-featured {
+  background: #121214;
+  padding: clamp(48px, 6vw, 80px) 0 clamp(40px, 5vw, 64px);
+}
+
+/* Featured header — title + arrows */
+.blog-featured-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: clamp(28px, 3.5vw, 44px);
+}
+
+.blog-featured-title {
+  font-family: 'Inter', system-ui, sans-serif;
+  font-size: clamp(28px, 4vw, 48px);
+  font-weight: 800;
+  line-height: 1.1;
+  letter-spacing: -0.03em;
+  color: #fff;
+  margin: 0;
+}
+
+.blog-featured-title em {
+  font-style: italic;
+}
+
+.blog-featured-arrows {
+  display: flex;
+  gap: 12px;
+  flex-shrink: 0;
+}
+
+.blog-arrow {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  background: rgba(255, 255, 255, 0.06);
+  color: rgba(255, 255, 255, 0.6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.blog-arrow svg {
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.blog-arrow:hover {
+  border-color: rgba(255, 255, 255, 0.5);
+  background: rgba(255, 255, 255, 0.12);
+  color: #fff;
+}
+
+.blog-featured-track {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  overflow: hidden;
+}
+
+.blog-featured-track::-webkit-scrollbar {
+  display: none;
+}
+
+/* Carousel dots */
+.blog-dots {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  margin-top: clamp(32px, 4vw, 48px);
+}
+
+.blog-dot {
+  width: 32px;
+  height: 3px;
+  border-radius: 2px;
+  background: rgba(255, 255, 255, 0.15);
+  transition: background 0.3s ease;
+}
+
+.blog-dot--active {
+  background: rgba(255, 255, 255, 0.7);
+}
+
+/* ============================================= */
+/* 5. COVER ART — rich geometric CSS shapes        */
+/* ============================================= */
+.blog-cover-art {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  pointer-events: none;
+  overflow: hidden;
+}
+
+/* — Circles — */
+.blog-art-circle {
+  width: 130px;
+  height: 130px;
+  border-radius: 50%;
+  border: 3px solid rgba(255, 255, 255, 0.2);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.blog-art-circle--sm {
+  width: 55px;
+  height: 55px;
+  top: 25%;
+  left: 70%;
+  transform: translate(-50%, -50%);
+  border-width: 2px;
+  border-color: rgba(255, 255, 255, 0.12);
+}
+
+/* — Bars (horizontal stripe accents) — */
+.blog-art-bar {
+  position: absolute;
+  height: 3px;
+  border-radius: 2px;
+  background: rgba(255, 255, 255, 0.12);
+}
+
+.blog-art-bar--1 {
+  width: 60%;
+  top: 30%;
+  left: 20%;
+}
+
+.blog-art-bar--2 {
+  width: 40%;
+  bottom: 25%;
+  right: 15%;
+}
+
+/* — Squares — */
+.blog-art-square {
+  width: 100px;
+  height: 100px;
+  border: 3px solid rgba(255, 255, 255, 0.2);
+  transform: rotate(12deg);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-top: -50px;
+  margin-left: -50px;
+}
+
+.blog-art-square--sm {
+  width: 45px;
+  height: 45px;
+  top: 20%;
+  left: 22%;
+  margin: 0;
+  border-width: 2px;
+  border-color: rgba(255, 255, 255, 0.12);
+  transform: rotate(-8deg);
+}
+
+/* — Stripes (diagonal pattern like NoGood checkered covers) — */
+.blog-art-stripe {
+  position: absolute;
+  width: 140%;
+  height: 18px;
+  background: rgba(255, 255, 255, 0.06);
+  transform: rotate(-35deg);
+}
+
+.blog-art-stripe--1 { top: 15%; left: -20%; }
+.blog-art-stripe--2 { top: 40%; left: -20%; }
+.blog-art-stripe--3 { top: 65%; left: -20%; }
+
+/* — Torus (thick ring) — */
+.blog-art-torus {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  border: 18px solid rgba(255, 255, 255, 0.15);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.blog-art-torus--sm {
+  width: 50px;
+  height: 50px;
+  border-width: 8px;
+  top: 22%;
+  left: 72%;
+  border-color: rgba(255, 255, 255, 0.1);
+}
+
+/* ============================================= */
+/* CARD LINK WRAPPER                               */
+/* ============================================= */
+.blog-card-link {
+  text-decoration: none;
+  color: inherit;
+  display: flex;
+}
+
+/* ============================================= */
+/* 6. CARD OVERRIDES for blog page                 */
+/* ============================================= */
+
+/* Headline — slightly bigger than home card titles */
+.blog-card-headline {
+  font-family: 'Inter', system-ui, sans-serif;
+  font-weight: 700;
+  font-size: 17px;
+  line-height: 1.3;
+  color: #fff;
+  margin: 0;
+  letter-spacing: -0.01em;
+}
+
+/* Author row */
+.blog-card-author {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: auto;
+  padding-top: 14px;
+  border-top: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.blog-avatar {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #713DFF 0%, #C8A4FF 100%);
+  color: #fff;
+  font-family: 'Inter', sans-serif;
+  font-size: 12px;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.blog-author-info {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.15;
+}
+
+.blog-author-name {
+  font-family: 'Inter', sans-serif;
+  font-size: 13px;
+  color: rgba(255, 255, 255, 0.65);
+  font-weight: 600;
+}
+
+.blog-author-last {
+  font-family: 'Inter', sans-serif;
+  font-size: 12px;
+  color: rgba(255, 255, 255, 0.35);
+  font-weight: 400;
+}
+
+/* Meta dot separator */
+.blog-meta-dot {
+  color: rgba(255, 255, 255, 0.25);
+}
+
+/* ============================================= */
+/* 7. ALL ARTICLES SECTION                         */
+/* ============================================= */
+.blog-all {
+  background: #121214;
+  padding: clamp(48px, 6vw, 80px) 0 clamp(60px, 8vw, 100px);
+}
+
+.blog-all-title {
+  font-family: 'Orbitron', system-ui, sans-serif;
+  font-size: clamp(24px, 3.2vw, 40px);
+  font-weight: 800;
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+  color: #fff;
+  margin: 0 0 clamp(36px, 4.5vw, 56px);
+}
+
+/* ============================================= */
+/* 8. NEWSLETTER FOOTER CTA                        */
+/* ============================================= */
+.blog-newsletter {
+  position: relative;
+  padding: clamp(80px, 10vw, 140px) 0;
+  background: #1A1A1E;
+  text-align: center;
+  overflow: hidden;
+}
+
+.blog-newsletter-glow {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 700px;
+  height: 400px;
+  border-radius: 50%;
+  background: radial-gradient(ellipse, rgba(113, 61, 255, 0.08) 0%, transparent 70%);
+  pointer-events: none;
+  z-index: 0;
+}
+
+.blog-newsletter-inner {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.blog-newsletter-title {
+  font-family: 'Inter', system-ui, sans-serif;
+  font-size: clamp(28px, 4.2vw, 56px);
+  font-weight: 800;
+  line-height: 1.08;
+  letter-spacing: -0.035em;
+  color: #fff;
+  margin: 0 0 40px;
+  max-width: 720px;
+}
+
+.blog-newsletter-form {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  max-width: 480px;
+  width: 100%;
+}
+
+.blog-newsletter-input {
+  flex: 1;
+  font-family: 'Inter', sans-serif;
+  font-size: 15px;
+  color: #fff;
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 8px;
+  padding: 16px 24px;
+  outline: none;
+  transition: border-color 0.2s ease;
+}
+
+.blog-newsletter-input::placeholder {
+  color: rgba(255, 255, 255, 0.35);
+}
+
+.blog-newsletter-input:focus {
+  border-color: rgba(255, 255, 255, 0.4);
+}
+
+.blog-newsletter-submit {
+  flex-shrink: 0;
+  padding: 16px 32px;
+  font-family: 'Inter', sans-serif;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  color: #121214;
+  background: #fff;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.25s ease, transform 0.2s ease;
+}
+
+.blog-newsletter-submit:hover {
+  background: #e0e0e0;
+  transform: scale(1.02);
+}
+
+/* ============================================= */
+/* RESPONSIVE                                      */
+/* ============================================= */
+@media (max-width: 960px) {
+  .blog-featured-track,
+  .blog-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+
+  .blog-featured-track .blog-card-link:nth-child(3) {
+    display: none;
+  }
+
+  .blog-tabs {
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .blog-featured-title {
+    font-size: clamp(24px, 3.5vw, 36px);
+  }
+}
+
+@media (max-width: 640px) {
+  .blog-hero {
+    padding: clamp(120px, 14vw, 160px) 0 clamp(40px, 6vw, 64px);
+  }
+
+  .blog-hero-title {
+    font-size: clamp(24px, 6.5vw, 38px);
+  }
+
+
+  .blog-container {
+    padding: 0 16px;
+  }
+
+  .blog-featured-header {
+    flex-wrap: wrap;
+    gap: 16px;
+  }
+
+  .blog-featured-title {
+    font-size: clamp(22px, 6vw, 32px);
+  }
+
+  .blog-arrow {
+    width: 40px;
+    height: 40px;
+  }
+
+  /* Featured → horizontal carousel */
+  .blog-featured-track {
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+    gap: 16px;
+    scrollbar-width: none;
+  }
+  .blog-featured-track::-webkit-scrollbar { display: none; }
+  .blog-featured-track .blog-card-link {
+    flex: 0 0 85%;
+    scroll-snap-align: start;
+  }
+  .blog-featured-track .blog-card-link:nth-child(3) {
+    display: flex;
+  }
+
+  /* All articles → single column stack */
+  .blog-grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .blog-newsletter-title {
+    font-size: clamp(22px, 5.5vw, 34px);
+  }
+
+  .blog-newsletter-form {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .blog-newsletter-input,
+  .blog-newsletter-submit {
+    width: 100%;
+    text-align: center;
+  }
+
+  .blog-all-title {
+    font-size: clamp(20px, 5vw, 28px);
+  }
+
+
+  .blog-tabs {
+    gap: 6px;
+  }
+
+  .blog-tab {
+    padding: 8px 16px;
+    font-size: 12px;
+  }
+
+  .blog-dots {
+    margin-top: 24px;
+  }
+}

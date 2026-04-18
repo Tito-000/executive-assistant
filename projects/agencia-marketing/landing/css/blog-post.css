@@ -1,0 +1,1291 @@
+/* =========================================================
+   BLOG POST — NoGood style
+   Dark hero + white content + 3-col layout + sticky bar
+   ========================================================= */
+
+/* ============================================= */
+/* CONTAINERS                                      */
+/* ============================================= */
+.post-container-wide {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+/* ============================================= */
+/* 1. STICKY TOP BAR                               */
+/* ============================================= */
+.post-sticky-bar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  background: #fff;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+  transform: translateY(-100%);
+  transition: transform 0.3s ease;
+}
+
+.post-sticky-bar--visible {
+  transform: translateY(0);
+}
+
+/* Progress bar — purple line at bottom of sticky bar */
+.post-progress-wrap {
+  position: absolute;
+  bottom: -3px;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: rgba(0, 0, 0, 0.06);
+}
+
+.post-progress-bar {
+  height: 100%;
+  width: 0%;
+  background: #713DFF;
+  transition: width 0.15s linear;
+}
+
+.post-sticky-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 18px 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.post-sticky-title {
+  font-family: 'Inter', sans-serif;
+  font-size: 15px;
+  font-weight: 600;
+  color: #000;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 70%;
+}
+
+.post-sticky-cta {
+  font-family: 'Inter', sans-serif;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: #000;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-shrink: 0;
+  transition: opacity 0.2s;
+}
+
+.post-sticky-cta:hover {
+  opacity: 0.6;
+}
+
+/* Arrow circle */
+.post-sticky-cta-arrow {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  border: 1.5px solid #000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.post-sticky-cta-arrow svg {
+  width: 14px;
+  height: 14px;
+  fill: none;
+  stroke: #000;
+  stroke-width: 2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+/* ============================================= */
+/* 2. HERO — dark bg with wireframe grid           */
+/* ============================================= */
+.post-hero {
+  position: relative;
+  background: #121214;
+  padding: clamp(160px, 18vw, 240px) 0 clamp(80px, 10vw, 120px);
+  overflow: hidden;
+}
+
+/* Wireframe grid background — more visible like NoGood */
+.post-hero-grid {
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(rgba(255, 255, 255, 0.06) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.06) 1px, transparent 1px);
+  background-size: 48px 48px;
+  pointer-events: none;
+}
+
+.post-hero-inner {
+  position: relative;
+  z-index: 1;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 clamp(24px, 5vw, 80px);
+}
+
+/* Title — big bold italic like NoGood, left-aligned */
+.post-hero-title {
+  font-family: 'Inter', system-ui, sans-serif;
+  font-size: clamp(38px, 6.5vw, 76px);
+  font-weight: 900;
+  font-style: italic;
+  line-height: 1.0;
+  letter-spacing: -0.04em;
+  color: #fff;
+  margin: 0 0 36px;
+  max-width: 820px;
+}
+
+/* Category tags — pill style with rounded borders */
+.post-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 28px;
+}
+
+.post-tag {
+  padding: 8px 20px;
+  font-family: 'Inter', sans-serif;
+  font-size: 12px;
+  font-weight: 500;
+  color: #fff;
+  background: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  border-radius: 20px;
+}
+
+/* Excerpt */
+.post-hero-excerpt {
+  font-family: 'Inter', sans-serif;
+  font-size: clamp(14px, 1.6vw, 16px);
+  line-height: 1.65;
+  color: rgba(255, 255, 255, 0.55);
+  margin: 0 0 32px;
+  max-width: 620px;
+}
+
+/* Date */
+.post-hero-date {
+  display: block;
+  font-family: 'Inter', sans-serif;
+  font-size: 13px;
+  color: rgba(255, 255, 255, 0.4);
+  margin-bottom: 24px;
+}
+
+/* Author */
+.post-hero-author {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.post-hero-written {
+  font-family: 'Inter', sans-serif;
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.28);
+}
+
+.post-hero-author-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+/* ============================================= */
+/* 2.5. COVER IMAGE — inline within article body   */
+/* ============================================= */
+.post-cover-inline {
+  margin: 40px 0;
+}
+
+.post-cover-inline img {
+  width: 100%;
+  border-radius: 12px;
+  display: block;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.12);
+}
+
+/* ============================================= */
+/* 3. CONTENT WRAP — white background              */
+/* ============================================= */
+.post-content-wrap {
+  background: #fff;
+  padding: clamp(48px, 6vw, 80px) 24px;
+}
+
+.post-content-grid {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 220px 1fr 280px;
+  gap: 40px;
+  align-items: start;
+}
+
+/* ============================================= */
+/* 4. LEFT SIDEBAR — sticky TOC + share            */
+/* ============================================= */
+.post-toc-col {
+  position: sticky;
+  top: 80px;
+}
+
+.post-toc {
+  border-right: 1px dashed rgba(0, 0, 0, 0.12);
+  padding-right: 24px;
+}
+
+.post-toc-label {
+  font-family: 'Inter', sans-serif;
+  font-size: 13px;
+  font-weight: 700;
+  color: #000;
+  margin-bottom: 0;
+}
+
+/* TOC toggle header */
+.post-toc-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+  user-select: none;
+  margin-bottom: 18px;
+}
+
+.post-toc-toggle {
+  font-size: 18px;
+  color: rgba(0, 0, 0, 0.35);
+  transition: transform 0.2s;
+  line-height: 1;
+}
+
+.post-toc--collapsed .post-toc-toggle {
+  transform: rotate(90deg);
+}
+
+.post-toc--collapsed .post-toc-list {
+  display: none;
+}
+
+.post-toc-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.post-toc-list li {
+  margin-bottom: 14px;
+}
+
+.post-toc-list li:last-child {
+  margin-bottom: 0;
+}
+
+.post-toc-list a {
+  font-family: 'Inter', sans-serif;
+  font-size: 13px;
+  line-height: 1.4;
+  color: rgba(0, 0, 0, 0.4);
+  text-decoration: none;
+  transition: color 0.2s;
+  display: block;
+}
+
+.post-toc-list a:hover {
+  color: #000;
+}
+
+.post-toc-list a.post-toc-active {
+  color: #713DFF;
+  font-weight: 600;
+}
+
+/* Share links — plain icons like NoGood (f  in) */
+.post-share {
+  margin-top: 28px;
+  padding-top: 20px;
+}
+
+.post-share-label {
+  font-family: 'Inter', sans-serif;
+  font-size: 13px;
+  font-weight: 700;
+  color: #000;
+  margin-bottom: 14px;
+}
+
+.post-share-links {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+}
+
+.post-share-links a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  transition: opacity 0.2s;
+}
+
+.post-share-links a:hover {
+  opacity: 0.5;
+}
+
+.post-share-links a svg {
+  width: 18px;
+  height: 18px;
+  fill: #000;
+}
+
+/* ============================================= */
+/* 5. ARTICLE BODY — dark text on white            */
+/* ============================================= */
+.post-body {
+  max-width: 680px;
+  min-width: 0;
+}
+
+.post-body h2 {
+  font-family: 'Inter', system-ui, sans-serif;
+  font-size: clamp(26px, 3.2vw, 38px);
+  font-weight: 800;
+  font-style: italic;
+  line-height: 1.12;
+  letter-spacing: -0.02em;
+  color: #000;
+  margin: 56px 0 20px;
+  scroll-margin-top: 100px;
+}
+
+.post-body h2:first-of-type {
+  margin-top: 0;
+}
+
+.post-body h3 {
+  font-family: 'Inter', sans-serif;
+  font-size: clamp(19px, 2.2vw, 24px);
+  font-weight: 700;
+  line-height: 1.3;
+  color: #111;
+  margin: 36px 0 14px;
+}
+
+.post-body p {
+  font-family: 'Inter', sans-serif;
+  font-size: 16px;
+  line-height: 1.85;
+  color: #333;
+  margin: 0 0 22px;
+}
+
+.post-body .post-lead {
+  font-size: 18px;
+  line-height: 1.8;
+  color: #222;
+}
+
+.post-body ul,
+.post-body ol {
+  font-family: 'Inter', sans-serif;
+  font-size: 16px;
+  line-height: 1.85;
+  color: #333;
+  margin: 0 0 24px;
+  padding-left: 22px;
+}
+
+.post-body li {
+  margin-bottom: 8px;
+}
+
+.post-body li strong {
+  color: #000;
+}
+
+.post-body a {
+  color: #713DFF;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.post-body a:hover {
+  color: #5a2ed4;
+}
+
+/* Inline CTA button — like NoGood's "SEE HOW WE CAN BOOST..." */
+.post-inline-cta {
+  display: inline-block;
+  margin: 24px 0;
+  padding: 14px 32px;
+  font-family: 'Inter', sans-serif;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: #000;
+  background: transparent;
+  border: 2px solid #000;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: background 0.2s, color 0.2s;
+}
+
+.post-inline-cta:hover {
+  background: #000;
+  color: #fff;
+}
+
+/* Callout */
+.post-callout {
+  display: flex;
+  gap: 0;
+  margin: 28px 0;
+  border-radius: 8px;
+  overflow: hidden;
+  background: #f6f3ff;
+}
+
+.post-callout-bar {
+  width: 4px;
+  flex-shrink: 0;
+  background: #713DFF;
+}
+
+.post-callout-body {
+  padding: 18px 22px;
+  font-family: 'Inter', sans-serif;
+  font-size: 15px;
+  line-height: 1.65;
+  color: #444;
+}
+
+.post-callout-body strong {
+  color: #713DFF;
+}
+
+/* Figure */
+.post-figure {
+  margin: 32px 0;
+}
+
+.post-figure img {
+  width: 100%;
+  border-radius: 10px;
+  display: block;
+}
+
+.post-figure figcaption {
+  font-family: 'Inter', sans-serif;
+  font-size: 13px;
+  color: #999;
+  text-align: center;
+  margin-top: 10px;
+}
+
+/* Stats */
+.post-stats {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 14px;
+  margin: 36px 0;
+}
+
+.post-stat {
+  text-align: center;
+  padding: 24px 10px;
+  background: #f8f8f8;
+  border: 1px solid #eee;
+  border-radius: 10px;
+}
+
+.post-stat-num {
+  display: block;
+  font-family: 'Orbitron', system-ui, sans-serif;
+  font-size: clamp(24px, 3vw, 36px);
+  font-weight: 800;
+  color: #000;
+  margin-bottom: 4px;
+}
+
+.post-stat-label {
+  font-family: 'Inter', sans-serif;
+  font-size: 11px;
+  color: #888;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+
+/* ============================================= */
+/* 6. RIGHT SIDEBAR — 2 cards like NoGood          */
+/* ============================================= */
+.post-sidebar-right {
+  position: sticky;
+  top: 80px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* Card 1 — newsletter (light bg) */
+.post-sidebar-card {
+  background: #f5f5f5;
+  border-radius: 14px;
+  padding: 28px 24px;
+  text-align: center;
+}
+
+.post-sidebar-card-text {
+  font-family: 'Inter', sans-serif;
+  font-size: 15px;
+  font-weight: 600;
+  line-height: 1.45;
+  color: #111;
+  margin: 0 0 20px;
+}
+
+.post-sidebar-card-btn {
+  display: inline-block;
+  padding: 12px 28px;
+  font-family: 'Inter', sans-serif;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: #000;
+  background: transparent;
+  border: 2px solid #000;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: background 0.2s, color 0.2s;
+}
+
+.post-sidebar-card-btn:hover {
+  background: #000;
+  color: #fff;
+}
+
+/* Card 2 — promo (purple gradient) */
+.post-sidebar-promo {
+  background: linear-gradient(160deg, #5B2DCC 0%, #1A0A3E 100%);
+  border-radius: 14px;
+  padding: 28px 24px;
+  text-align: center;
+  color: #fff;
+}
+
+.post-sidebar-promo-title {
+  font-family: 'Inter', sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 1.4;
+  color: #fff;
+  margin: 0 0 12px;
+}
+
+.post-sidebar-promo-sub {
+  font-family: 'Inter', sans-serif;
+  font-size: 13px;
+  line-height: 1.5;
+  color: rgba(255, 255, 255, 0.7);
+  margin: 0 0 20px;
+}
+
+.post-sidebar-promo-btn {
+  display: inline-block;
+  padding: 12px 28px;
+  font-family: 'Inter', sans-serif;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: #fff;
+  background: transparent;
+  border: 2px solid #fff;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: background 0.2s, color 0.2s;
+}
+
+.post-sidebar-promo-btn:hover {
+  background: #fff;
+  color: #1A0A3E;
+}
+
+/* ============================================= */
+/* 7. RELATED ARTICLES                             */
+/* ============================================= */
+.post-related {
+  background: #121214;
+  padding: clamp(48px, 6vw, 80px) 0 clamp(60px, 8vw, 100px);
+}
+
+.post-related-heading {
+  font-family: 'Orbitron', system-ui, sans-serif;
+  font-size: clamp(22px, 3vw, 32px);
+  font-weight: 700;
+  color: #fff;
+  margin: 0 0 clamp(32px, 4vw, 48px);
+}
+
+.post-related-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+/* ============================================= */
+/* AVATAR (shared with blog.css for dark sections) */
+/* ============================================= */
+.post-avatar {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #713DFF 0%, #C8A4FF 100%);
+  color: #fff;
+  font-family: 'Inter', sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.post-author-info {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.2;
+}
+
+.post-author-name {
+  font-family: 'Inter', sans-serif;
+  font-size: 13px;
+  font-weight: 600;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.post-author-last {
+  font-family: 'Inter', sans-serif;
+  font-size: 12px;
+  color: rgba(255, 255, 255, 0.4);
+}
+
+/* ============================================= */
+/* 8. FAQ ACCORDION                                */
+/* ============================================= */
+.post-faq {
+  margin: 48px 0 0;
+  border-top: 1px solid #eee;
+  padding-top: 36px;
+}
+
+.post-faq-title {
+  font-family: 'Inter', system-ui, sans-serif;
+  font-size: clamp(26px, 3.2vw, 38px);
+  font-weight: 800;
+  font-style: italic;
+  color: #000;
+  margin: 0 0 8px;
+}
+
+.post-faq-item {
+  border-bottom: 1px solid #eee;
+}
+
+.post-faq-question {
+  width: 100%;
+  background: none;
+  border: none;
+  padding: 18px 0;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  cursor: pointer;
+  font-family: 'Inter', sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  color: #111;
+  text-align: left;
+}
+
+/* Triangle marker like NoGood */
+.post-faq-marker {
+  flex-shrink: 0;
+  font-size: 12px;
+  color: #333;
+  transition: transform 0.25s ease;
+}
+
+.post-faq-item.open .post-faq-marker {
+  transform: rotate(90deg);
+}
+
+.post-faq-answer {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease;
+}
+
+.post-faq-answer-inner {
+  padding: 0 0 18px 26px;
+  font-family: 'Inter', sans-serif;
+  font-size: 15px;
+  line-height: 1.7;
+  color: #555;
+}
+
+/* ============================================= */
+/* 9. COMMENTS SECTION — full width like NoGood    */
+/* ============================================= */
+.post-comments-section {
+  background: #fff;
+}
+
+/* Header — "0 Comments" centered, light bg */
+.post-comments-header {
+  background: #f7f7f7;
+  border-top: 1px solid #e8e8e8;
+  border-bottom: 1px solid #e8e8e8;
+  padding: 40px 24px;
+  text-align: center;
+}
+
+.post-comments-count {
+  font-family: 'Orbitron', system-ui, sans-serif;
+  font-size: clamp(28px, 4vw, 42px);
+  font-weight: 800;
+  color: #000;
+  margin: 0;
+}
+
+/* Form wrap */
+.post-comments-form-wrap {
+  max-width: 680px;
+  margin: 0 auto;
+  padding: 48px 24px 64px;
+}
+
+.post-comment-form {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+.post-comment-field label {
+  display: block;
+  font-family: 'Inter', sans-serif;
+  font-size: 15px;
+  font-weight: 700;
+  color: #000;
+  margin-bottom: 12px;
+}
+
+.post-comment-field label .post-required {
+  color: #000;
+}
+
+.post-comment-field input,
+.post-comment-field textarea {
+  width: 100%;
+  border: none;
+  border-bottom: 2px solid #222;
+  padding: 10px 0;
+  font-family: 'Inter', sans-serif;
+  font-size: 15px;
+  color: #333;
+  background: transparent;
+  outline: none;
+  transition: border-color 0.2s;
+}
+
+.post-comment-field input:focus,
+.post-comment-field textarea:focus {
+  border-bottom-color: #713DFF;
+}
+
+.post-comment-field textarea {
+  resize: vertical;
+  min-height: 60px;
+}
+
+.post-comment-check {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+}
+
+.post-comment-check input[type="checkbox"] {
+  width: 20px;
+  height: 20px;
+  margin-top: 2px;
+  flex-shrink: 0;
+  accent-color: #713DFF;
+  border: 2px solid #ccc;
+}
+
+.post-comment-check span {
+  font-family: 'Inter', sans-serif;
+  font-size: 14px;
+  line-height: 1.5;
+  color: #888;
+}
+
+.post-comment-submit {
+  display: inline-block;
+  padding: 20px 52px;
+  font-family: 'Inter', sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: #fff;
+  background: #000;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: opacity 0.2s;
+  align-self: flex-start;
+}
+
+.post-comment-submit:hover {
+  opacity: 0.8;
+}
+
+/* ============================================= */
+/* SCROLL TO TOP BUTTON                            */
+/* ============================================= */
+.post-scroll-top {
+  position: fixed;
+  bottom: 32px;
+  right: 32px;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: rgba(0, 0, 0, 0.08);
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s, visibility 0.3s, background 0.2s;
+  z-index: 999;
+}
+
+.post-scroll-top--visible {
+  opacity: 1;
+  visibility: visible;
+}
+
+.post-scroll-top:hover {
+  background: rgba(0, 0, 0, 0.15);
+}
+
+.post-scroll-top svg {
+  width: 20px;
+  height: 20px;
+  fill: none;
+  stroke: #555;
+  stroke-width: 2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+/* ============================================= */
+/* INFOGRAPHICS — dark cards                       */
+/* ============================================= */
+.post-infographic {
+  background: #121214;
+  border-radius: 14px;
+  padding: 36px 32px;
+  margin: 36px 0;
+  color: #fff;
+}
+
+.post-infographic-title {
+  font-family: 'Inter', sans-serif;
+  font-size: 22px;
+  font-weight: 800;
+  font-style: italic;
+  color: #fff;
+  margin: 0 0 24px;
+}
+
+.post-infographic-table { width: 100%; }
+.post-infographic-row {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(0, 1fr));
+  gap: 1px;
+  background: rgba(255,255,255,0.06);
+}
+.post-infographic-row > div,
+.post-infographic-row > span {
+  padding: 14px 18px;
+  font-family: 'Inter', sans-serif;
+  font-size: 14px;
+  background: #121214;
+}
+.post-infographic-header > div,
+.post-infographic-row--header > div,
+.post-infographic-header > span,
+.post-infographic-row--header > span {
+  font-weight: 700;
+  color: #713DFF;
+  font-size: 13px;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  background: #121214;
+}
+
+.post-infographic-flow {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.post-flow-step {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  padding: 20px 16px;
+  border: 1px solid rgba(255,255,255,0.12);
+  border-radius: 12px;
+  min-width: 120px;
+  text-align: center;
+}
+.post-flow-num {
+  font-family: 'Orbitron', sans-serif;
+  font-size: 24px;
+  font-weight: 800;
+  color: #713DFF;
+}
+.post-flow-label {
+  font-family: 'Inter', sans-serif;
+  font-size: 13px;
+  color: rgba(255,255,255,0.8);
+}
+.post-flow-arrow {
+  font-size: 20px;
+  color: rgba(255,255,255,0.3);
+}
+
+.post-infographic-checklist {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.post-check-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 16px;
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: 8px;
+}
+.post-check-icon {
+  color: #008500;
+  font-size: 16px;
+  flex-shrink: 0;
+}
+
+.post-infographic--stats {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 20px;
+  text-align: center;
+}
+.post-info-stat-num {
+  display: block;
+  font-family: 'Orbitron', sans-serif;
+  font-size: 36px;
+  font-weight: 800;
+  color: #713DFF;
+  margin-bottom: 6px;
+}
+.post-info-stat-label {
+  font-family: 'Inter', sans-serif;
+  font-size: 13px;
+  color: rgba(255,255,255,0.6);
+}
+
+/* ============================================= */
+/* INFOGRAPHIC TABLE — horizontal scroll on small  */
+/* ============================================= */
+.post-infographic-table {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+/* ============================================= */
+/* RESPONSIVE                                      */
+/* ============================================= */
+@media (max-width: 1024px) {
+  .post-content-grid {
+    grid-template-columns: 1fr;
+    gap: 0;
+  }
+
+  .post-toc-col {
+    position: static;
+    margin-bottom: 32px;
+  }
+
+  .post-toc {
+    border-right: none;
+    padding-right: 0;
+    border-bottom: 1px dashed rgba(0, 0, 0, 0.1);
+    padding-bottom: 24px;
+  }
+
+  .post-sidebar-right {
+    position: static;
+    margin-top: 48px;
+  }
+
+  .post-sidebar-card,
+  .post-sidebar-promo {
+    max-width: 400px;
+  }
+
+  .post-related-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 640px) {
+  .post-hero {
+    padding: clamp(120px, 14vw, 160px) 0 clamp(60px, 8vw, 80px);
+  }
+
+  .post-hero-inner {
+    padding: 0 16px;
+  }
+
+  .post-hero-title {
+    font-size: clamp(26px, 7.5vw, 42px);
+  }
+
+  .post-hero-excerpt {
+    font-size: 14px;
+  }
+
+  .post-tags {
+    gap: 8px;
+  }
+
+  .post-tag {
+    padding: 6px 14px;
+    font-size: 11px;
+  }
+
+  .post-sticky-inner {
+    padding: 14px 16px;
+  }
+
+  .post-sticky-title {
+    font-size: 13px;
+    max-width: 55%;
+  }
+
+
+  .post-content-wrap {
+    padding: clamp(32px, 5vw, 48px) 16px;
+  }
+
+  .post-body {
+    max-width: 100%;
+  }
+
+  .post-body h2 {
+    font-size: clamp(22px, 5.5vw, 30px);
+    margin: 40px 0 16px;
+  }
+
+  .post-body h3 {
+    font-size: clamp(17px, 4.5vw, 22px);
+  }
+
+  .post-body p,
+  .post-body ul,
+  .post-body ol {
+    font-size: 15px;
+  }
+
+  .post-inline-cta {
+    display: block;
+    text-align: center;
+    padding: 14px 20px;
+    font-size: 11px;
+  }
+
+  .post-callout {
+    margin: 20px 0;
+  }
+
+  .post-callout-body {
+    padding: 14px 16px;
+    font-size: 14px;
+  }
+
+  .post-stats {
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+
+  .post-stat {
+    padding: 18px 10px;
+  }
+
+  .post-stat-num {
+    font-size: clamp(20px, 5vw, 28px);
+  }
+
+  /* Infographics */
+  .post-infographic {
+    padding: 20px 16px;
+    margin: 28px -16px;
+    border-radius: 0;
+  }
+
+  .post-infographic-title {
+    font-size: 18px;
+  }
+
+  .post-infographic-flow {
+    flex-direction: column;
+  }
+
+  .post-flow-step {
+    min-width: unset;
+    width: 100%;
+    padding: 16px 12px;
+  }
+
+  .post-flow-arrow {
+    transform: rotate(90deg);
+  }
+
+  .post-infographic-row {
+    min-width: 500px;
+  }
+
+  .post-infographic-row > div,
+  .post-infographic-row > span {
+    padding: 10px 12px;
+    font-size: 13px;
+  }
+
+  .post-info-stat-num {
+    font-size: 28px;
+  }
+
+  .post-check-item {
+    padding: 10px 12px;
+    gap: 10px;
+    font-size: 14px;
+  }
+
+  /* FAQ */
+  .post-faq {
+    margin: 32px 0 0;
+    padding-top: 28px;
+  }
+
+  .post-faq-title {
+    font-size: clamp(22px, 5.5vw, 30px);
+  }
+
+  .post-faq-question {
+    font-size: 15px;
+    padding: 14px 0;
+  }
+
+  .post-faq-answer-inner {
+    padding: 0 0 14px 20px;
+    font-size: 14px;
+  }
+
+  /* Comments */
+  .post-comments-header {
+    padding: 28px 16px;
+  }
+
+  .post-comments-count {
+    font-size: clamp(24px, 5vw, 32px);
+  }
+
+  .post-comments-form-wrap {
+    padding: 32px 16px 48px;
+  }
+
+  .post-comment-submit {
+    width: 100%;
+    text-align: center;
+    padding: 16px 24px;
+  }
+
+  /* Related */
+  .post-related {
+    padding: clamp(40px, 5vw, 60px) 0;
+  }
+
+  .post-related .post-container-wide {
+    padding: 0 16px;
+  }
+
+  .post-related-heading {
+    font-size: clamp(20px, 5vw, 28px);
+  }
+
+  .post-related-grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  /* Sidebar cards */
+  .post-sidebar-card,
+  .post-sidebar-promo {
+    max-width: 100%;
+  }
+
+  /* Scroll to top */
+  .post-scroll-top {
+    bottom: 16px;
+    right: 16px;
+    width: 40px;
+    height: 40px;
+  }
+
+  /* Cover images inline */
+  .post-cover-inline {
+    margin: 28px -16px;
+  }
+
+  .post-cover-inline img {
+    border-radius: 0;
+  }
+}

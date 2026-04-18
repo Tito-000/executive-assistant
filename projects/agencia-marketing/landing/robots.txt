@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+Disallow: /assets/3d/*-raw.png
+
+Sitemap: https://mmagency.com.do/sitemap.xml

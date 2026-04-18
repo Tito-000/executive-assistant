@@ -359,4 +359,44 @@
     requestAnimationFrame(() => update(true));
   }
 
+  // ---------- MOBILE HAMBURGER MENU ----------
+  const hamburger = document.getElementById('navHamburger');
+  const mobileMenu = document.getElementById('navMobile');
+  if (hamburger && mobileMenu) {
+    const toggleMenu = () => {
+      const isOpen = mobileMenu.classList.toggle('is-open');
+      document.body.classList.toggle('nav-open', isOpen);
+      // Swap icon: hamburger ↔ X
+      hamburger.innerHTML = isOpen
+        ? '<svg viewBox="0 0 24 24"><line x1="6" y1="6" x2="18" y2="18"/><line x1="6" y1="18" x2="18" y2="6"/></svg>'
+        : '<svg viewBox="0 0 24 24"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>';
+    };
+    hamburger.addEventListener('click', toggleMenu);
+    // Close on link click
+    mobileMenu.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => {
+        mobileMenu.classList.remove('is-open');
+        document.body.classList.remove('nav-open');
+        hamburger.innerHTML = '<svg viewBox="0 0 24 24"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>';
+      });
+    });
+  }
+
+  // Home blog carousel arrows
+  var homeBlogGrid = document.getElementById('homeBlogGrid');
+  var homeBlogPrev = document.getElementById('homeBlogPrev');
+  var homeBlogNext = document.getElementById('homeBlogNext');
+  if (homeBlogGrid && homeBlogPrev && homeBlogNext) {
+    var blogScrollAmount = function() {
+      var card = homeBlogGrid.querySelector('.blog-card-link') || homeBlogGrid.querySelector('.blog-card');
+      return card ? card.offsetWidth + 16 : 300;
+    };
+    homeBlogPrev.addEventListener('click', function() {
+      homeBlogGrid.scrollBy({ left: -blogScrollAmount(), behavior: 'smooth' });
+    });
+    homeBlogNext.addEventListener('click', function() {
+      homeBlogGrid.scrollBy({ left: blogScrollAmount(), behavior: 'smooth' });
+    });
+  }
+
 })();

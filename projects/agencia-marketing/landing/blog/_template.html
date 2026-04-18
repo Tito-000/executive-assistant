@@ -1,0 +1,708 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-XTLFSE5P8B"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-XTLFSE5P8B');
+</script>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- SEO: Cambiar estos valores -->
+<title>{{TITULO DEL ARTICULO}} | MM Agency Blog</title>
+<meta name="description" content="{{META DESCRIPTION — 150-160 chars con keyword}}">
+<meta name="robots" content="index,follow">
+
+<link rel="canonical" href="https://mmagency.com.do/blog/{{slug}}.html">
+
+<meta property="og:title" content="{{TITULO DEL ARTICULO}} | MM Agency">
+<meta property="og:description" content="{{META DESCRIPTION}}">
+<meta property="og:type" content="article">
+<meta property="og:locale" content="es_DO">
+<meta property="og:url" content="https://mmagency.com.do/blog/{{slug}}.html">
+<meta property="og:image" content="https://mmagency.com.do/blog/{{slug}}-og.png">
+<meta property="og:site_name" content="MM Agency">
+<meta property="article:published_time" content="{{YYYY-MM-DD}}T08:00:00-04:00">
+<meta property="article:modified_time" content="{{YYYY-MM-DD}}T08:00:00-04:00">
+<meta property="article:author" content="Martin Mercedes">
+<meta property="article:section" content="{{CATEGORIA}}">
+<meta property="article:tag" content="{{tag1}}">
+<meta property="article:tag" content="{{tag2}}">
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="{{TITULO DEL ARTICULO}} | MM Agency">
+<meta name="twitter:description" content="{{META DESCRIPTION}}">
+<meta name="twitter:image" content="https://mmagency.com.do/blog/{{slug}}-og.png">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;600;700;800;900&family=DM+Mono:wght@400;500&family=Inter:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+<link rel="icon" type="image/png" href="../assets/logos/mm-circle-ring.png">
+<link rel="stylesheet" href="../css/styles.css">
+<link rel="stylesheet" href="../css/blog.css">
+<link rel="stylesheet" href="../css/blog-post.css">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "{{TITULO DEL ARTICULO}}",
+  "description": "{{META DESCRIPTION}}",
+  "image": "https://mmagency.com.do/blog/{{slug}}-og.png",
+  "datePublished": "{{YYYY-MM-DD}}T08:00:00-04:00",
+  "dateModified": "{{YYYY-MM-DD}}T08:00:00-04:00",
+  "author": {
+    "@type": "Person",
+    "name": "Martin Mercedes",
+    "url": "https://mmagency.com.do"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "MM Agency",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://mmagency.com.do/assets/logos/mm-circle-ring.png"
+    }
+  },
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://mmagency.com.do/blog/{{slug}}.html"
+  },
+  "wordCount": "{{WORD_COUNT}}",
+  "articleSection": "{{CATEGORIA}}",
+  "inLanguage": "es"
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "MM Agency", "item": "https://mmagency.com.do/" },
+    { "@type": "ListItem", "position": 2, "name": "Blog", "item": "https://mmagency.com.do/blog.html" },
+    { "@type": "ListItem", "position": 3, "name": "{{TITULO DEL ARTICULO}}", "item": "https://mmagency.com.do/blog/{{slug}}.html" }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "{{Pregunta 1}}",
+      "acceptedAnswer": { "@type": "Answer", "text": "{{Respuesta 1}}" }
+    },
+    {
+      "@type": "Question",
+      "name": "{{Pregunta 2}}",
+      "acceptedAnswer": { "@type": "Answer", "text": "{{Respuesta 2}}" }
+    },
+    {
+      "@type": "Question",
+      "name": "{{Pregunta 3}}",
+      "acceptedAnswer": { "@type": "Answer", "text": "{{Respuesta 3}}" }
+    },
+    {
+      "@type": "Question",
+      "name": "{{Pregunta 4}}",
+      "acceptedAnswer": { "@type": "Answer", "text": "{{Respuesta 4}}" }
+    }
+  ]
+}
+</script>
+</head>
+<body>
+
+<!-- NAV -->
+<nav class="nav" id="nav">
+  <a href="../index.html" class="nav-logo-link" aria-label="MM Agency">
+    <img src="../assets/logos/mm-v8-framed-transparent.png" alt="MM Agency" class="nav-logo">
+  </a>
+  <div class="nav-menu">
+    <a href="../index.html#servicios" class="nav-link">Servicios</a>
+    <a href="../index.html#casos" class="nav-link">Casos</a>
+    <a href="../index.html#proceso" class="nav-link">Diferenciadores</a>
+    <a href="../index.html#faq" class="nav-link">FAQ</a>
+    <a href="../blog.html" class="nav-link">Blog</a>
+  </div>
+  <a href="../contact.html" class="btn-nav">Contactar</a>
+  <button class="nav-hamburger" id="navHamburger" aria-label="Menú">
+    <svg viewBox="0 0 24 24"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+  </button>
+</nav>
+
+<div class="nav-mobile" id="navMobile">
+  <div class="nav-mobile-links">
+    <a href="../index.html#servicios" class="nav-mobile-link">Servicios</a>
+    <a href="../index.html#casos" class="nav-mobile-link">Casos</a>
+    <a href="../index.html#proceso" class="nav-mobile-link">Diferenciadores</a>
+    <a href="../index.html#faq" class="nav-mobile-link">FAQ</a>
+    <a href="../blog.html" class="nav-mobile-link">Blog</a>
+  </div>
+  <div class="nav-mobile-cta">
+    <a href="../contact.html">CONTACTAR</a>
+  </div>
+</div>
+
+<!-- ============================================= -->
+<!-- STICKY TOP BAR — white bg, progress bar         -->
+<!-- ============================================= -->
+<div class="post-sticky-bar" id="postStickyBar">
+  <div class="post-sticky-inner">
+    <span class="post-sticky-title">{{TITULO DEL ARTICULO}}</span>
+    <a href="../contact.html" class="post-sticky-cta">
+      HABLEMOS
+      <span class="post-sticky-cta-arrow">
+        <svg viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+      </span>
+    </a>
+  </div>
+  <div class="post-progress-wrap"><div class="post-progress-bar" id="postProgressBar"></div></div>
+</div>
+
+<main>
+
+<!-- ============================================= -->
+<!-- 1. HERO — dark bg, wireframe grid, big title    -->
+<!-- ============================================= -->
+<section class="post-hero">
+  <div class="post-hero-grid" aria-hidden="true"></div>
+  <div class="post-hero-inner">
+
+    <h1 class="post-hero-title">{{TITULO DEL ARTICULO}}</h1>
+
+    <!-- Category tags -->
+    <div class="post-tags">
+      <span class="post-tag">{{Categoria 1}}</span>
+      <span class="post-tag">{{Categoria 2}}</span>
+      <span class="post-tag">{{Categoria 3}}</span>
+    </div>
+
+    <!-- Excerpt -->
+    <p class="post-hero-excerpt">{{Excerpt — 1-2 oraciones que resuman el artículo. Incluir keyword.}}</p>
+
+    <!-- Date -->
+    <time class="post-hero-date" datetime="{{YYYY-MM-DD}}">{{Mes DD, YYYY}}</time>
+
+    <!-- Author -->
+    <div class="post-hero-author">
+      <span class="post-hero-written">Escrito por</span>
+      <div class="post-hero-author-row">
+        <div class="post-avatar"><span>M</span></div>
+        <div class="post-author-info">
+          <span class="post-author-name">Martin</span>
+          <span class="post-author-last">Mercedes</span>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ============================================= -->
+<!-- 2. CONTENT — white bg, 3-column layout          -->
+<!-- ============================================= -->
+<div class="post-content-wrap">
+  <div class="post-content-grid">
+
+    <!-- LEFT: Sticky TOC + Share -->
+    <aside class="post-toc-col">
+      <nav class="post-toc" id="postToc" aria-label="Tabla de contenidos">
+        <div class="post-toc-header" id="postTocToggle">
+          <div class="post-toc-label">Table of contents</div>
+          <span class="post-toc-toggle" aria-hidden="true">—</span>
+        </div>
+        <ol class="post-toc-list">
+          <li><a href="#seccion-1">{{Titulo seccion 1}}</a></li>
+          <li><a href="#seccion-2">{{Titulo seccion 2}}</a></li>
+          <li><a href="#seccion-3">{{Titulo seccion 3}}</a></li>
+          <li><a href="#seccion-4">{{Titulo seccion 4}}</a></li>
+          <li><a href="#faq">Preguntas frecuentes</a></li>
+          <li><a href="#conclusion">Conclusión</a></li>
+        </ol>
+      </nav>
+
+      <!-- Share — plain icons like NoGood -->
+      <div class="post-share">
+        <div class="post-share-label">Share on:</div>
+        <div class="post-share-links">
+          <a href="#" aria-label="Facebook" onclick="window.open('https://www.facebook.com/sharer/sharer.php?u='+encodeURIComponent(location.href),'fb','width=600,height=400');return false;">
+            <svg viewBox="0 0 24 24"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg>
+          </a>
+          <a href="#" aria-label="LinkedIn" onclick="window.open('https://www.linkedin.com/sharing/share-offsite/?url='+encodeURIComponent(location.href),'li','width=600,height=400');return false;">
+            <svg viewBox="0 0 24 24"><path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-4 0v7h-4v-7a6 6 0 016-6zM2 9h4v12H2zM4 6a2 2 0 100-4 2 2 0 000 4z"/></svg>
+          </a>
+        </div>
+      </div>
+    </aside>
+
+    <!-- CENTER: Article body -->
+    <article class="post-body">
+
+      <p class="post-lead">{{Párrafo introductorio fuerte. Incluir keyword en las primeras 100 palabras.}}</p>
+
+      <p>{{Contexto — por qué importa para negocios en RD.}}</p>
+
+      <h2 id="seccion-1"><em>{{Titulo seccion 1 — keyword}}</em></h2>
+
+      <p>{{Contenido. Párrafos cortos, 2-3 oraciones.}}</p>
+
+      <!-- Callout -->
+      <div class="post-callout">
+        <div class="post-callout-bar"></div>
+        <div class="post-callout-body">
+          <strong>Tip:</strong> {{Consejo práctico.}}
+        </div>
+      </div>
+
+      <p>{{Continúa.}}</p>
+
+      <!-- Inline CTA (like NoGood's "SEE HOW WE CAN BOOST YOUR AI VISIBILITY") -->
+      <a href="../contact.html" class="post-inline-cta">AGENDA UNA CONSULTA GRATIS</a>
+
+      <h2 id="seccion-2"><em>{{Titulo seccion 2}}</em></h2>
+
+      <p>{{Contenido.}}</p>
+
+      <ul>
+        <li><strong>{{Punto 1}}:</strong> {{explicación}}</li>
+        <li><strong>{{Punto 2}}:</strong> {{explicación}}</li>
+        <li><strong>{{Punto 3}}:</strong> {{explicación}}</li>
+      </ul>
+
+      <!-- Imagen inline -->
+      <!-- <figure class="post-figure">
+        <img src="../assets/blog/{{imagen}}.png" alt="{{alt con keyword}}" loading="lazy">
+        <figcaption>{{Caption}}</figcaption>
+      </figure> -->
+
+      <h2 id="seccion-3"><em>{{Titulo seccion 3}}</em></h2>
+
+      <p>{{Contenido.}}</p>
+
+      <h2 id="seccion-4"><em>{{Titulo seccion 4}}</em></h2>
+
+      <p>{{Contenido.}}</p>
+
+      <!-- Stats -->
+      <div class="post-stats">
+        <div class="post-stat">
+          <span class="post-stat-num">{{85}}</span>
+          <span class="post-stat-label">{{pacientes nuevos}}</span>
+        </div>
+        <div class="post-stat">
+          <span class="post-stat-num">{{60}}</span>
+          <span class="post-stat-label">{{días}}</span>
+        </div>
+        <div class="post-stat">
+          <span class="post-stat-num">${{300}}</span>
+          <span class="post-stat-label">{{inversión/mes}}</span>
+        </div>
+      </div>
+
+      <!-- FAQ Accordion -->
+      <div class="post-faq" id="faq">
+        <h2 class="post-faq-title">{{Titulo}}: FAQs</h2>
+
+        <div class="post-faq-item">
+          <button class="post-faq-question" type="button">
+            <span class="post-faq-marker" aria-hidden="true">&#9654;</span>
+            {{Pregunta 1}}
+          </button>
+          <div class="post-faq-answer">
+            <div class="post-faq-answer-inner">{{Respuesta 1}}</div>
+          </div>
+        </div>
+
+        <div class="post-faq-item">
+          <button class="post-faq-question" type="button">
+            <span class="post-faq-marker" aria-hidden="true">&#9654;</span>
+            {{Pregunta 2}}
+          </button>
+          <div class="post-faq-answer">
+            <div class="post-faq-answer-inner">{{Respuesta 2}}</div>
+          </div>
+        </div>
+
+        <div class="post-faq-item">
+          <button class="post-faq-question" type="button">
+            <span class="post-faq-marker" aria-hidden="true">&#9654;</span>
+            {{Pregunta 3}}
+          </button>
+          <div class="post-faq-answer">
+            <div class="post-faq-answer-inner">{{Respuesta 3}}</div>
+          </div>
+        </div>
+
+        <div class="post-faq-item">
+          <button class="post-faq-question" type="button">
+            <span class="post-faq-marker" aria-hidden="true">&#9654;</span>
+            {{Pregunta 4}}
+          </button>
+          <div class="post-faq-answer">
+            <div class="post-faq-answer-inner">{{Respuesta 4}}</div>
+          </div>
+        </div>
+      </div>
+
+      <h2 id="conclusion">Conclusión</h2>
+
+      <p>{{Resumen con keyword. Qué hacer ahora.}}</p>
+
+      <p>{{CTA suave.}}</p>
+
+    </article>
+
+    <!-- RIGHT: 2 sidebar cards like NoGood -->
+    <aside class="post-sidebar-right">
+      <!-- Card 1 — Newsletter -->
+      <div class="post-sidebar-card">
+        <p class="post-sidebar-card-text">Las mejores estrategias de marketing digital — directo a tu inbox.</p>
+        <a href="#newsletter" class="post-sidebar-card-btn">SUSCRIBIRME</a>
+      </div>
+
+      <!-- Card 2 — Promo (purple gradient) -->
+      <div class="post-sidebar-promo">
+        <p class="post-sidebar-promo-title">Aprende a crear embudos de venta que conviertan</p>
+        <p class="post-sidebar-promo-sub">de Martin Mercedes<br>(Fundador de MM Agency)</p>
+        <a href="../contact.html" class="post-sidebar-promo-btn">AGENDA UNA LLAMADA</a>
+      </div>
+    </aside>
+
+  </div>
+</div>
+
+<!-- ============================================= -->
+<!-- COMMENTS SECTION — full width, light bg          -->
+<!-- ============================================= -->
+<section class="post-comments-section">
+  <div class="post-comments-header">
+    <h2 class="post-comments-count">0 Comments</h2>
+  </div>
+  <div class="post-comments-form-wrap">
+    <form class="post-comment-form" onsubmit="event.preventDefault(); this.querySelector('.post-comment-submit').textContent = '¡Enviado!'; return false;">
+      <div class="post-comment-field">
+        <label>Comment <span class="post-required">*</span></label>
+        <textarea required></textarea>
+      </div>
+      <div class="post-comment-field">
+        <label>Name <span class="post-required">*</span></label>
+        <input type="text" required>
+      </div>
+      <div class="post-comment-field">
+        <label>Email <span class="post-required">*</span></label>
+        <input type="email" required>
+      </div>
+      <div class="post-comment-field">
+        <label>Website</label>
+        <input type="url">
+      </div>
+      <div class="post-comment-check">
+        <input type="checkbox" id="saveInfo">
+        <span>Save my name, email, and website in this browser for the next time I comment.</span>
+      </div>
+      <button type="submit" class="post-comment-submit">POST COMMENT</button>
+    </form>
+  </div>
+</section>
+
+<!-- ============================================= -->
+<!-- 3. RELATED ARTICLES                              -->
+<!-- ============================================= -->
+<section class="post-related">
+  <div class="post-container-wide">
+    <h2 class="post-related-heading">Artículos relacionados</h2>
+    <div class="post-related-grid">
+
+      <article class="blog-card">
+        <div class="blog-card-cover blog-cover--orange">
+          <div class="blog-cover-art" aria-hidden="true">
+            <div class="blog-art-square"></div>
+            <div class="blog-art-square blog-art-square--sm"></div>
+            <div class="blog-art-stripe blog-art-stripe--1"></div>
+            <div class="blog-art-stripe blog-art-stripe--2"></div>
+            <div class="blog-art-stripe blog-art-stripe--3"></div>
+          </div>
+        </div>
+        <div class="blog-card-body">
+          <h3 class="blog-card-headline">{{Titulo articulo 1}}</h3>
+          <p class="blog-card-excerpt">{{Excerpt}}</p>
+          <div class="blog-card-meta">
+            <span>{{Fecha}}</span>
+            <span class="blog-meta-dot">·</span>
+            <span>{{X}} min lectura</span>
+          </div>
+          <div class="blog-card-author">
+            <div class="blog-avatar"><span>M</span></div>
+            <div class="blog-author-info">
+              <span class="blog-author-name">Martin</span>
+              <span class="blog-author-last">Mercedes</span>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <article class="blog-card">
+        <div class="blog-card-cover blog-cover--pink">
+          <div class="blog-cover-art" aria-hidden="true">
+            <div class="blog-art-torus"></div>
+            <div class="blog-art-torus blog-art-torus--sm"></div>
+          </div>
+        </div>
+        <div class="blog-card-body">
+          <h3 class="blog-card-headline">{{Titulo articulo 2}}</h3>
+          <p class="blog-card-excerpt">{{Excerpt}}</p>
+          <div class="blog-card-meta">
+            <span>{{Fecha}}</span>
+            <span class="blog-meta-dot">·</span>
+            <span>{{X}} min lectura</span>
+          </div>
+          <div class="blog-card-author">
+            <div class="blog-avatar"><span>M</span></div>
+            <div class="blog-author-info">
+              <span class="blog-author-name">Martin</span>
+              <span class="blog-author-last">Mercedes</span>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <article class="blog-card">
+        <div class="blog-card-cover blog-cover--violet">
+          <div class="blog-cover-art" aria-hidden="true">
+            <div class="blog-art-circle"></div>
+            <div class="blog-art-circle blog-art-circle--sm"></div>
+          </div>
+        </div>
+        <div class="blog-card-body">
+          <h3 class="blog-card-headline">{{Titulo articulo 3}}</h3>
+          <p class="blog-card-excerpt">{{Excerpt}}</p>
+          <div class="blog-card-meta">
+            <span>{{Fecha}}</span>
+            <span class="blog-meta-dot">·</span>
+            <span>{{X}} min lectura</span>
+          </div>
+          <div class="blog-card-author">
+            <div class="blog-avatar"><span>M</span></div>
+            <div class="blog-author-info">
+              <span class="blog-author-name">Martin</span>
+              <span class="blog-author-last">Mercedes</span>
+            </div>
+          </div>
+        </div>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<!-- ============================================= -->
+<!-- 4. CLOSING CTA                                   -->
+<!-- ============================================= -->
+<section class="closing-cta">
+  <div class="closing-cta-deco" aria-hidden="true">
+    <img src="../assets/3d/torus-green.png" alt="" loading="lazy"/>
+  </div>
+  <div class="container closing-cta-inner">
+    <h2 class="closing-cta-title">
+      ¿Listo para montar tu<br>
+      embudo de <span class="accent-gradient">crecimiento</span>?
+    </h2>
+    <a href="../contact.html" class="btn btn-outline btn-lg closing-cta-btn">
+      Hablemos
+      <span class="btn-arrow" aria-hidden="true">→</span>
+    </a>
+  </div>
+</section>
+
+<!-- ============================================= -->
+<!-- 5. NEWSLETTER FOOTER                             -->
+<!-- ============================================= -->
+<section class="blog-newsletter" id="newsletter">
+  <div class="blog-newsletter-glow" aria-hidden="true"></div>
+  <div class="post-container-wide blog-newsletter-inner">
+    <h2 class="blog-newsletter-title">
+      Las mejores estrategias de<br>
+      marketing digital — directo<br>
+      a tu inbox.
+    </h2>
+    <form class="blog-newsletter-form" onsubmit="event.preventDefault(); this.querySelector('button').textContent = '¡Listo!'; this.querySelector('input').disabled = true;">
+      <input type="email" class="blog-newsletter-input" placeholder="tu@email.com" required>
+      <button type="submit" class="blog-newsletter-submit">SUSCRIBIRME</button>
+    </form>
+  </div>
+</section>
+
+</main>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer-top">
+      <img src="../assets/logos/mm-box-mark.png" alt="MM Agency" class="footer-logo">
+      <h3 class="footer-hq">Basados en <span class="accent">Santo Domingo,<br>República Dominicana.</span></h3>
+    </div>
+    <div class="footer-grid">
+      <div class="footer-col">
+        <h4 class="footer-col-title">Servicios</h4>
+        <ul class="footer-list">
+          <li><a href="../index.html#servicios">Landing de conversión</a></li>
+          <li><a href="../index.html#servicios">Tráfico pagado</a></li>
+          <li><a href="../index.html#servicios">CRM + automatización</a></li>
+          <li><a href="../index.html#servicios">Optimización continua</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4 class="footer-col-title">Recursos</h4>
+        <ul class="footer-list">
+          <li><a href="../index.html#faq">FAQ</a></li>
+          <li><a href="../index.html#casos">Casos de éxito</a></li>
+          <li><a href="../blog.html">Blog</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4 class="footer-col-title">Contacto</h4>
+        <ul class="footer-list">
+          <li><a href="../contact.html">Contactar</a></li>
+          <li><span class="muted">hola@mmagency.com.do</span></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4 class="footer-col-title">Síguenos</h4>
+        <ul class="footer-list">
+          <li><a href="#">Instagram</a></li>
+          <li><a href="#">LinkedIn</a></li>
+          <li><a href="#">YouTube</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="footer-copy">© 2026 MM Agency. Todos los derechos reservados.</div>
+      <div class="footer-legal">
+        <a href="../privacidad.html">Política de privacidad</a>
+        <a href="../terminos.html">Términos</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- Scroll to top button -->
+<button class="post-scroll-top" id="scrollTopBtn" aria-label="Volver arriba">
+  <svg viewBox="0 0 24 24"><polyline points="18 15 12 9 6 15"/></svg>
+</button>
+
+<!-- Scripts -->
+<script>
+(function() {
+  /* Sticky bar — shows when hero scrolls out, hides nav */
+  var bar = document.getElementById('postStickyBar');
+  var hero = document.querySelector('.post-hero');
+  var nav = document.getElementById('nav');
+  if (bar && hero) {
+    new IntersectionObserver(function(e) {
+      var heroGone = !e[0].isIntersecting;
+      bar.classList.toggle('post-sticky-bar--visible', heroGone);
+      if (nav) nav.style.transform = heroGone ? 'translateY(-100%)' : '';
+      if (nav) nav.style.transition = 'transform 0.3s ease';
+    }, { threshold: 0 }).observe(hero);
+  }
+
+  /* Progress bar — tracks reading through article body */
+  var prog = document.getElementById('postProgressBar');
+  var body = document.querySelector('.post-body');
+  if (prog && body) {
+    window.addEventListener('scroll', function() {
+      var rect = body.getBoundingClientRect();
+      var total = body.scrollHeight;
+      var scrolled = -rect.top;
+      var pct = Math.min(100, Math.max(0, (scrolled / (total - window.innerHeight)) * 100));
+      prog.style.width = pct + '%';
+    }, { passive: true });
+  }
+
+  /* TOC toggle */
+  var tocToggle = document.getElementById('postTocToggle');
+  var toc = document.getElementById('postToc');
+  if (tocToggle && toc) {
+    tocToggle.addEventListener('click', function() {
+      toc.classList.toggle('post-toc--collapsed');
+    });
+  }
+
+  /* TOC active highlight on scroll */
+  var tocLinks = document.querySelectorAll('.post-toc-list a');
+  var sections = [];
+  tocLinks.forEach(function(link) {
+    var id = link.getAttribute('href').replace('#', '');
+    var el = document.getElementById(id);
+    if (el) sections.push({ el: el, link: link });
+  });
+  if (sections.length) {
+    window.addEventListener('scroll', function() {
+      var current = null;
+      sections.forEach(function(s) {
+        if (s.el.getBoundingClientRect().top <= 120) current = s;
+      });
+      tocLinks.forEach(function(l) { l.classList.remove('post-toc-active'); });
+      if (current) current.link.classList.add('post-toc-active');
+    }, { passive: true });
+  }
+
+  /* FAQ accordion */
+  document.querySelectorAll('.post-faq-question').forEach(function(btn) {
+    btn.addEventListener('click', function() {
+      var item = btn.parentElement;
+      var answer = item.querySelector('.post-faq-answer');
+      var isOpen = item.classList.contains('open');
+      document.querySelectorAll('.post-faq-item').forEach(function(i) {
+        i.classList.remove('open');
+        i.querySelector('.post-faq-answer').style.maxHeight = null;
+      });
+      if (!isOpen) {
+        item.classList.add('open');
+        answer.style.maxHeight = answer.scrollHeight + 'px';
+      }
+    });
+  });
+
+  /* Scroll to top button */
+  var scrollBtn = document.getElementById('scrollTopBtn');
+  if (scrollBtn) {
+    window.addEventListener('scroll', function() {
+      scrollBtn.classList.toggle('post-scroll-top--visible', window.scrollY > 600);
+    }, { passive: true });
+    scrollBtn.addEventListener('click', function() {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+  }
+  // Hamburger menu
+  var hamburger = document.getElementById('navHamburger');
+  var mobileMenu = document.getElementById('navMobile');
+  if (hamburger && mobileMenu) {
+    hamburger.addEventListener('click', function() {
+      var isOpen = document.body.classList.toggle('nav-open');
+      mobileMenu.classList.toggle('nav-mobile--open');
+      hamburger.innerHTML = isOpen
+        ? '<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>'
+        : '<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>';
+    });
+    mobileMenu.querySelectorAll('a').forEach(function(link) {
+      link.addEventListener('click', function() {
+        document.body.classList.remove('nav-open');
+        mobileMenu.classList.remove('nav-mobile--open');
+        hamburger.innerHTML = '<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>';
+      });
+    });
+  }
+})();
+</script>
+
+</body>
+</html>
