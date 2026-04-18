@@ -1,0 +1,685 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>Contrato — Fence Growth System | Crystalline Dynamics</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800;900&family=DM+Mono:wght@400;500&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root {
+  --primary: #9A7A00;
+  --secondary: #4A28B5;
+  --light-blue: #005E88;
+  --green: #005A00;
+  --bg: #FFFFFF;
+  --bg-card: #F5F5F5;
+  --border: #BFBFBF;
+  --space-grey: #555555;
+  --light-grey: #222222;
+  --light: #000000;
+  --white: #000000;
+  --font-h: 'Orbitron', sans-serif;
+  --font-b: 'Inter', sans-serif;
+  --font-m: 'DM Mono', monospace;
+}
+@page { size: Letter; margin: 0; }
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+html, body {
+  background: var(--bg);
+  color: var(--light);
+  font-family: var(--font-b);
+  font-size: 10.5pt;
+  line-height: 1.65;
+  margin: 0;
+  padding: 0;
+  -webkit-font-smoothing: antialiased;
+}
+.content-wrap {
+  padding: 0.55in 0.7in;
+  background: var(--bg);
+}
+
+/* ===== COVER ===== */
+.cover {
+  width: 8.5in;
+  height: 11in;
+  padding: 0.8in 0.7in;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  page-break-after: always;
+  background: var(--bg);
+  position: relative;
+  overflow: hidden;
+}
+.cover::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 3px;
+  background: var(--primary);
+}
+.cover-top { display: flex; justify-content: space-between; align-items: flex-start; }
+.cover-logo { height: 60px; }
+.cover-tag {
+  font-family: var(--font-m);
+  font-size: 8.5pt;
+  color: var(--space-grey);
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  text-align: right;
+}
+.cover-main { margin-top: 60px; }
+.cover-eyebrow {
+  font-family: var(--font-m);
+  font-size: 9pt;
+  color: var(--primary);
+  letter-spacing: 0.5em;
+  text-transform: uppercase;
+  margin-bottom: 24px;
+}
+.cover-title {
+  font-family: var(--font-h);
+  font-weight: 900;
+  font-size: 48pt;
+  line-height: 0.95;
+  letter-spacing: -0.02em;
+  color: var(--white);
+  margin: 0 0 20px;
+}
+.cover-title .accent { color: var(--primary); }
+.cover-sub {
+  font-family: var(--font-b);
+  font-size: 13pt;
+  font-weight: 400;
+  color: var(--light-grey);
+  max-width: 540px;
+  line-height: 1.45;
+}
+.cover-line {
+  width: 80px;
+  height: 3px;
+  background: var(--primary);
+  margin: 32px 0;
+}
+.cover-parties {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+  margin-top: 40px;
+}
+.cover-parties .party {
+  background: var(--bg-card);
+  border: 0.5px solid var(--border);
+  border-left: 3px solid var(--primary);
+  padding: 18px 22px;
+  border-radius: 6px;
+}
+.cover-parties .lbl {
+  font-family: var(--font-m);
+  font-size: 7.5pt;
+  color: var(--space-grey);
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  margin-bottom: 8px;
+}
+.cover-parties .name {
+  font-family: var(--font-h);
+  font-weight: 700;
+  font-size: 13pt;
+  color: var(--white);
+  margin-bottom: 8px;
+  letter-spacing: 0.01em;
+}
+.cover-parties .detail {
+  font-family: var(--font-b);
+  font-size: 9.5pt;
+  color: var(--light-grey);
+  line-height: 1.6;
+}
+.cover-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  border-top: 0.5px solid var(--border);
+  padding-top: 20px;
+  margin-top: 40px;
+}
+.cover-footer .meta {
+  font-family: var(--font-m);
+  font-size: 8pt;
+  color: var(--space-grey);
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  line-height: 1.8;
+}
+.cover-footer .meta strong { color: var(--primary); font-weight: 500; }
+
+/* ===== SECTIONS ===== */
+.section {
+  padding: 36px 0 20px;
+  page-break-inside: avoid;
+}
+.section-num {
+  font-family: var(--font-m);
+  font-size: 8pt;
+  color: var(--primary);
+  letter-spacing: 0.5em;
+  text-transform: uppercase;
+  margin-bottom: 12px;
+}
+h2 {
+  font-family: var(--font-h);
+  font-weight: 700;
+  font-size: 20pt;
+  color: var(--white);
+  margin: 0 0 20px;
+  letter-spacing: -0.01em;
+  line-height: 1.15;
+}
+h3 {
+  font-family: var(--font-h);
+  font-weight: 600;
+  font-size: 12pt;
+  color: var(--white);
+  margin: 22px 0 10px;
+  letter-spacing: 0.01em;
+}
+h4 {
+  font-family: var(--font-m);
+  font-weight: 500;
+  font-size: 8.5pt;
+  color: var(--primary);
+  margin: 16px 0 6px;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+}
+p {
+  color: var(--light-grey);
+  margin: 8px 0;
+  line-height: 1.7;
+}
+strong { color: var(--white); font-weight: 600; }
+em { color: var(--light-grey); }
+ul { margin: 8px 0; padding-left: 18px; color: var(--light-grey); }
+li { margin: 5px 0; line-height: 1.65; }
+li::marker { color: var(--primary); }
+
+/* ===== TABLES ===== */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 12px 0;
+  font-size: 9.5pt;
+  background: var(--bg-card);
+  border: 0.5px solid var(--border);
+}
+th {
+  background: var(--bg);
+  color: var(--primary);
+  padding: 11px 14px;
+  text-align: left;
+  font-family: var(--font-m);
+  font-weight: 500;
+  font-size: 7.5pt;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  border-bottom: 1px solid var(--border);
+}
+td {
+  padding: 10px 14px;
+  border-bottom: 0.5px solid var(--border);
+  color: var(--light-grey);
+  font-family: var(--font-b);
+  vertical-align: top;
+}
+tr:last-child td { border-bottom: none; }
+td strong { color: var(--white); }
+
+/* ===== CALLOUTS ===== */
+.highlight-box {
+  background: rgba(250, 250, 0, 0.06);
+  border-left: 3px solid var(--primary);
+  padding: 14px 18px;
+  margin: 14px 0;
+  border-radius: 4px;
+}
+.highlight-box strong { color: var(--primary); }
+
+.good-box {
+  background: rgba(0, 227, 255, 0.05);
+  border-left: 3px solid var(--light-blue);
+  padding: 14px 18px;
+  margin: 14px 0;
+  border-radius: 4px;
+}
+
+.warn-box {
+  background: rgba(245, 73, 0, 0.05);
+  border-left: 3px solid #F54900;
+  padding: 14px 18px;
+  margin: 14px 0;
+  border-radius: 4px;
+}
+.warn-box strong { color: #F54900; }
+
+.hot { color: var(--primary); font-weight: 700; }
+.up { color: var(--light-blue); font-weight: 600; }
+
+/* ===== PRINT OVERRIDES ===== */
+p, li, td { color: #1a1a1a !important; }
+h1, h2, h3, h4, strong { color: #000 !important; }
+.section-num, .cover-eyebrow, h4, .hot { color: var(--primary) !important; }
+.cover-tag, .space-grey, .meta, .lbl { color: var(--space-grey) !important; }
+.cover-title, .cover-title .accent { color: #000 !important; }
+.cover-title .accent { color: var(--primary) !important; }
+th { color: var(--primary) !important; background: #F0F0F0 !important; }
+td { background: #FFF !important; }
+table { background: #FFF !important; border-color: #BFBFBF !important; }
+.highlight-box, .good-box, .warn-box { background: #F7F7F7 !important; }
+.highlight-box strong { color: var(--primary) !important; }
+
+.page-break { page-break-before: always; }
+
+/* ===== FIRMAS ===== */
+.firmas-title {
+  font-family: var(--font-h);
+  font-weight: 700;
+  font-size: 16pt;
+  color: var(--primary);
+  margin: 40px 0 24px;
+  letter-spacing: 0.02em;
+  text-align: center;
+}
+.firmas {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  margin-top: 24px;
+  page-break-inside: avoid;
+}
+.firma {
+  background: var(--bg-card);
+  border: 0.5px solid var(--border);
+  border-top: 3px solid var(--primary);
+  padding: 22px 24px 28px;
+  border-radius: 6px;
+}
+.firma .role {
+  font-family: var(--font-m);
+  font-size: 7.5pt;
+  color: var(--primary);
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+}
+.firma .who {
+  font-family: var(--font-h);
+  font-weight: 700;
+  font-size: 12pt;
+  color: var(--white);
+  margin-bottom: 3px;
+  letter-spacing: 0.01em;
+}
+.firma .title {
+  font-size: 9.5pt;
+  color: var(--space-grey);
+  margin-bottom: 24px;
+}
+.firma-linea {
+  border-bottom: 1px solid var(--light-grey);
+  height: 44px;
+  margin-bottom: 4px;
+}
+.firma .field {
+  font-family: var(--font-m);
+  font-size: 8pt;
+  color: var(--space-grey);
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  margin: 8px 0 4px;
+}
+
+/* ===== FOOTER ===== */
+.doc-footer {
+  margin-top: 30px;
+  padding-top: 20px;
+  border-top: 0.5px solid var(--border);
+  text-align: center;
+}
+.doc-footer .sig {
+  font-family: var(--font-h);
+  font-weight: 700;
+  font-size: 11pt;
+  color: var(--white);
+  letter-spacing: 0.02em;
+}
+.doc-footer .contact {
+  font-family: var(--font-m);
+  font-size: 8pt;
+  color: var(--space-grey);
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  margin-top: 6px;
+  line-height: 1.8;
+}
+.doc-footer .contact .y { color: var(--primary); }
+</style>
+</head>
+<body>
+
+<!-- ================== COVER ================== -->
+<div class="cover">
+  <div class="cover-top">
+    <img class="cover-logo" src="mm-logo-yellow.png" alt="MM Agency">
+    <div class="cover-tag">Contrato · 2026</div>
+  </div>
+
+  <div class="cover-main">
+    <div class="cover-eyebrow">// Service Agreement</div>
+    <h1 class="cover-title">Fence<br>Growth<br><span class="accent">System.</span></h1>
+    <div class="cover-line"></div>
+    <div class="cover-sub">
+      Contrato de servicios digitales entre <strong>MM Agency</strong> y <strong>Crystalline Dynamics, Inc.</strong> para la ejecución del sistema integral de adquisición de clientes enfocado 100% en Fencing.
+    </div>
+
+    <div class="cover-parties">
+      <div class="party">
+        <div class="lbl">Proveedor</div>
+        <div class="name">MM Agency</div>
+        <div class="detail">
+          Martín Mercedes<br>
+          Marketing Digital &amp; Growth Systems<br>
+          Santo Domingo, República Dominicana
+        </div>
+      </div>
+      <div class="party">
+        <div class="lbl">Cliente</div>
+        <div class="name">Crystalline Dynamics, Inc.</div>
+        <div class="detail">
+          43344 US-27 S, Unit H<br>
+          Davenport, FL 33837 — USA<br>
+          Tel: (863) 377-0928
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="cover-footer">
+    <div class="meta">
+      <strong>MM Agency</strong><br>
+      Marketing Digital &amp; Growth Systems
+    </div>
+    <div class="meta" style="text-align: right;">
+      Prepared by<br>
+      <strong>Martin Mercedes</strong> · Abril 2026
+    </div>
+  </div>
+</div>
+
+<div class="content-wrap">
+
+<!-- ================== SECTION 1 ================== -->
+<div class="section">
+  <div class="section-num">01 / Scope</div>
+  <h2>Objeto del contrato</h2>
+  <p>MM Agency se compromete a diseñar, ejecutar y mantener un sistema integral de adquisición de clientes enfocado <strong>100% en la línea de servicios de Fencing</strong> de Crystalline Dynamics, Inc., bajo el nombre <strong>Fence Growth System</strong>.</p>
+  <div class="highlight-box">
+    <strong>Excluidas expresamente:</strong> las líneas de agua y epoxy no forman parte del alcance de este contrato y no recibirán esfuerzo de marketing digital bajo este acuerdo.
+  </div>
+</div>
+
+<!-- ================== SECTION 2 ================== -->
+<div class="section">
+  <div class="section-num">02 / Deliverables</div>
+  <h2>Alcance de entregables</h2>
+
+  <h3 style="color: var(--primary);">Fase Setup <span style="font-family: var(--font-m); font-size: 9pt; color: var(--space-grey); letter-spacing: 0.2em;">// ONE-TIME</span></h3>
+
+  <h4>// Página Web</h4>
+  <ul>
+    <li>Sitio dedicado 100% a Fencing</li>
+    <li>Landing pages por tipo de valla (vinyl, chain link, pool, aluminum, wood)</li>
+    <li>Formulario de cotización + click-to-call</li>
+    <li>Optimizada para conversión y SEO local</li>
+  </ul>
+
+  <h4>// Google My Business</h4>
+  <ul>
+    <li>Verificación y optimización completa del perfil</li>
+    <li>Carga de 20+ fotos profesionales</li>
+    <li>Q&amp;A sembrado + sistema automatizado de reviews</li>
+  </ul>
+
+  <h4>// Tracking</h4>
+  <ul>
+    <li>Google Analytics 4 + Google Ads conversion tracking</li>
+    <li>Call tracking</li>
+  </ul>
+
+  <h4>// Google Ads (arquitectura inicial)</h4>
+  <ul>
+    <li>Keyword research + estructura de campañas por tipo de valla</li>
+    <li>Anuncios con A/B testing desde día 1</li>
+    <li>Geotargeting (Davenport + radio definido)</li>
+  </ul>
+
+  <h4>// CRM</h4>
+  <ul>
+    <li>Pipeline configurado + automatizaciones básicas de seguimiento a leads</li>
+  </ul>
+
+  <h3 style="color: var(--primary);">Fase Mensual <span style="font-family: var(--font-m); font-size: 9pt; color: var(--space-grey); letter-spacing: 0.2em;">// RECURRENTE</span></h3>
+
+  <h4>// Google Ads Management</h4>
+  <ul>
+    <li>Optimización semanal + A/B testing</li>
+    <li>Análisis de keywords + control de presupuesto</li>
+  </ul>
+
+  <h4>// SEO Local</h4>
+  <ul>
+    <li>2 blog posts mensuales optimizados</li>
+    <li>Citations (Yelp, Angi, HomeAdvisor, BBB) + link building local</li>
+  </ul>
+
+  <h4>// GMB Management</h4>
+  <ul>
+    <li>2–3 posts semanales + respuesta a reviews &lt;24h</li>
+    <li>Fotos de trabajos + monitoreo de ranking en Maps</li>
+  </ul>
+
+  <h4>// Reportes y Comunicación</h4>
+  <ul>
+    <li>Reporte mensual con KPIs (leads, CPL, posiciones, reviews)</li>
+    <li>1 reunión estratégica mensual (30–45 min)</li>
+    <li>Disponibilidad por WhatsApp para ajustes rápidos</li>
+  </ul>
+</div>
+
+<div class="page-break"></div>
+
+<!-- ================== SECTION 3 ================== -->
+<div class="section">
+  <div class="section-num">03 / Investment</div>
+  <h2>Inversión</h2>
+
+  <table>
+    <thead>
+      <tr><th>Concepto</th><th>Monto</th><th>Condición</th></tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><strong>Setup one-time</strong><br>Web + GMB + Tracking + Ads setup + CRM</td>
+        <td><span class="hot">$1,100.00 USD</span></td>
+        <td>50% adelantado al firmar<br>50% al entregar sitio en vivo</td>
+      </tr>
+      <tr>
+        <td><strong>Fee mensual</strong><br>Ads + SEO + GMB + CRM + reportes</td>
+        <td><span class="hot">$397.00 USD / mes</span></td>
+        <td>Mínimo 3 meses<br>Cobro cada día 1 del mes</td>
+      </tr>
+      <tr>
+        <td><strong>Ad spend recomendado</strong><br>Pagado directo a Google por el cliente</td>
+        <td>$1,000 – $1,500 / mes</td>
+        <td>Sin markup<br>Tarjeta del cliente</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div class="highlight-box">
+    <strong>Primer desembolso al firmar:</strong> $550 USD (50% del setup).<br>
+    <strong>Segundo desembolso:</strong> $550 USD al entregar el sitio en vivo.<br>
+    <strong>Fee mensual:</strong> $397 USD cobrados automáticamente a partir del mes 1 de ejecución.
+  </div>
+
+  <div class="good-box">
+    <strong style="color: var(--light-blue);">Transparencia total en ad spend:</strong> el presupuesto de Google Ads no forma parte del fee mensual. Se paga con la tarjeta del cliente directamente a Google, sin intermediación financiera por parte de MM Agency.
+  </div>
+</div>
+
+<!-- ================== SECTION 4 ================== -->
+<div class="section">
+  <div class="section-num">04 / Timeline</div>
+  <h2>Timeline de ejecución</h2>
+
+  <table>
+    <thead>
+      <tr><th style="width: 120px;">Semana</th><th>Entregable</th></tr>
+    </thead>
+    <tbody>
+      <tr><td><strong>1</strong></td><td>Kickoff call + keyword research + research competencia</td></tr>
+      <tr><td><strong>2</strong></td><td>Wireframe web + setup GMB + accesos</td></tr>
+      <tr><td><strong>3</strong></td><td>Desarrollo web + redacción de copy + tracking</td></tr>
+      <tr><td><strong>4</strong></td><td>Web en vivo + tracking instalado + campañas Ads lanzadas</td></tr>
+      <tr><td><strong>5 – 8</strong></td><td>Optimización inicial de Ads + primeros posts SEO + campaña de reviews</td></tr>
+      <tr><td><strong>9 – 12</strong></td><td>Primer reporte trimestral + ajustes estratégicos</td></tr>
+    </tbody>
+  </table>
+</div>
+
+<!-- ================== SECTION 5 ================== -->
+<div class="section">
+  <div class="section-num">05 / Payment Terms</div>
+  <h2>Condiciones de pago</h2>
+  <ul>
+    <li>Moneda única: <strong>dólares estadounidenses (USD)</strong></li>
+    <li>Métodos aceptados: <strong>Stripe, Wise, PayPal</strong> o transferencia bancaria internacional</li>
+    <li>Las comisiones bancarias o de plataforma son por cuenta del cliente</li>
+    <li>El fee mensual se cobra cada día 1 del mes calendario</li>
+    <li>Pagos con más de 10 días de atraso generan pausa automática del servicio hasta regularizar</li>
+  </ul>
+</div>
+
+<div class="page-break"></div>
+
+<!-- ================== SECTION 6 ================== -->
+<div class="section">
+  <div class="section-num">06 / Client Obligations</div>
+  <h2>Obligaciones del cliente</h2>
+  <ul>
+    <li>Proveer accesos a GMB, Google Ads, dominio y redes sociales en las primeras 48 horas tras el kickoff</li>
+    <li>Entregar materiales requeridos (fotos de trabajos, referencias, testimoniales) en tiempo oportuno</li>
+    <li>Responder a leads generados en <strong>menos de 30 minutos</strong> durante horario laboral</li>
+    <li>Aprobar o solicitar cambios en un plazo máximo de 3 días hábiles por entregable</li>
+    <li>Realizar los pagos según los plazos acordados</li>
+  </ul>
+  <div class="warn-box">
+    <strong>Importante:</strong> MM Agency no garantiza conversiones cuando el tiempo de respuesta al lead exceda las 2 horas. La velocidad de respuesta es el factor #1 de cierre en home services.
+  </div>
+</div>
+
+<!-- ================== SECTION 7 ================== -->
+<div class="section">
+  <div class="section-num">07 / Confidentiality</div>
+  <h2>Confidencialidad</h2>
+  <p>Ambas partes se comprometen a mantener estricta confidencialidad sobre toda información comercial, financiera, operativa, de clientes, keywords, performance de campañas y estrategias intercambiada durante la ejecución del contrato. Esta obligación permanece vigente durante <strong>2 años</strong> después de finalizada la relación.</p>
+</div>
+
+<!-- ================== SECTION 8 ================== -->
+<div class="section">
+  <div class="section-num">08 / Intellectual Property</div>
+  <h2>Propiedad intelectual</h2>
+  <ul>
+    <li>Los <strong>assets finales entregados</strong> (web, copy, estructura de campañas) pertenecen al cliente una vez completados la totalidad de los pagos del setup ($1,100 USD).</li>
+    <li>El <strong>código fuente, stacks, workflows internos y metodologías</strong> reutilizables son y permanecen propiedad exclusiva de MM Agency.</li>
+    <li>MM Agency se reserva el derecho de mostrar el proyecto en su portafolio y materiales de marketing, salvo solicitud expresa en contrario.</li>
+  </ul>
+</div>
+
+<!-- ================== SECTION 9 ================== -->
+<div class="section">
+  <div class="section-num">09 / Termination</div>
+  <h2>Terminación</h2>
+  <ul>
+    <li>El contrato tiene un <strong>mínimo de 3 meses</strong> en la fase mensual — SEO y Ads requieren esa ventana para optimización.</li>
+    <li>Cumplido el mínimo, cualquiera de las partes puede terminar el contrato con <strong>30 días de aviso previo por escrito</strong>, sin penalidad.</li>
+    <li>Al terminar, MM Agency entregará al cliente los accesos completos a todas las plataformas y las credenciales activas.</li>
+    <li>Setup pagado <strong>no es reembolsable</strong> bajo ninguna circunstancia, ya que corresponde a trabajo entregado.</li>
+  </ul>
+</div>
+
+<div class="page-break"></div>
+
+<!-- ================== SECTION 10 ================== -->
+<div class="section">
+  <div class="section-num">10 / Liability</div>
+  <h2>Limitación de responsabilidad</h2>
+  <p>MM Agency se compromete a ejecutar los servicios con diligencia profesional y las mejores prácticas de la industria. <strong>MM Agency no garantiza resultados específicos</strong> (número de leads, ventas, posiciones de búsqueda o ROI), debido a que estos dependen de factores externos:</p>
+  <ul>
+    <li>Presupuesto de ad spend disponible</li>
+    <li>Comportamiento del mercado y competencia local</li>
+    <li>Velocidad de respuesta del equipo de ventas del cliente</li>
+    <li>Calidad del cierre comercial del cliente</li>
+  </ul>
+  <p>La responsabilidad total de MM Agency por cualquier reclamo derivado de este contrato se limita al <strong>monto efectivamente pagado por el cliente durante los 3 meses anteriores al reclamo</strong>.</p>
+</div>
+
+<!-- ================== SECTION 11 ================== -->
+<div class="section">
+  <div class="section-num">11 / Governing Law</div>
+  <h2>Ley aplicable y jurisdicción</h2>
+  <p>Este contrato se rige por las leyes de la <strong>República Dominicana</strong>. Cualquier controversia será resuelta de buena fe entre las partes; de no lograrse acuerdo, será sometida a los tribunales ordinarios del Distrito Nacional, Santo Domingo, República Dominicana.</p>
+</div>
+
+<!-- ================== SECTION 12 — FIRMAS ================== -->
+<div class="section">
+  <div class="section-num">12 / Signatures</div>
+  <h2>Firmas</h2>
+  <p>Al firmar, ambas partes declaran haber leído, comprendido y aceptado en su totalidad los términos del presente contrato.</p>
+
+  <div class="firmas">
+    <div class="firma">
+      <div class="role">// Proveedor</div>
+      <div class="who">Martín Mercedes</div>
+      <div class="title">MM Agency · Santo Domingo, RD</div>
+      <div class="firma-linea"></div>
+      <div class="field">Firma</div>
+      <div class="firma-linea" style="height: 22px;"></div>
+      <div class="field">Fecha: _____ / _____ / 2026</div>
+    </div>
+    <div class="firma">
+      <div class="role">// Cliente</div>
+      <div class="who">Crystalline Dynamics, Inc.</div>
+      <div class="title">Representante legal autorizado</div>
+      <div class="firma-linea"></div>
+      <div class="field">Nombre y cargo</div>
+      <div class="firma-linea" style="height: 22px;"></div>
+      <div class="field">Fecha: _____ / _____ / 2026</div>
+    </div>
+  </div>
+</div>
+
+<!-- ================== FOOTER ================== -->
+<div class="doc-footer">
+  <div class="sig">MM AGENCY</div>
+  <div class="contact">
+    FENCE GROWTH SYSTEM <span class="y">·</span> SERVICE AGREEMENT <span class="y">·</span> 2026
+  </div>
+</div>
+
+</div><!-- /.content-wrap -->
+
+</body>
+</html>

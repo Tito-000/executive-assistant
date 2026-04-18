@@ -1,0 +1,724 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>Fence Growth System — Deck Vertical · Crystalline Dynamics</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800;900&family=DM+Mono:wght@400;500&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root {
+  --primary: #FAFA00;
+  --secondary: #713DFF;
+  --orange: #F54900;
+  --cyan: #00E3FF;
+  --green: #58d68d;
+  --green-dk: #008500;
+  --violet: #b388ff;
+  --pink: #FCA8FF;
+  --bg: #181818;
+  --bg-card: #202020;
+  --bg-card-2: #242424;
+  --border: #353535;
+  --space-grey: #707070;
+  --light-grey: #C9C9C9;
+  --light: #FAFAFA;
+  --white: #FFFFFF;
+  --font-h: 'Orbitron', sans-serif;
+  --font-b: 'Inter', sans-serif;
+  --font-m: 'DM Mono', monospace;
+}
+@page { size: Letter; margin: 0; }
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+html, body {
+  background: var(--bg);
+  color: var(--light);
+  font-family: var(--font-b);
+  font-size: 10.5pt;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+.wrap { padding: 0.55in 0.7in; background: var(--bg); }
+
+/* ===== COVER ===== */
+.cover {
+  width: 8.5in; height: 11in;
+  padding: 0.8in 0.7in;
+  display: flex; flex-direction: column; justify-content: space-between;
+  page-break-after: always;
+  background: var(--bg);
+  position: relative; overflow: hidden;
+}
+.cover::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 3px; background: var(--primary); }
+.cover-top { display: flex; justify-content: space-between; align-items: flex-start; }
+.cover-brand { font-family: var(--font-h); font-weight: 900; font-size: 13pt; color: var(--white); letter-spacing: 0.02em; }
+.cover-brand .dot { color: var(--primary); }
+.cover-tag { font-family: var(--font-m); font-size: 8.5pt; color: var(--space-grey); letter-spacing: 0.3em; text-transform: uppercase; text-align: right; }
+.cover-main { margin-top: 60px; }
+.cover-eyebrow { font-family: var(--font-m); font-size: 9pt; color: var(--primary); letter-spacing: 0.5em; text-transform: uppercase; margin-bottom: 24px; }
+.cover-title { font-family: var(--font-h); font-weight: 900; font-size: 56pt; line-height: 0.95; letter-spacing: -0.02em; color: var(--white); margin: 0 0 20px; }
+.cover-title .accent { color: var(--primary); }
+.cover-sub { font-size: 14pt; color: var(--light-grey); max-width: 520px; line-height: 1.45; }
+.cover-line { width: 80px; height: 3px; background: var(--primary); margin: 32px 0; }
+.cover-client { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; max-width: 540px; }
+.cover-client .lbl { font-family: var(--font-m); font-size: 7.5pt; color: var(--space-grey); letter-spacing: 0.3em; text-transform: uppercase; margin-bottom: 6px; }
+.cover-client .val { font-family: var(--font-h); font-weight: 600; font-size: 11pt; color: var(--white); }
+.cover-footer { display: flex; justify-content: space-between; align-items: flex-end; border-top: 0.5px solid var(--border); padding-top: 20px; margin-top: 60px; }
+.cover-footer .meta { font-family: var(--font-m); font-size: 8pt; color: var(--space-grey); letter-spacing: 0.15em; text-transform: uppercase; line-height: 1.8; }
+.cover-footer .meta strong { color: var(--primary); font-weight: 500; }
+
+/* ===== SECTIONS ===== */
+.section { padding: 28px 0 14px; page-break-inside: avoid; }
+.section.break { page-break-before: always; }
+.section-num { font-family: var(--font-m); font-size: 8pt; color: var(--primary); letter-spacing: 0.5em; text-transform: uppercase; margin-bottom: 12px; }
+.eyebrow-cyan { color: var(--cyan); }
+h2 { font-family: var(--font-h); font-weight: 800; font-size: 24pt; color: var(--white); margin: 0 0 18px; letter-spacing: -0.01em; line-height: 1.1; }
+h2 .accent { color: var(--primary); }
+h3 { font-family: var(--font-h); font-weight: 600; font-size: 13pt; color: var(--white); margin: 20px 0 10px; }
+h4 { font-family: var(--font-m); font-weight: 500; font-size: 8.5pt; color: var(--primary); margin: 14px 0 6px; letter-spacing: 0.25em; text-transform: uppercase; }
+p { color: var(--light-grey); margin: 6px 0; line-height: 1.65; }
+strong { color: var(--white); font-weight: 600; }
+ul { margin: 8px 0; padding-left: 18px; color: var(--light-grey); }
+li { margin: 4px 0; line-height: 1.6; }
+li::marker { color: var(--primary); }
+
+/* ===== STATS ===== */
+.stats-row { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; margin: 16px 0; }
+.stat { background: var(--bg-card); border: 0.5px solid var(--border); padding: 16px 14px; text-align: center; border-radius: 6px; }
+.stat .num { font-family: var(--font-h); font-weight: 800; font-size: 22pt; color: var(--primary); display: block; line-height: 1; margin-bottom: 6px; }
+.stat .lbl { font-family: var(--font-m); font-size: 7pt; color: var(--space-grey); letter-spacing: 0.2em; text-transform: uppercase; }
+.stats-row.cyan .stat .num { color: var(--cyan); }
+.stats-row.green .stat .num { color: var(--green); }
+
+/* ===== QUOTE ===== */
+.quote { background: var(--bg-card); border-left: 3px solid var(--primary); padding: 18px 22px; margin: 16px 0; border-radius: 6px; }
+.quote .txt { font-family: var(--font-h); font-weight: 500; font-size: 13pt; color: var(--white); line-height: 1.3; margin: 0 0 10px; }
+.quote .cite { font-family: var(--font-m); font-size: 8pt; color: var(--space-grey); letter-spacing: 0.2em; text-transform: uppercase; }
+
+/* ===== THERMOMETER ===== */
+.thermo-grid { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 12px; margin: 16px 0; }
+.thermo { background: var(--bg-card); border: 0.5px solid var(--border); padding: 16px 14px; border-radius: 6px; }
+.thermo .pct { font-family: var(--font-h); font-weight: 800; font-size: 26pt; color: var(--primary); line-height: 1; display: block; margin-bottom: 4px; }
+.thermo.cyan .pct { color: var(--cyan); }
+.thermo.green .pct { color: var(--green); }
+.thermo.violet .pct { color: var(--violet); }
+.thermo.orange .pct { color: var(--orange); }
+.thermo .bar { height: 6px; background: #111; border-radius: 3px; margin: 8px 0 10px; overflow: hidden; }
+.thermo .fill { height: 100%; background: var(--primary); }
+.thermo.cyan .fill { background: var(--cyan); }
+.thermo.green .fill { background: var(--green); }
+.thermo.violet .fill { background: var(--violet); }
+.thermo.orange .fill { background: var(--orange); }
+.thermo .lbl { font-family: var(--font-m); font-size: 7.5pt; color: var(--primary); letter-spacing: 0.2em; text-transform: uppercase; margin-bottom: 4px; }
+.thermo.cyan .lbl { color: var(--cyan); }
+.thermo.green .lbl { color: var(--green); }
+.thermo.violet .lbl { color: var(--violet); }
+.thermo.orange .lbl { color: var(--orange); }
+.thermo .desc { font-size: 9pt; color: var(--light-grey); line-height: 1.45; }
+
+/* ===== TABLE ===== */
+table { width: 100%; border-collapse: collapse; margin: 12px 0; font-size: 9.5pt; background: var(--bg-card); border: 0.5px solid var(--border); }
+th { background: var(--bg); color: var(--primary); padding: 10px 12px; text-align: left; font-family: var(--font-m); font-weight: 500; font-size: 7.5pt; letter-spacing: 0.2em; text-transform: uppercase; border-bottom: 1px solid var(--border); }
+td { padding: 9px 12px; border-bottom: 0.5px solid var(--border); color: var(--light-grey); }
+tr:last-child td { border-bottom: none; }
+td strong { color: var(--white); }
+td .hot { color: var(--primary); font-weight: 700; }
+td .up { color: var(--cyan); font-weight: 600; }
+
+/* ===== BOXES ===== */
+.hero-box { background: linear-gradient(135deg, var(--bg-card) 0%, rgba(113, 61, 255, 0.08) 100%); border: 0.5px solid var(--border); border-left: 3px solid var(--primary); padding: 18px 22px; margin: 14px 0; border-radius: 6px; }
+.hero-box h3 { margin-top: 0; color: var(--primary); font-size: 12pt; }
+.hero-box p { color: var(--light); margin: 0; }
+.highlight { background: rgba(250, 250, 0, 0.06); border-left: 3px solid var(--primary); padding: 12px 16px; margin: 12px 0; border-radius: 4px; color: var(--white); font-size: 10.5pt; }
+.cyan-box { background: rgba(0, 227, 255, 0.05); border-left: 3px solid var(--cyan); padding: 12px 16px; margin: 12px 0; border-radius: 4px; }
+.green-box { background: rgba(88, 214, 141, 0.06); border-left: 3px solid var(--green); padding: 12px 16px; margin: 12px 0; border-radius: 4px; }
+
+/* ===== STEPS ===== */
+.steps { display: grid; grid-template-columns: 1fr; gap: 10px; margin: 14px 0; }
+.step { background: var(--bg-card); border: 0.5px solid var(--border); padding: 14px 18px; border-radius: 6px; display: grid; grid-template-columns: 50px 1fr; gap: 14px; align-items: flex-start; }
+.step .n { font-family: var(--font-h); font-weight: 800; font-size: 24pt; color: var(--primary); line-height: 1; }
+.step .ttl { font-family: var(--font-h); font-weight: 600; font-size: 11pt; color: var(--white); margin-bottom: 4px; }
+.step .body { color: var(--light-grey); font-size: 9.5pt; line-height: 1.55; }
+
+/* ===== JOURNEY ===== */
+.journey { display: grid; grid-template-columns: repeat(5, 1fr); gap: 6px; margin: 14px 0; }
+.jcard { background: var(--bg-card); border-top: 3px solid var(--primary); padding: 12px 10px; border-radius: 4px; }
+.jcard:nth-child(2) { border-top-color: var(--cyan); }
+.jcard:nth-child(3) { border-top-color: var(--green); }
+.jcard:nth-child(4) { border-top-color: var(--violet); }
+.jcard:nth-child(5) { border-top-color: var(--orange); }
+.jcard .ph { font-family: var(--font-m); font-size: 6.5pt; color: var(--primary); letter-spacing: 0.2em; text-transform: uppercase; margin-bottom: 6px; }
+.jcard:nth-child(2) .ph { color: var(--cyan); }
+.jcard:nth-child(3) .ph { color: var(--green); }
+.jcard:nth-child(4) .ph { color: var(--violet); }
+.jcard:nth-child(5) .ph { color: var(--orange); }
+.jcard .name { font-family: var(--font-h); font-weight: 600; font-size: 9pt; color: var(--white); margin-bottom: 6px; line-height: 1.2; }
+.jcard .det { font-size: 7.5pt; color: var(--light-grey); line-height: 1.4; }
+
+/* ===== PILLARS ===== */
+.pillars { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; margin: 14px 0; }
+.pillar { background: var(--bg-card); border: 0.5px solid var(--border); border-top: 3px solid var(--primary); padding: 16px 16px; border-radius: 6px; }
+.pillar:nth-child(2) { border-top-color: var(--cyan); }
+.pillar:nth-child(3) { border-top-color: var(--green); }
+.pillar .n { font-family: var(--font-m); font-size: 7pt; color: var(--primary); letter-spacing: 0.3em; text-transform: uppercase; margin-bottom: 8px; }
+.pillar:nth-child(2) .n { color: var(--cyan); }
+.pillar:nth-child(3) .n { color: var(--green); }
+.pillar .ttl { font-family: var(--font-h); font-weight: 700; font-size: 11pt; color: var(--white); margin-bottom: 8px; line-height: 1.2; }
+.pillar .body { font-size: 9pt; color: var(--light-grey); line-height: 1.5; }
+
+/* ===== TIMELINE ===== */
+.tl { display: grid; grid-template-columns: repeat(4, 1fr); gap: 8px; margin: 14px 0; }
+.tl-box { background: var(--bg-card); border: 0.5px solid var(--border); padding: 14px 14px; border-radius: 6px; position: relative; }
+.tl-box::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 2px; background: var(--primary); }
+.tl-box:nth-child(2)::before { background: var(--cyan); }
+.tl-box:nth-child(3)::before { background: var(--green); }
+.tl-box:nth-child(4)::before { background: var(--violet); }
+.tl-box .wk { font-family: var(--font-m); font-size: 7pt; color: var(--primary); letter-spacing: 0.25em; text-transform: uppercase; margin-bottom: 6px; }
+.tl-box:nth-child(2) .wk { color: var(--cyan); }
+.tl-box:nth-child(3) .wk { color: var(--green); }
+.tl-box:nth-child(4) .wk { color: var(--violet); }
+.tl-box .ttl { font-family: var(--font-h); font-weight: 600; font-size: 10pt; color: var(--white); margin-bottom: 6px; }
+.tl-box .body { font-size: 8.5pt; color: var(--light-grey); line-height: 1.45; }
+
+/* ===== PRICING ===== */
+.price-compare { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin: 16px 0; }
+.price-col { background: var(--bg-card); border: 0.5px solid var(--border); border-radius: 8px; padding: 22px 22px; position: relative; }
+.price-col.featured { border: 1px solid var(--primary); }
+.price-col.featured::before { content: 'RECOMENDADO'; position: absolute; top: -10px; left: 20px; background: var(--primary); color: var(--bg); padding: 3px 10px; font-family: var(--font-m); font-size: 7pt; letter-spacing: 0.2em; font-weight: 600; border-radius: 3px; }
+.price-col .pl { font-family: var(--font-m); font-size: 8pt; color: var(--space-grey); letter-spacing: 0.25em; text-transform: uppercase; margin-bottom: 10px; }
+.price-col .pname { font-family: var(--font-h); font-weight: 700; font-size: 14pt; color: var(--white); margin-bottom: 8px; }
+.price-col .pbig { font-family: var(--font-h); font-weight: 800; font-size: 28pt; color: var(--primary); line-height: 1; margin: 10px 0; }
+.price-col .pbig .sm { font-size: 11pt; color: var(--light-grey); font-weight: 500; }
+.price-col ul { padding-left: 16px; font-size: 9.5pt; }
+
+/* ===== CTA ===== */
+.final-cta { background: var(--primary); color: var(--bg); padding: 30px 32px; margin: 20px 0; border-radius: 10px; text-align: center; }
+.final-cta .eb { font-family: var(--font-m); font-size: 8pt; color: var(--bg); letter-spacing: 0.4em; text-transform: uppercase; margin-bottom: 10px; opacity: 0.7; }
+.final-cta h3 { font-family: var(--font-h); font-weight: 800; font-size: 22pt; color: var(--bg); margin: 0 0 10px; letter-spacing: -0.01em; }
+.final-cta p { color: var(--bg); margin: 0; opacity: 0.85; font-size: 11pt; }
+
+.download-cta { display: flex; align-items: center; justify-content: center; gap: 14px; background: var(--bg); color: var(--primary); padding: 20px 28px; margin: 20px 0; border-radius: 8px; border: 1px solid var(--primary); text-decoration: none; font-family: var(--font-h); font-weight: 700; font-size: 13pt; letter-spacing: 0.02em; }
+.download-cta .sub { font-family: var(--font-m); font-size: 8pt; color: var(--space-grey); letter-spacing: 0.2em; font-weight: 500; }
+
+/* FOOTER */
+.doc-footer { border-top: 0.5px solid var(--border); padding-top: 16px; margin-top: 24px; display: flex; justify-content: space-between; align-items: center; }
+.doc-footer .meta { font-family: var(--font-m); font-size: 7.5pt; color: var(--space-grey); letter-spacing: 0.2em; text-transform: uppercase; }
+.doc-footer .meta strong { color: var(--primary); font-weight: 500; }
+</style>
+</head>
+<body>
+
+<!-- ===== COVER ===== -->
+<div class="cover">
+  <div class="cover-top">
+    <div class="cover-brand">MM<span class="dot">.</span>AGENCY</div>
+    <div class="cover-tag">Growth Deck<br>2026</div>
+  </div>
+
+  <div class="cover-main">
+    <div class="cover-eyebrow">Fence Growth System</div>
+    <h1 class="cover-title">Ser los del <span class="accent">fence</span><br>en Davenport.</h1>
+    <p class="cover-sub">Un sistema completo para que Crystalline Dynamics domine el mercado de fencing en Polk County, FL — con Google Ads + SEO local + funnel de resultados.</p>
+
+    <div class="cover-line"></div>
+
+    <div class="cover-client">
+      <div class="block"><div class="lbl">Para</div><div class="val">Crystalline Dynamics, Inc.</div></div>
+      <div class="block"><div class="lbl">Ubicación</div><div class="val">Davenport, FL</div></div>
+      <div class="block"><div class="lbl">De</div><div class="val">Martin Mercedes · MM Agency</div></div>
+      <div class="block"><div class="lbl">Fecha</div><div class="val">Abril 2026</div></div>
+    </div>
+  </div>
+
+  <div class="cover-footer">
+    <div class="meta">
+      Propuesta estratégica<br>
+      <strong>Confidencial</strong> · Uso exclusivo Crystalline Dynamics
+    </div>
+    <div class="meta" style="text-align:right;">
+      Deck · 21 secciones<br>
+      <strong>v1.0</strong>
+    </div>
+  </div>
+</div>
+
+<div class="wrap">
+
+<!-- ===== 02 · AUTHORITY ===== -->
+<section class="section">
+  <div class="section-num">02 · Quién habla</div>
+  <h2>Martin Mercedes —<br><span class="accent">consultor de growth,</span> no otro freelance.</h2>
+  <p>Llevo 6+ años montando sistemas de adquisición pagada para negocios de servicios en EE.UU. y LATAM. No vendo "posts bonitos": vendo leads calificados, llamadas, y citas en calendario.</p>
+
+  <div class="stats-row">
+    <div class="stat"><span class="num">6+</span><span class="lbl">Años Pauta</span></div>
+    <div class="stat"><span class="num">10+</span><span class="lbl">Clientes</span></div>
+    <div class="stat"><span class="num">$250K+</span><span class="lbl">Ad Spend Gestionado</span></div>
+  </div>
+
+  <h4>Credenciales</h4>
+  <ul>
+    <li><strong>Google Ads certified</strong> — Search, Performance Max, Local Services</li>
+    <li><strong>Meta Blueprint</strong> — Media Planning + Media Buying</li>
+    <li><strong>GoHighLevel partner</strong> — CRM + automation builds</li>
+  </ul>
+</section>
+
+<!-- ===== 03 · CASE STUDY ===== -->
+<section class="section break">
+  <div class="section-num">03 · Case Study</div>
+  <h2>Dra. Beatriz —<br>odontóloga en <span class="accent">Santo Domingo.</span></h2>
+  <p>Llegó sin sistema: redes muertas, cero pauta, 2–3 pacientes al mes por referido. Montamos Google Ads + landing + calendario en <strong>3 semanas</strong>. Esto es lo que pasó en los primeros 90 días:</p>
+
+  <div class="stats-row cyan">
+    <div class="stat"><span class="num">5,660</span><span class="lbl">Clicks</span></div>
+    <div class="stat"><span class="num">326</span><span class="lbl">Conversiones</span></div>
+    <div class="stat"><span class="num">$0.49</span><span class="lbl">CPC promedio</span></div>
+  </div>
+  <div class="stats-row green">
+    <div class="stat"><span class="num">$8.48</span><span class="lbl">Costo x Conversión</span></div>
+    <div class="stat"><span class="num">5.76%</span><span class="lbl">CVR Landing</span></div>
+    <div class="stat"><span class="num">3x</span><span class="lbl">Agenda semanal</span></div>
+  </div>
+
+  <div class="quote">
+    <p class="txt">"Pasé de rogar por pacientes a tener que decirle que no a gente. El teléfono ya no para."</p>
+    <p class="cite">— Dra. Beatriz · Cliente desde dic. 2025</p>
+  </div>
+
+  <p><strong>Lo que importa:</strong> la misma estructura — Search ads + landing de conversión + lead→call automation — es la que vamos a correr para fencing en Davenport. El ticket promedio de un fence install es ~15× el de una limpieza dental, así que la economía del funnel es infinitamente mejor.</p>
+</section>
+
+<!-- ===== 04 · PROBLEM HOOK ===== -->
+<section class="section break">
+  <div class="section-num">04 · El problema</div>
+  <h2>Ahora mismo hay <span class="accent">2,400 personas/mes</span> buscando "vinyl fence" en Florida Central.</h2>
+  <p>Y la mayoría está llamando al primer contratista que aparece en Google. Si tu negocio no está ahí, es invisible. No es que no tengan demanda — <strong>es que la demanda la está atendiendo otro.</strong></p>
+
+  <div class="highlight">
+    <strong>Polk County + Orange County + Osceola:</strong> ~28,000 búsquedas mensuales relacionadas a fencing. De esas, ~40% tienen intención de compra clara ("near me", "installation", "quote", "cost").
+  </div>
+
+  <p>El mercado no está saturado — está mal atendido. Las páginas web de los competidores son de 2014, las reseñas en Google están sin responder, y nadie está corriendo Search ads con landing decente. <strong>Es tierra fértil.</strong></p>
+</section>
+
+<!-- ===== 05 · OPPORTUNITY ===== -->
+<section class="section break">
+  <div class="section-num">05 · Oportunidad</div>
+  <h2>Keywords que pagan <span class="accent">$12–$30 por click</span> — si las sabes capturar.</h2>
+  <p>Este es el mapa de oportunidad real. Búsquedas con intención comercial, volumen mensual, y CPC promedio en Florida Central:</p>
+
+  <table>
+    <thead><tr><th>Keyword</th><th>Volumen/mes</th><th>CPC promedio</th><th>Intención</th></tr></thead>
+    <tbody>
+      <tr><td><strong>vinyl fence installation</strong></td><td>1,900</td><td class="hot">$18.40</td><td>Alta</td></tr>
+      <tr><td><strong>fence company near me</strong></td><td>2,400</td><td class="hot">$14.20</td><td>Alta</td></tr>
+      <tr><td><strong>wood fence cost</strong></td><td>1,300</td><td>$9.80</td><td>Media</td></tr>
+      <tr><td><strong>aluminum fence Davenport</strong></td><td>320</td><td class="hot">$22.10</td><td>Alta</td></tr>
+      <tr><td><strong>pool fence installation</strong></td><td>880</td><td class="hot">$26.50</td><td>Alta</td></tr>
+      <tr><td><strong>chain link fence repair</strong></td><td>720</td><td>$11.30</td><td>Media</td></tr>
+    </tbody>
+  </table>
+
+  <p>Con un presupuesto de $1,000–$1,500/mes se pueden atacar las 2–3 keywords de mayor intención y generar entre <strong>25–45 leads calificados al mes</strong> a un CPL proyectado de $35–$55.</p>
+</section>
+
+<!-- ===== 06 · TESIS ===== -->
+<section class="section break">
+  <div class="section-num">06 · Tesis</div>
+  <h2>Ganar en fencing local = <span class="accent">3 pilares.</span></h2>
+
+  <div class="pillars">
+    <div class="pillar">
+      <div class="n">Pilar 01</div>
+      <div class="ttl">Visibilidad cuando buscan</div>
+      <div class="body">Google Ads + Google Business Profile optimizado + SEO local para capturar la intención del momento — cuando alguien tipea "fence near me" aparecemos primero.</div>
+    </div>
+    <div class="pillar">
+      <div class="n">Pilar 02</div>
+      <div class="ttl">Conversión sin fricción</div>
+      <div class="body">Landing con quote form, call tracking, y respuesta automática en 5 minutos. El 78% de leads contrata al primer contratista que llama de regreso — la velocidad es el moat.</div>
+    </div>
+    <div class="pillar">
+      <div class="n">Pilar 03</div>
+      <div class="ttl">Autoridad local</div>
+      <div class="body">Reseñas 5 estrellas, fotos de jobs reales, blog con contenido "cost to install vinyl fence in Florida". Google premia a los que parecen locales y legítimos.</div>
+    </div>
+  </div>
+
+  <p>Todo lo demás — redes sociales, YouTube, TikTok — es distracción. En fencing local, el 92% de clientes viene por Google. <strong>Enfocamos ahí y ganamos.</strong></p>
+</section>
+
+<!-- ===== 07 · POSITIONING ===== -->
+<section class="section break">
+  <div class="section-num">07 · Posicionamiento</div>
+  <h2>"The fence people in <span class="accent">Davenport.</span>"</h2>
+  <p>Una sola frase. Clara, repetible, defendible. El posicionamiento de Crystalline Dynamics no es "un contratista más" — es <strong>la referencia local de fencing</strong>. Eso cambia todo el lenguaje, la estética, y la estrategia de contenido.</p>
+
+  <div class="hero-box">
+    <h3>Por qué funciona</h3>
+    <p>"The fence people" es específico (fence, no construction en general), geográfico (Davenport), y ownable (ningún competidor lo reclama). Se traduce en tagline de anuncios, bio de GMB, y hero de la web — todo apunta al mismo lugar.</p>
+  </div>
+
+  <h4>Mensajes derivados</h4>
+  <ul>
+    <li><strong>Headline ads:</strong> "Davenport's #1 Fence Installer · Licensed & Insured · Free Quote"</li>
+    <li><strong>GMB tagline:</strong> "The fence people in Davenport, FL. Vinyl, wood, aluminum, chain link."</li>
+    <li><strong>Hero landing:</strong> "Get your fence installed in 2 weeks — or we waive the deposit."</li>
+  </ul>
+</section>
+
+<!-- ===== 08 · STARTING POINT ===== -->
+<section class="section break">
+  <div class="section-num">08 · Punto de partida</div>
+  <h2>Así llega el cliente a Google — <span class="accent">3 temperaturas.</span></h2>
+  <p>No todo el que busca "fence" está listo para comprar. Este es el mix aproximado del mercado:</p>
+
+  <div class="thermo-grid">
+    <div class="thermo orange">
+      <div class="lbl">Frío</div>
+      <span class="pct">30%</span>
+      <div class="bar"><div class="fill" style="width:30%"></div></div>
+      <div class="desc">Investigan precios, están "viendo opciones". 3–6 meses de ciclo. Los nutrimos con contenido (blog, videos, guías).</div>
+    </div>
+    <div class="thermo">
+      <div class="lbl">Tibio</div>
+      <span class="pct">50%</span>
+      <div class="bar"><div class="fill" style="width:50%"></div></div>
+      <div class="desc">Ya decidieron que van a instalar un fence, comparan 2–3 contratistas. 2–4 semanas de ciclo. Decide quien responde más rápido + mejor quote.</div>
+    </div>
+    <div class="thermo cyan">
+      <div class="lbl">Caliente</div>
+      <span class="pct">20%</span>
+      <div class="bar"><div class="fill" style="width:20%"></div></div>
+      <div class="desc">Tienen deadline (mudanza, pool inspection, HOA requirement). Llaman al primero que aparece y cierran en 1–3 días.</div>
+    </div>
+  </div>
+
+  <p>El 70% del mercado (tibio + caliente) está listo para decidir ahora. <strong>Ahí va el 100% del ad spend.</strong></p>
+</section>
+
+<!-- ===== 09 · READY TO BUY ===== -->
+<section class="section break">
+  <div class="section-num">09 · Will They Buy It?</div>
+  <h2>El cliente tibio/caliente ya tiene <span class="accent">90%+ de los checks</span> listos.</h2>
+  <p>Framework de Alex Hormozi: para que alguien compre tiene que creer en 3 cosas. Así está el mercado de fencing en Davenport ahora mismo:</p>
+
+  <div class="thermo-grid">
+    <div class="thermo">
+      <div class="lbl">Lo quieren</div>
+      <span class="pct">90%</span>
+      <div class="bar"><div class="fill" style="width:90%"></div></div>
+      <div class="desc">Fence no es lujo — resuelve seguridad, privacidad, HOA, pool code. Ya decidieron que lo necesitan.</div>
+    </div>
+    <div class="thermo cyan">
+      <div class="lbl">Pueden pagarlo</div>
+      <span class="pct">95%</span>
+      <div class="bar"><div class="fill" style="width:95%"></div></div>
+      <div class="desc">Ticket promedio $4k–$12k. Financing disponible. Homeowners en Davenport tienen equity y crédito.</div>
+    </div>
+    <div class="thermo green">
+      <div class="lbl">Creen que funciona</div>
+      <span class="pct">88%</span>
+      <div class="bar"><div class="fill" style="width:88%"></div></div>
+      <div class="desc">No hay escepticismo sobre el producto — todos saben qué es un fence y cómo funciona. Solo falta elegir contratista.</div>
+    </div>
+  </div>
+
+  <div class="green-box">
+    <strong style="color: var(--green);">Implicación:</strong> No necesitamos "educar" al mercado. No hacen falta webinars ni funnels largos. <strong>Solo hay que aparecer, responder rápido, y dar un quote claro.</strong> Eso cierra el 70% del mercado.
+  </div>
+</section>
+
+<!-- ===== 10 · HOW TO MOVE THEM ===== -->
+<section class="section break">
+  <div class="section-num">10 · Cómo los movemos</div>
+  <h2>De click a firma — <span class="accent">5 pasos.</span></h2>
+
+  <div class="steps">
+    <div class="step"><div class="n">01</div><div><div class="ttl">Google los encuentra</div><div class="body">Search ads en keywords de alta intención + GMB optimizado con 50+ reseñas. Aparecemos top 3 en el map pack.</div></div></div>
+    <div class="step"><div class="n">02</div><div><div class="ttl">Click a landing de conversión</div><div class="body">Landing específica por servicio (vinyl, wood, aluminum, pool). Hero claro, social proof, quote form visible. 5–8% CVR.</div></div></div>
+    <div class="step"><div class="n">03</div><div><div class="ttl">Respuesta en &lt;5 minutos</div><div class="body">Automatización en GHL: lead entra → SMS + email automático + task para llamar. El 78% del cierre es velocidad de respuesta.</div></div></div>
+    <div class="step"><div class="n">04</div><div><div class="ttl">Quote + visita en sitio</div><div class="body">Agendada desde el calendario online. Crystalline va, mide, cotiza. Quote profesional con fotos y timeline.</div></div></div>
+    <div class="step"><div class="n">05</div><div><div class="ttl">Deposit + install agendado</div><div class="body">50% deposit por Stripe link o cheque. Install programado en 2–4 semanas. Foto final + pedido de review en Google.</div></div></div>
+  </div>
+</section>
+
+<!-- ===== 11 · CUSTOMER JOURNEY ===== -->
+<section class="section break">
+  <div class="section-num">11 · Customer Journey</div>
+  <h2>Las <span class="accent">5 fases</span> del comprador de fence.</h2>
+
+  <div class="journey">
+    <div class="jcard">
+      <div class="ph">Fase 01</div>
+      <div class="name">Awareness</div>
+      <div class="det">Algo pasó (mudanza, perro nuevo, HOA notice). Googlea "fence near me" sin saber marcas.</div>
+    </div>
+    <div class="jcard">
+      <div class="ph">Fase 02</div>
+      <div class="name">Consideración</div>
+      <div class="det">Compara 2–3 empresas. Mira reseñas, fotos de jobs, precios. Quiere ver algo confiable y local.</div>
+    </div>
+    <div class="jcard">
+      <div class="ph">Fase 03</div>
+      <div class="name">Contacto</div>
+      <div class="det">Llena form o llama directo. Espera respuesta en horas, no días. Si nadie responde rápido, pasa al siguiente.</div>
+    </div>
+    <div class="jcard">
+      <div class="ph">Fase 04</div>
+      <div class="name">Quote</div>
+      <div class="det">Visita en sitio, medición, cotización escrita. Compara contra otros 1–2 quotes. Decide por precio + confianza.</div>
+    </div>
+    <div class="jcard">
+      <div class="ph">Fase 05</div>
+      <div class="name">Install</div>
+      <div class="det">Paga deposit, agenda install, recibe fence. Si todo bien, deja review 5★ y recomienda a vecinos.</div>
+    </div>
+  </div>
+
+  <p>Cada fase necesita un touchpoint específico: ads para awareness, GMB + web para consideración, velocidad para contacto, proceso pro para quote, y follow-up post-install para reviews. <strong>Todo eso lo construimos.</strong></p>
+</section>
+
+<!-- ===== 12 · GMB PILLAR ===== -->
+<section class="section break">
+  <div class="section-num">12 · Pilar GMB</div>
+  <h2>Google Business Profile = <span class="accent">tu activo #1.</span></h2>
+  <p>Más importante que la web, más importante que Instagram. El GMB es lo que aparece cuando alguien busca "fence Davenport" en el mapa. Lo que vamos a hacer:</p>
+
+  <ul>
+    <li><strong>Optimización completa:</strong> categorías correctas, horarios, servicios listados, área de cobertura, descripción con keywords.</li>
+    <li><strong>Fotos semanales:</strong> 4–6 fotos reales de jobs cada semana. Before/after + process shots.</li>
+    <li><strong>Posts GMB 2×/semana:</strong> ofertas, tips, testimonials. Google premia la actividad.</li>
+    <li><strong>Respuesta a reseñas:</strong> todas, en menos de 24h, con plantillas personalizables.</li>
+    <li><strong>Review generation:</strong> automatización post-install para pedir review con link directo.</li>
+  </ul>
+
+  <div class="highlight"><strong>Meta 90 días:</strong> pasar de reseñas actuales → 50+ reseñas con promedio 4.8★+. Top 3 en map pack para "fence Davenport" + 4 keywords relacionadas.</div>
+</section>
+
+<!-- ===== 13 · ADS PILLAR ===== -->
+<section class="section break">
+  <div class="section-num">13 · Pilar Google Ads</div>
+  <h2>Search ads = <span class="accent">grifo de leads</span> encendido.</h2>
+  <p>Estructura de cuenta simple y escalable:</p>
+
+  <ul>
+    <li><strong>1 campaña Search</strong> por tipo de fence (vinyl, wood, aluminum, pool) — 4 campañas iniciales.</li>
+    <li><strong>Ad groups por intención:</strong> "near me" / "installation" / "cost" / "company".</li>
+    <li><strong>Negative keywords agresivos:</strong> "diy", "how to", "repair near me" (a menos que repair sea servicio).</li>
+    <li><strong>Geo-targeting:</strong> Davenport + 15 millas → Orlando, Kissimmee, Winter Haven, Haines City, Clermont.</li>
+    <li><strong>Call tracking:</strong> número dedicado por campaña, grabación de llamadas para QA.</li>
+    <li><strong>Reportes mensuales:</strong> spend, CPL, leads, revenue atribuido — con recomendaciones accionables.</li>
+  </ul>
+
+  <div class="cyan-box"><strong style="color: var(--cyan);">Presupuesto recomendado:</strong> $1,000–$1,500/mes de ad spend (directo a Google, pagado con tu tarjeta). Con eso proyectamos 25–45 leads/mes a CPL de $35–$55.</div>
+</section>
+
+<!-- ===== 14 · SEO PILLAR ===== -->
+<section class="section break">
+  <div class="section-num">14 · Pilar SEO Local</div>
+  <h2>SEO local = <span class="accent">leads gratis</span> en 6 meses.</h2>
+  <p>Google Ads trae leads hoy. SEO trae leads <strong>sin costo</strong> en 4–8 meses. Ambos en paralelo:</p>
+
+  <ul>
+    <li><strong>On-page:</strong> optimización de cada página de servicio (vinyl, wood, aluminum, chain link, pool, commercial).</li>
+    <li><strong>Landing pages por ciudad:</strong> Davenport, Kissimmee, Haines City, Winter Haven, Lake Wales — 5 páginas locales optimizadas.</li>
+    <li><strong>Blog mensual:</strong> 2 artículos/mes tipo "Cost to install vinyl fence in Florida (2026 guide)" — atrapan tráfico informacional y lo convierten.</li>
+    <li><strong>Citations + directorios:</strong> NAP consistente en 30+ directorios (Yelp, BBB, HomeAdvisor, Angi, etc.).</li>
+    <li><strong>Link building local:</strong> menciones en blogs de realtors, pool builders, HOAs, newspaper locales.</li>
+  </ul>
+</section>
+
+<!-- ===== 15 · AD MOCKUPS ===== -->
+<section class="section break">
+  <div class="section-num">15 · Mockups de ads</div>
+  <h2>Así se ven los anuncios que <span class="accent">vamos a correr.</span></h2>
+
+  <h4>Ad #1 · Search (Vinyl fence)</h4>
+  <div class="hero-box">
+    <p><strong>Vinyl Fence Installation Davenport FL | Free Quote in 24hr</strong><br>
+    Licensed · Insured · 5★ Reviews. Get a same-day visit from Davenport's #1 fence installer. Financing available.<br>
+    <em style="color: var(--cyan);">www.crystallinefence.com/vinyl</em> · ⭐⭐⭐⭐⭐ (50+ reviews)</p>
+  </div>
+
+  <h4>Ad #2 · Search (Pool fence — compliance hook)</h4>
+  <div class="hero-box">
+    <p><strong>Pool Fence Install · Florida Code Compliant · Install in 2 Weeks</strong><br>
+    Pass your pool inspection the first time. 4ft, self-closing gate, no-climb design. Free quote today.<br>
+    <em style="color: var(--cyan);">www.crystallinefence.com/pool</em></p>
+  </div>
+
+  <h4>Ad #3 · Performance Max (hero image + headline rotation)</h4>
+  <div class="hero-box">
+    <p><strong>Davenport's Fence People</strong> · Vinyl · Wood · Aluminum · Chain Link<br>
+    One crew. One call. One quote. Free on-site estimate this week.</p>
+  </div>
+
+  <h4>Ad #4 · Call-only (mobile, alta intención)</h4>
+  <div class="hero-box">
+    <p><strong>📞 Call Now — Free Fence Quote · Davenport FL</strong><br>
+    Licensed contractor · Same-day response · Install in 2–4 weeks.</p>
+  </div>
+</section>
+
+<!-- ===== 16 · TIMELINE ===== -->
+<section class="section break">
+  <div class="section-num">16 · Timeline</div>
+  <h2>Del kickoff al <span class="accent">primer lead</span> en 4 semanas.</h2>
+
+  <div class="tl">
+    <div class="tl-box">
+      <div class="wk">Semana 01</div>
+      <div class="ttl">Setup & Discovery</div>
+      <div class="body">Kickoff call, acceso a cuentas (Google, GMB, dominio), research de keywords y competencia, wireframe de web aprobado.</div>
+    </div>
+    <div class="tl-box">
+      <div class="wk">Semana 02</div>
+      <div class="ttl">Web + GMB</div>
+      <div class="body">Landing pages (6), GMB optimizado, fotos iniciales, call tracking activo, GA4 instalado.</div>
+    </div>
+    <div class="tl-box">
+      <div class="wk">Semana 03</div>
+      <div class="ttl">Ads Launch</div>
+      <div class="body">Campañas Search + PMax live. CRM (GHL) configurado con automaciones SMS/email. Primer review request automation.</div>
+    </div>
+    <div class="tl-box">
+      <div class="wk">Semana 04</div>
+      <div class="ttl">Optimize & Scale</div>
+      <div class="body">Primeros leads llegando. Ajuste de bids, negative keywords, creative refresh. Reporte mensual 01.</div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 17 · KPIs ===== -->
+<section class="section break">
+  <div class="section-num">17 · KPIs</div>
+  <h2>Esto es lo que <span class="accent">vamos a medir.</span></h2>
+  <p>No métricas de vanidad. Solo lo que mueve el negocio:</p>
+
+  <div class="stats-row">
+    <div class="stat"><span class="num">CPL</span><span class="lbl">Costo x Lead</span></div>
+    <div class="stat"><span class="num">CVR</span><span class="lbl">Conversion Rate Landing</span></div>
+    <div class="stat"><span class="num">Calls</span><span class="lbl">Llamadas Generadas</span></div>
+  </div>
+  <div class="stats-row cyan">
+    <div class="stat"><span class="num">Quotes</span><span class="lbl">Quotes Enviados</span></div>
+    <div class="stat"><span class="num">Close %</span><span class="lbl">Quote → Sale</span></div>
+    <div class="stat"><span class="num">AOV</span><span class="lbl">Ticket Promedio</span></div>
+  </div>
+  <div class="stats-row green">
+    <div class="stat"><span class="num">ROAS</span><span class="lbl">Return on Ad Spend</span></div>
+    <div class="stat"><span class="num">LTV</span><span class="lbl">Lifetime Value</span></div>
+    <div class="stat"><span class="num">Reviews</span><span class="lbl">Google Reviews +★</span></div>
+  </div>
+
+  <p>Reporte mensual en PDF + loom con highlights y próximos pasos. Cero humo, solo números.</p>
+</section>
+
+<!-- ===== 18 · FUNNEL RESULTS ===== -->
+<section class="section break">
+  <div class="section-num">18 · Resultados esperados</div>
+  <h2>Mes 1–2 vs <span class="accent">Mes 3+.</span></h2>
+
+  <h4>Mes 1–2 · Ramp-up</h4>
+  <div class="hero-box">
+    <p><strong>15–25 leads/mes</strong> · CPL $55–$80 · 3–6 quotes cerrados<br>
+    La cuenta está aprendiendo, GMB empieza a ganar reseñas, SEO todavía no pega. Expectativa realista: break-even o leve ganancia.</p>
+  </div>
+
+  <h4>Mes 3+ · Sistema optimizado</h4>
+  <div class="green-box">
+    <strong style="color: var(--green);">25–45 leads/mes</strong> · CPL $35–$55 · 8–15 quotes cerrados<br>
+    Quality score sube, GMB en top 3, SEO trae tráfico orgánico. Ad spend se vuelve más eficiente. Expectativa: <strong>3–5× ROAS</strong> sobre ad spend.
+  </div>
+
+  <p>Con ticket promedio de $6,000 y close rate de 30% sobre quotes, eso son <strong>$18k–$45k/mes de revenue atribuido</strong> solo al canal de paid + local. Sin contar los referidos que genera cada install bien hecho.</p>
+</section>
+
+<!-- ===== 19 · TWO-WAY CLOSE ===== -->
+<section class="section break">
+  <div class="section-num">19 · Dos formas de avanzar</div>
+  <h2>Opción A o <span class="accent">Opción B.</span></h2>
+
+  <div class="price-compare">
+    <div class="price-col">
+      <div class="pl">Opción A</div>
+      <div class="pname">Seguir como están</div>
+      <div class="pbig" style="color: var(--space-grey);">$0</div>
+      <ul>
+        <li>Cero inversión en marketing</li>
+        <li>Leads llegan cuando llegan (referidos)</li>
+        <li>Competencia sigue ganando el top 3 de Google</li>
+        <li>Ticket promedio capturado por quien pauta</li>
+        <li>Crecimiento limitado al boca a boca</li>
+      </ul>
+    </div>
+    <div class="price-col featured">
+      <div class="pl">Opción B</div>
+      <div class="pname">Fence Growth System</div>
+      <div class="pbig">$1,100<span class="sm"> setup</span></div>
+      <ul>
+        <li>Web + GMB + Ads + SEO + CRM listos en 4 semanas</li>
+        <li>25–45 leads calificados/mes en mes 3+</li>
+        <li>Top 3 en Google Maps de Davenport</li>
+        <li>Sistema auto-genera reviews + referidos</li>
+        <li>Martin responde por los números cada mes</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 20 · PRICING ===== -->
+<section class="section break">
+  <div class="section-num">20 · Inversión</div>
+  <h2>Pricing <span class="accent">transparente.</span></h2>
+
+  <table>
+    <thead><tr><th>Concepto</th><th>Incluye</th><th>Inversión</th></tr></thead>
+    <tbody>
+      <tr><td><strong>Setup (one-time)</strong></td><td>Web (6 pages) + GMB + CRM + ads setup + SEO base + tracking</td><td class="hot">$1,100 USD</td></tr>
+      <tr><td><strong>Fee mensual</strong></td><td>Ads management + SEO + blog 2×/mes + GMB + reportes + CRM</td><td class="hot">$397 USD/mes</td></tr>
+      <tr><td><strong>Ad spend</strong></td><td>Pagado directo a Google con <em>tu</em> tarjeta. Sin markup.</td><td>$1,000–$1,500/mes</td></tr>
+      <tr><td><strong>Mínimo contrato</strong></td><td>3 meses · después mes a mes con 30 días de aviso</td><td>—</td></tr>
+    </tbody>
+  </table>
+
+  <h4>Términos de pago</h4>
+  <ul>
+    <li><strong>50% al firmar:</strong> $550 USD (Stripe, Wise o PayPal)</li>
+    <li><strong>50% al entregar sitio en vivo:</strong> $550 USD</li>
+    <li><strong>Fee mensual:</strong> primer cobro al activar ads, después mismo día cada mes</li>
+    <li><strong>Ad spend:</strong> tu tarjeta cargada directo por Google, sin intermediario</li>
+  </ul>
+
+  <div class="highlight"><strong>Lo que NO cobramos:</strong> markup en ad spend, extra por reportes, fees por reunión. Todo está en la tabla.</div>
+</section>
+
+<!-- ===== 21 · CLOSE ===== -->
+<section class="section break">
+  <div class="section-num">21 · Próximo paso</div>
+  <h2>Firmamos hoy — <span class="accent">arrancamos el lunes.</span></h2>
+  <p>Ya viste el sistema completo. Ya sabes el pricing. Ya sabes qué esperar mes 1–2 y mes 3+. Lo único que falta es decidir si Crystalline Dynamics va a ser <strong>"the fence people in Davenport"</strong> — o si ese lugar se lo queda otro.</p>
+
+  <div class="final-cta">
+    <div class="eb">Siguiente paso</div>
+    <h3>Firma el contrato.<br>Lanzamos en 4 semanas.</h3>
+    <p>$550 USD (50% del setup) para arrancar. El resto cuando el sitio esté en vivo.</p>
+  </div>
+
+  <a href="contrato-fence-growth-system.pdf" download class="download-cta">
+    ⬇ DESCARGAR CONTRATO
+    <span class="sub">PDF · Letter</span>
+  </a>
+
+  <div class="doc-footer">
+    <div class="meta"><strong>MM Agency</strong> · Martin Mercedes · Fence Growth System v1.0</div>
+    <div class="meta">Abril 2026 · Davenport, FL</div>
+  </div>
+</section>
+
+</div><!-- /.wrap -->
+
+</body>
+</html>

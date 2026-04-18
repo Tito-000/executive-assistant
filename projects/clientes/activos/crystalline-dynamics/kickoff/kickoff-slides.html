@@ -1,0 +1,762 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Kickoff · Crystalline Dynamics · MM Agency</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800;900&family=DM+Mono:wght@400;500&family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+<style>
+:root {
+  --primary: #FAFA00;
+  --secondary: #713DFF;
+  --orange: #F54900;
+  --blue: #00E3FF;
+  --green: #008500;
+  --accent-green: #58d68d;
+  --red: #F54900;
+  --bg: #181818;
+  --bg-card: #202020;
+  --border: #353535;
+  --grey: #707070;
+  --light-grey: #C9C9C9;
+  --light: #FAFAFA;
+  --white: #FFFFFF;
+  --font-h: 'Orbitron', sans-serif;
+  --font-b: 'Inter', sans-serif;
+  --font-m: 'DM Mono', monospace;
+}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html, body {
+  background: var(--bg);
+  color: var(--light);
+  font-family: var(--font-b);
+  overflow: hidden;
+  width: 100vw;
+  height: 100vh;
+  -webkit-font-smoothing: antialiased;
+}
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 0;
+  background-image:
+    linear-gradient(to right, rgba(250,250,0,0.05) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(250,250,0,0.05) 1px, transparent 1px);
+  background-size: 60px 60px;
+  mask-image: radial-gradient(ellipse 70% 60% at center, #000 30%, transparent 80%);
+}
+
+.slide {
+  position: fixed;
+  inset: 0;
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 60px 80px;
+  z-index: 1;
+  overflow-y: auto;
+}
+.slide.active { display: flex; }
+
+.slide-num {
+  position: fixed;
+  top: 24px;
+  right: 32px;
+  font-family: var(--font-m);
+  font-size: 12px;
+  color: var(--grey);
+  letter-spacing: 2px;
+  z-index: 10;
+}
+.mm-tag {
+  position: fixed;
+  top: 24px;
+  left: 32px;
+  font-family: var(--font-m);
+  font-size: 12px;
+  color: var(--primary);
+  letter-spacing: 3px;
+  z-index: 10;
+}
+
+.eyebrow {
+  font-family: var(--font-m);
+  font-size: 13px;
+  color: var(--primary);
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+}
+h1 {
+  font-family: var(--font-h);
+  font-weight: 900;
+  font-size: clamp(40px, 6vw, 84px);
+  line-height: 1;
+  letter-spacing: -1px;
+  margin-bottom: 24px;
+}
+h2 {
+  font-family: var(--font-h);
+  font-weight: 800;
+  font-size: clamp(32px, 4.5vw, 56px);
+  line-height: 1.05;
+  margin-bottom: 32px;
+}
+h3 {
+  font-family: var(--font-h);
+  font-weight: 700;
+  font-size: 24px;
+  margin-bottom: 12px;
+}
+p.lead {
+  font-size: 22px;
+  color: var(--light-grey);
+  max-width: 900px;
+  line-height: 1.5;
+}
+.accent { color: var(--primary); }
+.red { color: var(--red); }
+.green { color: var(--accent-green); }
+.blue { color: var(--blue); }
+
+/* Portada */
+.cover { text-align: center; }
+.cover .client-name {
+  font-family: var(--font-h);
+  font-size: clamp(48px, 7vw, 96px);
+  font-weight: 900;
+  background: linear-gradient(135deg, var(--primary), var(--blue));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  margin-bottom: 16px;
+}
+.cover .subtitle {
+  font-size: 20px;
+  color: var(--light-grey);
+  font-family: var(--font-m);
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  margin-bottom: 60px;
+}
+.cover .meta {
+  display: flex;
+  gap: 40px;
+  font-family: var(--font-m);
+  font-size: 14px;
+  color: var(--grey);
+  justify-content: center;
+  margin-top: 40px;
+}
+.cover .meta span strong { color: var(--primary); display: block; font-size: 11px; letter-spacing: 2px; margin-bottom: 4px; }
+
+/* Stat cards */
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 20px;
+  max-width: 1200px;
+  width: 100%;
+  margin-top: 32px;
+}
+.stat-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 28px;
+}
+.stat-card .num {
+  font-family: var(--font-h);
+  font-size: 48px;
+  font-weight: 900;
+  color: var(--primary);
+  margin-bottom: 8px;
+}
+.stat-card .num.red { color: var(--red); }
+.stat-card .num.green { color: var(--accent-green); }
+.stat-card .label {
+  font-family: var(--font-m);
+  font-size: 12px;
+  letter-spacing: 2px;
+  color: var(--light-grey);
+  text-transform: uppercase;
+}
+.stat-card .sub {
+  font-size: 13px;
+  color: var(--grey);
+  margin-top: 8px;
+}
+
+/* Competitors table */
+.comp-table {
+  width: 100%;
+  max-width: 1100px;
+  border-collapse: collapse;
+  font-size: 15px;
+  margin-top: 20px;
+}
+.comp-table th {
+  text-align: left;
+  padding: 14px 18px;
+  font-family: var(--font-m);
+  font-size: 11px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--primary);
+  border-bottom: 1px solid var(--border);
+}
+.comp-table td {
+  padding: 14px 18px;
+  border-bottom: 1px solid rgba(255,255,255,0.05);
+  color: var(--light-grey);
+}
+.comp-table tr td:first-child { color: var(--white); font-weight: 600; }
+.badge {
+  display: inline-block;
+  padding: 3px 10px;
+  border-radius: 10px;
+  font-size: 11px;
+  font-family: var(--font-m);
+  letter-spacing: 1px;
+}
+.badge.weak { background: rgba(88, 214, 141, 0.15); color: var(--accent-green); }
+.badge.med { background: rgba(250, 250, 0, 0.15); color: var(--primary); }
+.badge.strong { background: rgba(245, 73, 0, 0.15); color: var(--red); }
+
+/* Two column decision */
+.decision {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+  max-width: 1200px;
+  width: 100%;
+  margin-top: 24px;
+}
+.option-card {
+  background: var(--bg-card);
+  border: 2px solid var(--border);
+  border-radius: 16px;
+  padding: 36px;
+  position: relative;
+  transition: all 0.3s;
+}
+.option-card.rec {
+  border-color: var(--primary);
+  box-shadow: 0 0 40px rgba(250, 250, 0, 0.12);
+}
+.option-card .tag {
+  position: absolute;
+  top: -14px;
+  left: 24px;
+  background: var(--primary);
+  color: var(--bg);
+  font-family: var(--font-m);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  padding: 5px 12px;
+  border-radius: 4px;
+}
+.option-card .tag.alt {
+  background: var(--secondary);
+  color: var(--white);
+}
+.option-card h3 {
+  color: var(--primary);
+  font-size: 20px;
+  margin-bottom: 6px;
+}
+.option-card.alt h3 { color: var(--blue); }
+.option-card .domain {
+  font-family: var(--font-m);
+  font-size: 16px;
+  color: var(--white);
+  margin-bottom: 18px;
+  padding: 10px 14px;
+  background: rgba(0,0,0,0.3);
+  border-radius: 6px;
+  display: inline-block;
+}
+.option-card ul {
+  list-style: none;
+  margin-top: 14px;
+}
+.option-card li {
+  padding: 8px 0;
+  font-size: 14px;
+  color: var(--light-grey);
+  display: flex;
+  gap: 10px;
+  align-items: flex-start;
+}
+.option-card li::before {
+  content: "▸";
+  color: var(--primary);
+  flex-shrink: 0;
+}
+.option-card.alt li::before { color: var(--blue); }
+.option-card .verdict {
+  margin-top: 20px;
+  padding-top: 18px;
+  border-top: 1px solid var(--border);
+  font-size: 13px;
+  color: var(--white);
+  font-family: var(--font-m);
+  letter-spacing: 1px;
+}
+
+/* Timeline */
+.timeline {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+  max-width: 1200px;
+  width: 100%;
+  margin-top: 24px;
+}
+.tl-phase {
+  background: var(--bg-card);
+  border-left: 3px solid var(--primary);
+  border-radius: 8px;
+  padding: 22px;
+}
+.tl-phase .week {
+  font-family: var(--font-m);
+  font-size: 11px;
+  color: var(--primary);
+  letter-spacing: 2px;
+  margin-bottom: 8px;
+}
+.tl-phase h4 {
+  font-family: var(--font-h);
+  font-size: 15px;
+  margin-bottom: 10px;
+  color: var(--white);
+}
+.tl-phase ul {
+  list-style: none;
+}
+.tl-phase li {
+  font-size: 13px;
+  color: var(--light-grey);
+  padding: 4px 0;
+  line-height: 1.3;
+}
+
+/* Bullet list */
+.bullets {
+  max-width: 900px;
+  width: 100%;
+  margin-top: 20px;
+}
+.bullets .item {
+  display: flex;
+  gap: 20px;
+  align-items: flex-start;
+  padding: 18px 0;
+  border-bottom: 1px solid var(--border);
+}
+.bullets .num {
+  font-family: var(--font-h);
+  font-weight: 900;
+  color: var(--primary);
+  font-size: 28px;
+  min-width: 48px;
+}
+.bullets .body h4 {
+  font-family: var(--font-h);
+  font-size: 17px;
+  margin-bottom: 4px;
+  color: var(--white);
+}
+.bullets .body p {
+  font-size: 15px;
+  color: var(--light-grey);
+  line-height: 1.5;
+}
+
+/* Strategy grid */
+.strat {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+  max-width: 1200px;
+  width: 100%;
+  margin-top: 20px;
+}
+.strat-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 22px;
+}
+.strat-card .icon {
+  font-family: var(--font-h);
+  font-weight: 900;
+  color: var(--primary);
+  font-size: 32px;
+  margin-bottom: 8px;
+}
+.strat-card h4 {
+  font-family: var(--font-h);
+  font-size: 15px;
+  margin-bottom: 8px;
+  color: var(--white);
+}
+.strat-card p {
+  font-size: 13px;
+  color: var(--light-grey);
+  line-height: 1.4;
+}
+
+/* Nav */
+.nav {
+  position: fixed;
+  bottom: 24px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 16px;
+  align-items: center;
+  z-index: 20;
+  background: rgba(32, 32, 32, 0.85);
+  backdrop-filter: blur(10px);
+  padding: 10px 18px;
+  border-radius: 30px;
+  border: 1px solid var(--border);
+}
+.nav button {
+  background: transparent;
+  border: 1px solid var(--border);
+  color: var(--white);
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  cursor: pointer;
+  font-family: var(--font-m);
+  transition: all 0.2s;
+}
+.nav button:hover { background: var(--primary); color: var(--bg); border-color: var(--primary); }
+.nav .counter {
+  font-family: var(--font-m);
+  font-size: 13px;
+  color: var(--light-grey);
+  min-width: 48px;
+  text-align: center;
+}
+
+.hint {
+  font-family: var(--font-m);
+  font-size: 11px;
+  color: var(--grey);
+  letter-spacing: 2px;
+  margin-top: 40px;
+}
+.highlight-box {
+  background: linear-gradient(135deg, rgba(250, 250, 0, 0.08), rgba(0, 227, 255, 0.04));
+  border: 1px solid rgba(250, 250, 0, 0.2);
+  border-radius: 10px;
+  padding: 20px 26px;
+  margin-top: 24px;
+  max-width: 900px;
+  font-size: 16px;
+  color: var(--white);
+  line-height: 1.5;
+}
+.highlight-box strong { color: var(--primary); }
+
+.question-big {
+  font-family: var(--font-h);
+  font-size: clamp(36px, 5vw, 68px);
+  font-weight: 900;
+  text-align: center;
+  line-height: 1.1;
+  margin-bottom: 40px;
+}
+.question-big .q { color: var(--primary); }
+</style>
+</head>
+<body>
+
+<div class="mm-tag">MM AGENCY</div>
+<div class="slide-num" id="slideNum">01 / 11</div>
+
+<!-- 1. COVER -->
+<section class="slide active cover" data-slide="1">
+  <div class="eyebrow">KICKOFF MEETING · 2026-04-15</div>
+  <div class="client-name">CRYSTALLINE<br>DYNAMICS</div>
+  <div class="subtitle">Fence Growth System · Plan de Ataque Davenport</div>
+  <p class="lead" style="max-width: 700px; margin: 0 auto;">Hoy definimos nombre, dominio, estrategia y timeline. Salimos con decisiones tomadas.</p>
+  <div class="meta">
+    <span><strong>CLIENTE</strong>Andri Ramírez</span>
+    <span><strong>CONTRATO</strong>$1,100 + $397/mo</span>
+    <span><strong>DURACIÓN</strong>12 semanas</span>
+  </div>
+</section>
+
+<!-- 2. EL PROBLEMA -->
+<section class="slide" data-slide="2">
+  <div class="eyebrow">PUNTO DE PARTIDA</div>
+  <h2>Hoy eres <span class="red">invisible</span> en Google.</h2>
+  <p class="lead">Analizamos las 14 empresas de fence que dominan Davenport. Tu negocio no aparece en ninguna búsqueda local.</p>
+  <div class="stats-grid">
+    <div class="stat-card"><div class="num red">0</div><div class="label">Reseñas en Google</div><div class="sub">Promedio mercado: 170</div></div>
+    <div class="stat-card"><div class="num red">0</div><div class="label">Posición Map Pack</div><div class="sub">No rankeas</div></div>
+    <div class="stat-card"><div class="num red">❌</div><div class="label">Google Business Profile</div><div class="sub">No existe</div></div>
+    <div class="stat-card"><div class="num red">70%</div><div class="label">Búsquedas perdidas</div><div class="sub">Davenport fence contractor</div></div>
+  </div>
+  <div class="highlight-box">
+    <strong>Traducción:</strong> cuando alguien en Davenport busca "fence contractor" hoy, tu negocio literalmente no existe para Google. Competencia se lleva todos los leads.
+  </div>
+</section>
+
+<!-- 3. EL MERCADO -->
+<section class="slide" data-slide="3">
+  <div class="eyebrow">ANÁLISIS DEL MERCADO LOCAL</div>
+  <h2>14 competidores · <span class="accent">mercado débil y ganable</span></h2>
+  <div class="stats-grid" style="max-width: 1100px;">
+    <div class="stat-card"><div class="num">4.7⭐</div><div class="label">Rating promedio</div><div class="sub">Fácil de igualar</div></div>
+    <div class="stat-card"><div class="num">170</div><div class="label">Reseñas promedio</div><div class="sub">Líder: 820</div></div>
+    <div class="stat-card"><div class="num green">14/100</div><div class="label">SEO Difficulty</div><div class="sub">Muy fácil de atacar</div></div>
+    <div class="stat-card"><div class="num green">0</div><div class="label">Competidor con EMD</div><div class="sub">Ventaja para nosotros</div></div>
+  </div>
+  <div class="highlight-box">
+    <strong>Hallazgo clave:</strong> el #1 en Google orgánico tiene DA 6 y apenas 2 backlinks. Nadie hace SEO en serio. Entramos en un mercado dormido con estrategia correcta y barremos.
+  </div>
+</section>
+
+<!-- 4. TOP COMPETIDORES -->
+<section class="slide" data-slide="4">
+  <div class="eyebrow">TOP 5 COMPETIDORES DIRECTOS</div>
+  <h2>Con quién peleamos</h2>
+  <table class="comp-table">
+    <thead><tr><th>#</th><th>Negocio</th><th>Ubicación</th><th>Reseñas</th><th>Fuerza</th></tr></thead>
+    <tbody>
+      <tr><td>1</td><td>Fence Central</td><td>Winter Haven</td><td>820</td><td><span class="badge strong">Líder</span></td></tr>
+      <tr><td>2</td><td>Pro Master Fencing</td><td>Davenport 33837</td><td>—</td><td><span class="badge med">Local directo</span></td></tr>
+      <tr><td>3</td><td>Evu Cleaning & Fence</td><td>US-27, Davenport</td><td>—</td><td><span class="badge med">Local directo</span></td></tr>
+      <tr><td>4</td><td>Summerlin Fence & Feed</td><td>US-17, Davenport</td><td>—</td><td><span class="badge med">Veterano</span></td></tr>
+      <tr><td>5</td><td>Superior Fence & Rail</td><td>Dundee</td><td>—</td><td><span class="badge weak">Cadena nacional</span></td></tr>
+    </tbody>
+  </table>
+  <div class="highlight-box">
+    <strong>Nadie</strong> del top 5 tiene: EMD (dominio con keyword + ciudad), hub-and-spoke de páginas por ciudad, blog SEO activo, ni backlinks de calidad. <span class="accent">Puerta abierta.</span>
+  </div>
+</section>
+
+<!-- 5. COMPARACIÓN LOCAL VS ESTATAL -->
+<section class="slide" data-slide="5">
+  <div class="eyebrow">POR QUÉ ATACAMOS LOCAL PRIMERO</div>
+  <h2>Davenport vs Florida entera · <span class="accent">la diferencia</span></h2>
+  <table class="comp-table" style="max-width: 1200px;">
+    <thead><tr><th>Nivel</th><th>Keyword</th><th>Competidor más fuerte</th><th>Backlinks del líder</th><th>Dificultad</th></tr></thead>
+    <tbody>
+      <tr>
+        <td><span style="color: var(--accent-green);">●</span> Local</td>
+        <td>fence contractor Davenport FL</td>
+        <td>Fence Central · DA 6</td>
+        <td>2 backlinks</td>
+        <td><span class="badge weak">14/100 · FÁCIL</span></td>
+      </tr>
+      <tr>
+        <td><span style="color: var(--primary);">●</span> Estatal</td>
+        <td>fence contractor Florida</td>
+        <td>H&Y Fence · DA 24</td>
+        <td>93,967 backlinks</td>
+        <td><span class="badge med">45/100 · MEDIO</span></td>
+      </tr>
+      <tr>
+        <td><span style="color: var(--red);">●</span> Nacional</td>
+        <td>fence contractor</td>
+        <td>Cadenas + directorios USA</td>
+        <td>Millones</td>
+        <td><span class="badge strong">75/100 · DIFÍCIL</span></td>
+      </tr>
+    </tbody>
+  </table>
+  <div class="highlight-box">
+    <strong>Lectura:</strong> atacar "Florida" es <span class="accent">~5x más difícil</span> que atacar "Davenport". Necesitaríamos 90,000+ backlinks para competir vs 2 backlinks. Empezamos local, ganamos rápido, después escalamos a estatal con la autoridad acumulada.
+  </div>
+</section>
+
+<!-- 6. LA GRAN DECISIÓN -->
+<section class="slide" data-slide="6">
+  <div class="eyebrow">DECISIÓN #1 · HOY</div>
+  <div class="question-big">¿Jugamos <span class="q">pequeño y rápido</span><br>o <span class="q">grande y lento</span>?</div>
+  <div class="decision">
+    <div class="option-card rec">
+      <span class="tag">RECOMENDADO</span>
+      <h3>OPCIÓN A · Local + Rápido</h3>
+      <div class="domain">davenportfence.com</div>
+      <p style="font-size: 14px; color: var(--light-grey);"><strong style="color: var(--white);">Nombre:</strong> Davenport Fence Co.</p>
+      <ul>
+        <li>Dominio EMD = ventaja gigante en Google</li>
+        <li>Resultados visibles más rápido</li>
+        <li>SEO más fácil de ganar (ciudad chica)</li>
+        <li>Perfecto para el contrato de 12 semanas</li>
+      </ul>
+      <div class="verdict">→ Más leads más rápido. Después escalamos.</div>
+    </div>
+    <div class="option-card alt">
+      <span class="tag alt">ALTERNATIVA</span>
+      <h3>OPCIÓN B · Regional + Ambicioso</h3>
+      <div class="domain">polkcountyfence.co</div>
+      <p style="font-size: 14px; color: var(--light-grey);"><strong style="color: var(--white);">Nombre:</strong> Polk County Fence Co.</p>
+      <ul>
+        <li>Abarca todo Polk County (varias ciudades)</li>
+        <li>Marca más grande y escalable</li>
+        <li>SEO más difícil y más lento</li>
+        <li>Más ad spend para mismo resultado</li>
+      </ul>
+      <div class="verdict">→ Más techo a largo plazo, pero más paciencia.</div>
+    </div>
+  </div>
+</section>
+
+<!-- 7. ESTRATEGIA -->
+<section class="slide" data-slide="7">
+  <div class="eyebrow">CÓMO VAMOS A GANAR</div>
+  <h2>Fence Growth System · 6 frentes</h2>
+  <div class="strat">
+    <div class="strat-card"><div class="icon">01</div><h4>Google Business Profile</h4><p>Crear y optimizar desde cero. Categorías, servicios, fotos, service areas.</p></div>
+    <div class="strat-card"><div class="icon">02</div><h4>Web EMD</h4><p>Sitio con dominio exacto + estructura hub-and-spoke por ciudad y tipo de fence.</p></div>
+    <div class="strat-card"><div class="icon">03</div><h4>Google Ads</h4><p>Campañas búsqueda geo-targeted. $1,000–$1,500/mes directo a leads.</p></div>
+    <div class="strat-card"><div class="icon">04</div><h4>Citations + Backlinks</h4><p>15+ directorios (Yelp, BBB, Angi, HomeAdvisor) + alianzas locales.</p></div>
+    <div class="strat-card"><div class="icon">05</div><h4>Sistema de Reseñas</h4><p>QR + WhatsApp automatizado. Meta: 50 reseñas en 90 días.</p></div>
+    <div class="strat-card"><div class="icon">06</div><h4>Tracking + Reportes</h4><p>GA4, conversiones, reporte mensual de leads, costo y ROI.</p></div>
+  </div>
+</section>
+
+<!-- 8. TIMELINE -->
+<section class="slide" data-slide="8">
+  <div class="eyebrow">TIMELINE · 12 SEMANAS</div>
+  <h2>Qué entregamos · cuándo</h2>
+  <div class="timeline">
+    <div class="tl-phase">
+      <div class="week">SEMANA 1–2</div>
+      <h4>Foundation</h4>
+      <ul><li>Kickoff + briefing</li><li>Research competencia</li><li>Wireframe web</li><li>Setup GMB + accesos</li></ul>
+    </div>
+    <div class="tl-phase">
+      <div class="week">SEMANA 3–4</div>
+      <h4>Lanzamiento</h4>
+      <ul><li>Web en vivo</li><li>Tracking instalado</li><li>Google Ads lanzadas</li><li>Primeros leads entrando</li></ul>
+    </div>
+    <div class="tl-phase">
+      <div class="week">SEMANA 5–8</div>
+      <h4>Optimización</h4>
+      <ul><li>Ajuste Ads</li><li>Posts SEO</li><li>Campaña reviews</li><li>Citations</li></ul>
+    </div>
+    <div class="tl-phase">
+      <div class="week">SEMANA 9–12</div>
+      <h4>Escalamiento</h4>
+      <ul><li>Primer reporte trimestral</li><li>Link building</li><li>Ajustes estratégicos</li><li>Plan fase 2</li></ul>
+    </div>
+  </div>
+</section>
+
+<!-- 9. LO QUE NECESITO DE TI -->
+<section class="slide" data-slide="9">
+  <div class="eyebrow">DE TU LADO</div>
+  <h2>Lo que necesito de ti</h2>
+  <div class="bullets">
+    <div class="item">
+      <div class="num">01</div>
+      <div class="body"><h4>Accesos (48h después del kickoff)</h4><p>Google Business Profile (si existe), Google Ads, redes sociales, dominio actual si tienes.</p></div>
+    </div>
+    <div class="item">
+      <div class="num">02</div>
+      <div class="body"><h4>Fotos reales de trabajos terminados</h4><p>Mínimo 20 fotos HD de cercos instalados. Antes/después ideal. Sin esto la web y el GMB se ven genéricos.</p></div>
+    </div>
+    <div class="item">
+      <div class="num">03</div>
+      <div class="body"><h4>Briefing completo lleno</h4><p>15 secciones de preguntas. Entre más detallado, mejor el copy y el resultado.</p></div>
+    </div>
+    <div class="item">
+      <div class="num">04</div>
+      <div class="body"><h4>Velocidad de respuesta a leads: &lt; 30 min</h4><p>No garantizamos conversiones si excedes 2 horas. Lead frío = lead muerto. Esto no es negociable.</p></div>
+    </div>
+    <div class="item">
+      <div class="num">05</div>
+      <div class="body"><h4>Segundo pago ($550) al entregar sitio en vivo</h4><p>Setup total: $1,100. Ya pagaste 50% al firmar. 50% restante cuando la web esté online.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- 10. EXPECTATIVAS -->
+<section class="slide" data-slide="10">
+  <div class="eyebrow">QUÉ ESPERAR</div>
+  <h2>Resultados realistas · sin humo</h2>
+  <div class="stats-grid" style="max-width: 1100px;">
+    <div class="stat-card"><div class="num">30 días</div><div class="label">Aparecer en Map Pack</div><div class="sub">Solo con GBP optimizado</div></div>
+    <div class="stat-card"><div class="num">60–90 días</div><div class="label">Top 10 orgánico</div><div class="sub">GBP + reviews + citations</div></div>
+    <div class="stat-card"><div class="num">6–9 meses</div><div class="label">Top 3–5 orgánico</div><div class="sub">Con SEO + link building sostenido</div></div>
+    <div class="stat-card"><div class="num">Día 1</div><div class="label">Leads por Google Ads</div><div class="sub">Desde que la campaña esté viva</div></div>
+  </div>
+  <div class="highlight-box">
+    <strong>Mi compromiso:</strong> transparencia total. Reporte mensual con leads, costo por lead, conversiones y qué ajustamos. Si algo no funciona, lo decimos y pivotamos — no ocultamos.
+  </div>
+</section>
+
+<!-- 11. PRÓXIMOS PASOS -->
+<section class="slide" data-slide="11">
+  <div class="eyebrow">PRÓXIMOS PASOS · ESTA SEMANA</div>
+  <h2>Salimos de aquí con <span class="accent">esto decidido</span></h2>
+  <div class="bullets">
+    <div class="item">
+      <div class="num">✓</div>
+      <div class="body"><h4>Decidir nombre + dominio (hoy)</h4><p>Davenport Fence Co. vs Polk County Fence Co. · hay que registrarlo YA antes que otro lo tome.</p></div>
+    </div>
+    <div class="item">
+      <div class="num">✓</div>
+      <div class="body"><h4>Registrar dominio en Cloudflare</h4><p>Yo lo manejo. Te paso factura si quieres que lo ponga a tu nombre directo.</p></div>
+    </div>
+    <div class="item">
+      <div class="num">✓</div>
+      <div class="body"><h4>Enviarte briefing (.docx) para llenar</h4><p>Hoy mismo. Plazo para devolverlo lleno: 3 días.</p></div>
+    </div>
+    <div class="item">
+      <div class="num">✓</div>
+      <div class="body"><h4>Agendar entrega de accesos</h4><p>Call corta de 20 min en 48h para pasar credenciales.</p></div>
+    </div>
+    <div class="item">
+      <div class="num">✓</div>
+      <div class="body"><h4>Recopilar fotos de trabajos</h4><p>Mínimo 20 fotos HD. Las pides al equipo hoy.</p></div>
+    </div>
+  </div>
+  <div class="hint">← → para navegar · ESPACIO siguiente</div>
+</section>
+
+<div class="nav">
+  <button onclick="change(-1)">‹</button>
+  <span class="counter" id="counter">1 / 11</span>
+  <button onclick="change(1)">›</button>
+</div>
+
+<script>
+let current = 1;
+const total = 11;
+function show(n) {
+  document.querySelectorAll('.slide').forEach(s => s.classList.remove('active'));
+  const el = document.querySelector(`[data-slide="${n}"]`);
+  if (el) el.classList.add('active');
+  document.getElementById('counter').textContent = `${n} / ${total}`;
+  document.getElementById('slideNum').textContent = `${String(n).padStart(2,'0')} / ${String(total).padStart(2,'0')}`;
+  current = n;
+}
+function change(dir) {
+  const next = current + dir;
+  if (next >= 1 && next <= total) show(next);
+}
+document.addEventListener('keydown', e => {
+  if (e.key === 'ArrowRight' || e.key === ' ') change(1);
+  if (e.key === 'ArrowLeft') change(-1);
+});
+</script>
+</body>
+</html>

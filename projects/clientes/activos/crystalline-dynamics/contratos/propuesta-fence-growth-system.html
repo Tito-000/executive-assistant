@@ -1,0 +1,717 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>Fence Growth System — Crystalline Dynamics</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800;900&family=DM+Mono:wght@400;500&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root {
+  --primary: #FAFA00;
+  --secondary: #713DFF;
+  --orange: #F54900;
+  --light-blue: #00E3FF;
+  --pink: #FCA8FF;
+  --green: #008500;
+  --bg: #181818;
+  --bg-card: #202020;
+  --border: #353535;
+  --space-grey: #707070;
+  --light-grey: #C9C9C9;
+  --light: #FAFAFA;
+  --white: #FFFFFF;
+  --font-h: 'Orbitron', sans-serif;
+  --font-b: 'Inter', sans-serif;
+  --font-m: 'DM Mono', monospace;
+}
+@page { size: Letter; margin: 0; }
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+html, body {
+  background: var(--bg);
+  color: var(--light);
+  font-family: var(--font-b);
+  font-size: 10.5pt;
+  line-height: 1.6;
+  margin: 0;
+  padding: 0;
+  -webkit-font-smoothing: antialiased;
+}
+.content-wrap {
+  padding: 0.55in 0.7in;
+  background: var(--bg);
+}
+
+/* ===== COVER ===== */
+.cover {
+  width: 8.5in;
+  height: 11in;
+  padding: 0.8in 0.7in;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  page-break-after: always;
+  background: var(--bg);
+  position: relative;
+  overflow: hidden;
+}
+.cover::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 3px;
+  background: var(--primary);
+}
+.cover-top { display: flex; justify-content: space-between; align-items: flex-start; }
+.cover-logo { height: 60px; }
+.cover-tag {
+  font-family: var(--font-m);
+  font-size: 8.5pt;
+  color: var(--space-grey);
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  text-align: right;
+}
+.cover-main { margin-top: 80px; }
+.cover-eyebrow {
+  font-family: var(--font-m);
+  font-size: 9pt;
+  color: var(--primary);
+  letter-spacing: 0.5em;
+  text-transform: uppercase;
+  margin-bottom: 24px;
+}
+.cover-title {
+  font-family: var(--font-h);
+  font-weight: 900;
+  font-size: 54pt;
+  line-height: 0.95;
+  letter-spacing: -0.02em;
+  color: var(--white);
+  margin: 0 0 20px;
+}
+.cover-title .accent { color: var(--primary); }
+.cover-sub {
+  font-family: var(--font-b);
+  font-size: 14pt;
+  font-weight: 400;
+  color: var(--light-grey);
+  max-width: 520px;
+  line-height: 1.45;
+}
+.cover-line {
+  width: 80px;
+  height: 3px;
+  background: var(--primary);
+  margin: 32px 0;
+}
+.cover-client {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  max-width: 540px;
+}
+.cover-client .block { }
+.cover-client .lbl {
+  font-family: var(--font-m);
+  font-size: 7.5pt;
+  color: var(--space-grey);
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  margin-bottom: 6px;
+}
+.cover-client .val {
+  font-family: var(--font-h);
+  font-weight: 600;
+  font-size: 11pt;
+  color: var(--white);
+  letter-spacing: 0.01em;
+}
+.cover-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  border-top: 0.5px solid var(--border);
+  padding-top: 20px;
+  margin-top: 60px;
+}
+.cover-footer .meta {
+  font-family: var(--font-m);
+  font-size: 8pt;
+  color: var(--space-grey);
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  line-height: 1.8;
+}
+.cover-footer .meta strong { color: var(--primary); font-weight: 500; }
+
+/* ===== SECTIONS ===== */
+.section {
+  padding: 40px 0 20px;
+  page-break-inside: avoid;
+}
+.section-num {
+  font-family: var(--font-m);
+  font-size: 8pt;
+  color: var(--primary);
+  letter-spacing: 0.5em;
+  text-transform: uppercase;
+  margin-bottom: 12px;
+}
+h2 {
+  font-family: var(--font-h);
+  font-weight: 700;
+  font-size: 22pt;
+  color: var(--white);
+  margin: 0 0 24px;
+  letter-spacing: -0.01em;
+  line-height: 1.1;
+}
+h3 {
+  font-family: var(--font-h);
+  font-weight: 600;
+  font-size: 13pt;
+  color: var(--white);
+  margin: 24px 0 12px;
+  letter-spacing: 0.01em;
+}
+h4 {
+  font-family: var(--font-m);
+  font-weight: 500;
+  font-size: 8.5pt;
+  color: var(--primary);
+  margin: 18px 0 8px;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+}
+p {
+  color: var(--light-grey);
+  margin: 8px 0;
+  line-height: 1.7;
+}
+strong { color: var(--white); font-weight: 600; }
+em { color: var(--light-grey); }
+ul { margin: 10px 0; padding-left: 18px; color: var(--light-grey); }
+li { margin: 5px 0; line-height: 1.65; }
+li::marker { color: var(--primary); }
+
+/* ===== TABLES ===== */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 14px 0;
+  font-size: 9.5pt;
+  background: var(--bg-card);
+  border: 0.5px solid var(--border);
+}
+th {
+  background: var(--bg);
+  color: var(--primary);
+  padding: 12px 14px;
+  text-align: left;
+  font-family: var(--font-m);
+  font-weight: 500;
+  font-size: 7.5pt;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  border-bottom: 1px solid var(--border);
+}
+td {
+  padding: 10px 14px;
+  border-bottom: 0.5px solid var(--border);
+  color: var(--light-grey);
+  font-family: var(--font-b);
+}
+tr:last-child td { border-bottom: none; }
+tr:hover td { background: rgba(250, 250, 0, 0.02); }
+td strong { color: var(--white); }
+
+/* ===== CARDS ===== */
+.hero-box {
+  background: linear-gradient(135deg, var(--bg-card) 0%, rgba(113, 61, 255, 0.08) 100%);
+  border: 0.5px solid var(--border);
+  border-left: 3px solid var(--primary);
+  padding: 22px 26px;
+  margin: 18px 0;
+  border-radius: 6px;
+}
+.hero-box h3 { margin-top: 0; color: var(--primary); }
+.hero-box p { color: var(--light); margin: 0; }
+
+.highlight-box {
+  background: rgba(250, 250, 0, 0.06);
+  border-left: 3px solid var(--primary);
+  padding: 14px 18px;
+  margin: 14px 0;
+  border-radius: 4px;
+}
+.highlight-box strong { color: var(--primary); }
+
+.good-box {
+  background: rgba(0, 227, 255, 0.05);
+  border-left: 3px solid var(--light-blue);
+  padding: 14px 18px;
+  margin: 14px 0;
+  border-radius: 4px;
+}
+
+/* ===== PRICE CARDS ===== */
+.grid-2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
+  margin: 18px 0;
+}
+.price-card {
+  background: var(--bg-card);
+  border: 0.5px solid var(--border);
+  border-radius: 8px;
+  padding: 22px 24px;
+  position: relative;
+  overflow: hidden;
+}
+.price-card::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%;
+  height: 2px;
+  background: var(--primary);
+}
+.price-card .label {
+  font-family: var(--font-m);
+  font-size: 7.5pt;
+  color: var(--space-grey);
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  margin-bottom: 8px;
+}
+.price-card .big {
+  font-family: var(--font-h);
+  font-weight: 800;
+  font-size: 32pt;
+  color: var(--primary);
+  line-height: 1;
+  margin: 6px 0 10px;
+}
+.price-card .big .small { font-size: 14pt; color: var(--light-grey); font-weight: 500; }
+.price-card .desc {
+  color: var(--light-grey);
+  font-size: 9.5pt;
+  line-height: 1.5;
+}
+
+/* ===== METRICS ===== */
+.metrics-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+  margin: 14px 0;
+}
+.metric {
+  background: var(--bg-card);
+  border: 0.5px solid var(--border);
+  padding: 18px 16px;
+  text-align: center;
+  border-radius: 6px;
+}
+.metric .num {
+  font-family: var(--font-h);
+  font-weight: 800;
+  font-size: 24pt;
+  color: var(--primary);
+  display: block;
+  line-height: 1;
+  margin-bottom: 8px;
+}
+.metric .lbl {
+  font-family: var(--font-m);
+  font-size: 7.5pt;
+  color: var(--space-grey);
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+}
+
+/* ===== UTILS ===== */
+.up { color: var(--light-blue); font-weight: 600; }
+.hot { color: var(--primary); font-weight: 700; }
+.page-break { page-break-before: always; }
+
+/* ===== FINAL CTA ===== */
+.final-cta {
+  background: var(--primary);
+  color: var(--bg);
+  padding: 36px 40px;
+  margin: 30px 0 20px;
+  border-radius: 10px;
+  text-align: center;
+}
+.final-cta h3 {
+  font-family: var(--font-h);
+  font-weight: 800;
+  font-size: 20pt;
+  color: var(--bg);
+  margin: 0 0 10px;
+  letter-spacing: -0.01em;
+}
+.final-cta p {
+  color: var(--bg);
+  font-family: var(--font-m);
+  font-size: 9pt;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  margin: 0;
+}
+
+/* ===== FOOTER ===== */
+.doc-footer {
+  margin-top: 30px;
+  padding-top: 20px;
+  border-top: 0.5px solid var(--border);
+  text-align: center;
+}
+.doc-footer .sig {
+  font-family: var(--font-h);
+  font-weight: 700;
+  font-size: 11pt;
+  color: var(--white);
+  letter-spacing: 0.02em;
+}
+.doc-footer .contact {
+  font-family: var(--font-m);
+  font-size: 8pt;
+  color: var(--space-grey);
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  margin-top: 6px;
+  line-height: 1.8;
+}
+.doc-footer .contact .y { color: var(--primary); }
+</style>
+</head>
+<body>
+
+<!-- ================== COVER ================== -->
+<div class="cover">
+  <div class="cover-top">
+    <img class="cover-logo" src="mm-logo-yellow.png" alt="MM Agency">
+    <div class="cover-tag">Propuesta · 001 · 2026</div>
+  </div>
+
+  <div class="cover-main">
+    <div class="cover-eyebrow">// Commercial Proposal</div>
+    <h1 class="cover-title">Fence<br>Growth<br><span class="accent">System.</span></h1>
+    <div class="cover-line"></div>
+    <div class="cover-sub">
+      Un sistema completo para posicionar Crystalline Dynamics como el <strong>fence contractor #1</strong> de Central Florida.
+    </div>
+  </div>
+
+  <div>
+    <div class="cover-client">
+      <div class="block">
+        <div class="lbl">Cliente</div>
+        <div class="val">Crystalline Dynamics, Inc.</div>
+      </div>
+      <div class="block">
+        <div class="lbl">Mercado</div>
+        <div class="val">Davenport, FL</div>
+      </div>
+      <div class="block">
+        <div class="lbl">Enfoque</div>
+        <div class="val">100% Fencing</div>
+      </div>
+      <div class="block">
+        <div class="lbl">Fecha</div>
+        <div class="val">Abril 2026</div>
+      </div>
+    </div>
+
+    <div class="cover-footer">
+      <div class="meta">
+        <strong>MM Agency</strong><br>
+        Marketing Digital &amp; Growth Systems
+      </div>
+      <div class="meta" style="text-align: right;">
+        Prepared by<br>
+        <strong>Martin Mercedes</strong>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="content-wrap">
+
+<!-- ================== SECTION 1 ================== -->
+<div class="section">
+  <div class="section-num">01 / Context</div>
+  <h2>Entendiendo tu negocio</h2>
+  <p>Crystalline Dynamics opera tres líneas de servicio, pero la oportunidad real de crecimiento con marketing digital está en <strong>Fencing</strong>. Las otras líneas (agua y epoxy) ya tienen un canal de venta propio que funciona.</p>
+  <div class="hero-box">
+    <h3>Nuestra recomendación</h3>
+    <p>Concentrar 100% del esfuerzo de marketing digital en posicionar Crystalline Dynamics como el fence contractor #1 del área de Davenport / Central Florida.</p>
+  </div>
+</div>
+
+<!-- ================== SECTION 2 ================== -->
+<div class="section">
+  <div class="section-num">02 / Market Intelligence</div>
+  <h2>Por qué Fencing es el momento correcto</h2>
+  <p>Data real del <strong>Google Keyword Planner</strong> (Florida, marzo 2026):</p>
+
+  <table>
+  <thead>
+  <tr><th>Keyword</th><th>Búsquedas/mes</th><th>Competencia</th><th>Crecimiento 3m</th></tr>
+  </thead>
+  <tbody>
+  <tr><td>vinyl fence installation</td><td>2,400</td><td><span class="up">BAJA</span></td><td><span class="hot">+233% 🚀</span></td></tr>
+  <tr><td>fence contractor</td><td>2,900</td><td>Alta</td><td>estable</td></tr>
+  <tr><td>chain link fence installation</td><td>1,000</td><td><span class="up">BAJA</span></td><td><span class="hot">+108%</span></td></tr>
+  <tr><td>pool fence installation</td><td>590</td><td>Media</td><td><span class="hot">+84%</span></td></tr>
+  <tr><td>aluminum fence installation</td><td>210</td><td>Baja</td><td><span class="up">+50%</span></td></tr>
+  <tr><td>wood fence installation</td><td>320</td><td>Baja</td><td>+23%</td></tr>
+  </tbody>
+  </table>
+
+  <div class="good-box">
+    <strong style="color: var(--light-blue);">Dos insights críticos:</strong><br>
+    1. <strong>Competencia BAJA</strong> en las keywords más importantes — ventana de oportunidad antes de que el mercado se sature.<br>
+    2. <strong>Crecimiento explosivo</strong> (+233%, +108%, +84%) — la demanda está creciendo más rápido que la oferta.
+  </div>
+
+  <div class="highlight-box">
+    <strong>Traducción:</strong> cada mes que pasa sin que Crystalline Dynamics esté posicionada, otros contratistas están capturando esos leads.
+  </div>
+</div>
+
+<div class="page-break"></div>
+
+<!-- ================== SECTION 3 ================== -->
+<div class="section">
+  <div class="section-num">03 / Deliverables</div>
+  <h2>Qué incluye el Fence Growth System</h2>
+
+  <h3 style="color: var(--primary);">Fase Setup <span style="font-family: var(--font-m); font-size: 9pt; color: var(--space-grey); letter-spacing: 0.2em;">// ONE-TIME</span></h3>
+
+  <h4>// Página Web</h4>
+  <ul>
+    <li>Sitio web dedicado 100% a la línea de Fencing</li>
+    <li>Landing pages por tipo de valla (vinyl, chain link, pool, aluminum, wood)</li>
+    <li>Formulario de cotización + click-to-call</li>
+    <li>Optimizada para conversión y SEO local</li>
+  </ul>
+
+  <h4>// Google My Business</h4>
+  <ul>
+    <li>Verificación y optimización completa del perfil</li>
+    <li>Configuración de categorías, servicios y áreas de servicio</li>
+    <li>Carga de 20+ fotos profesionales de trabajos y equipo</li>
+    <li>Q&amp;A sembrado con las preguntas reales de los clientes</li>
+    <li>Sistema automatizado para pedir reviews después de cada trabajo</li>
+  </ul>
+
+  <h4>// Tracking &amp; Medición</h4>
+  <ul>
+    <li>Google Analytics 4 + Google Ads conversion tracking</li>
+    <li>Call tracking (saber qué ad generó cada llamada)</li>
+  </ul>
+
+  <h4>// Google Ads — Arquitectura inicial</h4>
+  <ul>
+    <li>Keyword research profundo para área de servicio</li>
+    <li>Estructura de campañas por tipo de valla</li>
+    <li>Diseño de anuncios con A/B testing desde día 1</li>
+    <li>Geotargeting (Davenport + radio definido)</li>
+  </ul>
+
+  <h3 style="color: var(--primary); margin-top: 30px;">Fase Mensual <span style="font-family: var(--font-m); font-size: 9pt; color: var(--space-grey); letter-spacing: 0.2em;">// RECURRING</span></h3>
+
+  <h4>// Google Ads Management</h4>
+  <ul>
+    <li>Optimización semanal de campañas y pujas</li>
+    <li>A/B testing continuo de anuncios</li>
+    <li>Análisis y ajuste de keywords + control de costo por lead</li>
+  </ul>
+
+  <h4>// SEO Local</h4>
+  <ul>
+    <li>2 blog posts mensuales optimizados</li>
+    <li>Citations locales (Yelp, Angi, HomeAdvisor, BBB)</li>
+    <li>Link building local + optimización on-page continua</li>
+  </ul>
+
+  <h4>// Google My Business — Pilar Dedicado</h4>
+  <ul>
+    <li>2-3 posts semanales (ofertas, trabajos recientes, updates)</li>
+    <li>Respuesta a TODAS las reviews en &lt;24h</li>
+    <li>Estrategia activa de generación de reviews</li>
+    <li>Carga continua de fotos de trabajos nuevos</li>
+    <li>Monitoreo de ranking en Google Maps (local pack)</li>
+  </ul>
+
+  <h4>// Reportes &amp; Comunicación</h4>
+  <ul>
+    <li>Reporte mensual con métricas clave</li>
+    <li>1 reunión estratégica mensual (30-45 min)</li>
+    <li>Disponibilidad por WhatsApp para ajustes rápidos</li>
+  </ul>
+</div>
+
+<div class="page-break"></div>
+
+<!-- ================== SECTION 4 ================== -->
+<div class="section">
+  <div class="section-num">04 / Investment</div>
+  <h2>Inversión</h2>
+
+  <div class="grid-2">
+    <div class="price-card">
+      <div class="label">// Setup (one-time)</div>
+      <div class="big">$1,100</div>
+      <div class="desc">Web + GMB + Tracking + Ads Setup + CRM</div>
+    </div>
+    <div class="price-card">
+      <div class="label">// Fee mensual</div>
+      <div class="big">$397<span class="small">/mes</span></div>
+      <div class="desc">Ads + SEO + GMB Management</div>
+    </div>
+  </div>
+
+  <div class="highlight-box">
+    <strong>Ad spend recomendado:</strong> $1,000 – $1,500 USD/mes &nbsp;·&nbsp; <em>pagado directo a Google por el cliente (sin markup).</em>
+  </div>
+
+  <h3>Comparación con agencias del mercado</h3>
+
+  <table>
+  <thead>
+  <tr><th>Servicio</th><th>Agencia Orlando / Tampa</th><th>MM Agency</th></tr>
+  </thead>
+  <tbody>
+  <tr><td>Setup inicial (web + tracking + GMB + CRM)</td><td>$3,000 – $5,000</td><td><span class="hot">$1,100</span></td></tr>
+  <tr><td>Google Ads management mensual</td><td>$800 – $1,500</td><td>incluido</td></tr>
+  <tr><td>SEO local mensual</td><td>$500 – $1,500</td><td>incluido</td></tr>
+  <tr><td>Google My Business management</td><td>$300 – $600</td><td>incluido</td></tr>
+  <tr><td><strong>Total mensual típico</strong></td><td><strong>$1,600 – $3,600 / mes</strong></td><td><span class="hot">$397 / mes</span></td></tr>
+  </tbody>
+  </table>
+
+  <p style="font-family: var(--font-m); font-size: 8pt; color: var(--space-grey); font-style: italic; letter-spacing: 0.05em;">Fuente: pricing público de agencias de home services en Central Florida (Thrive, Blue Corona, Hook Agency, entre otras).</p>
+
+  <div class="good-box">
+    <strong style="color: var(--light-blue);">Por qué podemos ofrecer este precio:</strong> MM Agency opera desde República Dominicana con el mismo stack de herramientas y los mismos procesos. Tú pagas por el trabajo, no por el overhead de una oficina en Orlando.
+  </div>
+
+  <h4>// Términos</h4>
+  <ul>
+    <li>50% del setup adelantado para arrancar, 50% al entregar el sitio en vivo</li>
+    <li>Contrato mínimo 3 meses (SEO y Ads necesitan ventana para optimizar)</li>
+    <li>Ad spend pagado directo a Google — transparencia total, sin markup</li>
+    <li>Facturación en USD vía Stripe / Wise / PayPal</li>
+  </ul>
+</div>
+
+<div class="page-break"></div>
+
+<!-- ================== SECTION 5 ================== -->
+<div class="section">
+  <div class="section-num">05 / ROI Projection</div>
+  <h2>Retorno esperado</h2>
+
+  <h3>Supuestos realistas</h3>
+  <div class="metrics-grid">
+    <div class="metric">
+      <span class="num">$3K–$8K</span>
+      <span class="lbl">Ticket promedio por trabajo</span>
+    </div>
+    <div class="metric">
+      <span class="num">$60–$120</span>
+      <span class="lbl">Costo por lead (mes 2+)</span>
+    </div>
+    <div class="metric">
+      <span class="num">20–30%</span>
+      <span class="lbl">Conv. rate lead → venta</span>
+    </div>
+    <div class="metric">
+      <span class="num">$1,597</span>
+      <span class="lbl">Inversión total mensual</span>
+    </div>
+  </div>
+
+  <h3>Escenario conservador <span style="font-family: var(--font-m); font-size: 9pt; color: var(--space-grey); letter-spacing: 0.2em;">// MES 3+</span></h3>
+  <table>
+    <tr><td>Ad spend $1,200/mes</td><td>~10-12 leads/mes</td></tr>
+    <tr><td>Conversion 20%</td><td><strong>2-3 trabajos nuevos/mes</strong></td></tr>
+    <tr><td>Revenue adicional</td><td><span class="hot">$6,000 – $24,000/mes</span></td></tr>
+    <tr><td>Inversión total</td><td>$397 (fee) + $1,200 (ads) = $1,597</td></tr>
+    <tr><td><strong>ROI</strong></td><td><span class="hot">3.2x – 12.6x desde el mes 3</span></td></tr>
+  </table>
+
+  <h3>Escenario realista <span style="font-family: var(--font-m); font-size: 9pt; color: var(--space-grey); letter-spacing: 0.2em;">// MES 6+ con SEO tomando fuerza</span></h3>
+  <table>
+    <tr><td>Mismo ad spend + tráfico orgánico creciendo</td><td><strong>4-6 trabajos nuevos/mes</strong></td></tr>
+    <tr><td>Revenue adicional</td><td><span class="hot">$12,000 – $48,000/mes</span></td></tr>
+  </table>
+</div>
+
+<!-- ================== SECTION 6 ================== -->
+<div class="section">
+  <div class="section-num">06 / Timeline</div>
+  <h2>Ruta de ejecución</h2>
+
+  <table>
+  <thead>
+  <tr><th style="width: 20%;">Semana</th><th>Entregable</th></tr>
+  </thead>
+  <tbody>
+  <tr><td><strong>1</strong></td><td>Kickoff call + keyword research + research competencia</td></tr>
+  <tr><td><strong>2</strong></td><td>Wireframe web + setup GMB + accesos</td></tr>
+  <tr><td><strong>3</strong></td><td>Desarrollo web + redacción de copy + tracking</td></tr>
+  <tr><td><strong>4</strong></td><td>Web en vivo + tracking instalado + campañas Ads lanzadas</td></tr>
+  <tr><td><strong>5-8</strong></td><td>Optimización inicial de Ads + primeros posts SEO + campaña de reviews</td></tr>
+  <tr><td><strong>9-12</strong></td><td>Primer reporte trimestral + ajustes estratégicos</td></tr>
+  </tbody>
+  </table>
+</div>
+
+<!-- ================== SECTION 7 ================== -->
+<div class="section">
+  <div class="section-num">07 / Next Steps</div>
+  <h2>Próximos pasos</h2>
+  <ol style="color: var(--light-grey); padding-left: 22px;">
+    <li style="margin: 8px 0;">Aprobación de la propuesta</li>
+    <li style="margin: 8px 0;">Firma de acuerdo simple de servicio</li>
+    <li style="margin: 8px 0;">Pago del 50% del setup (<strong style="color: var(--primary);">$550 USD</strong>)</li>
+    <li style="margin: 8px 0;">Kickoff call (agendamos dentro de 48h de recibido el pago)</li>
+    <li style="margin: 8px 0;">En 4 semanas: sitio en vivo + Ads corriendo + GMB optimizado</li>
+  </ol>
+
+  <div class="final-cta">
+    <h3>¿Lista para dominar el mercado de Fencing en Davenport?</h3>
+    <p>// Propuesta válida por 14 días</p>
+  </div>
+
+  <a href="contrato-fence-growth-system.pdf" download style="display: flex; align-items: center; justify-content: space-between; gap: 18px; background: var(--primary); color: var(--bg); padding: 22px 30px; border-radius: 10px; font-family: var(--font-h); font-weight: 800; font-size: 15pt; letter-spacing: 0.01em; text-decoration: none; margin: 18px 0 8px; box-shadow: 0 0 0 1px rgba(250,250,0,.4);">
+    <span style="display: flex; align-items: center; gap: 14px;">
+      <span style="font-size: 22pt;">⬇</span>
+      DESCARGAR CONTRATO
+    </span>
+    <span style="font-family: var(--font-m); font-size: 8.5pt; font-weight: 500; letter-spacing: 0.25em; opacity: 0.75; text-transform: uppercase;">PDF · Listo para firmar</span>
+  </a>
+  <p style="text-align: center; font-family: var(--font-m); font-size: 8pt; letter-spacing: 0.25em; color: var(--space-grey); text-transform: uppercase; margin-bottom: 20px;">
+    Revísalo · Fírmalo · Empezamos en 48h
+  </p>
+
+  <div class="doc-footer">
+    <div class="sig">MARTIN MERCEDES</div>
+    <div class="contact">
+      <span class="y">MM Agency</span> · Marketing Digital<br>
+      WhatsApp +1 (xxx) xxx-xxxx &nbsp;·&nbsp; hello@mmagency.com
+    </div>
+  </div>
+</div>
+
+</div><!-- /.content-wrap -->
+
+</body>
+</html>

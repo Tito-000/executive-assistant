@@ -1,0 +1,181 @@
+{% comment %}
+  Memorama — Cotizador de Bordado/Personalización
+  ==================================================
+  Snippet que se inserta DENTRO de la página de producto.
+
+  DÓNDE VA EN SHOPIFY:
+  Este snippet se incluye en el template de producto (sections/main-product.liquid
+  o templates/product.liquid según el tema Trade que usan).
+
+  USO:
+  {% render 'cotizador-bordado', product: product %}
+
+  Incluye:
+  - Subida de logo con preview sobre la prenda (Fabric.js)
+  - Selector de técnica (bordado, serigrafía, DTF, sublimación)
+  - Selector de posición(es)
+  - Cantidad con precio en vivo y descuento por volumen
+  - Botón que envía el Draft Order (o cotización via form)
+{% endcomment %}
+
+<link rel="stylesheet" href="{{ 'cotizador-bordado.css' | asset_url }}">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/fabric.js/5.3.1/fabric.min.js" defer></script>
+
+<div class="mmr-cotizador" data-product-handle="{{ product.handle }}" data-product-id="{{ product.id }}" data-product-image="{{ product.featured_image | image_url: width: 800 }}">
+
+  <div class="mmr-header">
+    <h3 class="mmr-title">Personaliza tu pedido</h3>
+    <p class="mmr-subtitle">Sube tu logo, elige técnica y cantidad — calcula tu precio al instante</p>
+  </div>
+
+  {% comment %} ---------- 1. SUBIDA DE LOGO + PREVIEW ---------- {% endcomment %}
+  <div class="mmr-section">
+    <label class="mmr-label">
+      <span class="mmr-step-num">1</span>
+      Sube tu logo
+    </label>
+    <div class="mmr-upload-grid">
+      <label for="mmrLogoInput-{{ product.id }}" class="mmr-upload-zone" id="mmrUploadZone-{{ product.id }}">
+        <div class="mmr-upload-icon">📤</div>
+        <div class="mmr-upload-text">Arrastra o haz clic para subir</div>
+        <div class="mmr-upload-hint">PNG, JPG, SVG, PDF · Máx 10MB</div>
+        <input type="file" id="mmrLogoInput-{{ product.id }}" class="mmr-logo-input" accept="image/*,.pdf" hidden>
+      </label>
+      <div class="mmr-preview-wrap" id="mmrPreviewWrap-{{ product.id }}">
+        <div class="mmr-preview-empty">Preview del logo sobre la prenda</div>
+      </div>
+    </div>
+    <div class="mmr-preview-controls" id="mmrPreviewControls-{{ product.id }}" style="display:none;">
+      <button type="button" data-action="zoomIn">+ Grande</button>
+      <button type="button" data-action="zoomOut">- Pequeño</button>
+      <button type="button" data-action="rotate">↻ Rotar</button>
+      <button type="button" data-action="reset">Reset</button>
+    </div>
+  </div>
+
+  {% comment %} ---------- 2. TÉCNICA ---------- {% endcomment %}
+  <div class="mmr-section">
+    <label class="mmr-label">
+      <span class="mmr-step-num">2</span>
+      Elige técnica
+    </label>
+    <div class="mmr-technique-grid">
+      <div class="mmr-tech-card" data-tech="bordado">
+        <div class="mmr-tech-name">Bordado</div>
+        <div class="mmr-tech-desc">Durabilidad premium</div>
+        <div class="mmr-tech-cost">+<span data-price="bordado">150</span> RD$/un</div>
+      </div>
+      <div class="mmr-tech-card" data-tech="serigrafia">
+        <div class="mmr-tech-name">Serigrafía</div>
+        <div class="mmr-tech-desc">Económico en volumen</div>
+        <div class="mmr-tech-cost">+<span data-price="serigrafia">80</span> RD$/un</div>
+      </div>
+      <div class="mmr-tech-card" data-tech="dtf">
+        <div class="mmr-tech-name">DTF</div>
+        <div class="mmr-tech-desc">Full color, sin mínimo</div>
+        <div class="mmr-tech-cost">+<span data-price="dtf">100</span> RD$/un</div>
+      </div>
+      <div class="mmr-tech-card" data-tech="sublimacion">
+        <div class="mmr-tech-name">Sublimación</div>
+        <div class="mmr-tech-desc">Solo blancos/claros</div>
+        <div class="mmr-tech-cost">+<span data-price="sublimacion">90</span> RD$/un</div>
+      </div>
+    </div>
+  </div>
+
+  {% comment %} ---------- 3. POSICIÓN ---------- {% endcomment %}
+  <div class="mmr-section">
+    <label class="mmr-label">
+      <span class="mmr-step-num">3</span>
+      Posición del logo
+      <span class="mmr-hint">(puedes elegir más de una)</span>
+    </label>
+    <div class="mmr-positions">
+      <label class="mmr-pos-item"><input type="checkbox" value="pecho_izq"><span class="mmr-pos-label">Pecho izquierdo</span><span class="mmr-pos-cost">+60</span></label>
+      <label class="mmr-pos-item"><input type="checkbox" value="pecho_completo"><span class="mmr-pos-label">Pecho completo</span><span class="mmr-pos-cost">+120</span></label>
+      <label class="mmr-pos-item"><input type="checkbox" value="espalda"><span class="mmr-pos-label">Espalda</span><span class="mmr-pos-cost">+150</span></label>
+      <label class="mmr-pos-item"><input type="checkbox" value="manga_izq"><span class="mmr-pos-label">Manga izquierda</span><span class="mmr-pos-cost">+50</span></label>
+      <label class="mmr-pos-item"><input type="checkbox" value="manga_der"><span class="mmr-pos-label">Manga derecha</span><span class="mmr-pos-cost">+50</span></label>
+    </div>
+  </div>
+
+  {% comment %} ---------- 4. CANTIDAD ---------- {% endcomment %}
+  <div class="mmr-section">
+    <label class="mmr-label">
+      <span class="mmr-step-num">4</span>
+      Cantidad
+    </label>
+    <div class="mmr-qty-row">
+      <div class="mmr-qty-input">
+        <button type="button" data-qty="minus">−</button>
+        <input type="number" id="mmrQty-{{ product.id }}" value="1" min="1" max="10000">
+        <button type="button" data-qty="plus">+</button>
+      </div>
+      <div class="mmr-volume-tip" id="mmrVolumeTip-{{ product.id }}">Agrega más para ahorrar</div>
+    </div>
+    <div class="mmr-volume-tiers">
+      <div class="mmr-tier" data-min="10" data-max="24" data-disc="5">10-24 un · -5%</div>
+      <div class="mmr-tier" data-min="25" data-max="49" data-disc="10">25-49 un · -10%</div>
+      <div class="mmr-tier" data-min="50" data-max="99" data-disc="18">50-99 un · -18%</div>
+      <div class="mmr-tier" data-min="100" data-max="249" data-disc="25">100-249 un · -25%</div>
+      <div class="mmr-tier" data-min="250" data-max="99999" data-disc="32">250+ un · -32%</div>
+    </div>
+  </div>
+
+  {% comment %} ---------- PRECIO EN VIVO + CTA ---------- {% endcomment %}
+  <div class="mmr-price-box" id="mmrPriceBox-{{ product.id }}">
+    <div class="mmr-price-label">Tu precio estimado</div>
+    <div class="mmr-price-total">
+      <span class="mmr-currency">RD$</span>
+      <span class="mmr-price-number" id="mmrPriceNumber-{{ product.id }}">—</span>
+    </div>
+    <div class="mmr-price-unit" id="mmrPriceUnit-{{ product.id }}">Completa los pasos para ver tu precio</div>
+    <div class="mmr-price-breakdown" id="mmrPriceBreakdown-{{ product.id }}"></div>
+  </div>
+
+  <button type="button" class="mmr-cta-btn" id="mmrCtaBtn-{{ product.id }}" disabled>
+    Solicitar cotización
+  </button>
+
+  <p class="mmr-disclaimer">
+    Enviaremos tu solicitud a Memorama. Validarán el logo y te contactarán con el link de pago.
+  </p>
+</div>
+
+<script>
+(function() {
+  {% comment %} Precio base del producto — editable desde product metafield o settings {% endcomment %}
+  const PRODUCT_BASE_PRICE = {{ product.metafields.memorama.base_price | default: 0 }};
+  const PRODUCT_ID = {{ product.id }};
+  const PRODUCT_HANDLE = '{{ product.handle }}';
+  const PRODUCT_TITLE = {{ product.title | json }};
+  const PRODUCT_IMAGE = '{{ product.featured_image | image_url: width: 800 }}';
+
+  const PRICING = {
+    base: PRODUCT_BASE_PRICE > 0 ? PRODUCT_BASE_PRICE : 450,
+    techniques: {
+      bordado: { cost: 150, min: 10 },
+      serigrafia: { cost: 80, min: 25 },
+      dtf: { cost: 100, min: 1 },
+      sublimacion: { cost: 90, min: 1 }
+    },
+    positions: {
+      pecho_izq: 60, pecho_completo: 120, espalda: 150,
+      manga_izq: 50, manga_der: 50
+    },
+    volumeDiscounts: [
+      { min: 1, max: 9, disc: 0 },
+      { min: 10, max: 24, disc: 0.05 },
+      { min: 25, max: 49, disc: 0.10 },
+      { min: 50, max: 99, disc: 0.18 },
+      { min: 100, max: 249, disc: 0.25 },
+      { min: 250, max: 99999, disc: 0.32 }
+    ]
+  };
+
+  window.MMR_INIT = window.MMR_INIT || {};
+  window.MMR_INIT[PRODUCT_ID] = { PRICING, PRODUCT_HANDLE, PRODUCT_TITLE, PRODUCT_IMAGE };
+})();
+</script>
+
+<script src="{{ 'cotizador-bordado.js' | asset_url }}" defer></script>

@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contrato A — Entrega y Cierre · Memorama Bordado</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;600;700;800&family=Inter:wght@300;400;500;600;700&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --yellow: #FAFA00;
+      --purple: #713DFF;
+      --orange: #F54900;
+      --dark: #181818;
+      --dark-2: #222222;
+      --gray: #3a3a3a;
+      --gray-light: #8a8a8a;
+      --cream: #f6f6f4;
+      --white: #ffffff;
+      --text-dark: #181818;
+      --text-mid: #3a3a3a;
+      --text-light: #7a7a7a;
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body { font-family: 'Inter', sans-serif; background: var(--cream); color: var(--text-dark); line-height: 1.7; }
+    h1, h2, h3, h4 { font-family: 'Orbitron', sans-serif; font-weight: 700; letter-spacing: 0.5px; }
+
+    .contract { max-width: 820px; margin: 0 auto; padding: 60px 50px; background: var(--white); }
+
+    /* Header */
+    .brand-strip { background: var(--dark); padding: 24px 50px; display: flex; align-items: center; justify-content: space-between; border-bottom: 3px solid var(--yellow); }
+    .brand-strip img { height: 40px; }
+    .brand-strip .tag { font-family: 'DM Mono', monospace; font-size: 11px; color: var(--white); letter-spacing: 2px; text-transform: uppercase; }
+
+    .header { text-align: center; padding-bottom: 36px; border-bottom: 3px solid var(--purple); margin-bottom: 40px; position: relative; }
+    .header::after { content: ''; position: absolute; bottom: -3px; left: 0; width: 120px; height: 3px; background: var(--yellow); }
+    .header .doc-tag { display: inline-block; font-family: 'DM Mono', monospace; font-size: 11px; background: var(--purple); color: var(--white); padding: 6px 14px; letter-spacing: 2px; text-transform: uppercase; margin-bottom: 18px; }
+    .header h1 { font-size: 30px; color: var(--dark); margin-bottom: 10px; line-height: 1.2; text-transform: uppercase; }
+    .header .subtitle { font-size: 13px; color: var(--text-mid); letter-spacing: 2px; text-transform: uppercase; font-weight: 500; }
+    .header .date { font-size: 12px; color: var(--text-light); margin-top: 14px; font-family: 'DM Mono', monospace; }
+
+    /* Sections */
+    .clause { margin-bottom: 32px; }
+    .clause-title { font-family: 'DM Mono', monospace; font-size: 11px; font-weight: 500; letter-spacing: 3px; text-transform: uppercase; color: var(--purple); margin-bottom: 10px; }
+    .clause h3 { font-size: 20px; color: var(--dark); margin-bottom: 14px; text-transform: uppercase; }
+    .clause p { font-size: 14px; color: var(--text-dark); margin-bottom: 10px; font-weight: 400; }
+    .clause ul { padding-left: 20px; margin: 10px 0 16px; }
+    .clause li { font-size: 14px; color: var(--text-dark); font-weight: 400; margin-bottom: 8px; }
+    .clause li strong, .clause p strong { font-weight: 600; color: var(--dark); }
+
+    .highlight { background: #F3EEFF; border-left: 4px solid var(--purple); padding: 18px 22px; margin: 16px 0; }
+    .highlight p { margin: 0; color: var(--text-dark); }
+
+    .warning-box { background: #FFF3ED; border-left: 4px solid var(--orange); padding: 18px 22px; margin: 16px 0; }
+    .warning-box p { margin: 0; color: var(--text-dark); }
+
+    /* Price block */
+    .price-block { background: var(--dark); color: var(--white); padding: 28px 30px; margin: 20px 0; border-left: 6px solid var(--purple); }
+    .price-block .row { display: flex; justify-content: space-between; align-items: center; padding: 10px 0; border-bottom: 1px solid #2f2f2f; }
+    .price-block .row:last-child { border-bottom: none; padding-top: 14px; margin-top: 6px; border-top: 2px solid var(--purple); font-weight: 700; }
+    .price-block .label { font-family: 'DM Mono', monospace; font-size: 12px; color: #c8c8c8; letter-spacing: 1px; text-transform: uppercase; }
+    .price-block .value { font-family: 'Orbitron', sans-serif; font-size: 18px; color: var(--white); font-weight: 600; }
+    .price-block .value.highlight-val { color: var(--yellow); font-size: 22px; }
+
+    /* Signatures */
+    .signatures { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; margin-top: 60px; padding-top: 40px; border-top: 3px solid var(--dark); }
+    .sig-block { text-align: center; }
+    .sig-label { font-family: 'DM Mono', monospace; text-align: left; font-size: 11px; letter-spacing: 2px; text-transform: uppercase; color: var(--purple); margin-bottom: 4px; font-weight: 500; }
+    .sig-line { width: 100%; height: 2px; background: var(--dark); margin-bottom: 10px; margin-top: 80px; }
+    .sig-name { font-family: 'Orbitron', sans-serif; font-size: 14px; font-weight: 600; color: var(--dark); text-transform: uppercase; }
+    .sig-role { font-size: 12px; color: var(--text-light); margin-top: 4px; }
+    .sig-id { font-size: 11px; color: var(--text-light); margin-top: 6px; font-family: 'DM Mono', monospace; }
+
+    /* Footer */
+    .footer { text-align: center; margin-top: 50px; padding-top: 24px; border-top: 1px solid #e2e2e2; }
+    .footer p { font-size: 11px; color: var(--text-light); font-family: 'DM Mono', monospace; letter-spacing: 1px; }
+
+    /* Download bar */
+    .download-bar { text-align: center; padding: 18px; background: var(--dark); position: sticky; top: 0; z-index: 100; border-bottom: 3px solid var(--purple); }
+    .download-btn { display: inline-block; background: var(--purple); color: var(--white); padding: 14px 36px; font-family: 'Orbitron', sans-serif; font-size: 12px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; text-decoration: none; cursor: pointer; border: none; transition: transform 0.2s ease, box-shadow 0.2s ease; }
+    .download-btn:hover { transform: translateY(-2px); box-shadow: 0 6px 20px rgba(113,61,255,0.4); }
+
+    @media print {
+      body { background: white; }
+      .contract { padding: 30px 28px; max-width: none; }
+      .brand-strip { padding: 16px 28px; }
+      .signatures { page-break-inside: avoid; }
+      .download-bar { display: none; }
+      .price-block { page-break-inside: avoid; }
+      .clause { page-break-inside: avoid; }
+    }
+
+    @media (max-width: 600px) {
+      .contract { padding: 30px 22px; }
+      .signatures { grid-template-columns: 1fr; gap: 40px; }
+      .brand-strip { padding: 16px 22px; }
+      .brand-strip .tag { display: none; }
+      .header h1 { font-size: 22px; }
+    }
+  </style>
+</head>
+<body>
+
+<div class="download-bar">
+  <button class="download-btn" onclick="window.print()">Descargar en PDF</button>
+</div>
+
+<div class="brand-strip">
+  <img src="../../../projects/agencia-marketing/branding/logo/transparent/mm-v7-wordmark-white-transparent.png" alt="MM Agency">
+  <span class="tag">// Contrato A · Entrega y Cierre</span>
+</div>
+
+<div class="contract">
+
+  <!-- HEADER -->
+  <div class="header">
+    <span class="doc-tag">Contrato · Opción A</span>
+    <h1>Contrato de Entrega y Cierre</h1>
+    <p class="subtitle">Finalización de proyecto · Página web + Embudo</p>
+    <p class="date">Santo Domingo, República Dominicana · _____ de ____________ de 20____</p>
+  </div>
+
+  <!-- INTRO -->
+  <div class="clause">
+    <p class="clause-title">// Preámbulo</p>
+    <h3>Resumen del acuerdo</h3>
+    <p>Este contrato formaliza la <strong>entrega final y cierre definitivo</strong> del proyecto de marketing digital iniciado entre MM Agency y el Cliente. Al firmar, el Cliente paga el saldo pendiente acordado, El Prestador entrega la página web y el embudo completamente funcionales, y ambas partes dan por concluida la relación comercial.</p>
+  </div>
+
+  <!-- PARTES -->
+  <div class="clause">
+    <p class="clause-title">// Cláusula 1</p>
+    <h3>Las Partes</h3>
+    <p><strong>EL PRESTADOR:</strong> Martin Mercedes, actuando bajo la marca comercial <strong>MM Agency</strong>, cédula de identidad No. ______________________, en adelante "El Prestador".</p>
+    <p><strong>EL CLIENTE:</strong> ________________________________________ <em>(nombre / razón social)</em>, RNC/Cédula No. ______________________, representado por ________________________________________ <em>(representante legal)</em>, en adelante "El Cliente".</p>
+  </div>
+
+  <!-- OBJETO -->
+  <div class="clause">
+    <p class="clause-title">// Cláusula 2</p>
+    <h3>Objeto del Contrato</h3>
+    <p>El Prestador se compromete a <strong>finalizar y entregar</strong> la página web y el embudo de marketing digital del negocio de bordados del Cliente, dejándolo en estado funcional operativo, bajo el acuerdo económico original suscrito entre las partes.</p>
+  </div>
+
+  <!-- ALCANCE -->
+  <div class="clause">
+    <p class="clause-title">// Cláusula 3</p>
+    <h3>Alcance de la Entrega</h3>
+    <p>La entrega final incluye los siguientes componentes:</p>
+    <ul>
+      <li><strong>Página web terminada</strong> y publicada en el dominio del Cliente, totalmente funcional en desktop y mobile.</li>
+      <li><strong>Embudo de captación</strong> configurado (formularios y flujos básicos de lead).</li>
+      <li><strong>CRM básico configurado</strong> con pipeline de seguimiento de leads.</li>
+      <li><strong>Handover completo:</strong> entrega de accesos, credenciales y documentación básica de uso.</li>
+    </ul>
+    <div class="warning-box">
+      <p><strong>No incluido en el Contrato A:</strong> instalación de tracking (Google Tag Manager, Google Analytics 4, Meta Pixel), integraciones avanzadas del embudo con herramientas externas, automatizaciones de seguimiento de leads ni mantenimiento posterior. Estos componentes forman parte del Contrato B.</p>
+    </div>
+  </div>
+
+  <!-- INVERSIÓN -->
+  <div class="clause">
+    <p class="clause-title">// Cláusula 4</p>
+    <h3>Inversión y Forma de Pago</h3>
+
+    <div class="price-block">
+      <div class="row">
+        <span class="label">Total del proyecto</span>
+        <span class="value">USD $1,000.00</span>
+      </div>
+      <div class="row">
+        <span class="label">Adelanto ya pagado</span>
+        <span class="value">− USD $500.00</span>
+      </div>
+      <div class="row">
+        <span class="label">Saldo a pagar</span>
+        <span class="value highlight-val">USD $500.00</span>
+      </div>
+    </div>
+
+    <p>El saldo pendiente de <strong>USD $500.00</strong> se pagará <strong>a la entrega final</strong>, contra aceptación por parte del Cliente de los componentes descritos en la Cláusula 3.</p>
+    <p>Los pagos pueden realizarse por transferencia bancaria, PayPal o cualquier medio acordado por ambas partes.</p>
+  </div>
+
+  <!-- PLAZO -->
+  <div class="clause">
+    <p class="clause-title">// Cláusula 5</p>
+    <h3>Plazo de Entrega</h3>
+    <p>El Prestador se compromete a entregar el proyecto en un plazo máximo de <strong>treinta (30) días calendario</strong> contados a partir de la fecha de firma, siempre que el Cliente haya entregado todos los materiales solicitados en tiempo.</p>
+    <div class="warning-box">
+      <p><strong>Demoras del Cliente:</strong> Cualquier retraso del Cliente en la entrega de materiales, aprobaciones o accesos extenderá el plazo de entrega en la misma proporción (1:1), sin penalización para El Prestador.</p>
+    </div>
+  </div>
+
+  <!-- CIERRE DEFINITIVO -->
+  <div class="clause">
+    <p class="clause-title">// Cláusula 6</p>
+    <h3>Cierre Definitivo de la Relación</h3>
+    <p>Al completarse la entrega final y el pago del saldo pendiente, <strong>la relación comercial entre las partes queda concluida de manera definitiva</strong>. Este contrato no genera obligación alguna de mantenimiento, soporte continuo, optimización ni gestión posterior por parte del Prestador.</p>
+    <div class="highlight">
+      <p><strong>El Prestador no se hace responsable</strong> del performance de campañas publicitarias, resultados de ventas, conversiones, ni de cualquier mantenimiento técnico posterior a la entrega. Cualquier servicio adicional que el Cliente requiera después de la entrega se cotizará por separado.</p>
+    </div>
+  </div>
+
+  <!-- OBLIGACIONES PRESTADOR -->
+  <div class="clause">
+    <p class="clause-title">// Cláusula 7</p>
+    <h3>Obligaciones del Prestador</h3>
+    <ul>
+      <li>Completar los componentes descritos en la Cláusula 3 dentro del plazo acordado.</li>
+      <li>Entregar credenciales, accesos y documentación de handover al Cliente.</li>
+      <li>Garantizar que los componentes entregados funcionen correctamente al momento de la entrega.</li>
+      <li>Mantener comunicación oportuna durante el período de ejecución.</li>
+    </ul>
+  </div>
+
+  <!-- OBLIGACIONES CLIENTE -->
+  <div class="clause">
+    <p class="clause-title">// Cláusula 8</p>
+    <h3>Obligaciones del Cliente</h3>
+    <ul>
+      <li>Proveer todos los materiales solicitados (imágenes, textos, logos, datos de producto) en un plazo máximo de <strong>siete (7) días</strong> desde cada solicitud.</li>
+      <li>Otorgar acceso a cuentas necesarias (dominio, hosting, redes sociales, Google, Meta).</li>
+      <li>Aprobar entregables dentro de un plazo de <strong>48 horas</strong> tras su envío.</li>
+      <li>Realizar el pago del saldo en la fecha acordada contra entrega.</li>
+    </ul>
+  </div>
+
+  <!-- PROPIEDAD INTELECTUAL -->
+  <div class="clause">
+    <p class="clause-title">// Cláusula 9</p>
+    <h3>Propiedad Intelectual</h3>
+    <p>Una vez completado el pago total del proyecto, <strong>el diseño y contenido de la página web serán propiedad del Cliente</strong>.</p>
+    <p>Los sistemas, templates, automatizaciones y metodologías desarrollados por MM Agency son propiedad intelectual del Prestador y no podrán ser replicados ni compartidos con terceros sin autorización escrita.</p>
+  </div>
+
+  <!-- CONFIDENCIALIDAD -->
+  <div class="clause">
+    <p class="clause-title">// Cláusula 10</p>
+    <h3>Confidencialidad</h3>
+    <p>Ambas partes se comprometen a mantener la confidencialidad de toda información sensible compartida durante la vigencia de este contrato, incluyendo datos comerciales, estrategias, métricas y datos financieros.</p>
+  </div>
+
+  <!-- CONFLICTOS -->
+  <div class="clause">
+    <p class="clause-title">// Cláusula 11</p>
+    <h3>Resolución de Conflictos</h3>
+    <p>En caso de desacuerdo, las partes buscarán una solución mediante negociación directa. Si no se llega a un acuerdo, el caso será resuelto por los tribunales competentes de Santo Domingo, República Dominicana.</p>
+  </div>
+
+  <!-- ACEPTACIÓN -->
+  <div class="clause">
+    <p class="clause-title">// Cláusula 12</p>
+    <h3>Aceptación</h3>
+    <p>Al firmar este contrato, ambas partes aceptan explícitamente los términos aquí estipulados. Este acuerdo entra en vigor en la fecha de firma y prevalece sobre cualquier comunicación o acuerdo previo.</p>
+  </div>
+
+  <!-- FIRMAS -->
+  <div class="signatures">
+    <div class="sig-block">
+      <p class="sig-label">// Prestador</p>
+      <div class="sig-line"></div>
+      <div class="sig-name">Martin Mercedes</div>
+      <div class="sig-role">MM Agency · Marketing Digital</div>
+      <div class="sig-id">Fecha: _______________</div>
+    </div>
+    <div class="sig-block">
+      <p class="sig-label">// Cliente</p>
+      <div class="sig-line"></div>
+      <div class="sig-name">________________________</div>
+      <div class="sig-role">Nombre y cargo del representante</div>
+      <div class="sig-id">Fecha: _______________</div>
+    </div>
+  </div>
+
+  <div class="footer">
+    <p>MM AGENCY · MARKETING DIGITAL · REPÚBLICA DOMINICANA<br>CONTRATO A · ENTREGA Y CIERRE · DOCUMENTO GENERADO [FECHA]</p>
+  </div>
+
+</div>
+
+</body>
+</html>

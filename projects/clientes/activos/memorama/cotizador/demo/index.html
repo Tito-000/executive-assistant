@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Camisa Tipo Columbia Mujer — Memorama (Demo con cotizador)</title>
+<link rel="stylesheet" href="../shopify/cotizador-bordado.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/fabric.js/5.3.1/fabric.min.js" defer></script>
+<style>
+  * { box-sizing: border-box; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    margin: 0;
+    background: #fff;
+    color: #111;
+  }
+  .demo-banner {
+    background: #fffbe6;
+    border-bottom: 1px solid #f5d782;
+    padding: 10px 20px;
+    font-size: 13px;
+    text-align: center;
+    color: #7a5a00;
+  }
+  .shop-header {
+    border-bottom: 1px solid #eee;
+    padding: 16px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .shop-logo { font-weight: 800; font-size: 22px; letter-spacing: 1px; }
+  .shop-nav { display: flex; gap: 24px; font-size: 14px; }
+  .shop-nav a { color: #333; text-decoration: none; }
+  .container { max-width: 1280px; margin: 0 auto; padding: 40px 20px; }
+  .product-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 48px;
+    align-items: start;
+  }
+  .product-image { position: sticky; top: 20px; }
+  .product-image img { width: 100%; border-radius: 8px; background: #f5f5f5; display: block; }
+  .product-right { display: flex; flex-direction: column; }
+  .product-info h1 {
+    font-size: 28px;
+    margin: 0 0 12px 0;
+    font-weight: 600;
+  }
+  .product-price { font-size: 24px; font-weight: 700; margin-bottom: 16px; }
+  .product-desc { color: #555; line-height: 1.6; margin-bottom: 24px; font-size: 14px; }
+  .product-options label { display: block; font-size: 13px; font-weight: 600; margin: 16px 0 6px; }
+  .product-options select, .product-options input {
+    width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 6px; font-size: 14px;
+  }
+  .shopify-btn {
+    width: 100%;
+    padding: 14px;
+    background: #111;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 14px;
+    font-weight: 600;
+    margin-top: 20px;
+    cursor: pointer;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+  }
+  /* El cotizador ya no necesita margen superior grande porque está pegado a la info del producto */
+  .product-right .mmr-cotizador { margin-top: 24px; }
+
+  @media (max-width: 900px) {
+    .product-grid { grid-template-columns: 1fr; gap: 24px; }
+    .product-image { position: static; }
+    .shop-header { padding: 12px 16px; }
+    .shop-nav { display: none; }
+  }
+</style>
+</head>
+<body>
+
+<div class="demo-banner">
+  🔸 DEMO — Así se ve el cotizador embebido dentro de la product page real de memoramard.com
+</div>
+
+<header class="shop-header">
+  <div class="shop-logo">MEMORAMA</div>
+  <nav class="shop-nav">
+    <a href="#">Inicio</a>
+    <a href="#">Catálogo</a>
+    <a href="#">Personalización</a>
+    <a href="#">Contacto</a>
+  </nav>
+</header>
+
+<div class="container">
+
+  <!-- Product page estándar de Shopify — layout 2 columnas -->
+  <div class="product-grid">
+
+    <!-- COLUMNA IZQUIERDA: imagen (sticky) -->
+    <div class="product-image">
+      <img src="https://memoramard.com/cdn/shop/files/camisa-tipo-columbia-mujer.jpg" alt="Camisa Tipo Columbia Mujer"
+           onerror="this.src='https://via.placeholder.com/600x600/f0f0f0/999?text=Camisa+Columbia+Mujer'">
+    </div>
+
+    <!-- COLUMNA DERECHA: info del producto + cotizador, todo junto -->
+    <div class="product-right">
+      <div class="product-info">
+        <h1>Camisa Tipo Columbia Mujer</h1>
+        <div class="product-price">Desde RD$ 1,200.00</div>
+        <p class="product-desc">
+          Camisa tipo Columbia para mujer, tela transpirable con protección UV.
+          Ideal para uniformes corporativos, eventos, y ropa de trabajo al aire libre.
+        </p>
+        <div class="product-options">
+          <label>Color</label>
+          <select><option>Blanco</option><option>Azul marino</option><option>Caqui</option></select>
+          <label>Talla</label>
+          <select><option>S</option><option>M</option><option>L</option><option>XL</option></select>
+        </div>
+      </div>
+
+      <!-- Cotizador embebido en la misma columna -->
+      <div class="mmr-cotizador" data-product-handle="camisa-tipo-columbia-mujer" data-product-id="demo001" data-product-image="https://memoramard.com/cdn/shop/files/camisa-tipo-columbia-mujer.jpg">
+
+    <div class="mmr-header">
+      <h3 class="mmr-title">Personaliza tu pedido</h3>
+      <p class="mmr-subtitle">Sube tu logo, elige técnica y cantidad — calcula tu precio al instante</p>
+    </div>
+
+    <div class="mmr-section">
+      <label class="mmr-label">
+        <span class="mmr-step-num">1</span>
+        Sube tu logo
+      </label>
+      <div class="mmr-upload-grid">
+        <label for="mmrLogoInput-demo001" class="mmr-upload-zone" id="mmrUploadZone-demo001">
+          <div class="mmr-upload-icon">📤</div>
+          <div class="mmr-upload-text">Arrastra o haz clic para subir</div>
+          <div class="mmr-upload-hint">PNG, JPG, SVG, PDF · Máx 10MB</div>
+          <input type="file" id="mmrLogoInput-demo001" class="mmr-logo-input" accept="image/*,.pdf" hidden>
+        </label>
+        <div class="mmr-preview-wrap" id="mmrPreviewWrap-demo001">
+          <div class="mmr-preview-empty">Preview del logo sobre la prenda</div>
+        </div>
+      </div>
+      <div class="mmr-preview-controls" id="mmrPreviewControls-demo001" style="display:none;">
+        <button type="button" data-action="zoomIn">+ Grande</button>
+        <button type="button" data-action="zoomOut">- Pequeño</button>
+        <button type="button" data-action="rotate">↻ Rotar</button>
+        <button type="button" data-action="reset">Reset</button>
+      </div>
+    </div>
+
+    <div class="mmr-section">
+      <label class="mmr-label">
+        <span class="mmr-step-num">2</span>
+        Elige técnica
+      </label>
+      <div class="mmr-technique-grid">
+        <div class="mmr-tech-card" data-tech="bordado">
+          <div class="mmr-tech-name">Bordado</div>
+          <div class="mmr-tech-desc">Durabilidad premium</div>
+          <div class="mmr-tech-cost">+150 RD$/un</div>
+        </div>
+        <div class="mmr-tech-card" data-tech="serigrafia">
+          <div class="mmr-tech-name">Serigrafía</div>
+          <div class="mmr-tech-desc">Económico en volumen</div>
+          <div class="mmr-tech-cost">+80 RD$/un</div>
+        </div>
+        <div class="mmr-tech-card" data-tech="dtf">
+          <div class="mmr-tech-name">DTF</div>
+          <div class="mmr-tech-desc">Full color, sin mínimo</div>
+          <div class="mmr-tech-cost">+100 RD$/un</div>
+        </div>
+        <div class="mmr-tech-card" data-tech="sublimacion">
+          <div class="mmr-tech-name">Sublimación</div>
+          <div class="mmr-tech-desc">Solo blancos/claros</div>
+          <div class="mmr-tech-cost">+90 RD$/un</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="mmr-section">
+      <label class="mmr-label">
+        <span class="mmr-step-num">3</span>
+        Posición del logo
+        <span class="mmr-hint">(puedes elegir más de una)</span>
+      </label>
+      <div class="mmr-positions">
+        <label class="mmr-pos-item"><input type="checkbox" value="pecho_izq"><span class="mmr-pos-label">Pecho izquierdo</span><span class="mmr-pos-cost">+60</span></label>
+        <label class="mmr-pos-item"><input type="checkbox" value="pecho_completo"><span class="mmr-pos-label">Pecho completo</span><span class="mmr-pos-cost">+120</span></label>
+        <label class="mmr-pos-item"><input type="checkbox" value="espalda"><span class="mmr-pos-label">Espalda</span><span class="mmr-pos-cost">+150</span></label>
+        <label class="mmr-pos-item"><input type="checkbox" value="manga_izq"><span class="mmr-pos-label">Manga izquierda</span><span class="mmr-pos-cost">+50</span></label>
+        <label class="mmr-pos-item"><input type="checkbox" value="manga_der"><span class="mmr-pos-label">Manga derecha</span><span class="mmr-pos-cost">+50</span></label>
+      </div>
+    </div>
+
+    <div class="mmr-section">
+      <label class="mmr-label">
+        <span class="mmr-step-num">4</span>
+        Cantidad
+      </label>
+      <div class="mmr-qty-row">
+        <div class="mmr-qty-input">
+          <button type="button" data-qty="minus">−</button>
+          <input type="number" id="mmrQty-demo001" value="1" min="1" max="10000">
+          <button type="button" data-qty="plus">+</button>
+        </div>
+        <div class="mmr-volume-tip" id="mmrVolumeTip-demo001">Agrega más para ahorrar</div>
+      </div>
+      <div class="mmr-volume-tiers">
+        <div class="mmr-tier" data-min="10" data-max="24">10-24 un · -5%</div>
+        <div class="mmr-tier" data-min="25" data-max="49">25-49 un · -10%</div>
+        <div class="mmr-tier" data-min="50" data-max="99">50-99 un · -18%</div>
+        <div class="mmr-tier" data-min="100" data-max="249">100-249 un · -25%</div>
+        <div class="mmr-tier" data-min="250" data-max="99999">250+ un · -32%</div>
+      </div>
+    </div>
+
+    <div class="mmr-price-box">
+      <div class="mmr-price-label">Tu precio estimado</div>
+      <div class="mmr-price-total">
+        <span class="mmr-currency">RD$</span>
+        <span class="mmr-price-number" id="mmrPriceNumber-demo001">—</span>
+      </div>
+      <div class="mmr-price-unit" id="mmrPriceUnit-demo001">Completa los pasos para ver tu precio</div>
+      <div class="mmr-price-breakdown" id="mmrPriceBreakdown-demo001"></div>
+    </div>
+
+    <button type="button" class="mmr-cta-btn" id="mmrCtaBtn-demo001" disabled>
+      Solicitar cotización
+    </button>
+
+    <p class="mmr-disclaimer">
+      Enviaremos tu solicitud a Memorama. Validarán el logo y te contactarán con el link de pago.
+    </p>
+  </div>
+      <!-- fin cotizador -->
+    </div>
+    <!-- fin columna derecha -->
+  </div>
+  <!-- fin product-grid -->
+
+</div>
+
+<script>
+  window.MMR_INIT = {
+    demo001: {
+      PRODUCT_TITLE: 'Camisa Tipo Columbia Mujer',
+      PRODUCT_HANDLE: 'camisa-tipo-columbia-mujer',
+      PRODUCT_IMAGE: 'https://memoramard.com/cdn/shop/files/camisa-tipo-columbia-mujer.jpg',
+      PRICING: {
+        base: 1200,
+        techniques: {
+          bordado: { cost: 150, min: 10 },
+          serigrafia: { cost: 80, min: 25 },
+          dtf: { cost: 100, min: 1 },
+          sublimacion: { cost: 90, min: 1 }
+        },
+        positions: {
+          pecho_izq: 60, pecho_completo: 120, espalda: 150,
+          manga_izq: 50, manga_der: 50
+        },
+        volumeDiscounts: [
+          { min: 1, max: 9, disc: 0 },
+          { min: 10, max: 24, disc: 0.05 },
+          { min: 25, max: 49, disc: 0.10 },
+          { min: 50, max: 99, disc: 0.18 },
+          { min: 100, max: 249, disc: 0.25 },
+          { min: 250, max: 99999, disc: 0.32 }
+        ]
+      }
+    }
+  };
+</script>
+<script src="../shopify/cotizador-bordado.js" defer></script>
+
+</body>
+</html>
