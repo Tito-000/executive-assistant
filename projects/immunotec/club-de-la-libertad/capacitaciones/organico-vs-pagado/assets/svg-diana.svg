@@ -1,0 +1,55 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 900" preserveAspectRatio="xMidYMid slice">
+  <defs>
+    <radialGradient id="bg-diana" cx="50%" cy="50%" r="70%">
+      <stop offset="0%" stop-color="#1a2840"/>
+      <stop offset="100%" stop-color="#06101E"/>
+    </radialGradient>
+    <filter id="g2"><feGaussianBlur stdDeviation="6" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+    <filter id="g3"><feGaussianBlur stdDeviation="2" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+  </defs>
+
+  <rect width="800" height="900" fill="url(#bg-diana)"/>
+
+  <!-- Target rings (concentric) -->
+  <g transform="translate(400 450)" filter="url(#g2)">
+    <circle r="280" fill="none" stroke="#F47920" stroke-width="2" opacity="0.22"/>
+    <circle r="220" fill="none" stroke="#F47920" stroke-width="2" opacity="0.35"/>
+    <circle r="160" fill="none" stroke="#F47920" stroke-width="2.5" opacity="0.55"/>
+    <circle r="100" fill="none" stroke="#D4FF00" stroke-width="2.5" opacity="0.7"/>
+    <circle r="50" fill="none" stroke="#D4FF00" stroke-width="3" opacity="0.9"/>
+    <circle r="16" fill="#F47920"/>
+    <circle r="6" fill="#D4FF00"/>
+  </g>
+
+  <!-- Crosshair -->
+  <g stroke="#D4FF00" stroke-width="1" opacity="0.25">
+    <line x1="400" y1="110" x2="400" y2="790"/>
+    <line x1="60" y1="450" x2="740" y2="450"/>
+  </g>
+
+  <!-- Arrow hitting bullseye -->
+  <g transform="translate(400 450) rotate(-30)" filter="url(#g3)">
+    <line x1="-250" y1="0" x2="0" y2="0" stroke="#F47920" stroke-width="3"/>
+    <polygon points="-8,-10 12,0 -8,10" fill="#F47920"/>
+    <!-- fletching -->
+    <polygon points="-250,-8 -240,0 -250,8 -260,0" fill="#D4FF00" opacity="0.9"/>
+    <polygon points="-235,-8 -225,0 -235,8 -245,0" fill="#F47920" opacity="0.7"/>
+  </g>
+
+  <!-- Sparks at impact -->
+  <g transform="translate(400 450)" fill="#D4FF00" opacity="0.85" filter="url(#g3)">
+    <circle cx="5" cy="-5" r="2"/>
+    <circle cx="-3" cy="-8" r="1.5"/>
+    <circle cx="8" cy="5" r="1.8"/>
+    <circle cx="-6" cy="6" r="1.3"/>
+    <circle cx="12" cy="-2" r="1.2"/>
+  </g>
+
+  <!-- Ambient dots -->
+  <g opacity="0.3" fill="#F47920">
+    <circle cx="120" cy="150" r="2"/>
+    <circle cx="680" cy="180" r="1.5"/>
+    <circle cx="160" cy="780" r="2"/>
+    <circle cx="700" cy="800" r="1.8"/>
+  </g>
+</svg>

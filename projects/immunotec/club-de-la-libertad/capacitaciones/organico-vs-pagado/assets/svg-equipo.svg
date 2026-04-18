@@ -1,0 +1,84 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 900" preserveAspectRatio="xMidYMid slice">
+  <defs>
+    <radialGradient id="bg-glow-team" cx="50%" cy="55%" r="65%">
+      <stop offset="0%" stop-color="#1a2840" stop-opacity="1"/>
+      <stop offset="100%" stop-color="#06101E" stop-opacity="1"/>
+    </radialGradient>
+    <linearGradient id="orange-grad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#F47920"/>
+      <stop offset="100%" stop-color="#c45810"/>
+    </linearGradient>
+    <linearGradient id="neon-grad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#D4FF00"/>
+      <stop offset="100%" stop-color="#8FB400"/>
+    </linearGradient>
+    <filter id="glow-strong">
+      <feGaussianBlur stdDeviation="8" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <filter id="glow-soft">
+      <feGaussianBlur stdDeviation="3" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+
+  <rect width="800" height="900" fill="url(#bg-glow-team)"/>
+
+  <!-- Ambient floating dots -->
+  <g opacity="0.25" fill="#F47920">
+    <circle cx="100" cy="120" r="2"/>
+    <circle cx="680" cy="180" r="1.5"/>
+    <circle cx="150" cy="780" r="2.5"/>
+    <circle cx="720" cy="820" r="2"/>
+    <circle cx="400" cy="100" r="1.5"/>
+    <circle cx="80" cy="450" r="2"/>
+    <circle cx="730" cy="500" r="1.5"/>
+  </g>
+  <g opacity="0.3" fill="#D4FF00">
+    <circle cx="230" cy="250" r="1.5"/>
+    <circle cx="600" cy="300" r="2"/>
+    <circle cx="130" cy="650" r="1.5"/>
+    <circle cx="650" cy="700" r="2"/>
+  </g>
+
+  <!-- Connection lines between figures -->
+  <g stroke="#F47920" stroke-width="1.5" fill="none" opacity="0.35" filter="url(#glow-soft)">
+    <path d="M220 540 Q400 380 580 540" stroke-dasharray="4 6"/>
+    <path d="M160 620 Q400 460 640 620" stroke-dasharray="4 6"/>
+  </g>
+
+  <!-- Figure 1: Left — shoulders + head silhouette -->
+  <g transform="translate(180 540)">
+    <circle cx="0" cy="-120" r="55" fill="#0b1728" stroke="#F47920" stroke-width="2.5" filter="url(#glow-strong)"/>
+    <path d="M-100 80 Q-100 -40 0 -40 Q100 -40 100 80 Z" fill="#0b1728" stroke="#F47920" stroke-width="2.5" filter="url(#glow-strong)"/>
+    <!-- inner neon accent -->
+    <circle cx="0" cy="-120" r="48" fill="none" stroke="#D4FF00" stroke-width="1" opacity="0.4"/>
+  </g>
+
+  <!-- Figure 2: Center (hero) — bigger -->
+  <g transform="translate(400 480)">
+    <circle cx="0" cy="-145" r="70" fill="#0b1728" stroke="#F47920" stroke-width="3" filter="url(#glow-strong)"/>
+    <path d="M-130 110 Q-130 -55 0 -55 Q130 -55 130 110 Z" fill="#0b1728" stroke="#F47920" stroke-width="3" filter="url(#glow-strong)"/>
+    <!-- neon glow halo -->
+    <circle cx="0" cy="-145" r="85" fill="none" stroke="#D4FF00" stroke-width="1.5" opacity="0.5" filter="url(#glow-soft)"/>
+    <!-- chest mark -->
+    <circle cx="0" cy="20" r="6" fill="#D4FF00" filter="url(#glow-soft)"/>
+  </g>
+
+  <!-- Figure 3: Right -->
+  <g transform="translate(620 540)">
+    <circle cx="0" cy="-120" r="55" fill="#0b1728" stroke="#F47920" stroke-width="2.5" filter="url(#glow-strong)"/>
+    <path d="M-100 80 Q-100 -40 0 -40 Q100 -40 100 80 Z" fill="#0b1728" stroke="#F47920" stroke-width="2.5" filter="url(#glow-strong)"/>
+    <circle cx="0" cy="-120" r="48" fill="none" stroke="#D4FF00" stroke-width="1" opacity="0.4"/>
+  </g>
+
+  <!-- Rising light at top (aspirational) -->
+  <g opacity="0.6">
+    <line x1="400" y1="80" x2="400" y2="280" stroke="#F47920" stroke-width="1.5" opacity="0.3"/>
+    <circle cx="400" cy="90" r="25" fill="url(#orange-grad)" opacity="0.4" filter="url(#glow-strong)"/>
+    <circle cx="400" cy="90" r="8" fill="#D4FF00" filter="url(#glow-strong)"/>
+  </g>
+
+  <!-- Ground line -->
+  <line x1="80" y1="720" x2="720" y2="720" stroke="#F47920" stroke-width="1" opacity="0.2"/>
+</svg>

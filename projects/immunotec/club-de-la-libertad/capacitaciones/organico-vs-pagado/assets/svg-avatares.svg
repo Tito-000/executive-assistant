@@ -1,0 +1,69 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1080" preserveAspectRatio="xMidYMid slice">
+  <defs>
+    <radialGradient id="bg-ava" cx="50%" cy="55%" r="70%">
+      <stop offset="0%" stop-color="#1a2840"/>
+      <stop offset="100%" stop-color="#06101E"/>
+    </radialGradient>
+    <filter id="glow-a"><feGaussianBlur stdDeviation="8" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+    <filter id="glow-b"><feGaussianBlur stdDeviation="3" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+  </defs>
+
+  <rect width="1920" height="1080" fill="url(#bg-ava)"/>
+
+  <!-- Grid of abstract avatar circles (the audience) -->
+  <g filter="url(#glow-a)">
+    <!-- Row 1 -->
+    <circle cx="300" cy="250" r="48" fill="#0b1728" stroke="#F47920" stroke-width="2" opacity="0.75"/>
+    <circle cx="540" cy="220" r="55" fill="#0b1728" stroke="#F47920" stroke-width="2.5" opacity="0.9"/>
+    <circle cx="780" cy="260" r="50" fill="#0b1728" stroke="#D4FF00" stroke-width="2" opacity="0.85"/>
+    <circle cx="1020" cy="230" r="58" fill="#0b1728" stroke="#F47920" stroke-width="2.5" opacity="0.95"/>
+    <circle cx="1260" cy="250" r="52" fill="#0b1728" stroke="#F47920" stroke-width="2" opacity="0.8"/>
+    <circle cx="1500" cy="220" r="48" fill="#0b1728" stroke="#F47920" stroke-width="2" opacity="0.75"/>
+    <circle cx="1730" cy="270" r="45" fill="#0b1728" stroke="#F47920" stroke-width="2" opacity="0.6"/>
+
+    <!-- Row 2 — highlighted (your niche) -->
+    <circle cx="200" cy="460" r="50" fill="#0b1728" stroke="#F47920" stroke-width="2" opacity="0.7"/>
+    <circle cx="440" cy="490" r="65" fill="#0b1728" stroke="#D4FF00" stroke-width="3"/>
+    <circle cx="440" cy="490" r="78" fill="none" stroke="#D4FF00" stroke-width="1" opacity="0.45"/>
+    <circle cx="680" cy="470" r="72" fill="#0b1728" stroke="#F47920" stroke-width="3.5"/>
+    <circle cx="680" cy="470" r="88" fill="none" stroke="#F47920" stroke-width="1" opacity="0.35"/>
+    <circle cx="920" cy="490" r="70" fill="#0b1728" stroke="#D4FF00" stroke-width="3"/>
+    <circle cx="920" cy="490" r="85" fill="none" stroke="#D4FF00" stroke-width="1" opacity="0.4"/>
+    <circle cx="1160" cy="465" r="60" fill="#0b1728" stroke="#F47920" stroke-width="2.5"/>
+    <circle cx="1400" cy="490" r="52" fill="#0b1728" stroke="#F47920" stroke-width="2" opacity="0.75"/>
+    <circle cx="1640" cy="470" r="48" fill="#0b1728" stroke="#F47920" stroke-width="2" opacity="0.65"/>
+
+    <!-- Row 3 -->
+    <circle cx="320" cy="720" r="50" fill="#0b1728" stroke="#F47920" stroke-width="2" opacity="0.75"/>
+    <circle cx="570" cy="740" r="55" fill="#0b1728" stroke="#F47920" stroke-width="2.5" opacity="0.85"/>
+    <circle cx="820" cy="710" r="48" fill="#0b1728" stroke="#F47920" stroke-width="2" opacity="0.7"/>
+    <circle cx="1060" cy="745" r="52" fill="#0b1728" stroke="#F47920" stroke-width="2" opacity="0.8"/>
+    <circle cx="1300" cy="720" r="50" fill="#0b1728" stroke="#D4FF00" stroke-width="2" opacity="0.8"/>
+    <circle cx="1540" cy="735" r="48" fill="#0b1728" stroke="#F47920" stroke-width="2" opacity="0.7"/>
+    <circle cx="1760" cy="715" r="45" fill="#0b1728" stroke="#F47920" stroke-width="2" opacity="0.6"/>
+  </g>
+
+  <!-- Connection lines between highlighted ones -->
+  <g stroke="#D4FF00" stroke-width="1.5" fill="none" opacity="0.4" filter="url(#glow-b)">
+    <path d="M440 490 Q560 380 680 470" stroke-dasharray="4 6"/>
+    <path d="M680 470 Q800 390 920 490" stroke-dasharray="4 6"/>
+  </g>
+
+  <!-- Focus brackets around center -->
+  <g stroke="#D4FF00" stroke-width="2" fill="none" opacity="0.6">
+    <path d="M350 400 L350 380 L370 380"/>
+    <path d="M1010 380 L1030 380 L1030 400"/>
+    <path d="M350 580 L350 600 L370 600"/>
+    <path d="M1010 600 L1030 600 L1030 580"/>
+  </g>
+
+  <!-- Ambient dots -->
+  <g opacity="0.25" fill="#F47920">
+    <circle cx="120" cy="120" r="2"/>
+    <circle cx="1800" cy="160" r="2"/>
+    <circle cx="180" cy="960" r="2"/>
+    <circle cx="1780" cy="940" r="2"/>
+    <circle cx="960" cy="80" r="1.5"/>
+    <circle cx="960" cy="1000" r="1.5"/>
+  </g>
+</svg>

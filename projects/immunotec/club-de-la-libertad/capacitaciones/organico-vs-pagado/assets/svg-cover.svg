@@ -1,0 +1,139 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 1080" preserveAspectRatio="xMidYMid slice">
+  <defs>
+    <radialGradient id="bg-cov" cx="50%" cy="50%" r="75%">
+      <stop offset="0%" stop-color="#1a2840" stop-opacity="0.9"/>
+      <stop offset="100%" stop-color="#06101E" stop-opacity="1"/>
+    </radialGradient>
+    <linearGradient id="organic-flow" x1="0%" y1="100%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#D4FF00" stop-opacity="0"/>
+      <stop offset="50%" stop-color="#D4FF00" stop-opacity="0.9"/>
+      <stop offset="100%" stop-color="#D4FF00" stop-opacity="0.2"/>
+    </linearGradient>
+    <linearGradient id="paid-flow" x1="100%" y1="100%" x2="0%" y2="0%">
+      <stop offset="0%" stop-color="#F47920" stop-opacity="0"/>
+      <stop offset="50%" stop-color="#F47920" stop-opacity="0.95"/>
+      <stop offset="100%" stop-color="#F47920" stop-opacity="0.2"/>
+    </linearGradient>
+    <radialGradient id="core-glow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#fff" stop-opacity="1"/>
+      <stop offset="30%" stop-color="#D4FF00" stop-opacity="0.9"/>
+      <stop offset="70%" stop-color="#F47920" stop-opacity="0.6"/>
+      <stop offset="100%" stop-color="#F47920" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="glow-xl">
+      <feGaussianBlur stdDeviation="12" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <filter id="glow-md">
+      <feGaussianBlur stdDeviation="5" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <filter id="glow-sm">
+      <feGaussianBlur stdDeviation="2" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+
+  <rect width="1080" height="1080" fill="url(#bg-cov)"/>
+
+  <!-- Grid lines subtle -->
+  <g stroke="#F47920" stroke-width="0.5" opacity="0.08">
+    <line x1="0" y1="270" x2="1080" y2="270"/>
+    <line x1="0" y1="540" x2="1080" y2="540"/>
+    <line x1="0" y1="810" x2="1080" y2="810"/>
+    <line x1="270" y1="0" x2="270" y2="1080"/>
+    <line x1="540" y1="0" x2="540" y2="1080"/>
+    <line x1="810" y1="0" x2="810" y2="1080"/>
+  </g>
+
+  <!-- ORGANIC side: slow curves growing from bottom-left -->
+  <g filter="url(#glow-md)" opacity="0.85">
+    <path d="M 60 1020 Q 220 820 360 700 Q 480 600 540 540"
+          fill="none" stroke="url(#organic-flow)" stroke-width="6" stroke-linecap="round"/>
+    <path d="M 40 980 Q 180 780 320 660 Q 440 560 540 540"
+          fill="none" stroke="url(#organic-flow)" stroke-width="4" stroke-linecap="round" opacity="0.6"/>
+    <path d="M 120 1040 Q 260 880 400 740 Q 480 660 540 540"
+          fill="none" stroke="url(#organic-flow)" stroke-width="3" stroke-linecap="round" opacity="0.5"/>
+    <path d="M 20 900 Q 140 720 280 620 Q 420 540 540 540"
+          fill="none" stroke="url(#organic-flow)" stroke-width="2.5" stroke-linecap="round" opacity="0.4"/>
+
+    <!-- leaf/sprout accents along organic curve -->
+    <g fill="#D4FF00">
+      <circle cx="200" cy="860" r="3" filter="url(#glow-sm)"/>
+      <circle cx="300" cy="760" r="4" filter="url(#glow-sm)"/>
+      <circle cx="380" cy="680" r="3" filter="url(#glow-sm)"/>
+      <circle cx="460" cy="600" r="5" filter="url(#glow-sm)"/>
+    </g>
+  </g>
+
+  <!-- PAID side: fast diagonal rays from top-right -->
+  <g filter="url(#glow-md)" opacity="0.9">
+    <path d="M 1020 60 L 540 540" fill="none" stroke="url(#paid-flow)" stroke-width="6" stroke-linecap="round"/>
+    <path d="M 1040 140 L 540 540" fill="none" stroke="url(#paid-flow)" stroke-width="4" stroke-linecap="round" opacity="0.7"/>
+    <path d="M 960 40 L 540 540" fill="none" stroke="url(#paid-flow)" stroke-width="3.5" stroke-linecap="round" opacity="0.6"/>
+    <path d="M 1060 220 L 540 540" fill="none" stroke="url(#paid-flow)" stroke-width="3" stroke-linecap="round" opacity="0.5"/>
+    <path d="M 880 20 L 540 540" fill="none" stroke="url(#paid-flow)" stroke-width="2.5" stroke-linecap="round" opacity="0.45"/>
+
+    <!-- arrow heads on paid rays -->
+    <g fill="#F47920">
+      <polygon points="570,510 560,520 580,520" filter="url(#glow-sm)"/>
+      <polygon points="600,480 590,490 610,490" filter="url(#glow-sm)" opacity="0.7"/>
+    </g>
+
+    <!-- spark particles on paid side -->
+    <g fill="#F47920" filter="url(#glow-sm)">
+      <circle cx="900" cy="180" r="2.5"/>
+      <circle cx="820" cy="280" r="3"/>
+      <circle cx="740" cy="380" r="2"/>
+      <circle cx="680" cy="440" r="2.5"/>
+    </g>
+  </g>
+
+  <!-- CONVERGENCE point: where organic meets paid — the "system" -->
+  <g transform="translate(540 540)">
+    <circle r="140" fill="url(#core-glow)" opacity="0.5" filter="url(#glow-xl)"/>
+    <circle r="70" fill="url(#core-glow)" opacity="0.8" filter="url(#glow-xl)"/>
+
+    <!-- Outer ring -->
+    <circle r="95" fill="none" stroke="#F47920" stroke-width="1.5" opacity="0.5"/>
+    <circle r="110" fill="none" stroke="#D4FF00" stroke-width="1" opacity="0.35"/>
+
+    <!-- Inner ring animated look -->
+    <circle r="60" fill="none" stroke="#fff" stroke-width="2" opacity="0.4" stroke-dasharray="4 8"/>
+    <circle r="48" fill="none" stroke="#D4FF00" stroke-width="2" opacity="0.75" filter="url(#glow-md)"/>
+    <circle r="30" fill="#06101E" stroke="#F47920" stroke-width="3" filter="url(#glow-md)"/>
+
+    <!-- Center spark -->
+    <circle r="8" fill="#D4FF00" filter="url(#glow-md)"/>
+    <circle r="3" fill="#fff"/>
+  </g>
+
+  <!-- Floating particles ambient -->
+  <g opacity="0.35">
+    <circle cx="150" cy="200" r="1.5" fill="#D4FF00"/>
+    <circle cx="920" cy="850" r="2" fill="#F47920"/>
+    <circle cx="100" cy="540" r="1.5" fill="#D4FF00"/>
+    <circle cx="980" cy="540" r="1.5" fill="#F47920"/>
+    <circle cx="400" cy="180" r="1.2" fill="#D4FF00"/>
+    <circle cx="700" cy="900" r="1.8" fill="#F47920"/>
+    <circle cx="250" cy="420" r="1.2" fill="#D4FF00"/>
+    <circle cx="820" cy="680" r="1.5" fill="#F47920"/>
+  </g>
+
+  <!-- Top-left corner label — ORGANIC -->
+  <g transform="translate(80 80)" font-family="Roboto Mono, monospace" font-size="11" letter-spacing="3">
+    <text x="0" y="0" fill="#D4FF00" font-weight="700">A ·</text>
+    <text x="30" y="0" fill="#8892a6">ORGÁNICO</text>
+    <text x="0" y="18" fill="#8892a6" font-size="9">TIEMPO · GRATIS</text>
+  </g>
+
+  <!-- Top-right corner label — PAID -->
+  <g transform="translate(920 80)" font-family="Roboto Mono, monospace" font-size="11" letter-spacing="3" text-anchor="end">
+    <text x="90" y="0" fill="#8892a6">PAGADO</text>
+    <text x="90" y="0" fill="#F47920" font-weight="700" dx="-78">B ·</text>
+    <text x="90" y="18" fill="#8892a6" font-size="9">DINERO · RÁPIDO</text>
+  </g>
+
+  <!-- Bottom center convergence label -->
+  <text x="540" y="990" text-anchor="middle" font-family="Roboto Mono, monospace" font-size="10" letter-spacing="4" fill="#8892a6">C · SISTEMA · LA MÁQUINA</text>
+</svg>
