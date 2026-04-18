@@ -1,0 +1,8 @@
+{
+  "prompt": "Professional logo on solid black (#000000) background. Horizontal layout. LEFT: A thick yellow (#FAFA00) rectangular frame border, portrait aspect ratio. Inside the frame on black background, the two letters MM in white — side by side on a single line. The font is EXTREMELY WIDE and HEAVY — think Bebas Neue or Anton but STRETCHED HORIZONTALLY to 150% width. Each M letter should be almost square in proportion — as wide as it is tall. Super thick bold strokes. RIGHT: Next to the frame, the word AGENCY followed by a yellow square dot. AGENCY uses the same WIDE STRETCHED HEAVY font — each letter wide and blocky, NOT tall and skinny. The A, G, E, N, C, Y letters are all wide with thick strokes, matching the MM proportions. Think of how National Geographic logo uses wide bold text. The total composition is balanced — the framed MM badge on the left, AGENCY text on the right. Clean flat design, sharp edges, no effects.",
+  "negative_prompt": "condensed, narrow, compressed, Impact, tall skinny letters, thin strokes, gradient, shadow, glow, neon, 3D, serif, script, rounded corners, circle, photo, human, blur, low quality, noise, texture, lowercase, drop shadow, multiple fonts, italic",
+  "api_parameters": {
+    "resolution": "2K",
+    "output_format": "png"
+  }
+}

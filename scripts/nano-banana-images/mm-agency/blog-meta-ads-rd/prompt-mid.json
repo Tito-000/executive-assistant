@@ -1,0 +1,5 @@
+{
+  "prompt": "Bold graphic design illustration, A/B testing and ad creative optimization concept. Two large colorful ad cards side by side with different creative variations, surrounded by analytics graphs, click-through rate meters, audience segments as colorful bubbles, and split test arrows. Conversion funnel below showing results. Rich color palette: electric violet #713DFF, bright green #00CC66, hot orange #F54900, cyan #00D4FF, magenta #FF2D78, golden yellow #FFB800. Glossy 3D elements with glass morphism on deep dark navy #0D0D1A background. Magazine editorial illustration, dynamic and energetic.",
+  "negative_prompt": "text, labels, watermarks, stock photo, generic, blurry, dull colors, monochrome, minimalist, empty, realistic people, photographs, Meta logo, Facebook logo",
+  "api_parameters": { "aspect_ratio": "16:9", "resolution": "2K" }
+}

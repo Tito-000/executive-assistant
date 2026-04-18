@@ -1,0 +1,9 @@
+{
+  "prompt": "Replicate this EXACT typographic style from the reference image. Logo design on pure black background. Horizontal layout reading left to right. TWO ELEMENTS SIDE BY SIDE: ELEMENT 1 (LEFT, occupying 35% of canvas width): A yellow (#FAFA00) rectangular border frame, portrait proportions. Inside: solid black with the letters 'MM' in white, side by side on one line. The M letters must use the EXACT SAME wide blocky heavy typeface as shown in the reference image — extremely thick strokes, wide proportions where each letter is almost as wide as it is tall, minimal counter space, geometric construction. ELEMENT 2 (RIGHT, occupying 55% of canvas width): The word 'AGENCY.' in the same wide blocky heavy white typeface matching the reference image style. A small yellow (#FAFA00) square period at the end. Both elements vertically centered. The yellow frame only surrounds MM, not AGENCY. Sharp corners, no gradients, no shadows, flat vector design, ultra clean.",
+  "negative_prompt": "gradient, shadow, glow, neon, 3D, condensed font, narrow font, Impact font, tall skinny letters, compressed text, thin strokes, serif, script, rounded corners, circle, photo, human, blur, low quality, pixelated, extra text, grunge, noise, texture, lowercase, drop shadow, emboss, bevel, multiple different fonts",
+  "image_input": ["file:///Users/martinmercedes/Desktop/Executive%20assistant%202/projects/agencia-marketing/branding/logo/originals/mm-v7-rect-box.jpg"],
+  "api_parameters": {
+    "resolution": "2K",
+    "output_format": "png"
+  }
+}

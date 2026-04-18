@@ -1,0 +1,5 @@
+{
+  "prompt": "Bold graphic design illustration, automated follow-up and lead nurturing concept. Central glowing smartphone with WhatsApp-style chat sequence showing automated messages, surrounded by clock icons representing timing, email envelopes flying in sequence, calendar reminders, and a pipeline with leads moving through colorful stages from cold to hot. Rich color palette: electric violet #713DFF, bright green #00CC66, hot orange #F54900, cyan #00D4FF, magenta #FF2D78, golden yellow #FFB800. Glossy 3D elements with neon glows on deep dark navy #0D0D1A background. Magazine editorial illustration, visually rich.",
+  "negative_prompt": "text, labels, watermarks, stock photo, generic, blurry, dull colors, monochrome, minimalist, empty, realistic people, photographs",
+  "api_parameters": { "aspect_ratio": "16:9", "resolution": "2K" }
+}

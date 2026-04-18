@@ -1,0 +1,9 @@
+{
+  "prompt": "Ultra-dark cinematic abstract visualization of a social media algorithm, pure solid matte black background (#06101E). A hypnotic neural network of glowing orange (#F47920) light trails and particles flowing from bottom to top, converging toward a single bright focal point. Subtle secondary chartreuse neon (#D4FF00) accents on some trails. Depth of field with blurred foreground particles. Cinematic volumetric lighting. Premium tech editorial photography, 8K detail, moody dramatic atmosphere. No text, no people, no logos. The feeling is: attention being captured and pulled into the algorithm. Abstract, sophisticated, high-end.",
+  "negative_prompt": "text, logos, people, faces, hands, watermark, cartoon, illustration, vector, clipart, oversaturated, cheesy, stock photo feel, bright white background, colored background other than dark navy black, flat design",
+  "api_parameters": {
+    "aspect_ratio": "16:9",
+    "resolution": "1K",
+    "output_format": "png"
+  }
+}

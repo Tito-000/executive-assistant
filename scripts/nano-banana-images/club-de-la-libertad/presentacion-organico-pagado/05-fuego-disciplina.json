@@ -1,0 +1,9 @@
+{
+  "prompt": "Cinematic hyper-realistic macro shot of a single bright flame burning against pure solid matte black background (#06101E). The flame is orange (#F47920) at its base fading into chartreuse neon (#D4FF00) at the tips, with dramatic heat distortion and glowing embers rising. Deep shadow surrounding the flame, extreme contrast. Volumetric smoke barely visible. Premium editorial photography, 8K detail, cinematic composition with negative space. The feeling is: inner fire, discipline, commitment, the thing that does not go out. No text, no people, no logos.",
+  "negative_prompt": "text, logos, people, faces, hands, watermark, cartoon, illustration, vector, candle with visible wax, bright white background, colored background, daytime, bonfire outdoors, flat design",
+  "api_parameters": {
+    "aspect_ratio": "16:9",
+    "resolution": "1K",
+    "output_format": "png"
+  }
+}

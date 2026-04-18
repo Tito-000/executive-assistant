@@ -1,0 +1,5 @@
+{
+  "prompt": "Vibrant graphic design illustration, social media advertising concept. Central oversized smartphone with colorful ad cards and story formats bursting out of the screen in an explosion of color. Floating like icons, heart reactions, comment bubbles, and audience targeting crosshairs orbiting around. Bold gradient overlays mixing electric violet #713DFF, hot orange #F54900, bright magenta #FF2D78, cyan #00D4FF, lime green #00CC66. Glossy 3D render with glass morphism effects. Deep dark background #0D0D1A. Editorial illustration quality, dynamic composition with energy and movement, magazine hero image.",
+  "negative_prompt": "text, labels, watermarks, stock photo, generic, blurry, dull colors, monochrome, minimalist, empty, realistic people, Meta logo, Facebook logo, photographs",
+  "api_parameters": { "aspect_ratio": "16:9", "resolution": "2K" }
+}

@@ -1,0 +1,5 @@
+{
+  "prompt": "Colorful graphic design illustration, CRM and customer pipeline concept. Large isometric dashboard with colorful contact cards flowing through a glowing pipeline of stages, each stage a different vibrant color. WhatsApp chat bubbles, email envelopes, bell notifications, and connection lines linking contacts. Rich gradient palette: violet #713DFF to magenta #FF2D78, green #00CC66 to cyan #00D4FF, orange #F54900 to golden #FFB800. Glossy 3D elements with glass morphism, soft glows and reflections. Deep dark background #0D0D1A. Magazine editorial illustration, dynamic and visually rich composition.",
+  "negative_prompt": "text, labels, watermarks, stock photo, generic, blurry, dull colors, monochrome, minimalist, empty, realistic people, photographs",
+  "api_parameters": { "aspect_ratio": "16:9", "resolution": "2K" }
+}

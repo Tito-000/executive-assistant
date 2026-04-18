@@ -1,0 +1,9 @@
+{
+  "prompt": "Cinematic hyper-realistic macro close-up of a single green sprout emerging from dark rich soil, pure solid matte black background (#06101E) surrounding the soil. The sprout is backlit with soft chartreuse neon glow (#D4FF00) emanating from behind, creating an ethereal rim light on the leaves. Small orange (#F47920) warm light particles floating around like fireflies. Extreme shallow depth of field, moody editorial lighting, dramatic side light. Premium commercial photography, 8K detail, metaphor for organic growth. No text, no people, no logos. The feeling is: patience, growth, future harvest.",
+  "negative_prompt": "text, logos, people, faces, hands, watermark, cartoon, illustration, vector, bright white background, colored background, flat design, oversaturated, cheesy",
+  "api_parameters": {
+    "aspect_ratio": "16:9",
+    "resolution": "1K",
+    "output_format": "png"
+  }
+}

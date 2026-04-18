@@ -1,0 +1,129 @@
+/* =========================================================
+   BLOG POST INFOGRAPHICS — dark cards like NoGood
+   Add these to blog-post.css the FIRST time a post is created.
+   Check if they exist before adding — don't duplicate.
+   ========================================================= */
+
+/* Base infographic container */
+.post-infographic {
+  background: #121214;
+  border-radius: 14px;
+  padding: 36px 32px;
+  margin: 36px 0;
+  color: #fff;
+}
+
+.post-infographic-title {
+  font-family: 'Inter', sans-serif;
+  font-size: 22px;
+  font-weight: 800;
+  font-style: italic;
+  color: #fff;
+  margin: 0 0 24px;
+}
+
+/* Table style (Myth vs Reality, Antes vs Después) */
+.post-infographic-table { width: 100%; }
+.post-infographic-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1px;
+  background: rgba(255,255,255,0.06);
+}
+.post-infographic-row > div {
+  padding: 14px 18px;
+  font-family: 'Inter', sans-serif;
+  font-size: 14px;
+  background: #121214;
+}
+.post-infographic-header > div {
+  font-weight: 700;
+  color: #713DFF;
+  font-size: 13px;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+/* Flow / process diagram (3-5 steps with arrows) */
+.post-infographic-flow {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.post-flow-step {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  padding: 20px 16px;
+  border: 1px solid rgba(255,255,255,0.12);
+  border-radius: 12px;
+  min-width: 120px;
+  text-align: center;
+}
+.post-flow-num {
+  font-family: 'Orbitron', sans-serif;
+  font-size: 24px;
+  font-weight: 800;
+  color: #713DFF;
+}
+.post-flow-label {
+  font-family: 'Inter', sans-serif;
+  font-size: 13px;
+  color: rgba(255,255,255,0.8);
+}
+.post-flow-arrow {
+  font-size: 20px;
+  color: rgba(255,255,255,0.3);
+}
+
+/* Checklist with icons */
+.post-infographic-checklist {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.post-check-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 16px;
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: 8px;
+}
+.post-check-icon {
+  color: #008500;
+  font-size: 16px;
+  flex-shrink: 0;
+}
+
+/* Stats inside infographic */
+.post-infographic--stats {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 20px;
+  text-align: center;
+}
+.post-info-stat-num {
+  display: block;
+  font-family: 'Orbitron', sans-serif;
+  font-size: 36px;
+  font-weight: 800;
+  color: #713DFF;
+  margin-bottom: 6px;
+}
+.post-info-stat-label {
+  font-family: 'Inter', sans-serif;
+  font-size: 13px;
+  color: rgba(255,255,255,0.6);
+}
+
+/* Responsive */
+@media (max-width: 640px) {
+  .post-infographic { padding: 24px 20px; }
+  .post-infographic-flow { flex-direction: column; }
+  .post-flow-arrow { transform: rotate(90deg); }
+  .post-infographic-row { grid-template-columns: 1fr; }
+}

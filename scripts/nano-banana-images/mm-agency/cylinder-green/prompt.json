@@ -1,0 +1,13 @@
+{
+  "subject": "A single 3D cylinder floating in empty black void space",
+  "material": "Smooth glossy metallic surface in green color #008500, subtle wireframe grid overlay on the surface",
+  "shape": "Perfect geometric cylinder, clean proportions, slightly tilted at an angle for 3D depth",
+  "lighting": "Dramatic studio lighting from upper left, strong specular highlights on the curved surface, soft ambient glow in green",
+  "background": "Pure solid black background #000000, completely empty, no floor, no reflections, no environment",
+  "style": "Ultra-clean 3D render, product visualization quality, minimal geometric object, futuristic tech aesthetic",
+  "mood": "Premium, futuristic, sleek, minimal",
+  "negative": "NO text, NO labels, NO other objects, NO floor, NO shadows on ground, NO gradient background, NO stars, NO particles",
+  "api_parameters": {
+    "aspect_ratio": "1:1"
+  }
+}

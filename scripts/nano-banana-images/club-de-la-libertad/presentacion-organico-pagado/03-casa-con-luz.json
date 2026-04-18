@@ -1,0 +1,9 @@
+{
+  "prompt": "Cinematic hyper-realistic aerial/isometric view at night of a single modern minimalist house silhouette on pure solid matte black background (#06101E). The house has warm chartreuse-green (#D4FF00) light glowing from its windows, spilling out and illuminating the surroundings with a soft neon halo. A subtle path of orange (#F47920) light particles leads toward the front door, like people being attracted to the light. Dramatic editorial architectural photography, moody atmosphere, volumetric light rays. Ultra sharp, 8K detail. The feeling is: a home full of life attracting visitors from the dark. No text, no people visible, no logos.",
+  "negative_prompt": "text, logos, people visible, faces, watermark, cartoon, illustration, vector, bright sunlight, day scene, bright white background, colored background other than dark black, flat design, oversaturated",
+  "api_parameters": {
+    "aspect_ratio": "16:9",
+    "resolution": "1K",
+    "output_format": "png"
+  }
+}

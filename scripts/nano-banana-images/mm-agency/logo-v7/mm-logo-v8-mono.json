@@ -1,0 +1,8 @@
+{
+  "prompt": "Minimalist monochrome logo on pure black background. Horizontal composition, two elements side by side. LEFT ELEMENT: A white rectangular border/frame, portrait orientation (taller than wide). The frame has thick sharp white borders with solid black fill inside. Inside the frame, exactly TWO large white capital letter M characters placed side by side horizontally reading 'MM' on ONE line. The MM text is bold condensed sans-serif (like Impact font). RIGHT ELEMENT: To the right of the frame, the word 'AGENCY.' in the same bold condensed white sans-serif font. The period at the end is a small white square dot. CRITICAL: Only TWO letter Ms inside the frame. Entirely monochrome — white and black only. No color. No yellow. Sharp 90-degree corners. No shadows. No gradients. Clean flat vector graphic design. Ultra sharp edges.",
+  "negative_prompt": "gradient, shadow, glow, neon, 3D, color, yellow, red, blue, complex, busy, decorative, serif font, script font, thin lines, rounded corners, circle, realistic photo, photography, human, blur, low quality, pixelated, extra text, grunge, noise, texture, multiple fonts, four Ms, stacked text, lowercase, drop shadow, emboss, bevel, compression artifacts",
+  "api_parameters": {
+    "resolution": "2K",
+    "output_format": "png"
+  }
+}

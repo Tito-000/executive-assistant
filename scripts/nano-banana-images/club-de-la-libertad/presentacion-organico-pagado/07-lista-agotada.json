@@ -1,0 +1,9 @@
+{
+  "prompt": "Cinematic hyper-realistic close-up of an old worn paper contact list or crumpled notebook page floating in a void of pure solid matte black background (#06101E). The paper shows faded handwritten names being crossed out one by one with orange (#F47920) ink strokes, some names dissolving into chartreuse neon (#D4FF00) dust particles drifting away. Dramatic side lighting, deep shadows, subtle volumetric haze. Extreme detail on paper fibers and ink texture. Premium editorial photography, 8K sharpness, negative space to the left for text overlay. The feeling is: the end of an era, contacts running out, a door closing. No visible text legible, no logos.",
+  "negative_prompt": "readable names, legible text, logos, watermark, cartoon, illustration, vector, bright white background, colored background, clean new paper, flat design, multiple papers scattered messy",
+  "api_parameters": {
+    "aspect_ratio": "16:9",
+    "resolution": "1K",
+    "output_format": "png"
+  }
+}

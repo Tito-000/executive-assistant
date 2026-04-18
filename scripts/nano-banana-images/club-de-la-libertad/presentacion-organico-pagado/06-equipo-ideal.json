@@ -1,0 +1,9 @@
+{
+  "prompt": "Cinematic editorial photography of three adult silhouettes standing confidently against a pure solid matte black background (#06101E). Warm orange (#F47920) rim light from behind outlines each silhouette dramatically, with subtle chartreuse neon (#D4FF00) accent highlights. The figures are partially visible as dark shapes with glowing edges, suggesting strength and purpose without clear facial details. Moody atmospheric depth, soft volumetric haze, dramatic cinematic contrast. Premium editorial photography, 8K sharpness, centered composition with large negative space above and around for text overlay. No visible text, no logos. The feeling is: powerful, mysterious, aspirational figures ready to lead.",
+  "negative_prompt": "detailed faces, specific identifiable people, cheesy smiles, thumbs up, white background, colored background, text visible, logos, branding, watermark, cartoon, illustration, vector, flat design, office scene, cluttered, children, low quality",
+  "api_parameters": {
+    "aspect_ratio": "16:9",
+    "resolution": "1K",
+    "output_format": "png"
+  }
+}

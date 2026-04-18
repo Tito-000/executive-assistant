@@ -1,0 +1,5 @@
+{
+  "prompt": "Bold graphic design illustration, multi-channel digital marketing strategy. Large isometric workspace with laptop showing SEO dashboard, smartphone with WhatsApp chat bubbles, tablet with Google Ads interface, and floating social media engagement icons interconnected by colorful data streams. Growth arrows, funnel shapes, and conversion icons. Rich color palette: electric violet #713DFF, bright green #00CC66, hot orange #F54900, cyan #00D4FF, magenta #FF2D78, golden yellow #FFB800. Glossy 3D elements with soft shadows on deep dark navy #0D0D1A background. Magazine cover quality, editorial illustration style, maximalist composition.",
+  "negative_prompt": "text, labels, watermarks, stock photo, generic, blurry, dull colors, monochrome, minimalist, empty, realistic people, photographs",
+  "api_parameters": { "aspect_ratio": "16:9", "resolution": "2K" }
+}

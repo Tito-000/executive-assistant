@@ -1,0 +1,9 @@
+{
+  "prompt": "Logo design on pure black background, square 1:1. A perfect circle with a thick yellow (#FAFA00) border ring (about 5% of diameter thickness). Inside the circle is solid black. Centered inside the circle, stacked vertically: (1) the letters 'MM' in bold white uppercase, large, as the main focal element; (2) directly below and tightly spaced, the word 'AGENCY' in bold white uppercase, smaller than MM, same typeface; (3) below AGENCY, separated by a small gap, a very small line of text reading '@andri.ramirez' in white, lowercase, in the SAME blocky extended sans-serif typeface — this small handle line should be clearly smaller than 'AGENCY' (roughly 35-40% of the AGENCY height), perfectly centered, legible but subtle. CRITICAL: The typeface across MM, AGENCY and the handle must be a bold, blocky, geometric extended sans-serif like Microgramma Extended Bold or Eurostile Bold Extended — wide letterforms, thick rectangular strokes, sharp 90-degree corners. Keep the MM + AGENCY lockup identical to the existing MM Agency circle-stacked logo — do NOT alter proportions, font, or spacing of MM and AGENCY. The only addition is the small '@andri.ramirez' line beneath AGENCY inside the circle. Clean vector quality, perfectly centered, razor sharp edges, flat design.",
+  "negative_prompt": "removing MM, removing AGENCY, replacing MM with a name, gradient, shadow, glow, neon, 3D, complex, busy, decorative, serif font, script font, thin lines, rounded font, soft font, realistic photo, photography, human, blur, low quality, pixelated, grunge, noise, texture, multiple fonts, mixed typefaces, accents on letters, emoji",
+  "api_parameters": {
+    "aspect_ratio": "1:1",
+    "resolution": "1K",
+    "output_format": "jpg"
+  }
+}

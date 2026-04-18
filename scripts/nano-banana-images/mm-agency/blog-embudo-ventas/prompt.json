@@ -1,0 +1,5 @@
+{
+  "prompt": "Stunning graphic design illustration, sales funnel concept. Large vibrant translucent funnel made of colorful layered rings, widest at top narrowing to bottom. Each layer a different bold color: cyan #00D4FF at top, violet #713DFF, magenta #FF2D78, orange #F54900, golden #FFB800 at bottom. Colorful data particles, coins, user icons, and sparkles flowing through the funnel. Bright neon glow effects and light rays emanating from each stage. Glass morphism and glossy 3D render. Deep dark background #0D0D1A. Magazine quality editorial illustration, maximalist, energetic, visually striking.",
+  "negative_prompt": "text, labels, watermarks, stock photo, generic, blurry, dull colors, monochrome, minimalist, empty, realistic people, photographs",
+  "api_parameters": { "aspect_ratio": "16:9", "resolution": "2K" }
+}

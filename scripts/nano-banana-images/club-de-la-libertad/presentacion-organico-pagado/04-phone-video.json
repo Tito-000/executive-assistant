@@ -1,0 +1,9 @@
+{
+  "prompt": "Cinematic hyper-realistic close-up of a modern smartphone floating vertically against pure solid matte black background (#06101E). The phone screen glows brightly showing a generic vertical video-style interface (like TikTok or Instagram Reels) with abstract shapes, no recognizable brand logos, no readable text. The screen emits a warm chartreuse-green (#D4FF00) glow onto the phone bezel. Orange (#F47920) light rays emanating from behind the phone like divine light. Dramatic studio lighting from above-left, subtle reflections on the black glass. Premium product photography, editorial quality, 8K detail. Negative space around the phone for text overlay. The feeling is: the modern tool of leverage.",
+  "negative_prompt": "readable text, brand logos, Instagram logo visible, TikTok logo visible, hands, person, face, watermark, cartoon, illustration, vector, bright white background, colored background, multiple phones, flat design",
+  "api_parameters": {
+    "aspect_ratio": "16:9",
+    "resolution": "1K",
+    "output_format": "png"
+  }
+}

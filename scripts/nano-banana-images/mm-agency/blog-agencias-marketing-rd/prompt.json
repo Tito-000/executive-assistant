@@ -1,0 +1,5 @@
+{
+  "prompt": "Bold graphic design illustration, digital marketing agency network concept. Multiple colorful interconnected geometric buildings and towers arranged in a cityscape, connected by glowing data streams and light bridges. Each building a different vibrant color: violet #713DFF, orange #F54900, cyan #00D4FF, magenta #FF2D78, green #00CC66, golden #FFB800. Floating holographic screens, rocket icons, chart arrows pointing up, and growth symbols orbiting the city. Rich gradients, glass morphism, glossy 3D render with bloom lighting effects. Deep dark background #0D0D1A. Magazine editorial illustration, maximalist composition, visually rich and energetic.",
+  "negative_prompt": "text, labels, watermarks, stock photo, generic, blurry, dull colors, monochrome, minimalist, empty, realistic people, photographs",
+  "api_parameters": { "aspect_ratio": "16:9", "resolution": "2K" }
+}
