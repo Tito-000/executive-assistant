@@ -1,0 +1,712 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Propuesta — Casa 360 + Memorama | MM Agency</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;600;700;800;900&family=DM+Mono:wght@400;500&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  @page {
+    size: A4;
+    margin: 0;
+  }
+
+  *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+  :root {
+    --yellow: #FAFA00;
+    --violet: #713DFF;
+    --orange: #F54900;
+    --cyan: #00E3FF;
+    --pink: #FCA8FF;
+    --bg: #121214;
+    --bg-card: #1D1D21;
+    --border: #2E2E33;
+    --text: #FFFFFF;
+    --text-muted: #9A9A9A;
+    --text-dim: #5A5A5A;
+    --font-head: 'Orbitron', system-ui, sans-serif;
+    --font-body: 'Inter', system-ui, sans-serif;
+    --font-mono: 'DM Mono', ui-monospace, monospace;
+    --gradient-brand: linear-gradient(90deg, #FAFA00 0%, #F54900 30%, #E0348E 55%, #9B30FF 80%, #7A2DC0 100%);
+  }
+
+  body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: var(--font-body);
+    -webkit-font-smoothing: antialiased;
+    min-height: 100vh;
+  }
+
+  /* PAGE CONTAINER */
+  .page {
+    width: 210mm;
+    min-height: 297mm;
+    margin: 0 auto;
+    padding: 0;
+    position: relative;
+    overflow: hidden;
+    background: var(--bg);
+  }
+
+  @media print {
+    body { background: var(--bg); }
+    .page { page-break-after: always; margin: 0; }
+  }
+
+  /* HEADER BAR */
+  .header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 2.5rem 3rem 2rem;
+    border-bottom: 1px solid var(--border);
+  }
+
+  .logo-area {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  .logo-box {
+    width: 48px;
+    height: 48px;
+    background: #000;
+    border: 2.5px solid var(--yellow);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: var(--font-head);
+    font-weight: 900;
+    font-size: 1.1rem;
+    letter-spacing: -0.02em;
+    color: var(--text);
+  }
+
+  .logo-text {
+    font-family: var(--font-head);
+    font-weight: 700;
+    font-size: .85rem;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+  }
+
+  .logo-text .dot {
+    color: var(--yellow);
+  }
+
+  .header-meta {
+    text-align: right;
+    font-family: var(--font-mono);
+    font-size: .65rem;
+    color: var(--text-muted);
+    line-height: 1.8;
+    letter-spacing: 0.05em;
+  }
+
+  /* HERO SECTION */
+  .hero {
+    padding: 3.5rem 3rem 3rem;
+    position: relative;
+  }
+
+  .hero::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 3rem;
+    right: 3rem;
+    height: 1px;
+    background: var(--border);
+  }
+
+  .badge {
+    display: inline-block;
+    font-family: var(--font-mono);
+    font-size: .55rem;
+    letter-spacing: 0.4em;
+    text-transform: uppercase;
+    color: var(--yellow);
+    border: 1px solid rgba(250, 250, 0, 0.3);
+    padding: 0.4rem 1rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .hero h1 {
+    font-family: var(--font-head);
+    font-weight: 800;
+    font-size: 2rem;
+    line-height: 1.2;
+    letter-spacing: -0.01em;
+    margin-bottom: 1rem;
+  }
+
+  .hero h1 .highlight {
+    background: var(--gradient-brand);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .hero-sub {
+    font-size: .9rem;
+    color: var(--text-muted);
+    line-height: 1.7;
+    max-width: 520px;
+  }
+
+  .hero-client {
+    margin-top: 2rem;
+    display: flex;
+    gap: 3rem;
+  }
+
+  .hero-client-item {
+    display: flex;
+    flex-direction: column;
+    gap: 0.3rem;
+  }
+
+  .hero-client-label {
+    font-family: var(--font-mono);
+    font-size: .55rem;
+    letter-spacing: 0.3em;
+    text-transform: uppercase;
+    color: var(--text-dim);
+  }
+
+  .hero-client-value {
+    font-family: var(--font-body);
+    font-weight: 600;
+    font-size: .85rem;
+  }
+
+  /* SECTIONS */
+  .section {
+    padding: 2.5rem 3rem;
+    position: relative;
+  }
+
+  .section::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 3rem;
+    right: 3rem;
+    height: 1px;
+    background: var(--border);
+  }
+
+  .section:last-child::after {
+    display: none;
+  }
+
+  .section-num {
+    font-family: var(--font-mono);
+    font-size: .55rem;
+    letter-spacing: 0.5em;
+    text-transform: uppercase;
+    color: var(--text-dim);
+    margin-bottom: 0.6rem;
+  }
+
+  .section-title {
+    font-family: var(--font-head);
+    font-weight: 700;
+    font-size: 1.1rem;
+    letter-spacing: 0.02em;
+    margin-bottom: 1.5rem;
+  }
+
+  /* PROJECT CARDS */
+  .project-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1px;
+    background: var(--border);
+    margin-bottom: 0;
+  }
+
+  .project-card {
+    background: var(--bg-card);
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+  }
+
+  .project-name {
+    font-family: var(--font-head);
+    font-weight: 700;
+    font-size: .8rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+  }
+
+  .project-name .accent-yellow { color: var(--yellow); }
+  .project-name .accent-violet { color: var(--violet); }
+
+  .project-desc {
+    font-size: .78rem;
+    color: var(--text-muted);
+    line-height: 1.7;
+  }
+
+  .project-includes {
+    list-style: none;
+    padding: 0;
+  }
+
+  .project-includes li {
+    font-size: .75rem;
+    color: var(--text-muted);
+    padding: 0.4rem 0;
+    border-bottom: 1px solid rgba(255,255,255,0.04);
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+  }
+
+  .project-includes li:last-child {
+    border-bottom: none;
+  }
+
+  .check {
+    color: var(--yellow);
+    font-size: .7rem;
+    flex-shrink: 0;
+  }
+
+  /* CONTENT CARD */
+  .content-card {
+    background: var(--bg-card);
+    padding: 2rem;
+    border: 1px solid var(--border);
+  }
+
+  .content-card .price-tag {
+    font-family: var(--font-head);
+    font-weight: 800;
+    font-size: 1.6rem;
+    color: var(--yellow);
+    margin-bottom: 0.3rem;
+  }
+
+  .content-card .price-period {
+    font-family: var(--font-mono);
+    font-size: .65rem;
+    color: var(--text-dim);
+    letter-spacing: 0.1em;
+    margin-bottom: 1.2rem;
+  }
+
+  .content-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+    margin-top: 1rem;
+  }
+
+  .content-item {
+    display: flex;
+    flex-direction: column;
+    gap: 0.3rem;
+  }
+
+  .content-item-label {
+    font-family: var(--font-mono);
+    font-size: .55rem;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--text-dim);
+  }
+
+  .content-item-value {
+    font-size: .8rem;
+    color: var(--text);
+    font-weight: 500;
+  }
+
+  /* PAYMENT TABLE */
+  .payment-table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+
+  .payment-table th {
+    font-family: var(--font-mono);
+    font-size: .55rem;
+    letter-spacing: 0.3em;
+    text-transform: uppercase;
+    color: var(--text-dim);
+    text-align: left;
+    padding: 0.8rem 1rem;
+    border-bottom: 1px solid var(--border);
+  }
+
+  .payment-table td {
+    font-size: .8rem;
+    padding: 1rem;
+    border-bottom: 1px solid rgba(255,255,255,0.04);
+    color: var(--text-muted);
+  }
+
+  .payment-table tr:last-child td {
+    border-bottom: none;
+  }
+
+  .payment-table .amount {
+    font-family: var(--font-head);
+    font-weight: 700;
+    font-size: .85rem;
+    color: var(--text);
+  }
+
+  .payment-table .total-row td {
+    border-top: 1px solid var(--border);
+    padding-top: 1.2rem;
+    font-weight: 600;
+    color: var(--text);
+  }
+
+  .payment-table .total-row .amount {
+    font-size: 1rem;
+    color: var(--yellow);
+  }
+
+  /* PAYMENT WRAPPER */
+  .payment-wrapper {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    overflow: hidden;
+  }
+
+  /* NOTES */
+  .notes {
+    padding: 2rem 3rem;
+  }
+
+  .notes-list {
+    list-style: none;
+    padding: 0;
+  }
+
+  .notes-list li {
+    font-size: .7rem;
+    color: var(--text-dim);
+    padding: 0.3rem 0;
+    display: flex;
+    align-items: flex-start;
+    gap: 0.5rem;
+    line-height: 1.5;
+  }
+
+  .notes-list li::before {
+    content: '—';
+    color: var(--text-dim);
+    flex-shrink: 0;
+  }
+
+  /* FOOTER */
+  .footer {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 1.5rem 3rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-top: 1px solid var(--border);
+  }
+
+  .footer-brand {
+    font-family: var(--font-head);
+    font-weight: 700;
+    font-size: .6rem;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--text-dim);
+  }
+
+  .footer-brand .dot { color: var(--yellow); }
+
+  .footer-contact {
+    font-family: var(--font-mono);
+    font-size: .55rem;
+    color: var(--text-dim);
+    letter-spacing: 0.05em;
+  }
+
+  .gradient-line {
+    height: 3px;
+    background: var(--gradient-brand);
+    width: 100%;
+  }
+
+  /* SIGNATURE AREA */
+  .signature-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+    margin-top: 1rem;
+  }
+
+  .signature-block {
+    padding-top: 1rem;
+  }
+
+  .signature-line {
+    border-bottom: 1px solid var(--border);
+    height: 3rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .signature-label {
+    font-family: var(--font-mono);
+    font-size: .55rem;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--text-dim);
+  }
+</style>
+</head>
+<body>
+
+<!-- PAGE 1 -->
+<div class="page">
+  <div class="gradient-line"></div>
+
+  <!-- HEADER -->
+  <div class="header">
+    <div class="logo-area">
+      <div class="logo-box">MM</div>
+      <div class="logo-text">MM AGENCY<span class="dot">.</span></div>
+    </div>
+    <div class="header-meta">
+      PROPUESTA COMERCIAL<br>
+      20 / ABR / 2026<br>
+      REF: MM-2026-008
+    </div>
+  </div>
+
+  <!-- HERO -->
+  <div class="hero">
+    <div class="badge">Propuesta de servicios</div>
+    <h1>Casa 360 <span class="highlight">+</span> Memorama<br><span class="highlight">Crecimiento Digital</span></h1>
+    <p class="hero-sub">
+      Propuesta integral para establecer presencia digital profesional para Casa 360 (banistería) y gestionar el contenido de ambas marcas en redes sociales.
+    </p>
+    <div class="hero-client">
+      <div class="hero-client-item">
+        <span class="hero-client-label">Preparado para</span>
+        <span class="hero-client-value">[Nombre del cliente]</span>
+      </div>
+      <div class="hero-client-item">
+        <span class="hero-client-label">Negocios</span>
+        <span class="hero-client-value">Memorama Bordados + Casa 360</span>
+      </div>
+      <div class="hero-client-item">
+        <span class="hero-client-label">Fecha</span>
+        <span class="hero-client-value">20 de abril, 2026</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- PROYECTO CASA 360 + MEMORAMA -->
+  <div class="section">
+    <div class="section-num">01 — Proyectos</div>
+    <div class="section-title">Lo que incluye</div>
+
+    <div class="project-grid">
+      <div class="project-card">
+        <div class="project-name"><span class="accent-violet">Casa 360</span> — Banistería</div>
+        <p class="project-desc">Página web profesional + embudo de ventas para captar clientes de banistería y carpintería.</p>
+        <ul class="project-includes">
+          <li><span class="check">&#10003;</span> Página web profesional</li>
+          <li><span class="check">&#10003;</span> Embudo de ventas (landing + formulario)</li>
+          <li><span class="check">&#10003;</span> Diseño responsive</li>
+          <li><span class="check">&#10003;</span> Conexión a WhatsApp Business</li>
+          <li><span class="check">&#10003;</span> SEO básico</li>
+        </ul>
+      </div>
+      <div class="project-card">
+        <div class="project-name"><span class="accent-yellow">Memorama</span> — Bordados</div>
+        <p class="project-desc">Finalización del proyecto pendiente: página web y embudo de ventas completado al 100%.</p>
+        <ul class="project-includes">
+          <li><span class="check">&#10003;</span> Completar página web</li>
+          <li><span class="check">&#10003;</span> Finalizar embudo de ventas</li>
+          <li><span class="check">&#10003;</span> Revisiones finales</li>
+          <li><span class="check">&#10003;</span> Entrega y puesta en vivo</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- CONTENIDO -->
+  <div class="section">
+    <div class="section-num">02 — Contenido & Redes</div>
+    <div class="section-title">Manejo de redes sociales</div>
+
+    <div class="content-card">
+      <div class="price-tag">RD$18,500</div>
+      <div class="price-period">/ MES — AMBAS MARCAS</div>
+
+      <div class="content-grid">
+        <div class="content-item">
+          <span class="content-item-label">Frecuencia</span>
+          <span class="content-item-value">3 publicaciones / semana por marca</span>
+        </div>
+        <div class="content-item">
+          <span class="content-item-label">Historias</span>
+          <span class="content-item-value">Historias semanales para ambas cuentas</span>
+        </div>
+        <div class="content-item">
+          <span class="content-item-label">Plataformas</span>
+          <span class="content-item-value">Instagram + Facebook (ambas marcas)</span>
+        </div>
+        <div class="content-item">
+          <span class="content-item-label">Incluye</span>
+          <span class="content-item-value">Diseño gráfico, copy y programación</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- FOOTER P1 -->
+  <div class="footer">
+    <div class="footer-brand">MM AGENCY<span class="dot">.</span></div>
+    <div class="footer-contact">hola@mmagency.com.do &nbsp;|&nbsp; mmagency.com.do &nbsp;|&nbsp; 1 / 2</div>
+  </div>
+</div>
+
+<!-- PAGE 2 -->
+<div class="page">
+  <div class="gradient-line"></div>
+
+  <div class="header">
+    <div class="logo-area">
+      <div class="logo-box">MM</div>
+      <div class="logo-text">MM AGENCY<span class="dot">.</span></div>
+    </div>
+    <div class="header-meta">
+      PROPUESTA COMERCIAL<br>
+      20 / ABR / 2026<br>
+      REF: MM-2026-008
+    </div>
+  </div>
+
+  <!-- PLAN DE PAGOS -->
+  <div class="section">
+    <div class="section-num">03 — Inversión</div>
+    <div class="section-title">Plan de pagos — Casa 360</div>
+
+    <div class="payment-wrapper">
+      <table class="payment-table">
+        <thead>
+          <tr>
+            <th>Pago</th>
+            <th>Momento</th>
+            <th>Concepto</th>
+            <th style="text-align:right">Monto</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Pago 1</td>
+            <td>Al firmar</td>
+            <td>Cierra Memorama + inicia Casa 360</td>
+            <td style="text-align:right" class="amount">US$500</td>
+          </tr>
+          <tr>
+            <td>Pago 2</td>
+            <td>Hito medio</td>
+            <td>Página lista para revisión</td>
+            <td style="text-align:right" class="amount">US$500</td>
+          </tr>
+          <tr>
+            <td>Pago 3</td>
+            <td>Entrega final</td>
+            <td>Proyecto completado al 100%</td>
+            <td style="text-align:right" class="amount">US$500</td>
+          </tr>
+          <tr class="total-row">
+            <td colspan="3"><strong>Total proyecto Casa 360</strong></td>
+            <td style="text-align:right" class="amount">US$1,500</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <!-- RESUMEN -->
+  <div class="section">
+    <div class="section-num">04 — Resumen</div>
+    <div class="section-title">Inversión total mensual</div>
+
+    <div class="payment-wrapper">
+      <table class="payment-table">
+        <thead>
+          <tr>
+            <th>Concepto</th>
+            <th style="text-align:right">Monto</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Proyecto Casa 360 (página + embudo)</td>
+            <td style="text-align:right" class="amount">US$1,500</td>
+          </tr>
+          <tr>
+            <td>Contenido & manejo de redes (ambas marcas)</td>
+            <td style="text-align:right" class="amount">RD$18,500/mes</td>
+          </tr>
+          <tr>
+            <td>CRM — GoHighLevel (automatización, seguimiento de leads)</td>
+            <td style="text-align:right" class="amount">US$97/mes</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <!-- NOTAS -->
+  <div class="notes">
+    <div class="section-num" style="margin-bottom: 1rem;">05 — Notas</div>
+    <ul class="notes-list">
+      <li>El pago 1 (US$500) salda el proyecto Memorama pendiente e inicia Casa 360 simultáneamente.</li>
+      <li>El manejo de redes sociales se factura mensualmente. El primer mes se cobra al firmar esta propuesta.</li>
+      <li>Revisiones incluidas: hasta 2 rondas de revisión por entregable.</li>
+      <li>Plazo estimado de entrega Casa 360: 3-4 semanas desde el primer pago.</li>
+      <li>Propuesta válida por 15 días a partir de la fecha de emisión.</li>
+    </ul>
+  </div>
+
+  <!-- FIRMA -->
+  <div class="section" style="padding-top: 1.5rem;">
+    <div class="section-num">Aceptación</div>
+    <div class="signature-grid">
+      <div class="signature-block">
+        <div class="signature-line"></div>
+        <div class="signature-label">Cliente — [Nombre del cliente]</div>
+      </div>
+      <div class="signature-block">
+        <div class="signature-line"></div>
+        <div class="signature-label">MM Agency — Martin Mercedes</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- FOOTER P2 -->
+  <div class="footer">
+    <div class="footer-brand">MM AGENCY<span class="dot">.</span></div>
+    <div class="footer-contact">hola@mmagency.com.do &nbsp;|&nbsp; mmagency.com.do &nbsp;|&nbsp; 2 / 2</div>
+  </div>
+</div>
+
+</body>
+</html>
