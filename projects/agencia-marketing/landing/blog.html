@@ -403,7 +403,7 @@
       marketing digital — directo<br>
       a tu inbox.
     </h2>
-    <form class="blog-newsletter-form" onsubmit="event.preventDefault(); this.querySelector('button').textContent = '¡Listo!'; this.querySelector('input').disabled = true;">
+    <form class="blog-newsletter-form" onsubmit="event.preventDefault(); handleNewsletter(this, 'Blog');">
       <input type="email" class="blog-newsletter-input" placeholder="tu@email.com" required>
       <button type="submit" class="blog-newsletter-submit">SUSCRIBIRME</button>
     </form>
@@ -444,7 +444,7 @@
         <h4 class="footer-col-title">Contacto</h4>
         <ul class="footer-list">
           <li><a href="contact.html">Contactar</a></li>
-          <li><span class="muted">hola@mmagency.com.do</span></li>
+          <li><a href="mailto:hola@mmagency.com.do" class="muted">hola@mmagency.com.do</a></li>
         </ul>
       </div>
 
@@ -515,6 +515,23 @@
   }, { passive: true });
 
 })();
+
+// Newsletter form
+async function handleNewsletter(form, page) {
+  var btn = form.querySelector('button');
+  var input = form.querySelector('input');
+  btn.disabled = true;
+  btn.textContent = 'Enviando...';
+  try {
+    await fetch('https://mm-agency-leads.martinmercedes100.workers.dev', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ formType: 'newsletter', email: input.value, page: page })
+    });
+  } catch(e) {}
+  btn.textContent = '¡Suscrito!';
+  input.disabled = true;
+}
 
 // Hamburger menu
 (function(){

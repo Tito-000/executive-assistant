@@ -211,7 +211,7 @@
         <h4 class="footer-col-title">Contacto</h4>
         <ul class="footer-list">
           <li><a href="contact.html">Contactar</a></li>
-          <li><span class="muted">hola@mmagency.com.do</span></li>
+          <li><a href="mailto:hola@mmagency.com.do" class="muted">hola@mmagency.com.do</a></li>
         </ul>
       </div>
 
@@ -236,9 +236,28 @@
 </footer>
 
 <script>
-function handleContactSubmit() {
+async function handleContactSubmit() {
   const form = document.getElementById('contactForm');
   const success = document.getElementById('contactSuccess');
+  const btn = form.querySelector('.contact-submit');
+  btn.disabled = true;
+  btn.textContent = 'Enviando...';
+
+  try {
+    await fetch('https://mm-agency-leads.martinmercedes100.workers.dev', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({
+        firstName: document.getElementById('firstName').value,
+        lastName: document.getElementById('lastName').value,
+        email: document.getElementById('email').value,
+        phone: document.getElementById('phone').value,
+        budget: document.getElementById('budget').value,
+        message: document.getElementById('message').value
+      })
+    });
+  } catch(e) {}
+
   form.style.display = 'none';
   success.hidden = false;
   window.scrollTo({ top: document.getElementById('form').offsetTop - 80, behavior: 'smooth' });

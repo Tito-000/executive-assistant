@@ -517,7 +517,7 @@
 <section class="post-comments-section">
   <div class="post-comments-header"><h2 class="post-comments-count">0 Comentarios</h2></div>
   <div class="post-comments-form-wrap">
-    <form class="post-comment-form" onsubmit="event.preventDefault(); this.querySelector('.post-comment-submit').textContent = '¡Enviado!'; return false;">
+    <form class="post-comment-form" onsubmit="event.preventDefault(); handleComment(this, 'embudo-ventas-automatizado');">
       <div class="post-comment-field"><label>Comentario <span class="post-required">*</span></label><textarea required></textarea></div>
       <div class="post-comment-field"><label>Nombre <span class="post-required">*</span></label><input type="text" required></div>
       <div class="post-comment-field"><label>Email <span class="post-required">*</span></label><input type="email" required></div>
@@ -578,7 +578,7 @@
   <div class="blog-newsletter-glow" aria-hidden="true"></div>
   <div class="post-container-wide blog-newsletter-inner">
     <h2 class="blog-newsletter-title">Las mejores estrategias de<br>marketing digital — directo<br>a tu inbox.</h2>
-    <form class="blog-newsletter-form" onsubmit="event.preventDefault(); this.querySelector('button').textContent = '¡Listo!'; this.querySelector('input').disabled = true;">
+    <form class="blog-newsletter-form" onsubmit="event.preventDefault(); handleNewsletter(this, 'embudo-ventas-automatizado');">
       <input type="email" class="blog-newsletter-input" placeholder="tu@email.com" required>
       <button type="submit" class="blog-newsletter-submit">SUSCRIBIRME</button>
     </form>
@@ -593,7 +593,7 @@
     <div class="footer-grid">
       <div class="footer-col"><h4 class="footer-col-title">Servicios</h4><ul class="footer-list"><li><a href="../index.html#servicios">Landing de conversión</a></li><li><a href="../index.html#servicios">Tráfico pagado</a></li><li><a href="../index.html#servicios">CRM + automatización</a></li><li><a href="../index.html#servicios">Optimización continua</a></li></ul></div>
       <div class="footer-col"><h4 class="footer-col-title">Recursos</h4><ul class="footer-list"><li><a href="../index.html#faq">FAQ</a></li><li><a href="../index.html#casos">Casos de éxito</a></li><li><a href="../blog.html">Blog</a></li></ul></div>
-      <div class="footer-col"><h4 class="footer-col-title">Contacto</h4><ul class="footer-list"><li><a href="../contact.html">Contactar</a></li><li><span class="muted">hola@mmagency.com.do</span></li></ul></div>
+      <div class="footer-col"><h4 class="footer-col-title">Contacto</h4><ul class="footer-list"><li><a href="../contact.html">Contactar</a></li><li><a href="mailto:hola@mmagency.com.do" class="muted">hola@mmagency.com.do</a></li></ul></div>
       <div class="footer-col"><h4 class="footer-col-title">Síguenos</h4><ul class="footer-list"><li><a href="#">Instagram</a></li><li><a href="#">LinkedIn</a></li><li><a href="#">YouTube</a></li></ul></div>
     </div>
     <div class="footer-bottom"><div class="footer-copy">© 2026 MM Agency. Todos los derechos reservados.</div><div class="footer-legal"><a href="../privacidad.html">Política de privacidad</a><a href="../terminos.html">Términos</a></div></div>
@@ -616,6 +616,26 @@
   document.querySelectorAll('.post-faq-question').forEach(function(b) { b.addEventListener('click', function() { var i = b.parentElement, a = i.querySelector('.post-faq-answer'), o = i.classList.contains('open'); document.querySelectorAll('.post-faq-item').forEach(function(x) { x.classList.remove('open'); x.querySelector('.post-faq-answer').style.maxHeight = null; }); if (!o) { i.classList.add('open'); a.style.maxHeight = a.scrollHeight + 'px'; } }); });
   var sb = document.getElementById('scrollTopBtn');
   if (sb) { window.addEventListener('scroll', function() { sb.classList.toggle('post-scroll-top--visible', window.scrollY > 600); }, { passive: true }); sb.addEventListener('click', function() { window.scrollTo({ top: 0, behavior: 'smooth' }); }); }
+  // Newsletter form
+  window.handleNewsletter = async function(form, page) {
+    var btn = form.querySelector("button");
+    var input = form.querySelector("input[type=\"email\"]");
+    btn.disabled = true; btn.textContent = "Enviando...";
+    try { await fetch("https://mm-agency-leads.martinmercedes100.workers.dev", { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify({ formType: "newsletter", email: input.value, page: page }) }); } catch(e) {}
+    btn.textContent = "¡Suscrito!"; input.disabled = true;
+  };
+
+  // Comment form
+  window.handleComment = async function(form, page) {
+    var btn = form.querySelector(".post-comment-submit");
+    btn.disabled = true; btn.textContent = "Enviando...";
+    var nameInput = form.querySelectorAll("input[type=\"text\"]")[0];
+    var emailInput = form.querySelector("input[type=\"email\"]");
+    var textarea = form.querySelector("textarea");
+    try { await fetch("https://mm-agency-leads.martinmercedes100.workers.dev", { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify({ formType: "comment", name: nameInput ? nameInput.value : "", email: emailInput ? emailInput.value : "", comment: textarea ? textarea.value : "", page: page }) }); } catch(e) {}
+    btn.textContent = "¡Enviado!"; form.reset();
+  };
+
   // Hamburger menu
   var hamburger = document.getElementById('navHamburger');
   var mobileMenu = document.getElementById('navMobile');

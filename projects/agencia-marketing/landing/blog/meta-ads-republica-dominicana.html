@@ -618,7 +618,7 @@
     <h2 class="post-comments-count">0 Comentarios</h2>
   </div>
   <div class="post-comments-form-wrap">
-    <form class="post-comment-form" onsubmit="event.preventDefault(); this.querySelector('.post-comment-submit').textContent = '¡Enviado!'; return false;">
+    <form class="post-comment-form" onsubmit="event.preventDefault(); handleComment(this, 'meta-ads-republica-dominicana');">
       <div class="post-comment-field">
         <label>Comentario <span class="post-required">*</span></label>
         <textarea required></textarea>
@@ -761,7 +761,7 @@
       marketing digital — directo<br>
       a tu inbox.
     </h2>
-    <form class="blog-newsletter-form" onsubmit="event.preventDefault(); this.querySelector('button').textContent = '¡Listo!'; this.querySelector('input').disabled = true;">
+    <form class="blog-newsletter-form" onsubmit="event.preventDefault(); handleNewsletter(this, 'meta-ads-republica-dominicana');">
       <input type="email" class="blog-newsletter-input" placeholder="tu@email.com" required>
       <button type="submit" class="blog-newsletter-submit">SUSCRIBIRME</button>
     </form>
@@ -799,7 +799,7 @@
         <h4 class="footer-col-title">Contacto</h4>
         <ul class="footer-list">
           <li><a href="../contact.html">Contactar</a></li>
-          <li><span class="muted">hola@mmagency.com.do</span></li>
+          <li><a href="mailto:hola@mmagency.com.do" class="muted">hola@mmagency.com.do</a></li>
         </ul>
       </div>
       <div class="footer-col">
@@ -904,6 +904,26 @@
       window.scrollTo({ top: 0, behavior: 'smooth' });
     });
   }
+  // Newsletter form
+  window.handleNewsletter = async function(form, page) {
+    var btn = form.querySelector("button");
+    var input = form.querySelector("input[type=\"email\"]");
+    btn.disabled = true; btn.textContent = "Enviando...";
+    try { await fetch("https://mm-agency-leads.martinmercedes100.workers.dev", { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify({ formType: "newsletter", email: input.value, page: page }) }); } catch(e) {}
+    btn.textContent = "¡Suscrito!"; input.disabled = true;
+  };
+
+  // Comment form
+  window.handleComment = async function(form, page) {
+    var btn = form.querySelector(".post-comment-submit");
+    btn.disabled = true; btn.textContent = "Enviando...";
+    var nameInput = form.querySelectorAll("input[type=\"text\"]")[0];
+    var emailInput = form.querySelector("input[type=\"email\"]");
+    var textarea = form.querySelector("textarea");
+    try { await fetch("https://mm-agency-leads.martinmercedes100.workers.dev", { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify({ formType: "comment", name: nameInput ? nameInput.value : "", email: emailInput ? emailInput.value : "", comment: textarea ? textarea.value : "", page: page }) }); } catch(e) {}
+    btn.textContent = "¡Enviado!"; form.reset();
+  };
+
   // Hamburger menu
   var hamburger = document.getElementById('navHamburger');
   var mobileMenu = document.getElementById('navMobile');
