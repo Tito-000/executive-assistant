@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pago Activado — MM Agency</title>
+<meta name="robots" content="noindex, nofollow">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;700;800&family=DM+Mono:wght@400;500&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+:root {
+  --primary: #FAFA00;
+  --bg: #181818;
+  --bg-card: #202020;
+  --border: #353535;
+  --space-grey: #707070;
+  --light-grey: #C9C9C9;
+  --white: #FFFFFF;
+  --black: #000000;
+  --green: #00C853;
+  --font-h: 'Orbitron', sans-serif;
+  --font-b: 'Inter', sans-serif;
+  --font-m: 'DM Mono', monospace;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+  font-family: var(--font-b);
+  background: var(--bg);
+  color: var(--light-grey);
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem 1.5rem;
+  -webkit-font-smoothing: antialiased;
+}
+
+.container {
+  max-width: 520px;
+  width: 100%;
+  text-align: center;
+}
+
+.check-circle {
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  background: var(--primary);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 2.5rem;
+  animation: pop 0.6s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
+  transform: scale(0);
+}
+
+.check-circle svg {
+  width: 42px;
+  height: 42px;
+  stroke: var(--black);
+  stroke-width: 4;
+  fill: none;
+}
+
+@keyframes pop {
+  to { transform: scale(1); }
+}
+
+.eyebrow {
+  font-family: var(--font-m);
+  font-size: 0.7rem;
+  color: var(--space-grey);
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  margin-bottom: 1.25rem;
+}
+
+h1 {
+  font-family: var(--font-h);
+  font-weight: 700;
+  font-size: clamp(2rem, 5vw, 2.8rem);
+  line-height: 1.1;
+  color: var(--white);
+  margin-bottom: 1.5rem;
+  letter-spacing: -0.01em;
+}
+
+h1 .accent { color: var(--primary); }
+
+.description {
+  font-size: 1rem;
+  line-height: 1.7;
+  color: var(--light-grey);
+  margin-bottom: 2.5rem;
+}
+
+.info-card {
+  background: var(--bg-card);
+  border: 0.5px solid var(--border);
+  border-radius: 16px;
+  padding: 1.75rem;
+  text-align: left;
+  margin-bottom: 2.5rem;
+}
+
+.info-label {
+  font-family: var(--font-m);
+  font-size: 0.65rem;
+  color: var(--space-grey);
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  margin-bottom: 0.4rem;
+}
+
+.info-value {
+  font-family: var(--font-b);
+  font-size: 0.95rem;
+  color: var(--white);
+  word-break: break-all;
+  padding-bottom: 1rem;
+  margin-bottom: 1rem;
+  border-bottom: 0.5px solid var(--border);
+}
+
+.info-value:last-child {
+  padding-bottom: 0;
+  margin-bottom: 0;
+  border-bottom: none;
+}
+
+.next-steps {
+  text-align: left;
+  margin-bottom: 2.5rem;
+}
+
+.next-title {
+  font-family: var(--font-m);
+  font-size: 0.7rem;
+  color: var(--space-grey);
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  margin-bottom: 1.25rem;
+}
+
+.next-list {
+  list-style: none;
+  counter-reset: step;
+}
+
+.next-item {
+  counter-increment: step;
+  display: flex;
+  gap: 1rem;
+  padding: 1rem 0;
+  border-bottom: 0.5px solid var(--border);
+}
+
+.next-item:last-child { border-bottom: none; }
+
+.next-item::before {
+  content: counter(step, decimal-leading-zero);
+  font-family: var(--font-h);
+  font-weight: 700;
+  font-size: 1rem;
+  color: var(--primary);
+  flex-shrink: 0;
+  min-width: 30px;
+}
+
+.next-item p {
+  font-size: 0.9rem;
+  color: var(--light-grey);
+  line-height: 1.6;
+}
+
+.next-item strong {
+  color: var(--white);
+  font-weight: 600;
+}
+
+.cta {
+  display: inline-block;
+  background: var(--primary);
+  color: var(--black);
+  font-family: var(--font-b);
+  font-weight: 700;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  padding: 1.1rem 2.5rem;
+  border-radius: 999px;
+  text-decoration: none;
+  transition: filter 0.2s;
+}
+
+.cta:hover { filter: brightness(1.1); }
+
+.footer-copy {
+  margin-top: 3rem;
+  font-family: var(--font-m);
+  font-size: 0.65rem;
+  color: var(--space-grey);
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+}
+</style>
+</head>
+<body>
+
+<div class="container">
+
+  <div class="check-circle">
+    <svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"></polyline></svg>
+  </div>
+
+  <p class="eyebrow">// Suscripción activada</p>
+  <h1>Pago <span class="accent">confirmado</span></h1>
+  <p class="description">
+    Tu mensualidad del CRM quedó activa. A partir de ahora, el cobro se realizará automático cada mes en la misma fecha — sin necesidad de hacer nada.
+  </p>
+
+  <div class="info-card">
+    <p class="info-label">ID de suscripción</p>
+    <p class="info-value" id="sub-id">—</p>
+    <p class="info-label">Monto</p>
+    <p class="info-value">US$97.00 / mes</p>
+    <p class="info-label">Estado</p>
+    <p class="info-value" style="color: var(--primary);">● Activa</p>
+  </div>
+
+  <div class="next-steps">
+    <p class="next-title">// Próximos pasos</p>
+    <ul class="next-list">
+      <li class="next-item">
+        <p><strong>Recibirás un correo de PayPal</strong> con el comprobante del primer pago.</p>
+      </li>
+      <li class="next-item">
+        <p><strong>Tu CRM sigue activo</strong> con todas las funciones, soporte y capacitación incluidas.</p>
+      </li>
+      <li class="next-item">
+        <p><strong>Cualquier duda o ajuste</strong>, escríbenos por WhatsApp y te respondemos.</p>
+      </li>
+    </ul>
+  </div>
+
+  <a href="https://wa.me/18495772978" class="cta" target="_blank" rel="noopener">Escribir por WhatsApp</a>
+
+  <p class="footer-copy">© MM Agency · Marketing Digital · RD</p>
+
+</div>
+
+<script>
+  const params = new URLSearchParams(window.location.search);
+  const subId = params.get('sub');
+  if (subId) {
+    document.getElementById('sub-id').textContent = subId;
+  } else {
+    document.getElementById('sub-id').textContent = 'No disponible';
+  }
+</script>
+
+</body>
+</html>

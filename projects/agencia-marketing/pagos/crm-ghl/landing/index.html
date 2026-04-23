@@ -1,0 +1,611 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pago Mensual CRM — MM Agency</title>
+<meta name="description" content="Mensualidad del servicio CRM GoHighLevel de MM Agency. Pago automático seguro vía PayPal.">
+<meta name="robots" content="noindex, nofollow">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;700;800&family=DM+Mono:wght@400;500&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+:root {
+  --primary: #FAFA00;
+  --secondary: #713DFF;
+  --bg: #181818;
+  --bg-card: #202020;
+  --bg-elev: #262626;
+  --border: #353535;
+  --space-grey: #707070;
+  --light-grey: #C9C9C9;
+  --light: #FAFAFA;
+  --white: #FFFFFF;
+  --black: #000000;
+  --green: #00C853;
+
+  --font-h: 'Orbitron', sans-serif;
+  --font-b: 'Inter', sans-serif;
+  --font-m: 'DM Mono', monospace;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: var(--font-b);
+  background: var(--bg);
+  color: var(--light-grey);
+  line-height: 1.6;
+  min-height: 100vh;
+  -webkit-font-smoothing: antialiased;
+}
+
+.container {
+  max-width: 560px;
+  margin: 0 auto;
+  padding: 3rem 1.5rem 5rem;
+}
+
+/* Header */
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-bottom: 2.5rem;
+  border-bottom: 0.5px solid var(--border);
+  margin-bottom: 3rem;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  text-decoration: none;
+}
+
+.logo-img {
+  width: 44px;
+  height: 44px;
+}
+
+.logo-text {
+  font-family: var(--font-h);
+  font-weight: 800;
+  font-size: 1rem;
+  color: var(--white);
+  letter-spacing: 0.05em;
+}
+
+.logo-text span {
+  color: var(--primary);
+}
+
+.badge-secure {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-family: var(--font-m);
+  font-size: 0.65rem;
+  font-weight: 500;
+  color: var(--space-grey);
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+}
+
+.badge-secure::before {
+  content: '';
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--green);
+  box-shadow: 0 0 8px var(--green);
+}
+
+/* Eyebrow */
+.eyebrow {
+  font-family: var(--font-m);
+  font-size: 0.7rem;
+  font-weight: 500;
+  color: var(--space-grey);
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  margin-bottom: 1.25rem;
+}
+
+/* Main heading */
+h1 {
+  font-family: var(--font-h);
+  font-weight: 700;
+  font-size: clamp(2rem, 5vw, 2.8rem);
+  line-height: 1.05;
+  letter-spacing: -0.01em;
+  color: var(--white);
+  margin-bottom: 1rem;
+}
+
+h1 .accent {
+  color: var(--primary);
+}
+
+.subtitle {
+  font-size: 1.05rem;
+  color: var(--light-grey);
+  margin-bottom: 3rem;
+  max-width: 480px;
+}
+
+/* Price card */
+.price-card {
+  background: var(--bg-card);
+  border: 0.5px solid var(--border);
+  border-radius: 20px;
+  padding: 2.5rem 2rem;
+  margin-bottom: 2rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.price-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: var(--primary);
+}
+
+.price-label {
+  font-family: var(--font-m);
+  font-size: 0.7rem;
+  color: var(--space-grey);
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  margin-bottom: 1rem;
+}
+
+.price {
+  display: flex;
+  align-items: baseline;
+  gap: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.price-currency {
+  font-family: var(--font-h);
+  font-weight: 600;
+  font-size: 1.8rem;
+  color: var(--white);
+}
+
+.price-amount {
+  font-family: var(--font-h);
+  font-weight: 800;
+  font-size: 4.5rem;
+  color: var(--white);
+  line-height: 1;
+  letter-spacing: -0.02em;
+}
+
+.price-period {
+  font-family: var(--font-b);
+  font-size: 1rem;
+  color: var(--space-grey);
+  font-weight: 500;
+}
+
+.price-note {
+  font-size: 0.85rem;
+  color: var(--space-grey);
+  margin-top: 0.5rem;
+}
+
+/* Includes */
+.includes {
+  margin-bottom: 2.5rem;
+}
+
+.includes-title {
+  font-family: var(--font-m);
+  font-size: 0.7rem;
+  color: var(--space-grey);
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  margin-bottom: 1.25rem;
+}
+
+.includes-list {
+  list-style: none;
+  display: grid;
+  gap: 1rem;
+}
+
+.includes-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.9rem;
+  padding-bottom: 1rem;
+  border-bottom: 0.5px solid var(--border);
+}
+
+.includes-item:last-child {
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+.includes-check {
+  flex-shrink: 0;
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  background: var(--primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 2px;
+}
+
+.includes-check svg {
+  width: 12px;
+  height: 12px;
+  stroke: var(--black);
+  stroke-width: 3;
+  fill: none;
+}
+
+.includes-text {
+  flex: 1;
+}
+
+.includes-text strong {
+  color: var(--white);
+  font-weight: 600;
+  display: block;
+  margin-bottom: 0.15rem;
+  font-size: 0.95rem;
+}
+
+.includes-text span {
+  color: var(--light-grey);
+  font-size: 0.88rem;
+  line-height: 1.5;
+}
+
+/* PayPal container */
+.paypal-wrap {
+  background: var(--bg-card);
+  border: 0.5px solid var(--border);
+  border-radius: 20px;
+  padding: 2rem;
+  margin-bottom: 1.5rem;
+}
+
+.paypal-title {
+  font-family: var(--font-h);
+  font-weight: 700;
+  font-size: 1.1rem;
+  color: var(--white);
+  margin-bottom: 0.5rem;
+  text-align: center;
+}
+
+.paypal-sub {
+  font-size: 0.85rem;
+  color: var(--space-grey);
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+#paypal-button-container-P-1T213860GK3052355NHTE67Y {
+  min-height: 50px;
+}
+
+/* Trust row */
+.trust-row {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+  margin-top: 1.5rem;
+  padding-top: 1.5rem;
+  border-top: 0.5px solid var(--border);
+}
+
+.trust-item {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-family: var(--font-m);
+  font-size: 0.65rem;
+  color: var(--space-grey);
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+}
+
+.trust-item svg {
+  width: 14px;
+  height: 14px;
+  stroke: var(--primary);
+  stroke-width: 2;
+  fill: none;
+}
+
+/* FAQ */
+.faq {
+  margin-top: 3rem;
+}
+
+.faq-title {
+  font-family: var(--font-h);
+  font-weight: 700;
+  font-size: 1.1rem;
+  color: var(--white);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-bottom: 1.5rem;
+}
+
+.faq-item {
+  padding: 1.25rem 0;
+  border-bottom: 0.5px solid var(--border);
+}
+
+.faq-q {
+  font-family: var(--font-b);
+  font-weight: 600;
+  font-size: 0.95rem;
+  color: var(--white);
+  margin-bottom: 0.5rem;
+}
+
+.faq-a {
+  font-size: 0.88rem;
+  color: var(--light-grey);
+  line-height: 1.6;
+}
+
+/* Footer */
+.footer {
+  margin-top: 4rem;
+  padding-top: 2rem;
+  border-top: 0.5px solid var(--border);
+  text-align: center;
+}
+
+.footer-contact {
+  font-size: 0.85rem;
+  color: var(--space-grey);
+  margin-bottom: 1rem;
+}
+
+.footer-contact a {
+  color: var(--white);
+  text-decoration: none;
+  border-bottom: 1px solid var(--primary);
+}
+
+.footer-copy {
+  font-family: var(--font-m);
+  font-size: 0.65rem;
+  color: var(--space-grey);
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+}
+
+/* Animations */
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(25px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.reveal {
+  opacity: 0;
+  animation: fadeUp 0.8s ease-out forwards;
+}
+
+.reveal-2 { animation-delay: 0.1s; }
+.reveal-3 { animation-delay: 0.2s; }
+.reveal-4 { animation-delay: 0.3s; }
+
+/* Responsive */
+@media (max-width: 480px) {
+  .container {
+    padding: 2rem 1.25rem 4rem;
+  }
+  .price-card, .paypal-wrap {
+    padding: 2rem 1.5rem;
+  }
+  .price-amount {
+    font-size: 3.8rem;
+  }
+  .trust-row {
+    gap: 1rem;
+  }
+}
+</style>
+</head>
+<body>
+
+<div class="container">
+
+  <!-- Header -->
+  <header class="header reveal">
+    <a href="#" class="logo">
+      <svg class="logo-img" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+        <rect x="8" y="8" width="84" height="84" fill="#000" stroke="#FAFA00" stroke-width="3"/>
+        <text x="50" y="68" text-anchor="middle" font-family="Orbitron, sans-serif" font-size="38" font-weight="800" fill="#FFF">MM</text>
+      </svg>
+      <span class="logo-text">MM<span>.</span>AGENCY</span>
+    </a>
+    <div class="badge-secure">Pago Seguro</div>
+  </header>
+
+  <!-- Intro -->
+  <div class="reveal reveal-2">
+    <p class="eyebrow">// Servicio CRM — Suscripción</p>
+    <h1>Pago mensual<br>CRM <span class="accent">GoHighLevel</span></h1>
+    <p class="subtitle">
+      Activa tu mensualidad una sola vez. El cobro se realiza automático cada mes — sin recordatorios, sin fricciones. Cancela cuando quieras.
+    </p>
+  </div>
+
+  <!-- Price card -->
+  <div class="price-card reveal reveal-3">
+    <p class="price-label">Mensualidad</p>
+    <div class="price">
+      <span class="price-currency">US$</span>
+      <span class="price-amount">97</span>
+      <span class="price-period">/ mes</span>
+    </div>
+    <p class="price-note">Se cobra el mismo día de cada mes. Cancelable en cualquier momento.</p>
+  </div>
+
+  <!-- What's included -->
+  <div class="includes reveal reveal-3">
+    <p class="includes-title">// Incluye</p>
+    <ul class="includes-list">
+
+      <li class="includes-item">
+        <div class="includes-check">
+          <svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"></polyline></svg>
+        </div>
+        <div class="includes-text">
+          <strong>Acceso a la plataforma GoHighLevel</strong>
+          <span>CRM completo para agenda, contactos, leads, pipeline y seguimiento automatizado.</span>
+        </div>
+      </li>
+
+      <li class="includes-item">
+        <div class="includes-check">
+          <svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"></polyline></svg>
+        </div>
+        <div class="includes-text">
+          <strong>Configuración y mantenimiento</strong>
+          <span>Tu cuenta queda configurada a medida y actualizada todos los meses.</span>
+        </div>
+      </li>
+
+      <li class="includes-item">
+        <div class="includes-check">
+          <svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"></polyline></svg>
+        </div>
+        <div class="includes-text">
+          <strong>Soporte técnico directo</strong>
+          <span>WhatsApp con nuestro equipo para resolver dudas o ajustes cuando los necesites.</span>
+        </div>
+      </li>
+
+      <li class="includes-item">
+        <div class="includes-check">
+          <svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"></polyline></svg>
+        </div>
+        <div class="includes-text">
+          <strong>Capacitación en video</strong>
+          <span>Biblioteca de videos paso a paso para que domines cada función del CRM.</span>
+        </div>
+      </li>
+
+      <li class="includes-item">
+        <div class="includes-check">
+          <svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"></polyline></svg>
+        </div>
+        <div class="includes-text">
+          <strong>CRM listo para tu embudo</strong>
+          <span>Integra con Meta Ads, Google Ads y formularios. Los leads entran directo a tu pipeline.</span>
+        </div>
+      </li>
+
+    </ul>
+  </div>
+
+  <!-- PayPal button -->
+  <div class="paypal-wrap reveal reveal-4">
+    <h2 class="paypal-title">Activar Pago Mensual</h2>
+    <p class="paypal-sub">Autoriza una sola vez con tu cuenta PayPal o tarjeta. Procesado por PayPal.</p>
+
+    <div id="paypal-button-container-P-1T213860GK3052355NHTE67Y"></div>
+
+    <div class="trust-row">
+      <div class="trust-item">
+        <svg viewBox="0 0 24 24"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+        Cifrado SSL
+      </div>
+      <div class="trust-item">
+        <svg viewBox="0 0 24 24"><path d="M21 12c0 4.97-4.03 9-9 9s-9-4.03-9-9 4.03-9 9-9 9 4.03 9 9z"/><polyline points="9 12 11 14 15 10"/></svg>
+        PayPal Verified
+      </div>
+      <div class="trust-item">
+        <svg viewBox="0 0 24 24"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>
+        100% Transparente
+      </div>
+    </div>
+  </div>
+
+  <!-- FAQ -->
+  <div class="faq reveal reveal-4">
+    <h3 class="faq-title">Preguntas Frecuentes</h3>
+
+    <div class="faq-item">
+      <p class="faq-q">¿Puedo cancelar cuando quiera?</p>
+      <p class="faq-a">Sí. Puedes cancelar la suscripción desde tu cuenta PayPal en cualquier momento. No hay penalidades ni contratos.</p>
+    </div>
+
+    <div class="faq-item">
+      <p class="faq-q">¿Cuándo se hace el cobro?</p>
+      <p class="faq-a">El primer cobro se realiza al momento de activar. Los siguientes se descuentan automáticamente el mismo día de cada mes.</p>
+    </div>
+
+    <div class="faq-item">
+      <p class="faq-q">¿Necesito tener cuenta PayPal?</p>
+      <p class="faq-a">No es obligatorio. Puedes pagar con tu tarjeta de débito o crédito directamente desde el checkout.</p>
+    </div>
+
+    <div class="faq-item">
+      <p class="faq-q">¿Qué pasa si un pago falla?</p>
+      <p class="faq-a">PayPal reintenta automáticamente. Si después de un intento fallido no se procesa, recibirás un aviso y el servicio se pausa hasta regularizar.</p>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="footer reveal reveal-4">
+    <p class="footer-contact">
+      ¿Dudas antes de activar? Escríbenos a <a href="https://wa.me/18495772978" target="_blank" rel="noopener">WhatsApp</a>
+    </p>
+    <p class="footer-copy">© MM Agency · Marketing Digital · RD</p>
+  </footer>
+
+</div>
+
+<!-- PayPal SDK -->
+<script src="https://www.paypal.com/sdk/js?client-id=AfzIwijgmMoUVP-pkEDVIfftPH1oUcaW30dQJ_C35v_-CZrW789QP1ZRG34WcvtcGRjOrekxxgXy3X_I&vault=true&intent=subscription" data-sdk-integration-source="button-factory"></script>
+<script>
+  paypal.Buttons({
+      style: {
+          shape: 'pill',
+          color: 'black',
+          layout: 'vertical',
+          label: 'subscribe'
+      },
+      createSubscription: function(data, actions) {
+        return actions.subscription.create({
+          plan_id: 'P-1T213860GK3052355NHTE67Y'
+        });
+      },
+      onApprove: function(data, actions) {
+        window.location.href = 'gracias.html?sub=' + data.subscriptionID;
+      }
+  }).render('#paypal-button-container-P-1T213860GK3052355NHTE67Y');
+</script>
+
+</body>
+</html>

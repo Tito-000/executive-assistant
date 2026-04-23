@@ -339,6 +339,13 @@
     padding: 100px 0 80px;
   }
 
+  .contact-main::before {
+    height: 700px;
+    background:
+      radial-gradient(ellipse 100% 60% at 50% 20%, rgba(113, 61, 255, 0.45) 0%, transparent 60%),
+      linear-gradient(180deg, #3A1F9E 0%, #2A1680 35%, #150A55 70%, transparent 100%);
+  }
+
   .contact-hero-inner {
     grid-template-columns: 1fr;
     gap: 40px;
