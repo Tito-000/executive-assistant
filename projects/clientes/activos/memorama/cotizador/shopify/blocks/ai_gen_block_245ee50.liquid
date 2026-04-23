@@ -1,0 +1,730 @@
+{% doc %}
+  @prompt
+    Crea una sección superior tipo “barra de confianza” para una tienda Shopify, ubicada encima del header, con fondo claro y diseño minimalista, totalmente editable desde el editor de temas.
+    
+    Comportamiento responsive:
+    
+    Desktop: mostrar los bloques alineados horizontalmente.
+    
+    Mobile: convertir automáticamente la sección en un carrusel horizontal que se desplace solo (autoplay) cada 3–4 segundos, con transición suave.
+    
+    Permitir pausar el carrusel al tocarlo.
+    
+    Contenido (bloques editables):
+    
+    Bloque 1 – Beneficio de pago
+    
+    Ícono editable (pago / tarjeta)
+    
+    Texto editable:
+    “Compre ahora y pague después. Cuentas de crédito a 30 días disponibles.”
+    
+    Bloque 2 – Garantía
+    
+    Ícono editable (escudo / check)
+    
+    Texto editable:
+    “Garantía de mejor precio”
+    
+    Bloque 3 – Prueba social
+    
+    Logo editable (Trustpilot u otro)
+    
+    Texto editable:
+    “Amado por más de 1 millón de clientes”
+    
+    Fila editable de 5 estrellas
+    
+    Requisitos de edición:
+    
+    Cada bloque debe ser editable individualmente (texto, ícono, enlace).
+    
+    Opción para activar o desactivar bloques.
+    
+    Ajustes de:
+    
+    Color de fondo
+    
+    Color del texto
+    
+    Tamaño de fuente
+    
+    Velocidad del carrusel (mobile)
+    
+    Diseño mobile-first, rápido y liviano.
+    
+    Requisitos técnicos:
+    
+    Carrusel solo en móvil, no en desktop.
+    
+    Autoplay activado por defecto.
+    
+    Sin dependencias externas pesadas.
+    
+    Compatible con cualquier tema moderno de Shopify.
+    
+    Estilo limpio, profesional y enfocado en conversión., hazlo que para compu este horizoantalmente y que se puena editar idependientes 
+{% enddoc %}
+{% assign ai_gen_id = block.id | replace: '_', '' | downcase %}
+
+{% style %}
+  .ai-trust-bar-{{ ai_gen_id }} {
+    display: block;
+    width: 100%;
+    background-color: {{ block.settings.background_color }};
+    padding: {{ block.settings.padding_vertical }}px 20px;
+    overflow: hidden;
+  }
+
+  .ai-trust-bar-container-{{ ai_gen_id }} {
+    max-width: {{ block.settings.max_width }}px;
+    margin: 0 auto;
+  }
+
+  .ai-trust-bar-items-{{ ai_gen_id }} {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: {{ block.settings.gap }}px;
+    flex-wrap: wrap;
+  }
+
+  .ai-trust-bar-item-{{ ai_gen_id }} {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    flex-shrink: 0;
+  }
+
+  .ai-trust-bar-icon-{{ ai_gen_id }} {
+    width: {{ block.settings.icon_size }}px;
+    height: {{ block.settings.icon_size }}px;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .ai-trust-bar-icon-{{ ai_gen_id }} svg {
+    width: 100%;
+    height: 100%;
+    fill: {{ block.settings.icon_color }};
+  }
+
+  .ai-trust-bar-icon-{{ ai_gen_id }} img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+  }
+
+  .ai-trust-bar-content-{{ ai_gen_id }} {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+  }
+
+  .ai-trust-bar-text-{{ ai_gen_id }} {
+    color: {{ block.settings.text_color }};
+    font-size: {{ block.settings.font_size }}px;
+    line-height: 1.4;
+    margin: 0;
+  }
+
+  .ai-trust-bar-stars-{{ ai_gen_id }} {
+    display: flex;
+    gap: 2px;
+  }
+
+  .ai-trust-bar-star-{{ ai_gen_id }} {
+    width: {{ block.settings.star_size }}px;
+    height: {{ block.settings.star_size }}px;
+    fill: {{ block.settings.star_color }};
+  }
+
+  @media screen and (max-width: 749px) {
+    .ai-trust-bar-items-{{ ai_gen_id }} {
+      justify-content: flex-start;
+      overflow: hidden;
+      position: relative;
+      flex-wrap: nowrap;
+    }
+
+    .ai-trust-bar-carousel-{{ ai_gen_id }} {
+      display: flex;
+      gap: {{ block.settings.gap }}px;
+      transition: transform 0.5s ease;
+    }
+
+    .ai-trust-bar-item-{{ ai_gen_id }} {
+      min-width: 100%;
+      justify-content: center;
+    }
+  }
+
+  @media screen and (min-width: 750px) {
+    .ai-trust-bar-items-{{ ai_gen_id }} {
+      flex-wrap: wrap;
+    }
+  }
+{% endstyle %}
+
+<trust-bar-{{ ai_gen_id }} class="ai-trust-bar-{{ ai_gen_id }}" data-speed="{{ block.settings.carousel_speed }}" {{ block.shopify_attributes }}>
+  <div class="ai-trust-bar-container-{{ ai_gen_id }}">
+    <div class="ai-trust-bar-items-{{ ai_gen_id }}">
+      <div class="ai-trust-bar-carousel-{{ ai_gen_id }}">
+        {% if block.settings.item_1_enabled %}
+          <div class="ai-trust-bar-item-{{ ai_gen_id }}">
+            <div class="ai-trust-bar-icon-{{ ai_gen_id }}">
+              {% if block.settings.item_1_custom_icon %}
+                <img src="{{ block.settings.item_1_custom_icon | image_url: width: 100 }}" alt="{{ block.settings.item_1_text }}" loading="lazy">
+              {% else %}
+                {% case block.settings.item_1_icon %}
+                  {% when 'payment' %}
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                      <rect x="1" y="4" width="22" height="16" rx="2" ry="2"></rect>
+                      <line x1="1" y1="10" x2="23" y2="10"></line>
+                    </svg>
+                  {% when 'shield' %}
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                      <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+                    </svg>
+                  {% when 'check' %}
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                      <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                      <polyline points="22 4 12 14.01 9 11.01"></polyline>
+                    </svg>
+                  {% when 'star' %}
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                      <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
+                    </svg>
+                  {% when 'truck' %}
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                      <rect x="1" y="3" width="15" height="13"></rect>
+                      <polygon points="16 8 20 8 23 11 23 16 16 16 16 8"></polygon>
+                      <circle cx="5.5" cy="18.5" r="2.5"></circle>
+                      <circle cx="18.5" cy="18.5" r="2.5"></circle>
+                    </svg>
+                {% endcase %}
+              {% endif %}
+            </div>
+            <div class="ai-trust-bar-content-{{ ai_gen_id }}">
+              {% if block.settings.item_1_text != blank %}
+                <p class="ai-trust-bar-text-{{ ai_gen_id }}">{{ block.settings.item_1_text }}</p>
+              {% endif %}
+              {% if block.settings.item_1_show_stars %}
+                <div class="ai-trust-bar-stars-{{ ai_gen_id }}">
+                  {% for i in (1..5) %}
+                    <svg class="ai-trust-bar-star-{{ ai_gen_id }}" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                      <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
+                    </svg>
+                  {% endfor %}
+                </div>
+              {% endif %}
+            </div>
+          </div>
+        {% endif %}
+
+        {% if block.settings.item_2_enabled %}
+          <div class="ai-trust-bar-item-{{ ai_gen_id }}">
+            <div class="ai-trust-bar-icon-{{ ai_gen_id }}">
+              {% if block.settings.item_2_custom_icon %}
+                <img src="{{ block.settings.item_2_custom_icon | image_url: width: 100 }}" alt="{{ block.settings.item_2_text }}" loading="lazy">
+              {% else %}
+                {% case block.settings.item_2_icon %}
+                  {% when 'payment' %}
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                      <rect x="1" y="4" width="22" height="16" rx="2" ry="2"></rect>
+                      <line x1="1" y1="10" x2="23" y2="10"></line>
+                    </svg>
+                  {% when 'shield' %}
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                      <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+                    </svg>
+                  {% when 'check' %}
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                      <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                      <polyline points="22 4 12 14.01 9 11.01"></polyline>
+                    </svg>
+                  {% when 'star' %}
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                      <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
+                    </svg>
+                  {% when 'truck' %}
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                      <rect x="1" y="3" width="15" height="13"></rect>
+                      <polygon points="16 8 20 8 23 11 23 16 16 16 16 8"></polygon>
+                      <circle cx="5.5" cy="18.5" r="2.5"></circle>
+                      <circle cx="18.5" cy="18.5" r="2.5"></circle>
+                    </svg>
+                {% endcase %}
+              {% endif %}
+            </div>
+            <div class="ai-trust-bar-content-{{ ai_gen_id }}">
+              {% if block.settings.item_2_text != blank %}
+                <p class="ai-trust-bar-text-{{ ai_gen_id }}">{{ block.settings.item_2_text }}</p>
+              {% endif %}
+              {% if block.settings.item_2_show_stars %}
+                <div class="ai-trust-bar-stars-{{ ai_gen_id }}">
+                  {% for i in (1..5) %}
+                    <svg class="ai-trust-bar-star-{{ ai_gen_id }}" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                      <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
+                    </svg>
+                  {% endfor %}
+                </div>
+              {% endif %}
+            </div>
+          </div>
+        {% endif %}
+
+        {% if block.settings.item_3_enabled %}
+          <div class="ai-trust-bar-item-{{ ai_gen_id }}">
+            <div class="ai-trust-bar-icon-{{ ai_gen_id }}">
+              {% if block.settings.item_3_custom_icon %}
+                <img src="{{ block.settings.item_3_custom_icon | image_url: width: 100 }}" alt="{{ block.settings.item_3_text }}" loading="lazy">
+              {% else %}
+                {% case block.settings.item_3_icon %}
+                  {% when 'payment' %}
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                      <rect x="1" y="4" width="22" height="16" rx="2" ry="2"></rect>
+                      <line x1="1" y1="10" x2="23" y2="10"></line>
+                    </svg>
+                  {% when 'shield' %}
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                      <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+                    </svg>
+                  {% when 'check' %}
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                      <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                      <polyline points="22 4 12 14.01 9 11.01"></polyline>
+                    </svg>
+                  {% when 'star' %}
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                      <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
+                    </svg>
+                  {% when 'truck' %}
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                      <rect x="1" y="3" width="15" height="13"></rect>
+                      <polygon points="16 8 20 8 23 11 23 16 16 16 16 8"></polygon>
+                      <circle cx="5.5" cy="18.5" r="2.5"></circle>
+                      <circle cx="18.5" cy="18.5" r="2.5"></circle>
+                    </svg>
+                {% endcase %}
+              {% endif %}
+            </div>
+            <div class="ai-trust-bar-content-{{ ai_gen_id }}">
+              {% if block.settings.item_3_text != blank %}
+                <p class="ai-trust-bar-text-{{ ai_gen_id }}">{{ block.settings.item_3_text }}</p>
+              {% endif %}
+              {% if block.settings.item_3_show_stars %}
+                <div class="ai-trust-bar-stars-{{ ai_gen_id }}">
+                  {% for i in (1..5) %}
+                    <svg class="ai-trust-bar-star-{{ ai_gen_id }}" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                      <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
+                    </svg>
+                  {% endfor %}
+                </div>
+              {% endif %}
+            </div>
+          </div>
+        {% endif %}
+      </div>
+    </div>
+  </div>
+</trust-bar-{{ ai_gen_id }}>
+
+<script>
+  (function() {
+    class TrustBar{{ ai_gen_id }} extends HTMLElement {
+      constructor() {
+        super();
+        this.carousel = this.querySelector('.ai-trust-bar-carousel-{{ ai_gen_id }}');
+        this.items = this.querySelectorAll('.ai-trust-bar-item-{{ ai_gen_id }}');
+        this.currentIndex = 0;
+        this.autoplayInterval = null;
+        this.isPaused = false;
+        this.isMobile = window.innerWidth < 750;
+      }
+
+      connectedCallback() {
+        this.checkMobile();
+        window.addEventListener('resize', () => this.handleResize());
+        
+        if (this.isMobile && this.items.length > 1) {
+          this.startAutoplay();
+          this.setupTouchEvents();
+        }
+      }
+
+      checkMobile() {
+        this.isMobile = window.innerWidth < 750;
+      }
+
+      handleResize() {
+        const wasMobile = this.isMobile;
+        this.checkMobile();
+        
+        if (wasMobile !== this.isMobile) {
+          if (this.isMobile && this.items.length > 1) {
+            this.startAutoplay();
+            this.setupTouchEvents();
+          } else {
+            this.stopAutoplay();
+            if (this.carousel) {
+              this.carousel.style.transform = 'translateX(0)';
+            }
+          }
+        }
+      }
+
+      startAutoplay() {
+        if (!this.isMobile || this.items.length <= 1) return;
+        
+        const speed = parseInt(this.dataset.speed) || 4;
+        this.autoplayInterval = setInterval(() => {
+          if (!this.isPaused) {
+            this.nextSlide();
+          }
+        }, speed * 1000);
+      }
+
+      stopAutoplay() {
+        if (this.autoplayInterval) {
+          clearInterval(this.autoplayInterval);
+          this.autoplayInterval = null;
+        }
+      }
+
+      nextSlide() {
+        if (!this.isMobile || this.items.length <= 1) return;
+        
+        this.currentIndex = (this.currentIndex + 1) % this.items.length;
+        this.updateCarousel();
+      }
+
+      updateCarousel() {
+        if (!this.carousel || !this.isMobile) return;
+        
+        const offset = -this.currentIndex * 100;
+        this.carousel.style.transform = `translateX(${offset}%)`;
+      }
+
+      setupTouchEvents() {
+        if (!this.isMobile) return;
+        
+        this.addEventListener('touchstart', () => {
+          this.isPaused = true;
+        });
+
+        this.addEventListener('touchend', () => {
+          setTimeout(() => {
+            this.isPaused = false;
+          }, 2000);
+        });
+
+        this.addEventListener('mouseenter', () => {
+          this.isPaused = true;
+        });
+
+        this.addEventListener('mouseleave', () => {
+          this.isPaused = false;
+        });
+      }
+
+      disconnectedCallback() {
+        this.stopAutoplay();
+        window.removeEventListener('resize', () => this.handleResize());
+      }
+    }
+
+    customElements.define('trust-bar-{{ ai_gen_id }}', TrustBar{{ ai_gen_id }});
+  })();
+</script>
+
+{% schema %}
+{
+  "name": "Barra de confianza",
+  "tag": null,
+  "settings": [
+    {
+      "type": "header",
+      "content": "Estilo"
+    },
+    {
+      "type": "color",
+      "id": "background_color",
+      "label": "Color de fondo",
+      "default": "#f4f4f4"
+    },
+    {
+      "type": "color",
+      "id": "text_color",
+      "label": "Color de texto",
+      "default": "#2b2c2d"
+    },
+    {
+      "type": "color",
+      "id": "icon_color",
+      "label": "Color de íconos",
+      "default": "#2b2c2d"
+    },
+    {
+      "type": "range",
+      "id": "font_size",
+      "min": 10,
+      "max": 20,
+      "step": 1,
+      "unit": "px",
+      "label": "Tamaño de fuente",
+      "default": 14
+    },
+    {
+      "type": "range",
+      "id": "icon_size",
+      "min": 16,
+      "max": 40,
+      "step": 2,
+      "unit": "px",
+      "label": "Tamaño de ícono",
+      "default": 24
+    },
+    {
+      "type": "header",
+      "content": "Diseño"
+    },
+    {
+      "type": "range",
+      "id": "max_width",
+      "min": 800,
+      "max": 1600,
+      "step": 100,
+      "unit": "px",
+      "label": "Ancho máximo",
+      "default": 1200
+    },
+    {
+      "type": "range",
+      "id": "padding_vertical",
+      "min": 8,
+      "max": 40,
+      "step": 2,
+      "unit": "px",
+      "label": "Espaciado vertical",
+      "default": 12
+    },
+    {
+      "type": "range",
+      "id": "gap",
+      "min": 20,
+      "max": 80,
+      "step": 5,
+      "unit": "px",
+      "label": "Espacio entre elementos",
+      "default": 40
+    },
+    {
+      "type": "header",
+      "content": "Estrellas"
+    },
+    {
+      "type": "range",
+      "id": "star_size",
+      "min": 12,
+      "max": 24,
+      "step": 2,
+      "unit": "px",
+      "label": "Tamaño de estrellas",
+      "default": 16
+    },
+    {
+      "type": "color",
+      "id": "star_color",
+      "label": "Color de estrellas",
+      "default": "#FFD700"
+    },
+    {
+      "type": "header",
+      "content": "Carrusel móvil"
+    },
+    {
+      "type": "range",
+      "id": "carousel_speed",
+      "min": 2,
+      "max": 8,
+      "step": 1,
+      "unit": "s",
+      "label": "Velocidad de rotación",
+      "default": 4
+    },
+    {
+      "type": "header",
+      "content": "Elemento 1"
+    },
+    {
+      "type": "checkbox",
+      "id": "item_1_enabled",
+      "label": "Activar elemento 1",
+      "default": true
+    },
+    {
+      "type": "select",
+      "id": "item_1_icon",
+      "label": "Ícono",
+      "options": [
+        {
+          "value": "payment",
+          "label": "Pago / Tarjeta"
+        },
+        {
+          "value": "shield",
+          "label": "Escudo"
+        },
+        {
+          "value": "check",
+          "label": "Check / Verificado"
+        },
+        {
+          "value": "star",
+          "label": "Estrella"
+        },
+        {
+          "value": "truck",
+          "label": "Envío / Camión"
+        }
+      ],
+      "default": "payment"
+    },
+    {
+      "type": "image_picker",
+      "id": "item_1_custom_icon",
+      "label": "Ícono personalizado"
+    },
+    {
+      "type": "text",
+      "id": "item_1_text",
+      "label": "Texto",
+      "default": "Compre ahora y pague después. Cuentas de crédito a 30 días disponibles."
+    },
+    {
+      "type": "checkbox",
+      "id": "item_1_show_stars",
+      "label": "Mostrar estrellas",
+      "default": false
+    },
+    {
+      "type": "header",
+      "content": "Elemento 2"
+    },
+    {
+      "type": "checkbox",
+      "id": "item_2_enabled",
+      "label": "Activar elemento 2",
+      "default": true
+    },
+    {
+      "type": "select",
+      "id": "item_2_icon",
+      "label": "Ícono",
+      "options": [
+        {
+          "value": "payment",
+          "label": "Pago / Tarjeta"
+        },
+        {
+          "value": "shield",
+          "label": "Escudo"
+        },
+        {
+          "value": "check",
+          "label": "Check / Verificado"
+        },
+        {
+          "value": "star",
+          "label": "Estrella"
+        },
+        {
+          "value": "truck",
+          "label": "Envío / Camión"
+        }
+      ],
+      "default": "shield"
+    },
+    {
+      "type": "image_picker",
+      "id": "item_2_custom_icon",
+      "label": "Ícono personalizado"
+    },
+    {
+      "type": "text",
+      "id": "item_2_text",
+      "label": "Texto",
+      "default": "Garantía de mejor precio"
+    },
+    {
+      "type": "checkbox",
+      "id": "item_2_show_stars",
+      "label": "Mostrar estrellas",
+      "default": false
+    },
+    {
+      "type": "header",
+      "content": "Elemento 3"
+    },
+    {
+      "type": "checkbox",
+      "id": "item_3_enabled",
+      "label": "Activar elemento 3",
+      "default": true
+    },
+    {
+      "type": "select",
+      "id": "item_3_icon",
+      "label": "Ícono",
+      "options": [
+        {
+          "value": "payment",
+          "label": "Pago / Tarjeta"
+        },
+        {
+          "value": "shield",
+          "label": "Escudo"
+        },
+        {
+          "value": "check",
+          "label": "Check / Verificado"
+        },
+        {
+          "value": "star",
+          "label": "Estrella"
+        },
+        {
+          "value": "truck",
+          "label": "Envío / Camión"
+        }
+      ],
+      "default": "star"
+    },
+    {
+      "type": "image_picker",
+      "id": "item_3_custom_icon",
+      "label": "Ícono personalizado"
+    },
+    {
+      "type": "text",
+      "id": "item_3_text",
+      "label": "Texto",
+      "default": "Amado por más de 1 millón de clientes"
+    },
+    {
+      "type": "checkbox",
+      "id": "item_3_show_stars",
+      "label": "Mostrar estrellas",
+      "default": true
+    }
+  ],
+  "presets": [
+    {
+      "name": "Barra de confianza"
+    }
+  ]
+}
+{% endschema %}

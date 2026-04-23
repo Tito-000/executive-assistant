@@ -1,0 +1,97 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "name": "t:sections.header.name",
+  "type": "header",
+  "sections": {
+    "header": {
+      "type": "header",
+      "disabled": true,
+      "settings": {
+        "logo_position": "middle-left",
+        "mobile_logo_position": "center",
+        "menu": "main-menu",
+        "menu_type_desktop": "mega",
+        "sticky_header_type": "reduce-logo-size",
+        "show_line_separator": true,
+        "color_scheme": "scheme-2",
+        "menu_color_scheme": "",
+        "enable_country_selector": true,
+        "enable_language_selector": true,
+        "enable_customer_avatar": true,
+        "margin_bottom": 0,
+        "padding_top": 8,
+        "padding_bottom": 8
+      }
+    },
+    "1767653457fa2d8e83": {
+      "type": "_blocks",
+      "custom_css": [
+        "/* Ocultar un elemento específico en móviles */@media (max-width: 768px) {.tu-clase-del-elemento {display: none !important; }}"
+      ],
+      "settings": {}
+    },
+    "blocks_a4YexB": {
+      "type": "_blocks",
+      "blocks": {
+        "ai_gen_block_04640c7_YdActJ": {
+          "type": "ai_gen_block_04640c7",
+          "settings": {
+            "container_width": 1300,
+            "logo": "shopify://shop_images/Memorama_hrizontal_logo_1200_x_300_px.png",
+            "logo_height": 50,
+            "top_bar_bg": "#ffffff",
+            "nav_bg": "#413a35",
+            "nav_text_color": "#ffffff",
+            "nav_hover_bg": "#ffffff1a",
+            "border_color": "#e5e5e5",
+            "search_placeholder": "Buscar productos…",
+            "search_border_color": "#d1d1d1",
+            "search_focus_color": "#000000",
+            "search_radius": 22,
+            "quote_btn_label": "Cotización rápida",
+            "quote_btn_mobile_label": "Cotización",
+            "quote_btn_link": "shopify://pages/contact",
+            "quote_btn_bg": "#fe3a83",
+            "quote_btn_hover_bg": "#e02970",
+            "quote_btn_text": "#ffffff",
+            "quote_btn_radius": 30,
+            "login_label": "Iniciar sesión",
+            "login_color": "#262626",
+            "cart_icon_color": "#fdfdfd",
+            "cart_badge_bg": "#ffffff",
+            "cart_badge_text": "#ffffff",
+            "menu": "main-menu",
+            "dropdown_bg": "#ffffff",
+            "dropdown_text_color": "#262626",
+            "dropdown_hover_bg": "#f4f4f4",
+            "techniques_label": "Técnicas de impresión",
+            "techniques_link": "shopify://pages/request-for-quote",
+            "techniques_color": "#ffffff",
+            "divider_color": "#ffffff33",
+            "drawer_bg": "#ffffff",
+            "drawer_text_color": "#262626"
+          },
+          "blocks": {}
+        }
+      },
+      "block_order": [
+        "ai_gen_block_04640c7_YdActJ"
+      ],
+      "custom_css": [],
+      "settings": {}
+    }
+  },
+  "order": [
+    "header",
+    "1767653457fa2d8e83",
+    "blocks_a4YexB"
+  ]
+}

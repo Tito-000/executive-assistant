@@ -1,0 +1,1020 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "blocks_y74zpG": {
+      "type": "_blocks",
+      "blocks": {
+        "ai_gen_block_71b645c_XxngTk": {
+          "type": "ai_gen_block_71b645c",
+          "name": "Barra de confianza",
+          "settings": {
+            "background_color": "#f4f4f4",
+            "text_color": "#2b2c2d",
+            "icon_color": "#2b2c2d",
+            "font_size": 13,
+            "icon_size": 20,
+            "max_width": 1200,
+            "padding_vertical": 8,
+            "gap": 32,
+            "star_size": 16,
+            "star_color": "#ffd700",
+            "item_1_enabled": true,
+            "item_1_icon": "truck",
+            "item_1_text": "Entrega dentro de 00h a 00h",
+            "item_1_link": "",
+            "item_2_enabled": true,
+            "item_2_icon": "shield",
+            "item_2_text": "Garantía de mejor precio",
+            "item_2_link": "",
+            "item_3_enabled": true,
+            "item_3_icon": "check",
+            "item_3_text": "Amado por más de 1,000 de clientes",
+            "item_3_link": "",
+            "item_3_show_stars": false
+          },
+          "blocks": {}
+        }
+      },
+      "block_order": [
+        "ai_gen_block_71b645c_XxngTk"
+      ],
+      "custom_css": [
+        "@media screen and (max-width: 750px) {{display: none !important; }}"
+      ],
+      "name": "Barra de confianza",
+      "settings": {}
+    },
+    "image_banner": {
+      "type": "image-banner",
+      "blocks": {
+        "heading": {
+          "type": "heading",
+          "settings": {
+            "heading": "<strong>Ropa y prendas personalizadas para empresas, agencias y eventos</strong>",
+            "heading_size": "h1"
+          }
+        },
+        "text_FAQ8Fh": {
+          "type": "text",
+          "settings": {
+            "text": "Ofrecemos producción profesional de prendas personalizadas con soporte completo desde el diseño hasta la entrega, incluyendo impresión, bordado y un proceso confiable pensado para pedidos corporativos y eventos a gran escala.",
+            "text_style": "body"
+          }
+        },
+        "buttons_KVnweQ": {
+          "type": "buttons",
+          "settings": {
+            "button_label_1": "Solicitar cotización segura →",
+            "button_link_1": "shopify://pages/contact",
+            "button_style_secondary_1": false,
+            "button_label_2": "",
+            "button_link_2": "shopify://collections/all",
+            "button_style_secondary_2": false
+          }
+        }
+      },
+      "block_order": [
+        "heading",
+        "text_FAQ8Fh",
+        "buttons_KVnweQ"
+      ],
+      "settings": {
+        "image": "shopify://shop_images/Gemini_Generated_Image_b0was9b0was9b0wa.png",
+        "image_overlay_opacity": 20,
+        "image_height": "small",
+        "image_behavior": "none",
+        "desktop_content_position": "middle-left",
+        "desktop_content_alignment": "left",
+        "show_text_box": false,
+        "color_scheme": "scheme-2409e03b-d5f6-4937-83bc-a26a2d6c243c",
+        "stack_images_on_mobile": true,
+        "mobile_content_alignment": "left",
+        "show_text_below": false
+      }
+    },
+    "blocks_gT8p3r": {
+      "type": "_blocks",
+      "name": "Marcas",
+      "settings": {}
+    },
+    "1767921834178ac577": {
+      "type": "_blocks",
+      "blocks": {
+        "ai_gen_block_92de45f_QUQtCK": {
+          "type": "ai_gen_block_92de45f",
+          "settings": {
+            "heading": "<strong>Marcas con las que trabajamos</strong>",
+            "description": "<p>Seleccionamos proveedores confiables para garantizar durabilidad, buena presentación y resultados consistentes en cada pedido.</p>",
+            "logo_1": "shopify://shop_images/17.png",
+            "logo_2": "shopify://shop_images/1.png",
+            "logo_3": "shopify://shop_images/16.png",
+            "logo_4": "shopify://shop_images/fs.png",
+            "logo_5": "shopify://shop_images/Diseno_sin_titulo.png",
+            "logo_6": "shopify://shop_images/2_d770603d-3240-480c-80d9-7b368390e3d5.png",
+            "logo_7": "shopify://shop_images/nvn.png",
+            "logo_8": "shopify://shop_images/19.png",
+            "enable_carousel": true,
+            "carousel_speed": 30,
+            "logo_max_width": 80,
+            "logo_max_height": 60,
+            "logo_spacing": 70,
+            "logo_grayscale": 100,
+            "logo_opacity": 70,
+            "background_color": "#f4f4f4",
+            "heading_color": "#001128",
+            "description_color": "#001128",
+            "heading_size": 22,
+            "description_size": 12,
+            "text_column_width": 30,
+            "padding_top": 20,
+            "padding_bottom": 20,
+            "container_width": 1200
+          },
+          "blocks": {}
+        }
+      },
+      "block_order": [
+        "ai_gen_block_92de45f_QUQtCK"
+      ],
+      "settings": {}
+    },
+    "rich_text_A4Mawm": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_XNFkDE": {
+          "type": "heading",
+          "settings": {
+            "heading": "¿Por qué elegir a Memorama para tus prendas personalizadas?",
+            "heading_size": "h1"
+          }
+        },
+        "text_QBHfdV": {
+          "type": "text",
+          "settings": {
+            "text": "<p>En Memorama trabajamos con <strong>empresas, agencias y organizaciones en República Dominicana que necesitan que todo salga bien a la primera</strong>. No somos un taller improvisado ni un proveedor más: somos un <strong>socio operativo</strong> que se hace responsable del resultado final.</p>"
+          }
+        },
+        "text_dTPMEN": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Gestionamos pedidos de ropa personalizada, uniformes y artículos promocionales para <strong>eventos corporativos, campañas y equipos</strong>, cuidando cada etapa del proceso: desde la validación del diseño hasta la entrega puntual.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "heading_XNFkDE",
+        "text_QBHfdV",
+        "text_dTPMEN"
+      ],
+      "name": "t:sections.rich-text.presets.name",
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "scheme-1",
+        "full_width": true,
+        "padding_top": 60,
+        "padding_bottom": 0
+      }
+    },
+    "image_banner_VdnyPg": {
+      "type": "image-banner",
+      "custom_css": [
+        "@media screen and (max-width: 750px) {{display: none !important; }}"
+      ],
+      "name": "t:sections.image-banner.presets.name",
+      "settings": {
+        "image": "shopify://shop_images/jvgja.png",
+        "image_overlay_opacity": 0,
+        "image_height": "adapt",
+        "image_behavior": "none",
+        "desktop_content_position": "middle-center",
+        "desktop_content_alignment": "center",
+        "show_text_box": true,
+        "color_scheme": "scheme-2",
+        "stack_images_on_mobile": true,
+        "mobile_content_alignment": "center",
+        "show_text_below": true
+      }
+    },
+    "image_banner_HzaAex": {
+      "type": "image-banner",
+      "custom_css": [
+        "@media screen and (min-width: 751px) {{display: none !important; }}"
+      ],
+      "name": "t:sections.image-banner.presets.name",
+      "settings": {
+        "image": "shopify://shop_images/gfcg.png",
+        "image_overlay_opacity": 0,
+        "image_height": "adapt",
+        "image_behavior": "none",
+        "desktop_content_position": "middle-center",
+        "desktop_content_alignment": "center",
+        "show_text_box": true,
+        "color_scheme": "",
+        "stack_images_on_mobile": true,
+        "mobile_content_alignment": "center",
+        "show_text_below": true
+      }
+    },
+    "rich_text_pXUEhj": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_WiQHcm": {
+          "type": "heading",
+          "settings": {
+            "heading": "Excelentes comentarios — Opiniones de clientes",
+            "heading_size": "h1"
+          }
+        }
+      },
+      "block_order": [
+        "heading_WiQHcm"
+      ],
+      "disabled": true,
+      "name": "t:sections.rich-text.presets.name",
+      "settings": {
+        "desktop_content_position": "left",
+        "content_alignment": "left",
+        "color_scheme": "scheme-1",
+        "full_width": true,
+        "padding_top": 40,
+        "padding_bottom": 0
+      }
+    },
+    "176790797108177672": {
+      "type": "apps",
+      "blocks": {
+        "judge_me_reviews_cards_carousel_feHBWe": {
+          "type": "shopify://apps/judge-me-reviews/blocks/cards_carousel/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
+          "disabled": true,
+          "settings": {
+            "show_sample_reviews": true,
+            "reviews_selection": "all",
+            "products": [],
+            "star_rating": "all",
+            "show_review_media": true,
+            "display_order": "media_first",
+            "no_image_fallback": "review_text_only",
+            "max_reviews": 20,
+            "review_length": "medium",
+            "text_size": "medium",
+            "image_ratio": "1",
+            "reviews_shown": 4,
+            "show_reviewer_name": true,
+            "show_product_name": false,
+            "hide_arrows_mobile": true,
+            "arrows_position": "sides",
+            "max_width": 1100,
+            "corner_styling": "soft",
+            "header_text_color": "#000000",
+            "text_color": "#000000",
+            "card_color": "#ffffff",
+            "stars_color": "",
+            "arrows_color": "#000000",
+            "transition_speed": 5,
+            "header_text": "",
+            "show_average_rating": false
+          }
+        }
+      },
+      "block_order": [
+        "judge_me_reviews_cards_carousel_feHBWe"
+      ],
+      "settings": {
+        "include_margins": true
+      }
+    },
+    "image_with_text_KHm8cY": {
+      "type": "image-with-text",
+      "blocks": {
+        "heading_w6xx8K": {
+          "type": "heading",
+          "settings": {
+            "heading": "Queremos asegurarnos de que tu pedido salga bien a la primera",
+            "heading_size": "h2"
+          }
+        },
+        "text_WfNxVH": {
+          "type": "text",
+          "settings": {
+            "text": "<p>En <strong>Memoram</strong> no solo imprimimos prendas. Te guiamos desde la definición del pedido hasta la entrega final, validando cada paso para <strong>evitar errores, retrasos y sorpresas</strong>.</p><p>Cuéntanos qué necesitas, para cuándo lo necesitas y qué no puede fallar. Nosotros nos encargamos del resto.</p>",
+            "text_style": "body"
+          }
+        },
+        "button_dpkYFQ": {
+          "type": "button",
+          "settings": {
+            "button_label": "Solicitar asesoría experta",
+            "button_link": "shopify://pages/contact",
+            "button_style_secondary": false
+          }
+        }
+      },
+      "block_order": [
+        "heading_w6xx8K",
+        "text_WfNxVH",
+        "button_dpkYFQ"
+      ],
+      "name": "t:sections.image-with-text.presets.name",
+      "settings": {
+        "image": "shopify://shop_images/nvm.png",
+        "height": "adapt",
+        "desktop_image_width": "small",
+        "layout": "text_first",
+        "image_behavior": "none",
+        "content_layout": "no-overlap",
+        "desktop_content_position": "bottom",
+        "desktop_content_alignment": "left",
+        "mobile_content_alignment": "left",
+        "section_color_scheme": "scheme-1",
+        "color_scheme": "scheme-5",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "rich_text_KEDJnc": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_nMkeLY": {
+          "type": "heading",
+          "settings": {
+            "heading": "<strong>¿Necesitas ropa y productos personalizados sin margen de error?</strong>",
+            "heading_size": "h1"
+          }
+        },
+        "text_eXURAE": {
+          "type": "text",
+          "settings": {
+            "text": "<p>En <strong>Memoram</strong> nos especializamos en <strong>prendas personalizadas y productos corporativos</strong> para empresas, agencias, escuelas, equipos y eventos que <strong>no pueden fallar en toda República Dominicana</strong>. Gestionamos pedidos de camisetas, uniformes de trabajo y artículos promocionales con un proceso claro, controlado y profesional, desde el primer contacto hasta la entrega final.</p>"
+          }
+        },
+        "text_dF8YXe": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Tanto si necesitas un <strong>pedido corporativo grande</strong>, una <strong>entrega urgente para un evento</strong>, o un proveedor confiable para pedidos recurrentes, en Memoram obtienes <strong>asesoramiento experto, validación previa de diseño y producción controlada</strong>, con entregas puntuales y sin sorpresas.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "heading_nMkeLY",
+        "text_eXURAE",
+        "text_dF8YXe"
+      ],
+      "name": "t:sections.rich-text.presets.name",
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "scheme-1",
+        "full_width": true,
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
+    },
+    "1767916557db17aabc": {
+      "type": "_blocks",
+      "blocks": {
+        "ai_gen_block_e873699_wVC39H": {
+          "type": "ai_gen_block_e873699",
+          "settings": {
+            "customer_type_1_title": "Eventos y exposiciones",
+            "customer_type_1_image": "shopify://shop_images/nb.png",
+            "customer_type_1_description": "Ropa y merchandising diseñados para representar tu marca con coherencia y profesionalismo.",
+            "customer_type_2_title": "Uniformes y ropa de trabajo",
+            "customer_type_2_image": "shopify://shop_images/Gemini_Generated_Image_g3usq2g3usq2g3us.png",
+            "customer_type_2_description": "Prendas cómodas, resistentes y alineadas con tu identidad corporativa.",
+            "customer_type_3_title": "Promociones y obsequios",
+            "customer_type_3_image": "shopify://shop_images/nvm.png",
+            "customer_type_3_description": "Artículos de marca diseñados para apoyar campañas y lanzamientos.",
+            "customer_type_4_title": "Mercancía para reventa",
+            "customer_type_4_image": "shopify://shop_images/Gemini_Generated_Image_hytqmwhytqmwhytq.png",
+            "customer_type_4_description": "Productos personalizados diseñados para reventa y distribución.",
+            "background_color": "#ffffff",
+            "container_max_width": 1200,
+            "section_padding_top": 44,
+            "section_padding_bottom": 20,
+            "section_padding_top_mobile": 40,
+            "section_padding_bottom_mobile": 40,
+            "column_gap": 32,
+            "column_gap_mobile": 16,
+            "row_gap_mobile": 32,
+            "content_gap": 20,
+            "content_gap_mobile": 12,
+            "title_font_size": 28,
+            "title_font_size_mobile": 18,
+            "title_font_weight": "600",
+            "title_color": "#262626",
+            "description_font_size": 16,
+            "description_font_size_mobile": 13,
+            "description_color": "#666666",
+            "image_border_radius": 12
+          },
+          "blocks": {}
+        },
+        "ai_gen_block_a1e2c49_rj3V3U": {
+          "type": "ai_gen_block_a1e2c49",
+          "settings": {
+            "button_text": "Habla con un asesor →",
+            "button_link": "shopify://pages/contact",
+            "alignment": "center",
+            "desktop_width_percent": 100,
+            "button_color": "#fe3a83",
+            "text_color": "#ffffff",
+            "hover_color": "#413a35",
+            "hover_text_color": "#ffffff",
+            "border_width": 0,
+            "border_color": "#797068",
+            "hover_border_color": "#413a35",
+            "border_radius": 30,
+            "padding_vertical": 15,
+            "padding_horizontal": 30,
+            "font_size": 16,
+            "font_weight": "500"
+          },
+          "blocks": {}
+        }
+      },
+      "block_order": [
+        "ai_gen_block_e873699_wVC39H",
+        "ai_gen_block_a1e2c49_rj3V3U"
+      ],
+      "settings": {}
+    },
+    "17679205251bb353a6": {
+      "type": "_blocks",
+      "blocks": {
+        "ai_gen_block_989e896_iFkVyy": {
+          "type": "ai_gen_block_989e896",
+          "settings": {
+            "title": "<p>Nuestros números hablan por sí solos.</p>",
+            "description": "<p>A lo largo de los años, en <strong>Memoram</strong> hemos construido una reputación basada en <strong>cumplimiento, control y confianza</strong>. Estas cifras reflejan el impacto real de nuestro trabajo y por qué empresas, agencias y organizadores confían en nosotros cuando <strong>no pueden permitirse errores</strong>.</p>",
+            "metric_1_enabled": true,
+            "metric_1_number": "Más de 10",
+            "metric_1_label": "años de experiencia operativa",
+            "metric_2_enabled": true,
+            "metric_2_number": "Más de 1,500 pedidos",
+            "metric_2_label": "entregados a tiempo",
+            "metric_3_enabled": true,
+            "metric_3_number": "Más de 500 empresas",
+            "metric_3_label": "atendidas con éxito",
+            "background_color": "#ffffff",
+            "title_color": "#2b2c2d",
+            "description_color": "#2b2c2d",
+            "metric_number_color": "#2b2c2d",
+            "metric_label_color": "#797068",
+            "title_size": 48,
+            "title_weight": "600",
+            "description_size": 16,
+            "metric_number_size": 56,
+            "metric_number_weight": "300",
+            "metric_label_size": 14,
+            "title_size_mobile": 32,
+            "description_size_mobile": 14,
+            "metric_number_size_mobile": 40,
+            "metric_label_size_mobile": 13,
+            "section_padding_top": 52,
+            "section_padding_bottom": 52,
+            "section_padding_horizontal": 40,
+            "max_width": 1200,
+            "column_gap": 65,
+            "content_gap": 18,
+            "metrics_gap": 30,
+            "metric_internal_gap": 8,
+            "section_padding_top_mobile": 60,
+            "section_padding_bottom_mobile": 60,
+            "section_padding_horizontal_mobile": 20,
+            "mobile_section_gap": 48,
+            "metrics_gap_mobile": 40
+          },
+          "blocks": {}
+        }
+      },
+      "block_order": [
+        "ai_gen_block_989e896_iFkVyy"
+      ],
+      "settings": {}
+    },
+    "image_with_text_WBBkmr": {
+      "type": "image-with-text",
+      "blocks": {
+        "heading_iJQnxj": {
+          "type": "heading",
+          "settings": {
+            "heading": "<strong>¿Necesitas asesoramiento experto en ropa personalizada o productos de marca?</strong>",
+            "heading_size": "h2"
+          }
+        },
+        "text_pCxwfR": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Solicita una llamada o agenda una consulta con uno de nuestros <strong>asesores especializados en pedidos corporativos y eventos</strong>.</p><ul><li>Asesoría real por expertos en producción<br/></li><li>Revisión de necesidades, usos y plazos críticos<br/></li><li>Recomendación de productos y técnicas adecuadas a tu caso<br/></li><li>Validación previa para evitar errores costosos</li></ul>",
+            "text_style": "body"
+          }
+        },
+        "button_e6KNaa": {
+          "type": "button",
+          "settings": {
+            "button_label": "Habla con un asesor  →",
+            "button_link": "shopify://pages/contact",
+            "button_style_secondary": false
+          }
+        }
+      },
+      "block_order": [
+        "heading_iJQnxj",
+        "text_pCxwfR",
+        "button_e6KNaa"
+      ],
+      "name": "t:sections.image-with-text.presets.name",
+      "settings": {
+        "image": "shopify://shop_images/Gemini_Generated_Image_sm3hv8sm3hv8sm3h.png",
+        "height": "medium",
+        "desktop_image_width": "small",
+        "layout": "image_first",
+        "image_behavior": "none",
+        "content_layout": "no-overlap",
+        "desktop_content_position": "top",
+        "desktop_content_alignment": "left",
+        "mobile_content_alignment": "left",
+        "section_color_scheme": "scheme-1",
+        "color_scheme": "scheme-5",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "rich_text_g7JcTi": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_NULYxW": {
+          "type": "heading",
+          "settings": {
+            "heading": "<strong>Soluciones de ropa y productos personalizados por sector</strong>",
+            "heading_size": "h1"
+          }
+        },
+        "text_VcdHy6": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Trabajamos con empresas, agencias y organizaciones de distintos sectores, ofreciendo ropa personalizada y productos de marca adaptados a cada necesidad.<br/> Desde eventos y activaciones hasta uniformes para equipos y uso diario, gestionamos todo el proceso para que el resultado sea claro, fiable y sin fricciones.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "heading_NULYxW",
+        "text_VcdHy6"
+      ],
+      "name": "t:sections.rich-text.presets.name",
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "",
+        "full_width": true,
+        "padding_top": 40,
+        "padding_bottom": 20
+      }
+    },
+    "17680504685d4761e9": {
+      "type": "_blocks",
+      "blocks": {
+        "ai_gen_block_e873699_dxnUNJ": {
+          "type": "ai_gen_block_e873699",
+          "settings": {
+            "customer_type_1_title": "Educación",
+            "customer_type_1_image": "shopify://shop_images/Gemini_Generated_Image_yemb8jyemb8jyemb.png",
+            "customer_type_1_description": "Ropa y artículos de marca para colegios, academias y centros educativos.",
+            "customer_type_2_title": "Comercio e industria",
+            "customer_type_2_image": "shopify://shop_images/Gemini_Generated_Image_1ksaq51ksaq51ksa.png",
+            "customer_type_2_description": "Ropa de trabajo resistente y ropa de alta visibilidad personalizada para equipos profesionales.",
+            "customer_type_3_title": "Construcción",
+            "customer_type_3_image": "shopify://shop_images/Gemini_Generated_Image_495ota495ota495o.png",
+            "customer_type_3_description": "Ropa de trabajo personalizada para equipos profesionales.",
+            "customer_type_4_title": "Cuidado de la salud",
+            "customer_type_4_image": "shopify://shop_images/Gemini_Generated_Image_gyiqngyiqngyiqng.png",
+            "customer_type_4_description": "Uniformes cómodos y prácticos para profesionales médicos y asistenciales.",
+            "background_color": "#ffffff",
+            "container_max_width": 1200,
+            "section_padding_top": 56,
+            "section_padding_bottom": 32,
+            "section_padding_top_mobile": 40,
+            "section_padding_bottom_mobile": 4,
+            "column_gap": 32,
+            "column_gap_mobile": 24,
+            "row_gap_mobile": 32,
+            "content_gap": 20,
+            "content_gap_mobile": 12,
+            "title_font_size": 28,
+            "title_font_size_mobile": 18,
+            "title_font_weight": "600",
+            "title_color": "#262626",
+            "description_font_size": 16,
+            "description_font_size_mobile": 12,
+            "description_color": "#666666",
+            "image_border_radius": 14
+          },
+          "blocks": {}
+        },
+        "ai_gen_block_e873699_zaHBLD": {
+          "type": "ai_gen_block_e873699",
+          "settings": {
+            "customer_type_1_title": "Agencias de marketing",
+            "customer_type_1_image": "shopify://shop_images/nkfn.png",
+            "customer_type_1_description": "Producción de merchandising y ropa de marca para campañas, activaciones y eventos.",
+            "customer_type_2_title": "Empresas tecnológicas",
+            "customer_type_2_image": "shopify://shop_images/Gemini_Generated_Image_zhot2zhot2zhot2z.png",
+            "customer_type_2_description": "Ropa corporativa y productos de marca para equipos, lanzamientos y eventos de empresas.",
+            "customer_type_3_title": "Deportes y fitness",
+            "customer_type_3_image": "shopify://shop_images/Gemini_Generated_Image_ki4u3tki4u3tki4u.png",
+            "customer_type_3_description": "Ropa de equipo duradera y artículos promocionales pensados para el rendimiento.",
+            "customer_type_4_title": "Organizaciones benéficas y ONG",
+            "customer_type_4_image": "shopify://shop_images/Gemini_Generated_Image_my89tmy89tmy89tm.png",
+            "customer_type_4_description": "Ropa y productos de marca para eventos solidarios y recaudación de fondos.",
+            "background_color": "#ffffff",
+            "container_max_width": 1200,
+            "section_padding_top": 20,
+            "section_padding_bottom": 32,
+            "section_padding_top_mobile": 8,
+            "section_padding_bottom_mobile": 40,
+            "column_gap": 32,
+            "column_gap_mobile": 24,
+            "row_gap_mobile": 32,
+            "content_gap": 20,
+            "content_gap_mobile": 12,
+            "title_font_size": 28,
+            "title_font_size_mobile": 18,
+            "title_font_weight": "600",
+            "title_color": "#262626",
+            "description_font_size": 16,
+            "description_font_size_mobile": 12,
+            "description_color": "#666666",
+            "image_border_radius": 14
+          },
+          "blocks": {}
+        }
+      },
+      "block_order": [
+        "ai_gen_block_e873699_dxnUNJ",
+        "ai_gen_block_e873699_zaHBLD"
+      ],
+      "settings": {}
+    },
+    "blocks_K94fzx": {
+      "type": "_blocks",
+      "blocks": {
+        "ai_gen_block_a1e2c49_XQCxwM": {
+          "type": "ai_gen_block_a1e2c49",
+          "settings": {
+            "button_text": "Habla con un asesor →",
+            "button_link": "shopify://pages/contact",
+            "alignment": "center",
+            "desktop_width_percent": 100,
+            "button_color": "#fe3a83",
+            "text_color": "#ffffff",
+            "hover_color": "#413a35",
+            "hover_text_color": "#ffffff",
+            "border_width": 0,
+            "border_color": "#797068",
+            "hover_border_color": "#413a35",
+            "border_radius": 30,
+            "padding_vertical": 15,
+            "padding_horizontal": 30,
+            "font_size": 16,
+            "font_weight": "500"
+          },
+          "blocks": {}
+        }
+      },
+      "block_order": [
+        "ai_gen_block_a1e2c49_XQCxwM"
+      ],
+      "settings": {}
+    },
+    "blocks_rmHGFM": {
+      "type": "_blocks",
+      "name": "Cuadrícula de categorías",
+      "settings": {}
+    },
+    "rich_text_qhGgXr": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_Mg7hUk": {
+          "type": "heading",
+          "settings": {
+            "heading": "<strong>Explora todos los productos</strong>",
+            "heading_size": "h1"
+          }
+        },
+        "text_44FpCz": {
+          "type": "text",
+          "settings": {
+            "text": "<p>La ropa personalizada y los artículos de marca son una forma efectiva de representar a tu empresa en eventos, equipos de trabajo y acciones promocionales. En <strong>Memoram</strong>, trabajamos con prendas y productos de calidad profesional, personalizables mediante impresión y bordado, con un proceso claro y controlado de principio a fin.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "heading_Mg7hUk",
+        "text_44FpCz"
+      ],
+      "name": "t:sections.rich-text.presets.name",
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "scheme-1",
+        "full_width": true,
+        "padding_top": 100,
+        "padding_bottom": 52
+      }
+    },
+    "blocks_BViBVB": {
+      "type": "_blocks",
+      "blocks": {
+        "ai_gen_block_92de45f_AxHwbE": {
+          "type": "ai_gen_block_92de45f",
+          "settings": {
+            "heading": "<strong>Marcas con las que trabajamos</strong>",
+            "description": "<p>Seleccionamos proveedores confiables para garantizar durabilidad, buena presentación y resultados consistentes en cada pedido.</p>",
+            "logo_1": "shopify://shop_images/17.png",
+            "logo_2": "shopify://shop_images/1.png",
+            "logo_3": "shopify://shop_images/16.png",
+            "logo_4": "shopify://shop_images/fs.png",
+            "logo_5": "shopify://shop_images/Diseno_sin_titulo.png",
+            "logo_6": "shopify://shop_images/2_d770603d-3240-480c-80d9-7b368390e3d5.png",
+            "logo_7": "shopify://shop_images/nvn.png",
+            "logo_8": "shopify://shop_images/19.png",
+            "enable_carousel": true,
+            "carousel_speed": 30,
+            "logo_max_width": 80,
+            "logo_max_height": 60,
+            "logo_spacing": 70,
+            "logo_grayscale": 100,
+            "logo_opacity": 70,
+            "background_color": "#f4f4f4",
+            "heading_color": "#001128",
+            "description_color": "#001128",
+            "heading_size": 22,
+            "description_size": 12,
+            "text_column_width": 30,
+            "padding_top": 20,
+            "padding_bottom": 20,
+            "container_width": 1200
+          },
+          "blocks": {}
+        }
+      },
+      "block_order": [
+        "ai_gen_block_92de45f_AxHwbE"
+      ],
+      "settings": {}
+    },
+    "17680014461fd084b1": {
+      "type": "_blocks",
+      "blocks": {
+        "ai_gen_block_31e0838_AB47he": {
+          "type": "ai_gen_block_31e0838",
+          "settings": {
+            "section_heading": "",
+            "heading_alignment": "center",
+            "heading_size": 36,
+            "heading_spacing": 40,
+            "heading_color": "#2b2c2d",
+            "background_color": "#ffffff",
+            "container_width": 1200,
+            "section_padding_top": 60,
+            "section_padding_bottom": 20,
+            "grid_gap": 20,
+            "card_border_radius": 16,
+            "text_padding": 24,
+            "text_size": 26,
+            "text_color": "#2b2c2d",
+            "arrow_size": 40,
+            "overlay_opacity": 0.8,
+            "category_1_enabled": true,
+            "category_1_title": "Impresión de camisetas personalizadas",
+            "category_1_image": "shopify://shop_images/hch.png",
+            "category_1_link": "shopify://collections/camisetas",
+            "category_2_enabled": true,
+            "category_2_title": "Sudaderas personalizadas",
+            "category_2_image": "shopify://shop_images/Gemini_Generated_Image_e9zepve9zepve9ze.png",
+            "category_2_link": "shopify://collections/sudaderas",
+            "category_3_enabled": true,
+            "category_3_title": "Camisas Personalizada",
+            "category_3_image": "shopify://shop_images/Gemini_Generated_Image_gy120zgy120zgy12.png",
+            "category_3_link": "shopify://collections/camisas",
+            "category_4_enabled": true,
+            "category_4_title": "Polos personalizados",
+            "category_4_image": "shopify://shop_images/Gemini_Generated_Image_47ymuh47ymuh47ym.png",
+            "category_4_link": "shopify://collections/polos",
+            "category_5_enabled": true,
+            "category_5_title": "Bolsas personalizadas",
+            "category_5_image": "shopify://shop_images/Gemini_Generated_Image_5jo8eh5jo8eh5jo8.png",
+            "category_5_link": "shopify://collections/bolsos-personalizados",
+            "category_6_enabled": true,
+            "category_6_title": "Gorras",
+            "category_6_image": "shopify://shop_images/Gemini_Generated_Image_ymegsiymegsiymeg.png",
+            "category_6_link": "shopify://collections/gorras-y-gorros",
+            "show_chat_button": false,
+            "chat_text": "¿Tienes alguna pregunta? Chatea con nosotros.",
+            "chat_link": "",
+            "chat_bg_color": "#2b2c2d",
+            "chat_text_color": "#ffffff",
+            "chat_text_size": 14,
+            "chat_padding": 14,
+            "chat_border_radius": 24,
+            "chat_bottom_position": 30,
+            "chat_right_position": 30
+          },
+          "blocks": {}
+        },
+        "ai_gen_block_31e0838_kjXKMW": {
+          "type": "ai_gen_block_31e0838",
+          "settings": {
+            "section_heading": "",
+            "heading_alignment": "center",
+            "heading_size": 36,
+            "heading_spacing": 36,
+            "heading_color": "#2b2c2d",
+            "background_color": "#ffffff",
+            "container_width": 1200,
+            "section_padding_top": 0,
+            "section_padding_bottom": 44,
+            "grid_gap": 20,
+            "card_border_radius": 16,
+            "text_padding": 24,
+            "text_size": 26,
+            "text_color": "#2b2c2d",
+            "arrow_size": 40,
+            "overlay_opacity": 0.8,
+            "category_1_enabled": false,
+            "category_1_title": "",
+            "category_1_image": "shopify://shop_images/Gemini_Generated_Image_h34xeqh34xeqh34x.png",
+            "category_1_link": "shopify://collections/toallas",
+            "category_2_enabled": false,
+            "category_2_title": "Camisas personalizada",
+            "category_2_image": "shopify://shop_images/Gemini_Generated_Image_gy120zgy120zgy12.png",
+            "category_2_link": "shopify://collections/camisas",
+            "category_3_enabled": true,
+            "category_3_title": "Mercancía promocional",
+            "category_3_image": "shopify://shop_images/Gemini_Generated_Image_64nl5i64nl5i64nl.png",
+            "category_3_link": "shopify://collections/mercancia-promocional",
+            "category_4_enabled": false,
+            "category_4_title": "Polos personalizados",
+            "category_4_link": "",
+            "category_5_enabled": false,
+            "category_5_title": "Bolsas personalizadas",
+            "category_5_link": "",
+            "category_6_enabled": false,
+            "category_6_title": "Sombreros personalizados",
+            "category_6_link": "",
+            "show_chat_button": false,
+            "chat_text": "¿Tienes alguna pregunta? Chatea con nosotros.",
+            "chat_link": "",
+            "chat_bg_color": "#2b2c2d",
+            "chat_text_color": "#ffffff",
+            "chat_text_size": 12,
+            "chat_padding": 14,
+            "chat_border_radius": 24,
+            "chat_bottom_position": 30,
+            "chat_right_position": 30
+          },
+          "blocks": {}
+        }
+      },
+      "block_order": [
+        "ai_gen_block_31e0838_AB47he",
+        "ai_gen_block_31e0838_kjXKMW"
+      ],
+      "settings": {}
+    },
+    "image_banner_e6Pgje": {
+      "type": "image-banner",
+      "custom_css": [
+        "@media screen and (min-width: 751px) {{display: none !important; }}"
+      ],
+      "name": "t:sections.image-banner.presets.name",
+      "settings": {
+        "image": "shopify://shop_images/hdka.png",
+        "image_overlay_opacity": 0,
+        "image_height": "adapt",
+        "image_behavior": "none",
+        "desktop_content_position": "middle-center",
+        "desktop_content_alignment": "center",
+        "show_text_box": true,
+        "color_scheme": "",
+        "stack_images_on_mobile": true,
+        "mobile_content_alignment": "center",
+        "show_text_below": true
+      }
+    },
+    "image_banner_7YHBNN": {
+      "type": "image-banner",
+      "custom_css": [
+        "@media screen and (max-width: 750px) {{display: none !important; }}"
+      ],
+      "name": "t:sections.image-banner.presets.name",
+      "settings": {
+        "image": "shopify://shop_images/nvda.png",
+        "image_overlay_opacity": 0,
+        "image_height": "medium",
+        "image_behavior": "none",
+        "desktop_content_position": "middle-center",
+        "desktop_content_alignment": "center",
+        "show_text_box": true,
+        "color_scheme": "",
+        "stack_images_on_mobile": true,
+        "mobile_content_alignment": "center",
+        "show_text_below": true
+      }
+    },
+    "rich_text_aGpjWd": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_ph4wrn": {
+          "type": "heading",
+          "settings": {
+            "heading": "<strong>¿Necesitas asesoramiento de expertos?</strong>",
+            "heading_size": "h1"
+          }
+        },
+        "text_Te3D7a": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Completa los detalles y un especialista de Memoram se pondrá en contacto contigo rapidamente.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "heading_ph4wrn",
+        "text_Te3D7a"
+      ],
+      "name": "t:sections.rich-text.presets.name",
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "scheme-2",
+        "full_width": true,
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
+    },
+    "1768051284403ed55f": {
+      "type": "_blocks",
+      "blocks": {
+        "forms_inline_Bkgz7r": {
+          "type": "shopify://apps/forms/blocks/inline/8744a304-fcb1-4347-b211-bb6b4759a76a",
+          "settings": {
+            "form_id": "828873",
+            "text_color": "#202020",
+            "button_background_color": "#fe3a83",
+            "button_label_color": "#ffffff",
+            "links_color": "#1878b9",
+            "errors_color": "#e02229",
+            "text_alignment": "center",
+            "form_alignment": "center",
+            "padding_top": 43,
+            "padding_bottom": 43,
+            "padding_right": 14,
+            "padding_left": 14
+          }
+        }
+      },
+      "block_order": [
+        "forms_inline_Bkgz7r"
+      ],
+      "name": "Asesoramiento Experto ",
+      "settings": {}
+    }
+  },
+  "order": [
+    "blocks_y74zpG",
+    "image_banner",
+    "blocks_gT8p3r",
+    "1767921834178ac577",
+    "rich_text_A4Mawm",
+    "image_banner_VdnyPg",
+    "image_banner_HzaAex",
+    "rich_text_pXUEhj",
+    "176790797108177672",
+    "image_with_text_KHm8cY",
+    "rich_text_KEDJnc",
+    "1767916557db17aabc",
+    "17679205251bb353a6",
+    "image_with_text_WBBkmr",
+    "rich_text_g7JcTi",
+    "17680504685d4761e9",
+    "blocks_K94fzx",
+    "blocks_rmHGFM",
+    "rich_text_qhGgXr",
+    "blocks_BViBVB",
+    "17680014461fd084b1",
+    "image_banner_e6Pgje",
+    "image_banner_7YHBNN",
+    "rich_text_aGpjWd",
+    "1768051284403ed55f"
+  ]
+}

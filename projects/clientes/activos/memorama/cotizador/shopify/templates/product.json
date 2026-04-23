@@ -1,0 +1,203 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "17712512495b6248a2": {
+      "type": "_blocks",
+      "blocks": {
+        "ai_gen_block_47fa3b3_4pasos": {
+          "type": "ai_gen_block_47fa3b3",
+          "settings": {
+            "heading": "",
+            "heading_size": 36,
+            "heading_color": "#4A3726",
+            "heading_spacing": 20,
+            "step_1_text": "Elige color y cantidad",
+            "step_2_text": "Elige posición del logo",
+            "step_3_text": "Elige método de estampado",
+            "step_4_text": "Obtén tu cotización",
+            "step_1_bg": "#8ED320",
+            "step_1_color": "#ffffff",
+            "step_2_bg": "#F5A623",
+            "step_2_color": "#ffffff",
+            "step_3_bg": "#E91E63",
+            "step_3_color": "#ffffff",
+            "step_4_bg": "#3498DB",
+            "step_4_color": "#ffffff",
+            "circle_size": 70,
+            "step_number_bg": "#8ED320",
+            "step_number_color": "#ffffff",
+            "number_size": 28,
+            "step_text_size": 16,
+            "step_text_color": "#4A3726",
+            "number_text_spacing": 16,
+            "step_gap": 40,
+            "line_thickness": 3,
+            "arrow_size": 14,
+            "line_color": "#4A3726",
+            "cta_text": "¿Tienes prisa? Haz clic aquí para cotizar",
+            "cta_link": "shopify://pages/contact",
+            "cta_bg_color": "#4A3726",
+            "cta_text_color": "#ffffff",
+            "cta_text_size": 16,
+            "cta_padding_vertical": 18,
+            "cta_padding_horizontal": 40,
+            "cta_border_radius": 50,
+            "cta_spacing": 40,
+            "background_color": "#ffffff",
+            "container_width": 1200,
+            "section_padding_top": 40,
+            "section_padding_bottom": 40,
+            "desktop_width_percent": 100
+          },
+          "blocks": {}
+        }
+      },
+      "block_order": [
+        "ai_gen_block_47fa3b3_4pasos"
+      ],
+      "settings": {}
+    },
+    "main": {
+      "type": "main-product",
+      "blocks": {
+        "title": {
+          "type": "title",
+          "settings": {}
+        },
+        "text_HCj9qV": {
+          "type": "text",
+          "settings": {
+            "text": "Desde:",
+            "text_style": "subtitle"
+          }
+        },
+        "price": {
+          "type": "price",
+          "settings": {}
+        },
+        "description": {
+          "type": "description",
+          "settings": {}
+        },
+        "variant_picker_QULHQz": {
+          "type": "variant_picker",
+          "settings": {
+            "picker_type": "button",
+            "swatch_shape": "circle"
+          }
+        },
+        "collapsible-row-1": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "Tiempo de entrega",
+            "icon": "stopwatch",
+            "content": "<p><strong>El tiempo de entrega Estándar:</strong><br/><br/>Entre X<strong> y X días hábiles</strong> a partir de la aprobación final del diseño y confirmación del pedido.</p><p><strong>Envío Urgente:</strong><br/><br/>Disponible en un plazo de X<strong> a X días laborables</strong>, sujeto a disponibilidad.</p>",
+            "page": "product-features"
+          }
+        },
+        "collapsible-row-0": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "Información de Pago",
+            "icon": "price_tag",
+            "content": "<p>Aceptamos tarjetas de crédito/débito y transferencias bancarias. La producción inicia una vez confirmado el pago.</p>",
+            "page": "materials-and-care"
+          }
+        },
+        "collapsible-row-2": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "¿Cuál es el pedido mínimo?",
+            "icon": "shirt",
+            "content": "<p>Trabajamos pedidos pequeños, pero las cantidades mayores ofrecen mejor precio. Algunos métodos de impresión requieren mínimos específicos. Contáctanos para más información.</p>",
+            "page": "merchandising-tips"
+          }
+        },
+        "share": {
+          "type": "share",
+          "settings": {
+            "share_label": "Share"
+          }
+        }
+      },
+      "block_order": [
+        "title",
+        "text_HCj9qV",
+        "price",
+        "description",
+        "variant_picker_QULHQz",
+        "collapsible-row-1",
+        "collapsible-row-0",
+        "collapsible-row-2",
+        "share"
+      ],
+      "settings": {
+        "enable_sticky_info": true,
+        "color_scheme": "scheme-1",
+        "media_size": "small",
+        "constrain_to_viewport": false,
+        "media_fit": "cover",
+        "gallery_layout": "columns",
+        "mobile_thumbnails": "hide",
+        "media_position": "left",
+        "image_zoom": "lightbox",
+        "hide_variants": true,
+        "enable_video_looping": false,
+        "padding_top": 0,
+        "padding_bottom": 36
+      }
+    },
+    "related-products": {
+      "type": "related-products",
+      "settings": {
+        "heading": "Te podrían interesar",
+        "heading_size": "h2",
+        "products_to_show": 5,
+        "columns_desktop": 5,
+        "columns_mobile": "2",
+        "color_scheme": "scheme-1",
+        "image_ratio": "adapt",
+        "image_shape": "default",
+        "show_secondary_image": false,
+        "show_vendor": false,
+        "show_rating": false,
+        "padding_top": 44,
+        "padding_bottom": 44
+      }
+    },
+    "17679079827a13a596": {
+      "type": "apps",
+      "blocks": {
+        "judge_me_reviews_review_widget_ncEdAT": {
+          "type": "shopify://apps/judge-me-reviews/blocks/review_widget/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
+          "settings": {
+            "review_data": "sample_data",
+            "max_width": 1200,
+            "show_shop_reviews": false,
+            "empty_state": "empty_widget"
+          }
+        }
+      },
+      "block_order": [
+        "judge_me_reviews_review_widget_ncEdAT"
+      ],
+      "settings": {
+        "include_margins": true
+      }
+    }
+  },
+  "order": [
+    "17712512495b6248a2",
+    "main",
+    "related-products",
+    "17679079827a13a596"
+  ]
+}

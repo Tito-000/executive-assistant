@@ -1,0 +1,367 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "image_banner_bEA46G": {
+      "type": "image-banner",
+      "blocks": {
+        "heading_3hx99d": {
+          "type": "heading",
+          "settings": {
+            "heading": "<strong>Nuestras Técnicas de Impresión</strong>",
+            "heading_size": "h1"
+          }
+        },
+        "text_UUTykb": {
+          "type": "text",
+          "settings": {
+            "text": "Utilizamos diferentes técnicas de personalización para adaptarnos a cada tipo de prenda, diseño y necesidad. Te asesoramos para elegir la opción más adecuada según tu proyecto.",
+            "text_style": "body"
+          }
+        },
+        "buttons_TkhpXi": {
+          "type": "buttons",
+          "settings": {
+            "button_label_1": "Solicitar cotización segura →",
+            "button_link_1": "shopify://pages/contact",
+            "button_style_secondary_1": false,
+            "button_label_2": "",
+            "button_link_2": "shopify://collections/all",
+            "button_style_secondary_2": false
+          }
+        }
+      },
+      "block_order": [
+        "heading_3hx99d",
+        "text_UUTykb",
+        "buttons_TkhpXi"
+      ],
+      "settings": {
+        "image": "shopify://shop_images/Gemini_Generated_Image_yan0wayan0wayan0.png",
+        "image_overlay_opacity": 20,
+        "image_height": "small",
+        "image_behavior": "none",
+        "desktop_content_position": "middle-left",
+        "desktop_content_alignment": "left",
+        "show_text_box": false,
+        "color_scheme": "scheme-2409e03b-d5f6-4937-83bc-a26a2d6c243c",
+        "stack_images_on_mobile": true,
+        "mobile_content_alignment": "left",
+        "show_text_below": false
+      }
+    },
+    "blocks_A8JBwx": {
+      "type": "_blocks",
+      "name": "Marcas con carrusel",
+      "settings": {}
+    },
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+        "padding_top": 28,
+        "padding_bottom": 28
+      }
+    },
+    "blocks_Waprmq": {
+      "type": "_blocks",
+      "blocks": {
+        "ai_gen_block_92de45f_WwkqT9": {
+          "type": "ai_gen_block_92de45f",
+          "settings": {
+            "heading": "<strong>Marcas con las que trabajamos</strong>",
+            "description": "<p>Seleccionamos proveedores confiables para garantizar durabilidad, buena presentación y resultados consistentes en cada pedido.</p>",
+            "logo_1": "shopify://shop_images/17.png",
+            "logo_2": "shopify://shop_images/1.png",
+            "logo_3": "shopify://shop_images/16.png",
+            "logo_4": "shopify://shop_images/fs.png",
+            "logo_5": "shopify://shop_images/Diseno_sin_titulo.png",
+            "logo_6": "shopify://shop_images/2_d770603d-3240-480c-80d9-7b368390e3d5.png",
+            "logo_7": "shopify://shop_images/nvn.png",
+            "logo_8": "shopify://shop_images/19.png",
+            "enable_carousel": true,
+            "carousel_speed": 30,
+            "logo_max_width": 80,
+            "logo_max_height": 60,
+            "logo_spacing": 70,
+            "logo_grayscale": 100,
+            "logo_opacity": 70,
+            "background_color": "#f4f4f4",
+            "heading_color": "#001128",
+            "description_color": "#001128",
+            "heading_size": 22,
+            "description_size": 12,
+            "text_column_width": 30,
+            "padding_top": 20,
+            "padding_bottom": 20,
+            "container_width": 1200
+          },
+          "blocks": {}
+        }
+      },
+      "block_order": [
+        "ai_gen_block_92de45f_WwkqT9"
+      ],
+      "name": "Marcas",
+      "settings": {}
+    },
+    "image_with_text_G8Q8FF": {
+      "type": "image-with-text",
+      "blocks": {
+        "heading_bAWbDq": {
+          "type": "heading",
+          "settings": {
+            "heading": "<strong>Bordados</strong>",
+            "heading_size": "h1"
+          }
+        },
+        "text_d4kgJm": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Acabado premium y duradero, ideal para uniformes, gorras y prendas corporativas. Aporta una imagen profesional y resistente al uso diario y a los lavados.</p>",
+            "text_style": "body"
+          }
+        },
+        "button_8Y84nY": {
+          "type": "button",
+          "settings": {
+            "button_label": "Solicita una cotización",
+            "button_link": "shopify://pages/contact",
+            "button_style_secondary": false
+          }
+        }
+      },
+      "block_order": [
+        "heading_bAWbDq",
+        "text_d4kgJm",
+        "button_8Y84nY"
+      ],
+      "name": "t:sections.image-with-text.presets.name",
+      "settings": {
+        "image": "shopify://shop_images/dad_bc82ea9b-fc0f-4e83-b081-0dd7a49f7178.png",
+        "height": "adapt",
+        "desktop_image_width": "small",
+        "layout": "image_first",
+        "image_behavior": "none",
+        "content_layout": "no-overlap",
+        "desktop_content_position": "top",
+        "desktop_content_alignment": "left",
+        "mobile_content_alignment": "left",
+        "section_color_scheme": "scheme-1",
+        "color_scheme": "scheme-1c91a600-7de1-4353-ae71-8b180db50517",
+        "padding_top": 68,
+        "padding_bottom": 36
+      }
+    },
+    "image_with_text_tHEcnz": {
+      "type": "image-with-text",
+      "blocks": {
+        "heading_etPrLJ": {
+          "type": "heading",
+          "settings": {
+            "heading": "<strong>Serigrafía</strong>",
+            "heading_size": "h1"
+          }
+        },
+        "text_TCMEQX": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Técnica clásica y eficiente para producciones en volumen. Colores sólidos, excelente durabilidad y costos optimizados en grandes cantidades.</p>",
+            "text_style": "body"
+          }
+        },
+        "button_PkQtDE": {
+          "type": "button",
+          "settings": {
+            "button_label": "Solicita una cotización",
+            "button_link": "shopify://pages/contact",
+            "button_style_secondary": false
+          }
+        }
+      },
+      "block_order": [
+        "heading_etPrLJ",
+        "text_TCMEQX",
+        "button_PkQtDE"
+      ],
+      "name": "t:sections.image-with-text.presets.name",
+      "settings": {
+        "image": "shopify://shop_images/hg.png",
+        "height": "adapt",
+        "desktop_image_width": "small",
+        "layout": "image_first",
+        "image_behavior": "none",
+        "content_layout": "no-overlap",
+        "desktop_content_position": "top",
+        "desktop_content_alignment": "left",
+        "mobile_content_alignment": "left",
+        "section_color_scheme": "scheme-1",
+        "color_scheme": "scheme-1c91a600-7de1-4353-ae71-8b180db50517",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "image_with_text_dNMNTz": {
+      "type": "image-with-text",
+      "blocks": {
+        "heading_zAtFFb": {
+          "type": "heading",
+          "settings": {
+            "heading": "<strong>DTF (Direct to Film)</strong>",
+            "heading_size": "h1"
+          }
+        },
+        "text_6DjYJA": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Alta calidad de impresión con gran detalle y colores vibrantes. Permite personalizar distintos tipos de telas sin limitar el diseño.</p>",
+            "text_style": "body"
+          }
+        },
+        "button_rnJYDw": {
+          "type": "button",
+          "settings": {
+            "button_label": "Solicita una cotización",
+            "button_link": "shopify://pages/contact",
+            "button_style_secondary": false
+          }
+        }
+      },
+      "block_order": [
+        "heading_zAtFFb",
+        "text_6DjYJA",
+        "button_rnJYDw"
+      ],
+      "name": "t:sections.image-with-text.presets.name",
+      "settings": {
+        "image": "shopify://shop_images/jhg.png",
+        "height": "adapt",
+        "desktop_image_width": "small",
+        "layout": "image_first",
+        "image_behavior": "none",
+        "content_layout": "no-overlap",
+        "desktop_content_position": "top",
+        "desktop_content_alignment": "left",
+        "mobile_content_alignment": "left",
+        "section_color_scheme": "scheme-1",
+        "color_scheme": "scheme-1c91a600-7de1-4353-ae71-8b180db50517",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "image_with_text_6YLtbp": {
+      "type": "image-with-text",
+      "blocks": {
+        "heading_gUNAjN": {
+          "type": "heading",
+          "settings": {
+            "heading": "<strong>Sublimación</strong>",
+            "heading_size": "h1"
+          }
+        },
+        "text_UEktJc": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Alta calidad de impresión con gran detalle y colores vibrantes. Permite personalizar distintos tipos de telas sin limitar el diseño.</p>",
+            "text_style": "body"
+          }
+        },
+        "button_HwExBW": {
+          "type": "button",
+          "settings": {
+            "button_label": "Solicita una cotización",
+            "button_link": "shopify://pages/contact",
+            "button_style_secondary": false
+          }
+        }
+      },
+      "block_order": [
+        "heading_gUNAjN",
+        "text_UEktJc",
+        "button_HwExBW"
+      ],
+      "name": "t:sections.image-with-text.presets.name",
+      "settings": {
+        "image": "shopify://shop_images/hfdg.png",
+        "height": "adapt",
+        "desktop_image_width": "small",
+        "layout": "image_first",
+        "image_behavior": "none",
+        "content_layout": "no-overlap",
+        "desktop_content_position": "top",
+        "desktop_content_alignment": "left",
+        "mobile_content_alignment": "left",
+        "section_color_scheme": "scheme-1",
+        "color_scheme": "scheme-1c91a600-7de1-4353-ae71-8b180db50517",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "image_with_text_Y38Vtj": {
+      "type": "image-with-text",
+      "blocks": {
+        "heading_pMT7Ki": {
+          "type": "heading",
+          "settings": {
+            "heading": "Obtén un <strong>10% de descuento</strong> en tu primer pedido",
+            "heading_size": "h1"
+          }
+        },
+        "text_qCfnjJ": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Solicita una cotización rápida para tu próximo pedido de ropa o productos personalizados y te damos <strong>10% de descuento en tu primera orden</strong> o <strong>envío gratuito en pedidos superiores a $000</strong>.</p>",
+            "text_style": "body"
+          }
+        },
+        "button_3WT7df": {
+          "type": "button",
+          "settings": {
+            "button_label": "Obtener cotización rápida",
+            "button_link": "shopify://pages/contact",
+            "button_style_secondary": false
+          }
+        }
+      },
+      "block_order": [
+        "heading_pMT7Ki",
+        "text_qCfnjJ",
+        "button_3WT7df"
+      ],
+      "name": "t:sections.image-with-text.presets.name",
+      "settings": {
+        "image": "shopify://shop_images/hfhg.png",
+        "height": "adapt",
+        "desktop_image_width": "medium",
+        "layout": "image_first",
+        "image_behavior": "none",
+        "content_layout": "no-overlap",
+        "desktop_content_position": "top",
+        "desktop_content_alignment": "left",
+        "mobile_content_alignment": "left",
+        "section_color_scheme": "",
+        "color_scheme": "scheme-1d996e9c-8ce3-4c0a-ab03-e3f2f1c7edd3",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    }
+  },
+  "order": [
+    "image_banner_bEA46G",
+    "blocks_A8JBwx",
+    "main",
+    "blocks_Waprmq",
+    "image_with_text_G8Q8FF",
+    "image_with_text_tHEcnz",
+    "image_with_text_dNMNTz",
+    "image_with_text_6YLtbp",
+    "image_with_text_Y38Vtj"
+  ]
+}

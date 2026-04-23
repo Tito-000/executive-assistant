@@ -1,0 +1,20 @@
+{%- comment -%}
+  Memorama — banner de rango estimado en product page.
+  Usage: {% render 'mmr-price-range-banner', product: product %}
+{%- endcomment -%}
+{%- if product -%}
+  {%- assign _mmr_title = product.title | downcase -%}
+  {%- assign _mmr_base = 500 -%}
+  {%- if _mmr_title contains 'sudadera' or _mmr_title contains 'hoodie' or _mmr_title contains 'buzo' or _mmr_title contains 'capucha' -%}{%- assign _mmr_base = 1200 -%}{%- endif -%}
+  {%- if _mmr_title contains 'polo' -%}{%- assign _mmr_base = 650 -%}{%- endif -%}
+  {%- if _mmr_title contains 'gorra' or _mmr_title contains 'cap ' -%}{%- assign _mmr_base = 350 -%}{%- endif -%}
+  {%- if _mmr_title contains 't-shirt' or _mmr_title contains 'tshirt' or _mmr_title contains 'camiseta' or _mmr_title contains 'camisa' or _mmr_title contains 'playera' -%}{%- assign _mmr_base = 450 -%}{%- endif -%}
+  {%- assign _mmr_min = _mmr_base -%}
+  {%- assign _mmr_max_raw = _mmr_base | plus: 150 | plus: 150 -%}
+  {%- assign _mmr_max = _mmr_max_raw | times: 110 | divided_by: 100 -%}
+  <div class="mmr-pp-range">
+    <span class="mmr-pp-range-label">Precio estimado por unidad</span>
+    <span class="mmr-pp-range-value">RD$ {{ _mmr_min }} — RD$ {{ _mmr_max }}</span>
+    <span class="mmr-pp-range-hint">Varía según técnica, posiciones y cantidad</span>
+  </div>
+{%- endif -%}

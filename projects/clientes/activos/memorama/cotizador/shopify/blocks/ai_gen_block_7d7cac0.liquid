@@ -1,0 +1,919 @@
+{% doc %}
+  @prompt
+    Crea una sección de formulario de contacto y asesoramiento para una tienda Shopify de productos personalizados.
+    
+    Referencia visual obligatoria:
+    
+    La primera imagen corresponde a vista escritorio (desktop).
+    
+    Las siguientes imágenes corresponden a vista móvil (mobile).
+    
+    El diseño debe adaptarse fielmente entre ambas vistas.
+    
+    🖥️ ESTRUCTURA DESKTOP
+    
+    Contenedor ancho, centrado.
+    
+    Título grande centrado:
+    “¿Necesita asesoramiento de expertos?”
+    
+    Subtítulo debajo, centrado:
+    “Complete los detalles a continuación y nos comunicaremos con usted en 15 minutos o menos.”
+    
+    Formulario en dos columnas:
+    
+    Columna izquierda:
+    
+    Fecha límite de entrega (con icono de calendario)
+    
+    Nombre de pila *
+    
+    Teléfono *
+    
+    Productos necesarios (checkboxes en varias columnas)
+    
+    Columna derecha:
+    
+    Presupuesto
+    
+    Apellido
+    
+    Correo electrónico *
+    
+    Campo “Más información *” (textarea)
+    
+    Botón CTA grande, centrado al final:
+    “Solicitar asesoramiento de expertos →”
+    
+    📱 ESTRUCTURA MOBILE
+    
+    Contenido en una sola columna.
+    
+    Orden de los elementos:
+    
+    Título
+    
+    Subtítulo
+    
+    Campos del formulario (uno debajo del otro)
+    
+    Productos necesarios (checkboxes en lista vertical)
+    
+    Campo “Más información”
+    
+    Botón CTA ancho (full width)
+    
+    Espaciado amplio entre campos para facilitar la interacción táctil.
+    
+    Inputs grandes y legibles.
+    
+    📋 CAMPOS DEL FORMULARIO
+    
+    Fecha límite de entrega (date picker)
+    
+    Presupuesto
+    
+    Nombre de pila *
+    
+    Apellido
+    
+    Teléfono *
+    
+    Correo electrónico *
+    
+    Productos necesarios * (checkboxes):
+    
+    Camisetas
+    
+    Camisas polo
+    
+    Sudaderas con capucha
+    
+    Sombreros y gorras
+    
+    Chaquetas
+    
+    Alta visibilidad
+    
+    Bolsas de mano
+    
+    Toallas
+    
+    Cordones
+    
+    Bolígrafos
+    
+    Medias
+    
+    Otros
+    
+    Más información *
+    Placeholder:
+    “¿Cuántos productos necesitas? ¿Posición de impresión? ¿Bordado o impreso?”
+    
+    🎨 ESTILO VISUAL
+    
+    Fondo blanco.
+    
+    Bordes suaves y redondeados en los campos.
+    
+    Tipografía moderna y profesional.
+    
+    Diseño limpio y corporativo.
+    
+    CTA en color destacado (naranja).
+    
+    💬 CHAT FLOTANTE
+    
+    Botón flotante de chat en la esquina inferior derecha.
+    
+    Texto visible:
+    “¿Tienes alguna 
+{% enddoc %}
+{% assign ai_gen_id = block.id | replace: '_', '' | downcase %}
+
+{% style %}
+  .ai-expert-form-{{ ai_gen_id }} {
+    display: block;
+    width: 100%;
+    background-color: {{ block.settings.background_color }};
+    padding: 60px 20px;
+  }
+
+  .ai-expert-form__container-{{ ai_gen_id }} {
+    max-width: {{ block.settings.container_width }}px;
+    margin: 0 auto;
+  }
+
+  .ai-expert-form__header-{{ ai_gen_id }} {
+    text-align: center;
+    margin-bottom: 50px;
+  }
+
+  .ai-expert-form__title-{{ ai_gen_id }} {
+    font-size: {{ block.settings.title_size }}px;
+    font-weight: 700;
+    color: {{ block.settings.title_color }};
+    margin: 0 0 16px;
+    line-height: 1.2;
+  }
+
+  .ai-expert-form__subtitle-{{ ai_gen_id }} {
+    font-size: {{ block.settings.subtitle_size }}px;
+    color: {{ block.settings.subtitle_color }};
+    margin: 0;
+    line-height: 1.5;
+  }
+
+  .ai-expert-form__grid-{{ ai_gen_id }} {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+    margin-bottom: 24px;
+  }
+
+  .ai-expert-form__field-{{ ai_gen_id }} {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .ai-expert-form__label-{{ ai_gen_id }} {
+    font-size: 14px;
+    font-weight: 500;
+    color: {{ block.settings.label_color }};
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+
+  .ai-expert-form__required-{{ ai_gen_id }} {
+    color: {{ block.settings.required_color }};
+  }
+
+  .ai-expert-form__input-{{ ai_gen_id }},
+  .ai-expert-form__textarea-{{ ai_gen_id }} {
+    padding: 14px 16px;
+    border: {{ block.settings.input_border_width }}px solid {{ block.settings.input_border_color }};
+    border-radius: {{ block.settings.input_border_radius }}px;
+    font-size: 15px;
+    font-family: inherit;
+    color: {{ block.settings.input_text_color }};
+    background-color: {{ block.settings.input_bg_color }};
+    transition: border-color 0.2s ease;
+  }
+
+  .ai-expert-form__input-{{ ai_gen_id }}:focus,
+  .ai-expert-form__textarea-{{ ai_gen_id }}:focus {
+    outline: none;
+    border-color: {{ block.settings.input_focus_border_color }};
+  }
+
+  .ai-expert-form__input-{{ ai_gen_id }}::placeholder,
+  .ai-expert-form__textarea-{{ ai_gen_id }}::placeholder {
+    color: {{ block.settings.placeholder_color }};
+  }
+
+  .ai-expert-form__textarea-{{ ai_gen_id }} {
+    min-height: 140px;
+    resize: vertical;
+  }
+
+  .ai-expert-form__icon-{{ ai_gen_id }} {
+    width: 18px;
+    height: 18px;
+    color: {{ block.settings.icon_color }};
+  }
+
+  .ai-expert-form__checkboxes-{{ ai_gen_id }} {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12px;
+    margin-top: 8px;
+  }
+
+  .ai-expert-form__checkbox-wrapper-{{ ai_gen_id }} {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+
+  .ai-expert-form__checkbox-{{ ai_gen_id }} {
+    width: 18px;
+    height: 18px;
+    cursor: pointer;
+    accent-color: {{ block.settings.checkbox_color }};
+  }
+
+  .ai-expert-form__checkbox-label-{{ ai_gen_id }} {
+    font-size: 14px;
+    color: {{ block.settings.label_color }};
+    cursor: pointer;
+  }
+
+  .ai-expert-form__button-wrapper-{{ ai_gen_id }} {
+    text-align: center;
+    margin-top: 32px;
+  }
+
+  .ai-expert-form__button-{{ ai_gen_id }} {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    padding: 18px 48px;
+    background-color: {{ block.settings.button_bg_color }};
+    color: {{ block.settings.button_text_color }};
+    font-size: {{ block.settings.button_font_size }}px;
+    font-weight: 600;
+    border: none;
+    border-radius: {{ block.settings.button_border_radius }}px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+
+  .ai-expert-form__button-{{ ai_gen_id }}:hover {
+    background-color: {{ block.settings.button_hover_bg_color }};
+  }
+
+  .ai-expert-form__arrow-{{ ai_gen_id }} {
+    width: 20px;
+    height: 20px;
+  }
+
+  .ai-expert-form__success-{{ ai_gen_id }} {
+    background-color: {{ block.settings.success_bg_color }};
+    color: {{ block.settings.success_text_color }};
+    padding: 16px;
+    border-radius: {{ block.settings.input_border_radius }}px;
+    text-align: center;
+    margin-top: 16px;
+  }
+
+  .ai-expert-form__error-{{ ai_gen_id }} {
+    background-color: {{ block.settings.error_bg_color }};
+    color: {{ block.settings.error_text_color }};
+    padding: 16px;
+    border-radius: {{ block.settings.input_border_radius }}px;
+    margin-top: 16px;
+  }
+
+  .ai-expert-form__chat-button-{{ ai_gen_id }} {
+    position: fixed;
+    bottom: 24px;
+    right: 24px;
+    background-color: {{ block.settings.chat_bg_color }};
+    color: {{ block.settings.chat_text_color }};
+    padding: 16px 20px;
+    border-radius: 50px;
+    border: none;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 600;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    transition: transform 0.2s ease;
+  }
+
+  .ai-expert-form__chat-button-{{ ai_gen_id }}:hover {
+    transform: scale(1.05);
+  }
+
+  .ai-expert-form__chat-icon-{{ ai_gen_id }} {
+    width: 24px;
+    height: 24px;
+  }
+
+  @media screen and (max-width: 749px) {
+    .ai-expert-form-{{ ai_gen_id }} {
+      padding: 40px 16px;
+    }
+
+    .ai-expert-form__title-{{ ai_gen_id }} {
+      font-size: {{ block.settings.title_size | times: 0.7 }}px;
+    }
+
+    .ai-expert-form__subtitle-{{ ai_gen_id }} {
+      font-size: {{ block.settings.subtitle_size | times: 0.9 }}px;
+    }
+
+    .ai-expert-form__grid-{{ ai_gen_id }} {
+      grid-template-columns: 1fr;
+      gap: 20px;
+    }
+
+    .ai-expert-form__checkboxes-{{ ai_gen_id }} {
+      grid-template-columns: 1fr;
+    }
+
+    .ai-expert-form__button-{{ ai_gen_id }} {
+      width: 100%;
+      padding: 16px 32px;
+    }
+
+    .ai-expert-form__chat-button-{{ ai_gen_id }} {
+      bottom: 16px;
+      right: 16px;
+      font-size: 12px;
+      padding: 12px 16px;
+    }
+  }
+{% endstyle %}
+
+<expert-consultation-form-{{ ai_gen_id }} class="ai-expert-form-{{ ai_gen_id }}" {{ block.shopify_attributes }}>
+  <div class="ai-expert-form__container-{{ ai_gen_id }}">
+    <div class="ai-expert-form__header-{{ ai_gen_id }}">
+      {% if block.settings.title != blank %}
+        <h2 class="ai-expert-form__title-{{ ai_gen_id }}">{{ block.settings.title }}</h2>
+      {% endif %}
+      {% if block.settings.subtitle != blank %}
+        <p class="ai-expert-form__subtitle-{{ ai_gen_id }}">{{ block.settings.subtitle }}</p>
+      {% endif %}
+    </div>
+
+    {%- form 'contact' -%}
+      <input type="hidden" name="contact[form_type]" value="expert_consultation">
+      
+      <div class="ai-expert-form__grid-{{ ai_gen_id }}">
+        <div class="ai-expert-form__field-{{ ai_gen_id }}">
+          <label class="ai-expert-form__label-{{ ai_gen_id }}" for="delivery_deadline_{{ ai_gen_id }}">
+            <svg class="ai-expert-form__icon-{{ ai_gen_id }}" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+              <line x1="16" y1="2" x2="16" y2="6"></line>
+              <line x1="8" y1="2" x2="8" y2="6"></line>
+              <line x1="3" y1="10" x2="21" y2="10"></line>
+            </svg>
+            {{ block.settings.delivery_label }}
+          </label>
+          <input
+            type="text"
+            id="delivery_deadline_{{ ai_gen_id }}"
+            name="contact[delivery_deadline]"
+            class="ai-expert-form__input-{{ ai_gen_id }}"
+            placeholder="{{ block.settings.delivery_placeholder }}"
+          >
+        </div>
+
+        <div class="ai-expert-form__field-{{ ai_gen_id }}">
+          <label class="ai-expert-form__label-{{ ai_gen_id }}" for="budget_{{ ai_gen_id }}">
+            {{ block.settings.budget_label }}
+          </label>
+          <input
+            type="text"
+            id="budget_{{ ai_gen_id }}"
+            name="contact[budget]"
+            class="ai-expert-form__input-{{ ai_gen_id }}"
+            placeholder="{{ block.settings.budget_placeholder }}"
+          >
+        </div>
+
+        <div class="ai-expert-form__field-{{ ai_gen_id }}">
+          <label class="ai-expert-form__label-{{ ai_gen_id }}" for="first_name_{{ ai_gen_id }}">
+            {{ block.settings.first_name_label }} <span class="ai-expert-form__required-{{ ai_gen_id }}">*</span>
+          </label>
+          <input
+            type="text"
+            id="first_name_{{ ai_gen_id }}"
+            name="contact[first_name]"
+            class="ai-expert-form__input-{{ ai_gen_id }}"
+            required
+          >
+        </div>
+
+        <div class="ai-expert-form__field-{{ ai_gen_id }}">
+          <label class="ai-expert-form__label-{{ ai_gen_id }}" for="last_name_{{ ai_gen_id }}">
+            {{ block.settings.last_name_label }}
+          </label>
+          <input
+            type="text"
+            id="last_name_{{ ai_gen_id }}"
+            name="contact[last_name]"
+            class="ai-expert-form__input-{{ ai_gen_id }}"
+          >
+        </div>
+
+        <div class="ai-expert-form__field-{{ ai_gen_id }}">
+          <label class="ai-expert-form__label-{{ ai_gen_id }}" for="phone_{{ ai_gen_id }}">
+            {{ block.settings.phone_label }} <span class="ai-expert-form__required-{{ ai_gen_id }}">*</span>
+          </label>
+          <input
+            type="tel"
+            id="phone_{{ ai_gen_id }}"
+            name="contact[phone]"
+            class="ai-expert-form__input-{{ ai_gen_id }}"
+            required
+          >
+        </div>
+
+        <div class="ai-expert-form__field-{{ ai_gen_id }}">
+          <label class="ai-expert-form__label-{{ ai_gen_id }}" for="email_{{ ai_gen_id }}">
+            {{ block.settings.email_label }} <span class="ai-expert-form__required-{{ ai_gen_id }}">*</span>
+          </label>
+          <input
+            type="email"
+            id="email_{{ ai_gen_id }}"
+            name="contact[email]"
+            class="ai-expert-form__input-{{ ai_gen_id }}"
+            required
+            {% if form.errors %}
+              aria-invalid="true"
+              aria-describedby="ai-expert-form-error-{{ ai_gen_id }}"
+            {% endif %}
+            {% if form.posted_successfully? %}
+              aria-describedby="ai-expert-form-success-{{ ai_gen_id }}"
+            {% endif %}
+          >
+        </div>
+      </div>
+
+      <div class="ai-expert-form__field-{{ ai_gen_id }}">
+        <label class="ai-expert-form__label-{{ ai_gen_id }}">
+          {{ block.settings.products_label }} <span class="ai-expert-form__required-{{ ai_gen_id }}">*</span>
+        </label>
+        <div class="ai-expert-form__checkboxes-{{ ai_gen_id }}">
+          {% assign products = "Camisetas,Camisas polo,Sudaderas con capucha,Sombreros y gorras,Chaquetas,Alta visibilidad,Bolsas de mano,Toallas,Cordones,Bolígrafos,Medias,Otros" | split: ',' %}
+          {% for product in products %}
+            <div class="ai-expert-form__checkbox-wrapper-{{ ai_gen_id }}">
+              <input
+                type="checkbox"
+                id="product_{{ forloop.index }}_{{ ai_gen_id }}"
+                name="contact[products][]"
+                value="{{ product }}"
+                class="ai-expert-form__checkbox-{{ ai_gen_id }}"
+              >
+              <label for="product_{{ forloop.index }}_{{ ai_gen_id }}" class="ai-expert-form__checkbox-label-{{ ai_gen_id }}">
+                {{ product }}
+              </label>
+            </div>
+          {% endfor %}
+        </div>
+      </div>
+
+      <div class="ai-expert-form__field-{{ ai_gen_id }}">
+        <label class="ai-expert-form__label-{{ ai_gen_id }}" for="more_info_{{ ai_gen_id }}">
+          {{ block.settings.more_info_label }} <span class="ai-expert-form__required-{{ ai_gen_id }}">*</span>
+        </label>
+        <textarea
+          id="more_info_{{ ai_gen_id }}"
+          name="contact[body]"
+          class="ai-expert-form__textarea-{{ ai_gen_id }}"
+          placeholder="{{ block.settings.more_info_placeholder }}"
+          required
+        ></textarea>
+      </div>
+
+      {%- if form.errors -%}
+        <div id="ai-expert-form-error-{{ ai_gen_id }}" class="ai-expert-form__error-{{ ai_gen_id }}">
+          <span>{{ form.errors.messages.email }}</span>
+        </div>
+      {%- endif -%}
+
+      {%- if form.posted_successfully? -%}
+        <div id="ai-expert-form-success-{{ ai_gen_id }}" class="ai-expert-form__success-{{ ai_gen_id }}">
+          <span>{{ block.settings.success_message }}</span>
+        </div>
+      {%- endif -%}
+
+      <div class="ai-expert-form__button-wrapper-{{ ai_gen_id }}">
+        <button type="submit" class="ai-expert-form__button-{{ ai_gen_id }}">
+          {{ block.settings.button_text }}
+          <svg class="ai-expert-form__arrow-{{ ai_gen_id }}" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <line x1="5" y1="12" x2="19" y2="12"></line>
+            <polyline points="12 5 19 12 12 19"></polyline>
+          </svg>
+        </button>
+      </div>
+    {%- endform -%}
+  </div>
+
+  {% if block.settings.show_chat_button %}
+    <button class="ai-expert-form__chat-button-{{ ai_gen_id }}" type="button">
+      <svg class="ai-expert-form__chat-icon-{{ ai_gen_id }}" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" />
+      </svg>
+      {{ block.settings.chat_button_text }}
+    </button>
+  {% endif %}
+</expert-consultation-form-{{ ai_gen_id }}>
+
+<script>
+  (function() {
+    class ExpertConsultationForm{{ ai_gen_id }} extends HTMLElement {
+      constructor() {
+        super();
+      }
+
+      connectedCallback() {
+        this.chatButton = this.querySelector('.ai-expert-form__chat-button-{{ ai_gen_id }}');
+        if (this.chatButton) {
+          this.chatButton.addEventListener('click', this.handleChatClick.bind(this));
+        }
+      }
+
+      handleChatClick() {
+        const chatUrl = '{{ block.settings.chat_url }}';
+        if (chatUrl) {
+          window.open(chatUrl, '_blank');
+        }
+      }
+    }
+
+    customElements.define('expert-consultation-form-{{ ai_gen_id }}', ExpertConsultationForm{{ ai_gen_id }});
+  })();
+</script>
+
+{% schema %}
+{
+  "name": "Asesoramiento experto",
+  "tag": null,
+  "settings": [
+    {
+      "type": "header",
+      "content": "Encabezado"
+    },
+    {
+      "type": "inline_richtext",
+      "id": "title",
+      "label": "Título",
+      "default": "¿Necesita asesoramiento de expertos?"
+    },
+    {
+      "type": "inline_richtext",
+      "id": "subtitle",
+      "label": "Subtítulo",
+      "default": "Complete los detalles a continuación y nos comunicaremos con usted en 15 minutos o menos."
+    },
+    {
+      "type": "range",
+      "id": "title_size",
+      "min": 24,
+      "max": 60,
+      "step": 2,
+      "unit": "px",
+      "label": "Tamaño del título",
+      "default": 42
+    },
+    {
+      "type": "range",
+      "id": "subtitle_size",
+      "min": 14,
+      "max": 24,
+      "step": 1,
+      "unit": "px",
+      "label": "Tamaño del subtítulo",
+      "default": 16
+    },
+    {
+      "type": "header",
+      "content": "Etiquetas de campos"
+    },
+    {
+      "type": "text",
+      "id": "delivery_label",
+      "label": "Etiqueta fecha de entrega",
+      "default": "Fecha límite de entrega"
+    },
+    {
+      "type": "text",
+      "id": "delivery_placeholder",
+      "label": "Placeholder fecha",
+      "default": "DD/MM/AAAA"
+    },
+    {
+      "type": "text",
+      "id": "budget_label",
+      "label": "Etiqueta presupuesto",
+      "default": "Presupuesto"
+    },
+    {
+      "type": "text",
+      "id": "budget_placeholder",
+      "label": "Placeholder presupuesto",
+      "default": "Ingrese su presupuesto"
+    },
+    {
+      "type": "text",
+      "id": "first_name_label",
+      "label": "Etiqueta nombre",
+      "default": "Nombre de pila"
+    },
+    {
+      "type": "text",
+      "id": "last_name_label",
+      "label": "Etiqueta apellido",
+      "default": "Apellido"
+    },
+    {
+      "type": "text",
+      "id": "phone_label",
+      "label": "Etiqueta teléfono",
+      "default": "Teléfono"
+    },
+    {
+      "type": "text",
+      "id": "email_label",
+      "label": "Etiqueta correo",
+      "default": "Correo electrónico"
+    },
+    {
+      "type": "text",
+      "id": "products_label",
+      "label": "Etiqueta productos",
+      "default": "Productos necesarios"
+    },
+    {
+      "type": "text",
+      "id": "more_info_label",
+      "label": "Etiqueta más información",
+      "default": "Más información"
+    },
+    {
+      "type": "text",
+      "id": "more_info_placeholder",
+      "label": "Placeholder información"
+    },
+    {
+      "type": "header",
+      "content": "Botón"
+    },
+    {
+      "type": "text",
+      "id": "button_text",
+      "label": "Texto del botón"
+    },
+    {
+      "type": "range",
+      "id": "button_font_size",
+      "min": 14,
+      "max": 20,
+      "step": 1,
+      "unit": "px",
+      "label": "Tamaño de fuente",
+      "default": 16
+    },
+    {
+      "type": "range",
+      "id": "button_border_radius",
+      "min": 0,
+      "max": 50,
+      "step": 2,
+      "unit": "px",
+      "label": "Radio de borde",
+      "default": 8
+    },
+    {
+      "type": "header",
+      "content": "Chat flotante"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_chat_button",
+      "label": "Mostrar botón de chat",
+      "default": true
+    },
+    {
+      "type": "text",
+      "id": "chat_button_text",
+      "label": "Texto del botón"
+    },
+    {
+      "type": "url",
+      "id": "chat_url",
+      "label": "URL del chat"
+    },
+    {
+      "type": "header",
+      "content": "Mensajes"
+    },
+    {
+      "type": "text",
+      "id": "success_message",
+      "label": "Mensaje de éxito"
+    },
+    {
+      "type": "header",
+      "content": "Diseño"
+    },
+    {
+      "type": "range",
+      "id": "container_width",
+      "min": 800,
+      "max": 1400,
+      "step": 50,
+      "unit": "px",
+      "label": "Ancho del contenedor",
+      "default": 1100
+    },
+    {
+      "type": "color",
+      "id": "background_color",
+      "label": "Color de fondo",
+      "default": "#ffffff"
+    },
+    {
+      "type": "color",
+      "id": "title_color",
+      "label": "Color del título",
+      "default": "#2b2c2d"
+    },
+    {
+      "type": "color",
+      "id": "subtitle_color",
+      "label": "Color del subtítulo",
+      "default": "#666666"
+    },
+    {
+      "type": "color",
+      "id": "label_color",
+      "label": "Color de etiquetas",
+      "default": "#2b2c2d"
+    },
+    {
+      "type": "color",
+      "id": "required_color",
+      "label": "Color asterisco",
+      "default": "#ff0000"
+    },
+    {
+      "type": "header",
+      "content": "Campos de entrada"
+    },
+    {
+      "type": "color",
+      "id": "input_bg_color",
+      "label": "Color de fondo",
+      "default": "#ffffff"
+    },
+    {
+      "type": "color",
+      "id": "input_text_color",
+      "label": "Color de texto",
+      "default": "#2b2c2d"
+    },
+    {
+      "type": "color",
+      "id": "input_border_color",
+      "label": "Color de borde",
+      "default": "#d1d1d1"
+    },
+    {
+      "type": "color",
+      "id": "input_focus_border_color",
+      "label": "Color borde enfocado",
+      "default": "#797068"
+    },
+    {
+      "type": "color",
+      "id": "placeholder_color",
+      "label": "Color de placeholder",
+      "default": "#999999"
+    },
+    {
+      "type": "range",
+      "id": "input_border_width",
+      "min": 1,
+      "max": 4,
+      "step": 1,
+      "unit": "px",
+      "label": "Grosor de borde",
+      "default": 1
+    },
+    {
+      "type": "range",
+      "id": "input_border_radius",
+      "min": 0,
+      "max": 20,
+      "step": 2,
+      "unit": "px",
+      "label": "Radio de borde",
+      "default": 6
+    },
+    {
+      "type": "color",
+      "id": "icon_color",
+      "label": "Color de iconos",
+      "default": "#797068"
+    },
+    {
+      "type": "color",
+      "id": "checkbox_color",
+      "label": "Color de checkboxes",
+      "default": "#797068"
+    },
+    {
+      "type": "header",
+      "content": "Botón principal"
+    },
+    {
+      "type": "color",
+      "id": "button_bg_color",
+      "label": "Color de fondo",
+      "default": "#ff6b35"
+    },
+    {
+      "type": "color",
+      "id": "button_hover_bg_color",
+      "label": "Color fondo hover",
+      "default": "#e55a28"
+    },
+    {
+      "type": "color",
+      "id": "button_text_color",
+      "label": "Color de texto",
+      "default": "#ffffff"
+    },
+    {
+      "type": "header",
+      "content": "Botón de chat"
+    },
+    {
+      "type": "color",
+      "id": "chat_bg_color",
+      "label": "Color de fondo",
+      "default": "#ff6b35"
+    },
+    {
+      "type": "color",
+      "id": "chat_text_color",
+      "label": "Color de texto",
+      "default": "#ffffff"
+    },
+    {
+      "type": "header",
+      "content": "Mensajes de estado"
+    },
+    {
+      "type": "color",
+      "id": "success_bg_color",
+      "label": "Fondo éxito",
+      "default": "#d4edda"
+    },
+    {
+      "type": "color",
+      "id": "success_text_color",
+      "label": "Texto éxito",
+      "default": "#155724"
+    },
+    {
+      "type": "color",
+      "id": "error_bg_color",
+      "label": "Fondo error",
+      "default": "#f8d7da"
+    },
+    {
+      "type": "color",
+      "id": "error_text_color",
+      "label": "Texto error",
+      "default": "#721c24"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Asesoramiento experto"
+    }
+  ]
+}
+{% endschema %}

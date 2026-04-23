@@ -1,0 +1,1185 @@
+{% doc %}
+  @prompt
+    Header navegación – Desktop (igual a la referencia)
+    
+    Crea una sección de header / navegación principal para una tienda Shopify, que en vista desktop se vea exactamente como la imagen de referencia proporcionada.
+    
+    🖥️ DISEÑO DESKTOP (OBLIGATORIO)
+    1️⃣ Barra superior (fondo blanco)
+    
+    Logo alineado a la izquierda.
+    
+    Buscador centrado con placeholder:
+    “Buscar productos…”
+    
+    A la derecha:
+    
+    Botón grande y destacado con texto:
+    “Cotización rápida →”
+    
+    Estilo sólido
+    
+    Bordes redondeados
+    
+    Color llamativo (rosa / color marca)
+    
+    Enlace “Iniciar sesión” con ícono
+    
+    Ícono de carrito
+    
+    2️⃣ Barra de navegación inferior (fondo oscuro)
+    
+    Fondo marrón / gris oscuro.
+    
+    Menú horizontal alineado a la izquierda con dropdowns:
+    
+    Camisetas
+    
+    Polos
+    
+    Sudaderas
+    
+    Chaquetas
+    
+    Camisas
+    
+    Otros
+    
+    Contacto
+    
+    NO mostrar ningún número de teléfono.
+    
+    A la derecha del menú, separado por una línea vertical:
+    
+    Bloque destacado integrado al menú con:
+    
+    Ícono
+    
+    Texto EXACTO:
+    “Técnicas de impresión”
+    
+    Este bloque debe verse como una sección fija del menú, no como botón flotante.
+    
+    🎨 ESTILO VISUAL
+    
+    Diseño corporativo, limpio y profesional.
+    
+    Tipografía clara.
+    
+    Espaciado igual al de la referencia.
+    
+    El foco visual debe estar en:
+    
+    Botón “Cotización rápida” (arriba)
+    
+    Bloque “Técnicas de impresión” (abajo a la derecha)
+    
+    ⚙️ REQUISITOS
+    
+    HTML + CSS + Liquid.
+    
+    Compatible con temas Shopify modernos (Dawn / Refresh).
+    
+    Código listo para usarse como header principal en desktop.
+    
+    Genera la sección respetando exactamente esta estructura y jerarquía visual, sin añadir teléfono ni modificar los textos., Cambio clave:
+    
+    ❌ NO usar dropdowns custom
+    
+    ✅ Usar MENÚ NATIVO DE SHOPIFY (Navigation / Menús)
+    
+    El header solo renderiza el menú, no lo construye manualmente
+    
+    Aquí tienes el PROMPT FINAL DEFINITIVO, limpio y correcto 👇
+    Cópialo y pégalo tal cual en Shopify AI / Shopify Magic.
+    
+    🧠 PROMPT PARA SHOPIFY AI
+    Header / Navegación – Menú nativo de Shopify
+    
+    Crea una sección de header / navegación principal para una tienda Shopify de impresión y productos personalizados.
+    
+    El header debe usar exclusivamente los MENÚS NATIVOS DE SHOPIFY
+    (Online Store → Navigation), sin dropdowns personalizados ni lógica hardcodeada.
+    
+    🖥️ DESKTOP
+    Barra superior (fondo blanco)
+    
+    Logo alineado a la izquierda.
+    
+    Buscador centrado con placeholder:
+    “Buscar productos…”
+    
+    A la derecha:
+    
+    Botón “Cotización rápida →” (CTA principal)
+    
+    Enlace “Iniciar sesión”
+    
+    Ícono de carrito
+    
+    Barra de navegación inferior (fondo oscuro)
+    
+    Renderizar un menú de Shopify (main-menu) en formato horizontal.
+    
+    El menú se administra desde Shopify Navigation.
+    
+    NO crear dropdowns manuales (Shopify gestiona submenús).
+    
+    Eliminar completamente el número de teléfono.
+    
+    A la derecha del menú, separado por una línea vertical:
+    
+    Bloque fijo y clickeable con:
+    
+    Ícono
+    
+    Texto EXACTO:
+    “Técnicas de impresión”
+    
+    Este bloque NO pertenece al menú de Shopify.
+    
+    📱 MOBILE
+    
+    Header en una sola fila horizontal.
+    
+    NO mostrar buscador visible.
+    
+    Orden de izquierda a derecha:
+    
+    Logo
+    
+    Botón “Cotización rápida” (compacto, horizontal)
+    
+    Ícono de carrito
+    
+    Ícono de menú hamburguesa
+    
+    El botón “Cotización rápida”:
+    
+    Debe mantenerse al lado del logo.
+    
+    No debe ocultarse en el menú.
+    
+    El menú hamburguesa debe:
+    
+    Renderizar el menú nativo de Shopify
+    
+    Incluir automáticamente submenús definidos en Navigation
+    
+    Incluir enlace a “Técnicas de impresión”
+    
+    🎨 ESTILO
+    
+    Desktop: navegación clara, profesional, sin teléfono.
+    
+    Mobile: header limpio, compacto, enfocado en conversión.
+    
+    CTA “Cotización rápida” en color destacado.
+    
+    ⚙️ REQUISITOS TÉCNICOS
+    
+    HTML + CSS + Liquid.
+    
+    Usar linklists / navigat, CAMBIO DE ÍCONO (OBLIGATORIO)
+    
+    Eliminar el ícono actual (símbolo de dólar u otro).
+    
+    Reemplazarlo por un ícono de pluma (pen / feather).
+    
+    El ícono debe:
+    
+    Ir a la izquierda del texto “Técnicas de impresión”.
+    
+    Ser simple, lineal y moderno.
+    
+    Mantener el mismo color que el texto (blanco).
+    
+    Estar alineado verticalmente con el texto.
+    
+    El texto “Técnicas de impresión” NO debe cambiar.
+    
+    El bloque debe seguir siendo completamente clickeable.
+{% enddoc %}
+{% assign ai_gen_id = block.id | replace: '_', '' | downcase %}
+
+{% style %}
+  .ai-header-{{ ai_gen_id }} {
+    display: block;
+    width: 100%;
+  }
+
+  .ai-header-top-{{ ai_gen_id }} {
+    background-color: {{ block.settings.top_bar_bg }};
+    padding: 16px 0;
+    border-bottom: 1px solid {{ block.settings.border_color }};
+  }
+
+  .ai-header-top-container-{{ ai_gen_id }} {
+    max-width: {{ block.settings.container_width }}px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+  }
+
+  .ai-header-logo-{{ ai_gen_id }} {
+    flex-shrink: 0;
+  }
+
+  .ai-header-logo-{{ ai_gen_id }} a {
+    display: block;
+  }
+
+  .ai-header-logo-{{ ai_gen_id }} img {
+    display: block;
+    max-height: {{ block.settings.logo_height }}px;
+    width: auto;
+  }
+
+  .ai-header-logo-placeholder-{{ ai_gen_id }} {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 120px;
+    height: {{ block.settings.logo_height }}px;
+    background-color: #f4f4f4;
+    border-radius: 4px;
+  }
+
+  .ai-header-logo-placeholder-{{ ai_gen_id }} svg {
+    width: 80%;
+    height: 80%;
+    opacity: 0.3;
+  }
+
+  .ai-header-search-{{ ai_gen_id }} {
+    flex-grow: 1;
+    max-width: 600px;
+  }
+
+  .ai-header-search-form-{{ ai_gen_id }} {
+    position: relative;
+  }
+
+  .ai-header-search-input-{{ ai_gen_id }} {
+    width: 100%;
+    padding: 12px 50px 12px 16px;
+    border: 1px solid {{ block.settings.search_border_color }};
+    border-radius: {{ block.settings.search_radius }}px;
+    font-size: 14px;
+    outline: none;
+  }
+
+  .ai-header-search-input-{{ ai_gen_id }}:focus {
+    border-color: {{ block.settings.search_focus_color }};
+  }
+
+  .ai-header-search-button-{{ ai_gen_id }} {
+    position: absolute;
+    right: 8px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    padding: 8px;
+    cursor: pointer;
+    color: #666;
+  }
+
+  .ai-header-search-button-{{ ai_gen_id }} svg {
+    width: 20px;
+    height: 20px;
+  }
+
+  .ai-header-actions-{{ ai_gen_id }} {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    flex-shrink: 0;
+  }
+
+  .ai-header-quote-btn-{{ ai_gen_id }} {
+    padding: 12px 24px;
+    background-color: {{ block.settings.quote_btn_bg }};
+    color: {{ block.settings.quote_btn_text }};
+    border: none;
+    border-radius: {{ block.settings.quote_btn_radius }}px;
+    font-size: 15px;
+    font-weight: 600;
+    text-decoration: none;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    transition: background-color 0.3s ease;
+    white-space: nowrap;
+  }
+
+  .ai-header-quote-btn-{{ ai_gen_id }}:hover {
+    background-color: {{ block.settings.quote_btn_hover_bg }};
+  }
+
+  .ai-header-login-{{ ai_gen_id }} {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    color: {{ block.settings.login_color }};
+    text-decoration: none;
+    font-size: 14px;
+    white-space: nowrap;
+  }
+
+  .ai-header-login-{{ ai_gen_id }} svg {
+    width: 18px;
+    height: 18px;
+  }
+
+  .ai-header-cart-{{ ai_gen_id }} {
+    position: relative;
+    color: {{ block.settings.cart_icon_color }};
+    text-decoration: none;
+  }
+
+  .ai-header-cart-{{ ai_gen_id }} svg {
+    width: 24px;
+    height: 24px;
+  }
+
+  .ai-header-cart-count-{{ ai_gen_id }} {
+    position: absolute;
+    top: -8px;
+    right: -8px;
+    background-color: {{ block.settings.cart_badge_bg }};
+    color: {{ block.settings.cart_badge_text }};
+    border-radius: 50%;
+    width: 18px;
+    height: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 11px;
+    font-weight: 600;
+  }
+
+  .ai-header-nav-bar-{{ ai_gen_id }} {
+    background-color: {{ block.settings.nav_bg }};
+    padding: 0;
+  }
+
+  .ai-header-nav-container-{{ ai_gen_id }} {
+    max-width: {{ block.settings.container_width }}px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .ai-header-menu-{{ ai_gen_id }} {
+    display: flex;
+    align-items: center;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    gap: 0;
+  }
+
+  .ai-header-menu-{{ ai_gen_id }} > li {
+    position: relative;
+  }
+
+  .ai-header-menu-{{ ai_gen_id }} > li > a {
+    display: block;
+    padding: 16px 20px;
+    color: {{ block.settings.nav_text_color }};
+    text-decoration: none;
+    font-size: 15px;
+    transition: background-color 0.3s ease;
+  }
+
+  .ai-header-menu-{{ ai_gen_id }} > li > a:hover {
+    background-color: {{ block.settings.nav_hover_bg }};
+  }
+
+  .ai-header-menu-{{ ai_gen_id }} > li.has-children > a::after {
+    content: '';
+    display: inline-block;
+    width: 0;
+    height: 0;
+    border-left: 4px solid transparent;
+    border-right: 4px solid transparent;
+    border-top: 4px solid currentColor;
+    margin-left: 6px;
+    vertical-align: middle;
+  }
+
+  .ai-header-menu-{{ ai_gen_id }} ul {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: {{ block.settings.dropdown_bg }};
+    min-width: 200px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-10px);
+    transition: opacity 0.3s ease, transform 0.3s ease, visibility 0.3s ease;
+    z-index: 100;
+    list-style: none;
+    margin: 0;
+    padding: 8px 0;
+  }
+
+  .ai-header-menu-{{ ai_gen_id }} > li:hover > ul {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+  }
+
+  .ai-header-menu-{{ ai_gen_id }} ul li a {
+    display: block;
+    padding: 10px 20px;
+    color: {{ block.settings.dropdown_text_color }};
+    text-decoration: none;
+    font-size: 14px;
+    transition: background-color 0.3s ease;
+  }
+
+  .ai-header-menu-{{ ai_gen_id }} ul li a:hover {
+    background-color: {{ block.settings.dropdown_hover_bg }};
+  }
+
+  .ai-header-divider-{{ ai_gen_id }} {
+    width: 1px;
+    height: 40px;
+    background-color: {{ block.settings.divider_color }};
+    margin: 0 12px;
+  }
+
+  .ai-header-techniques-{{ ai_gen_id }} {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 16px 20px;
+    color: {{ block.settings.techniques_color }};
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: 600;
+    transition: background-color 0.3s ease;
+  }
+
+  .ai-header-techniques-{{ ai_gen_id }}:hover {
+    background-color: {{ block.settings.nav_hover_bg }};
+  }
+
+  .ai-header-techniques-icon-{{ ai_gen_id }} {
+    width: 20px;
+    height: 20px;
+    flex-shrink: 0;
+  }
+
+  .ai-header-mobile-{{ ai_gen_id }} {
+    display: none;
+    background-color: {{ block.settings.top_bar_bg }};
+    padding: 12px 0;
+    border-bottom: 1px solid {{ block.settings.border_color }};
+  }
+
+  .ai-header-mobile-container-{{ ai_gen_id }} {
+    max-width: {{ block.settings.container_width }}px;
+    margin: 0 auto;
+    padding: 0 16px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+  }
+
+  .ai-header-mobile-logo-{{ ai_gen_id }} {
+    flex-shrink: 0;
+  }
+
+  .ai-header-mobile-logo-{{ ai_gen_id }} img {
+    display: block;
+    max-height: 40px;
+    width: auto;
+  }
+
+  .ai-header-mobile-actions-{{ ai_gen_id }} {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+
+  .ai-header-mobile-quote-{{ ai_gen_id }} {
+    padding: 8px 16px;
+    background-color: {{ block.settings.quote_btn_bg }};
+    color: {{ block.settings.quote_btn_text }};
+    border: none;
+    border-radius: {{ block.settings.quote_btn_radius }}px;
+    font-size: 13px;
+    font-weight: 600;
+    text-decoration: none;
+    white-space: nowrap;
+  }
+
+  .ai-header-hamburger-{{ ai_gen_id }} {
+    background: none;
+    border: none;
+    padding: 8px;
+    cursor: pointer;
+    color: {{ block.settings.login_color }};
+  }
+
+  .ai-header-hamburger-{{ ai_gen_id }} svg {
+    width: 24px;
+    height: 24px;
+  }
+
+  .ai-header-mobile-drawer-{{ ai_gen_id }} {
+    position: fixed;
+    top: 0;
+    left: -100%;
+    width: 280px;
+    height: 100vh;
+    background-color: {{ block.settings.drawer_bg }};
+    box-shadow: 2px 0 12px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+    transition: left 0.3s ease;
+    overflow-y: auto;
+  }
+
+  .ai-header-mobile-drawer-{{ ai_gen_id }}.active {
+    left: 0;
+  }
+
+  .ai-header-drawer-header-{{ ai_gen_id }} {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 16px;
+    border-bottom: 1px solid {{ block.settings.border_color }};
+  }
+
+  .ai-header-drawer-close-{{ ai_gen_id }} {
+    background: none;
+    border: none;
+    padding: 8px;
+    cursor: pointer;
+    color: {{ block.settings.drawer_text_color }};
+  }
+
+  .ai-header-drawer-close-{{ ai_gen_id }} svg {
+    width: 24px;
+    height: 24px;
+  }
+
+  .ai-header-drawer-menu-{{ ai_gen_id }} {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  .ai-header-drawer-menu-{{ ai_gen_id }} > li > a {
+    display: block;
+    padding: 14px 16px;
+    color: {{ block.settings.drawer_text_color }};
+    text-decoration: none;
+    font-size: 15px;
+    border-bottom: 1px solid {{ block.settings.border_color }};
+  }
+
+  .ai-header-drawer-menu-{{ ai_gen_id }} ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    background-color: rgba(0, 0, 0, 0.05);
+  }
+
+  .ai-header-drawer-menu-{{ ai_gen_id }} ul li a {
+    display: block;
+    padding: 12px 16px 12px 32px;
+    color: {{ block.settings.drawer_text_color }};
+    text-decoration: none;
+    font-size: 14px;
+    border-bottom: 1px solid {{ block.settings.border_color }};
+  }
+
+  .ai-header-drawer-techniques-{{ ai_gen_id }} {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 14px 16px;
+    color: {{ block.settings.drawer_text_color }};
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: 600;
+    border-bottom: 1px solid {{ block.settings.border_color }};
+  }
+
+  .ai-header-drawer-techniques-{{ ai_gen_id }} svg {
+    width: 20px;
+    height: 20px;
+  }
+
+  .ai-header-overlay-{{ ai_gen_id }} {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 999;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+  }
+
+  .ai-header-overlay-{{ ai_gen_id }}.active {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  @media screen and (max-width: 989px) {
+    .ai-header-top-{{ ai_gen_id }},
+    .ai-header-nav-bar-{{ ai_gen_id }} {
+      display: none;
+    }
+
+    .ai-header-mobile-{{ ai_gen_id }} {
+      display: block;
+    }
+  }
+
+  @media screen and (min-width: 990px) {
+    .ai-header-mobile-{{ ai_gen_id }} {
+      display: none;
+    }
+  }
+{% endstyle %}
+
+<header-navigation-{{ ai_gen_id }} class="ai-header-{{ ai_gen_id }}" {{ block.shopify_attributes }}>
+  <div class="ai-header-top-{{ ai_gen_id }}">
+    <div class="ai-header-top-container-{{ ai_gen_id }}">
+      <div class="ai-header-logo-{{ ai_gen_id }}">
+        {% if block.settings.logo %}
+          <a href="/">
+            <img
+              src="{{ block.settings.logo | image_url: width: 400 }}"
+              alt="{{ shop.name }}"
+              width="{{ block.settings.logo.width }}"
+              height="{{ block.settings.logo.height }}"
+              loading="lazy"
+            >
+          </a>
+        {% else %}
+          <div class="ai-header-logo-placeholder-{{ ai_gen_id }}">
+            {{ 'image' | placeholder_svg_tag }}
+          </div>
+        {% endif %}
+      </div>
+
+      <div class="ai-header-search-{{ ai_gen_id }}">
+        <form action="/search" method="get" class="ai-header-search-form-{{ ai_gen_id }}" role="search">
+          <input
+            type="search"
+            name="q"
+            class="ai-header-search-input-{{ ai_gen_id }}"
+            placeholder="{{ block.settings.search_placeholder }}"
+            aria-label="Buscar productos"
+          >
+          <button type="submit" class="ai-header-search-button-{{ ai_gen_id }}" aria-label="Buscar">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="11" cy="11" r="8"></circle>
+              <path d="m21 21-4.35-4.35"></path>
+            </svg>
+          </button>
+        </form>
+      </div>
+
+      <div class="ai-header-actions-{{ ai_gen_id }}">
+        <a href="{{ block.settings.quote_btn_link }}" class="ai-header-quote-btn-{{ ai_gen_id }}">
+          {{ block.settings.quote_btn_label }}
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M5 12h14"></path>
+            <path d="m12 5 7 7-7 7"></path>
+          </svg>
+        </a>
+
+        <a href="/account" class="ai-header-login-{{ ai_gen_id }}">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"></path>
+            <circle cx="12" cy="7" r="4"></circle>
+          </svg>
+          {{ block.settings.login_label }}
+        </a>
+
+        <a href="/cart" class="ai-header-cart-{{ ai_gen_id }}">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="8" cy="21" r="1"></circle>
+            <circle cx="19" cy="21" r="1"></circle>
+            <path d="M2.05 2.05h2l2.66 12.42a2 2 0 0 0 2 1.58h9.78a2 2 0 0 0 1.95-1.57l1.65-7.43H5.12"></path>
+          </svg>
+          {% if cart.item_count > 0 %}
+            <span class="ai-header-cart-count-{{ ai_gen_id }}">{{ cart.item_count }}</span>
+          {% endif %}
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <nav class="ai-header-nav-bar-{{ ai_gen_id }}">
+    <div class="ai-header-nav-container-{{ ai_gen_id }}">
+      <ul class="ai-header-menu-{{ ai_gen_id }}">
+        {% for link in linklists[block.settings.menu].links %}
+          <li {% if link.links != blank %}class="has-children"{% endif %}>
+            <a href="{{ link.url }}">{{ link.title }}</a>
+            {% if link.links != blank %}
+              <ul>
+                {% for child_link in link.links %}
+                  <li><a href="{{ child_link.url }}">{{ child_link.title }}</a></li>
+                {% endfor %}
+              </ul>
+            {% endif %}
+          </li>
+        {% endfor %}
+      </ul>
+
+      <div style="display: flex; align-items: center;">
+        <div class="ai-header-divider-{{ ai_gen_id }}"></div>
+        <a href="{{ block.settings.techniques_link }}" class="ai-header-techniques-{{ ai_gen_id }}">
+          <svg class="ai-header-techniques-icon-{{ ai_gen_id }}" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M3 20.29V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2v15.29"></path>
+            <path d="M3 20.29c0 .55.45 1 1 1h16c.55 0 1-.45 1-1"></path>
+            <path d="M12 6v14"></path>
+          </svg>
+          {{ block.settings.techniques_label }}
+        </a>
+      </div>
+    </div>
+  </nav>
+
+  <div class="ai-header-mobile-{{ ai_gen_id }}">
+    <div class="ai-header-mobile-container-{{ ai_gen_id }}">
+      <div class="ai-header-mobile-logo-{{ ai_gen_id }}">
+        {% if block.settings.logo %}
+          <a href="/">
+            <img
+              src="{{ block.settings.logo | image_url: width: 200 }}"
+              alt="{{ shop.name }}"
+              loading="lazy"
+            >
+          </a>
+        {% else %}
+          <a href="/">{{ shop.name }}</a>
+        {% endif %}
+      </div>
+
+      <div class="ai-header-mobile-actions-{{ ai_gen_id }}">
+        <a href="{{ block.settings.quote_btn_link }}" class="ai-header-mobile-quote-{{ ai_gen_id }}">
+          {{ block.settings.quote_btn_mobile_label }}
+        </a>
+
+        <a href="/cart" class="ai-header-cart-{{ ai_gen_id }}">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="8" cy="21" r="1"></circle>
+            <circle cx="19" cy="21" r="1"></circle>
+            <path d="M2.05 2.05h2l2.66 12.42a2 2 0 0 0 2 1.58h9.78a2 2 0 0 0 1.95-1.57l1.65-7.43H5.12"></path>
+          </svg>
+          {% if cart.item_count > 0 %}
+            <span class="ai-header-cart-count-{{ ai_gen_id }}">{{ cart.item_count }}</span>
+          {% endif %}
+        </a>
+
+        <button class="ai-header-hamburger-{{ ai_gen_id }}" aria-label="Abrir menú">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="3" y1="12" x2="21" y2="12"></line>
+            <line x1="3" y1="6" x2="21" y2="6"></line>
+            <line x1="3" y1="18" x2="21" y2="18"></line>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <div class="ai-header-mobile-drawer-{{ ai_gen_id }}">
+    <div class="ai-header-drawer-header-{{ ai_gen_id }}">
+      <span style="color: {{ block.settings.drawer_text_color }}; font-weight: 600;">Menú</span>
+      <button class="ai-header-drawer-close-{{ ai_gen_id }}" aria-label="Cerrar menú">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <line x1="18" y1="6" x2="6" y2="18"></line>
+          <line x1="6" y1="6" x2="18" y2="18"></line>
+        </svg>
+      </button>
+    </div>
+
+    <ul class="ai-header-drawer-menu-{{ ai_gen_id }}">
+      {% for link in linklists[block.settings.menu].links %}
+        <li>
+          <a href="{{ link.url }}">{{ link.title }}</a>
+          {% if link.links != blank %}
+            <ul>
+              {% for child_link in link.links %}
+                <li><a href="{{ child_link.url }}">{{ child_link.title }}</a></li>
+              {% endfor %}
+            </ul>
+          {% endif %}
+        </li>
+      {% endfor %}
+      <li>
+        <a href="{{ block.settings.techniques_link }}" class="ai-header-drawer-techniques-{{ ai_gen_id }}">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M3 20.29V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2v15.29"></path>
+            <path d="M3 20.29c0 .55.45 1 1h16c.55 0 1-.45 1-1"></path>
+            <path d="M12 6v14"></path>
+          </svg>
+          {{ block.settings.techniques_label }}
+        </a>
+      </li>
+    </ul>
+  </div>
+
+  <div class="ai-header-overlay-{{ ai_gen_id }}"></div>
+</header-navigation-{{ ai_gen_id }}>
+
+<script>
+  (function() {
+    class HeaderNavigation{{ ai_gen_id }} extends HTMLElement {
+      constructor() {
+        super();
+        this.hamburger = this.querySelector('.ai-header-hamburger-{{ ai_gen_id }}');
+        this.drawer = this.querySelector('.ai-header-mobile-drawer-{{ ai_gen_id }}');
+        this.overlay = this.querySelector('.ai-header-overlay-{{ ai_gen_id }}');
+        this.closeBtn = this.querySelector('.ai-header-drawer-close-{{ ai_gen_id }}');
+      }
+
+      connectedCallback() {
+        this.setupMobileMenu();
+        this.setupAccessibility();
+      }
+
+      setupMobileMenu() {
+        if (this.hamburger) {
+          this.hamburger.addEventListener('click', () => this.openDrawer());
+        }
+
+        if (this.closeBtn) {
+          this.closeBtn.addEventListener('click', () => this.closeDrawer());
+        }
+
+        if (this.overlay) {
+          this.overlay.addEventListener('click', () => this.closeDrawer());
+        }
+      }
+
+      openDrawer() {
+        if (this.drawer) this.drawer.classList.add('active');
+        if (this.overlay) this.overlay.classList.add('active');
+        document.body.style.overflow = 'hidden';
+      }
+
+      closeDrawer() {
+        if (this.drawer) this.drawer.classList.remove('active');
+        if (this.overlay) this.overlay.classList.remove('active');
+        document.body.style.overflow = '';
+      }
+
+      setupAccessibility() {
+        const menuItems = this.querySelectorAll('.ai-header-menu-{{ ai_gen_id }} > li.has-children');
+        
+        menuItems.forEach(item => {
+          const link = item.querySelector('a');
+          const submenu = item.querySelector('ul');
+          
+          if (link && submenu) {
+            link.setAttribute('aria-haspopup', 'true');
+            link.setAttribute('aria-expanded', 'false');
+            
+            item.addEventListener('mouseenter', () => {
+              link.setAttribute('aria-expanded', 'true');
+            });
+            
+            item.addEventListener('mouseleave', () => {
+              link.setAttribute('aria-expanded', 'false');
+            });
+          }
+        });
+      }
+    }
+
+    customElements.define('header-navigation-{{ ai_gen_id }}', HeaderNavigation{{ ai_gen_id }});
+  })();
+</script>
+
+{% schema %}
+{
+  "name": "Header navegación nativa",
+  "tag": null,
+  "settings": [
+    {
+      "type": "header",
+      "content": "Layout"
+    },
+    {
+      "type": "range",
+      "id": "container_width",
+      "label": "Container width",
+      "min": 1000,
+      "max": 1600,
+      "step": 100,
+      "unit": "px",
+      "default": 1200
+    },
+    {
+      "type": "header",
+      "content": "Logo"
+    },
+    {
+      "type": "image_picker",
+      "id": "logo",
+      "label": "Logo"
+    },
+    {
+      "type": "range",
+      "id": "logo_height",
+      "label": "Logo height",
+      "min": 30,
+      "max": 100,
+      "step": 5,
+      "unit": "px",
+      "default": 50
+    },
+    {
+      "type": "header",
+      "content": "Colors"
+    },
+    {
+      "type": "color",
+      "id": "top_bar_bg",
+      "label": "Top bar background",
+      "default": "#ffffff"
+    },
+    {
+      "type": "color",
+      "id": "nav_bg",
+      "label": "Navigation background",
+      "default": "#413a35"
+    },
+    {
+      "type": "color",
+      "id": "nav_text_color",
+      "label": "Navigation text",
+      "default": "#ffffff"
+    },
+    {
+      "type": "color",
+      "id": "nav_hover_bg",
+      "label": "Navigation hover",
+      "default": "rgba(255, 255, 255, 0.1)"
+    },
+    {
+      "type": "color",
+      "id": "border_color",
+      "label": "Border color",
+      "default": "#e5e5e5"
+    },
+    {
+      "type": "header",
+      "content": "Search"
+    },
+    {
+      "type": "text",
+      "id": "search_placeholder",
+      "label": "Placeholder",
+      "default": "Buscar productos…"
+    },
+    {
+      "type": "color",
+      "id": "search_border_color",
+      "label": "Border color",
+      "default": "#d1d1d1"
+    },
+    {
+      "type": "color",
+      "id": "search_focus_color",
+      "label": "Focus border",
+      "default": "#000000"
+    },
+    {
+      "type": "range",
+      "id": "search_radius",
+      "label": "Border radius",
+      "min": 0,
+      "max": 30,
+      "step": 2,
+      "unit": "px",
+      "default": 6
+    },
+    {
+      "type": "header",
+      "content": "Quote button"
+    },
+    {
+      "type": "text",
+      "id": "quote_btn_label",
+      "label": "Desktop text",
+      "default": "Cotización rápida →"
+    },
+    {
+      "type": "text",
+      "id": "quote_btn_mobile_label",
+      "label": "Mobile text",
+      "default": "Cotización"
+    },
+    {
+      "type": "url",
+      "id": "quote_btn_link",
+      "label": "Link"
+    },
+    {
+      "type": "color",
+      "id": "quote_btn_bg",
+      "label": "Background",
+      "default": "#fe3a83"
+    },
+    {
+      "type": "color",
+      "id": "quote_btn_hover_bg",
+      "label": "Hover background",
+      "default": "#e02970"
+    },
+    {
+      "type": "color",
+      "id": "quote_btn_text",
+      "label": "Text color",
+      "default": "#ffffff"
+    },
+    {
+      "type": "range",
+      "id": "quote_btn_radius",
+      "label": "Border radius",
+      "min": 0,
+      "max": 30,
+      "step": 2,
+      "unit": "px",
+      "default": 8
+    },
+    {
+      "type": "header",
+      "content": "Login & cart"
+    },
+    {
+      "type": "text",
+      "id": "login_label",
+      "label": "Login text",
+      "default": "Iniciar sesión"
+    },
+    {
+      "type": "color",
+      "id": "login_color",
+      "label": "Login color",
+      "default": "#262626"
+    },
+    {
+      "type": "color",
+      "id": "cart_icon_color",
+      "label": "Cart icon",
+      "default": "#262626"
+    },
+    {
+      "type": "color",
+      "id": "cart_badge_bg",
+      "label": "Cart badge background",
+      "default": "#fe3a83"
+    },
+    {
+      "type": "color",
+      "id": "cart_badge_text",
+      "label": "Cart badge text",
+      "default": "#ffffff"
+    },
+    {
+      "type": "header",
+      "content": "Menu"
+    },
+    {
+      "type": "link_list",
+      "id": "menu",
+      "label": "Menu",
+      "default": "main-menu"
+    },
+    {
+      "type": "header",
+      "content": "Dropdown"
+    },
+    {
+      "type": "color",
+      "id": "dropdown_bg",
+      "label": "Background",
+      "default": "#ffffff"
+    },
+    {
+      "type": "color",
+      "id": "dropdown_text_color",
+      "label": "Text color",
+      "default": "#262626"
+    },
+    {
+      "type": "color",
+      "id": "dropdown_hover_bg",
+      "label": "Hover background",
+      "default": "#f4f4f4"
+    },
+    {
+      "type": "header",
+      "content": "Techniques section"
+    },
+    {
+      "type": "text",
+      "id": "techniques_label",
+      "label": "Text",
+      "default": "Técnicas de impresión"
+    },
+    {
+      "type": "url",
+      "id": "techniques_link",
+      "label": "Link"
+    },
+    {
+      "type": "color",
+      "id": "techniques_color",
+      "label": "Text color",
+      "default": "#ffffff"
+    },
+    {
+      "type": "color",
+      "id": "divider_color",
+      "label": "Divider color",
+      "default": "rgba(255, 255, 255, 0.2)"
+    },
+    {
+      "type": "header",
+      "content": "Mobile drawer"
+    },
+    {
+      "type": "color",
+      "id": "drawer_bg",
+      "label": "Background",
+      "default": "#ffffff"
+    },
+    {
+      "type": "color",
+      "id": "drawer_text_color",
+      "label": "Text color",
+      "default": "#262626"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Header navegación nativa"
+    }
+  ]
+}
+{% endschema %}

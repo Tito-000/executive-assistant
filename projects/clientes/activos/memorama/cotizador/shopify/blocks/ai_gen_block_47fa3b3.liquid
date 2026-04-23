@@ -1,0 +1,666 @@
+{% doc %}
+  @prompt
+    Sección “Cómo funciona” – Pasos horizontales (Desktop + Mobile)
+    
+    Crea una sección informativa tipo “Cómo funciona” para una tienda Shopify de impresión y personalización de productos.
+    
+    🧩 CONTENIDO DE LA SECCIÓN
+    
+    La sección debe mostrar 4 pasos numerados, con este contenido EXACTO:
+    
+    Paso 1
+    Seleccione color y cantidad
+    
+    Paso 2
+    Seleccionar posiciones de impresión y ilustraciones
+    
+    Paso 3
+    Seleccionar método de impresión
+    
+    Paso 4
+    Añadir al carrito para ver la cotización
+    
+    🖥️ DESKTOP (OBLIGATORIO)
+    
+    Los 4 pasos deben mostrarse en una sola fila horizontal.
+    
+    Cada paso debe incluir:
+    
+    Un círculo con el número (1, 2, 3, 4)
+    
+    Texto debajo del número
+    
+    Los pasos deben estar conectados visualmente con una línea fina horizontal.
+    
+    Espaciado amplio, alineación centrada.
+    
+    📱 MOBILE (MUY IMPORTANTE)
+    
+    Los pasos NO deben apilarse en vertical.
+    
+    Los pasos deben mantenerse en formato horizontal.
+    
+    Usar scroll horizontal si el ancho no es suficiente.
+    
+    Cada paso debe:
+    
+    Mantener el número visible
+    
+    Mantener el texto legible
+    
+    El scroll debe ser suave (overflow-x: auto).
+    
+    No usar carrusel automático.
+    
+    🔘 BLOQUE CTA INFERIOR
+    
+    Debajo de los pasos, mostrar un bloque CTA ancho y redondeado con este texto:
+    
+    “En cualquier momento puede hacer clic aquí para solicitar una cotización y hablar con un gerente de cuenta.”
+    
+    Fondo color corporativo (verde/azulado).
+    
+    Texto blanco.
+    
+    Estilo tipo botón ancho (pill).
+    
+    Centrado.
+    
+    🎨 ESTILO VISUAL
+    
+    Diseño limpio y corporativo.
+    
+    Colores suaves (naranja claro para los números).
+    
+    Tipografía clara y moderna.
+    
+    Compatible visualmente con ecommerce B2B.
+    
+    ⚙️ REQUISITOS TÉCNICOS
+    
+    Crear como sección personalizada de Shopify.
+    
+    Usar HTML + CSS + Liquid.
+    
+    Editable desde el Customizer:
+    
+    Textos de los pasos
+    
+    Texto del CTA
+    
+    Responsive usando Flexbox.
+    
+    Para mobile usar:
+    
+    display: flex
+    
+    flex-wrap: nowrap
+    
+    overflow-x: auto
+    
+    Genera la sección completa asegurando que en mobile los pasos se mantengan horizontales, con desplazamiento lateral si es necesario., haz que entre numero la linea se auna flecha que dirija al siguiente numero y que sea fluida y esteticamente bien vista , haz que no haya tanto espacion en blanco entre la flecha y el cierculo , Haz que en celular los pasos se vena pero sin la neceisdad de scrolaear horizontalmente que se vea de un vistazo 
+{% enddoc %}
+{% assign ai_gen_id = block.id | replace: '_', '' | downcase %}
+
+{% style %}
+  .ai-how-it-works-{{ ai_gen_id }} {
+    display: block;
+    width: 100%;
+    padding: {{ block.settings.section_padding_top }}px 20px {{ block.settings.section_padding_bottom }}px;
+    background-color: {{ block.settings.background_color }};
+  }
+
+  .ai-how-it-works-container-{{ ai_gen_id }} {
+    max-width: {{ block.settings.container_width }}px;
+    margin: 0 auto;
+  }
+
+  .ai-how-it-works-heading-{{ ai_gen_id }} {
+    text-align: center;
+    font-size: {{ block.settings.heading_size }}px;
+    color: {{ block.settings.heading_color }};
+    margin: 0 0 {{ block.settings.heading_spacing }}px;
+  }
+
+  .ai-how-it-works-steps-wrapper-{{ ai_gen_id }} {
+    position: relative;
+    overflow: visible;
+  }
+
+  .ai-how-it-works-steps-{{ ai_gen_id }} {
+    display: flex;
+    flex-wrap: nowrap;
+    gap: {{ block.settings.step_gap }}px;
+    position: relative;
+    padding: 20px 0;
+    justify-content: center;
+  }
+
+  .ai-how-it-works-step-{{ ai_gen_id }} {
+    flex: 1 1 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    position: relative;
+    min-width: 0;
+  }
+
+  .ai-how-it-works-step-number-{{ ai_gen_id }} {
+    width: {{ block.settings.circle_size }}px;
+    height: {{ block.settings.circle_size }}px;
+    border-radius: 50%;
+    background-color: {{ block.settings.step_number_bg }};
+    color: {{ block.settings.step_number_color }};
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: {{ block.settings.number_size }}px;
+    font-weight: 700;
+    margin-bottom: {{ block.settings.number_text_spacing }}px;
+    position: relative;
+    z-index: 2;
+    flex-shrink: 0;
+  }
+
+  .ai-how-it-works-step-{{ ai_gen_id }}[data-step="1"] .ai-how-it-works-step-number-{{ ai_gen_id }} {
+    background-color: {{ block.settings.step_1_bg }};
+    color: {{ block.settings.step_1_color }};
+  }
+  .ai-how-it-works-step-{{ ai_gen_id }}[data-step="2"] .ai-how-it-works-step-number-{{ ai_gen_id }} {
+    background-color: {{ block.settings.step_2_bg }};
+    color: {{ block.settings.step_2_color }};
+  }
+  .ai-how-it-works-step-{{ ai_gen_id }}[data-step="3"] .ai-how-it-works-step-number-{{ ai_gen_id }} {
+    background-color: {{ block.settings.step_3_bg }};
+    color: {{ block.settings.step_3_color }};
+  }
+  .ai-how-it-works-step-{{ ai_gen_id }}[data-step="4"] .ai-how-it-works-step-number-{{ ai_gen_id }} {
+    background-color: {{ block.settings.step_4_bg }};
+    color: {{ block.settings.step_4_color }};
+  }
+
+  .ai-how-it-works-step-text-{{ ai_gen_id }} {
+    font-size: {{ block.settings.step_text_size }}px;
+    color: {{ block.settings.step_text_color }};
+    line-height: 1.4;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    hyphens: auto;
+  }
+
+  .ai-how-it-works-step-{{ ai_gen_id }}:not(:last-child) .ai-how-it-works-step-number-{{ ai_gen_id }}::after {
+    content: none;
+  }
+
+  .ai-how-it-works-step-{{ ai_gen_id }}:not(:last-child) .ai-how-it-works-step-number-{{ ai_gen_id }}::before {
+    content: none;
+  }
+
+  .ai-how-it-works-cta-{{ ai_gen_id }} {
+    margin-top: {{ block.settings.cta_spacing }}px;
+    text-align: center;
+  }
+
+  .ai-how-it-works-cta-button-{{ ai_gen_id }} {
+    display: inline-block;
+    padding: {{ block.settings.cta_padding_vertical }}px {{ block.settings.cta_padding_horizontal }}px;
+    background-color: {{ block.settings.cta_bg_color }};
+    color: {{ block.settings.cta_text_color }};
+    text-decoration: none;
+    border-radius: {{ block.settings.cta_border_radius }}px;
+    font-size: {{ block.settings.cta_text_size }}px;
+    line-height: 1.5;
+    max-width: 800px;
+    transition: opacity 0.3s ease;
+  }
+
+  .ai-how-it-works-cta-button-{{ ai_gen_id }}:hover {
+    opacity: 0.9;
+  }
+
+  @media screen and (max-width: 749px) {
+    .ai-how-it-works-steps-{{ ai_gen_id }} {
+      gap: calc({{ block.settings.step_gap }}px * 0.5);
+    }
+
+    .ai-how-it-works-heading-{{ ai_gen_id }} {
+      font-size: calc({{ block.settings.heading_size }}px * 0.75);
+    }
+
+    .ai-how-it-works-step-number-{{ ai_gen_id }} {
+      width: calc({{ block.settings.circle_size }}px * 0.7);
+      height: calc({{ block.settings.circle_size }}px * 0.7);
+      font-size: calc({{ block.settings.number_size }}px * 0.7);
+      margin-bottom: calc({{ block.settings.number_text_spacing }}px * 0.7);
+    }
+
+    .ai-how-it-works-step-text-{{ ai_gen_id }} {
+      font-size: calc({{ block.settings.step_text_size }}px * 0.75);
+    }
+
+    .ai-how-it-works-step-{{ ai_gen_id }}:not(:last-child) .ai-how-it-works-step-number-{{ ai_gen_id }}::after,
+    .ai-how-it-works-step-{{ ai_gen_id }}:not(:last-child) .ai-how-it-works-step-number-{{ ai_gen_id }}::before {
+      content: none;
+    }
+
+    .ai-how-it-works-cta-button-{{ ai_gen_id }} {
+      font-size: calc({{ block.settings.cta_text_size }}px * 0.85);
+      padding: calc({{ block.settings.cta_padding_vertical }}px * 0.85) calc({{ block.settings.cta_padding_horizontal }}px * 0.85);
+    }
+  }
+{% endstyle %}
+
+<how-it-works-{{ ai_gen_id }} class="ai-how-it-works-{{ ai_gen_id }}" {{ block.shopify_attributes }}>
+  <div class="ai-how-it-works-container-{{ ai_gen_id }}">
+    {% if block.settings.heading != blank %}
+      <h2 class="ai-how-it-works-heading-{{ ai_gen_id }}">{{ block.settings.heading }}</h2>
+    {% endif %}
+
+    <div class="ai-how-it-works-steps-wrapper-{{ ai_gen_id }}">
+      <div class="ai-how-it-works-steps-{{ ai_gen_id }}">
+        <div class="ai-how-it-works-step-{{ ai_gen_id }}" data-step="1">
+          <div class="ai-how-it-works-step-number-{{ ai_gen_id }}">1</div>
+          <div class="ai-how-it-works-step-text-{{ ai_gen_id }}">{{ block.settings.step_1_text }}</div>
+        </div>
+
+        <div class="ai-how-it-works-step-{{ ai_gen_id }}" data-step="2">
+          <div class="ai-how-it-works-step-number-{{ ai_gen_id }}">2</div>
+          <div class="ai-how-it-works-step-text-{{ ai_gen_id }}">{{ block.settings.step_2_text }}</div>
+        </div>
+
+        <div class="ai-how-it-works-step-{{ ai_gen_id }}" data-step="3">
+          <div class="ai-how-it-works-step-number-{{ ai_gen_id }}">3</div>
+          <div class="ai-how-it-works-step-text-{{ ai_gen_id }}">{{ block.settings.step_3_text }}</div>
+        </div>
+
+        <div class="ai-how-it-works-step-{{ ai_gen_id }}" data-step="4">
+          <div class="ai-how-it-works-step-number-{{ ai_gen_id }}">4</div>
+          <div class="ai-how-it-works-step-text-{{ ai_gen_id }}">{{ block.settings.step_4_text }}</div>
+        </div>
+      </div>
+    </div>
+
+    {% if block.settings.cta_text != blank %}
+      <div class="ai-how-it-works-cta-{{ ai_gen_id }}">
+        <a href="{{ block.settings.cta_link }}" class="ai-how-it-works-cta-button-{{ ai_gen_id }}">
+          {{ block.settings.cta_text }}
+        </a>
+      </div>
+    {% endif %}
+  </div>
+</how-it-works-{{ ai_gen_id }}>
+
+<script>
+  (function() {
+    class HowItWorks{{ ai_gen_id }} extends HTMLElement {
+      constructor() {
+        super();
+      }
+
+      connectedCallback() {
+      }
+    }
+
+    customElements.define('how-it-works-{{ ai_gen_id }}', HowItWorks{{ ai_gen_id }});
+  })();
+</script>
+
+{% schema %}
+{
+  "name": "Cómo funciona",
+  "tag": null,
+  "settings": [
+    {
+      "type": "header",
+      "content": "Encabezado"
+    },
+    {
+      "type": "inline_richtext",
+      "id": "heading",
+      "label": "Título de la sección",
+      "default": "Cómo funciona"
+    },
+    {
+      "type": "range",
+      "id": "heading_size",
+      "min": 20,
+      "max": 60,
+      "step": 2,
+      "unit": "px",
+      "label": "Tamaño del título",
+      "default": 36
+    },
+    {
+      "type": "color",
+      "id": "heading_color",
+      "label": "Color del título",
+      "default": "#2b2c2d"
+    },
+    {
+      "type": "range",
+      "id": "heading_spacing",
+      "min": 20,
+      "max": 80,
+      "step": 4,
+      "unit": "px",
+      "label": "Espacio debajo del título",
+      "default": 48
+    },
+    {
+      "type": "header",
+      "content": "Pasos"
+    },
+    {
+      "type": "inline_richtext",
+      "id": "step_1_text",
+      "label": "Texto del paso 1",
+      "default": "Seleccione color y cantidad"
+    },
+    {
+      "type": "inline_richtext",
+      "id": "step_2_text",
+      "label": "Texto del paso 2",
+      "default": "Seleccionar posiciones de impresión y ilustraciones"
+    },
+    {
+      "type": "inline_richtext",
+      "id": "step_3_text",
+      "label": "Texto del paso 3",
+      "default": "Seleccionar método de impresión"
+    },
+    {
+      "type": "inline_richtext",
+      "id": "step_4_text",
+      "label": "Texto del paso 4",
+      "default": "Añadir al carrito para ver la cotización"
+    },
+    {
+      "type": "header",
+      "content": "Colores por paso (paleta Memorama)"
+    },
+    {
+      "type": "color",
+      "id": "step_1_bg",
+      "label": "Paso 1 — Fondo",
+      "default": "#8ED320"
+    },
+    {
+      "type": "color",
+      "id": "step_1_color",
+      "label": "Paso 1 — Número",
+      "default": "#ffffff"
+    },
+    {
+      "type": "color",
+      "id": "step_2_bg",
+      "label": "Paso 2 — Fondo",
+      "default": "#F5A623"
+    },
+    {
+      "type": "color",
+      "id": "step_2_color",
+      "label": "Paso 2 — Número",
+      "default": "#ffffff"
+    },
+    {
+      "type": "color",
+      "id": "step_3_bg",
+      "label": "Paso 3 — Fondo",
+      "default": "#E91E63"
+    },
+    {
+      "type": "color",
+      "id": "step_3_color",
+      "label": "Paso 3 — Número",
+      "default": "#ffffff"
+    },
+    {
+      "type": "color",
+      "id": "step_4_bg",
+      "label": "Paso 4 — Fondo",
+      "default": "#3498DB"
+    },
+    {
+      "type": "color",
+      "id": "step_4_color",
+      "label": "Paso 4 — Número",
+      "default": "#ffffff"
+    },
+    {
+      "type": "header",
+      "content": "Estilo de pasos"
+    },
+    {
+      "type": "range",
+      "id": "circle_size",
+      "min": 40,
+      "max": 100,
+      "step": 5,
+      "unit": "px",
+      "label": "Tamaño del círculo",
+      "default": 70
+    },
+    {
+      "type": "color",
+      "id": "step_number_bg",
+      "label": "Color de fondo del número",
+      "default": "#FFB73B"
+    },
+    {
+      "type": "color",
+      "id": "step_number_color",
+      "label": "Color del número",
+      "default": "#ffffff"
+    },
+    {
+      "type": "range",
+      "id": "number_size",
+      "min": 16,
+      "max": 48,
+      "step": 2,
+      "unit": "px",
+      "label": "Tamaño del número",
+      "default": 28
+    },
+    {
+      "type": "range",
+      "id": "step_text_size",
+      "min": 12,
+      "max": 24,
+      "step": 1,
+      "unit": "px",
+      "label": "Tamaño del texto",
+      "default": 16
+    },
+    {
+      "type": "color",
+      "id": "step_text_color",
+      "label": "Color del texto",
+      "default": "#2b2c2d"
+    },
+    {
+      "type": "range",
+      "id": "number_text_spacing",
+      "min": 8,
+      "max": 40,
+      "step": 2,
+      "unit": "px",
+      "label": "Espacio entre número y texto",
+      "default": 16
+    },
+    {
+      "type": "range",
+      "id": "step_gap",
+      "min": 40,
+      "max": 120,
+      "step": 10,
+      "unit": "px",
+      "label": "Espacio entre pasos",
+      "default": 80
+    },
+    {
+      "type": "header",
+      "content": "Flecha conectora"
+    },
+    {
+      "type": "range",
+      "id": "line_thickness",
+      "min": 1,
+      "max": 6,
+      "step": 1,
+      "unit": "px",
+      "label": "Grosor de la línea",
+      "default": 2
+    },
+    {
+      "type": "range",
+      "id": "arrow_size",
+      "min": 8,
+      "max": 24,
+      "step": 2,
+      "unit": "px",
+      "label": "Tamaño de la flecha",
+      "default": 12
+    },
+    {
+      "type": "color",
+      "id": "line_color",
+      "label": "Color de la flecha",
+      "default": "#FFB73B"
+    },
+    {
+      "type": "header",
+      "content": "Botón CTA"
+    },
+    {
+      "type": "inline_richtext",
+      "id": "cta_text",
+      "label": "Texto del CTA",
+      "default": "En cualquier momento puede hacer clic aquí para solicitar una cotización y hablar con un gerente de cuenta."
+    },
+    {
+      "type": "url",
+      "id": "cta_link",
+      "label": "Enlace del CTA"
+    },
+    {
+      "type": "color",
+      "id": "cta_bg_color",
+      "label": "Color de fondo",
+      "default": "#3BA4FF"
+    },
+    {
+      "type": "color",
+      "id": "cta_text_color",
+      "label": "Color del texto",
+      "default": "#ffffff"
+    },
+    {
+      "type": "range",
+      "id": "cta_text_size",
+      "min": 12,
+      "max": 20,
+      "step": 1,
+      "unit": "px",
+      "label": "Tamaño del texto",
+      "default": 16
+    },
+    {
+      "type": "range",
+      "id": "cta_padding_vertical",
+      "min": 10,
+      "max": 30,
+      "step": 2,
+      "unit": "px",
+      "label": "Padding vertical",
+      "default": 18
+    },
+    {
+      "type": "range",
+      "id": "cta_padding_horizontal",
+      "min": 20,
+      "max": 60,
+      "step": 4,
+      "unit": "px",
+      "label": "Padding horizontal",
+      "default": 40
+    },
+    {
+      "type": "range",
+      "id": "cta_border_radius",
+      "min": 0,
+      "max": 50,
+      "step": 5,
+      "unit": "px",
+      "label": "Radio del borde",
+      "default": 50
+    },
+    {
+      "type": "range",
+      "id": "cta_spacing",
+      "min": 20,
+      "max": 80,
+      "step": 4,
+      "unit": "px",
+      "label": "Espacio superior",
+      "default": 48
+    },
+    {
+      "type": "header",
+      "content": "Sección"
+    },
+    {
+      "type": "color",
+      "id": "background_color",
+      "label": "Color de fondo",
+      "default": "#ffffff"
+    },
+    {
+      "type": "range",
+      "id": "container_width",
+      "min": 800,
+      "max": 1600,
+      "step": 100,
+      "unit": "px",
+      "label": "Ancho del contenedor",
+      "default": 1200
+    },
+    {
+      "type": "range",
+      "id": "section_padding_top",
+      "min": 20,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "Padding superior",
+      "default": 60
+    },
+    {
+      "type": "range",
+      "id": "section_padding_bottom",
+      "min": 20,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "Padding inferior",
+      "default": 60
+    },
+    {
+      "type": "range",
+      "id": "desktop_width_percent",
+      "label": "Desktop width",
+      "min": 50,
+      "max": 100,
+      "step": 5,
+      "unit": "%",
+      "default": 100
+    }
+  ],
+  "presets": [
+    {
+      "name": "Cómo funciona"
+    }
+  ]
+}
+{% endschema %}

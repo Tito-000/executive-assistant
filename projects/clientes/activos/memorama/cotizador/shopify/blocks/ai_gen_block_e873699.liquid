@@ -1,0 +1,629 @@
+{% doc %}
+  @prompt
+    Crea una sección de audiencias / casos de uso para una tienda Shopify de ropa y productos personalizados.
+    
+    Referencia visual:
+    
+    La primera imagen corresponde a vista escritorio (desktop).
+    
+    La segunda imagen corresponde a vista móvil (mobile).
+    
+    El diseño debe adaptarse correctamente entre ambas vistas, respetando jerarquía, tamaños y espaciados.
+    
+    🖥️ ESTRUCTURA DESKTOP
+    
+    Grid de 4 columnas.
+    
+    Cada columna contiene:
+    
+    Un título grande centrado arriba.
+    
+    Una imagen grande con bordes redondeados (rounded-xl).
+    
+    Un texto descriptivo corto debajo de la imagen.
+    
+    Espaciado amplio y diseño limpio.
+    
+    Columnas (en este orden):
+    
+    Agencias de marketing
+    Texto: “Mercancía a granel para campañas, activaciones y eventos.”
+    
+    Empresas tecnológicas
+    Texto: “Ropa y merchandising de marca para equipos, lanzamientos y eventos de empresa.”
+    
+    Deportes y fitness
+    Texto: “Ropa de equipo duradera y artículos promocionales diseñados para el rendimiento.”
+    
+    Organizaciones benéficas y ONG
+    Texto: “Ropa y productos de marca rentables para eventos de recaudación de fondos.”
+    
+    📱 ESTRUCTURA MOBILE
+    
+    Una columna (stack vertical).
+    
+    Cada bloque debe mostrarse en este orden:
+    
+    Título
+    
+    Imagen
+    
+    Texto descriptivo
+    
+    Las imágenes deben ser grandes y verticales.
+    
+    Bordes redondeados visibles.
+    
+    Mantener buena separación entre bloques.
+    
+    🎨 ESTILO VISUAL
+    
+    Fondo blanco.
+    
+    Tipografía moderna y legible.
+    
+    Títulos grandes y claros.
+    
+    Estilo corporativo, profesional y confiable.
+    
+    Enfoque B2B (empresas, agencias, organizaciones).
+    
+    Imágenes con personas reales usando merchandising.
+    
+    ⚙️ REQUISITOS TÉCNICOS
+    
+    Usar HTML + CSS + Liquid.
+    
+    Totalmente responsive.
+    
+    Compatible con temas modernos de Shopify (Dawn / Refresh).
+    
+    Código listo para usar como sección personalizada.
+    
+    Genera la sección completa respetando exactamente el comportamiento en desktop y mobile según las referencias visuales., Crea una sección de audiencias / tipos de clientes para una tienda Shopify de ropa y productos personalizados.
+    
+    Referencia visual obligatoria:
+    
+    En desktop, la sección se muestra en 4 columnas.
+    
+    En mobile, la sección se muestra dividida en 2 columnas por fila (NO una sola columna).
+    
+    El comportamiento responsive debe respetar exactamente esto.
+    
+    🖥️ ESTRUCTURA DESKTOP
+    
+    Grid de 4 columnas en una sola fila.
+    
+    Cada columna contiene:
+    
+    Título grande centrado arriba.
+    
+    Imagen grande con bordes redondeados.
+    
+    Texto descriptivo corto debajo.
+    
+    Espaciado amplio y alineación limpia.
+    
+    Bloques (en este orden):
+    
+    Agencias de marketing
+    Mercancía a granel para campañas, activaciones y eventos.
+    
+    Empresas tecnológicas
+    Ropa y merchandising de marca para equipos, lanzamientos y eventos de empresa.
+    
+    Deportes y fitness
+    Ropa de equipo duradera y artículos promocionales diseñados para el rendimiento.
+    
+    Organizaciones benéficas y ONG
+    Ropa y productos de marca rentables para eventos de recaudación de fondos.
+    
+    📱 ESTRUCTURA MOBILE (MUY IMPORTANTE)
+    
+    Grid de 2 columnas por fila.
+    
+    Mostrar los bloques en este orden:
+    
+    Fila 1: Agencias de marketing | Empresas tecnológicas
+    
+    Fila 2: Deportes y fitness | Organizaciones benéficas y ONG
+    
+    Cada bloque incluye:
+    
+    Título arriba
+    
+    Imagen grande con bordes redondeados
+    
+    Texto debajo
+    
+    Mantener proporción de imagen y buen espaciado.
+    
+    Diseño compacto pero limpio.
+    
+    🎨 ESTILO VISUAL
+    
+    Fondo blanco.
+    
+    Tipografía moderna, clara y profesional.
+    
+    Estética corporativa B2B.
+    
+    Imágenes reales con personas usando merchandising.
+    
+    Sensación de confianza y escala empresarial.
+    
+    ⚙️ REQUISITOS TÉCNICOS
+    
+    Usar HTML + CSS + Liquid.
+    
+    Totalmente responsive.
+    
+    Compatible con temas modernos de Shopify (Dawn / Refresh).
+    
+    Editable desde el Customizer.
+    
+    Genera la sección completa respetando exactamente el comportamiento desktop (4 columnas) y mobile (2 columnas).
+{% enddoc %}
+{% assign ai_gen_id = block.id | replace: '_', '' | downcase %}
+
+{% style %}
+  .ai-customer-types-section-{{ ai_gen_id }} {
+    display: block;
+    width: 100%;
+    background-color: {{ block.settings.background_color }};
+    padding: {{ block.settings.section_padding_top }}px 20px {{ block.settings.section_padding_bottom }}px;
+  }
+
+  .ai-customer-types-container-{{ ai_gen_id }} {
+    max-width: {{ block.settings.container_max_width }}px;
+    margin: 0 auto;
+  }
+
+  .ai-customer-types-grid-{{ ai_gen_id }} {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: {{ block.settings.column_gap }}px;
+  }
+
+  .ai-customer-types-item-{{ ai_gen_id }} {
+    display: flex;
+    flex-direction: column;
+    gap: {{ block.settings.content_gap }}px;
+  }
+
+  .ai-customer-types-title-{{ ai_gen_id }} {
+    font-size: {{ block.settings.title_font_size }}px;
+    font-weight: {{ block.settings.title_font_weight }};
+    color: {{ block.settings.title_color }};
+    text-align: center;
+    margin: 0;
+    line-height: 1.2;
+  }
+
+  .ai-customer-types-image-wrapper-{{ ai_gen_id }} {
+    width: 100%;
+    overflow: hidden;
+    border-radius: {{ block.settings.image_border_radius }}px;
+  }
+
+  .ai-customer-types-image-{{ ai_gen_id }} {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: cover;
+  }
+
+  .ai-customer-types-image-placeholder-{{ ai_gen_id }} {
+    width: 100%;
+    aspect-ratio: 3 / 4;
+    background-color: #f4f4f4;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: {{ block.settings.image_border_radius }}px;
+  }
+
+  .ai-customer-types-image-placeholder-{{ ai_gen_id }} svg {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .ai-customer-types-description-{{ ai_gen_id }} {
+    font-size: {{ block.settings.description_font_size }}px;
+    color: {{ block.settings.description_color }};
+    text-align: center;
+    margin: 0;
+    line-height: 1.5;
+  }
+
+  @media screen and (max-width: 749px) {
+    .ai-customer-types-section-{{ ai_gen_id }} {
+      padding: {{ block.settings.section_padding_top_mobile }}px 16px {{ block.settings.section_padding_bottom_mobile }}px;
+    }
+
+    .ai-customer-types-grid-{{ ai_gen_id }} {
+      grid-template-columns: repeat(2, 1fr);
+      gap: {{ block.settings.column_gap_mobile }}px {{ block.settings.row_gap_mobile }}px;
+    }
+
+    .ai-customer-types-item-{{ ai_gen_id }} {
+      gap: {{ block.settings.content_gap_mobile }}px;
+    }
+
+    .ai-customer-types-title-{{ ai_gen_id }} {
+      font-size: {{ block.settings.title_font_size_mobile }}px;
+    }
+
+    .ai-customer-types-description-{{ ai_gen_id }} {
+      font-size: {{ block.settings.description_font_size_mobile }}px;
+    }
+
+    .ai-customer-types-image-placeholder-{{ ai_gen_id }} {
+      aspect-ratio: 4 / 5;
+    }
+  }
+{% endstyle %}
+
+<customer-types-section-{{ ai_gen_id }} class="ai-customer-types-section-{{ ai_gen_id }}" {{ block.shopify_attributes }}>
+  <div class="ai-customer-types-container-{{ ai_gen_id }}">
+    <div class="ai-customer-types-grid-{{ ai_gen_id }}">
+      {% for i in (1..4) %}
+        {% liquid
+          assign title_key = 'customer_type_' | append: i | append: '_title'
+          assign image_key = 'customer_type_' | append: i | append: '_image'
+          assign description_key = 'customer_type_' | append: i | append: '_description'
+
+          assign title = block.settings[title_key]
+          assign image = block.settings[image_key]
+          assign description = block.settings[description_key]
+        %}
+
+        <div class="ai-customer-types-item-{{ ai_gen_id }}">
+          {% if title != blank %}
+            <h3 class="ai-customer-types-title-{{ ai_gen_id }}">{{ title }}</h3>
+          {% endif %}
+
+          <div class="ai-customer-types-image-wrapper-{{ ai_gen_id }}">
+            {% if image %}
+              <img
+                src="{{ image | image_url: width: 800 }}"
+                alt="{{ image.alt | escape }}"
+                loading="lazy"
+                width="{{ image.width }}"
+                height="{{ image.height }}"
+                class="ai-customer-types-image-{{ ai_gen_id }}"
+              >
+            {% else %}
+              <div class="ai-customer-types-image-placeholder-{{ ai_gen_id }}">
+                {{ 'image' | placeholder_svg_tag }}
+              </div>
+            {% endif %}
+          </div>
+
+          {% if description != blank %}
+            <p class="ai-customer-types-description-{{ ai_gen_id }}">{{ description }}</p>
+          {% endif %}
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+</customer-types-section-{{ ai_gen_id }}>
+
+<script>
+  (function() {
+    class CustomerTypesSection{{ ai_gen_id }} extends HTMLElement {
+      constructor() {
+        super();
+      }
+    }
+
+    customElements.define('customer-types-section-{{ ai_gen_id }}', CustomerTypesSection{{ ai_gen_id }});
+  })();
+</script>
+
+{% schema %}
+{
+  "name": "Tipos de clientes",
+  "tag": null,
+  "settings": [
+    {
+      "type": "header",
+      "content": "Tipo de cliente 1"
+    },
+    {
+      "type": "text",
+      "id": "customer_type_1_title",
+      "label": "Título",
+      "default": "Agencias de marketing"
+    },
+    {
+      "type": "image_picker",
+      "id": "customer_type_1_image",
+      "label": "Imagen"
+    },
+    {
+      "type": "textarea",
+      "id": "customer_type_1_description",
+      "label": "Descripción",
+      "default": "Mercancía a granel para campañas, activaciones y eventos."
+    },
+    {
+      "type": "header",
+      "content": "Tipo de cliente 2"
+    },
+    {
+      "type": "text",
+      "id": "customer_type_2_title",
+      "label": "Título",
+      "default": "Empresas tecnológicas"
+    },
+    {
+      "type": "image_picker",
+      "id": "customer_type_2_image",
+      "label": "Imagen"
+    },
+    {
+      "type": "textarea",
+      "id": "customer_type_2_description",
+      "label": "Descripción",
+      "default": "Ropa y merchandising de marca para equipos, lanzamientos y eventos de empresa."
+    },
+    {
+      "type": "header",
+      "content": "Tipo de cliente 3"
+    },
+    {
+      "type": "text",
+      "id": "customer_type_3_title",
+      "label": "Título",
+      "default": "Deportes y fitness"
+    },
+    {
+      "type": "image_picker",
+      "id": "customer_type_3_image",
+      "label": "Imagen"
+    },
+    {
+      "type": "textarea",
+      "id": "customer_type_3_description",
+      "label": "Descripción",
+      "default": "Ropa de equipo duradera y artículos promocionales diseñados para el rendimiento."
+    },
+    {
+      "type": "header",
+      "content": "Tipo de cliente 4"
+    },
+    {
+      "type": "text",
+      "id": "customer_type_4_title",
+      "label": "Título",
+      "default": "Organizaciones benéficas y ONG"
+    },
+    {
+      "type": "image_picker",
+      "id": "customer_type_4_image",
+      "label": "Imagen"
+    },
+    {
+      "type": "textarea",
+      "id": "customer_type_4_description",
+      "label": "Descripción",
+      "default": "Ropa y productos de marca rentables para eventos de recaudación de fondos."
+    },
+    {
+      "type": "header",
+      "content": "Diseño general"
+    },
+    {
+      "type": "color",
+      "id": "background_color",
+      "label": "Color de fondo",
+      "default": "#ffffff"
+    },
+    {
+      "type": "range",
+      "id": "container_max_width",
+      "min": 1000,
+      "max": 1600,
+      "step": 100,
+      "unit": "px",
+      "label": "Ancho máximo",
+      "default": 1200
+    },
+    {
+      "type": "range",
+      "id": "section_padding_top",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "Espaciado superior desktop",
+      "default": 60
+    },
+    {
+      "type": "range",
+      "id": "section_padding_bottom",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "Espaciado inferior desktop",
+      "default": 60
+    },
+    {
+      "type": "range",
+      "id": "section_padding_top_mobile",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "Espaciado superior móvil",
+      "default": 40
+    },
+    {
+      "type": "range",
+      "id": "section_padding_bottom_mobile",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "Espaciado inferior móvil",
+      "default": 40
+    },
+    {
+      "type": "range",
+      "id": "column_gap",
+      "min": 8,
+      "max": 60,
+      "step": 4,
+      "unit": "px",
+      "label": "Espacio entre columnas desktop",
+      "default": 32
+    },
+    {
+      "type": "range",
+      "id": "column_gap_mobile",
+      "min": 8,
+      "max": 40,
+      "step": 4,
+      "unit": "px",
+      "label": "Espacio horizontal móvil",
+      "default": 16
+    },
+    {
+      "type": "range",
+      "id": "row_gap_mobile",
+      "min": 8,
+      "max": 60,
+      "step": 4,
+      "unit": "px",
+      "label": "Espacio vertical móvil",
+      "default": 32
+    },
+    {
+      "type": "range",
+      "id": "content_gap",
+      "min": 8,
+      "max": 40,
+      "step": 4,
+      "unit": "px",
+      "label": "Espacio interno desktop",
+      "default": 20
+    },
+    {
+      "type": "range",
+      "id": "content_gap_mobile",
+      "min": 8,
+      "max": 40,
+      "step": 4,
+      "unit": "px",
+      "label": "Espacio interno móvil",
+      "default": 12
+    },
+    {
+      "type": "header",
+      "content": "Títulos"
+    },
+    {
+      "type": "range",
+      "id": "title_font_size",
+      "min": 16,
+      "max": 48,
+      "step": 2,
+      "unit": "px",
+      "label": "Tamaño desktop",
+      "default": 28
+    },
+    {
+      "type": "range",
+      "id": "title_font_size_mobile",
+      "min": 14,
+      "max": 32,
+      "step": 2,
+      "unit": "px",
+      "label": "Tamaño móvil",
+      "default": 18
+    },
+    {
+      "type": "select",
+      "id": "title_font_weight",
+      "label": "Peso de fuente",
+      "options": [
+        {
+          "value": "400",
+          "label": "Normal"
+        },
+        {
+          "value": "500",
+          "label": "Medio"
+        },
+        {
+          "value": "600",
+          "label": "Semi-negrita"
+        },
+        {
+          "value": "700",
+          "label": "Negrita"
+        }
+      ],
+      "default": "600"
+    },
+    {
+      "type": "color",
+      "id": "title_color",
+      "label": "Color",
+      "default": "#262626"
+    },
+    {
+      "type": "header",
+      "content": "Descripciones"
+    },
+    {
+      "type": "range",
+      "id": "description_font_size",
+      "min": 12,
+      "max": 24,
+      "step": 1,
+      "unit": "px",
+      "label": "Tamaño desktop",
+      "default": 16
+    },
+    {
+      "type": "range",
+      "id": "description_font_size_mobile",
+      "min": 12,
+      "max": 20,
+      "step": 1,
+      "unit": "px",
+      "label": "Tamaño móvil",
+      "default": 13
+    },
+    {
+      "type": "color",
+      "id": "description_color",
+      "label": "Color",
+      "default": "#666666"
+    },
+    {
+      "type": "header",
+      "content": "Imágenes"
+    },
+    {
+      "type": "range",
+      "id": "image_border_radius",
+      "min": 0,
+      "max": 40,
+      "step": 2,
+      "unit": "px",
+      "label": "Radio de borde",
+      "default": 12
+    }
+  ],
+  "presets": [
+    {
+      "name": "Tipos de clientes"
+    }
+  ]
+}
+{% endschema %}

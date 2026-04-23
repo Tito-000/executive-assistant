@@ -1,0 +1,17 @@
+name = "memorama-cotizador"
+main = "src/index.js"
+compatibility_date = "2024-11-01"
+
+[[kv_namespaces]]
+binding = "TOKENS"
+id = "e298fe58e2084bef906c7fcf889f8b78"
+
+[[r2_buckets]]
+binding = "LOGOS"
+bucket_name = "memorama-logos"
+
+[vars]
+SHOPIFY_SHOP = "memorama-2.myshopify.com"
+SHOPIFY_CLIENT_ID = "4ee65957056dc1046c7302638a41f123"
+SHOPIFY_SCOPES = "read_customers,write_customers,write_draft_orders,read_draft_orders"
+LOGOS_PUBLIC_URL = "https://pub-cca7cd52338a4918bb93821140585061.r2.dev"

@@ -1,0 +1,181 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "rich_text_XxDVeX": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_Fr4fND": {
+          "type": "heading",
+          "settings": {
+            "heading": "Ropa y productos personalizados para tu marca",
+            "heading_size": "h0"
+          }
+        },
+        "text_xxdAw3": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Producción de <strong>ropa y artículos personalizados</strong> para empresas, equipos y eventos. Camisetas, polos, sudaderas, chaquetas y accesorios con impresión profesional, control de calidad y entrega puntual. Un solo proveedor para un proceso claro y sin complicaciones.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "heading_Fr4fND",
+        "text_xxdAw3"
+      ],
+      "name": "t:sections.rich-text.presets.name",
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "scheme-de9805d3-30e4-4a29-b01b-3d4e24a290b5",
+        "full_width": true,
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
+    },
+    "blocks_KXmUi8": {
+      "type": "_blocks",
+      "blocks": {
+        "ai_gen_block_92de45f_jpHCNn": {
+          "type": "ai_gen_block_92de45f",
+          "settings": {
+            "heading": "<strong>Marcas con las que trabajamos</strong>",
+            "description": "<p>Seleccionamos proveedores confiables para garantizar durabilidad, buena presentación y resultados consistentes en cada pedido.</p>",
+            "logo_1": "shopify://shop_images/17.png",
+            "logo_2": "shopify://shop_images/1.png",
+            "logo_3": "shopify://shop_images/16.png",
+            "logo_4": "shopify://shop_images/fs.png",
+            "logo_5": "shopify://shop_images/Diseno_sin_titulo.png",
+            "logo_6": "shopify://shop_images/2_d770603d-3240-480c-80d9-7b368390e3d5.png",
+            "logo_7": "shopify://shop_images/nvn.png",
+            "logo_8": "shopify://shop_images/19.png",
+            "enable_carousel": true,
+            "carousel_speed": 30,
+            "logo_max_width": 80,
+            "logo_max_height": 60,
+            "logo_spacing": 70,
+            "logo_grayscale": 100,
+            "logo_opacity": 70,
+            "background_color": "#f4f4f4",
+            "heading_color": "#001128",
+            "description_color": "#001128",
+            "heading_size": 22,
+            "description_size": 12,
+            "text_column_width": 30,
+            "padding_top": 20,
+            "padding_bottom": 20,
+            "container_width": 1200
+          },
+          "blocks": {}
+        }
+      },
+      "block_order": [
+        "ai_gen_block_92de45f_jpHCNn"
+      ],
+      "disabled": true,
+      "settings": {}
+    },
+    "banner": {
+      "type": "main-collection-banner",
+      "settings": {
+        "show_collection_description": true,
+        "show_collection_image": false,
+        "color_scheme": "scheme-1"
+      }
+    },
+    "product-grid": {
+      "type": "main-collection-product-grid",
+      "settings": {
+        "products_per_page": 20,
+        "columns_desktop": 3,
+        "columns_mobile": "2",
+        "color_scheme": "",
+        "image_ratio": "adapt",
+        "image_shape": "default",
+        "show_secondary_image": true,
+        "show_vendor": false,
+        "show_rating": false,
+        "quick_add": "none",
+        "enable_filtering": true,
+        "filter_type": "drawer",
+        "enable_sorting": true,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "1768502017928c4e47": {
+      "type": "apps",
+      "settings": {
+        "include_margins": true
+      }
+    },
+    "image_with_text_eegedV": {
+      "type": "image-with-text",
+      "blocks": {
+        "heading_WJ6Ak8": {
+          "type": "heading",
+          "settings": {
+            "heading": "Obtén un <strong>10% de descuento</strong> en tu primer pedido",
+            "heading_size": "h1"
+          }
+        },
+        "text_BmLyED": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Solicita una cotización rápida para tu próximo pedido de ropa o productos personalizados y te damos <strong>10% de descuento en tu primera orden</strong> o <strong>envío gratuito en pedidos superiores a $000</strong>.</p>",
+            "text_style": "body"
+          }
+        },
+        "button_wMC6pj": {
+          "type": "button",
+          "settings": {
+            "button_label": "Obtener cotización rápida",
+            "button_link": "shopify://pages/contact",
+            "button_style_secondary": false
+          }
+        }
+      },
+      "block_order": [
+        "heading_WJ6Ak8",
+        "text_BmLyED",
+        "button_wMC6pj"
+      ],
+      "name": "t:sections.image-with-text.presets.name",
+      "settings": {
+        "image": "shopify://shop_images/hfhg.png",
+        "height": "adapt",
+        "desktop_image_width": "medium",
+        "layout": "image_first",
+        "image_behavior": "none",
+        "content_layout": "no-overlap",
+        "desktop_content_position": "top",
+        "desktop_content_alignment": "left",
+        "mobile_content_alignment": "left",
+        "section_color_scheme": "",
+        "color_scheme": "scheme-1d996e9c-8ce3-4c0a-ab03-e3f2f1c7edd3",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "176832210479c2e3a4": {
+      "type": "_blocks",
+      "settings": {}
+    }
+  },
+  "order": [
+    "rich_text_XxDVeX",
+    "blocks_KXmUi8",
+    "banner",
+    "product-grid",
+    "1768502017928c4e47",
+    "image_with_text_eegedV",
+    "176832210479c2e3a4"
+  ]
+}

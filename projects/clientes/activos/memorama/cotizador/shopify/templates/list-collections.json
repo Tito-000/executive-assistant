@@ -1,0 +1,100 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "rich_text_cQHXzT": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_TYpPgk": {
+          "type": "heading",
+          "settings": {
+            "heading": "<strong>Impresión de camisetas personalizadas</strong>",
+            "heading_size": "h0"
+          }
+        },
+        "text_dAfVLG": {
+          "type": "text",
+          "settings": {
+            "text": "<p>La <strong>impresión de camisetas personalizadas</strong> es una de las formas más efectivas y seguras de representar a tu marca, unificar equipos o ejecutar eventos sin imprevistos. En <strong>Memoram</strong>, producimos camisetas personalizadas pensadas para empresas, escuelas, equipos deportivos y organizaciones que <strong>no pueden fallar en tiempos ni en calidad</strong>.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "heading_TYpPgk",
+        "text_dAfVLG"
+      ],
+      "name": "t:sections.rich-text.presets.name",
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "scheme-de9805d3-30e4-4a29-b01b-3d4e24a290b5",
+        "full_width": true,
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
+    },
+    "blocks_BwNXMy": {
+      "type": "_blocks",
+      "blocks": {
+        "ai_gen_block_92de45f_gKFV3i": {
+          "type": "ai_gen_block_92de45f",
+          "settings": {
+            "heading": "<strong>Marcas con las que trabajamos</strong>",
+            "description": "<p>Seleccionamos proveedores confiables para garantizar durabilidad, buena presentación y resultados consistentes en cada pedido.</p>",
+            "logo_1": "shopify://shop_images/17.png",
+            "logo_2": "shopify://shop_images/1.png",
+            "logo_3": "shopify://shop_images/16.png",
+            "logo_4": "shopify://shop_images/fs.png",
+            "logo_5": "shopify://shop_images/Diseno_sin_titulo.png",
+            "logo_6": "shopify://shop_images/2_d770603d-3240-480c-80d9-7b368390e3d5.png",
+            "logo_7": "shopify://shop_images/nvn.png",
+            "logo_8": "shopify://shop_images/19.png",
+            "enable_carousel": true,
+            "carousel_speed": 30,
+            "logo_max_width": 80,
+            "logo_max_height": 60,
+            "logo_spacing": 70,
+            "logo_grayscale": 100,
+            "logo_opacity": 70,
+            "background_color": "#f4f4f4",
+            "heading_color": "#001128",
+            "description_color": "#001128",
+            "heading_size": 22,
+            "description_size": 12,
+            "text_column_width": 30,
+            "padding_top": 20,
+            "padding_bottom": 20,
+            "container_width": 1200
+          },
+          "blocks": {}
+        }
+      },
+      "block_order": [
+        "ai_gen_block_92de45f_gKFV3i"
+      ],
+      "settings": {}
+    },
+    "main": {
+      "type": "main-list-collections",
+      "settings": {
+        "title": "",
+        "sort": "products_low",
+        "image_ratio": "square",
+        "columns_desktop": 3,
+        "columns_mobile": "2"
+      }
+    }
+  },
+  "order": [
+    "rich_text_cQHXzT",
+    "blocks_BwNXMy",
+    "main"
+  ]
+}

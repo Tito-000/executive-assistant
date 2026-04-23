@@ -1,0 +1,648 @@
+{% doc %}
+  @prompt
+    Crea una sección de métricas / resultados para una tienda Shopify, con diseño limpio, editorial y corporativo, totalmente editable desde el editor de temas.
+    
+    🖥️ DISEÑO EN DESKTOP
+    
+    Diseño en dos columnas:
+    
+    Columna izquierda: texto explicativo.
+    
+    Columna derecha: métricas grandes alineadas horizontalmente.
+    
+    Tipografía elegante, mucho espacio en blanco.
+    
+    Columna izquierda (contenido editable):
+    
+    Título:
+    “Nuestros números hablan por sí solos.”
+    
+    Texto descriptivo:
+    A lo largo de los años, hemos forjado una sólida reputación basada en la calidad, la fiabilidad y la satisfacción del cliente. Estas cifras reflejan el impacto real de nuestro trabajo y la confianza que las marcas, agencias y empresas depositan en nosotros.
+    
+    Columna derecha (métricas):
+    
+    Métrica 1:
+    
+    Texto grande: “Más de 1 millón”
+    
+    Subtexto: de clientes satisfechos
+    
+    Métrica 2:
+    
+    Texto grande: “Más de 900.000”
+    
+    Subtexto: empresas apoyadas
+    
+    Métrica 3:
+    
+    Texto grande: “Más de 100 millones”
+    
+    Subtexto: de productos entregados
+    
+    📱 DISEÑO EN MOBILE (MUY IMPORTANTE)
+    
+    La sección debe reordenarse automáticamente para móvil:
+    
+    Título
+    
+    Texto descriptivo
+    
+    Métrica 1
+    
+    Métrica 2
+    
+    Métrica 3
+    
+    Cada métrica debe mostrarse:
+    
+    Centrada
+    
+    En bloques verticales
+    
+    Con texto grande y legible
+    
+    Mucho espaciado vertical entre métricas.
+    
+    ⚙️ REQUISITOS DE EDICIÓN
+    
+    Todo el contenido debe ser editable desde el theme customizer:
+    
+    Título
+    
+    Texto descriptivo
+    
+    Texto grande de cada métrica
+    
+    Subtexto de cada métrica
+    
+    Opción para:
+    
+    Cambiar colores de texto
+    
+    Ajustar tamaño de tipografía
+    
+    Mostrar u ocultar métricas
+    
+    🎨 ESTILO
+    
+    Minimalista y profesional.
+    
+    Inspirado en marcas corporativas y B2B.
+    
+    Tipografía ligera para números grandes.
+    
+    Sin íconos, sin distracciones.
+    
+    Enfocado en credibilidad y confianza.
+    
+    📐 COMPORTAMIENTO RESPONSIVE
+    
+    Desktop: métricas alineadas horizontalmente.
+    
+    Mobile: métricas apiladas verticalmente, centradas.
+    
+    Sin carrusel.
+    
+    Transiciones suaves.
+{% enddoc %}
+{% assign ai_gen_id = block.id | replace: '_', '' | downcase %}
+
+{% style %}
+  .ai-metrics-section-{{ ai_gen_id }} {
+    display: block;
+    width: 100%;
+    padding: {{ block.settings.section_padding_top }}px {{ block.settings.section_padding_horizontal }}px {{ block.settings.section_padding_bottom }}px;
+    background-color: {{ block.settings.background_color }};
+  }
+
+  .ai-metrics-container-{{ ai_gen_id }} {
+    max-width: {{ block.settings.max_width }}px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: {{ block.settings.column_gap }}px;
+    align-items: center;
+  }
+
+  .ai-metrics-content-{{ ai_gen_id }} {
+    display: flex;
+    flex-direction: column;
+    gap: {{ block.settings.content_gap }}px;
+  }
+
+  .ai-metrics-title-{{ ai_gen_id }} {
+    font-size: {{ block.settings.title_size }}px;
+    font-weight: {{ block.settings.title_weight }};
+    color: {{ block.settings.title_color }};
+    line-height: 1.2;
+    margin: 0;
+  }
+
+  .ai-metrics-description-{{ ai_gen_id }} {
+    font-size: {{ block.settings.description_size }}px;
+    color: {{ block.settings.description_color }};
+    line-height: 1.6;
+    margin: 0;
+  }
+
+  .ai-metrics-stats-{{ ai_gen_id }} {
+    display: flex;
+    flex-direction: row;
+    gap: {{ block.settings.metrics_gap }}px;
+    align-items: flex-start;
+  }
+
+  .ai-metrics-stat-{{ ai_gen_id }} {
+    display: flex;
+    flex-direction: column;
+    gap: {{ block.settings.metric_internal_gap }}px;
+    flex: 1;
+  }
+
+  .ai-metrics-stat-number-{{ ai_gen_id }} {
+    font-size: {{ block.settings.metric_number_size }}px;
+    font-weight: {{ block.settings.metric_number_weight }};
+    color: {{ block.settings.metric_number_color }};
+    line-height: 1;
+    margin: 0;
+  }
+
+  .ai-metrics-stat-label-{{ ai_gen_id }} {
+    font-size: {{ block.settings.metric_label_size }}px;
+    color: {{ block.settings.metric_label_color }};
+    line-height: 1.4;
+    margin: 0;
+  }
+
+  @media screen and (max-width: 749px) {
+    .ai-metrics-section-{{ ai_gen_id }} {
+      padding: {{ block.settings.section_padding_top_mobile }}px {{ block.settings.section_padding_horizontal_mobile }}px {{ block.settings.section_padding_bottom_mobile }}px;
+    }
+
+    .ai-metrics-container-{{ ai_gen_id }} {
+      grid-template-columns: 1fr;
+      gap: {{ block.settings.mobile_section_gap }}px;
+    }
+
+    .ai-metrics-content-{{ ai_gen_id }} {
+      text-align: center;
+    }
+
+    .ai-metrics-title-{{ ai_gen_id }} {
+      font-size: {{ block.settings.title_size_mobile }}px;
+    }
+
+    .ai-metrics-description-{{ ai_gen_id }} {
+      font-size: {{ block.settings.description_size_mobile }}px;
+    }
+
+    .ai-metrics-stats-{{ ai_gen_id }} {
+      flex-direction: column;
+      gap: {{ block.settings.metrics_gap_mobile }}px;
+      align-items: center;
+    }
+
+    .ai-metrics-stat-{{ ai_gen_id }} {
+      text-align: center;
+      width: 100%;
+    }
+
+    .ai-metrics-stat-number-{{ ai_gen_id }} {
+      font-size: {{ block.settings.metric_number_size_mobile }}px;
+    }
+
+    .ai-metrics-stat-label-{{ ai_gen_id }} {
+      font-size: {{ block.settings.metric_label_size_mobile }}px;
+    }
+  }
+{% endstyle %}
+
+<metrics-section-{{ ai_gen_id }} class="ai-metrics-section-{{ ai_gen_id }}" {{ block.shopify_attributes }}>
+  <div class="ai-metrics-container-{{ ai_gen_id }}">
+    <div class="ai-metrics-content-{{ ai_gen_id }}">
+      {% if block.settings.title != blank %}
+        <h2 class="ai-metrics-title-{{ ai_gen_id }}">{{ block.settings.title }}</h2>
+      {% endif %}
+      {% if block.settings.description != blank %}
+        <div class="ai-metrics-description-{{ ai_gen_id }}">{{ block.settings.description }}</div>
+      {% endif %}
+    </div>
+
+    <div class="ai-metrics-stats-{{ ai_gen_id }}">
+      {% if block.settings.metric_1_enabled %}
+        <div class="ai-metrics-stat-{{ ai_gen_id }}">
+          {% if block.settings.metric_1_number != blank %}
+            <div class="ai-metrics-stat-number-{{ ai_gen_id }}">{{ block.settings.metric_1_number }}</div>
+          {% endif %}
+          {% if block.settings.metric_1_label != blank %}
+            <div class="ai-metrics-stat-label-{{ ai_gen_id }}">{{ block.settings.metric_1_label }}</div>
+          {% endif %}
+        </div>
+      {% endif %}
+
+      {% if block.settings.metric_2_enabled %}
+        <div class="ai-metrics-stat-{{ ai_gen_id }}">
+          {% if block.settings.metric_2_number != blank %}
+            <div class="ai-metrics-stat-number-{{ ai_gen_id }}">{{ block.settings.metric_2_number }}</div>
+          {% endif %}
+          {% if block.settings.metric_2_label != blank %}
+            <div class="ai-metrics-stat-label-{{ ai_gen_id }}">{{ block.settings.metric_2_label }}</div>
+          {% endif %}
+        </div>
+      {% endif %}
+
+      {% if block.settings.metric_3_enabled %}
+        <div class="ai-metrics-stat-{{ ai_gen_id }}">
+          {% if block.settings.metric_3_number != blank %}
+            <div class="ai-metrics-stat-number-{{ ai_gen_id }}">{{ block.settings.metric_3_number }}</div>
+          {% endif %}
+          {% if block.settings.metric_3_label != blank %}
+            <div class="ai-metrics-stat-label-{{ ai_gen_id }}">{{ block.settings.metric_3_label }}</div>
+          {% endif %}
+        </div>
+      {% endif %}
+    </div>
+  </div>
+</metrics-section-{{ ai_gen_id }}>
+
+{% schema %}
+{
+  "name": "Métricas corporativas",
+  "tag": null,
+  "settings": [
+    {
+      "type": "header",
+      "content": "Contenido"
+    },
+    {
+      "type": "richtext",
+      "id": "title",
+      "label": "Título",
+      "default": "<p>Nuestros números hablan por sí solos.</p>"
+    },
+    {
+      "type": "richtext",
+      "id": "description",
+      "label": "Descripción",
+      "default": "<p>A lo largo de los años, hemos forjado una sólida reputación basada en la calidad, la fiabilidad y la satisfacción del cliente. Estas cifras reflejan el impacto real de nuestro trabajo y la confianza que las marcas, agencias y empresas depositan en nosotros.</p>"
+    },
+    {
+      "type": "header",
+      "content": "Métrica 1"
+    },
+    {
+      "type": "checkbox",
+      "id": "metric_1_enabled",
+      "label": "Mostrar métrica 1",
+      "default": true
+    },
+    {
+      "type": "text",
+      "id": "metric_1_number",
+      "label": "Número",
+      "default": "Más de 1 millón"
+    },
+    {
+      "type": "text",
+      "id": "metric_1_label",
+      "label": "Etiqueta",
+      "default": "de clientes satisfechos"
+    },
+    {
+      "type": "header",
+      "content": "Métrica 2"
+    },
+    {
+      "type": "checkbox",
+      "id": "metric_2_enabled",
+      "label": "Mostrar métrica 2",
+      "default": true
+    },
+    {
+      "type": "text",
+      "id": "metric_2_number",
+      "label": "Número",
+      "default": "Más de 900.000"
+    },
+    {
+      "type": "text",
+      "id": "metric_2_label",
+      "label": "Etiqueta",
+      "default": "empresas apoyadas"
+    },
+    {
+      "type": "header",
+      "content": "Métrica 3"
+    },
+    {
+      "type": "checkbox",
+      "id": "metric_3_enabled",
+      "label": "Mostrar métrica 3",
+      "default": true
+    },
+    {
+      "type": "text",
+      "id": "metric_3_number",
+      "label": "Número",
+      "default": "Más de 100 millones"
+    },
+    {
+      "type": "text",
+      "id": "metric_3_label",
+      "label": "Etiqueta",
+      "default": "de productos entregados"
+    },
+    {
+      "type": "header",
+      "content": "Colores"
+    },
+    {
+      "type": "color",
+      "id": "background_color",
+      "label": "Fondo",
+      "default": "#ffffff"
+    },
+    {
+      "type": "color",
+      "id": "title_color",
+      "label": "Título",
+      "default": "#2b2c2d"
+    },
+    {
+      "type": "color",
+      "id": "description_color",
+      "label": "Descripción",
+      "default": "#2b2c2d"
+    },
+    {
+      "type": "color",
+      "id": "metric_number_color",
+      "label": "Número de métrica",
+      "default": "#2b2c2d"
+    },
+    {
+      "type": "color",
+      "id": "metric_label_color",
+      "label": "Etiqueta de métrica",
+      "default": "#797068"
+    },
+    {
+      "type": "header",
+      "content": "Tipografía desktop"
+    },
+    {
+      "type": "range",
+      "id": "title_size",
+      "min": 20,
+      "max": 80,
+      "step": 2,
+      "unit": "px",
+      "label": "Tamaño título",
+      "default": 48
+    },
+    {
+      "type": "select",
+      "id": "title_weight",
+      "label": "Peso título",
+      "options": [
+        { "value": "300", "label": "Ligero" },
+        { "value": "400", "label": "Normal" },
+        { "value": "500", "label": "Medio" },
+        { "value": "600", "label": "Semi-negrita" },
+        { "value": "700", "label": "Negrita" }
+      ],
+      "default": "600"
+    },
+    {
+      "type": "range",
+      "id": "description_size",
+      "min": 12,
+      "max": 24,
+      "step": 1,
+      "unit": "px",
+      "label": "Tamaño descripción",
+      "default": 16
+    },
+    {
+      "type": "range",
+      "id": "metric_number_size",
+      "min": 24,
+      "max": 80,
+      "step": 2,
+      "unit": "px",
+      "label": "Tamaño número métrica",
+      "default": 56
+    },
+    {
+      "type": "select",
+      "id": "metric_number_weight",
+      "label": "Peso número métrica",
+      "options": [
+        { "value": "200", "label": "Extra ligero" },
+        { "value": "300", "label": "Ligero" },
+        { "value": "400", "label": "Normal" },
+        { "value": "500", "label": "Medio" }
+      ],
+      "default": "300"
+    },
+    {
+      "type": "range",
+      "id": "metric_label_size",
+      "min": 12,
+      "max": 20,
+      "step": 1,
+      "unit": "px",
+      "label": "Tamaño etiqueta métrica",
+      "default": 14
+    },
+    {
+      "type": "header",
+      "content": "Tipografía móvil"
+    },
+    {
+      "type": "range",
+      "id": "title_size_mobile",
+      "min": 20,
+      "max": 60,
+      "step": 2,
+      "unit": "px",
+      "label": "Tamaño título",
+      "default": 32
+    },
+    {
+      "type": "range",
+      "id": "description_size_mobile",
+      "min": 12,
+      "max": 20,
+      "step": 1,
+      "unit": "px",
+      "label": "Tamaño descripción",
+      "default": 14
+    },
+    {
+      "type": "range",
+      "id": "metric_number_size_mobile",
+      "min": 24,
+      "max": 60,
+      "step": 2,
+      "unit": "px",
+      "label": "Tamaño número métrica",
+      "default": 40
+    },
+    {
+      "type": "range",
+      "id": "metric_label_size_mobile",
+      "min": 12,
+      "max": 18,
+      "step": 1,
+      "unit": "px",
+      "label": "Tamaño etiqueta métrica",
+      "default": 13
+    },
+    {
+      "type": "header",
+      "content": "Espaciado desktop"
+    },
+    {
+      "type": "range",
+      "id": "section_padding_top",
+      "min": 0,
+      "max": 120,
+      "step": 4,
+      "unit": "px",
+      "label": "Padding superior",
+      "default": 80
+    },
+    {
+      "type": "range",
+      "id": "section_padding_bottom",
+      "min": 0,
+      "max": 120,
+      "step": 4,
+      "unit": "px",
+      "label": "Padding inferior",
+      "default": 80
+    },
+    {
+      "type": "range",
+      "id": "section_padding_horizontal",
+      "min": 0,
+      "max": 80,
+      "step": 4,
+      "unit": "px",
+      "label": "Padding horizontal",
+      "default": 40
+    },
+    {
+      "type": "range",
+      "id": "max_width",
+      "min": 800,
+      "max": 1600,
+      "step": 50,
+      "unit": "px",
+      "label": "Ancho máximo",
+      "default": 1200
+    },
+    {
+      "type": "range",
+      "id": "column_gap",
+      "min": 20,
+      "max": 120,
+      "step": 5,
+      "unit": "px",
+      "label": "Espacio entre columnas",
+      "default": 80
+    },
+    {
+      "type": "range",
+      "id": "content_gap",
+      "min": 10,
+      "max": 60,
+      "step": 2,
+      "unit": "px",
+      "label": "Espacio entre título y descripción",
+      "default": 24
+    },
+    {
+      "type": "range",
+      "id": "metrics_gap",
+      "min": 10,
+      "max": 80,
+      "step": 5,
+      "unit": "px",
+      "label": "Espacio entre métricas",
+      "default": 40
+    },
+    {
+      "type": "range",
+      "id": "metric_internal_gap",
+      "min": 4,
+      "max": 24,
+      "step": 2,
+      "unit": "px",
+      "label": "Espacio interno métrica",
+      "default": 8
+    },
+    {
+      "type": "header",
+      "content": "Espaciado móvil"
+    },
+    {
+      "type": "range",
+      "id": "section_padding_top_mobile",
+      "min": 0,
+      "max": 80,
+      "step": 4,
+      "unit": "px",
+      "label": "Padding superior",
+      "default": 60
+    },
+    {
+      "type": "range",
+      "id": "section_padding_bottom_mobile",
+      "min": 0,
+      "max": 80,
+      "step": 4,
+      "unit": "px",
+      "label": "Padding inferior",
+      "default": 60
+    },
+    {
+      "type": "range",
+      "id": "section_padding_horizontal_mobile",
+      "min": 0,
+      "max": 40,
+      "step": 2,
+      "unit": "px",
+      "label": "Padding horizontal",
+      "default": 20
+    },
+    {
+      "type": "range",
+      "id": "mobile_section_gap",
+      "min": 20,
+      "max": 80,
+      "step": 4,
+      "unit": "px",
+      "label": "Espacio entre contenido y métricas",
+      "default": 48
+    },
+    {
+      "type": "range",
+      "id": "metrics_gap_mobile",
+      "min": 20,
+      "max": 80,
+      "step": 4,
+      "unit": "px",
+      "label": "Espacio entre métricas",
+      "default": 40
+    }
+  ],
+  "presets": [
+    {
+      "name": "Métricas corporativas"
+    }
+  ]
+}
+{% endschema %}

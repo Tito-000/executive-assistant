@@ -1,0 +1,802 @@
+{% doc %}
+  @prompt
+    Crea una sección de categorías visuales responsive para una tienda Shopify de productos personalizados.
+    
+    Referencia visual:
+    
+    La primera imagen corresponde a vista escritorio (desktop).
+    
+    La segunda imagen corresponde a vista móvil (mobile).
+    
+    El diseño debe adaptarse exactamente entre ambas vistas.
+    
+    📌 ESTRUCTURA DESKTOP
+    
+    Grid de 6 tarjetas.
+    
+    3 columnas x 2 filas.
+    
+    Tarjetas grandes, con bordes redondeados amplios.
+    
+    Cada tarjeta es 100% clickeable.
+    
+    Imagen de producto ocupando casi todo el bloque.
+    
+    Texto superpuesto en la parte superior izquierda, tipografía bold:
+    
+    “Impresión de camisetas personalizadas”
+    
+    “Sudaderas personalizadas”
+    
+    “Chaquetas personalizadas”
+    
+    “Polos personalizados”
+    
+    “Bolsas personalizadas”
+    
+    “Sombreros personalizados”
+    
+    Ícono de flecha ↗ en la esquina superior derecha.
+    
+    📱 ESTRUCTURA MOBILE
+    
+    Una tarjeta por fila.
+    
+    Tarjetas más altas (formato vertical).
+    
+    Imagen centrada y recortada de forma natural.
+    
+    Texto superpuesto arriba, alineado a la izquierda.
+    
+    Mantener márgenes amplios y buena legibilidad.
+    
+    🎨 ESTILO VISUAL
+    
+    Fondo general blanco.
+    
+    Diseño limpio, corporativo y moderno.
+    
+    Estética B2B (impresión, branding, merchandising).
+    
+    Colores suaves y mockups con fondo claro.
+    
+    Sin saturación visual.
+    
+    💬 CHAT FLOTANTE
+    
+    Botón flotante en la esquina inferior derecha.
+    
+    Texto visible:
+    “¿Tienes alguna pregunta? Chatea con nosotros.”
+    
+    Estilo redondeado y minimalista.
+    
+    ⚙️ TÉCNICO
+    
+    Usar HTML + CSS + Liquid.
+    
+    Totalmente responsive.
+    
+    Compatible con temas modernos de Shopify (Dawn / Refresh).
+    
+    Código listo para pegar como sección personalizada.
+    
+    Genera la sección completa respetando exactamente el comportamiento desktop y mobile.
+{% enddoc %}
+{% assign ai_gen_id = block.id | replace: '_', '' | downcase %}
+
+{% style %}
+  .ai-categories-section-{{ ai_gen_id }} {
+    display: block;
+    width: 100%;
+    background-color: {{ block.settings.background_color }};
+    padding: {{ block.settings.section_padding_top }}px 20px {{ block.settings.section_padding_bottom }}px;
+  }
+
+  .ai-categories-container-{{ ai_gen_id }} {
+    max-width: {{ block.settings.container_width }}px;
+    margin: 0 auto;
+  }
+
+  .ai-categories-heading-{{ ai_gen_id }} {
+    text-align: {{ block.settings.heading_alignment }};
+    margin-bottom: {{ block.settings.heading_spacing }}px;
+    color: {{ block.settings.heading_color }};
+    font-size: {{ block.settings.heading_size }}px;
+    font-weight: 700;
+  }
+
+  .ai-categories-grid-{{ ai_gen_id }} {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: {{ block.settings.grid_gap }}px;
+  }
+
+  .ai-category-card-{{ ai_gen_id }} {
+    position: relative;
+    display: block;
+    overflow: hidden;
+    border-radius: {{ block.settings.card_border_radius }}px;
+    text-decoration: none;
+    aspect-ratio: 4 / 3;
+    background-color: #f9f9f9;
+  }
+
+  .ai-category-card-{{ ai_gen_id }}:hover .ai-category-image-{{ ai_gen_id }} {
+    transform: scale(1.05);
+  }
+
+  .ai-category-image-wrapper-{{ ai_gen_id }} {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+  }
+
+  .ai-category-image-{{ ai_gen_id }} {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.4s ease;
+  }
+
+  .ai-category-placeholder-{{ ai_gen_id }} {
+    width: 100%;
+    height: 100%;
+    background-color: #f4f4f4;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .ai-category-placeholder-{{ ai_gen_id }} svg {
+    width: 60%;
+    height: 60%;
+    opacity: 0.3;
+  }
+
+  .ai-category-overlay-{{ ai_gen_id }} {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, {{ block.settings.overlay_opacity }}) 0%,
+      rgba(0, 0, 0, 0) 50%
+    );
+    pointer-events: none;
+  }
+
+  .ai-category-content-{{ ai_gen_id }} {
+    position: absolute;
+    top: {{ block.settings.text_padding }}px;
+    left: {{ block.settings.text_padding }}px;
+    right: {{ block.settings.text_padding }}px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    z-index: 2;
+  }
+
+  .ai-category-title-{{ ai_gen_id }} {
+    color: {{ block.settings.text_color }};
+    font-size: {{ block.settings.text_size }}px;
+    font-weight: 700;
+    line-height: 1.2;
+    margin: 0;
+    max-width: 70%;
+  }
+
+  .ai-category-arrow-{{ ai_gen_id }} {
+    flex-shrink: 0;
+    width: {{ block.settings.arrow_size }}px;
+    height: {{ block.settings.arrow_size }}px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .ai-category-arrow-{{ ai_gen_id }} svg {
+    width: 100%;
+    height: 100%;
+    stroke: {{ block.settings.text_color }};
+    stroke-width: 2;
+  }
+
+  .ai-chat-button-{{ ai_gen_id }} {
+    position: fixed;
+    bottom: {{ block.settings.chat_bottom_position }}px;
+    right: {{ block.settings.chat_right_position }}px;
+    z-index: 1000;
+    background-color: {{ block.settings.chat_bg_color }};
+    color: {{ block.settings.chat_text_color }};
+    padding: {{ block.settings.chat_padding }}px {{ block.settings.chat_padding | times: 1.5 }}px;
+    border-radius: {{ block.settings.chat_border_radius }}px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-size: {{ block.settings.chat_text_size }}px;
+    font-weight: 500;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+
+  .ai-chat-button-{{ ai_gen_id }}:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
+  }
+
+  .ai-chat-icon-{{ ai_gen_id }} {
+    width: 24px;
+    height: 24px;
+    flex-shrink: 0;
+  }
+
+  .ai-chat-icon-{{ ai_gen_id }} svg {
+    width: 100%;
+    height: 100%;
+    fill: {{ block.settings.chat_text_color }};
+  }
+
+  @media screen and (max-width: 989px) {
+    .ai-categories-grid-{{ ai_gen_id }} {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    .ai-category-title-{{ ai_gen_id }} {
+      font-size: {{ block.settings.text_size | times: 0.9 }}px;
+    }
+  }
+
+  @media screen and (max-width: 749px) {
+    .ai-categories-section-{{ ai_gen_id }} {
+      padding: {{ block.settings.section_padding_top | times: 0.7 }}px 16px {{ block.settings.section_padding_bottom | times: 0.7 }}px;
+    }
+
+    .ai-categories-grid-{{ ai_gen_id }} {
+      grid-template-columns: 1fr;
+      gap: {{ block.settings.grid_gap | times: 0.8 }}px;
+    }
+
+    .ai-category-card-{{ ai_gen_id }} {
+      aspect-ratio: 3 / 4;
+    }
+
+    .ai-category-title-{{ ai_gen_id }} {
+      font-size: {{ block.settings.text_size | times: 0.85 }}px;
+      max-width: 80%;
+    }
+
+    .ai-chat-button-{{ ai_gen_id }} {
+      bottom: {{ block.settings.chat_bottom_position | times: 0.8 }}px;
+      right: {{ block.settings.chat_right_position | times: 0.8 }}px;
+      padding: {{ block.settings.chat_padding | times: 0.8 }}px {{ block.settings.chat_padding | times: 1.2 }}px;
+      font-size: {{ block.settings.chat_text_size | times: 0.9 }}px;
+    }
+
+    .ai-chat-text-{{ ai_gen_id }} {
+      display: none;
+    }
+  }
+{% endstyle %}
+
+<category-section-{{ ai_gen_id }} class="ai-categories-section-{{ ai_gen_id }}" {{ block.shopify_attributes }}>
+  <div class="ai-categories-container-{{ ai_gen_id }}">
+    {% if block.settings.section_heading != blank %}
+      <h2 class="ai-categories-heading-{{ ai_gen_id }}">{{ block.settings.section_heading }}</h2>
+    {% endif %}
+
+    <div class="ai-categories-grid-{{ ai_gen_id }}">
+      {% for i in (1..6) %}
+        {% liquid
+          assign category_enabled_key = 'category_' | append: i | append: '_enabled'
+          assign category_title_key = 'category_' | append: i | append: '_title'
+          assign category_image_key = 'category_' | append: i | append: '_image'
+          assign category_link_key = 'category_' | append: i | append: '_link'
+
+          assign category_enabled = block.settings[category_enabled_key]
+          assign category_title = block.settings[category_title_key]
+          assign category_image = block.settings[category_image_key]
+          assign category_link = block.settings[category_link_key]
+        %}
+
+        {% if category_enabled %}
+          <a
+            href="{{ category_link }}"
+            class="ai-category-card-{{ ai_gen_id }}"
+            aria-label="{{ category_title }}"
+          >
+            <div class="ai-category-image-wrapper-{{ ai_gen_id }}">
+              {% if category_image %}
+                <img
+                  src="{{ category_image | image_url: width: 800 }}"
+                  alt="{{ category_title | escape }}"
+                  loading="lazy"
+                  width="800"
+                  height="600"
+                  class="ai-category-image-{{ ai_gen_id }}"
+                >
+              {% else %}
+                <div class="ai-category-placeholder-{{ ai_gen_id }}">
+                  {{ 'product-apparel-1' | placeholder_svg_tag }}
+                </div>
+              {% endif %}
+            </div>
+
+            <div class="ai-category-overlay-{{ ai_gen_id }}"></div>
+
+            <div class="ai-category-content-{{ ai_gen_id }}">
+              <h3 class="ai-category-title-{{ ai_gen_id }}">{{ category_title }}</h3>
+              <div class="ai-category-arrow-{{ ai_gen_id }}">
+                <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M7 17L17 7M17 7H7M17 7V17" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </div>
+            </div>
+          </a>
+        {% endif %}
+      {% endfor %}
+    </div>
+  </div>
+
+  {% if block.settings.show_chat_button %}
+    <a
+      href="{{ block.settings.chat_link }}"
+      class="ai-chat-button-{{ ai_gen_id }}"
+      aria-label="{{ block.settings.chat_text }}"
+    >
+      <span class="ai-chat-icon-{{ ai_gen_id }}">
+        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+          <path d="M20 2H4c-1.1 0-2 .9-2 2v18l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm0 14H6l-2 2V4h16v12z"/>
+        </svg>
+      </span>
+      <span class="ai-chat-text-{{ ai_gen_id }}">{{ block.settings.chat_text }}</span>
+    </a>
+  {% endif %}
+</category-section-{{ ai_gen_id }}>
+
+<script>
+  (function() {
+    class CategorySection{{ ai_gen_id }} extends HTMLElement {
+      constructor() {
+        super();
+      }
+
+      connectedCallback() {
+        this.setupAccessibility();
+      }
+
+      setupAccessibility() {
+        const cards = this.querySelectorAll('.ai-category-card-{{ ai_gen_id }}');
+        cards.forEach(card => {
+          card.addEventListener('keydown', (e) => {
+            if (e.key === 'Enter' || e.key === ' ') {
+              e.preventDefault();
+              card.click();
+            }
+          });
+        });
+      }
+    }
+
+    customElements.define('category-section-{{ ai_gen_id }}', CategorySection{{ ai_gen_id }});
+  })();
+</script>
+
+{% schema %}
+{
+  "name": "Categorías visuales",
+  "tag": null,
+  "settings": [
+    {
+      "type": "header",
+      "content": "Sección"
+    },
+    {
+      "type": "inline_richtext",
+      "id": "section_heading",
+      "label": "Título de sección"
+    },
+    {
+      "type": "select",
+      "id": "heading_alignment",
+      "label": "Alineación del título",
+      "options": [
+        {
+          "value": "left",
+          "label": "Izquierda"
+        },
+        {
+          "value": "center",
+          "label": "Centro"
+        },
+        {
+          "value": "right",
+          "label": "Derecha"
+        }
+      ],
+      "default": "center"
+    },
+    {
+      "type": "range",
+      "id": "heading_size",
+      "min": 20,
+      "max": 60,
+      "step": 2,
+      "unit": "px",
+      "label": "Tamaño del título",
+      "default": 36
+    },
+    {
+      "type": "range",
+      "id": "heading_spacing",
+      "min": 20,
+      "max": 80,
+      "step": 4,
+      "unit": "px",
+      "label": "Espacio debajo del título",
+      "default": 40
+    },
+    {
+      "type": "color",
+      "id": "heading_color",
+      "label": "Color del título",
+      "default": "#2b2c2d"
+    },
+    {
+      "type": "color",
+      "id": "background_color",
+      "label": "Color de fondo",
+      "default": "#ffffff"
+    },
+    {
+      "type": "range",
+      "id": "container_width",
+      "min": 1000,
+      "max": 1600,
+      "step": 50,
+      "unit": "px",
+      "label": "Ancho del contenedor",
+      "default": 1200
+    },
+    {
+      "type": "range",
+      "id": "section_padding_top",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "Padding superior",
+      "default": 60
+    },
+    {
+      "type": "range",
+      "id": "section_padding_bottom",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "Padding inferior",
+      "default": 60
+    },
+    {
+      "type": "header",
+      "content": "Tarjetas"
+    },
+    {
+      "type": "range",
+      "id": "grid_gap",
+      "min": 8,
+      "max": 40,
+      "step": 4,
+      "unit": "px",
+      "label": "Espacio entre tarjetas",
+      "default": 20
+    },
+    {
+      "type": "range",
+      "id": "card_border_radius",
+      "min": 0,
+      "max": 40,
+      "step": 2,
+      "unit": "px",
+      "label": "Radio de borde",
+      "default": 16
+    },
+    {
+      "type": "range",
+      "id": "text_padding",
+      "min": 12,
+      "max": 40,
+      "step": 2,
+      "unit": "px",
+      "label": "Padding del texto",
+      "default": 24
+    },
+    {
+      "type": "range",
+      "id": "text_size",
+      "min": 14,
+      "max": 32,
+      "step": 2,
+      "unit": "px",
+      "label": "Tamaño del texto",
+      "default": 20
+    },
+    {
+      "type": "color",
+      "id": "text_color",
+      "label": "Color del texto",
+      "default": "#ffffff"
+    },
+    {
+      "type": "range",
+      "id": "arrow_size",
+      "min": 16,
+      "max": 40,
+      "step": 2,
+      "unit": "px",
+      "label": "Tamaño de flecha",
+      "default": 24
+    },
+    {
+      "type": "range",
+      "id": "overlay_opacity",
+      "min": 0,
+      "max": 1,
+      "step": 0.1,
+      "label": "Opacidad de overlay",
+      "default": 0.3
+    },
+    {
+      "type": "header",
+      "content": "Categoría 1"
+    },
+    {
+      "type": "checkbox",
+      "id": "category_1_enabled",
+      "label": "Mostrar categoría 1",
+      "default": true
+    },
+    {
+      "type": "text",
+      "id": "category_1_title",
+      "label": "Título",
+      "default": "Impresión de camisetas personalizadas"
+    },
+    {
+      "type": "image_picker",
+      "id": "category_1_image",
+      "label": "Imagen"
+    },
+    {
+      "type": "url",
+      "id": "category_1_link",
+      "label": "Enlace"
+    },
+    {
+      "type": "header",
+      "content": "Categoría 2"
+    },
+    {
+      "type": "checkbox",
+      "id": "category_2_enabled",
+      "label": "Mostrar categoría 2",
+      "default": true
+    },
+    {
+      "type": "text",
+      "id": "category_2_title",
+      "label": "Título",
+      "default": "Sudaderas personalizadas"
+    },
+    {
+      "type": "image_picker",
+      "id": "category_2_image",
+      "label": "Imagen"
+    },
+    {
+      "type": "url",
+      "id": "category_2_link",
+      "label": "Enlace"
+    },
+    {
+      "type": "header",
+      "content": "Categoría 3"
+    },
+    {
+      "type": "checkbox",
+      "id": "category_3_enabled",
+      "label": "Mostrar categoría 3",
+      "default": true
+    },
+    {
+      "type": "text",
+      "id": "category_3_title",
+      "label": "Título",
+      "default": "Chaquetas personalizadas"
+    },
+    {
+      "type": "image_picker",
+      "id": "category_3_image",
+      "label": "Imagen"
+    },
+    {
+      "type": "url",
+      "id": "category_3_link",
+      "label": "Enlace"
+    },
+    {
+      "type": "header",
+      "content": "Categoría 4"
+    },
+    {
+      "type": "checkbox",
+      "id": "category_4_enabled",
+      "label": "Mostrar categoría 4",
+      "default": true
+    },
+    {
+      "type": "text",
+      "id": "category_4_title",
+      "label": "Título",
+      "default": "Polos personalizados"
+    },
+    {
+      "type": "image_picker",
+      "id": "category_4_image",
+      "label": "Imagen"
+    },
+    {
+      "type": "url",
+      "id": "category_4_link",
+      "label": "Enlace"
+    },
+    {
+      "type": "header",
+      "content": "Categoría 5"
+    },
+    {
+      "type": "checkbox",
+      "id": "category_5_enabled",
+      "label": "Mostrar categoría 5",
+      "default": true
+    },
+    {
+      "type": "text",
+      "id": "category_5_title",
+      "label": "Título",
+      "default": "Bolsas personalizadas"
+    },
+    {
+      "type": "image_picker",
+      "id": "category_5_image",
+      "label": "Imagen"
+    },
+    {
+      "type": "url",
+      "id": "category_5_link",
+      "label": "Enlace"
+    },
+    {
+      "type": "header",
+      "content": "Categoría 6"
+    },
+    {
+      "type": "checkbox",
+      "id": "category_6_enabled",
+      "label": "Mostrar categoría 6",
+      "default": true
+    },
+    {
+      "type": "text",
+      "id": "category_6_title",
+      "label": "Título",
+      "default": "Sombreros personalizados"
+    },
+    {
+      "type": "image_picker",
+      "id": "category_6_image",
+      "label": "Imagen"
+    },
+    {
+      "type": "url",
+      "id": "category_6_link",
+      "label": "Enlace"
+    },
+    {
+      "type": "header",
+      "content": "Botón de chat"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_chat_button",
+      "label": "Mostrar botón de chat",
+      "default": true
+    },
+    {
+      "type": "text",
+      "id": "chat_text",
+      "label": "Texto del botón",
+      "default": "¿Tienes alguna pregunta? Chatea con nosotros."
+    },
+    {
+      "type": "url",
+      "id": "chat_link",
+      "label": "Enlace del chat"
+    },
+    {
+      "type": "color",
+      "id": "chat_bg_color",
+      "label": "Color de fondo",
+      "default": "#2b2c2d"
+    },
+    {
+      "type": "color",
+      "id": "chat_text_color",
+      "label": "Color del texto",
+      "default": "#ffffff"
+    },
+    {
+      "type": "range",
+      "id": "chat_text_size",
+      "min": 12,
+      "max": 18,
+      "step": 1,
+      "unit": "px",
+      "label": "Tamaño del texto",
+      "default": 14
+    },
+    {
+      "type": "range",
+      "id": "chat_padding",
+      "min": 8,
+      "max": 24,
+      "step": 2,
+      "unit": "px",
+      "label": "Padding",
+      "default": 14
+    },
+    {
+      "type": "range",
+      "id": "chat_border_radius",
+      "min": 4,
+      "max": 40,
+      "step": 2,
+      "unit": "px",
+      "label": "Radio de borde",
+      "default": 24
+    },
+    {
+      "type": "range",
+      "id": "chat_bottom_position",
+      "min": 10,
+      "max": 60,
+      "step": 5,
+      "unit": "px",
+      "label": "Posición desde abajo",
+      "default": 30
+    },
+    {
+      "type": "range",
+      "id": "chat_right_position",
+      "min": 10,
+      "max": 60,
+      "step": 5,
+      "unit": "px",
+      "label": "Posición desde la derecha",
+      "default": 30
+    }
+  ],
+  "presets": [
+    {
+      "name": "Categorías visuales"
+    }
+  ]
+}
+{% endschema %}

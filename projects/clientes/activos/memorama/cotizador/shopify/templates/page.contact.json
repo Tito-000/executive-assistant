@@ -1,0 +1,96 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "rich_text_MAC6FU": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_tDLmr6": {
+          "type": "heading",
+          "settings": {
+            "heading": "¿<strong>Como podemos ayudarte?</strong>",
+            "heading_size": "h0"
+          }
+        },
+        "text_r7BCUy": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Completa los detalles y un especialista de Memoram se pondrá en contacto contigo rapidamente.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "heading_tDLmr6",
+        "text_r7BCUy"
+      ],
+      "name": "t:sections.rich-text.presets.name",
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "scheme-3",
+        "full_width": true,
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
+    },
+    "176843906649f0b5cd": {
+      "type": "apps",
+      "blocks": {
+        "forms_inline_qhhRmA": {
+          "type": "shopify://apps/forms/blocks/inline/8744a304-fcb1-4347-b211-bb6b4759a76a",
+          "settings": {
+            "form_id": "828873",
+            "text_color": "#202020",
+            "button_background_color": "#202020",
+            "button_label_color": "#ffffff",
+            "links_color": "#1878b9",
+            "errors_color": "#e02229",
+            "text_alignment": "center",
+            "form_alignment": "center",
+            "padding_top": 40,
+            "padding_bottom": 40,
+            "padding_right": 14,
+            "padding_left": 14
+          }
+        }
+      },
+      "block_order": [
+        "forms_inline_qhhRmA"
+      ],
+      "settings": {
+        "include_margins": true
+      }
+    },
+    "blocks_GQNKqt": {
+      "type": "_blocks",
+      "name": "Asesoramiento Experto ",
+      "settings": {}
+    },
+    "1768436270533fcf4b": {
+      "type": "_blocks",
+      "settings": {}
+    }
+  },
+  "order": [
+    "main",
+    "rich_text_MAC6FU",
+    "176843906649f0b5cd",
+    "blocks_GQNKqt",
+    "1768436270533fcf4b"
+  ]
+}
