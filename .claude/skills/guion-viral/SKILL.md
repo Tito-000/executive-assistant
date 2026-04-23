@@ -40,49 +40,152 @@ Tu trabajo es crear una expectativa con el gancho y luego SUPERARLA con el conte
 
 ---
 
+## Retention Stacking — Open Loops Obligatorios
+
+**Esta es una capa que se aplica SIEMPRE, independiente del método (Victor o Ramiro).** Sin ella, el guión pierde retención entre escenas aunque el contenido sea bueno.
+
+### Qué es un open loop
+
+Una frase corta al final de cada escena que **deja una idea sin cerrar** y promete que lo siguiente es mejor, distinto o más fuerte. Fuerza al espectador a quedarse para "cerrar el loop" mentalmente.
+
+**Ejemplo sin loop (pierde retención):**
+> "Antes los negocios eran así, con local y empleados. Hoy ya no es así."
+> *(el espectador ya tiene toda la info — puede hacer scroll sin perderse nada)*
+
+**Ejemplo con loop (retiene):**
+> "Antes los negocios eran así, con local y empleados. **Pero eso no es ni lo peor…**"
+> *(el espectador necesita saber qué es "lo peor" — se queda)*
+
+### Regla base
+
+**Entre CADA escena debe haber un open loop.** Sin excepción. Si un guión tiene 5 escenas, tiene 4 open loops (entre 1-2, 2-3, 3-4, 4-5). La última escena cierra con el CTA, no con un loop.
+
+### Los 6 tipos de open loop
+
+| Tipo | Cuándo usarlo | Ejemplos |
+|------|---------------|----------|
+| **1. Escalada de tensión** | Cuando quieres subir la apuesta emocional | *"Pero eso no es ni lo peor…"* / *"Y lo peor todavía no te lo he dicho…"* / *"Y eso fue solo el principio"* |
+| **2. Negación + promesa** | Cuando la audiencia podría asumir que ya sabe el final | *"Pero no fue por eso que me quedé"* / *"Y no, no es lo que estás pensando"* / *"Pero no es lo que crees"* |
+| **3. Anticipación directa** | Cuando el siguiente punto cambia el argumento | *"Pero aquí es donde la cosa se pone interesante…"* / *"Y ahí viene la parte que nadie entiende…"* / *"Pero ahora viene lo importante"* |
+| **4. Pregunta abierta** | Cuando quieres que el espectador se responda mentalmente | *"¿Y sabes qué pasó?"* / *"¿Pero sabes cuál fue la diferencia?"* / *"¿Y qué crees que hice?"* |
+| **5. Contraste inesperado** | Cuando el siguiente punto rompe una creencia | *"Pero lo que descubrí después fue lo opuesto"* / *"Y resulta que estaba completamente equivocada"* / *"Pero la realidad era otra"* |
+| **6. Cambio de tono** | Cuando la siguiente escena baja o sube el registro emocional | *"Y aquí es donde se pone personal…"* / *"Pero déjame contarte algo que nadie dice…"* / *"Pero ahora te voy a decir una verdad"* |
+
+### Reglas de uso
+
+1. **Máximo 1 frase** — si son 2+ oraciones, pierde el efecto
+2. **Nunca prometas algo que no vas a entregar** — Principio Binario aplica aquí también
+3. **Varía los tipos** — no uses 3 escaladas de tensión seguidas. Alterna.
+4. **El loop va al FINAL de la escena**, no al principio de la siguiente
+5. **Funciona mejor justo antes de un corte de edición** — el espectador espera el siguiente plano
+6. **No uses el mismo loop dos veces en el mismo video**
+
+### Cómo se ve en la práctica
+
+Cada escena del template debe tener esta estructura:
+
+```
+ESCENA X — [nombre]
+Visual: [...]
+Diálogo: "[...]"
+🔁 Re-entry: "[open loop de 1 frase]"
+```
+
+La única escena sin re-entry es la última (que cierra con CTA).
+
+### Cómo detectar si tu guión necesita más loops
+
+Lee el guión completo. Si en algún momento entre escenas puedes poner un punto final y el espectador se iría satisfecho → **ahí falta un open loop**. Los loops convierten puntos finales en comas.
+
+### Principio de oro de los loops
+
+> **El espectador siempre debe sentir que lo mejor está por venir.** Si en algún momento siente que ya recibió todo lo valioso, se va.
+
+---
+
 ## Catálogo de Formatos
 
-Antes de escribir un guión, elige el formato. El formato define la ESTRUCTURA visual y narrativa del video — no el tema. Un mismo tema puede contarse en 5 formatos diferentes, y cada uno genera una experiencia distinta.
+Antes de escribir un guión, elige el formato. El formato define la ESTRUCTURA visual y narrativa del video — no el tema. Un mismo tema puede contarse en 10 formatos diferentes, y cada uno genera una experiencia distinta.
 
-### Directos (hablar a cámara)
+**Regla maestra:** El formato NO es solo "cámara fija hablando". Es la forma visual + narrativa + de cámara + de edición combinadas. Un guión sin formato definido termina siendo un "talking head genérico" — que es la forma más fácil de perder retención.
+
+### 🎥 Directos (hablar a cámara)
 
 | Formato | Descripción | Mejor para | Energía |
 |---------|-------------|------------|---------|
-| **Talking Head** | Persona habla directo a cámara, plano fijo o con B-roll de apoyo | Educativo, autoridad, storytelling largo | Media-Alta |
-| **Selfie / Casual** | Teléfono en mano, estilo espontáneo, sin producción | Autenticidad, confianza, orgánico rápido | Media |
+| **Talking Head** | Plano fijo, habla directo a lente, B-roll opcional | Educativo, autoridad, storytelling largo | Media-Alta |
+| **Selfie / Casual** | Teléfono en mano, sin producción, espontáneo | Autenticidad, confianza, orgánico rápido | Media |
+| **Walk & Talk** | Caminando y grabando en movimiento | Energía, lifestyle, sensación de acción | Alta |
+| **Confesión Cerrada** | Plano muy cerrado, tono bajo, íntimo, mínima edición | Momento vulnerable, trust profundo | Baja |
+| **Rant / Desahogo** | Habla rápido con convicción sobre algo que molesta | Opinión impopular viral, declaración fuerte | Alta |
 | **B-roll + Voiceover** | Imágenes de vida real con narración en off | Lifestyle, procesos, transformación visual | Baja-Media |
 
-### Narrativos (contar historias)
+### 🎬 POV (Point of View)
 
 | Formato | Descripción | Mejor para | Energía |
 |---------|-------------|------------|---------|
-| **Storytime** | Narrativa lineal con arco completo (inicio-nudo-desenlace) | Historia personal, vulnerabilidad, inspiración | Media-Alta |
-| **Momento Vulnerable** | Confesión íntima, plano cerrado, tono bajo, mínima edición | Trust profundo, humanizar al presentador | Baja |
-| **Before/After** | Contraste visual o narrativo entre un antes y un después | Prueba de resultados, transformación | Alta |
-| **POV (Point of View)** | Grabado desde la perspectiva del espectador ("POV: tú estás...") | Relatabilidad, viralidad, la audiencia se ve reflejada | Media-Alta |
+| **POV "tú estás"** | "POV: llevas 3 meses y quieres rendirte" | Relatabilidad directa, la audiencia se ve reflejada | Media-Alta |
+| **POV "yo fui tú"** | El presentador actúa el "antes" de sí mismo | Before/after narrativo, empatía | Media |
+| **POV cliente** | Grabación desde la perspectiva del cliente en el proceso | Inmersión, demostrar experiencia | Media |
+| **POV tutorial** | "POV: te enseño cómo X" mirando a cámara como si enseñaras 1-a-1 | Educativo accionable, cercanía | Media |
+| **POV mañana / rutina** | "POV: así empiezas tu día" con secuencia de acciones | Lifestyle, inspiración, aspiracional | Media |
+| **Pregunta Repentina POV** | Abres con pregunta directa mirando a cámara ("¿Tú sabes por qué…?") | Enganche inmediato, viral en feed | Alta |
 
-### Educativos (enseñar / informar)
-
-| Formato | Descripción | Mejor para | Energía |
-|---------|-------------|------------|---------|
-| **Top X / Lista** | 3-5 puntos numerados con cortes entre cada uno | Tips, mitos, errores comunes, consejos accionables | Media |
-| **Myth Busting** | Identifica creencia falsa → explica por qué → da la verdad | Autoridad, romper objeciones, reencuadrar | Media-Alta |
-| **Respuesta a Objeción** | Toma una objeción específica y la responde con empatía + datos | Mover Belief, anticipar dudas, construir confianza | Media |
-| **Opinión Impopular** | Declaración contraria al consenso, argumentada con convicción | Diferenciación, debate, altamente compartible | Alta |
-| **Comparación** | Compara dos opciones o enfoques lado a lado | Decisiones, educación, reencuadre de perspectiva | Media |
-
-### Interactivos / Sociales
+### 📖 Narrativos (contar historias)
 
 | Formato | Descripción | Mejor para | Energía |
 |---------|-------------|------------|---------|
-| **Entrevista / Q&A** | Preguntas y respuestas — de seguidores, equipo, o cámara callejera | Variedad, credibilidad, prueba social, múltiples voces | Media |
-| **Street Interview** | Preguntar a personas en la calle sobre un tema | Perspectivas reales, entertainment, prueba social diversa | Media-Alta |
+| **Storytime** | "Les voy a contar lo que me pasó…" — narrativa con arco completo | Historia personal, vulnerabilidad | Media-Alta |
+| **Before / After** | Contraste visual o narrativo entre un antes y un después | Prueba de resultados, transformación | Alta |
+| **Day in the Life** | Un día completo condensado en 30-60 seg | Lifestyle aspiracional, rutina | Media |
+| **Diario Emocional** | Grabas en el momento real del sentimiento, sin guión pulido | Autenticidad extrema, conexión | Baja-Media |
+| **Flashback** | Empiezas en el presente y vas atrás a contar cómo llegaste | Hook narrativo fuerte | Media-Alta |
 
-### Visuales / Producción
+### 📚 Educativos (enseñar / informar)
 
 | Formato | Descripción | Mejor para | Energía |
 |---------|-------------|------------|---------|
-| **Skit / Roleplay** | Escena actuada con humor o exageración irónica | Entertainment puro, viralidad, romper moldes del nicho | Alta |
+| **Top X / Lista** | 3-5 puntos numerados con cortes entre cada uno | Tips, mitos, errores comunes | Media |
+| **Myth Busting** | Identifica creencia falsa → explica por qué → da la verdad | Autoridad, romper objeciones | Media-Alta |
+| **Respuesta a Objeción** | Toma una objeción específica y la responde con empatía + datos | Mover Belief, anticipar dudas | Media |
+| **Opinión Impopular** | Declaración contraria al consenso, argumentada con convicción | Diferenciación, altamente compartible | Alta |
+| **Comparación** | Compara dos opciones o enfoques lado a lado | Decisiones, reencuadre | Media |
+| **Paso a Paso Visual** | Tutorial con demostración práctica | How-to claro, accionable | Media |
+| **Explicación con Pizarra** | Dibujas o escribes mientras explicas | Conceptos complejos, autoridad | Media |
+
+### 🎤 Interactivos / Sociales
+
+| Formato | Descripción | Mejor para | Energía |
+|---------|-------------|------------|---------|
+| **Entrevista Clásica** | 2 ángulos de cámara, Q&A estructurado | Credibilidad, autoridad | Media |
+| **Street Interview** | Preguntas en la calle a desconocidos | Viral, prueba social diversa | Media-Alta |
+| **Entrevista Equipo** | Entrevistas a tu red / downline / clientes | Prueba social íntima | Media |
+| **Testimonio Cliente** | Cliente cuenta su resultado, directo o editado | Conversión fuerte | Media |
+| **Dúo / Split Screen** | 2 personas hablando en el reel (puede ser con invitado o contigo mismo) | Conversación natural, dinámica | Media-Alta |
+| **React / Respuesta a Comentario** | Respondes un comentario visible en pantalla | Engagement comunidad, relatable | Media |
+
+### 🎭 Entretenimiento / Producción
+
+| Formato | Descripción | Mejor para | Energía |
+|---------|-------------|------------|---------|
+| **Skit / Roleplay** | Escena actuada, humor o exageración — a veces el presentador hace 2 personajes | Entertainment puro, viralidad | Alta |
+| **Trend Hijack** | Audio o formato viral + tu nicho | Alcance orgánico, relevancia | Alta |
+| **Green Screen Reacción** | Reaccionas a un post / noticia / screenshot en pantalla | Comentario rápido, autoridad | Media |
+| **Dramatización Narrada** | Narración exagerada tipo documental + B-roll actuado | Entretenimiento, storytelling | Media-Alta |
+| **Caption-Driven** | Texto grande domina la pantalla, voz es secundaria | Silent scrollers (60% del feed) | Media |
+
+### 💡 Híbridos (mezcla de 2+ formatos)
+
+Los mejores creadores combinan. No hay que elegir solo uno — puedes abrir con un formato y cerrar con otro.
+
+| Formato Híbrido | Estructura | Cuándo usarlo |
+|-----------------|-----------|---------------|
+| **Hook POV → Talking Head** | Abres con POV actuado dramático, sigues hablando a cámara | Cuando necesitas gancho fuerte + contenido educativo |
+| **Storytime + B-roll** | Narras mientras muestras imágenes de apoyo | Historia con soporte visual |
+| **Confesión + Lista** | "Les confieso 3 cosas que…" | Vulnerabilidad + estructura accionable |
+| **Pregunta Repentina + Explicación** | "¿Sabías que…?" + respuesta detallada | Curiosidad + educación |
+| **Trend + Educativo** | Audio viral + tip de tu nicho | Alcance + valor |
+| **Skit → Talking Head** | Actúas la objeción, luego la respondes directo a cámara | Objection-handling con humor |
 
 ---
 
@@ -90,25 +193,38 @@ Antes de escribir un guión, elige el formato. El formato define la ESTRUCTURA v
 
 | Pilar de contenido | Formatos recomendados |
 |--------------------|----------------------|
-| **Historia personal** | Storytime, Momento Vulnerable, Before/After, B-roll + Voiceover |
-| **Educativo** | Top X / Lista, Myth Busting, Respuesta a Objeción, Comparación, Opinión Impopular, Talking Head |
-| **Lifestyle real** | B-roll + Voiceover, Selfie / Casual, POV |
+| **Historia personal** | Storytime, Confesión Cerrada, Before/After, B-roll + Voiceover, Diario Emocional, Flashback |
+| **Educativo** | Top X / Lista, Myth Busting, Respuesta a Objeción, Comparación, Opinión Impopular, Talking Head, Paso a Paso Visual, Pregunta Repentina POV |
+| **Lifestyle real** | B-roll + Voiceover, Selfie / Casual, POV mañana / rutina, Day in the Life, Walk & Talk |
+| **Prueba social** | Testimonio Cliente, Entrevista Equipo, Street Interview, Dúo / Split Screen |
+| **Entretenimiento** | Skit / Roleplay, Trend Hijack, Green Screen Reacción, Rant / Desahogo, Dramatización Narrada |
 
 ### Guía de Selección por Variable
 
 | Variable a mover | Formatos más efectivos |
 |-------------------|----------------------|
-| **Belief** | Myth Busting, Respuesta a Objeción, Comparación, Top X / Lista, Opinión Impopular |
-| **Trust** | Momento Vulnerable, Storytime, Entrevista / Q&A, Selfie / Casual, Street Interview |
-| **Desire** | B-roll + Voiceover, Before/After, POV, Skit / Roleplay |
+| **Belief** | Myth Busting, Respuesta a Objeción, Comparación, Top X / Lista, Opinión Impopular, Rant / Desahogo, Green Screen Reacción |
+| **Trust** | Confesión Cerrada, Storytime, Entrevista Equipo, Selfie / Casual, Street Interview, Testimonio Cliente, Diario Emocional |
+| **Desire** | B-roll + Voiceover, Before/After, POV mañana / rutina, Day in the Life, Skit / Roleplay |
+| **Enganche en feed** | Pregunta Repentina POV, Hook POV → Talking Head, Trend Hijack, Rant / Desahogo, Caption-Driven |
 
 ### Regla de Variación
 
 Cuando crees múltiples guiones en un set:
 - **No más de 2 videos con el mismo formato** en un set de 8
 - **Alterna energías** — no pongas 3 videos de energía alta seguidos ni 3 de baja seguidos
-- **Mezcla directos + narrativos + educativos** — el feed debe sentirse dinámico, no monótono
-- Si todos los videos son "talking head" o "selfie", el espectador se aburre aunque el contenido sea bueno. El formato ES parte de la retención.
+- **Mezcla 4 categorías mínimo** (Directos + POV + Narrativos + Educativos / Sociales / Entretenimiento) — el feed debe sentirse dinámico
+- **Un set no puede ser 100% talking head** — aunque el contenido sea oro, se siente monótono. El formato ES parte de la retención.
+- **Si la persona es nueva grabando**, arranca con Selfie / Casual + Confesión Cerrada. Talking Head puro requiere práctica.
+- **Al menos 1 formato híbrido por cada 6 videos** — combinar formatos se siente más pro.
+
+### Cómo elegir formato en 30 segundos
+
+1. ¿Cuál es el objetivo del video? → mueve Belief / Trust / Desire / engancha feed
+2. ¿Qué nivel de producción tiene el cliente? → Selfie puede lo mismo que Talking Head con luz
+3. ¿Ya usó este formato en los últimos 3 videos? → si sí, rotar
+4. ¿El contenido es más narrativo, educativo o emocional? → elegir la categoría correspondiente
+5. ¿Hay oportunidad de híbrido? → combinar siempre gana vs formato puro
 
 ---
 
@@ -238,21 +354,30 @@ No tienes que inventar todo desde cero. Busca ideas, citas, videos que ya existe
 **Idea ganadora:** [La idea central en una frase]
 **Duración:** [X-Y segundos]
 **Plataforma:** [Reel / TikTok / Story / YouTube Short]
-**Formato:** [Del catálogo: Talking Head / Selfie / B-roll+VO / Storytime / Momento Vulnerable / Before/After / POV / Top X / Myth Busting / Respuesta a Objeción / Opinión Impopular / Comparación / Entrevista / Street Interview / Skit]
+**Formato:** [Del catálogo — puede ser uno puro o un híbrido:
+  Directos: Talking Head / Selfie Casual / Walk & Talk / Confesión Cerrada / Rant / B-roll+VO
+  POV: POV "tú estás" / POV "yo fui tú" / POV cliente / POV tutorial / POV mañana / Pregunta Repentina POV
+  Narrativos: Storytime / Before-After / Day in the Life / Diario Emocional / Flashback
+  Educativos: Top X / Myth Busting / Respuesta a Objeción / Opinión Impopular / Comparación / Paso a Paso Visual / Pizarra
+  Sociales: Entrevista Clásica / Street Interview / Entrevista Equipo / Testimonio Cliente / Dúo Split / React
+  Entretenimiento: Skit / Trend Hijack / Green Screen / Dramatización Narrada / Caption-Driven
+  Híbridos: Hook POV → Talking Head / Storytime + B-roll / Confesión + Lista / Pregunta Repentina + Explicación / Skit → Talking Head]
 **Target:** [A quién va dirigido]
 
 ---
 
 ### PACKAGING (0-3 seg)
 **Gancho visual:** [Qué VE el espectador]
-**Gancho hablado:** "[Primera frase exacta]"
+**Gancho hablado:** "[Primera frase exacta — 2-3 opciones A/B/C]"
 **Texto en pantalla:** "[Overlay]"
+**🔁 Re-entry:** "[Open loop hacia la intro — tipo 1-6]"
 
 ---
 
 ### INTRO (3-10 seg)
 **Por qué importa:** "[Por qué el espectador debería quedarse]"
 **Qué va a ver:** "[Preview del contenido]"
+**🔁 Re-entry:** "[Open loop hacia el cuerpo]"
 
 ---
 
@@ -261,20 +386,20 @@ No tienes que inventar todo desde cero. Busca ideas, citas, videos que ya existe
 **Punto 1 — [Título]** ([timestamp])
 > "[Texto exacto]"
 **Texto en pantalla:** "[Overlay]"
-
-**🔁 Re-entry point:** "[Frase de transición que genera curiosidad sobre el punto 2]"
+**🔁 Re-entry:** "[Open loop hacia Punto 2 — tipo distinto al anterior]"
 
 **Punto 2 — [Título]** ([timestamp])
 > "[Texto exacto]"
 **Texto en pantalla:** "[Overlay]"
-
-**🔁 Re-entry point:** "[Frase de transición que genera curiosidad sobre el punto 3]"
+**🔁 Re-entry:** "[Open loop hacia Punto 3 — tipo distinto a los anteriores]"
 
 **Punto 3 — [Título]** ([timestamp])
 > "[Texto exacto]"
 **Texto en pantalla:** "[Overlay]"
+**🔁 Re-entry:** "[Open loop hacia Outro]"
 
 *Elementos narrativos usados: [ubicación/acciones/pensamiento/emociones/diálogo]*
+*Tipos de loop usados: [1-6, variados — no repetir el mismo tipo seguido]*
 
 ---
 
@@ -282,6 +407,7 @@ No tienes que inventar todo desde cero. Busca ideas, citas, videos que ya existe
 **Moral:** "[Conclusión que posiciona como experto]"
 **CTA nativo:** "[Llamada a la acción dentro del flujo natural]"
 **Texto en pantalla:** "[Overlay del CTA]"
+*La outro NO lleva re-entry — cierra con CTA*
 
 ---
 
@@ -299,7 +425,10 @@ No tienes que inventar todo desde cero. Busca ideas, citas, videos que ya existe
 
 ## Checklist antes de dar por bueno un guión
 
+### Estructura
 - [ ] ¿Se eligió el formato más adecuado para la idea? (del catálogo de formatos)
+- [ ] ¿El formato es específico (no solo "talking head genérico")? ¿Se consideró POV / Pregunta Repentina / Skit / Híbrido?
+- [ ] Si es un set de múltiples videos, ¿se alternan al menos 4 categorías de formato?
 - [ ] ¿La IDEA es ganadora? (¿Tiene potencial viral por sí misma?)
 - [ ] ¿El gancho hablado dice de qué trata en los primeros 3 segundos?
 - [ ] ¿El gancho visual capta atención antes de que hablen?
@@ -308,7 +437,16 @@ No tienes que inventar todo desde cero. Busca ideas, citas, videos que ya existe
 - [ ] ¿Sigue la estructura QUÉ / POR QUÉ / CÓMO?
 - [ ] ¿La intro va directo al grano sin presentaciones?
 - [ ] ¿El cuerpo usa al menos 3 de los 5 elementos narrativos?
-- [ ] ¿Hay re-entry points entre cada transición de puntos? (mínimo 1 por transición)
+
+### Retention Stacking (obligatorio)
+- [ ] ¿Hay un open loop entre CADA escena? (no solo en el cuerpo — también Packaging→Intro e Intro→Cuerpo)
+- [ ] ¿Los tipos de loop están variados? (no 3 escaladas de tensión seguidas)
+- [ ] ¿Cada loop es de máximo 1 frase?
+- [ ] ¿Cada loop entrega lo que promete en la escena siguiente? (Principio binario)
+- [ ] ¿La outro NO lleva re-entry? (cierra con CTA, no con loop)
+- [ ] Test final: ¿puedo leer el guión completo y en NINGÚN momento entre escenas el espectador se iría satisfecho?
+
+### Cierre
 - [ ] ¿La realidad del video SUPERA la expectativa del gancho? (Principio binario)
 - [ ] ¿Hay una moral/conclusión que posiciona como experto?
 - [ ] ¿El CTA es nativo y fluye con el contenido?
@@ -572,6 +710,7 @@ Observá cómo cada paso está en una o dos oraciones. Un guion TOF de Ramiro es
 **Cómo lo digo:** [Tono, intensidad, pausa]
 **Encuadre/contexto:** [Fondo específico, diferente al de los últimos videos]
 **Elemento visual:** [Objeto, texto en pantalla, gesto, acción visible]
+**🔁 Re-entry:** "[Open loop hacia el Problema — tipo 1-6]"
 
 ---
 
@@ -583,6 +722,8 @@ Observá cómo cada paso está en una o dos oraciones. Un guion TOF de Ramiro es
 **Texto del guion:**
 > "[Explicación del problema con insight — 2-3 oraciones que hagan decir 'esto es exactamente lo que me pasa']"
 
+**🔁 Re-entry:** "[Open loop hacia la Solución — tipo distinto al anterior]"
+
 ---
 
 ### S — SOLUCIÓN (12-22 seg)
@@ -593,6 +734,8 @@ Observá cómo cada paso está en una o dos oraciones. Un guion TOF de Ramiro es
 **Texto del guion:**
 > "[Solución en formato 'tenés que hacer X' sin explicar cómo se implementa]"
 
+**🔁 Re-entry:** "[Open loop hacia la Prueba Social — tipo distinto a los anteriores]"
+
 ---
 
 ### P — PRUEBA SOCIAL (22-30 seg)
@@ -600,6 +743,8 @@ Observá cómo cada paso está en una o dos oraciones. Un guion TOF de Ramiro es
 **Tipo:** [Propia / cliente / dato masivo / logro verificable]
 **Texto del guion:**
 > "[Prueba social específica, con número o nombre]"
+
+**🔁 Re-entry:** "[Open loop hacia el CTA]"
 
 ---
 
@@ -656,6 +801,13 @@ Observá cómo cada paso está en una o dos oraciones. Un guion TOF de Ramiro es
 - [ ] ¿La keyword es simple y memorable?
 - [ ] ¿El entregable es un recurso gratuito (no una llamada de venta)?
 - [ ] ¿Se entiende exactamente qué van a recibir?
+
+### Retention Stacking (obligatorio)
+- [ ] ¿Hay open loop entre Atención→Problema, Problema→Solución, Solución→Prueba, Prueba→CTA?
+- [ ] ¿Los tipos de loop están variados? (no 3 del mismo tipo seguidos)
+- [ ] ¿Cada loop es de máximo 1 frase?
+- [ ] ¿Cada loop entrega lo que promete en la escena siguiente?
+- [ ] Test: ¿puedo leer el guión y en NINGÚN punto entre escenas el espectador se iría satisfecho?
 
 ---
 
