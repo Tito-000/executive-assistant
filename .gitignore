@@ -1,10 +1,16 @@
 .env
+.env.*
+!.env.example
 CLAUDE.local.md
 .claude/settings.local.json
+.claude/scheduled_tasks.lock
 node_modules/
 .DS_Store
 **/.DS_Store
 *.mov
+
+# Office temp/lock files
+~$*
 
 # Netlify build artifacts
 .netlify/
@@ -14,3 +20,22 @@ node_modules/
 
 # API keys (seguridad)
 recursos-ia/api-keys/
+
+# Credenciales Google / service accounts
+**/credentials.json
+**/service_account*.json
+**/token.json
+**/token.pickle
+
+# IDs locales de Google Sheets/Docs (config por máquina)
+**/.sheet_id
+**/.doc_id
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+venv/
+
+# Logs
+*.log
