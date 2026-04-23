@@ -1,0 +1,1451 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Keyword Research · Ocala Fence Install · MM Agency</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:wght@700;800&display=swap" rel="stylesheet">
+<style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body {
+    font-family: 'Inter', -apple-system, sans-serif;
+    background: linear-gradient(135deg, #fafaf5 0%, #f5f0e8 100%);
+    color: #1a1a1a;
+    min-height: 100vh;
+    line-height: 1.5;
+    padding: 40px 20px;
+}
+.container { max-width: 1300px; margin: 0 auto; }
+
+.hero {
+    background: linear-gradient(135deg, #136229 0%, #0d4a1f 100%);
+    color: white;
+    padding: 50px 45px;
+    border-radius: 20px;
+    margin-bottom: 35px;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 20px 60px rgba(19,98,41,0.25);
+}
+.hero::before {
+    content: '';
+    position: absolute;
+    top: -50%; right: -20%;
+    width: 500px; height: 500px;
+    background: radial-gradient(circle, rgba(209,180,135,0.15) 0%, transparent 70%);
+    pointer-events: none;
+}
+.hero-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 28px;
+    position: relative;
+    z-index: 2;
+}
+.hero-logo { height: 32px; opacity: 0.95; }
+.hero-client {
+    font-size: 13px;
+    color: #d1b487;
+    font-weight: 500;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+.hero h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 44px;
+    font-weight: 800;
+    line-height: 1.1;
+    margin-bottom: 12px;
+}
+.hero-sub {
+    font-size: 17px;
+    opacity: 0.85;
+    max-width: 720px;
+    margin-bottom: 30px;
+    font-weight: 300;
+}
+.hero-stats {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 18px;
+    position: relative;
+    z-index: 2;
+}
+.stat {
+    background: rgba(255,255,255,0.08);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255,255,255,0.15);
+    padding: 20px;
+    border-radius: 12px;
+}
+.stat-num {
+    font-family: 'Playfair Display', serif;
+    font-size: 34px;
+    font-weight: 800;
+    line-height: 1;
+}
+.stat-label {
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    opacity: 0.75;
+    margin-top: 6px;
+    font-weight: 500;
+}
+
+/* Executive summary */
+.summary {
+    background: white;
+    border-radius: 16px;
+    padding: 30px 35px;
+    margin-bottom: 30px;
+    border-left: 5px solid #d1b487;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.04);
+}
+.summary h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 24px;
+    margin-bottom: 14px;
+    color: #136229;
+}
+.summary p { margin-bottom: 10px; color: #444; }
+.summary ul { padding-left: 22px; margin: 10px 0 14px; }
+.summary li { margin-bottom: 6px; color: #444; }
+.summary strong { color: #136229; }
+
+/* Cluster section */
+.cluster {
+    background: white;
+    border-radius: 16px;
+    margin-bottom: 24px;
+    padding: 30px 32px;
+    border-left: 5px solid var(--cluster-color);
+    box-shadow: 0 4px 20px rgba(0,0,0,0.04);
+}
+.cluster-head {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    margin-bottom: 22px;
+    padding-bottom: 18px;
+    border-bottom: 1px solid #eee;
+    flex-wrap: wrap;
+}
+.cluster-dot {
+    width: 14px; height: 14px;
+    border-radius: 50%;
+    background: var(--cluster-color);
+    box-shadow: 0 0 0 4px var(--cluster-bg);
+    flex-shrink: 0;
+}
+.cluster-meta { flex: 1; min-width: 280px; }
+.cluster-meta h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 22px;
+    color: #1a1a1a;
+    margin-bottom: 3px;
+}
+.cluster-meta p { font-size: 13px; color: #666; }
+.cluster-stats {
+    display: flex;
+    gap: 22px;
+    font-size: 12px;
+    color: #666;
+}
+.cluster-stats strong {
+    display: block;
+    font-family: 'Playfair Display', serif;
+    font-size: 24px;
+    color: var(--cluster-color);
+    font-weight: 700;
+    line-height: 1;
+    margin-bottom: 2px;
+}
+.cluster-stats span { text-transform: uppercase; letter-spacing: 1px; font-size: 10px; }
+
+/* Table */
+.table-wrap { overflow-x: auto; }
+table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 13px;
+}
+th {
+    text-align: left;
+    padding: 10px 12px;
+    background: var(--cluster-bg);
+    color: var(--cluster-color);
+    font-weight: 700;
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    border-bottom: 2px solid var(--cluster-color);
+    white-space: nowrap;
+}
+td {
+    padding: 11px 12px;
+    border-bottom: 1px solid #f0f0f0;
+    vertical-align: top;
+}
+td.kw { font-weight: 600; color: #1a1a1a; }
+td.num { font-family: 'SF Mono', Menlo, monospace; font-size: 12px; font-weight: 600; }
+td.target { font-size: 12px; color: #555; font-family: 'SF Mono', Menlo, monospace; }
+td.notes { font-size: 12px; color: #666; max-width: 260px; }
+
+.badge {
+    display: inline-block;
+    padding: 3px 9px;
+    border-radius: 10px;
+    font-size: 10px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+.badge.prio { font-family: 'SF Mono', Menlo, monospace; }
+
+.footer {
+    text-align: center;
+    padding: 40px 20px 10px;
+    color: #666;
+    font-size: 13px;
+}
+.footer-logo {
+    height: 28px;
+    margin-bottom: 10px;
+    opacity: 0.75;
+}
+
+@media (max-width: 640px) {
+    body { padding: 20px 10px; }
+    .hero { padding: 32px 22px; }
+    .hero h1 { font-size: 30px; }
+    .hero-stats { grid-template-columns: repeat(2, 1fr); }
+    .cluster { padding: 22px 18px; }
+    .cluster-head { flex-direction: column; align-items: flex-start; }
+    table { font-size: 11px; }
+    th, td { padding: 8px 6px; }
+}
+</style>
+</head>
+<body>
+<div class="container">
+    <div class="hero">
+        <div class="hero-top">
+            <img src="assets/mm-logo-white.png" alt="MM Agency" class="hero-logo">
+            <div class="hero-client">Ocala Fence Install</div>
+        </div>
+        <h1>Keyword Research</h1>
+        <p class="hero-sub">Universo de búsqueda para dominar el SEO local y pagado de Ocala, FL. 81 keywords analizadas, segmentadas por intent y clusterizadas para ejecución.</p>
+        <div class="hero-stats">
+            <div class="stat"><div class="stat-num">81</div><div class="stat-label">Keywords</div></div>
+            <div class="stat"><div class="stat-num">30.7k</div><div class="stat-label">Vol/mes total</div></div>
+            <div class="stat"><div class="stat-num">25</div><div class="stat-label">Prioridad 1</div></div>
+            <div class="stat"><div class="stat-num">$11.08</div><div class="stat-label">CPC promedio</div></div>
+        </div>
+    </div>
+
+    <section class="summary">
+        <h2>Resumen Ejecutivo</h2>
+        <p>El mercado de fencing en Ocala tiene <strong>30.7k búsquedas mensuales capturables</strong> cruzando SEO orgánico + Google Ads. Estrategia propuesta:</p>
+        <ul>
+            <li><strong>Homepage:</strong> optimizada para "fence company ocala fl" + "fence contractor ocala fl" (money kw #1 y #2, combinados 530 vol/mes).</li>
+            <li><strong>4 service pages:</strong> Vinyl, Aluminum, Privacy, Pool — una landing por producto con intent de compra directa.</li>
+            <li><strong>Landing $0 Down Financing:</strong> USP diferenciador. Captura búsquedas que la competencia no trabaja (Fence Pro, Perimeter Fence, Ocala Fence no rankean para estas).</li>
+            <li><strong>6 páginas por ZIP (34471-34480):</strong> SEO programático. Bajo volumen por página pero alta conversión (local intent máximo).</li>
+            <li><strong>The Villages page:</strong> The Villages = mercado grande al sur con 90 vol/mes. Oportunidad clara.</li>
+            <li><strong>Landing en español:</strong> USP del cliente (habla español) + mercado hispano grande en Marion County sin competencia.</li>
+            <li><strong>Blog hub:</strong> "how much does a fence cost in florida" (590 vol/mes) como pillar content + 6 artículos de soporte.</li>
+            <li><strong>Negative keywords (Ads):</strong> excluir wood, chain link, repair, DIY, jobs, rental, used — salva presupuesto.</li>
+        </ul>
+        <p><strong>Ángulo diferenciador clave (del briefing):</strong> "fence for bears florida" (90 vol/mes) es un blog post que nadie en Ocala tiene escrito — se puede ganar 100% del SERP con un artículo bien hecho.</p>
+    </section>
+
+    
+        <section class="cluster" style="--cluster-color:#136229;--cluster-bg:#e8f5eb">
+            <header class="cluster-head">
+                <div class="cluster-dot"></div>
+                <div class="cluster-meta">
+                    <h2>Money Keywords</h2>
+                    <p>Intent transaccional alto — usuario listo para comprar. Prioridad #1.</p>
+                </div>
+                <div class="cluster-stats">
+                    <div><strong>7</strong><span>keywords</span></div>
+                    <div><strong>1.1k</strong><span>vol/mes</span></div>
+                </div>
+            </header>
+            <div class="table-wrap">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Keyword</th><th>Vol</th><th>CPC</th><th>Comp</th><th>Intent</th><th>Prio</th><th>Target Page</th><th>Notas</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+            <tr>
+                <td class="kw">fence company ocala fl</td>
+                <td class="num">320</td>
+                <td class="num">$14.50</td>
+                <td><span class="badge" style="background:#fee2e2;color:#991b1b">high</span></td>
+                <td><span class="badge" style="background:#dcfce7;color:#166534">transactional</span></td>
+                <td><span class="badge prio" style="background:#fee2e2;color:#991b1b">P1</span></td>
+                <td class="target">homepage</td>
+                <td class="notes">Money kw #1 — cliente listo para comprar. Incluir en H1 + meta.</td>
+            </tr>
+            
+            <tr>
+                <td class="kw">fence contractor ocala fl</td>
+                <td class="num">210</td>
+                <td class="num">$13.80</td>
+                <td><span class="badge" style="background:#fee2e2;color:#991b1b">high</span></td>
+                <td><span class="badge" style="background:#dcfce7;color:#166534">transactional</span></td>
+                <td><span class="badge prio" style="background:#fee2e2;color:#991b1b">P1</span></td>
+                <td class="target">homepage</td>
+                <td class="notes">Segundo money kw. Alternar con #1 en H1.</td>
+            </tr>
+            
+            <tr>
+                <td class="kw">ocala fence company</td>
+                <td class="num">170</td>
+                <td class="num">$12.40</td>
+                <td><span class="badge" style="background:#fee2e2;color:#991b1b">high</span></td>
+                <td><span class="badge" style="background:#dcfce7;color:#166534">transactional</span></td>
+                <td><span class="badge prio" style="background:#fee2e2;color:#991b1b">P1</span></td>
+                <td class="target">homepage</td>
+                <td class="notes">Variacion geo. Ir a H2 o breadcrumb.</td>
+            </tr>
+            
+            <tr>
+                <td class="kw">fence installation ocala fl</td>
+                <td class="num">140</td>
+                <td class="num">$15.20</td>
+                <td><span class="badge" style="background:#fee2e2;color:#991b1b">high</span></td>
+                <td><span class="badge" style="background:#dcfce7;color:#166534">transactional</span></td>
+                <td><span class="badge prio" style="background:#fee2e2;color:#991b1b">P1</span></td>
+                <td class="target">service-page-install</td>
+                <td class="notes">Pagina dedicada.</td>
+            </tr>
+            
+            <tr>
+                <td class="kw">fence contractor ocala</td>
+                <td class="num">110</td>
+                <td class="num">$11.60</td>
+                <td><span class="badge" style="background:#fee2e2;color:#991b1b">high</span></td>
+                <td><span class="badge" style="background:#dcfce7;color:#166534">transactional</span></td>
+                <td><span class="badge prio" style="background:#fee2e2;color:#991b1b">P1</span></td>
+                <td class="target">homepage</td>
+                <td class="notes">Sin FL — mismo intent.</td>
+            </tr>
+            
+            <tr>
+                <td class="kw">fence cost ocala</td>
+                <td class="num">110</td>
+                <td class="num">$8.90</td>
+                <td><span class="badge" style="background:#fef3c7;color:#92400e">medium</span></td>
+                <td><span class="badge" style="background:#fef3c7;color:#92400e">commercial</span></td>
+                <td><span class="badge prio" style="background:#fef3c7;color:#92400e">P2</span></td>
+                <td class="target">blog+pricing</td>
+                <td class="notes">Alto intent + investigacion. Blog post.</td>
+            </tr>
+            
+            <tr>
+                <td class="kw">fence companies in ocala fl</td>
+                <td class="num">90</td>
+                <td class="num">$13.10</td>
+                <td><span class="badge" style="background:#fee2e2;color:#991b1b">high</span></td>
+                <td><span class="badge" style="background:#dcfce7;color:#166534">transactional</span></td>
+                <td><span class="badge prio" style="background:#fef3c7;color:#92400e">P2</span></td>
+                <td class="target">homepage</td>
+                <td class="notes">Plural — usuario comparando. Meter en intro.</td>
+            </tr>
+            </tbody>
+                </table>
+            </div>
+        </section>
+        
+        <section class="cluster" style="--cluster-color:#0d4a1f;--cluster-bg:#e8f5eb">
+            <header class="cluster-head">
+                <div class="cluster-dot"></div>
+                <div class="cluster-meta">
+                    <h2>Near Me / Geo-Intent</h2>
+                    <p>Se ganan con Google Business Profile + proximity + reviews. Muy volumen pero pago alto en ads.</p>
+                </div>
+                <div class="cluster-stats">
+                    <div><strong>5</strong><span>keywords</span></div>
+                    <div><strong>16.9k</strong><span>vol/mes</span></div>
+                </div>
+            </header>
+            <div class="table-wrap">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Keyword</th><th>Vol</th><th>CPC</th><th>Comp</th><th>Intent</th><th>Prio</th><th>Target Page</th><th>Notas</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+            <tr>
+                <td class="kw">fence near me</td>
+                <td class="num">8.1k</td>
+                <td class="num">$12.90</td>
+                <td><span class="badge" style="background:#fee2e2;color:#991b1b">high</span></td>
+                <td><span class="badge" style="background:#dcfce7;color:#166534">transactional</span></td>
+                <td><span class="badge prio" style="background:#fee2e2;color:#991b1b">P1</span></td>
+                <td class="target">homepage+gbp</td>
+                <td class="notes">Alto volumen pero mucho pago. Ganar con GBP + proximity.</td>
+            </tr>
+            
+            <tr>
+                <td class="kw">fence company near me</td>
+                <td class="num">3.6k</td>
+                <td class="num">$12.30</td>
+                <td><span class="badge" style="background:#fee2e2;color:#991b1b">high</span></td>
+                <td><span class="badge" style="background:#dcfce7;color:#166534">transactional</span></td>
+                <td><span class="badge prio" style="background:#fee2e2;color:#991b1b">P1</span></td>
+                <td class="target">homepage+gbp</td>
+                <td class="notes">Meta description debe decir Ocala + FL.</td>
+            </tr>
+            
+            <tr>
+                <td class="kw">fence contractor near me</td>
+                <td class="num">2.4k</td>
+                <td class="num">$13.70</td>
+                <td><span class="badge" style="background:#fee2e2;color:#991b1b">high</span></td>
+                <td><span class="badge" style="background:#dcfce7;color:#166534">transactional</span></td>
+                <td><span class="badge prio" style="background:#fee2e2;color:#991b1b">P1</span></td>
+                <td class="target">homepage+gbp</td>
+                <td class="notes">Idem — GBP + reviews es la palanca.</td>
+            </tr>
+            
+            <tr>
+                <td class="kw">fence installation near me</td>
+                <td class="num">1.9k</td>
+                <td class="num">$14.10</td>
+                <td><span class="badge" style="background:#fee2e2;color:#991b1b">high</span></td>
+                <td><span class="badge" style="background:#dcfce7;color:#166534">transactional</span></td>
+                <td><span class="badge prio" style="background:#fef3c7;color:#92400e">P2</span></td>
+                <td class="target">homepage+gbp</td>
+                <td class="notes"></td>
+            </tr>
+            
+            <tr>
+                <td class="kw">fence installers near me</td>
+                <td class="num">880</td>
+                <td class="num">$13.20</td>
+                <td><span class="badge" style="background:#fee2e2;color:#991b1b">high</span></td>
+                <td><span class="badge" style="background:#dcfce7;color:#166534">transactional</span></td>
+                <td><span class="badge prio" style="background:#fef3c7;color:#92400e">P2</span></td>
+                <td class="target">gbp</td>
+                <td class="notes"></td>
+            </tr>
+            </tbody>
+                </table>
+            </div>
+        </section>
+        
+        <section class="cluster" style="--cluster-color:#d4a017;--cluster-bg:#fdf6e3">
+            <header class="cluster-head">
+                <div class="cluster-dot"></div>
+                <div class="cluster-meta">
+                    <h2>Productos (Vinyl / Aluminum / Privacy / Pool)</h2>
+                    <p>Una landing dedicada por producto. Captura intent especifico.</p>
+                </div>
+                <div class="cluster-stats">
+                    <div><strong>19</strong><span>keywords</span></div>
+                    <div><strong>1.9k</strong><span>vol/mes</span></div>
+                </div>
+            </header>
+            <div class="table-wrap">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Keyword</th><th>Vol</th><th>CPC</th><th>Comp</th><th>Intent</th><th>Prio</th><th>Target Page</th><th>Notas</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+            <tr>
+                <td class="kw">privacy fence ocala</td>
+                <td class="num">260</td>
+                <td class="num">$11.40</td>
+                <td><span class="badge" style="background:#fef3c7;color:#92400e">medium</span></td>
+                <td><span class="badge" style="background:#dcfce7;color:#166534">transactional</span></td>
+                <td><span class="badge prio" style="background:#fee2e2;color:#991b1b">P1</span></td>
+                <td class="target">service-page-privacy</td>
+                <td class="notes">Landing privacy — keyword general alta.</td>
+            </tr>
+            
+            <tr>
+                <td class="kw">vinyl fence ocala</td>
+                <td class="num">210</td>
+                <td class="num">$11.80</td>
+                <td><span class="badge" style="background:#fef3c7;color:#92400e">medium</span></td>
+                <td><span class="badge" style="background:#dcfce7;color:#166534">transactional</span></td>
+                <td><span class="badge prio" style="background:#fee2e2;color:#991b1b">P1</span></td>
+                <td class="target">service-page-vinyl</td>
+                <td class="notes">Producto estrella. Landing propia.</td>
+            </tr>
+            
+            <tr>
+                <td class="kw">pool fence ocala</td>
+                <td class="num">170</td>
+                <td class="num">$14.80</td>
+                <td><span class="badge" style="background:#fef3c7;color:#92400e">medium</span></td>
+                <td><span class="badge" style="background:#dcfce7;color:#166534">transactional</span></td>
+                <td><span class="badge prio" style="background:#fee2e2;color:#991b1b">P1</span></td>
+                <td class="target">service-page-pool</td>
+                <td class="notes">Landing pool — ticket alto + regulacion FL.</td>
+            </tr>
+            
+            <tr>
+                <td class="kw">vinyl fence ocala fl</td>
+                <td class="num">140</td>
+                <td class="num">$12.50</td>
+                <td><span class="badge" style="background:#fef3c7;color:#92400e">medium</span></td>
+                <td><span class="badge" style="background:#dcfce7;color:#166534">transactional</span></td>
+                <td><span class="badge prio" style="background:#fee2e2;color:#991b1b">P1</span></td>
+                <td class="target">service-page-vinyl</td>
+                <td class="notes"></td>
+            </tr>
+            
+            <tr>
+                <td class="kw">privacy fence ocala fl</td>
+                <td class="num">130</td>
+                <td class="num">$12.10</td>
+                <td><span class="badge" style="background:#fef3c7;color:#92400e">medium</span></td>
+                <td><span class="badge" style="background:#dcfce7;color:#166534">transactional</span></td>
+                <td><span class="badge prio" style="background:#fee2e2;color:#991b1b">P1</span></td>
+                <td class="target">service-page-privacy</td>
+                <td class="notes"></td>
+            </tr>
+            
+            <tr>
+                <td class="kw">aluminum fence ocala</td>
+                <td class="num">110</td>
+                <td class="num">$12.60</td>
+                <td><span class="badge" style="background:#fef3c7;color:#92400e">medium</span></td>
+                <td><span class="badge" style="background:#dcfce7;color:#166534">transactional</span></td>
+                <td><span class="badge prio" style="background:#fee2e2;color:#991b1b">P1</span></td>
+                <td class="target">service-page-aluminum</td>
+                <td class="notes">Landing aluminum.</td>
+            </tr>
+            
+            <tr>
+                <td class="kw">pvc fence ocala</td>
+                <td class="num">90</td>
+                <td class="num">$10.40</td>
+                <td><span class="badge" style="background:#fef3c7;color:#92400e">medium</span></td>
+                <td><span class="badge" style="background:#dcfce7;color:#166534">transactional</span></td>
+                <td><span class="badge prio" style="background:#fee2e2;color:#991b1b">P1</span></td>
+                <td class="target">service-page-vinyl</td>
+                <td class="notes">Sinonimo — misma landing.</td>
+            </tr>
+            
+            <tr>
+                <td class="kw">residential fence ocala</td>
+                <td class="num">90</td>
+                <td class="num">$10.80</td>
+                <td><span class="badge" style="background:#dcfce7;color:#166534">low</span></td>
+                <td><span class="badge" style="background:#dcfce7;color:#166534">transactional</span></td>
+                <td><span class="badge prio" style="background:#fef3c7;color:#92400e">P2</span></td>
+                <td class="target">service-page-residential</td>
+                <td class="notes"></td>
+            </tr>
+            
+            <tr>
+                <td class="kw">vinyl fence installation ocala</td>
+                <td class="num">70</td>
+                <td class="num">$13.70</td>
+                <td><span class="badge" style="background:#fef3c7;color:#92400e">medium</span></td>
+                <td><span class="badge" style="background:#dcfce7;color:#166534">transactional</span></td>
+                <td><span class="badge prio" style="background:#fef3c7;color:#92400e">P2</span></td>
+                <td class="target">service-page-vinyl</td>
+                <td class="notes"></td>
+            </tr>
+            
+            <tr>
+                <td class="kw">aluminum fence ocala fl</td>
+                <td class="num">70</td>
+                <td class="num">$13.20</td>
+                <td><span class="badge" style="background:#fef3c7;color:#92400e">medium</span></td>
+                <td><span class="badge" style="background:#dcfce7;color:#166534">transactional</span></td>
+                <td><span class="badge prio" style="background:#fef3c7;color:#92400e">P2</span></td>
+                <td class="target">service-page-aluminum</td>
+                <td class="notes"></td>
+            </tr>
+            
+            <tr>
+                <td class="kw">privacy fence installation ocala</td>
+                <td class="num">70</td>
+                <td class="num">$13.80</td>
+                <td><span class="badge" style="background:#fef3c7;color:#92400e">medium</span></td>
+                <td><span class="badge" style="background:#dcfce7;color:#166534">transactional</span></td>
+                <td><span class="badge prio" style="background:#fef3c7;color:#92400e">P2</span></td>
+                <td class="target">service-page-privacy</td>
+                <td class="notes"></td>
+            </tr>
+            
+            <tr>
+                <td class="kw">pool fence contractor ocala</td>
+                <td class="num">60</td>
+                <td class="num">$15.60</td>
+                <td><span class="badge" style="background:#fef3c7;color:#92400e">medium</span></td>
+                <td><span class="badge" style="background:#dcfce7;color:#166534">transactional</span></td>
+                <td><span class="badge prio" style="background:#fef3c7;color:#92400e">P2</span></td>
+                <td class="target">service-page-pool</td>
+                <td class="notes"></td>
+            </tr>
+            
+            <tr>
+                <td class="kw">white vinyl fence ocala</td>
+                <td class="num">50</td>
+                <td class="num">$10.80</td>
+                <td><span class="badge" style="background:#dcfce7;color:#166534">low</span></td>
+                <td><span class="badge" style="background:#dcfce7;color:#166534">transactional</span></td>
+                <td><span class="badge prio" style="background:#fef3c7;color:#92400e">P2</span></td>
+                <td class="target">service-page-vinyl</td>
+                <td class="notes">Producto #1 en ventas.</td>
+            </tr>
+            
+            <tr>
+                <td class="kw">pool safety fence ocala fl</td>
+                <td class="num">40</td>
+                <td class="num">$16.20</td>
+                <td><span class="badge" style="background:#fef3c7;color:#92400e">medium</span></td>
+                <td><span class="badge" style="background:#dcfce7;color:#166534">transactional</span></td>
+                <td><span class="badge prio" style="background:#fef3c7;color:#92400e">P2</span></td>
+                <td class="target">service-page-pool</td>
+                <td class="notes"></td>
+            </tr>
+            
+            <tr>
+                <td class="kw">wood fence ocala</td>
+                <td class="num">110</td>
+                <td class="num">$10.40</td>
+                <td><span class="badge" style="background:#fef3c7;color:#92400e">medium</span></td>
+                <td><span class="badge" style="background:#dcfce7;color:#166534">transactional</span></td>
+                <td><span class="badge prio" style="background:#e0e7ff;color:#3730a3">P3</span></td>
+                <td class="target"><em style='color:#aaa'>excluir</em></td>
+                <td class="notes">NEGATIVE para ads — cliente no promociona wood.</td>
+            </tr>
+            
+            <tr>
+                <td class="kw">chain link fence ocala</td>
+                <td class="num">90</td>
+                <td class="num">$9.80</td>
+                <td><span class="badge" style="background:#fef3c7;color:#92400e">medium</span></td>
+                <td><span class="badge" style="background:#dcfce7;color:#166534">transactional</span></td>
+                <td><span class="badge prio" style="background:#e0e7ff;color:#3730a3">P3</span></td>
+                <td class="target"><em style='color:#aaa'>excluir</em></td>
+                <td class="notes">NEGATIVE para ads.</td>
+            </tr>
+            
+            <tr>
+                <td class="kw">commercial fence ocala</td>
+                <td class="num">50</td>
+                <td class="num">$13.40</td>
+                <td><span class="badge" style="background:#dcfce7;color:#166534">low</span></td>
+                <td><span class="badge" style="background:#dcfce7;color:#166534">transactional</span></td>
+                <td><span class="badge prio" style="background:#e0e7ff;color:#3730a3">P3</span></td>
+                <td class="target">service-page-commercial</td>
+                <td class="notes">Bajo — aunque no es su foco.</td>
+            </tr>
+            
+            <tr>
+                <td class="kw">black aluminum fence ocala</td>
+                <td class="num">40</td>
+                <td class="num">$11.90</td>
+                <td><span class="badge" style="background:#dcfce7;color:#166534">low</span></td>
+                <td><span class="badge" style="background:#dcfce7;color:#166534">transactional</span></td>
+                <td><span class="badge prio" style="background:#e0e7ff;color:#3730a3">P3</span></td>
+                <td class="target">service-page-aluminum</td>
+                <td class="notes"></td>
+            </tr>
+            
+            <tr>
+                <td class="kw">6 foot privacy fence ocala</td>
+                <td class="num">40</td>
+                <td class="num">$11.20</td>
+                <td><span class="badge" style="background:#dcfce7;color:#166534">low</span></td>
+                <td><span class="badge" style="background:#dcfce7;color:#166534">transactional</span></td>
+                <td><span class="badge prio" style="background:#e0e7ff;color:#3730a3">P3</span></td>
+                <td class="target">service-page-privacy</td>
+                <td class="notes"></td>
+            </tr>
+            </tbody>
+                </table>
+            </div>
+        </section>
+        
+        <section class="cluster" style="--cluster-color:#b8860b;--cluster-bg:#fdf6e3">
+            <header class="cluster-head">
+                <div class="cluster-dot"></div>
+                <div class="cluster-meta">
+                    <h2>Durafence (nicho)</h2>
+                    <p>Poca competencia SEO — oportunidad de capturar 100% del search volume.</p>
+                </div>
+                <div class="cluster-stats">
+                    <div><strong>2</strong><span>keywords</span></div>
+                    <div><strong>70</strong><span>vol/mes</span></div>
+                </div>
+            </header>
+            <div class="table-wrap">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Keyword</th><th>Vol</th><th>CPC</th><th>Comp</th><th>Intent</th><th>Prio</th><th>Target Page</th><th>Notas</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+            <tr>
+                <td class="kw">durafence ocala</td>
+                <td class="num">20</td>
+                <td class="num">$11.40</td>
+                <td><span class="badge" style="background:#dcfce7;color:#166534">low</span></td>
+                <td><span class="badge" style="background:#dcfce7;color:#166534">transactional</span></td>
+                <td><span class="badge prio" style="background:#fee2e2;color:#991b1b">P1</span></td>
+                <td class="target">service-page-durafence</td>
+                <td class="notes">Landing propia — oportunidad.</td>
+            </tr>
+            
+            <tr>
+                <td class="kw">durafence installation</td>
+                <td class="num">50</td>
+                <td class="num">$12.80</td>
+                <td><span class="badge" style="background:#dcfce7;color:#166534">low</span></td>
+                <td><span class="badge" style="background:#dcfce7;color:#166534">transactional</span></td>
+                <td><span class="badge prio" style="background:#fef3c7;color:#92400e">P2</span></td>
+                <td class="target">service-page-durafence</td>
+                <td class="notes">Producto de nicho — poca competencia SEO.</td>
+            </tr>
+            </tbody>
+                </table>
+            </div>
+        </section>
+        
+        <section class="cluster" style="--cluster-color:#d97706;--cluster-bg:#fff3e0">
+            <header class="cluster-head">
+                <div class="cluster-dot"></div>
+                <div class="cluster-meta">
+                    <h2>ZIPs de Ocala</h2>
+                    <p>SEO programatico — 1 pagina por ZIP con info local unica.</p>
+                </div>
+                <div class="cluster-stats">
+                    <div><strong>6</strong><span>keywords</span></div>
+                    <div><strong>130</strong><span>vol/mes</span></div>
+                </div>
+            </header>
+            <div class="table-wrap">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Keyword</th><th>Vol</th><th>CPC</th><th>Comp</th><th>Intent</th><th>Prio</th><th>Target Page</th><th>Notas</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+            <tr>
+                <td class="kw">fence installation 34473</td>
+                <td class="num">30</td>
+                <td class="num">$14.80</td>
+                <td><span class="badge" style="background:#dcfce7;color:#166534">low</span></td>
+                <td><span class="badge" style="background:#dcfce7;color:#166534">transactional</span></td>
+                <td><span class="badge prio" style="background:#fee2e2;color:#991b1b">P1</span></td>
+                <td class="target">location-page</td>
+                <td class="notes">ZIP preferido del cliente.</td>
+            </tr>
+            
+            <tr>
+                <td class="kw">fence installation 34471</td>
+                <td class="num">20</td>
+                <td class="num">$14.20</td>
+                <td><span class="badge" style="background:#dcfce7;color:#166534">low</span></td>
+                <td><span class="badge" style="background:#dcfce7;color:#166534">transactional</span></td>
+                <td><span class="badge prio" style="background:#fef3c7;color:#92400e">P2</span></td>
+                <td class="target">location-page</td>
+                <td class="notes">Pagina por ZIP — SEO programatico.</td>
+            </tr>
+            
+            <tr>
+                <td class="kw">fence installation 34474</td>
+                <td class="num">20</td>
+                <td class="num">$13.90</td>
+                <td><span class="badge" style="background:#dcfce7;color:#166534">low</span></td>
+                <td><span class="badge" style="background:#dcfce7;color:#166534">transactional</span></td>
+                <td><span class="badge prio" style="background:#fef3c7;color:#92400e">P2</span></td>
+                <td class="target">location-page</td>
+                <td class="notes"></td>
+            </tr>
+            
+            <tr>
+                <td class="kw">fence installation 34476</td>
+                <td class="num">20</td>
+                <td class="num">$14.00</td>
+                <td><span class="badge" style="background:#dcfce7;color:#166534">low</span></td>
+                <td><span class="badge" style="background:#dcfce7;color:#166534">transactional</span></td>
+                <td><span class="badge prio" style="background:#fef3c7;color:#92400e">P2</span></td>
+                <td class="target">location-page</td>
+                <td class="notes"></td>
+            </tr>
+            
+            <tr>
+                <td class="kw">fence installation 34480</td>
+                <td class="num">20</td>
+                <td class="num">$13.70</td>
+                <td><span class="badge" style="background:#dcfce7;color:#166534">low</span></td>
+                <td><span class="badge" style="background:#dcfce7;color:#166534">transactional</span></td>
+                <td><span class="badge prio" style="background:#fef3c7;color:#92400e">P2</span></td>
+                <td class="target">location-page</td>
+                <td class="notes"></td>
+            </tr>
+            
+            <tr>
+                <td class="kw">fence installation 34472</td>
+                <td class="num">20</td>
+                <td class="num">$13.50</td>
+                <td><span class="badge" style="background:#dcfce7;color:#166534">low</span></td>
+                <td><span class="badge" style="background:#dcfce7;color:#166534">transactional</span></td>
+                <td><span class="badge prio" style="background:#e0e7ff;color:#3730a3">P3</span></td>
+                <td class="target">location-page</td>
+                <td class="notes"></td>
+            </tr>
+            </tbody>
+                </table>
+            </div>
+        </section>
+        
+        <section class="cluster" style="--cluster-color:#c2410c;--cluster-bg:#fff3e0">
+            <header class="cluster-head">
+                <div class="cluster-dot"></div>
+                <div class="cluster-meta">
+                    <h2>Marion County</h2>
+                    <p>Capturar a nivel condado.</p>
+                </div>
+                <div class="cluster-stats">
+                    <div><strong>2</strong><span>keywords</span></div>
+                    <div><strong>70</strong><span>vol/mes</span></div>
+                </div>
+            </header>
+            <div class="table-wrap">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Keyword</th><th>Vol</th><th>CPC</th><th>Comp</th><th>Intent</th><th>Prio</th><th>Target Page</th><th>Notas</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+            <tr>
+                <td class="kw">fence contractor marion county fl</td>
+                <td class="num">40</td>
+                <td class="num">$12.80</td>
+                <td><span class="badge" style="background:#fef3c7;color:#92400e">medium</span></td>
+                <td><span class="badge" style="background:#dcfce7;color:#166534">transactional</span></td>
+                <td><span class="badge prio" style="background:#fef3c7;color:#92400e">P2</span></td>
+                <td class="target">homepage</td>
+                <td class="notes">Marion County = condado de Ocala.</td>
+            </tr>
+            
+            <tr>
+                <td class="kw">fence installation marion county</td>
+                <td class="num">30</td>
+                <td class="num">$13.10</td>
+                <td><span class="badge" style="background:#fef3c7;color:#92400e">medium</span></td>
+                <td><span class="badge" style="background:#dcfce7;color:#166534">transactional</span></td>
+                <td><span class="badge prio" style="background:#fef3c7;color:#92400e">P2</span></td>
+                <td class="target">homepage</td>
+                <td class="notes"></td>
+            </tr>
+            </tbody>
+                </table>
+            </div>
+        </section>
+        
+        <section class="cluster" style="--cluster-color:#ea580c;--cluster-bg:#fff3e0">
+            <header class="cluster-head">
+                <div class="cluster-dot"></div>
+                <div class="cluster-meta">
+                    <h2>Ciudades vecinas (The Villages, Belleview, Summerfield)</h2>
+                    <p>Expansion geografica — The Villages es el mercado grande al sur.</p>
+                </div>
+                <div class="cluster-stats">
+                    <div><strong>6</strong><span>keywords</span></div>
+                    <div><strong>370</strong><span>vol/mes</span></div>
+                </div>
+            </header>
+            <div class="table-wrap">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Keyword</th><th>Vol</th><th>CPC</th><th>Comp</th><th>Intent</th><th>Prio</th><th>Target Page</th><th>Notas</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+            <tr>
+                <td class="kw">fence contractor the villages fl</td>
+                <td class="num">90</td>
+                <td class="num">$13.80</td>
+                <td><span class="badge" style="background:#fef3c7;color:#92400e">medium</span></td>
+                <td><span class="badge" style="background:#dcfce7;color:#166534">transactional</span></td>
+                <td><span class="badge prio" style="background:#fee2e2;color:#991b1b">P1</span></td>
+                <td class="target">location-page</td>
+                <td class="notes">The Villages — mercado grande sur.</td>
+            </tr>
+            
+            <tr>
+                <td class="kw">fence installation the villages</td>
+                <td class="num">70</td>
+                <td class="num">$14.20</td>
+                <td><span class="badge" style="background:#fef3c7;color:#92400e">medium</span></td>
+                <td><span class="badge" style="background:#dcfce7;color:#166534">transactional</span></td>
+                <td><span class="badge prio" style="background:#fef3c7;color:#92400e">P2</span></td>
+                <td class="target">location-page</td>
+                <td class="notes"></td>
+            </tr>
+            
+            <tr>
+                <td class="kw">fence contractor gainesville fl</td>
+                <td class="num">140</td>
+                <td class="num">$12.40</td>
+                <td><span class="badge" style="background:#fef3c7;color:#92400e">medium</span></td>
+                <td><span class="badge" style="background:#dcfce7;color:#166534">transactional</span></td>
+                <td><span class="badge prio" style="background:#e0e7ff;color:#3730a3">P3</span></td>
+                <td class="target">location-page</td>
+                <td class="notes">Gainesville — al norte, fuera del radio.</td>
+            </tr>
+            
+            <tr>
+                <td class="kw">fence company belleview fl</td>
+                <td class="num">30</td>
+                <td class="num">$11.40</td>
+                <td><span class="badge" style="background:#dcfce7;color:#166534">low</span></td>
+                <td><span class="badge" style="background:#dcfce7;color:#166534">transactional</span></td>
+                <td><span class="badge prio" style="background:#e0e7ff;color:#3730a3">P3</span></td>
+                <td class="target">location-page</td>
+                <td class="notes">Belleview — 10 min sur de Ocala.</td>
+            </tr>
+            
+            <tr>
+                <td class="kw">fence company silver springs fl</td>
+                <td class="num">20</td>
+                <td class="num">$10.80</td>
+                <td><span class="badge" style="background:#dcfce7;color:#166534">low</span></td>
+                <td><span class="badge" style="background:#dcfce7;color:#166534">transactional</span></td>
+                <td><span class="badge prio" style="background:#e0e7ff;color:#3730a3">P3</span></td>
+                <td class="target">location-page</td>
+                <td class="notes">Silver Springs — 10 min este.</td>
+            </tr>
+            
+            <tr>
+                <td class="kw">fence company summerfield fl</td>
+                <td class="num">20</td>
+                <td class="num">$11.20</td>
+                <td><span class="badge" style="background:#dcfce7;color:#166534">low</span></td>
+                <td><span class="badge" style="background:#dcfce7;color:#166534">transactional</span></td>
+                <td><span class="badge prio" style="background:#e0e7ff;color:#3730a3">P3</span></td>
+                <td class="target">location-page</td>
+                <td class="notes">Summerfield — dentro del radio sur.</td>
+            </tr>
+            </tbody>
+                </table>
+            </div>
+        </section>
+        
+        <section class="cluster" style="--cluster-color:#991b1b;--cluster-bg:#fde7e7">
+            <header class="cluster-head">
+                <div class="cluster-dot"></div>
+                <div class="cluster-meta">
+                    <h2>Financiamiento ($0 Down)</h2>
+                    <p>USP principal del cliente — landing dedicada con CTA al aplicador.</p>
+                </div>
+                <div class="cluster-stats">
+                    <div><strong>6</strong><span>keywords</span></div>
+                    <div><strong>1.4k</strong><span>vol/mes</span></div>
+                </div>
+            </header>
+            <div class="table-wrap">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Keyword</th><th>Vol</th><th>CPC</th><th>Comp</th><th>Intent</th><th>Prio</th><th>Target Page</th><th>Notas</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+            <tr>
+                <td class="kw">fence financing</td>
+                <td class="num">720</td>
+                <td class="num">$12.40</td>
+                <td><span class="badge" style="background:#fef3c7;color:#92400e">medium</span></td>
+                <td><span class="badge" style="background:#fef3c7;color:#92400e">commercial</span></td>
+                <td><span class="badge prio" style="background:#fee2e2;color:#991b1b">P1</span></td>
+                <td class="target">financing-page</td>
+                <td class="notes">USP del cliente. Landing propia.</td>
+            </tr>
+            
+            <tr>
+                <td class="kw">0 down fence installation</td>
+                <td class="num">40</td>
+                <td class="num">$14.20</td>
+                <td><span class="badge" style="background:#dcfce7;color:#166534">low</span></td>
+                <td><span class="badge" style="background:#fef3c7;color:#92400e">commercial</span></td>
+                <td><span class="badge prio" style="background:#fee2e2;color:#991b1b">P1</span></td>
+                <td class="target">financing-page</td>
+                <td class="notes">EXACT MATCH al USP.</td>
+            </tr>
+            
+            <tr>
+                <td class="kw">fence financing bad credit</td>
+                <td class="num">390</td>
+                <td class="num">$11.80</td>
+                <td><span class="badge" style="background:#fef3c7;color:#92400e">medium</span></td>
+                <td><span class="badge" style="background:#fef3c7;color:#92400e">commercial</span></td>
+                <td><span class="badge prio" style="background:#fef3c7;color:#92400e">P2</span></td>
+                <td class="target">financing-page</td>
+                <td class="notes"></td>
+            </tr>
+            
+            <tr>
+                <td class="kw">fence payment plans</td>
+                <td class="num">210</td>
+                <td class="num">$10.40</td>
+                <td><span class="badge" style="background:#fef3c7;color:#92400e">medium</span></td>
+                <td><span class="badge" style="background:#fef3c7;color:#92400e">commercial</span></td>
+                <td><span class="badge prio" style="background:#fef3c7;color:#92400e">P2</span></td>
+                <td class="target">financing-page</td>
+                <td class="notes"></td>
+            </tr>
+            
+            <tr>
+                <td class="kw">synchrony fence financing</td>
+                <td class="num">50</td>
+                <td class="num">$11.20</td>
+                <td><span class="badge" style="background:#dcfce7;color:#166534">low</span></td>
+                <td><span class="badge" style="background:#fef3c7;color:#92400e">commercial</span></td>
+                <td><span class="badge prio" style="background:#e0e7ff;color:#3730a3">P3</span></td>
+                <td class="target">financing-page</td>
+                <td class="notes">Menciona partner.</td>
+            </tr>
+            
+            <tr>
+                <td class="kw">hearth fence financing</td>
+                <td class="num">40</td>
+                <td class="num">$10.80</td>
+                <td><span class="badge" style="background:#dcfce7;color:#166534">low</span></td>
+                <td><span class="badge" style="background:#fef3c7;color:#92400e">commercial</span></td>
+                <td><span class="badge prio" style="background:#e0e7ff;color:#3730a3">P3</span></td>
+                <td class="target">financing-page</td>
+                <td class="notes"></td>
+            </tr>
+            </tbody>
+                </table>
+            </div>
+        </section>
+        
+        <section class="cluster" style="--cluster-color:#7c2d12;--cluster-bg:#fde7e7">
+            <header class="cluster-head">
+                <div class="cluster-dot"></div>
+                <div class="cluster-meta">
+                    <h2>Mercado Hispano</h2>
+                    <p>USP del cliente (habla espanol). Crear version en espanol.</p>
+                </div>
+                <div class="cluster-stats">
+                    <div><strong>4</strong><span>keywords</span></div>
+                    <div><strong>90</strong><span>vol/mes</span></div>
+                </div>
+            </header>
+            <div class="table-wrap">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Keyword</th><th>Vol</th><th>CPC</th><th>Comp</th><th>Intent</th><th>Prio</th><th>Target Page</th><th>Notas</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+            <tr>
+                <td class="kw">contratista de cercas ocala</td>
+                <td class="num">30</td>
+                <td class="num">$10.40</td>
+                <td><span class="badge" style="background:#dcfce7;color:#166534">low</span></td>
+                <td><span class="badge" style="background:#dcfce7;color:#166534">transactional</span></td>
+                <td><span class="badge prio" style="background:#fee2e2;color:#991b1b">P1</span></td>
+                <td class="target">homepage-es</td>
+                <td class="notes">Sub-landing en espanol.</td>
+            </tr>
+            
+            <tr>
+                <td class="kw">spanish fence contractor ocala</td>
+                <td class="num">20</td>
+                <td class="num">$12.80</td>
+                <td><span class="badge" style="background:#dcfce7;color:#166534">low</span></td>
+                <td><span class="badge" style="background:#dcfce7;color:#166534">transactional</span></td>
+                <td><span class="badge prio" style="background:#fee2e2;color:#991b1b">P1</span></td>
+                <td class="target">homepage</td>
+                <td class="notes">USP — cliente habla espanol.</td>
+            </tr>
+            
+            <tr>
+                <td class="kw">instalacion de cercas ocala</td>
+                <td class="num">20</td>
+                <td class="num">$9.80</td>
+                <td><span class="badge" style="background:#dcfce7;color:#166534">low</span></td>
+                <td><span class="badge" style="background:#dcfce7;color:#166534">transactional</span></td>
+                <td><span class="badge prio" style="background:#fef3c7;color:#92400e">P2</span></td>
+                <td class="target">homepage-es</td>
+                <td class="notes"></td>
+            </tr>
+            
+            <tr>
+                <td class="kw">cercas de vinil ocala</td>
+                <td class="num">20</td>
+                <td class="num">$9.20</td>
+                <td><span class="badge" style="background:#dcfce7;color:#166534">low</span></td>
+                <td><span class="badge" style="background:#dcfce7;color:#166534">transactional</span></td>
+                <td><span class="badge prio" style="background:#fef3c7;color:#92400e">P2</span></td>
+                <td class="target">service-page-vinyl-es</td>
+                <td class="notes"></td>
+            </tr>
+            </tbody>
+                </table>
+            </div>
+        </section>
+        
+        <section class="cluster" style="--cluster-color:#1e40af;--cluster-bg:#dbeafe">
+            <header class="cluster-head">
+                <div class="cluster-dot"></div>
+                <div class="cluster-meta">
+                    <h2>Servicios y CTAs</h2>
+                    <p>Quick-win con 'free estimate' y 'same-day'.</p>
+                </div>
+                <div class="cluster-stats">
+                    <div><strong>5</strong><span>keywords</span></div>
+                    <div><strong>400</strong><span>vol/mes</span></div>
+                </div>
+            </header>
+            <div class="table-wrap">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Keyword</th><th>Vol</th><th>CPC</th><th>Comp</th><th>Intent</th><th>Prio</th><th>Target Page</th><th>Notas</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+            <tr>
+                <td class="kw">free fence estimate ocala</td>
+                <td class="num">60</td>
+                <td class="num">$14.60</td>
+                <td><span class="badge" style="background:#fef3c7;color:#92400e">medium</span></td>
+                <td><span class="badge" style="background:#dcfce7;color:#166534">transactional</span></td>
+                <td><span class="badge prio" style="background:#fee2e2;color:#991b1b">P1</span></td>
+                <td class="target">homepage+cta</td>
+                <td class="notes">CTA principal.</td>
+            </tr>
+            
+            <tr>
+                <td class="kw">free fence quote ocala</td>
+                <td class="num">40</td>
+                <td class="num">$14.20</td>
+                <td><span class="badge" style="background:#dcfce7;color:#166534">low</span></td>
+                <td><span class="badge" style="background:#dcfce7;color:#166534">transactional</span></td>
+                <td><span class="badge prio" style="background:#fef3c7;color:#92400e">P2</span></td>
+                <td class="target">homepage</td>
+                <td class="notes"></td>
+            </tr>
+            
+            <tr>
+                <td class="kw">same day fence estimate ocala</td>
+                <td class="num">20</td>
+                <td class="num">$15.80</td>
+                <td><span class="badge" style="background:#dcfce7;color:#166534">low</span></td>
+                <td><span class="badge" style="background:#dcfce7;color:#166534">transactional</span></td>
+                <td><span class="badge prio" style="background:#fef3c7;color:#92400e">P2</span></td>
+                <td class="target">homepage</td>
+                <td class="notes">USP del cliente — se captura.</td>
+            </tr>
+            
+            <tr>
+                <td class="kw">fence repair ocala</td>
+                <td class="num">170</td>
+                <td class="num">$11.20</td>
+                <td><span class="badge" style="background:#fef3c7;color:#92400e">medium</span></td>
+                <td><span class="badge" style="background:#dcfce7;color:#166534">transactional</span></td>
+                <td><span class="badge prio" style="background:#e0e7ff;color:#3730a3">P3</span></td>
+                <td class="target"><em style='color:#aaa'>excluir</em></td>
+                <td class="notes">NEGATIVE para ads — cliente solo new install.</td>
+            </tr>
+            
+            <tr>
+                <td class="kw">emergency fence repair</td>
+                <td class="num">110</td>
+                <td class="num">$13.20</td>
+                <td><span class="badge" style="background:#fef3c7;color:#92400e">medium</span></td>
+                <td><span class="badge" style="background:#dcfce7;color:#166534">transactional</span></td>
+                <td><span class="badge prio" style="background:#e0e7ff;color:#3730a3">P3</span></td>
+                <td class="target">page-repair</td>
+                <td class="notes">NOTA: cliente no hace repairs. Pero puede capturar para convertir a instalacion nueva.</td>
+            </tr>
+            </tbody>
+                </table>
+            </div>
+        </section>
+        
+        <section class="cluster" style="--cluster-color:#4c1d95;--cluster-bg:#ede9fe">
+            <header class="cluster-head">
+                <div class="cluster-dot"></div>
+                <div class="cluster-meta">
+                    <h2>Blog / Content SEO</h2>
+                    <p>Trafico informacional — convertir a leads via lead magnet.</p>
+                </div>
+                <div class="cluster-stats">
+                    <div><strong>15</strong><span>keywords</span></div>
+                    <div><strong>7.2k</strong><span>vol/mes</span></div>
+                </div>
+            </header>
+            <div class="table-wrap">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Keyword</th><th>Vol</th><th>CPC</th><th>Comp</th><th>Intent</th><th>Prio</th><th>Target Page</th><th>Notas</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+            <tr>
+                <td class="kw">how much does a fence cost in florida</td>
+                <td class="num">590</td>
+                <td class="num">$7.80</td>
+                <td><span class="badge" style="background:#fef3c7;color:#92400e">medium</span></td>
+                <td><span class="badge" style="background:#fef3c7;color:#92400e">commercial</span></td>
+                <td><span class="badge prio" style="background:#fee2e2;color:#991b1b">P1</span></td>
+                <td class="target">blog</td>
+                <td class="notes">Blog post hub.</td>
+            </tr>
+            
+            <tr>
+                <td class="kw">cost of vinyl fence installation florida</td>
+                <td class="num">320</td>
+                <td class="num">$9.40</td>
+                <td><span class="badge" style="background:#fef3c7;color:#92400e">medium</span></td>
+                <td><span class="badge" style="background:#fef3c7;color:#92400e">commercial</span></td>
+                <td><span class="badge prio" style="background:#fee2e2;color:#991b1b">P1</span></td>
+                <td class="target">blog</td>
+                <td class="notes">Blog post con calculadora.</td>
+            </tr>
+            
+            <tr>
+                <td class="kw">vinyl vs wood fence</td>
+                <td class="num">2.9k</td>
+                <td class="num">$4.20</td>
+                <td><span class="badge" style="background:#dcfce7;color:#166534">low</span></td>
+                <td><span class="badge" style="background:#e0e7ff;color:#3730a3">informational</span></td>
+                <td><span class="badge prio" style="background:#fef3c7;color:#92400e">P2</span></td>
+                <td class="target">blog</td>
+                <td class="notes">Blog nacional — trae trafico.</td>
+            </tr>
+            
+            <tr>
+                <td class="kw">vinyl vs aluminum fence</td>
+                <td class="num">1.6k</td>
+                <td class="num">$4.80</td>
+                <td><span class="badge" style="background:#dcfce7;color:#166534">low</span></td>
+                <td><span class="badge" style="background:#e0e7ff;color:#3730a3">informational</span></td>
+                <td><span class="badge prio" style="background:#fef3c7;color:#92400e">P2</span></td>
+                <td class="target">blog</td>
+                <td class="notes"></td>
+            </tr>
+            
+            <tr>
+                <td class="kw">fence installation cost florida</td>
+                <td class="num">210</td>
+                <td class="num">$8.80</td>
+                <td><span class="badge" style="background:#fef3c7;color:#92400e">medium</span></td>
+                <td><span class="badge" style="background:#fef3c7;color:#92400e">commercial</span></td>
+                <td><span class="badge prio" style="background:#fef3c7;color:#92400e">P2</span></td>
+                <td class="target">blog</td>
+                <td class="notes"></td>
+            </tr>
+            
+            <tr>
+                <td class="kw">vinyl fence cost per foot florida</td>
+                <td class="num">170</td>
+                <td class="num">$8.20</td>
+                <td><span class="badge" style="background:#fef3c7;color:#92400e">medium</span></td>
+                <td><span class="badge" style="background:#fef3c7;color:#92400e">commercial</span></td>
+                <td><span class="badge prio" style="background:#fef3c7;color:#92400e">P2</span></td>
+                <td class="target">blog</td>
+                <td class="notes"></td>
+            </tr>
+            
+            <tr>
+                <td class="kw">best fence for hurricane florida</td>
+                <td class="num">170</td>
+                <td class="num">$7.80</td>
+                <td><span class="badge" style="background:#dcfce7;color:#166534">low</span></td>
+                <td><span class="badge" style="background:#e0e7ff;color:#3730a3">informational</span></td>
+                <td><span class="badge prio" style="background:#fef3c7;color:#92400e">P2</span></td>
+                <td class="target">blog</td>
+                <td class="notes">Angulo FL especifico.</td>
+            </tr>
+            
+            <tr>
+                <td class="kw">fence for bears florida</td>
+                <td class="num">90</td>
+                <td class="num">$6.40</td>
+                <td><span class="badge" style="background:#dcfce7;color:#166534">low</span></td>
+                <td><span class="badge" style="background:#e0e7ff;color:#3730a3">informational</span></td>
+                <td><span class="badge prio" style="background:#fef3c7;color:#92400e">P2</span></td>
+                <td class="target">blog</td>
+                <td class="notes">ANGULO OCALA — segun cliente hay osos.</td>
+            </tr>
+            
+            <tr>
+                <td class="kw">fence permit ocala fl</td>
+                <td class="num">70</td>
+                <td class="num">$5.20</td>
+                <td><span class="badge" style="background:#dcfce7;color:#166534">low</span></td>
+                <td><span class="badge" style="background:#e0e7ff;color:#3730a3">informational</span></td>
+                <td><span class="badge prio" style="background:#fef3c7;color:#92400e">P2</span></td>
+                <td class="target">blog</td>
+                <td class="notes"></td>
+            </tr>
+            
+            <tr>
+                <td class="kw">best fence for dogs florida</td>
+                <td class="num">320</td>
+                <td class="num">$6.10</td>
+                <td><span class="badge" style="background:#dcfce7;color:#166534">low</span></td>
+                <td><span class="badge" style="background:#e0e7ff;color:#3730a3">informational</span></td>
+                <td><span class="badge prio" style="background:#e0e7ff;color:#3730a3">P3</span></td>
+                <td class="target">blog</td>
+                <td class="notes"></td>
+            </tr>
+            
+            <tr>
+                <td class="kw">fence height rules florida</td>
+                <td class="num">210</td>
+                <td class="num">$4.80</td>
+                <td><span class="badge" style="background:#dcfce7;color:#166534">low</span></td>
+                <td><span class="badge" style="background:#e0e7ff;color:#3730a3">informational</span></td>
+                <td><span class="badge prio" style="background:#e0e7ff;color:#3730a3">P3</span></td>
+                <td class="target">blog</td>
+                <td class="notes"></td>
+            </tr>
+            
+            <tr>
+                <td class="kw">composite fence florida</td>
+                <td class="num">210</td>
+                <td class="num">$8.60</td>
+                <td><span class="badge" style="background:#fef3c7;color:#92400e">medium</span></td>
+                <td><span class="badge" style="background:#e0e7ff;color:#3730a3">informational</span></td>
+                <td><span class="badge prio" style="background:#e0e7ff;color:#3730a3">P3</span></td>
+                <td class="target">blog</td>
+                <td class="notes">Adjacente a Durafence.</td>
+            </tr>
+            
+            <tr>
+                <td class="kw">hoa fence rules florida</td>
+                <td class="num">140</td>
+                <td class="num">$5.40</td>
+                <td><span class="badge" style="background:#dcfce7;color:#166534">low</span></td>
+                <td><span class="badge" style="background:#e0e7ff;color:#3730a3">informational</span></td>
+                <td><span class="badge prio" style="background:#e0e7ff;color:#3730a3">P3</span></td>
+                <td class="target">blog</td>
+                <td class="notes">Aunque cliente no quiere HOAs — trae trafico.</td>
+            </tr>
+            
+            <tr>
+                <td class="kw">aluminum fence cost per foot florida</td>
+                <td class="num">110</td>
+                <td class="num">$9.10</td>
+                <td><span class="badge" style="background:#fef3c7;color:#92400e">medium</span></td>
+                <td><span class="badge" style="background:#fef3c7;color:#92400e">commercial</span></td>
+                <td><span class="badge prio" style="background:#e0e7ff;color:#3730a3">P3</span></td>
+                <td class="target">blog</td>
+                <td class="notes"></td>
+            </tr>
+            
+            <tr>
+                <td class="kw">privacy fence cost per foot florida</td>
+                <td class="num">90</td>
+                <td class="num">$8.40</td>
+                <td><span class="badge" style="background:#fef3c7;color:#92400e">medium</span></td>
+                <td><span class="badge" style="background:#fef3c7;color:#92400e">commercial</span></td>
+                <td><span class="badge prio" style="background:#e0e7ff;color:#3730a3">P3</span></td>
+                <td class="target">blog</td>
+                <td class="notes"></td>
+            </tr>
+            </tbody>
+                </table>
+            </div>
+        </section>
+        
+        <section class="cluster" style="--cluster-color:#64748b;--cluster-bg:#f1f5f9">
+            <header class="cluster-head">
+                <div class="cluster-dot"></div>
+                <div class="cluster-meta">
+                    <h2>Negative Keywords (para Google Ads)</h2>
+                    <p>Excluir en todas las campanas — wood, chain link, repair, DIY, jobs, rental.</p>
+                </div>
+                <div class="cluster-stats">
+                    <div><strong>4</strong><span>keywords</span></div>
+                    <div><strong>1.0k</strong><span>vol/mes</span></div>
+                </div>
+            </header>
+            <div class="table-wrap">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Keyword</th><th>Vol</th><th>CPC</th><th>Comp</th><th>Intent</th><th>Prio</th><th>Target Page</th><th>Notas</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+            <tr>
+                <td class="kw">diy fence installation</td>
+                <td class="num">880</td>
+                <td class="num">$3.20</td>
+                <td><span class="badge" style="background:#dcfce7;color:#166534">low</span></td>
+                <td><span class="badge" style="background:#e0e7ff;color:#3730a3">informational</span></td>
+                <td><span class="badge prio" style="background:#e0e7ff;color:#3730a3">P3</span></td>
+                <td class="target"><em style='color:#aaa'>excluir</em></td>
+                <td class="notes">NEGATIVE — usuario no quiere contratista.</td>
+            </tr>
+            
+            <tr>
+                <td class="kw">fence jobs ocala</td>
+                <td class="num">90</td>
+                <td class="num">$0.80</td>
+                <td><span class="badge" style="background:#dcfce7;color:#166534">low</span></td>
+                <td><span class="badge" style="background:#e0e7ff;color:#3730a3">informational</span></td>
+                <td><span class="badge prio" style="background:#e0e7ff;color:#3730a3">P3</span></td>
+                <td class="target"><em style='color:#aaa'>excluir</em></td>
+                <td class="notes">NEGATIVE — busqueda de empleo.</td>
+            </tr>
+            
+            <tr>
+                <td class="kw">used fence panels ocala</td>
+                <td class="num">40</td>
+                <td class="num">$2.40</td>
+                <td><span class="badge" style="background:#dcfce7;color:#166534">low</span></td>
+                <td><span class="badge" style="background:#e0e7ff;color:#3730a3">informational</span></td>
+                <td><span class="badge prio" style="background:#e0e7ff;color:#3730a3">P3</span></td>
+                <td class="target"><em style='color:#aaa'>excluir</em></td>
+                <td class="notes">NEGATIVE.</td>
+            </tr>
+            
+            <tr>
+                <td class="kw">fence rental ocala</td>
+                <td class="num">20</td>
+                <td class="num">$3.80</td>
+                <td><span class="badge" style="background:#dcfce7;color:#166534">low</span></td>
+                <td><span class="badge" style="background:#e0e7ff;color:#3730a3">informational</span></td>
+                <td><span class="badge prio" style="background:#e0e7ff;color:#3730a3">P3</span></td>
+                <td class="target"><em style='color:#aaa'>excluir</em></td>
+                <td class="notes">NEGATIVE — rental no venta.</td>
+            </tr>
+            </tbody>
+                </table>
+            </div>
+        </section>
+        
+
+    <div class="footer">
+        <img src="assets/mm-logo-dark.png" alt="MM Agency" class="footer-logo">
+        <div>Martin Mercedes · martin@mmagency.do · MM Agency</div>
+    </div>
+</div>
+</body>
+</html>

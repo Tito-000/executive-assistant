@@ -1,0 +1,82 @@
+keyword,monthly_volume,cpc_usd,competition,intent,cluster,priority,target_page,notes
+fence company ocala fl,320,14.50,high,transactional,money,P1,homepage,"Money kw #1 — cliente listo para comprar. Incluir en H1 + meta."
+fence contractor ocala fl,210,13.80,high,transactional,money,P1,homepage,"Segundo money kw. Alternar con #1 en H1."
+ocala fence company,170,12.40,high,transactional,money,P1,homepage,"Variacion geo. Ir a H2 o breadcrumb."
+fence installation ocala fl,140,15.20,high,transactional,money,P1,service-page-install,"Pagina dedicada."
+fence contractor ocala,110,11.60,high,transactional,money,P1,homepage,"Sin FL — mismo intent."
+fence companies in ocala fl,90,13.10,high,transactional,money,P2,homepage,"Plural — usuario comparando. Meter en intro."
+fence near me,8100,12.90,high,transactional,near-me,P1,homepage+gbp,"Alto volumen pero mucho pago. Ganar con GBP + proximity."
+fence contractor near me,2400,13.70,high,transactional,near-me,P1,homepage+gbp,"Idem — GBP + reviews es la palanca."
+fence company near me,3600,12.30,high,transactional,near-me,P1,homepage+gbp,"Meta description debe decir Ocala + FL."
+fence installation near me,1900,14.10,high,transactional,near-me,P2,homepage+gbp,
+fence installers near me,880,13.20,high,transactional,near-me,P2,gbp,
+vinyl fence ocala,210,11.80,medium,transactional,product,P1,service-page-vinyl,"Producto estrella. Landing propia."
+vinyl fence ocala fl,140,12.50,medium,transactional,product,P1,service-page-vinyl,
+pvc fence ocala,90,10.40,medium,transactional,product,P1,service-page-vinyl,"Sinonimo — misma landing."
+vinyl fence installation ocala,70,13.70,medium,transactional,product,P2,service-page-vinyl,
+white vinyl fence ocala,50,10.80,low,transactional,product,P2,service-page-vinyl,"Producto #1 en ventas."
+aluminum fence ocala,110,12.60,medium,transactional,product,P1,service-page-aluminum,"Landing aluminum."
+aluminum fence ocala fl,70,13.20,medium,transactional,product,P2,service-page-aluminum,
+black aluminum fence ocala,40,11.90,low,transactional,product,P3,service-page-aluminum,
+pool fence ocala,170,14.80,medium,transactional,product,P1,service-page-pool,"Landing pool — ticket alto + regulacion FL."
+pool fence contractor ocala,60,15.60,medium,transactional,product,P2,service-page-pool,
+pool safety fence ocala fl,40,16.20,medium,transactional,product,P2,service-page-pool,
+privacy fence ocala,260,11.40,medium,transactional,product,P1,service-page-privacy,"Landing privacy — keyword general alta."
+privacy fence ocala fl,130,12.10,medium,transactional,product,P1,service-page-privacy,
+privacy fence installation ocala,70,13.80,medium,transactional,product,P2,service-page-privacy,
+6 foot privacy fence ocala,40,11.20,low,transactional,product,P3,service-page-privacy,
+residential fence ocala,90,10.80,low,transactional,product,P2,service-page-residential,
+commercial fence ocala,50,13.40,low,transactional,product,P3,service-page-commercial,"Bajo — aunque no es su foco."
+fence installation 34471,20,14.20,low,transactional,geo-zip,P2,location-page,"Pagina por ZIP — SEO programatico."
+fence installation 34473,30,14.80,low,transactional,geo-zip,P1,location-page,"ZIP preferido del cliente."
+fence installation 34474,20,13.90,low,transactional,geo-zip,P2,location-page,
+fence installation 34476,20,14.00,low,transactional,geo-zip,P2,location-page,
+fence installation 34480,20,13.70,low,transactional,geo-zip,P2,location-page,
+fence installation 34472,20,13.50,low,transactional,geo-zip,P3,location-page,
+fence contractor marion county fl,40,12.80,medium,transactional,geo-county,P2,homepage,"Marion County = condado de Ocala."
+fence installation marion county,30,13.10,medium,transactional,geo-county,P2,homepage,
+fence cost ocala,110,8.90,medium,commercial,money,P2,blog+pricing,"Alto intent + investigacion. Blog post."
+cost of vinyl fence installation florida,320,9.40,medium,commercial,blog,P1,blog,"Blog post con calculadora."
+how much does a fence cost in florida,590,7.80,medium,commercial,blog,P1,blog,"Blog post hub."
+vinyl fence cost per foot florida,170,8.20,medium,commercial,blog,P2,blog,
+aluminum fence cost per foot florida,110,9.10,medium,commercial,blog,P3,blog,
+privacy fence cost per foot florida,90,8.40,medium,commercial,blog,P3,blog,
+fence installation cost florida,210,8.80,medium,commercial,blog,P2,blog,
+vinyl vs wood fence,2900,4.20,low,informational,blog,P2,blog,"Blog nacional — trae trafico."
+vinyl vs aluminum fence,1600,4.80,low,informational,blog,P2,blog,
+best fence for dogs florida,320,6.10,low,informational,blog,P3,blog,
+best fence for hurricane florida,170,7.80,low,informational,blog,P2,blog,"Angulo FL especifico."
+fence for bears florida,90,6.40,low,informational,blog,P2,blog,"ANGULO OCALA — segun cliente hay osos."
+fence permit ocala fl,70,5.20,low,informational,blog,P2,blog,
+fence height rules florida,210,4.80,low,informational,blog,P3,blog,
+hoa fence rules florida,140,5.40,low,informational,blog,P3,blog,"Aunque cliente no quiere HOAs — trae trafico."
+fence financing,720,12.40,medium,commercial,financing,P1,financing-page,"USP del cliente. Landing propia."
+fence financing bad credit,390,11.80,medium,commercial,financing,P2,financing-page,
+0 down fence installation,40,14.20,low,commercial,financing,P1,financing-page,"EXACT MATCH al USP."
+fence payment plans,210,10.40,medium,commercial,financing,P2,financing-page,
+synchrony fence financing,50,11.20,low,commercial,financing,P3,financing-page,"Menciona partner."
+hearth fence financing,40,10.80,low,commercial,financing,P3,financing-page,
+emergency fence repair,110,13.20,medium,transactional,service,P3,page-repair,"NOTA: cliente no hace repairs. Pero puede capturar para convertir a instalacion nueva."
+same day fence estimate ocala,20,15.80,low,transactional,service,P2,homepage,"USP del cliente — se captura."
+free fence estimate ocala,60,14.60,medium,transactional,service,P1,homepage+cta,"CTA principal."
+free fence quote ocala,40,14.20,low,transactional,service,P2,homepage,
+spanish fence contractor ocala,20,12.80,low,transactional,hispanic,P1,homepage,"USP — cliente habla espanol."
+contratista de cercas ocala,30,10.40,low,transactional,hispanic,P1,homepage-es,"Sub-landing en espanol."
+instalacion de cercas ocala,20,9.80,low,transactional,hispanic,P2,homepage-es,
+cercas de vinil ocala,20,9.20,low,transactional,hispanic,P2,service-page-vinyl-es,
+fence company belleview fl,30,11.40,low,transactional,nearby-city,P3,location-page,"Belleview — 10 min sur de Ocala."
+fence company silver springs fl,20,10.80,low,transactional,nearby-city,P3,location-page,"Silver Springs — 10 min este."
+fence company summerfield fl,20,11.20,low,transactional,nearby-city,P3,location-page,"Summerfield — dentro del radio sur."
+fence contractor the villages fl,90,13.80,medium,transactional,nearby-city,P1,location-page,"The Villages — mercado grande sur."
+fence installation the villages,70,14.20,medium,transactional,nearby-city,P2,location-page,
+fence contractor gainesville fl,140,12.40,medium,transactional,nearby-city,P3,location-page,"Gainesville — al norte, fuera del radio."
+durafence installation,50,12.80,low,transactional,product-niche,P2,service-page-durafence,"Producto de nicho — poca competencia SEO."
+durafence ocala,20,11.40,low,transactional,product-niche,P1,service-page-durafence,"Landing propia — oportunidad."
+composite fence florida,210,8.60,medium,informational,blog,P3,blog,"Adjacente a Durafence."
+wood fence ocala,110,10.40,medium,transactional,product,P3,,"NEGATIVE para ads — cliente no promociona wood."
+chain link fence ocala,90,9.80,medium,transactional,product,P3,,"NEGATIVE para ads."
+fence repair ocala,170,11.20,medium,transactional,service,P3,,"NEGATIVE para ads — cliente solo new install."
+diy fence installation,880,3.20,low,informational,,P3,,"NEGATIVE — usuario no quiere contratista."
+fence jobs ocala,90,0.80,low,informational,,P3,,"NEGATIVE — busqueda de empleo."
+used fence panels ocala,40,2.40,low,informational,,P3,,"NEGATIVE."
+fence rental ocala,20,3.80,low,informational,,P3,,"NEGATIVE — rental no venta."
